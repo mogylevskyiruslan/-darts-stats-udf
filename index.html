@@ -342,6 +342,9 @@
 <section id="leaderboard">
   <h2><span class="idx">03</span> Рейтинг гравців</h2>
   <p class="section-sub">Медальний залік за етапами Кубка України та перемогами на ЧУ — з таблиці «Призери етапів кубків ВФД».</p>
+  <div class="controls">
+    <input type="text" id="search-leaderboard" placeholder="Пошук гравця…">
+  </div>
   <div class="table-wrap">
     <table>
       <thead>
@@ -362,11 +365,12 @@
 
 <section id="ratings">
   <h2><span class="idx">03.1</span> Рейтинги за сезон</h2>
-  <p class="section-sub">Особистий рейтинг гравців за сумою очок з усіх етапів Кубка України (з коефіцієнтом 1.0) та ЧУ (коефіцієнт 1.5). Поки додано сезон 2025 (жінки) як приклад — решта 14 сезонів (2013–2025, чоловіки й жінки) підʼєднаються автоматично на етапі повного пайплайна.</p>
+  <p class="section-sub">Особистий рейтинг гравців за сумою очок з усіх етапів Кубка України (з коефіцієнтом 1.0) та ЧУ (коефіцієнт 1.5). Поки додано сезон 2025 (жінки) як приклад — решта сезонів (2013–2025, чоловіки й жінки) підʼєднаються автоматично на етапі повного пайплайна.</p>
   <div class="controls">
     <select id="filter-rating-season">
       <option value="women_2025">Жінки · 2025</option>
     </select>
+    <input type="text" id="search-ratings" placeholder="Пошук гравця…">
   </div>
   <div class="table-wrap">
     <table>
@@ -391,7 +395,11 @@
 
 <section id="historical">
   <h2><span class="idx">03.2</span> Історичні результати етапів</h2>
-  <p class="section-sub">Ці {{HISTORICAL_COUNT}} записів є тільки в таблиці «Призери етапів кубків ВФД» (2013–2021) — вони не мають окремого рядка в таблиці учасників і посилання на Nakka, тому показані тут окремо. Медалі з цих турнірів вже враховані в загальному заліку гравців (розділ «Рейтинг гравців») вище.</p>
+  <p class="section-sub">Ці <span id="historical-count">…</span> записів є тільки в таблиці «Призери етапів кубків ВФД» (2013–2021) — вони не мають окремого рядка в таблиці учасників і посилання на Nakka, тому показані тут окремо. Медалі з цих турнірів вже враховані в загальному заліку гравців (розділ «Рейтинг гравців») вище.</p>
+  <div class="controls">
+    <input type="text" id="search-historical" placeholder="Пошук гравця або міста…">
+    <select id="filter-historical-year"><option value="">Усі роки</option></select>
+  </div>
   <div class="table-wrap">
     <table>
       <thead>
@@ -632,8 +640,14 @@ function renderTournaments(){
 }
 
 function renderLeaderboard(){
+  const q = (document.getElementById('search-leaderboard').value || '').toLowerCase();
+  const rows = leaderboard.filter(p => !q || p.name.toLowerCase().includes(q));
   const body = document.getElementById('leaderboard-body');
-  body.innerHTML = leaderboard.map(p=>`
+  if(rows.length === 0){
+    body.innerHTML = `<tr class="empty-row"><td colspan="7">Нічого не знайдено.</td></tr>`;
+    return;
+  }
+  body.innerHTML = rows.map(p=>`
     <tr>
       <td class="rank-cell num">${p.rank}</td>
       <td class="player-name">${p.name}</td>
@@ -670,8 +684,13 @@ function fmtPts(v){ return (v === null || v === undefined) ? '—' : v.toFixed(2
 
 function renderRatings(){
   const season = document.getElementById('filter-rating-season').value;
-  const rows = ratingsData[season] || [];
+  const q = (document.getElementById('search-ratings').value || '').toLowerCase();
+  const rows = (ratingsData[season] || []).filter(p => !q || p.name.toLowerCase().includes(q));
   const body = document.getElementById('ratings-body');
+  if(rows.length === 0){
+    body.innerHTML = `<tr class="empty-row"><td colspan="10">Нічого не знайдено.</td></tr>`;
+    return;
+  }
   body.innerHTML = rows.map(p => `
     <tr>
       <td class="rank-cell num">${p.rank}</td>
@@ -683,9 +702,41 @@ function renderRatings(){
   `).join('');
 }
 
+function populateHistoricalYearFilter(){
+  const sel = document.getElementById('filter-historical-year');
+  if(sel.dataset.populated) return;
+  const years = [...new Set(historical.map(h=>h.year))].sort((a,b)=>b-a);
+  years.forEach(y=>{
+    const o = document.createElement('option'); o.value = y; o.textContent = y; sel.appendChild(o);
+  });
+  sel.dataset.populated = '1';
+}
+
 function renderHistorical(){
+  const countEl = document.getElementById('historical-count');
+  if(countEl) countEl.textContent = historical.length;
+
+  populateHistoricalYearFilter();
+
+  const q = (document.getElementById('search-historical').value || '').toLowerCase();
+  const yearFilter = document.getElementById('filter-historical-year').value;
+
+  const rows = historical.filter(h=>{
+    const matchesYear = !yearFilter || String(h.year) === yearFilter;
+    const matchesQ = !q ||
+      (h.city||'').toLowerCase().includes(q) ||
+      (h.gold||'').toLowerCase().includes(q) ||
+      (h.silver||'').toLowerCase().includes(q) ||
+      (h.bronze||'').toLowerCase().includes(q);
+    return matchesYear && matchesQ;
+  });
+
   const body = document.getElementById('historical-body');
-  body.innerHTML = historical.map(h => `
+  if(rows.length === 0){
+    body.innerHTML = `<tr class="empty-row"><td colspan="6">Нічого не знайдено.</td></tr>`;
+    return;
+  }
+  body.innerHTML = rows.map(h => `
     <tr>
       <td class="num mono">${h.year}</td>
       <td class="mono" style="color:var(--muted)">${h.stageLabel}</td>
@@ -723,6 +774,10 @@ document.getElementById('filter-year').addEventListener('change', renderTourname
 document.getElementById('filter-org').addEventListener('change', renderTournaments);
 document.getElementById('toggle-udl').addEventListener('change', ()=>{ renderTournaments(); renderHeroStats(); });
 document.getElementById('filter-rating-season').addEventListener('change', renderRatings);
+document.getElementById('search-ratings').addEventListener('input', renderRatings);
+document.getElementById('search-leaderboard').addEventListener('input', renderLeaderboard);
+document.getElementById('search-historical').addEventListener('input', renderHistorical);
+document.getElementById('filter-historical-year').addEventListener('change', renderHistorical);
 
 async function loadData(){
   try{
