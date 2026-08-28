@@ -1,0 +1,37 @@
+name: Синхронізація статистики ВФД
+
+on:
+  schedule:
+    # щодня о 05:00 UTC (08:00 за Києвом)
+    - cron: '0 5 * * *'
+  workflow_dispatch: {}   # дозволяє запустити вручну кнопкою "Run workflow"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run sync script
+        run: python sync.py
+
+      - name: Commit and push data.json if changed
+        run: |
+          git config user.name "vfd-darts-bot"
+          git config user.email "actions@github.com"
+          if git diff --quiet -- data.json; then
+            echo "No changes in data.json"
+          else
+            git add data.json
+            git commit -m "Автооновлення статистики $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
