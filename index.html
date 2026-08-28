@@ -145,6 +145,10 @@
     text-align:left; padding:12px 14px; background:var(--panel-2); color:var(--muted);
     font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.06em;
     border-bottom:1px solid var(--line); cursor:pointer; user-select:none;
+  }
+  /* Липка шапка потрібна лише для довгої таблиці турнірів — на коротших
+     таблицях (рейтинг, історія) вона лише обрізає перший рядок */
+  #tournaments .table-wrap thead th{
     position:sticky; top:57px;
   }
   thead th:hover{color:var(--gold);}
