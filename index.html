@@ -133,7 +133,24 @@
   .udl-toggle input{width:16px; height:16px; accent-color:var(--gold); cursor:pointer;}
   .udl-toggle:hover{color:var(--cream); border-color:var(--gold);}
 
-  .medal-cell{display:flex; flex-direction:column; gap:2px; font-size:12px; line-height:1.4;}
+  .gender-toggle{display:flex; border:1px solid var(--line); border-radius:4px; overflow:hidden;}
+  .gender-btn{
+    padding:10px 18px; background:var(--panel); color:var(--muted); border:none;
+    font-family:'Inter',sans-serif; font-size:13px; cursor:pointer; transition:background .15s,color .15s;
+  }
+  .gender-btn:first-child{border-right:1px solid var(--line);}
+  .gender-btn.active{background:var(--gold); color:var(--bg); font-weight:600;}
+  .gender-btn:not(.active):hover{color:var(--cream);}
+
+  .gender-tag{
+    display:inline-block; font-size:10px; padding:1px 6px; border-radius:3px;
+    font-family:'JetBrains Mono',monospace; margin-right:6px; vertical-align:middle;
+  }
+  .gender-tag.men{background:rgba(58,79,196,0.25); color:#9fb0ff; border:1px solid rgba(58,79,196,0.5);}
+  .gender-tag.women{background:rgba(252,194,2,0.15); color:var(--gold); border:1px solid rgba(252,194,2,0.4);}
+
+  .medal-cell{display:flex; flex-direction:column; gap:8px; font-size:12px; line-height:1.4;}
+  .medal-group{display:flex; flex-direction:column; gap:2px;}
   .medal-cell .m-row{display:flex; gap:6px; align-items:baseline;}
   .medal-cell .m-icon{width:14px;}
   .medal-cell .m-empty{color:var(--muted); font-size:13px;}
@@ -343,6 +360,10 @@
   <h2><span class="idx">03</span> Рейтинг гравців</h2>
   <p class="section-sub">Медальний залік за етапами Кубка України та перемогами на ЧУ — з таблиці «Призери етапів кубків ВФД».</p>
   <div class="controls">
+    <div class="gender-toggle">
+      <button type="button" class="gender-btn active" data-gender="men">Чоловіки</button>
+      <button type="button" class="gender-btn" data-gender="women">Жінки</button>
+    </div>
     <input type="text" id="search-leaderboard" placeholder="Пошук гравця…">
   </div>
   <div class="table-wrap">
@@ -395,16 +416,22 @@
 
 <section id="historical">
   <h2><span class="idx">03.2</span> Історичні результати етапів</h2>
-  <p class="section-sub">Ці <span id="historical-count">…</span> записів є тільки в таблиці «Призери етапів кубків ВФД» (2013–2021) — вони не мають окремого рядка в таблиці учасників і посилання на Nakka, тому показані тут окремо. Медалі з цих турнірів вже враховані в загальному заліку гравців (розділ «Рейтинг гравців») вище.</p>
+  <p class="section-sub">Ці <span id="historical-count">…</span> записів (чоловіки й жінки) є тільки в таблиці «Призери етапів кубків ВФД» (2013–2022) — вони не мають окремого рядка в таблиці учасників і посилання на Nakka, тому показані тут окремо. Медалі з цих турнірів вже враховані в загальному заліку гравців (розділ «Рейтинг гравців») вище.</p>
   <div class="controls">
     <input type="text" id="search-historical" placeholder="Пошук гравця або міста…">
     <select id="filter-historical-year"><option value="">Усі роки</option></select>
+    <select id="filter-historical-gender">
+      <option value="">Чоловіки і жінки</option>
+      <option value="men">Тільки чоловіки</option>
+      <option value="women">Тільки жінки</option>
+    </select>
   </div>
   <div class="table-wrap">
     <table>
       <thead>
         <tr>
           <th class="num">Рік</th>
+          <th>Стать</th>
           <th>Етап</th>
           <th>Місто</th>
           <th>🥇</th>
@@ -520,6 +547,7 @@
 <script>
 let tournaments = [];
 let leaderboard = [];
+let leaderboardWomen = [];
 let historical = [];
 
 function orgTag(org){
@@ -584,13 +612,18 @@ function parseDate(d){
   return new Date(`${yyyy}-${mm}-${dd}`);
 }
 
-function renderMedalCell(medals){
-  if(!medals) return '<span class="m-empty">—</span>';
-  const rows = [];
-  if(medals.gold) rows.push(`<div class="m-row"><span class="m-icon">🥇</span>${medals.gold}</div>`);
-  if(medals.silver) rows.push(`<div class="m-row"><span class="m-icon">🥈</span>${medals.silver}</div>`);
-  if(medals.bronze) rows.push(`<div class="m-row"><span class="m-icon">🥉</span>${medals.bronze}</div>`);
-  return rows.length ? `<div class="medal-cell">${rows.join('')}</div>` : '<span class="m-empty">—</span>';
+function renderMedalCell(medals, medalsWomen){
+  function group(m, tagClass, tagLabel){
+    if(!m) return '';
+    const rows = [];
+    if(m.gold) rows.push(`<div class="m-row"><span class="m-icon">🥇</span>${m.gold}</div>`);
+    if(m.silver) rows.push(`<div class="m-row"><span class="m-icon">🥈</span>${m.silver}</div>`);
+    if(m.bronze) rows.push(`<div class="m-row"><span class="m-icon">🥉</span>${m.bronze}</div>`);
+    if(!rows.length) return '';
+    return `<div class="medal-group"><span class="gender-tag ${tagClass}">${tagLabel}</span>${rows.join('')}</div>`;
+  }
+  const parts = [group(medals, 'men', 'Ч'), group(medalsWomen, 'women', 'Ж')].filter(Boolean);
+  return parts.length ? `<div class="medal-cell">${parts.join('')}</div>` : '<span class="m-empty">—</span>';
 }
 
 function renderTournaments(){
@@ -633,15 +666,18 @@ function renderTournaments(){
       <td class="num mono">${fmtNum(t.men)}</td>
       <td class="num mono">${fmtNum(t.women)}</td>
       <td class="num mono">${fmtNum(t.menAvg)}</td>
-      <td>${renderMedalCell(t.medals)}</td>
+      <td>${renderMedalCell(t.medals, t.medalsWomen)}</td>
       <td>${renderLinkChips(t.links)}</td>
     </tr>
   `).join('');
 }
 
+let leaderboardGender = 'men';
+
 function renderLeaderboard(){
   const q = (document.getElementById('search-leaderboard').value || '').toLowerCase();
-  const rows = leaderboard.filter(p => !q || p.name.toLowerCase().includes(q));
+  const source = leaderboardGender === 'women' ? leaderboardWomen : leaderboard;
+  const rows = source.filter(p => !q || p.name.toLowerCase().includes(q));
   const body = document.getElementById('leaderboard-body');
   if(rows.length === 0){
     body.innerHTML = `<tr class="empty-row"><td colspan="7">Нічого не знайдено.</td></tr>`;
@@ -720,25 +756,28 @@ function renderHistorical(){
 
   const q = (document.getElementById('search-historical').value || '').toLowerCase();
   const yearFilter = document.getElementById('filter-historical-year').value;
+  const genderFilter = document.getElementById('filter-historical-gender').value;
 
   const rows = historical.filter(h=>{
     const matchesYear = !yearFilter || String(h.year) === yearFilter;
+    const matchesGender = !genderFilter || h.gender === genderFilter;
     const matchesQ = !q ||
       (h.city||'').toLowerCase().includes(q) ||
       (h.gold||'').toLowerCase().includes(q) ||
       (h.silver||'').toLowerCase().includes(q) ||
       (h.bronze||'').toLowerCase().includes(q);
-    return matchesYear && matchesQ;
+    return matchesYear && matchesGender && matchesQ;
   });
 
   const body = document.getElementById('historical-body');
   if(rows.length === 0){
-    body.innerHTML = `<tr class="empty-row"><td colspan="6">Нічого не знайдено.</td></tr>`;
+    body.innerHTML = `<tr class="empty-row"><td colspan="7">Нічого не знайдено.</td></tr>`;
     return;
   }
   body.innerHTML = rows.map(h => `
     <tr>
       <td class="num mono">${h.year}</td>
+      <td><span class="gender-tag ${h.gender}">${h.gender === 'women' ? 'Ж' : 'Ч'}</span></td>
       <td class="mono" style="color:var(--muted)">${h.stageLabel}</td>
       <td>${h.city}</td>
       <td>${h.gold || '—'}</td>
@@ -776,8 +815,17 @@ document.getElementById('toggle-udl').addEventListener('change', ()=>{ renderTou
 document.getElementById('filter-rating-season').addEventListener('change', renderRatings);
 document.getElementById('search-ratings').addEventListener('input', renderRatings);
 document.getElementById('search-leaderboard').addEventListener('input', renderLeaderboard);
+document.querySelectorAll('#leaderboard .gender-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('#leaderboard .gender-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    leaderboardGender = btn.dataset.gender;
+    renderLeaderboard();
+  });
+});
 document.getElementById('search-historical').addEventListener('input', renderHistorical);
 document.getElementById('filter-historical-year').addEventListener('change', renderHistorical);
+document.getElementById('filter-historical-gender').addEventListener('change', renderHistorical);
 
 async function loadData(){
   try{
@@ -786,6 +834,7 @@ async function loadData(){
     const data = await res.json();
     tournaments = data.tournaments || [];
     leaderboard = data.leaderboard || [];
+    leaderboardWomen = data.leaderboardWomen || [];
     historical = data.historical || [];
 
     if(data.meta && data.meta.lastUpdated){
