@@ -1,22 +1,22 @@
 {
  "meta": {
-  "lastUpdated": "2026-08-28T19:12:51.650672+00:00",
+  "lastUpdated": "2026-08-29T11:31:04.903982+00:00",
   "tournamentsCount": 178,
   "historicalCount": 64
  },
  "tournaments": [
   {
-   "total": 91,
-   "men": 64,
-   "menAvg": 47.94,
-   "women": 27,
-   "womenAvg": 36.64,
-   "name": "UDL FEST 2 CB&V CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / Команди",
-   "date": "16.08.2026",
-   "city": "Львів",
-   "isUDL": true,
+   "total": 38,
+   "men": 27,
+   "menAvg": null,
+   "women": 11,
+   "womenAvg": null,
+   "name": "ЧУ 2024 Criket",
+   "org": "ВФД",
+   "format": "Criket",
+   "date": "11.10.2025",
+   "city": "Кривий Ріг",
+   "isUDL": false,
    "links": {
     "men": null,
     "menAvg": {
@@ -34,16 +34,16 @@
    "medalsWomen": null
   },
   {
-   "total": 99,
-   "men": 69,
-   "menAvg": 49.1,
-   "women": 30,
-   "womenAvg": 37.35,
-   "name": "UDL FEST 2 CB&V SILVER",
+   "total": 44,
+   "men": 28,
+   "menAvg": null,
+   "women": 16,
+   "womenAvg": null,
+   "name": "UDL CHIK CUP",
    "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 6 етап",
-   "date": "15.08.2026",
-   "city": "Львів",
+   "format": "Criket",
+   "date": "10.08.2025",
+   "city": "Ужгород",
    "isUDL": true,
    "links": {
     "men": null,
@@ -62,1062 +62,6 @@
    "medalsWomen": null
   },
   {
-   "total": 31,
-   "men": 31,
-   "menAvg": 57.66,
-   "women": null,
-   "womenAvg": null,
-   "name": "UDL FEST 2 CB&V GOLD",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 4 етап",
-   "date": "14.08.2026",
-   "city": "Львів",
-   "isUDL": true,
-   "links": {
-    "men": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_RINS_8291",
-     "type": "nakka"
-    },
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_NAiR_1566",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": null,
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 49,
-   "men": 36,
-   "menAvg": 53.99,
-   "women": 13,
-   "womenAvg": 43.35,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 3 етап",
-   "date": "12.07.2026",
-   "city": "Полтава",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_cwI6_4686",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_685j_8515",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 51,
-   "men": 37,
-   "menAvg": 47.75,
-   "women": 14,
-   "womenAvg": 37.91,
-   "name": "ЧУ 2026 DIDO",
-   "org": "ВФД",
-   "format": "501DIDO",
-   "date": "11.07.2026",
-   "city": "Полтава",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_HYG6_2907",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_ADzJ_4460",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 60,
-   "men": 42,
-   "menAvg": 43.4,
-   "women": 18,
-   "womenAvg": 35.86,
-   "name": "UDL ODESA CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DIDO Pairs",
-   "date": "21.06.2026",
-   "city": "Одеса",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_RAOp_5850",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_Xn0t_1755",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 64,
-   "men": 42,
-   "menAvg": 52.15,
-   "women": 22,
-   "womenAvg": 39.05,
-   "name": "UDL SILVER",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 5 етап",
-   "date": "20.06.2026",
-   "city": "Одеса",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_EixJ_5347",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_MKW0_7035",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 74,
-   "men": 56,
-   "menAvg": 49.64,
-   "women": 18,
-   "womenAvg": 38.43,
-   "name": "ЧУ 2026 Команди",
-   "org": "ВФД",
-   "format": "501DO",
-   "date": "24.05.2026",
-   "city": "Черкаси",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_CxVw_0098",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_08Wj_3505",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 70,
-   "men": 49,
-   "menAvg": 53.44,
-   "women": 21,
-   "womenAvg": 40.58,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 2 етап",
-   "date": "23.05.2026",
-   "city": "Черкаси",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_QABM_3831",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_LWZr_7584",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 70,
-   "men": 56,
-   "menAvg": 51.16,
-   "women": 14,
-   "womenAvg": 41.32,
-   "name": "UDL FEST CB&V SILVER",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 4 етап",
-   "date": "17.05.2026",
-   "city": "Львів",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_may5_7787",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_bV5m_2022",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 68,
-   "men": 54,
-   "menAvg": 50.64,
-   "women": 14,
-   "womenAvg": 43.33,
-   "name": "UDL FEST CB&V CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO Pairs",
-   "date": "16.05.2026",
-   "city": "Львів",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_YNnq_9495",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_l3yE_8065",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 31,
-   "men": 28,
-   "menAvg": 58.68,
-   "women": 3,
-   "womenAvg": null,
-   "name": "UDL FEST CB&V GOLD",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 3 етап",
-   "date": "15.05.2026",
-   "city": "Львів",
-   "isUDL": true,
-   "links": {
-    "men": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_8Nch_0492",
-     "type": "nakka"
-    },
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_m2k2_5011",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": null,
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 49,
-   "men": 35,
-   "menAvg": 47.21,
-   "women": 14,
-   "womenAvg": 35.72,
-   "name": "UDL BUKOVYNA CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DIDO",
-   "date": "26.04.2026",
-   "city": "Вижниця",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_e473_7071",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_2aRS_9427",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 56,
-   "men": 42,
-   "menAvg": 50.01,
-   "women": 14,
-   "womenAvg": 41.78,
-   "name": "UDL SILVER",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 3 етап",
-   "date": "25.04.2026",
-   "city": "Вижниця",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_lh1j_7114",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_vMMc_0420",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 25,
-   "men": 24,
-   "menAvg": 54.09,
-   "women": 1,
-   "womenAvg": null,
-   "name": "UDL GOLD",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 2 етап",
-   "date": "24.04.2026",
-   "city": "Вижниця",
-   "isUDL": true,
-   "links": {
-    "men": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_yobD_8897",
-     "type": "nakka"
-    },
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_ytds_5845",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": null,
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 68,
-   "men": 52,
-   "menAvg": 45.44,
-   "women": 16,
-   "womenAvg": 37.79,
-   "name": "UDL LUTSK CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DIDO Pairs",
-   "date": "22.03.2026",
-   "city": "Луцьк",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_F2nh_8348",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_NgXI_4459",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 71,
-   "men": 54,
-   "menAvg": 51.51,
-   "women": 17,
-   "womenAvg": 42.8,
-   "name": "UDL SILVER",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 2 етап",
-   "date": "21.03.2026",
-   "city": "Луцьк",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_PU4U_3958",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_y5Rz_1150",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 40,
-   "men": 20,
-   "menAvg": 48.39,
-   "women": 20,
-   "womenAvg": null,
-   "name": "ЧУ 2026 Мікст",
-   "org": "ВФД",
-   "format": "501DO",
-   "date": "22.02.2026",
-   "city": "Львів",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_GLEL_6153",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 58,
-   "men": 39,
-   "menAvg": 51.99,
-   "women": 19,
-   "womenAvg": 42.42,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 1 етап",
-   "date": "21.02.2026",
-   "city": "Львів",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_UYg1_7850",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_ZDCZ_5314",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Могилевський Руслан",
-    "bronze": "Гринів Олександр"
-   },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Гончаренко Інна",
-    "bronze": "Ігнатюк Наталя"
-   }
-  },
-  {
-   "total": 68,
-   "men": 52,
-   "menAvg": 45.89,
-   "women": 16,
-   "womenAvg": null,
-   "name": "UDL SLAVSKO CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO Blind Pairs",
-   "date": "25.01.2026",
-   "city": "Славсько",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_29H7_3232",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 69,
-   "men": 52,
-   "menAvg": 49.62,
-   "women": 17,
-   "womenAvg": 40.97,
-   "name": "UDL SILVER",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 1 етап",
-   "date": "24.01.2026",
-   "city": "Славсько",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_GxF4_8627",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_T42z_4223",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 33,
-   "men": 29,
-   "menAvg": 55.43,
-   "women": 4,
-   "womenAvg": null,
-   "name": "UDL GOLD",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 1 етап",
-   "date": "23.01.2026",
-   "city": "Славсько",
-   "isUDL": true,
-   "links": {
-    "men": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_3Pgs_7890",
-     "type": "nakka"
-    },
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_zThU_4583",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": null,
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 62,
-   "men": 44,
-   "menAvg": 51.17,
-   "women": 18,
-   "womenAvg": 42.65,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / Фінал",
-   "date": "14.12.2025",
-   "city": "Вижниця",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_uY4p_9823",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_T1Bv_6193",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Могилевський Руслан",
-    "silver": "Мелашенко Владислав",
-    "bronze": "Козловський Богдан"
-   },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Терещенко Любов",
-    "bronze": "Лановенко Ксенія"
-   }
-  },
-  {
-   "total": 70,
-   "men": 50,
-   "menAvg": 50.46,
-   "women": 20,
-   "womenAvg": 41.5,
-   "name": "ЧУ 2025",
-   "org": "ВФД",
-   "format": "501DO",
-   "date": "13.12.2025",
-   "city": "Вижниця",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_NtXd_3172",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_CcAj_3305",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Могилевський Руслан",
-    "silver": "Абчугський Олександр",
-    "bronze": "Гринів Олександр"
-   },
-   "medalsWomen": {
-    "gold": "Гончаренко Інна",
-    "silver": "Харченко Тетяна",
-    "bronze": "Ледєньова Наталія"
-   }
-  },
-  {
-   "total": 32,
-   "men": 24,
-   "menAvg": 59.24,
-   "women": 8,
-   "womenAvg": 44.07,
-   "name": "UDL GRAND FINAL",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / Фінал",
-   "date": "12.12.2025",
-   "city": "Вижниця",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_GpEH_0450",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_u65F_2415",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 62,
-   "men": 46,
-   "menAvg": 49.17,
-   "women": 16,
-   "womenAvg": 41.57,
-   "name": "UDL STAGE 6",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 6 етап",
-   "date": "16.11.2025",
-   "city": "Львів",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_nxAa_7222",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_jA0D_5562",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 62,
-   "men": 44,
-   "menAvg": null,
-   "women": 18,
-   "womenAvg": 39.1,
-   "name": "UDL LVIV CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO Team",
-   "date": "15.11.2025",
-   "city": "Львів",
-   "isUDL": true,
-   "links": {
-    "men": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_cPxa_8532",
-     "type": "nakka"
-    },
-    "menAvg": null,
-    "women": {
-     "url": "https://docs.google.com/document/d/1nXgkNxaXmqZpoXtnouDaPmeKAlytTvcI7F5zcqETFRw/edit?tab=t.0#heading=h.xwcm0395wsjh",
-     "type": "protocol_doc"
-    },
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_RLxQ_6385",
-     "type": "nakka"
-    },
-    "tournament": {
-     "url": "https://docs.google.com/document/d/19wLwmla2FF8mCdEOY0k1sfIoxw3ZW7TVcqJ7I2KQRyw/edit?tab=t.0#heading=h.t3lc9364hi4l",
-     "type": "protocol_doc"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 47,
-   "men": 35,
-   "menAvg": 52.05,
-   "women": 12,
-   "womenAvg": 43.61,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 5 етап",
-   "date": "12.10.2025",
-   "city": "Кривий Ріг",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_STUR_1078",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_PQTA_4646",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 38,
-   "men": 27,
-   "menAvg": null,
-   "women": 11,
-   "womenAvg": null,
-   "name": "ЧУ 2024 Criket",
-   "org": "ВФД",
-   "format": "Criket",
-   "date": "11.10.2025",
-   "city": "Кривий Ріг",
-   "isUDL": false,
-   "links": {
-    "men": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_DFrH_7545",
-     "type": "nakka"
-    },
-    "menAvg": null,
-    "women": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_7hfX_0564",
-     "type": "nakka"
-    },
-    "womenAvg": null,
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 60,
-   "men": 42,
-   "menAvg": 53.0,
-   "women": 18,
-   "womenAvg": 43.06,
-   "name": "ЧУ 2025 Пари",
-   "org": "ВФД",
-   "format": "501DO",
-   "date": "14.09.2025",
-   "city": "Львів",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_3gqQ_8403",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_Tog6_1443",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 64,
-   "men": 45,
-   "menAvg": 53.14,
-   "women": 19,
-   "womenAvg": 42.81,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 4 етап",
-   "date": "13.09.2025",
-   "city": "Львів",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_X7vz_4935",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_h3bc_7516",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Кіфор Ярослав",
-    "bronze": "Могилевський Руслан"
-   },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Гончаренко Інна",
-    "bronze": "Карнаух Валентина"
-   }
-  },
-  {
-   "total": 44,
-   "men": 28,
-   "menAvg": null,
-   "women": 16,
-   "womenAvg": null,
-   "name": "UDL CHIK CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "Criket",
-   "date": "10.08.2025",
-   "city": "Ужгород",
-   "isUDL": true,
-   "links": {
-    "men": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_SzVl_9545",
-     "type": "nakka"
-    },
-    "menAvg": null,
-    "women": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_k3yX_7083",
-     "type": "nakka"
-    },
-    "womenAvg": null,
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 45,
-   "men": 29,
-   "menAvg": 53.5,
-   "women": 16,
-   "womenAvg": 41.33,
-   "name": "UDL STAGE 5",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 5 етап",
-   "date": "09.08.2025",
-   "city": "Ужгород",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_EjXu_5445",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_r6ov_4779",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 67,
-   "men": 48,
-   "menAvg": 45.84,
-   "women": 19,
-   "womenAvg": 37.13,
-   "name": "ЧУ 2025 DIDO",
-   "org": "ВФД",
-   "format": "501DIDO",
-   "date": "06.07.2025",
-   "city": "Полтава",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_lN2Q_0773",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_gy3p_4956",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 59,
-   "men": 43,
-   "menAvg": 52.84,
-   "women": 16,
-   "womenAvg": 43.24,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 3 етап",
-   "date": "05.07.2025",
-   "city": "Полтава",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_gZ73_9275",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_o9hG_2760",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Лагутін Анрій",
-    "bronze": "Гончаров Едуард"
-   },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Гончаренко Інна",
-    "bronze": "Зайцева Інна"
-   }
-  },
-  {
-   "total": 50,
-   "men": 34,
-   "menAvg": 47.0,
-   "women": 16,
-   "womenAvg": 36.99,
-   "name": "UDL ODESA CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DIDO Pairs",
-   "date": "22.06.2025",
-   "city": "Одеса",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_hKME_1916",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_ka0Q_2511",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 50,
-   "men": 35,
-   "menAvg": 55.71,
-   "women": 15,
-   "womenAvg": 41.55,
-   "name": "UDL STAGE 4",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 4 етап",
-   "date": "21.06.2025",
-   "city": "Одеса",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_akJo_9536",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_KE4s_0100",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 92,
-   "men": 71,
-   "menAvg": 49.5,
-   "women": 21,
-   "womenAvg": 40.11,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 2 етап",
-   "date": "18.05.2025",
-   "city": "Черкаси",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_S1u8_3866",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_Vczn_8404",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Пекарук Ілля",
-    "bronze": "Мелашенко Владислав"
-   },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Терещенко Любов",
-    "bronze": "Ледєньова Наталія"
-   }
-  },
-  {
    "total": 92,
    "men": 72,
    "menAvg": null,
@@ -1131,408 +75,15 @@
    "isUDL": false,
    "links": {
     "men": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_cH5L_1628",
+     "url": "https://n01darts.com/n01/league/season.php?id=t_RINS_8291",
      "type": "nakka"
     },
-    "menAvg": null,
-    "women": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_oRpI_7132",
-     "type": "nakka"
-    },
-    "womenAvg": null,
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 44,
-   "men": 31,
-   "menAvg": 45.07,
-   "women": 13,
-   "womenAvg": 33.85,
-   "name": "UDL BUKOVYNA CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DIDO",
-   "date": "27.04.2025",
-   "city": "Вижниця",
-   "isUDL": true,
-   "links": {
-    "men": null,
     "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_vuEg_4854",
+     "url": "https://n01darts.com/n01/league/season.php?id=t_NAiR_1566",
      "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_hjNy_4372",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 47,
-   "men": 33,
-   "menAvg": 51.36,
-   "women": 14,
-   "womenAvg": 37.77,
-   "name": "UDL STAGE 3",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 3 етап",
-   "date": "26.04.2025",
-   "city": "Вижниця",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_EFMU_8369",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_SgI9_0465",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 56,
-   "men": 40,
-   "menAvg": 45.08,
-   "women": 16,
-   "womenAvg": 34.27,
-   "name": "UDL LUTSK CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DIDO Pairs",
-   "date": "23.03.2025",
-   "city": "Луцьк",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_Og9n_5857",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_ozFq_3883",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 56,
-   "men": 40,
-   "menAvg": 51.79,
-   "women": 16,
-   "womenAvg": 39.98,
-   "name": "UDL STAGE 2",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 2 етап",
-   "date": "22.03.2025",
-   "city": "Луцьк",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_n5Xn_7885",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_Iixe_7203",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 32,
-   "men": 16,
-   "menAvg": 47.0,
-   "women": 16,
-   "womenAvg": null,
-   "name": "ЧУ 2025 Мікст",
-   "org": "ВФД",
-   "format": "501DO",
-   "date": "16.02.2025",
-   "city": "Львів",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_5dkA_4255",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 50,
-   "men": 34,
-   "menAvg": 55.24,
-   "women": 16,
-   "womenAvg": 42.07,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 1 етап",
-   "date": "15.02.2025",
-   "city": "Львів",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_Ny7r_3538",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_Gzua_8285",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Мелашенко Владислав",
-    "silver": "Кіфор Ярослав",
-    "bronze": "Омельченко Владислав"
-   },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Білоус Жанна",
-    "bronze": "Гончаренко Інна"
-   }
-  },
-  {
-   "total": 54,
-   "men": 40,
-   "menAvg": 45.11,
-   "women": 14,
-   "womenAvg": null,
-   "name": "UDL SLAVSKO CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO Blind Pairs",
-   "date": "26.01.2025",
-   "city": "Славсько",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_hE9c_7001",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 55,
-   "men": 41,
-   "menAvg": 50.23,
-   "women": 14,
-   "womenAvg": 39.9,
-   "name": "UDL STAGE 1",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 1 етап",
-   "date": "25.01.2025",
-   "city": "Славсько",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_dPyE_3635",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_ZIvj_0951",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 48,
-   "men": 24,
-   "menAvg": 45.96,
-   "women": 24,
-   "womenAvg": null,
-   "name": "ЧУ 2024 Мікст",
-   "org": "ВФД",
-   "format": "501DO",
-   "date": "08.12.2024",
-   "city": "Львів",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_s4vl_7970",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 77,
-   "men": 55,
-   "menAvg": 52.25,
-   "women": 22,
-   "womenAvg": 39.01,
-   "name": "ЧУ 2024",
-   "org": "ВФД",
-   "format": "501DO",
-   "date": "07.12.2024",
-   "city": "Львів",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_F38N_0201",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_ERTV_9130",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Залевський Володимир",
-    "silver": "Аверін Сергій",
-    "bronze": "Омельченко Владислав"
-   },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Чабанова Анна",
-    "bronze": "Терещенко Любов"
-   }
-  },
-  {
-   "total": 24,
-   "men": 24,
-   "menAvg": 62.0,
-   "women": null,
-   "womenAvg": null,
-   "name": "UDL GRAND FINAL",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / Фінал",
-   "date": "06.12.2024",
-   "city": "Львів",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_TdVQ_8888",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 44,
-   "men": 41,
-   "menAvg": 50.79,
-   "women": 3,
-   "womenAvg": null,
-   "name": "UDL STAGE 6",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 6 етап",
-   "date": "10.11.2024",
-   "city": "Чернівці",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_SM77_6759",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 48,
-   "men": 44,
-   "menAvg": 48.41,
-   "women": 4,
-   "womenAvg": null,
-   "name": "UDL CHERVNITSI CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO Team",
-   "date": "09.11.2024",
-   "city": "Чернівці",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://docs.google.com/document/d/1CaBG6-xQ1AvFLcbeQbQDekU5BlForOi_ZDgqqGc-wk8/edit?tab=t.0",
-     "type": "protocol_doc"
     },
     "women": null,
     "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_5PCZ_4102",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 62,
-   "men": 48,
-   "menAvg": 51.74,
-   "women": 14,
-   "womenAvg": 40.5,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 4 етап",
-   "date": "13.10.2024",
-   "city": "Кривий Ріг",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_m9Ht_9431",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_k0RT_4331",
-     "type": "nakka"
-    },
     "tournament": null
    },
    "medals": null,
@@ -1551,287 +102,20 @@
    "city": "Кривий Ріг",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_cEUL_6354",
-     "type": "nakka"
-    },
-    "menAvg": null,
-    "women": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_ARpU_4271",
-     "type": "nakka"
-    },
-    "womenAvg": null,
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 55,
-   "men": 37,
-   "menAvg": 53.73,
-   "women": 18,
-   "womenAvg": 40.4,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 3 етап",
-   "date": "08.09.2024",
-   "city": "Одеса",
-   "isUDL": false,
-   "links": {
     "men": null,
     "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_xIRU_8393",
+     "url": "https://n01darts.com/n01/league/season.php?id=t_cwI6_4686",
      "type": "nakka"
     },
     "women": null,
     "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_4IP6_0116",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Залевський Володимир",
-    "silver": "Усик Артем",
-    "bronze": "Мелашенко Владислав"
-   },
-   "medalsWomen": {
-    "gold": "Ільясова Альбіна",
-    "silver": "Гончаренко Інна",
-    "bronze": "Харченко Тетяна"
-   }
-  },
-  {
-   "total": 58,
-   "men": 40,
-   "menAvg": 49.84,
-   "women": 18,
-   "womenAvg": 38.02,
-   "name": "ЧУ 2024 Пари",
-   "org": "ВФД",
-   "format": "501DO",
-   "date": "07.09.2024",
-   "city": "Одеса",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_6Hvk_5762",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_5blS_4073",
+     "url": "https://n01darts.com/n01/league/season.php?id=t_685j_8515",
      "type": "nakka"
     },
     "tournament": null
    },
    "medals": null,
    "medalsWomen": null
-  },
-  {
-   "total": 37,
-   "men": 34,
-   "menAvg": 44.99,
-   "women": 3,
-   "womenAvg": null,
-   "name": "UDL KYIV CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DIDO",
-   "date": "11.08.2024",
-   "city": "Київ",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_UR82_3198",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 39,
-   "men": 35,
-   "menAvg": 52.09,
-   "women": 4,
-   "womenAvg": null,
-   "name": "UDL STAGE 5",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 5 етап",
-   "date": "10.08.2024",
-   "city": "Київ",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_PXHu_5772",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 50,
-   "men": 38,
-   "menAvg": 48.95,
-   "women": 12,
-   "womenAvg": 37.43,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 2 етап",
-   "date": "21.07.2024",
-   "city": "Чернівці",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_kB2F_7788",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_P3DB_6888",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Григоренко Віктор",
-    "silver": "Залевський Володимир",
-    "bronze": "Мелашенко Владислав"
-   },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Білоус Жанна",
-    "bronze": "Гончаренко Інна"
-   }
-  },
-  {
-   "total": 42,
-   "men": 32,
-   "menAvg": 45.67,
-   "women": 10,
-   "womenAvg": 34.78,
-   "name": "ЧУ 2024 DIDO",
-   "org": "ВФД",
-   "format": "501DIDO",
-   "date": "20.07.2024",
-   "city": "Чернівці",
-   "isUDL": false,
-   "links": {
-    "men": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_znnr_3293",
-     "type": "nakka"
-    },
-    "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_2322_3827",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_jOB5_4131",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 32,
-   "men": 28,
-   "menAvg": 50.7,
-   "women": 4,
-   "womenAvg": null,
-   "name": "UDL ODESA CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO Pairs",
-   "date": "23.06.2024",
-   "city": "Одеса",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_ZNWq_0275",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 32,
-   "men": 28,
-   "menAvg": 52.41,
-   "women": 4,
-   "womenAvg": null,
-   "name": "UDL STAGE 4",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 4 етап",
-   "date": "22.06.2024",
-   "city": "Одеса",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_yCnY_5996",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 57,
-   "men": 38,
-   "menAvg": 50.26,
-   "women": 19,
-   "womenAvg": 40.45,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 1 етап",
-   "date": "19.05.2024",
-   "city": "Черкаси",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_tkpr_0131",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_pL9t_5374",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Рогов Віталій",
-    "silver": "Залевський Володимир",
-    "bronze": "Троценко Артем"
-   },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Терещенко Любов",
-    "bronze": "Пивошенко Олена"
-   }
   },
   {
    "total": 60,
@@ -1846,16 +130,16 @@
    "city": "Черкаси",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_OY6O_0762",
+    "men": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_HYG6_2907",
      "type": "nakka"
     },
-    "menAvg": null,
-    "women": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_Fq3J_0425",
+    "women": null,
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_ADzJ_4460",
      "type": "nakka"
     },
-    "womenAvg": null,
     "tournament": null
    },
    "medals": null,
@@ -1875,252 +159,13 @@
    "isUDL": true,
    "links": {
     "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_4cE6_7962",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 32,
-   "men": 29,
-   "menAvg": 51.7,
-   "women": 3,
-   "womenAvg": null,
-   "name": "UDL STAGE 3",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 3 етап",
-   "date": "13.04.2024",
-   "city": "Ужгород",
-   "isUDL": true,
-   "links": {
-    "men": null,
     "menAvg": {
-     "url": "https://docs.google.com/document/d/1KPg6INw-SfA0q-gtig7RSJICVugq38XnPN_1VTrmD2c/edit?tab=t.0#heading=h.6pkdl723ods3",
-     "type": "protocol_doc"
-    },
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_tjq4_1053",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 36,
-   "men": 34,
-   "menAvg": 44.15,
-   "women": 2,
-   "womenAvg": null,
-   "name": "UDL LUTSK CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DIDO Pairs",
-   "date": "24.03.2024",
-   "city": "Луцьк",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_hUQy_5277",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 43,
-   "men": 39,
-   "menAvg": 47.2,
-   "women": 4,
-   "womenAvg": null,
-   "name": "UDL STAGE 2",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 2 етап",
-   "date": "23.03.2024",
-   "city": "Луцьк",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_g7Uz_0226",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 34,
-   "men": 31,
-   "menAvg": 42.8,
-   "women": 3,
-   "womenAvg": null,
-   "name": "UDL LVIV CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DIDO Pairs",
-   "date": "18.02.2024",
-   "city": "Львів",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_tN4G_7704",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 39,
-   "men": 36,
-   "menAvg": 51.34,
-   "women": 3,
-   "womenAvg": null,
-   "name": "UDL STAGE 1",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 2 етап",
-   "date": "17.02.2024",
-   "city": "Львів",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/league/season.php?id=t_a3zh_9869",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 94,
-   "men": 73,
-   "menAvg": 51.38,
-   "women": 21,
-   "womenAvg": 36.63,
-   "name": "ЧУ 2023",
-   "org": "ВФД",
-   "format": "501DO",
-   "date": "03.12.2023",
-   "city": "Львів",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_Nr3f_0512",
+     "url": "https://n01darts.com/n01/league/season.php?id=t_RAOp_5850",
      "type": "nakka"
     },
     "women": null,
     "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_hzbI_6537",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Залевський Володимир",
-    "bronze": "Пекарук Ілля"
-   },
-   "medalsWomen": {
-    "gold": "Терещенко Любов",
-    "silver": "Шклярук Наталія",
-    "bronze": "Білоус Жанна"
-   }
-  },
-  {
-   "total": 54,
-   "men": 27,
-   "menAvg": 45.98,
-   "women": 27,
-   "womenAvg": null,
-   "name": "ЧУ 2023 Мікст",
-   "org": "ВФД",
-   "format": "501DO",
-   "date": "02.12.2023",
-   "city": "Львів",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_rYuZ_4602",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 15,
-   "men": 15,
-   "menAvg": 63.44,
-   "women": null,
-   "womenAvg": null,
-   "name": "WUDL GRAND FINAL",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / Фінал",
-   "date": "01.12.2023",
-   "city": "Львів",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_kzWU_6180",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 60,
-   "men": 50,
-   "menAvg": 49.63,
-   "women": 10,
-   "womenAvg": 39.6,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 6 етап",
-   "date": "12.11.2023",
-   "city": "Кривий Ріг",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_Xbfp_1205",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_o8Ck_2332",
+     "url": "https://n01darts.com/n01/league/season.php?id=t_Xn0t_1755",
      "type": "nakka"
     },
     "tournament": null
@@ -2141,192 +186,14 @@
    "city": "Кривий Ріг",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_tgVk_7027",
-     "type": "nakka"
-    },
-    "menAvg": null,
-    "women": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_b1Gx_3613",
-     "type": "nakka"
-    },
-    "womenAvg": null,
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 75,
-   "men": 58,
-   "menAvg": 54.08,
-   "women": 17,
-   "womenAvg": 42.36,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 5 етап",
-   "date": "10.09.2023",
-   "city": "Одеса",
-   "isUDL": false,
-   "links": {
     "men": null,
     "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_4Uxu_8846",
+     "url": "https://n01darts.com/n01/league/season.php?id=t_EixJ_5347",
      "type": "nakka"
     },
     "women": null,
     "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_EiNV_3440",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Залевський Володимир",
-    "bronze": "Сташевський Валентин"
-   },
-   "medalsWomen": {
-    "gold": "Моісеєнко Віталіна",
-    "silver": "Соколова Вікторія",
-    "bronze": "Харченко Тетяна"
-   }
-  },
-  {
-   "total": 70,
-   "men": 52,
-   "menAvg": 53.27,
-   "women": 18,
-   "womenAvg": 39.48,
-   "name": "ЧУ 2023 Пари",
-   "org": "ВФД",
-   "format": "501DO",
-   "date": "09.09.2023",
-   "city": "Одеса",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_S6M5_2832",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_4huM_4555",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 34,
-   "men": 32,
-   "menAvg": 43.75,
-   "women": 2,
-   "womenAvg": null,
-   "name": "WUDL LUTSK CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DIDO Pairs",
-   "date": "20.08.2023",
-   "city": "Луцьк",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_0YdS_7860",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 36,
-   "men": 34,
-   "menAvg": 48.81,
-   "women": 2,
-   "womenAvg": null,
-   "name": "WUDL STAGE 4",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 4 етап",
-   "date": "19.08.2023",
-   "city": "Луцьк",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_RFxg_3349",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 50,
-   "men": 40,
-   "menAvg": 50.01,
-   "women": 10,
-   "womenAvg": 35.45,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 4 етап",
-   "date": "30.07.2023",
-   "city": "Чернівці",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_7GoH_2278",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_ID7t_7027",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Залевський Володимир",
-    "silver": "Омельченко Владислав",
-    "bronze": "Пекарук Ілля"
-   },
-   "medalsWomen": {
-    "gold": "Шклярук Наталія",
-    "silver": "Лановенко Ксенія",
-    "bronze": "Полтавець Світлана"
-   }
-  },
-  {
-   "total": 50,
-   "men": 40,
-   "menAvg": 44.96,
-   "women": 10,
-   "womenAvg": 29.55,
-   "name": "ЧУ 2023 DIDO",
-   "org": "ВФД",
-   "format": "501DIDO",
-   "date": "29.07.2023",
-   "city": "Чернівці",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_Yuqn_5723",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_Ci0J_8288",
+     "url": "https://n01darts.com/n01/league/season.php?id=t_MKW0_7035",
      "type": "nakka"
     },
     "tournament": null
@@ -2348,77 +215,19 @@
    "isUDL": true,
    "links": {
     "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_QuUS_8112",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 35,
-   "men": 33,
-   "menAvg": 48.83,
-   "women": 2,
-   "womenAvg": null,
-   "name": "WUDL STAGE 3",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 3 етап",
-   "date": "10.06.2023",
-   "city": "Ужгород",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_Tb5t_0735",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 69,
-   "men": 53,
-   "menAvg": 52.8,
-   "women": 16,
-   "womenAvg": 40.54,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 3 етап",
-   "date": "21.05.2023",
-   "city": "Черкаси",
-   "isUDL": false,
-   "links": {
-    "men": null,
     "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_GeZB_7887",
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_CxVw_0098",
      "type": "nakka"
     },
     "women": null,
     "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_sqob_1161",
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_08Wj_3505",
      "type": "nakka"
     },
     "tournament": null
    },
-   "medals": {
-    "gold": "Залевський Володимир",
-    "silver": "Мамика Олександ",
-    "bronze": "Луков Олександр"
-   },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Терещенко Любов",
-    "bronze": "Моісеєнко Віталіна"
-   }
+   "medals": null,
+   "medalsWomen": null
   },
   {
    "total": 76,
@@ -2433,16 +242,16 @@
    "city": "Черкаси",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_L4br_3066",
+    "men": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_QABM_3831",
      "type": "nakka"
     },
-    "menAvg": null,
-    "women": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_gPfp_5696",
+    "women": null,
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_LWZr_7584",
      "type": "nakka"
     },
-    "womenAvg": null,
     "tournament": null
    },
    "medals": null,
@@ -2462,160 +271,16 @@
    "isUDL": true,
    "links": {
     "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_A4KJ_6369",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 37,
-   "men": 35,
-   "menAvg": 51.56,
-   "women": 2,
-   "womenAvg": null,
-   "name": "WUDL STAGE 2",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 2 етап",
-   "date": "29.04.2023",
-   "city": "Чернівці",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_KhLh_7111",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 52,
-   "men": 44,
-   "menAvg": 51.72,
-   "women": 8,
-   "womenAvg": 41.64,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 2 етап",
-   "date": "26.03.2023",
-   "city": "Львів",
-   "isUDL": false,
-   "links": {
-    "men": null,
     "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_ye7b_0216",
+     "url": "https://n01darts.com/n01/league/season.php?id=t_may5_7787",
      "type": "nakka"
     },
     "women": null,
     "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_RfEO_1192",
+     "url": "https://n01darts.com/n01/league/season.php?id=t_bV5m_2022",
      "type": "nakka"
     },
     "tournament": null
-   },
-   "medals": {
-    "gold": "Залевський Володимир",
-    "silver": "Омельченко Владислав",
-    "bronze": "Пекарук Ілля"
-   },
-   "medalsWomen": {
-    "gold": "Моісеєнко Віталіна",
-    "silver": "Терещенко Любов",
-    "bronze": "Лановенко Ксенія"
-   }
-  },
-  {
-   "total": 53,
-   "men": 45,
-   "menAvg": 53.42,
-   "women": 8,
-   "womenAvg": 41.53,
-   "name": "Кубок України",
-   "org": "ВФД",
-   "format": "501DO / 1 етап",
-   "date": "25.03.2023",
-   "city": "Львів",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_BaYJ_1769",
-     "type": "nakka"
-    },
-    "women": null,
-    "womenAvg": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_OzP6_5258",
-     "type": "nakka"
-    },
-    "tournament": null
-   },
-   "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Пекарук Ілля",
-    "bronze": "Залевський Володимир"
-   },
-   "medalsWomen": {
-    "gold": "Моісеєнко Віталіна",
-    "silver": "Терещенко Любов",
-    "bronze": "Лановенко Ксенія"
-   }
-  },
-  {
-   "total": 34,
-   "men": 33,
-   "menAvg": 46.86,
-   "women": 1,
-   "womenAvg": null,
-   "name": "WUDL LVIV CUP",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DIDO Pairs",
-   "date": "05.02.2023",
-   "city": "Львів",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_G3FC_9344",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 40,
-   "men": 39,
-   "menAvg": 54.0,
-   "women": 1,
-   "womenAvg": null,
-   "name": "WUDL STAGE 1",
-   "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 1 етап",
-   "date": "04.02.2023",
-   "city": "Львів",
-   "isUDL": true,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_SMJp_1714",
-     "type": "nakka"
-    }
    },
    "medals": null,
    "medalsWomen": null
@@ -2634,13 +299,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_AD0X_1671",
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_YNnq_9495",
      "type": "nakka"
-    }
+    },
+    "women": null,
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_l3yE_8065",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -2659,14 +327,14 @@
    "isUDL": false,
    "links": {
     "men": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_tZUs_2669",
+     "url": "https://n01darts.com/n01/league/season.php?id=t_8Nch_0492",
      "type": "nakka"
     },
-    "menAvg": null,
-    "women": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_HO4X_4781",
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_m2k2_5011",
      "type": "nakka"
     },
+    "women": null,
     "womenAvg": null,
     "tournament": null
    },
@@ -2682,56 +350,6 @@
    }
   },
   {
-   "total": 14,
-   "men": 14,
-   "menAvg": 54.83,
-   "women": null,
-   "womenAvg": null,
-   "name": "Chernivtsi Open",
-   "org": "ВФД",
-   "format": "501DO",
-   "date": "18.09.2022",
-   "city": "Чернівці",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_GTuL_9297",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
-   "total": 16,
-   "men": 16,
-   "menAvg": 54.44,
-   "women": null,
-   "womenAvg": null,
-   "name": "Independence Championship",
-   "org": "ВФД",
-   "format": "501DO Пари",
-   "date": "17.09.2022",
-   "city": "Чернівці",
-   "isUDL": false,
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_UXGr_2552",
-     "type": "nakka"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null
-  },
-  {
    "total": 84,
    "men": 65,
    "menAvg": null,
@@ -2745,13 +363,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_e473_7071",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1DLwbYm8_U9XdYSmXtEUYC6mprYfvwJPa9PbXU8C-FuQ/edit?tab=t.0#heading=h.hhz9h7rt4z9a",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_2aRS_9427",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -2770,13 +391,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_lh1j_7114",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1sUVUGSgHQil5-PcGebEbaz1_WWdt6KH9BVImXedAqwk/edit?tab=t.0#heading=h.w5wzmq2lmq8c",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_vMMc_0420",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -2795,14 +419,14 @@
    "isUDL": false,
    "links": {
     "men": {
-     "url": "https://docs.google.com/spreadsheets/d/1SUK5AScW6R2XN2LslXWCeaHxFey0hxlaMTJNP8zqtDo/edit?gid=1331416495#gid=1331416495",
-     "type": "protocol_sheet"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_yobD_8897",
+     "type": "nakka"
     },
-    "menAvg": null,
-    "women": {
-     "url": "https://docs.google.com/spreadsheets/d/1lhX5ilwegTG5L353XdeWNN8t63ydEcYgiNHznpBUyrQ/edit?gid=984053728#gid=984053728",
-     "type": "protocol_sheet"
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_ytds_5845",
+     "type": "nakka"
     },
+    "women": null,
     "womenAvg": null,
     "tournament": null
    },
@@ -2831,13 +455,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_F2nh_8348",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/spreadsheets/d/1UasxsXFv4tVzdFoY41oWc9kGAleE4eJ8av_3KSxwLUw/edit?gid=1306763671#gid=1306763671",
-     "type": "protocol_sheet"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_NgXI_4459",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -2856,13 +483,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_PU4U_3958",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "http://open.udf.in.ua/online-results.html",
-     "type": "udf_online"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_y5Rz_1150",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -2885,8 +515,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "http://open.udf.in.ua/online-results.html",
-     "type": "udf_online"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_GLEL_6153",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -2906,13 +536,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_UYg1_7850",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "http://open.udf.in.ua/online-results.html",
-     "type": "udf_online"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_ZDCZ_5314",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -2935,8 +568,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "http://open.udf.in.ua/online-results.html",
-     "type": "udf_online"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_29H7_3232",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -2955,16 +588,16 @@
    "city": "Одеса",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://docs.google.com/spreadsheets/d/1k4GELE-3q38mLDiYx9KekS4b3o1VUbPVu6tZ0As38P4/edit?gid=885816906#gid=885816906",
-     "type": "protocol_sheet"
+    "men": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_GxF4_8627",
+     "type": "nakka"
     },
-    "menAvg": null,
-    "women": {
-     "url": "https://docs.google.com/spreadsheets/d/13h85oCYsawblE5d5gyDg9Ix2SC6-HqrYgzqtJTLykU0/edit?gid=1634133278#gid=1634133278",
-     "type": "protocol_sheet"
+    "women": null,
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_T42z_4223",
+     "type": "nakka"
     },
-    "womenAvg": null,
     "tournament": null
    },
    "medals": {
@@ -2992,14 +625,14 @@
    "isUDL": false,
    "links": {
     "men": {
-     "url": "https://docs.google.com/spreadsheets/d/1GEqBy_yIowuqoms3GLtiqnbPH_otNa3OFAVNe36vc0I/edit?gid=1984699608#gid=1984699608",
-     "type": "protocol_sheet"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_3Pgs_7890",
+     "type": "nakka"
     },
-    "menAvg": null,
-    "women": {
-     "url": "https://docs.google.com/spreadsheets/d/1PUOV_Dw2atdycTsRtFA0zEUWi0nzTTqOHEQ2TkTcGuA/edit?gid=1813512598#gid=1813512598",
-     "type": "protocol_sheet"
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_zThU_4583",
+     "type": "nakka"
     },
+    "women": null,
     "womenAvg": null,
     "tournament": null
    },
@@ -3020,13 +653,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_uY4p_9823",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1jIDrJiFmYv-lpnCOzh152rhNdoKbiHfKiP_Tk-aO3UA/edit?tab=t.0#heading=h.mr65h81rmnps",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_T1Bv_6193",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": {
     "gold": "Омельченко Владислав",
@@ -3053,13 +689,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_NtXd_3172",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1Dq161QaQH407L7P-iJmPb_3Qie1DgR_q8w2UjsUwbq4/edit?tab=t.0#heading=h.2hn86pqldii",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_CcAj_3305",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -3078,13 +717,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_GpEH_0450",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1XfS2Tb78LPAHtjhCGvu8ALzUKE61tElzPzC2vQMr_UM/edit?tab=t.0#heading=h.i9msm2f5557s",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_u65F_2415",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": {
     "gold": "Омельченко Владислав",
@@ -3111,13 +753,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_nxAa_7222",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1_DrgprD_-5mC5ProvSeYFxlwVG5kZZfhsiXPwlDXzd4/edit?tab=t.0#heading=h.7pcdo5ixf4gc",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_jA0D_5562",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": {
     "gold": "Бушуй Олексій",
@@ -3143,12 +788,21 @@
    "city": "Кривий Ріг",
    "isUDL": false,
    "links": {
-    "men": null,
+    "men": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_cPxa_8532",
+     "type": "nakka"
+    },
     "menAvg": null,
-    "women": null,
-    "womenAvg": null,
+    "women": {
+     "url": "https://docs.google.com/document/d/1nXgkNxaXmqZpoXtnouDaPmeKAlytTvcI7F5zcqETFRw/edit?tab=t.0#heading=h.xwcm0395wsjh",
+     "type": "protocol_doc"
+    },
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_RLxQ_6385",
+     "type": "nakka"
+    },
     "tournament": {
-     "url": "https://docs.google.com/document/d/1MAI8pn9Ob0i0h_MS-_YaInaLvUktj8_qIBUofYTfbJQ/edit?tab=t.0#heading=h.vk345q1o15r0",
+     "url": "https://docs.google.com/document/d/19wLwmla2FF8mCdEOY0k1sfIoxw3ZW7TVcqJ7I2KQRyw/edit?tab=t.0#heading=h.t3lc9364hi4l",
      "type": "protocol_doc"
     }
    },
@@ -3169,13 +823,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_STUR_1078",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1zmLruALPU5FAzSV7H4VuqukT3W1StQbbNzvR5_Hfsuc/edit?tab=t.0#heading=h.srdcwgvl9k4g",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_PQTA_4646",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -3194,13 +851,13 @@
    "isUDL": false,
    "links": {
     "men": {
-     "url": "https://docs.google.com/spreadsheets/d/16vdSOoiiuTudVpfqFHDt6yAOUFLsbN2tXy-rPqDS5L8/edit?gid=1331416495#gid=1331416495",
-     "type": "protocol_sheet"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_DFrH_7545",
+     "type": "nakka"
     },
     "menAvg": null,
     "women": {
-     "url": "https://docs.google.com/spreadsheets/d/1fgMUENamP5_1gvWQvEOKIaCjMumyCkqB63iN3Xtgt4A/edit?gid=667677935#gid=667677935",
-     "type": "protocol_sheet"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_7hfX_0564",
+     "type": "nakka"
     },
     "womenAvg": null,
     "tournament": null
@@ -3230,13 +887,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_3gqQ_8403",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1Yj35dqSk-_n5XGT2NVEgUjkGhO0ZA4Jm1tUhLZIwTrE/edit?tab=t.0#heading=h.obuc9ifwh8qd",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_Tog6_1443",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -3255,13 +915,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_X7vz_4935",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/spreadsheets/d/1AtUFe99Bcln5PVp25Bg-39EOIHj4iAJR7ybgyyamHpg/edit?gid=667677935#gid=667677935",
-     "type": "protocol_sheet"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_h3bc_7516",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -3279,14 +942,17 @@
    "city": "Кривий Ріг",
    "isUDL": false,
    "links": {
-    "men": null,
+    "men": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_SzVl_9545",
+     "type": "nakka"
+    },
     "menAvg": null,
-    "women": null,
+    "women": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_k3yX_7083",
+     "type": "nakka"
+    },
     "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1jwK0pvm-a55PjWtUToTe4KkBqERUZQqM77AP79pOINA/edit?tab=t.0#heading=h.p741s8v6p96z",
-     "type": "protocol_doc"
-    }
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -3305,13 +971,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_EjXu_5445",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/19mEIW_iPxEPv6IaUl-LKw4Vw-HQNxCZxr5t45NpjLug/edit?tab=t.0#heading=h.xlteiphy5xh8",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_r6ov_4779",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -3330,13 +999,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_lN2Q_0773",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1h5jxQ7lBxk1cclgfSgUf6f5vdIdweMUauwuHDtJMqnc/edit?tab=t.0#heading=h.za5yvmuzic1r",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_gy3p_4956",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": {
     "gold": "Мамика Олександр",
@@ -3363,13 +1035,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_gZ73_9275",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1XSmMMVrbYLREpfN2aUSK9VEUsEdhfP4PUCbHBxvnItc/edit?tab=t.0#heading=h.9m2ua01mz1uh",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_o9hG_2760",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -3388,9 +1063,15 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_hKME_1916",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_ka0Q_2511",
+     "type": "nakka"
+    },
     "tournament": null
    },
    "medals": null,
@@ -3410,9 +1091,15 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_akJo_9536",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_KE4s_0100",
+     "type": "nakka"
+    },
     "tournament": null
    },
    "medals": null,
@@ -3432,9 +1119,15 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_S1u8_3866",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_Vczn_8404",
+     "type": "nakka"
+    },
     "tournament": null
    },
    "medals": null,
@@ -3453,9 +1146,15 @@
    "city": "Київ",
    "isUDL": false,
    "links": {
-    "men": null,
+    "men": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_cH5L_1628",
+     "type": "nakka"
+    },
     "menAvg": null,
-    "women": null,
+    "women": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_oRpI_7132",
+     "type": "nakka"
+    },
     "womenAvg": null,
     "tournament": null
    },
@@ -3476,13 +1175,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_vuEg_4854",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/16wFkQCLsEuh-s62l-QJRXCZUezrW67-f_CTsOdbUYPc/edit?tab=t.0#heading=h.cg7ek44ghf3f",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_hjNy_4372",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": {
     "gold": "Мамика Олександр",
@@ -3509,13 +1211,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_EFMU_8369",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1V9plXqjgsbXkSrC46j6PKaBL2UXSn33EsBXRL9qxlHg/edit?tab=t.0#heading=h.u8qb33i3k43n",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_SgI9_0465",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -3533,16 +1238,16 @@
    "city": "Черкаси",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://docs.google.com/spreadsheets/d/1Dc7UbQqN7lPuW9mx8RKdgfqhdaeEUHiw-RPtOrm8VKg/edit?gid=1089848303#gid=1089848303",
-     "type": "protocol_sheet"
+    "men": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_Og9n_5857",
+     "type": "nakka"
     },
-    "menAvg": null,
-    "women": {
-     "url": "https://docs.google.com/spreadsheets/d/1TY0IBlN9aXI0MCVWpJ2ftXBbWUw5E5wJ2jfXuOStxOA/edit?gid=947761883#gid=947761883",
-     "type": "protocol_sheet"
+    "women": null,
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_ozFq_3883",
+     "type": "nakka"
     },
-    "womenAvg": null,
     "tournament": null
    },
    "medals": {
@@ -3569,16 +1274,16 @@
    "city": "Черкаси",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://docs.google.com/spreadsheets/d/1Z3wZGCMNZet-EYjHq4yoQGBqZW0vy3c_QTIwehodhiE/edit?gid=1703991921#gid=1703991921",
-     "type": "protocol_sheet"
+    "men": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_n5Xn_7885",
+     "type": "nakka"
     },
-    "menAvg": null,
-    "women": {
-     "url": "https://docs.google.com/spreadsheets/d/1TgiH_YPRqU6hKKf-SlT7FVC_1BHSgugASE6rLeqVloA/edit?gid=1375587316#gid=1375587316",
-     "type": "protocol_sheet"
+    "women": null,
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_Iixe_7203",
+     "type": "nakka"
     },
-    "womenAvg": null,
     "tournament": null
    },
    "medals": null,
@@ -3602,8 +1307,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1bjoe-mKPv5kXx1J7or3Cg8vpm6FFPZUKiq4y-hcXwjc/edit?tab=t.0",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_5dkA_4255",
+     "type": "nakka"
     }
    },
    "medals": {
@@ -3631,13 +1336,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_Ny7r_3538",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1AwCIc2lCU7d3ZaciuC1O70Uk2f9fPfJa4H79IR-lEJs/edit?tab=t.0",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_Gzua_8285",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": {
     "gold": "Бушуй Олексій",
@@ -3668,8 +1376,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1zIoGeSaYsiqHRKmaP7iPJtP5gBbzzzDs0Gnwicg_AtE/edit?tab=t.0#heading=h.xbu0lav530zf",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_hE9c_7001",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -3689,13 +1397,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_dPyE_3635",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1gbNYDqq1cYIuFT_YXVBWi02Gvj1mWpswYj3exjpTifM/edit?tab=t.0#heading=h.nuh5fje0tn0l",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_ZIvj_0951",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -3718,8 +1429,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1jF5ZxQYbNoCok9DBQCwGF9goWNrGogrHAGRkMbNA8kI/edit?tab=t.0",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_s4vl_7970",
+     "type": "nakka"
     }
    },
    "medals": {
@@ -3747,13 +1458,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_F38N_0201",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/13vvks3PCnYeN3hdlUSBnGFZnNxRghMxAFEq8fyMhHok/edit?tab=t.0",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_ERTV_9130",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": {
     "gold": "Бушуй Олексій",
@@ -3779,17 +1493,14 @@
    "city": "Київ",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://docs.google.com/spreadsheets/d/1Cfej_PNYFoBsBwdV9JQjGyBNYomMs3W9s_8nDlUew9g/edit?gid=738414203#gid=738414203",
-     "type": "protocol_sheet"
-    },
+    "men": null,
     "menAvg": null,
-    "women": {
-     "url": "https://docs.google.com/spreadsheets/d/1Zwxaq1Ai3Cav8GJAh2hH6Z-ZvdmPCYehJ4UI8CEz4i8/edit?gid=2043762064#gid=2043762064",
-     "type": "protocol_sheet"
-    },
+    "women": null,
     "womenAvg": null,
-    "tournament": null
+    "tournament": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_TdVQ_8888",
+     "type": "nakka"
+    }
    },
    "medals": null,
    "medalsWomen": null
@@ -3812,8 +1523,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/spreadsheets/d/1QGnxdFBKvQVhrZo_UWFiXYhD2I2bqQryiPmrVEY-cKo/edit?gid=1159229369#gid=1159229369",
-     "type": "protocol_sheet"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_SM77_6759",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -3833,12 +1544,15 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://docs.google.com/document/d/1CaBG6-xQ1AvFLcbeQbQDekU5BlForOi_ZDgqqGc-wk8/edit?tab=t.0",
+     "type": "protocol_doc"
+    },
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1Iwn6O2JlrQQvOIhz_nuY3gKoUS56OB0_IePGij5miNY/edit?tab=t.0#heading=h.f9hbhjyrp49",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_5PCZ_4102",
+     "type": "nakka"
     }
    },
    "medals": {
@@ -3866,13 +1580,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_m9Ht_9431",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1RlcjQ33u4YgKkec62kGO_LYi_ZPzGrkqIqcOpGBgCYg/edit?tab=t.0#heading=h.u9pkn41or99y",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_k0RT_4331",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": {
     "gold": "Фатех Дін",
@@ -3898,14 +1615,17 @@
    "city": "Одеса",
    "isUDL": false,
    "links": {
-    "men": null,
+    "men": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_cEUL_6354",
+     "type": "nakka"
+    },
     "menAvg": null,
-    "women": null,
+    "women": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_ARpU_4271",
+     "type": "nakka"
+    },
     "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1mqkU1lH4g39L36nIcbRgItG4ZTAHzyWm2_4bAuQOqkg/edit?tab=t.0#heading=h.clqbih13mcc3",
-     "type": "protocol_doc"
-    }
+    "tournament": null
    },
    "medals": {
     "gold": "Усик Артем",
@@ -3932,13 +1652,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_xIRU_8393",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/13Nt6WAVgRMgLuhVQEMQQczCjCh82xz6eBxuBzx52WDc/edit?tab=t.0#heading=h.hw59kfaxzuxy",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_4IP6_0116",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -3956,16 +1679,16 @@
    "city": "Київ",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://docs.google.com/spreadsheets/d/1IKinuAli2ZlpS3TeFHNIUfF5Ce71dvY9m2he1i5bo8U/edit?gid=1626152929#gid=1626152929",
-     "type": "protocol_sheet"
+    "men": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_6Hvk_5762",
+     "type": "nakka"
     },
-    "menAvg": null,
-    "women": {
-     "url": "https://docs.google.com/spreadsheets/d/1wF_acwqZVzqB8QIc2kQ20q4P6Zh9WgOgRjWYQNS6B7c/edit?gid=1387438451#gid=1387438451",
-     "type": "protocol_sheet"
+    "women": null,
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_5blS_4073",
+     "type": "nakka"
     },
-    "womenAvg": null,
     "tournament": null
    },
    "medals": null,
@@ -3984,17 +1707,14 @@
    "city": "Київ",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://docs.google.com/spreadsheets/d/1htMjPS-har_Y-t18MZFBNy_vkIE8dAz03CcyWlpSK0c/edit?gid=296352996#gid=296352996",
-     "type": "protocol_sheet"
-    },
+    "men": null,
     "menAvg": null,
-    "women": {
-     "url": "https://docs.google.com/spreadsheets/d/1nia_9k-Ay66wTPx13wZ1oz_KKPiCw8ixKX0IEvH-3uo/edit?gid=1214695123#gid=1214695123",
-     "type": "protocol_sheet"
-    },
+    "women": null,
     "womenAvg": null,
-    "tournament": null
+    "tournament": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_UR82_3198",
+     "type": "nakka"
+    }
    },
    "medals": null,
    "medalsWomen": null
@@ -4017,8 +1737,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1DCwskC9rrDfC5h8OVqRe4H9b2bZ7MZuS0N1IOXcBuys/edit?tab=t.0#heading=h.5ve3adzcqe15",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_PXHu_5772",
+     "type": "nakka"
     }
    },
    "medals": {
@@ -4046,13 +1766,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_kB2F_7788",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1Q5U2wVhEQ6qKUqvqR7akeRW5Y_MxZWqPQfV3sM0gmIk/edit?tab=t.0#heading=h.f623hoy9hyxx",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_P3DB_6888",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -4070,14 +1793,20 @@
    "city": "Черкаси",
    "isUDL": false,
    "links": {
-    "men": null,
-    "menAvg": null,
+    "men": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_znnr_3293",
+     "type": "nakka"
+    },
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_2322_3827",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1d2zYB6mXFGB2tQ5p8y43V-iaZtTKGLyCr8wqcIqBrOs/edit?tab=t.0#heading=h.qe045qponmgq",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_jOB5_4131",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": {
     "gold": "Бушуй Олексій",
@@ -4108,8 +1837,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1EmmxBpRu4882TF1Y9KR3SkmyZj07SkwD9w47xyVDjKk/edit?tab=t.0#heading=h.kd8pwcxf4lgp",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_ZNWq_0275",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -4133,8 +1862,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1930AYfYWTILlVRghsDW35zOTEwglQFX73LRCsYV7Z6Q/edit?tab=t.0#heading=h.6f8lys76g8rg",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_yCnY_5996",
+     "type": "nakka"
     }
    },
    "medals": {
@@ -4162,13 +1891,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_tkpr_0131",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/165NySOwnKtbyYr66OkNXkuAwcIaNV8Ws7aIqkOKl_CE/edit?tab=t.0#heading=h.k30m5jqw3jdw",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/league/season.php?id=t_pL9t_5374",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": {
     "gold": "Усик Артем",
@@ -4194,14 +1926,17 @@
    "city": "Кривий Ріг",
    "isUDL": false,
    "links": {
-    "men": null,
+    "men": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_OY6O_0762",
+     "type": "nakka"
+    },
     "menAvg": null,
-    "women": null,
+    "women": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_Fq3J_0425",
+     "type": "nakka"
+    },
     "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1iMUI-BEpVs-GLIV4etHLrjJNYcxjQyTv-1VVY7_UV-k/edit?tab=t.0#heading=h.3btzbmlipd1m",
-     "type": "protocol_doc"
-    }
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -4224,8 +1959,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1YcooplJbhhl2_dPWzMUsMB265P4vEh6J-FdxR9aQN3c/edit?tab=t.0#heading=h.5luo76cl2usz",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_4cE6_7962",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -4245,12 +1980,15 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://docs.google.com/document/d/1KPg6INw-SfA0q-gtig7RSJICVugq38XnPN_1VTrmD2c/edit?tab=t.0#heading=h.6pkdl723ods3",
+     "type": "protocol_doc"
+    },
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1sgzwTgj_TZNTJ7NIwW6lnMjNW5gF3DyNI_6TBvnA4Qg/edit?tab=t.0#heading=h.ws1s9od7p4ap",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_tjq4_1053",
+     "type": "nakka"
     }
    },
    "medals": {
@@ -4282,8 +2020,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1bFJOm4CWK8lMJKpaLjdUR156Uu2v3qGUDYiejNqOmoQ/edit?tab=t.0#heading=h.ld1lgpws0b7j",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_hUQy_5277",
+     "type": "nakka"
     }
    },
    "medals": {
@@ -4315,8 +2053,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1x6kAdeBPo8JYNmmgZvxKsSrfwU6LQEVGxPZ_WFebcPQ/edit?tab=t.0#heading=h.7bti7il57koz",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_g7Uz_0226",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -4340,8 +2078,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1_bGXpc_1LnGO8m7Ba6USZtEpqsv8iQG1sUpCNRBqcEU/edit?tab=t.0#heading=h.nkwypbapnr00",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_tN4G_7704",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -4365,8 +2103,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/spreadsheets/d/1RwMglZgSzLTYFYqaYd1b8UU4MiVcl0csU_PYxQB8P1g/edit?gid=1038774630#gid=1038774630",
-     "type": "protocol_sheet"
+     "url": "https://n01darts.com/n01/league/season.php?id=t_a3zh_9869",
+     "type": "nakka"
     }
    },
    "medals": {
@@ -4394,13 +2132,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_Nr3f_0512",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/spreadsheets/d/1LeygI6IJZAq_uPTfA66Ge6SQWf6Z8OIEmLNc0Ij282w/edit?gid=1038774630#gid=1038774630",
-     "type": "protocol_sheet"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_hzbI_6537",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -4423,8 +2164,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1ECZ9gOYxVn7K_XmWdlpG4FS15btCks2LlM1aJ_9YmFQ/edit?tab=t.0#heading=h.6j9n5dohfb12",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_rYuZ_4602",
+     "type": "nakka"
     }
    },
    "medals": {
@@ -4456,8 +2197,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1u-_973rjtRjDmhoJDYlRwRqFdc4S7kVikCi94U3ss8o/edit?tab=t.0",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_kzWU_6180",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -4477,13 +2218,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_Xbfp_1205",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1D_5zgVtvtIiCIJDIbfZX2HNVl7N8mgCbX9r6J2Khg-0/edit?tab=t.0#heading=h.43bfikx8cn07",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_o8Ck_2332",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -4501,14 +2245,17 @@
    "city": "Луцьк",
    "isUDL": false,
    "links": {
-    "men": null,
+    "men": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_tgVk_7027",
+     "type": "nakka"
+    },
     "menAvg": null,
-    "women": null,
+    "women": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_b1Gx_3613",
+     "type": "nakka"
+    },
     "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1fjYcUpLv3cfeH56fOpoMbnYKYVpW_oR1CXOj1rlTEF0/edit?tab=t.0#heading=h.eat82u2ls4bf",
-     "type": "protocol_doc"
-    }
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -4527,13 +2274,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_4Uxu_8846",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1jJBITAS0V1uCNqC1i_orjLo39T8u36_NUBayT0VdkME/edit?tab=t.0#heading=h.si52lotx1ayw",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_EiNV_3440",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": {
     "gold": "Васюра Андрій",
@@ -4560,13 +2310,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_S6M5_2832",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1nQpNZqc3TorXfEUtGaO3VlC_Ra0hFFYfvIF2GYkVr8Y/edit?tab=t.0#heading=h.lwhzrvcrzxep",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_4huM_4555",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -4589,8 +2342,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1g8eZXOVGs2eXh_-Tr68RpLRAbePEKrif1XniWnxAnKM/edit?tab=t.0#heading=h.ha5yp8ko81f8",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_0YdS_7860",
+     "type": "nakka"
     }
    },
    "medals": {
@@ -4622,8 +2375,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1qAmNr5EXwBvuCNU54fjKAyL7Rp5FUISLJm3NRP3f80c/edit?tab=t.0#heading=h.1ilkkcncujn5",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_RFxg_3349",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -4643,13 +2396,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_7GoH_2278",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1y7YalHf856BFUdfR0Uhk8wv2uNZezqElTuhv4ycrfcw/edit?tab=t.0",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_ID7t_7027",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -4668,13 +2424,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_Yuqn_5723",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/15LBYgr7IMQyZs2IPvfmPyZVP5-mo5cOpD-YADzqddYo/edit?tab=t.0#heading=h.pboil3vd4fed",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_Ci0J_8288",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -4697,8 +2456,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1KwFemDJMKjZPvU1BoJb-WMrg6nmdeCFJKRchSLZh2g0/edit?tab=t.0",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_QuUS_8112",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -4722,8 +2481,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1NCdCPFuqmAZeqR47TCsYTMx7vmg9imUdxTxIWv_Ic1c/edit?tab=t.0#heading=h.54w44t86e541",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_Tb5t_0735",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -4743,13 +2502,16 @@
    "isUDL": false,
    "links": {
     "men": null,
-    "menAvg": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_GeZB_7887",
+     "type": "nakka"
+    },
     "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/18qYlyvcl4o2UxgVyOZ4u_Sj2V3LyKd2CpmcRZWv_u-Y/edit?tab=t.0#heading=h.ecqrga90u2g7",
-     "type": "protocol_doc"
-    }
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_sqob_1161",
+     "type": "nakka"
+    },
+    "tournament": null
    },
    "medals": {
     "gold": "Ковальов Дмитро",
@@ -4775,14 +2537,17 @@
    "city": "Харків",
    "isUDL": false,
    "links": {
-    "men": null,
+    "men": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_L4br_3066",
+     "type": "nakka"
+    },
     "menAvg": null,
-    "women": null,
+    "women": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_gPfp_5696",
+     "type": "nakka"
+    },
     "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1bccFYPu68s0G4Ye64Uex99ElyuP3LOn7wfoythK0cZg/edit?tab=t.0#heading=h.hgdac24xdms9",
-     "type": "protocol_doc"
-    }
+    "tournament": null
    },
    "medals": null,
    "medalsWomen": null
@@ -4805,8 +2570,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/14GEgjUJEgTLJtA2Q7sOD-uxu90-tKLjUsHyHpE_Uaq0/edit?tab=t.0#heading=h.noid6n17iicl",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_A4KJ_6369",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -4830,8 +2595,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1FFkDq5vG9KlW3KGK4VX6zv-4B17VCeHktM8zAEuIM_M/edit?tab=t.0#heading=h.bz1pcsevapwx",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_KhLh_7111",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -4850,16 +2615,16 @@
    "city": "Луцьк",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://docs.google.com/document/d/1wQCcZQ7VgFpqNqgrD_ZWwp0sKurucsgz/edit#heading=h.ec9nydam8oab",
-     "type": "protocol_doc"
+    "men": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_ye7b_0216",
+     "type": "nakka"
     },
-    "menAvg": null,
-    "women": {
-     "url": "https://docs.google.com/document/d/1lnarlJz7UPoiGhhv5LXHPSfJWWRHyXq8QvTowDPDFa0/edit?tab=t.0#heading=h.b0et2961fjb4",
-     "type": "protocol_doc"
+    "women": null,
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_RfEO_1192",
+     "type": "nakka"
     },
-    "womenAvg": null,
     "tournament": null
    },
    "medals": null,
@@ -4878,16 +2643,16 @@
    "city": "Луцьк",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://docs.google.com/document/d/18S28fS7GpEs4I3OV-_Y6xo9ccdjpvquOBhEtLkvOhhw/edit?tab=t.0#heading=h.3rmxyd3idwtf",
-     "type": "protocol_doc"
+    "men": null,
+    "menAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_BaYJ_1769",
+     "type": "nakka"
     },
-    "menAvg": null,
-    "women": {
-     "url": "https://docs.google.com/document/d/1p9B_PGKc9kwhvJuSoBhQ09xE9fgHbH_WmQPxsCNvP1Q/edit?tab=t.0#heading=h.hswh3lvy2er4",
-     "type": "protocol_doc"
+    "women": null,
+    "womenAvg": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_OzP6_5258",
+     "type": "nakka"
     },
-    "womenAvg": null,
     "tournament": null
    },
    "medals": null,
@@ -4906,17 +2671,14 @@
    "city": "Черкаси",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://docs.google.com/spreadsheets/d/1doR6ZpbX7tdIIQeZroz8F-CHZ50pIm4BOujqWC2_fZg/edit?gid=1547692153#gid=1547692153",
-     "type": "protocol_sheet"
-    },
+    "men": null,
     "menAvg": null,
-    "women": {
-     "url": "https://docs.google.com/spreadsheets/d/1F60fJrC-0HWZcByoEvpE9fADR_kPVJ_hY-9QzVzWv_M/edit?gid=1113062433#gid=1113062433",
-     "type": "protocol_sheet"
-    },
+    "women": null,
     "womenAvg": null,
-    "tournament": null
+    "tournament": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_G3FC_9344",
+     "type": "nakka"
+    }
    },
    "medals": null,
    "medalsWomen": null
@@ -4934,17 +2696,14 @@
    "city": "Черкаси",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://docs.google.com/spreadsheets/d/1T19FgABkHtWYTQolVve5AuE9rPd0pE9NtUqCCD2bsFo/edit?gid=1168871155#gid=1168871155",
-     "type": "protocol_sheet"
-    },
+    "men": null,
     "menAvg": null,
-    "women": {
-     "url": "https://docs.google.com/spreadsheets/d/1r8d_Udx27GjMYCXIZMnv7SgssOb5eUkky7fMR7rZJFU/edit?gid=904156422#gid=904156422",
-     "type": "protocol_sheet"
-    },
+    "women": null,
     "womenAvg": null,
-    "tournament": null
+    "tournament": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_SMJp_1714",
+     "type": "nakka"
+    }
    },
    "medals": {
     "gold": "Васюра Андрій",
@@ -4970,17 +2729,14 @@
    "city": "Кривий Ріг",
    "isUDL": false,
    "links": {
-    "men": {
-     "url": "https://docs.google.com/document/d/1AZYN5GYEIbSHA0fTqcLZxwx5Bm0txYeYTzU3E__i7Eo/edit?tab=t.0#heading=h.y7e7stp4bc9i",
-     "type": "protocol_doc"
-    },
+    "men": null,
     "menAvg": null,
-    "women": {
-     "url": "https://docs.google.com/document/d/19tncRuO4DAAkYc1RGgmPKMkwc_X85zOPUvI2OsVxQ40/edit?tab=t.0",
-     "type": "protocol_doc"
-    },
+    "women": null,
     "womenAvg": null,
-    "tournament": null
+    "tournament": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_AD0X_1671",
+     "type": "nakka"
+    }
    },
    "medals": null,
    "medalsWomen": null
@@ -4999,13 +2755,13 @@
    "isUDL": false,
    "links": {
     "men": {
-     "url": "https://docs.google.com/document/d/16pxag5ibKLOyfrW8U_5f7-qQywkXA2vXpgy48zZGLAg/edit?tab=t.0#heading=h.zaql62ansg0y",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_tZUs_2669",
+     "type": "nakka"
     },
     "menAvg": null,
     "women": {
-     "url": "https://docs.google.com/document/d/1w1rGhzt3I8EeKvByWJaRp_-prJl7P1MW6Dx1M5o168w/edit?tab=t.0#heading=h.2n1xbxmsbfn7",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_HO4X_4781",
+     "type": "nakka"
     },
     "womenAvg": null,
     "tournament": null
@@ -5031,8 +2787,8 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1MGoi2lt6-YZkBq5ctwTn2-bN0EPBqT02JSo6mlXqtRY/edit?tab=t.0#heading=h.kveo2du17pqh",
-     "type": "protocol_doc"
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_GTuL_9297",
+     "type": "nakka"
     }
    },
    "medals": null,
@@ -5056,7 +2812,2245 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
+     "url": "https://n01darts.com/n01/tournament/comp.php?id=t_UXGr_2552",
+     "type": "nakka"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 62,
+   "men": 44,
+   "menAvg": null,
+   "women": 18,
+   "womenAvg": 39.1,
+   "name": "UDL LVIV CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO Team",
+   "date": "15.11.2025",
+   "city": "Львів",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "http://open.udf.in.ua/online-results.html",
+     "type": "udf_online"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 15,
+   "men": 15,
+   "menAvg": 63.44,
+   "women": null,
+   "womenAvg": null,
+   "name": "WUDL GRAND FINAL",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / Фінал",
+   "date": "01.12.2023",
+   "city": "Львів",
+   "isUDL": true,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/spreadsheets/d/1k4GELE-3q38mLDiYx9KekS4b3o1VUbPVu6tZ0As38P4/edit?gid=885816906#gid=885816906",
+     "type": "protocol_sheet"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/spreadsheets/d/13h85oCYsawblE5d5gyDg9Ix2SC6-HqrYgzqtJTLykU0/edit?gid=1634133278#gid=1634133278",
+     "type": "protocol_sheet"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 24,
+   "men": 24,
+   "menAvg": 62.0,
+   "women": null,
+   "womenAvg": null,
+   "name": "UDL GRAND FINAL",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / Фінал",
+   "date": "06.12.2024",
+   "city": "Львів",
+   "isUDL": true,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/spreadsheets/d/1GEqBy_yIowuqoms3GLtiqnbPH_otNa3OFAVNe36vc0I/edit?gid=1984699608#gid=1984699608",
+     "type": "protocol_sheet"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/spreadsheets/d/1PUOV_Dw2atdycTsRtFA0zEUWi0nzTTqOHEQ2TkTcGuA/edit?gid=1813512598#gid=1813512598",
+     "type": "protocol_sheet"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 32,
+   "men": 24,
+   "menAvg": 59.24,
+   "women": 8,
+   "womenAvg": 44.07,
+   "name": "UDL GRAND FINAL",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / Фінал",
+   "date": "12.12.2025",
+   "city": "Вижниця",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1jIDrJiFmYv-lpnCOzh152rhNdoKbiHfKiP_Tk-aO3UA/edit?tab=t.0#heading=h.mr65h81rmnps",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 31,
+   "men": 28,
+   "menAvg": 58.68,
+   "women": 3,
+   "womenAvg": null,
+   "name": "UDL FEST CB&V GOLD",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 3 етап",
+   "date": "15.05.2026",
+   "city": "Львів",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1Dq161QaQH407L7P-iJmPb_3Qie1DgR_q8w2UjsUwbq4/edit?tab=t.0#heading=h.2hn86pqldii",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 31,
+   "men": 31,
+   "menAvg": 57.66,
+   "women": null,
+   "womenAvg": null,
+   "name": "UDL FEST 2 CB&V GOLD",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 4 етап",
+   "date": "14.08.2026",
+   "city": "Львів",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1XfS2Tb78LPAHtjhCGvu8ALzUKE61tElzPzC2vQMr_UM/edit?tab=t.0#heading=h.i9msm2f5557s",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 50,
+   "men": 35,
+   "menAvg": 55.71,
+   "women": 15,
+   "womenAvg": 41.55,
+   "name": "UDL STAGE 4",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 4 етап",
+   "date": "21.06.2025",
+   "city": "Одеса",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1_DrgprD_-5mC5ProvSeYFxlwVG5kZZfhsiXPwlDXzd4/edit?tab=t.0#heading=h.7pcdo5ixf4gc",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 33,
+   "men": 29,
+   "menAvg": 55.43,
+   "women": 4,
+   "womenAvg": null,
+   "name": "UDL GOLD",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 1 етап",
+   "date": "23.01.2026",
+   "city": "Славсько",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1MAI8pn9Ob0i0h_MS-_YaInaLvUktj8_qIBUofYTfbJQ/edit?tab=t.0#heading=h.vk345q1o15r0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 50,
+   "men": 34,
+   "menAvg": 55.24,
+   "women": 16,
+   "womenAvg": 42.07,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 1 етап",
+   "date": "15.02.2025",
+   "city": "Львів",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1zmLruALPU5FAzSV7H4VuqukT3W1StQbbNzvR5_Hfsuc/edit?tab=t.0#heading=h.srdcwgvl9k4g",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Мелашенко Владислав",
+    "silver": "Кіфор Ярослав",
+    "bronze": "Омельченко Владислав"
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Білоус Жанна",
+    "bronze": "Гончаренко Інна"
+   }
+  },
+  {
+   "total": 14,
+   "men": 14,
+   "menAvg": 54.83,
+   "women": null,
+   "womenAvg": null,
+   "name": "Chernivtsi Open",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "18.09.2022",
+   "city": "Чернівці",
+   "isUDL": false,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/spreadsheets/d/16vdSOoiiuTudVpfqFHDt6yAOUFLsbN2tXy-rPqDS5L8/edit?gid=1331416495#gid=1331416495",
+     "type": "protocol_sheet"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/spreadsheets/d/1fgMUENamP5_1gvWQvEOKIaCjMumyCkqB63iN3Xtgt4A/edit?gid=667677935#gid=667677935",
+     "type": "protocol_sheet"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 16,
+   "men": 16,
+   "menAvg": 54.44,
+   "women": null,
+   "womenAvg": null,
+   "name": "Independence Championship",
+   "org": "ВФД",
+   "format": "501DO Пари",
+   "date": "17.09.2022",
+   "city": "Чернівці",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1Yj35dqSk-_n5XGT2NVEgUjkGhO0ZA4Jm1tUhLZIwTrE/edit?tab=t.0#heading=h.obuc9ifwh8qd",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 25,
+   "men": 24,
+   "menAvg": 54.09,
+   "women": 1,
+   "womenAvg": null,
+   "name": "UDL GOLD",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 2 етап",
+   "date": "24.04.2026",
+   "city": "Вижниця",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/spreadsheets/d/1AtUFe99Bcln5PVp25Bg-39EOIHj4iAJR7ybgyyamHpg/edit?gid=667677935#gid=667677935",
+     "type": "protocol_sheet"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 75,
+   "men": 58,
+   "menAvg": 54.08,
+   "women": 17,
+   "womenAvg": 42.36,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 5 етап",
+   "date": "10.09.2023",
+   "city": "Одеса",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1jwK0pvm-a55PjWtUToTe4KkBqERUZQqM77AP79pOINA/edit?tab=t.0#heading=h.p741s8v6p96z",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": "Сташевський Валентин"
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Соколова Вікторія",
+    "bronze": "Харченко Тетяна"
+   }
+  },
+  {
+   "total": 40,
+   "men": 39,
+   "menAvg": 54.0,
+   "women": 1,
+   "womenAvg": null,
+   "name": "WUDL STAGE 1",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 1 етап",
+   "date": "04.02.2023",
+   "city": "Львів",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/19mEIW_iPxEPv6IaUl-LKw4Vw-HQNxCZxr5t45NpjLug/edit?tab=t.0#heading=h.xlteiphy5xh8",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 49,
+   "men": 36,
+   "menAvg": 53.99,
+   "women": 13,
+   "womenAvg": 43.35,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 3 етап",
+   "date": "12.07.2026",
+   "city": "Полтава",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1h5jxQ7lBxk1cclgfSgUf6f5vdIdweMUauwuHDtJMqnc/edit?tab=t.0#heading=h.za5yvmuzic1r",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 55,
+   "men": 37,
+   "menAvg": 53.73,
+   "women": 18,
+   "womenAvg": 40.4,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 3 етап",
+   "date": "08.09.2024",
+   "city": "Одеса",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1XSmMMVrbYLREpfN2aUSK9VEUsEdhfP4PUCbHBxvnItc/edit?tab=t.0#heading=h.9m2ua01mz1uh",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Усик Артем",
+    "bronze": "Мелашенко Владислав"
+   },
+   "medalsWomen": {
+    "gold": "Ільясова Альбіна",
+    "silver": "Гончаренко Інна",
+    "bronze": "Харченко Тетяна"
+   }
+  },
+  {
+   "total": 45,
+   "men": 29,
+   "menAvg": 53.5,
+   "women": 16,
+   "womenAvg": 41.33,
+   "name": "UDL STAGE 5",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 5 етап",
+   "date": "09.08.2025",
+   "city": "Ужгород",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 70,
+   "men": 49,
+   "menAvg": 53.44,
+   "women": 21,
+   "womenAvg": 40.58,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 2 етап",
+   "date": "23.05.2026",
+   "city": "Черкаси",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 53,
+   "men": 45,
+   "menAvg": 53.42,
+   "women": 8,
+   "womenAvg": 41.53,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 1 етап",
+   "date": "25.03.2023",
+   "city": "Львів",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Пекарук Ілля",
+    "bronze": "Залевський Володимир"
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Терещенко Любов",
+    "bronze": "Лановенко Ксенія"
+   }
+  },
+  {
+   "total": 70,
+   "men": 52,
+   "menAvg": 53.27,
+   "women": 18,
+   "womenAvg": 39.48,
+   "name": "ЧУ 2023 Пари",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "09.09.2023",
+   "city": "Одеса",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 64,
+   "men": 45,
+   "menAvg": 53.14,
+   "women": 19,
+   "womenAvg": 42.81,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 4 етап",
+   "date": "13.09.2025",
+   "city": "Львів",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/16wFkQCLsEuh-s62l-QJRXCZUezrW67-f_CTsOdbUYPc/edit?tab=t.0#heading=h.cg7ek44ghf3f",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Кіфор Ярослав",
+    "bronze": "Могилевський Руслан"
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": "Карнаух Валентина"
+   }
+  },
+  {
+   "total": 60,
+   "men": 42,
+   "menAvg": 53.0,
+   "women": 18,
+   "womenAvg": 43.06,
+   "name": "ЧУ 2025 Пари",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "14.09.2025",
+   "city": "Львів",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1V9plXqjgsbXkSrC46j6PKaBL2UXSn33EsBXRL9qxlHg/edit?tab=t.0#heading=h.u8qb33i3k43n",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 59,
+   "men": 43,
+   "menAvg": 52.84,
+   "women": 16,
+   "womenAvg": 43.24,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 3 етап",
+   "date": "05.07.2025",
+   "city": "Полтава",
+   "isUDL": false,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/spreadsheets/d/1Dc7UbQqN7lPuW9mx8RKdgfqhdaeEUHiw-RPtOrm8VKg/edit?gid=1089848303#gid=1089848303",
+     "type": "protocol_sheet"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/spreadsheets/d/1TY0IBlN9aXI0MCVWpJ2ftXBbWUw5E5wJ2jfXuOStxOA/edit?gid=947761883#gid=947761883",
+     "type": "protocol_sheet"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Лагутін Анрій",
+    "bronze": "Гончаров Едуард"
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": "Зайцева Інна"
+   }
+  },
+  {
+   "total": 69,
+   "men": 53,
+   "menAvg": 52.8,
+   "women": 16,
+   "womenAvg": 40.54,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 3 етап",
+   "date": "21.05.2023",
+   "city": "Черкаси",
+   "isUDL": false,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/spreadsheets/d/1Z3wZGCMNZet-EYjHq4yoQGBqZW0vy3c_QTIwehodhiE/edit?gid=1703991921#gid=1703991921",
+     "type": "protocol_sheet"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/spreadsheets/d/1TgiH_YPRqU6hKKf-SlT7FVC_1BHSgugASE6rLeqVloA/edit?gid=1375587316#gid=1375587316",
+     "type": "protocol_sheet"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Мамика Олександ",
+    "bronze": "Луков Олександр"
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Терещенко Любов",
+    "bronze": "Моісеєнко Віталіна"
+   }
+  },
+  {
+   "total": 32,
+   "men": 28,
+   "menAvg": 52.41,
+   "women": 4,
+   "womenAvg": null,
+   "name": "UDL STAGE 4",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 4 етап",
+   "date": "22.06.2024",
+   "city": "Одеса",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1bjoe-mKPv5kXx1J7or3Cg8vpm6FFPZUKiq4y-hcXwjc/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 77,
+   "men": 55,
+   "menAvg": 52.25,
+   "women": 22,
+   "womenAvg": 39.01,
+   "name": "ЧУ 2024",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "07.12.2024",
+   "city": "Львів",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1AwCIc2lCU7d3ZaciuC1O70Uk2f9fPfJa4H79IR-lEJs/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Аверін Сергій",
+    "bronze": "Омельченко Владислав"
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Чабанова Анна",
+    "bronze": "Терещенко Любов"
+   }
+  },
+  {
+   "total": 64,
+   "men": 42,
+   "menAvg": 52.15,
+   "women": 22,
+   "womenAvg": 39.05,
+   "name": "UDL SILVER",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 5 етап",
+   "date": "20.06.2026",
+   "city": "Одеса",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1zIoGeSaYsiqHRKmaP7iPJtP5gBbzzzDs0Gnwicg_AtE/edit?tab=t.0#heading=h.xbu0lav530zf",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 39,
+   "men": 35,
+   "menAvg": 52.09,
+   "women": 4,
+   "womenAvg": null,
+   "name": "UDL STAGE 5",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 5 етап",
+   "date": "10.08.2024",
+   "city": "Київ",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1gbNYDqq1cYIuFT_YXVBWi02Gvj1mWpswYj3exjpTifM/edit?tab=t.0#heading=h.nuh5fje0tn0l",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 47,
+   "men": 35,
+   "menAvg": 52.05,
+   "women": 12,
+   "womenAvg": 43.61,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 5 етап",
+   "date": "12.10.2025",
+   "city": "Кривий Ріг",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1jF5ZxQYbNoCok9DBQCwGF9goWNrGogrHAGRkMbNA8kI/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 58,
+   "men": 39,
+   "menAvg": 51.99,
+   "women": 19,
+   "womenAvg": 42.42,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 1 етап",
+   "date": "21.02.2026",
+   "city": "Львів",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/13vvks3PCnYeN3hdlUSBnGFZnNxRghMxAFEq8fyMhHok/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Могилевський Руслан",
+    "bronze": "Гринів Олександр"
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": "Ігнатюк Наталя"
+   }
+  },
+  {
+   "total": 56,
+   "men": 40,
+   "menAvg": 51.79,
+   "women": 16,
+   "womenAvg": 39.98,
+   "name": "UDL STAGE 2",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 2 етап",
+   "date": "22.03.2025",
+   "city": "Луцьк",
+   "isUDL": true,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/spreadsheets/d/1Cfej_PNYFoBsBwdV9JQjGyBNYomMs3W9s_8nDlUew9g/edit?gid=738414203#gid=738414203",
+     "type": "protocol_sheet"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/spreadsheets/d/1Zwxaq1Ai3Cav8GJAh2hH6Z-ZvdmPCYehJ4UI8CEz4i8/edit?gid=2043762064#gid=2043762064",
+     "type": "protocol_sheet"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 62,
+   "men": 48,
+   "menAvg": 51.74,
+   "women": 14,
+   "womenAvg": 40.5,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 4 етап",
+   "date": "13.10.2024",
+   "city": "Кривий Ріг",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/spreadsheets/d/1QGnxdFBKvQVhrZo_UWFiXYhD2I2bqQryiPmrVEY-cKo/edit?gid=1159229369#gid=1159229369",
+     "type": "protocol_sheet"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 52,
+   "men": 44,
+   "menAvg": 51.72,
+   "women": 8,
+   "womenAvg": 41.64,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 2 етап",
+   "date": "26.03.2023",
+   "city": "Львів",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1Iwn6O2JlrQQvOIhz_nuY3gKoUS56OB0_IePGij5miNY/edit?tab=t.0#heading=h.f9hbhjyrp49",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Омельченко Владислав",
+    "bronze": "Пекарук Ілля"
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Терещенко Любов",
+    "bronze": "Лановенко Ксенія"
+   }
+  },
+  {
+   "total": 32,
+   "men": 29,
+   "menAvg": 51.7,
+   "women": 3,
+   "womenAvg": null,
+   "name": "UDL STAGE 3",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 3 етап",
+   "date": "13.04.2024",
+   "city": "Ужгород",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1RlcjQ33u4YgKkec62kGO_LYi_ZPzGrkqIqcOpGBgCYg/edit?tab=t.0#heading=h.u9pkn41or99y",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 37,
+   "men": 35,
+   "menAvg": 51.56,
+   "women": 2,
+   "womenAvg": null,
+   "name": "WUDL STAGE 2",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 2 етап",
+   "date": "29.04.2023",
+   "city": "Чернівці",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1mqkU1lH4g39L36nIcbRgItG4ZTAHzyWm2_4bAuQOqkg/edit?tab=t.0#heading=h.clqbih13mcc3",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 71,
+   "men": 54,
+   "menAvg": 51.51,
+   "women": 17,
+   "womenAvg": 42.8,
+   "name": "UDL SILVER",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 2 етап",
+   "date": "21.03.2026",
+   "city": "Луцьк",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/13Nt6WAVgRMgLuhVQEMQQczCjCh82xz6eBxuBzx52WDc/edit?tab=t.0#heading=h.hw59kfaxzuxy",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 94,
+   "men": 73,
+   "menAvg": 51.38,
+   "women": 21,
+   "womenAvg": 36.63,
+   "name": "ЧУ 2023",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "03.12.2023",
+   "city": "Львів",
+   "isUDL": false,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/spreadsheets/d/1IKinuAli2ZlpS3TeFHNIUfF5Ce71dvY9m2he1i5bo8U/edit?gid=1626152929#gid=1626152929",
+     "type": "protocol_sheet"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/spreadsheets/d/1wF_acwqZVzqB8QIc2kQ20q4P6Zh9WgOgRjWYQNS6B7c/edit?gid=1387438451#gid=1387438451",
+     "type": "protocol_sheet"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": "Пекарук Ілля"
+   },
+   "medalsWomen": {
+    "gold": "Терещенко Любов",
+    "silver": "Шклярук Наталія",
+    "bronze": "Білоус Жанна"
+   }
+  },
+  {
+   "total": 47,
+   "men": 33,
+   "menAvg": 51.36,
+   "women": 14,
+   "womenAvg": 37.77,
+   "name": "UDL STAGE 3",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 3 етап",
+   "date": "26.04.2025",
+   "city": "Вижниця",
+   "isUDL": true,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/spreadsheets/d/1htMjPS-har_Y-t18MZFBNy_vkIE8dAz03CcyWlpSK0c/edit?gid=296352996#gid=296352996",
+     "type": "protocol_sheet"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/spreadsheets/d/1nia_9k-Ay66wTPx13wZ1oz_KKPiCw8ixKX0IEvH-3uo/edit?gid=1214695123#gid=1214695123",
+     "type": "protocol_sheet"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 39,
+   "men": 36,
+   "menAvg": 51.34,
+   "women": 3,
+   "womenAvg": null,
+   "name": "UDL STAGE 1",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 2 етап",
+   "date": "17.02.2024",
+   "city": "Львів",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1DCwskC9rrDfC5h8OVqRe4H9b2bZ7MZuS0N1IOXcBuys/edit?tab=t.0#heading=h.5ve3adzcqe15",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 62,
+   "men": 44,
+   "menAvg": 51.17,
+   "women": 18,
+   "womenAvg": 42.65,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / Фінал",
+   "date": "14.12.2025",
+   "city": "Вижниця",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1Q5U2wVhEQ6qKUqvqR7akeRW5Y_MxZWqPQfV3sM0gmIk/edit?tab=t.0#heading=h.f623hoy9hyxx",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Могилевський Руслан",
+    "silver": "Мелашенко Владислав",
+    "bronze": "Козловський Богдан"
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Терещенко Любов",
+    "bronze": "Лановенко Ксенія"
+   }
+  },
+  {
+   "total": 70,
+   "men": 56,
+   "menAvg": 51.16,
+   "women": 14,
+   "womenAvg": 41.32,
+   "name": "UDL FEST CB&V SILVER",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 4 етап",
+   "date": "17.05.2026",
+   "city": "Львів",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1d2zYB6mXFGB2tQ5p8y43V-iaZtTKGLyCr8wqcIqBrOs/edit?tab=t.0#heading=h.qe045qponmgq",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 44,
+   "men": 41,
+   "menAvg": 50.79,
+   "women": 3,
+   "womenAvg": null,
+   "name": "UDL STAGE 6",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 6 етап",
+   "date": "10.11.2024",
+   "city": "Чернівці",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1EmmxBpRu4882TF1Y9KR3SkmyZj07SkwD9w47xyVDjKk/edit?tab=t.0#heading=h.kd8pwcxf4lgp",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 32,
+   "men": 28,
+   "menAvg": 50.7,
+   "women": 4,
+   "womenAvg": null,
+   "name": "UDL ODESA CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO Pairs",
+   "date": "23.06.2024",
+   "city": "Одеса",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1930AYfYWTILlVRghsDW35zOTEwglQFX73LRCsYV7Z6Q/edit?tab=t.0#heading=h.6f8lys76g8rg",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 68,
+   "men": 54,
+   "menAvg": 50.64,
+   "women": 14,
+   "womenAvg": 43.33,
+   "name": "UDL FEST CB&V CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO Pairs",
+   "date": "16.05.2026",
+   "city": "Львів",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/165NySOwnKtbyYr66OkNXkuAwcIaNV8Ws7aIqkOKl_CE/edit?tab=t.0#heading=h.k30m5jqw3jdw",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 70,
+   "men": 50,
+   "menAvg": 50.46,
+   "women": 20,
+   "womenAvg": 41.5,
+   "name": "ЧУ 2025",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "13.12.2025",
+   "city": "Вижниця",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1iMUI-BEpVs-GLIV4etHLrjJNYcxjQyTv-1VVY7_UV-k/edit?tab=t.0#heading=h.3btzbmlipd1m",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Могилевський Руслан",
+    "silver": "Абчугський Олександр",
+    "bronze": "Гринів Олександр"
+   },
+   "medalsWomen": {
+    "gold": "Гончаренко Інна",
+    "silver": "Харченко Тетяна",
+    "bronze": "Ледєньова Наталія"
+   }
+  },
+  {
+   "total": 57,
+   "men": 38,
+   "menAvg": 50.26,
+   "women": 19,
+   "womenAvg": 40.45,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 1 етап",
+   "date": "19.05.2024",
+   "city": "Черкаси",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1YcooplJbhhl2_dPWzMUsMB265P4vEh6J-FdxR9aQN3c/edit?tab=t.0#heading=h.5luo76cl2usz",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Рогов Віталій",
+    "silver": "Залевський Володимир",
+    "bronze": "Троценко Артем"
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Терещенко Любов",
+    "bronze": "Пивошенко Олена"
+   }
+  },
+  {
+   "total": 55,
+   "men": 41,
+   "menAvg": 50.23,
+   "women": 14,
+   "womenAvg": 39.9,
+   "name": "UDL STAGE 1",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 1 етап",
+   "date": "25.01.2025",
+   "city": "Славсько",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1sgzwTgj_TZNTJ7NIwW6lnMjNW5gF3DyNI_6TBvnA4Qg/edit?tab=t.0#heading=h.ws1s9od7p4ap",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 56,
+   "men": 42,
+   "menAvg": 50.01,
+   "women": 14,
+   "womenAvg": 41.78,
+   "name": "UDL SILVER",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 3 етап",
+   "date": "25.04.2026",
+   "city": "Вижниця",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1bFJOm4CWK8lMJKpaLjdUR156Uu2v3qGUDYiejNqOmoQ/edit?tab=t.0#heading=h.ld1lgpws0b7j",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 50,
+   "men": 40,
+   "menAvg": 50.01,
+   "women": 10,
+   "womenAvg": 35.45,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 4 етап",
+   "date": "30.07.2023",
+   "city": "Чернівці",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1x6kAdeBPo8JYNmmgZvxKsSrfwU6LQEVGxPZ_WFebcPQ/edit?tab=t.0#heading=h.7bti7il57koz",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Омельченко Владислав",
+    "bronze": "Пекарук Ілля"
+   },
+   "medalsWomen": {
+    "gold": "Шклярук Наталія",
+    "silver": "Лановенко Ксенія",
+    "bronze": "Полтавець Світлана"
+   }
+  },
+  {
+   "total": 58,
+   "men": 40,
+   "menAvg": 49.84,
+   "women": 18,
+   "womenAvg": 38.02,
+   "name": "ЧУ 2024 Пари",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "07.09.2024",
+   "city": "Одеса",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1_bGXpc_1LnGO8m7Ba6USZtEpqsv8iQG1sUpCNRBqcEU/edit?tab=t.0#heading=h.nkwypbapnr00",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 74,
+   "men": 56,
+   "menAvg": 49.64,
+   "women": 18,
+   "womenAvg": 38.43,
+   "name": "ЧУ 2026 Команди",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "24.05.2026",
+   "city": "Черкаси",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/spreadsheets/d/1RwMglZgSzLTYFYqaYd1b8UU4MiVcl0csU_PYxQB8P1g/edit?gid=1038774630#gid=1038774630",
+     "type": "protocol_sheet"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 60,
+   "men": 50,
+   "menAvg": 49.63,
+   "women": 10,
+   "womenAvg": 39.6,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 6 етап",
+   "date": "12.11.2023",
+   "city": "Кривий Ріг",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/spreadsheets/d/1LeygI6IJZAq_uPTfA66Ge6SQWf6Z8OIEmLNc0Ij282w/edit?gid=1038774630#gid=1038774630",
+     "type": "protocol_sheet"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 69,
+   "men": 52,
+   "menAvg": 49.62,
+   "women": 17,
+   "womenAvg": 40.97,
+   "name": "UDL SILVER",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 1 етап",
+   "date": "24.01.2026",
+   "city": "Славсько",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1ECZ9gOYxVn7K_XmWdlpG4FS15btCks2LlM1aJ_9YmFQ/edit?tab=t.0#heading=h.6j9n5dohfb12",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 92,
+   "men": 71,
+   "menAvg": 49.5,
+   "women": 21,
+   "womenAvg": 40.11,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 2 етап",
+   "date": "18.05.2025",
+   "city": "Черкаси",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1u-_973rjtRjDmhoJDYlRwRqFdc4S7kVikCi94U3ss8o/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Пекарук Ілля",
+    "bronze": "Мелашенко Владислав"
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Терещенко Любов",
+    "bronze": "Ледєньова Наталія"
+   }
+  },
+  {
+   "total": 62,
+   "men": 46,
+   "menAvg": 49.17,
+   "women": 16,
+   "womenAvg": 41.57,
+   "name": "UDL STAGE 6",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 6 етап",
+   "date": "16.11.2025",
+   "city": "Львів",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1D_5zgVtvtIiCIJDIbfZX2HNVl7N8mgCbX9r6J2Khg-0/edit?tab=t.0#heading=h.43bfikx8cn07",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 99,
+   "men": 69,
+   "menAvg": 49.1,
+   "women": 30,
+   "womenAvg": 37.35,
+   "name": "UDL FEST 2 CB&V SILVER",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 6 етап",
+   "date": "15.08.2026",
+   "city": "Львів",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1fjYcUpLv3cfeH56fOpoMbnYKYVpW_oR1CXOj1rlTEF0/edit?tab=t.0#heading=h.eat82u2ls4bf",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 50,
+   "men": 38,
+   "menAvg": 48.95,
+   "women": 12,
+   "womenAvg": 37.43,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 2 етап",
+   "date": "21.07.2024",
+   "city": "Чернівці",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1jJBITAS0V1uCNqC1i_orjLo39T8u36_NUBayT0VdkME/edit?tab=t.0#heading=h.si52lotx1ayw",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Григоренко Віктор",
+    "silver": "Залевський Володимир",
+    "bronze": "Мелашенко Владислав"
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Білоус Жанна",
+    "bronze": "Гончаренко Інна"
+   }
+  },
+  {
+   "total": 35,
+   "men": 33,
+   "menAvg": 48.83,
+   "women": 2,
+   "womenAvg": null,
+   "name": "WUDL STAGE 3",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 3 етап",
+   "date": "10.06.2023",
+   "city": "Ужгород",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1nQpNZqc3TorXfEUtGaO3VlC_Ra0hFFYfvIF2GYkVr8Y/edit?tab=t.0#heading=h.lwhzrvcrzxep",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 36,
+   "men": 34,
+   "menAvg": 48.81,
+   "women": 2,
+   "womenAvg": null,
+   "name": "WUDL STAGE 4",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 4 етап",
+   "date": "19.08.2023",
+   "city": "Луцьк",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1g8eZXOVGs2eXh_-Tr68RpLRAbePEKrif1XniWnxAnKM/edit?tab=t.0#heading=h.ha5yp8ko81f8",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 48,
+   "men": 44,
+   "menAvg": 48.41,
+   "women": 4,
+   "womenAvg": null,
+   "name": "UDL CHERVNITSI CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO Team",
+   "date": "09.11.2024",
+   "city": "Чернівці",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1qAmNr5EXwBvuCNU54fjKAyL7Rp5FUISLJm3NRP3f80c/edit?tab=t.0#heading=h.1ilkkcncujn5",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 40,
+   "men": 20,
+   "menAvg": 48.39,
+   "women": 20,
+   "womenAvg": null,
+   "name": "ЧУ 2026 Мікст",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "22.02.2026",
+   "city": "Львів",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1y7YalHf856BFUdfR0Uhk8wv2uNZezqElTuhv4ycrfcw/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 91,
+   "men": 64,
+   "menAvg": 47.94,
+   "women": 27,
+   "womenAvg": 36.64,
+   "name": "UDL FEST 2 CB&V CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / Команди",
+   "date": "16.08.2026",
+   "city": "Львів",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/15LBYgr7IMQyZs2IPvfmPyZVP5-mo5cOpD-YADzqddYo/edit?tab=t.0#heading=h.pboil3vd4fed",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 51,
+   "men": 37,
+   "menAvg": 47.75,
+   "women": 14,
+   "womenAvg": 37.91,
+   "name": "ЧУ 2026 DIDO",
+   "org": "ВФД",
+   "format": "501DIDO",
+   "date": "11.07.2026",
+   "city": "Полтава",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1KwFemDJMKjZPvU1BoJb-WMrg6nmdeCFJKRchSLZh2g0/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 49,
+   "men": 35,
+   "menAvg": 47.21,
+   "women": 14,
+   "womenAvg": 35.72,
+   "name": "UDL BUKOVYNA CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DIDO",
+   "date": "26.04.2026",
+   "city": "Вижниця",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1NCdCPFuqmAZeqR47TCsYTMx7vmg9imUdxTxIWv_Ic1c/edit?tab=t.0#heading=h.54w44t86e541",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 43,
+   "men": 39,
+   "menAvg": 47.2,
+   "women": 4,
+   "womenAvg": null,
+   "name": "UDL STAGE 2",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO / 2 етап",
+   "date": "23.03.2024",
+   "city": "Луцьк",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/18qYlyvcl4o2UxgVyOZ4u_Sj2V3LyKd2CpmcRZWv_u-Y/edit?tab=t.0#heading=h.ecqrga90u2g7",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 32,
+   "men": 16,
+   "menAvg": 47.0,
+   "women": 16,
+   "womenAvg": null,
+   "name": "ЧУ 2025 Мікст",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "16.02.2025",
+   "city": "Львів",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1bccFYPu68s0G4Ye64Uex99ElyuP3LOn7wfoythK0cZg/edit?tab=t.0#heading=h.hgdac24xdms9",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 50,
+   "men": 34,
+   "menAvg": 47.0,
+   "women": 16,
+   "womenAvg": 36.99,
+   "name": "UDL ODESA CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DIDO Pairs",
+   "date": "22.06.2025",
+   "city": "Одеса",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/14GEgjUJEgTLJtA2Q7sOD-uxu90-tKLjUsHyHpE_Uaq0/edit?tab=t.0#heading=h.noid6n17iicl",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 34,
+   "men": 33,
+   "menAvg": 46.86,
+   "women": 1,
+   "womenAvg": null,
+   "name": "WUDL LVIV CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DIDO Pairs",
+   "date": "05.02.2023",
+   "city": "Львів",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1FFkDq5vG9KlW3KGK4VX6zv-4B17VCeHktM8zAEuIM_M/edit?tab=t.0#heading=h.bz1pcsevapwx",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 54,
+   "men": 27,
+   "menAvg": 45.98,
+   "women": 27,
+   "womenAvg": null,
+   "name": "ЧУ 2023 Мікст",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "02.12.2023",
+   "city": "Львів",
+   "isUDL": false,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/document/d/1wQCcZQ7VgFpqNqgrD_ZWwp0sKurucsgz/edit#heading=h.ec9nydam8oab",
+     "type": "protocol_doc"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/document/d/1lnarlJz7UPoiGhhv5LXHPSfJWWRHyXq8QvTowDPDFa0/edit?tab=t.0#heading=h.b0et2961fjb4",
+     "type": "protocol_doc"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 48,
+   "men": 24,
+   "menAvg": 45.96,
+   "women": 24,
+   "womenAvg": null,
+   "name": "ЧУ 2024 Мікст",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "08.12.2024",
+   "city": "Львів",
+   "isUDL": false,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/document/d/18S28fS7GpEs4I3OV-_Y6xo9ccdjpvquOBhEtLkvOhhw/edit?tab=t.0#heading=h.3rmxyd3idwtf",
+     "type": "protocol_doc"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/document/d/1p9B_PGKc9kwhvJuSoBhQ09xE9fgHbH_WmQPxsCNvP1Q/edit?tab=t.0#heading=h.hswh3lvy2er4",
+     "type": "protocol_doc"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 68,
+   "men": 52,
+   "menAvg": 45.89,
+   "women": 16,
+   "womenAvg": null,
+   "name": "UDL SLAVSKO CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO Blind Pairs",
+   "date": "25.01.2026",
+   "city": "Славсько",
+   "isUDL": true,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/spreadsheets/d/1doR6ZpbX7tdIIQeZroz8F-CHZ50pIm4BOujqWC2_fZg/edit?gid=1547692153#gid=1547692153",
+     "type": "protocol_sheet"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/spreadsheets/d/1F60fJrC-0HWZcByoEvpE9fADR_kPVJ_hY-9QzVzWv_M/edit?gid=1113062433#gid=1113062433",
+     "type": "protocol_sheet"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 67,
+   "men": 48,
+   "menAvg": 45.84,
+   "women": 19,
+   "womenAvg": 37.13,
+   "name": "ЧУ 2025 DIDO",
+   "org": "ВФД",
+   "format": "501DIDO",
+   "date": "06.07.2025",
+   "city": "Полтава",
+   "isUDL": false,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/spreadsheets/d/1T19FgABkHtWYTQolVve5AuE9rPd0pE9NtUqCCD2bsFo/edit?gid=1168871155#gid=1168871155",
+     "type": "protocol_sheet"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/spreadsheets/d/1r8d_Udx27GjMYCXIZMnv7SgssOb5eUkky7fMR7rZJFU/edit?gid=904156422#gid=904156422",
+     "type": "protocol_sheet"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 42,
+   "men": 32,
+   "menAvg": 45.67,
+   "women": 10,
+   "womenAvg": 34.78,
+   "name": "ЧУ 2024 DIDO",
+   "org": "ВФД",
+   "format": "501DIDO",
+   "date": "20.07.2024",
+   "city": "Чернівці",
+   "isUDL": false,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/document/d/1AZYN5GYEIbSHA0fTqcLZxwx5Bm0txYeYTzU3E__i7Eo/edit?tab=t.0#heading=h.y7e7stp4bc9i",
+     "type": "protocol_doc"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/document/d/19tncRuO4DAAkYc1RGgmPKMkwc_X85zOPUvI2OsVxQ40/edit?tab=t.0",
+     "type": "protocol_doc"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 68,
+   "men": 52,
+   "menAvg": 45.44,
+   "women": 16,
+   "womenAvg": 37.79,
+   "name": "UDL LUTSK CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DIDO Pairs",
+   "date": "22.03.2026",
+   "city": "Луцьк",
+   "isUDL": true,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/document/d/16pxag5ibKLOyfrW8U_5f7-qQywkXA2vXpgy48zZGLAg/edit?tab=t.0#heading=h.zaql62ansg0y",
+     "type": "protocol_doc"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/document/d/1w1rGhzt3I8EeKvByWJaRp_-prJl7P1MW6Dx1M5o168w/edit?tab=t.0#heading=h.2n1xbxmsbfn7",
+     "type": "protocol_doc"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 54,
+   "men": 40,
+   "menAvg": 45.11,
+   "women": 14,
+   "womenAvg": null,
+   "name": "UDL SLAVSKO CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DO Blind Pairs",
+   "date": "26.01.2025",
+   "city": "Славсько",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1MGoi2lt6-YZkBq5ctwTn2-bN0EPBqT02JSo6mlXqtRY/edit?tab=t.0#heading=h.kveo2du17pqh",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 56,
+   "men": 40,
+   "menAvg": 45.08,
+   "women": 16,
+   "womenAvg": 34.27,
+   "name": "UDL LUTSK CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DIDO Pairs",
+   "date": "23.03.2025",
+   "city": "Луцьк",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
      "url": "https://docs.google.com/document/d/1K33JAK_zRif7gsUUAdBHnrk68aean6v-O205xelMQAg/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 44,
+   "men": 31,
+   "menAvg": 45.07,
+   "women": 13,
+   "womenAvg": 33.85,
+   "name": "UDL BUKOVYNA CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DIDO",
+   "date": "27.04.2025",
+   "city": "Вижниця",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1nQMBBiC7LBg5ovRdjgAlTXwJq2usyVTxJOMPtLor0GA/edit?tab=t.0#heading=h.44zurfyl48dg",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 37,
+   "men": 34,
+   "menAvg": 44.99,
+   "women": 3,
+   "womenAvg": null,
+   "name": "UDL KYIV CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DIDO",
+   "date": "11.08.2024",
+   "city": "Київ",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1J7ZeuGGV4XP-mPQbxqiycHpSWf3sWNJVqxoYV71dg90/edit?tab=t.0#heading=h.ppht0y7h0vsz",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 50,
+   "men": 40,
+   "menAvg": 44.96,
+   "women": 10,
+   "womenAvg": 29.55,
+   "name": "ЧУ 2023 DIDO",
+   "org": "ВФД",
+   "format": "501DIDO",
+   "date": "29.07.2023",
+   "city": "Чернівці",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1nA1685TE4D8UgFEFrFE7avnva0vo-TAVJvh-4a4OnCU/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 36,
+   "men": 34,
+   "menAvg": 44.15,
+   "women": 2,
+   "womenAvg": null,
+   "name": "UDL LUTSK CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DIDO Pairs",
+   "date": "24.03.2024",
+   "city": "Луцьк",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1YtCMG2329-nBm1FKQgsth94Zx-kE3Fg3iKdT3oIzQfs/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 34,
+   "men": 32,
+   "menAvg": 43.75,
+   "women": 2,
+   "womenAvg": null,
+   "name": "WUDL LUTSK CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DIDO Pairs",
+   "date": "20.08.2023",
+   "city": "Луцьк",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1KzUbI5DNOk8zQruTGIXOgif3dXruDK7CfI9mgc3U47o/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 60,
+   "men": 42,
+   "menAvg": 43.4,
+   "women": 18,
+   "womenAvg": 35.86,
+   "name": "UDL ODESA CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DIDO Pairs",
+   "date": "21.06.2026",
+   "city": "Одеса",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": 34,
+   "men": 31,
+   "menAvg": 42.8,
+   "women": 3,
+   "womenAvg": null,
+   "name": "UDL LVIV CUP",
+   "org": "УДЛ/ЗУДЛ",
+   "format": "501DIDO Pairs",
+   "date": "18.02.2024",
+   "city": "Львів",
+   "isUDL": true,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1KiG-mJv4esMcJj4KndIV-C_CDrgSKDa8YodYunEUD3Y/edit?tab=t.0",
      "type": "protocol_doc"
     }
    },
