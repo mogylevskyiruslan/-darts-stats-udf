@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-02T09:22:12.910858+00:00",
+  "lastUpdated": "2026-09-03T09:31:45.365534+00:00",
   "tournamentsCount": 178,
   "historicalCount": 64
  },
@@ -5655,8 +5655,8 @@
    "name": "Івасюк Віталій",
    "gold": 0,
    "silver": 0,
-   "bronze": 0,
-   "champUA": 1,
+   "bronze": 1,
+   "champUA": 0,
    "total": 0
   }
  ],
