@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-04T20:04:03.812383+00:00",
+  "lastUpdated": "2026-09-04T20:09:43.610673+00:00",
   "tournamentsCount": 178,
   "historicalCount": 64
  },
@@ -22015,6 +22015,5584 @@
    ],
    "label": "Жінки 2015",
    "year": "2015",
+   "gender": "women"
+  },
+  "men_2014": {
+   "columns": [
+    "Кубок Донбасса",
+    "Кубок Руданы",
+    "Черкассы",
+    "Кубок Волыни",
+    "Киев",
+    "КР",
+    "ФИНАЛ"
+   ],
+   "rows": [
+    {
+     "rank": "1",
+     "name": "Усик Артём",
+     "scores": [
+      null,
+      84,
+      100,
+      100,
+      82,
+      82,
+      99.75
+     ],
+     "total": 547.75
+    },
+    {
+     "rank": "2",
+     "name": "Омельченко Владислав",
+     "scores": [
+      59,
+      100,
+      34.5,
+      59,
+      74,
+      34.5,
+      150
+     ],
+     "total": 511
+    },
+    {
+     "rank": "3",
+     "name": "Мамыка Александр",
+     "scores": [
+      null,
+      92,
+      82,
+      91,
+      null,
+      100,
+      81.4
+     ],
+     "total": 446.4
+    },
+    {
+     "rank": "4",
+     "name": "Невенчаный Эдуард",
+     "scores": [
+      82,
+      63.5,
+      34.5,
+      null,
+      100,
+      34.5,
+      126
+     ],
+     "total": 440.5
+    },
+    {
+     "rank": "5",
+     "name": "Луков Александр",
+     "scores": [
+      null,
+      43.25,
+      74,
+      null,
+      59,
+      91,
+      99.75
+     ],
+     "total": 367
+    },
+    {
+     "rank": "6",
+     "name": "Деркач Дмитрий",
+     "scores": [
+      null,
+      25.6,
+      91,
+      null,
+      11.25,
+      74,
+      81.4
+     ],
+     "total": 283.25
+    },
+    {
+     "rank": "7",
+     "name": "Коваль Александр",
+     "scores": [
+      null,
+      43.25,
+      17,
+      null,
+      59,
+      59,
+      99.75
+     ],
+     "total": 278
+    },
+    {
+     "rank": "8",
+     "name": "Гетманцев Александр",
+     "scores": [
+      74,
+      9.5,
+      34.5,
+      null,
+      11.25,
+      34.5,
+      81.4
+     ],
+     "total": 245.15
+    },
+    {
+     "rank": "9",
+     "name": "Химчак Сергей",
+     "scores": [
+      null,
+      43.25,
+      59,
+      null,
+      null,
+      59,
+      81.4
+     ],
+     "total": 242.65
+    },
+    {
+     "rank": "10",
+     "name": "Леденёв Вадим",
+     "scores": [
+      null,
+      null,
+      34.5,
+      34.5,
+      91,
+      null,
+      81.4
+     ],
+     "total": 241.4
+    },
+    {
+     "rank": "11",
+     "name": "Васюра Андрей",
+     "scores": [
+      1,
+      25.6,
+      null,
+      null,
+      59,
+      59,
+      81.4
+     ],
+     "total": 226
+    },
+    {
+     "rank": "12",
+     "name": "Кулаков Владимир",
+     "scores": [
+      null,
+      78,
+      17,
+      null,
+      11.25,
+      34.5,
+      81.4
+     ],
+     "total": 222.15
+    },
+    {
+     "rank": "13",
+     "name": "Десинский Максим",
+     "scores": [
+      34.5,
+      25.6,
+      59,
+      null,
+      34.5,
+      null,
+      68.25
+     ],
+     "total": 221.85
+    },
+    {
+     "rank": "14",
+     "name": "Полторацкий Сергей",
+     "scores": [
+      5.5,
+      25.6,
+      null,
+      59,
+      59,
+      null,
+      68.25
+     ],
+     "total": 217.35
+    },
+    {
+     "rank": "15",
+     "name": "Шинкаренко Василий",
+     "scores": [
+      null,
+      63.5,
+      null,
+      82,
+      null,
+      59,
+      null
+     ],
+     "total": 204.5
+    },
+    {
+     "rank": "16",
+     "name": "Аванесов Артур",
+     "scores": [
+      null,
+      43.25,
+      59,
+      34.5,
+      34.5,
+      1,
+      14.25
+     ],
+     "total": 186.5
+    },
+    {
+     "rank": "17",
+     "name": "Морозов Сергей",
+     "scores": [
+      1,
+      25.6,
+      5.5,
+      59,
+      34.5,
+      null,
+      38.25
+     ],
+     "total": 163.85
+    },
+    {
+     "rank": "18",
+     "name": "Бурмака Павел",
+     "scores": [
+      5.5,
+      9.5,
+      5.5,
+      34.5,
+      34.5,
+      5.5,
+      56.25
+     ],
+     "total": 151.25
+    },
+    {
+     "rank": "19",
+     "name": "Гросов Алексей",
+     "scores": [
+      59,
+      43.25,
+      null,
+      null,
+      null,
+      1,
+      38.25
+     ],
+     "total": 141.5
+    },
+    {
+     "rank": "20",
+     "name": "Емельянов Александр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      138
+     ],
+     "total": 138
+    },
+    {
+     "rank": "21",
+     "name": "Швец Андрей",
+     "scores": [
+      null,
+      null,
+      null,
+      34.5,
+      34.5,
+      null,
+      68.25
+     ],
+     "total": 137.25
+    },
+    {
+     "rank": "22",
+     "name": "Волчук Руслан",
+     "scores": [
+      null,
+      null,
+      null,
+      74,
+      null,
+      null,
+      56.25
+     ],
+     "total": 130.25
+    },
+    {
+     "rank": "23",
+     "name": "Закиров Марат",
+     "scores": [
+      null,
+      63.5,
+      17,
+      null,
+      11.25,
+      null,
+      38.25
+     ],
+     "total": 130
+    },
+    {
+     "rank": "24",
+     "name": "Антипов Денис",
+     "scores": [
+      null,
+      25.6,
+      34.5,
+      null,
+      11.25,
+      1,
+      56.25
+     ],
+     "total": 128.6
+    },
+    {
+     "rank": "25",
+     "name": "Клочков Владимир",
+     "scores": [
+      100,
+      25.6,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 125.6
+    },
+    {
+     "rank": "26",
+     "name": "Барсуков Виталий",
+     "scores": [
+      null,
+      25.6,
+      null,
+      null,
+      null,
+      17,
+      81.4
+     ],
+     "total": 124
+    },
+    {
+     "rank": "27-28",
+     "name": "Назаренко Алексей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      117
+     ],
+     "total": 117
+    },
+    {
+     "rank": "27-28",
+     "name": "Чумак Дмитрий",
+     "scores": [
+      5.5,
+      9.5,
+      null,
+      17,
+      11.25,
+      5.5,
+      68.25
+     ],
+     "total": 117
+    },
+    {
+     "rank": "-29",
+     "name": "Новак Эдуард",
+     "scores": [
+      91,
+      25.6,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 116.6
+    },
+    {
+     "rank": "30",
+     "name": "Коропкин Евгений",
+     "scores": [
+      null,
+      9.5,
+      34.5,
+      null,
+      1,
+      1,
+      68.25
+     ],
+     "total": 114.25
+    },
+    {
+     "rank": "31",
+     "name": "Ткаченко Сергей",
+     "scores": [
+      34.5,
+      25.6,
+      34.5,
+      null,
+      11.25,
+      5.5,
+      1.5
+     ],
+     "total": 112.85
+    },
+    {
+     "rank": "32",
+     "name": "Рудковский Василий",
+     "scores": [
+      null,
+      9.5,
+      59,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 106.75
+    },
+    {
+     "rank": "33",
+     "name": "Торский Тарас",
+     "scores": [
+      null,
+      null,
+      17,
+      34.5,
+      34.5,
+      null,
+      14.25
+     ],
+     "total": 100.25
+    },
+    {
+     "rank": "34",
+     "name": "Ерашов Дмитрий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      99.75
+     ],
+     "total": 99.75
+    },
+    {
+     "rank": "35",
+     "name": "Мороз Игорь",
+     "scores": [
+      null,
+      43.25,
+      null,
+      null,
+      null,
+      17,
+      38.25
+     ],
+     "total": 98.5
+    },
+    {
+     "rank": "36",
+     "name": "Чёрный Виталий",
+     "scores": [
+      null,
+      25.6,
+      null,
+      null,
+      null,
+      34.5,
+      38.25
+     ],
+     "total": 98.35
+    },
+    {
+     "rank": "37",
+     "name": "Крестников Юрий",
+     "scores": [
+      null,
+      25.6,
+      null,
+      null,
+      11.25,
+      17,
+      38.25
+     ],
+     "total": 92.1
+    },
+    {
+     "rank": "38",
+     "name": "Савенков Антон",
+     "scores": [
+      null,
+      63.5,
+      17,
+      null,
+      11.25,
+      null,
+      null
+     ],
+     "total": 91.75
+    },
+    {
+     "rank": "39",
+     "name": "Брежнев Александр",
+     "scores": [
+      34.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      56.25
+     ],
+     "total": 90.75
+    },
+    {
+     "rank": "40",
+     "name": "Морозов Андрей",
+     "scores": [
+      34.5,
+      null,
+      5.5,
+      34.5,
+      null,
+      null,
+      14.25
+     ],
+     "total": 88.75
+    },
+    {
+     "rank": "41",
+     "name": "Пометун Руслан",
+     "scores": [
+      null,
+      null,
+      null,
+      17,
+      1,
+      null,
+      68.25
+     ],
+     "total": 86.25
+    },
+    {
+     "rank": "42",
+     "name": "Алхимов Андрей",
+     "scores": [
+      null,
+      9.5,
+      null,
+      null,
+      null,
+      34.5,
+      38.25
+     ],
+     "total": 82.25
+    },
+    {
+     "rank": "43",
+     "name": "Некристов Станислав",
+     "scores": [
+      null,
+      null,
+      5.5,
+      5.5,
+      34.5,
+      34.5,
+      null
+     ],
+     "total": 80
+    },
+    {
+     "rank": "44",
+     "name": "Скарлат Дмитрий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      11.25,
+      null,
+      68.25
+     ],
+     "total": 79.5
+    },
+    {
+     "rank": "45",
+     "name": "Павлов Александр",
+     "scores": [
+      null,
+      25.6,
+      34.5,
+      null,
+      null,
+      17,
+      1.5
+     ],
+     "total": 78.6
+    },
+    {
+     "rank": "46",
+     "name": "Выговский Антон",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      17,
+      56.25
+     ],
+     "total": 74.25
+    },
+    {
+     "rank": "47",
+     "name": "Сергеев Андрей",
+     "scores": [
+      null,
+      9.5,
+      null,
+      null,
+      null,
+      5.5,
+      56.25
+     ],
+     "total": 71.25
+    },
+    {
+     "rank": "48",
+     "name": "Агневщиков Анатолий",
+     "scores": [
+      59,
+      9.5,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 68.5
+    },
+    {
+     "rank": "49",
+     "name": "Почапский Василий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      68.25
+     ],
+     "total": 68.25
+    },
+    {
+     "rank": "50",
+     "name": "Варивода Владимир",
+     "scores": [
+      null,
+      9.5,
+      null,
+      null,
+      null,
+      null,
+      56.25
+     ],
+     "total": 65.75
+    },
+    {
+     "rank": "51",
+     "name": "Штурко Дмитрий",
+     "scores": [
+      null,
+      25.6,
+      17,
+      null,
+      null,
+      5.5,
+      14.25
+     ],
+     "total": 62.35
+    },
+    {
+     "rank": "52",
+     "name": "Шевченко Сергей",
+     "scores": [
+      null,
+      43.25,
+      null,
+      null,
+      null,
+      17,
+      null
+     ],
+     "total": 60.25
+    },
+    {
+     "rank": "53-54",
+     "name": "Ерашов Виталий",
+     "scores": [
+      59,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 59
+    },
+    {
+     "rank": "53-54",
+     "name": "Моисеенко Виталина",
+     "scores": [
+      null,
+      null,
+      null,
+      59,
+      null,
+      null,
+      null
+     ],
+     "total": 59
+    },
+    {
+     "rank": "55-56",
+     "name": "Олексенко Александр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      56.25
+     ],
+     "total": 56.25
+    },
+    {
+     "rank": "55-56",
+     "name": "Анисимов Денис",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      1,
+      38.25
+     ],
+     "total": 56.25
+    },
+    {
+     "rank": "57-58",
+     "name": "Мороко Максим",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 55.25
+    },
+    {
+     "rank": "57-58",
+     "name": "Бадыра Александр",
+     "scores": [
+      null,
+      null,
+      null,
+      17,
+      null,
+      null,
+      38.25
+     ],
+     "total": 55.25
+    },
+    {
+     "rank": "59",
+     "name": "Григоренко Денис",
+     "scores": [
+      null,
+      null,
+      null,
+      17,
+      34.5,
+      null,
+      1.5
+     ],
+     "total": 53
+    },
+    {
+     "rank": "60",
+     "name": "Байдоха Анатолий",
+     "scores": [
+      null,
+      null,
+      null,
+      34.5,
+      1,
+      null,
+      14.25
+     ],
+     "total": 49.75
+    },
+    {
+     "rank": "61",
+     "name": "Чумак Анна",
+     "scores": [
+      null,
+      9.5,
+      null,
+      5.5,
+      null,
+      34.5,
+      null
+     ],
+     "total": 49.5
+    },
+    {
+     "rank": "62",
+     "name": "Ищенко Сергей",
+     "scores": [
+      null,
+      43.25,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 43.25
+    },
+    {
+     "rank": "63",
+     "name": "Гурский Борис",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      38.25
+     ],
+     "total": 39.25
+    },
+    {
+     "rank": "64-67",
+     "name": "Бутрий Владимир",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 38.25
+    },
+    {
+     "rank": "64-67",
+     "name": "Квасков Павел",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 38.25
+    },
+    {
+     "rank": "64-67",
+     "name": "Ковалев Дмитрий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 38.25
+    },
+    {
+     "rank": "64-67",
+     "name": "Шуплецов Станислав",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 38.25
+    },
+    {
+     "rank": "68-72",
+     "name": "Васильков Владислав",
+     "scores": [
+      34.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 34.5
+    },
+    {
+     "rank": "68-72",
+     "name": "Денисьев Илья",
+     "scores": [
+      34.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 34.5
+    },
+    {
+     "rank": "68-72",
+     "name": "Ивлев Александр",
+     "scores": [
+      34.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 34.5
+    },
+    {
+     "rank": "68-72",
+     "name": "Улезко Анатолий",
+     "scores": [
+      34.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 34.5
+    },
+    {
+     "rank": "68-72",
+     "name": "Франчук Андрей",
+     "scores": [
+      null,
+      null,
+      null,
+      34.5,
+      null,
+      null,
+      null
+     ],
+     "total": 34.5
+    },
+    {
+     "rank": "73",
+     "name": "Хусаинов Сергей",
+     "scores": [
+      17,
+      null,
+      17,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 34
+    },
+    {
+     "rank": "74",
+     "name": "Варварук Евгений",
+     "scores": [
+      1,
+      null,
+      17,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 32.25
+    },
+    {
+     "rank": "75",
+     "name": "Макаев Виктор",
+     "scores": [
+      null,
+      null,
+      null,
+      17,
+      null,
+      null,
+      14.25
+     ],
+     "total": 31.25
+    },
+    {
+     "rank": "76",
+     "name": "Лопухова Анна",
+     "scores": [
+      null,
+      25.6,
+      null,
+      null,
+      null,
+      5.5,
+      null
+     ],
+     "total": 31.1
+    },
+    {
+     "rank": "77",
+     "name": "Боев Виктор",
+     "scores": [
+      1,
+      25.6,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 26.6
+    },
+    {
+     "rank": "78-79",
+     "name": "Агневщиков Юрий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      11.25,
+      null,
+      14.25
+     ],
+     "total": 25.5
+    },
+    {
+     "rank": "78-79",
+     "name": "Крамской Сергей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      11.25,
+      null,
+      14.25
+     ],
+     "total": 25.5
+    },
+    {
+     "rank": "80",
+     "name": "Полунин Максим",
+     "scores": [
+      null,
+      null,
+      5.5,
+      17,
+      1,
+      null,
+      1.5
+     ],
+     "total": 25
+    },
+    {
+     "rank": "81",
+     "name": "Валуце Алексей",
+     "scores": [
+      17,
+      null,
+      5.5,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 22.5
+    },
+    {
+     "rank": "82",
+     "name": "Зыков Андрей",
+     "scores": [
+      null,
+      1,
+      null,
+      null,
+      null,
+      5.5,
+      14.25
+     ],
+     "total": 20.75
+    },
+    {
+     "rank": "83-84",
+     "name": "Логоша Евгений",
+     "scores": [
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 19.75
+    },
+    {
+     "rank": "83-84",
+     "name": "Смищенко Артём",
+     "scores": [
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 19.75
+    },
+    {
+     "rank": "85",
+     "name": "Матюшенко Владимир",
+     "scores": [
+      null,
+      null,
+      null,
+      5.5,
+      11.25,
+      1,
+      1.5
+     ],
+     "total": 19.25
+    },
+    {
+     "rank": "86",
+     "name": "Макагон Сергей",
+     "scores": [
+      null,
+      1,
+      null,
+      null,
+      null,
+      17,
+      null
+     ],
+     "total": 18
+    },
+    {
+     "rank": "87-93",
+     "name": "Вахнюк Дмитрий",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 17
+    },
+    {
+     "rank": "87-93",
+     "name": "Любых Сергей",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 17
+    },
+    {
+     "rank": "87-93",
+     "name": "Мажан Константин",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 17
+    },
+    {
+     "rank": "87-93",
+     "name": "Плуталов Андрей",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 17
+    },
+    {
+     "rank": "87-93",
+     "name": "Бородулин Дмитрий",
+     "scores": [
+      null,
+      null,
+      null,
+      17,
+      null,
+      null,
+      null
+     ],
+     "total": 17
+    },
+    {
+     "rank": "87-93",
+     "name": "Козлюк Дмитрий",
+     "scores": [
+      null,
+      null,
+      null,
+      17,
+      null,
+      null,
+      null
+     ],
+     "total": 17
+    },
+    {
+     "rank": "87-93",
+     "name": "Анисимова Светлана",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      17,
+      null
+     ],
+     "total": 17
+    },
+    {
+     "rank": "94-95",
+     "name": "Гниденко Валентин",
+     "scores": [
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 15.25
+    },
+    {
+     "rank": "94-95",
+     "name": "Колодяжный Константин",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      14.25
+     ],
+     "total": 15.25
+    },
+    {
+     "rank": "96",
+     "name": "Русаков Андрей",
+     "scores": [
+      5.5,
+      9.5,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 15
+    },
+    {
+     "rank": "97-98",
+     "name": "Молодецкий Ростислав",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "97-98",
+     "name": "Молчанов Михаил",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "99-100",
+     "name": "Набильский Сергей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      11.25,
+      null,
+      1.5
+     ],
+     "total": 12.75
+    },
+    {
+     "rank": "99-100",
+     "name": "Худяшов Станислав",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      11.25,
+      null,
+      1.5
+     ],
+     "total": 12.75
+    },
+    {
+     "rank": "101",
+     "name": "Зольдин Феликс",
+     "scores": [
+      11.25,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.25
+    },
+    {
+     "rank": "102",
+     "name": "Мороз Сергей",
+     "scores": [
+      null,
+      9.5,
+      1,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 10.5
+    },
+    {
+     "rank": "103-106",
+     "name": "Белянин Андрей",
+     "scores": [
+      null,
+      9.5,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "103-106",
+     "name": "Бондаренко Валерий",
+     "scores": [
+      null,
+      9.5,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "103-106",
+     "name": "Матвиенков Дмитрий",
+     "scores": [
+      null,
+      9.5,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "103-106",
+     "name": "Шумилов Дмитрий",
+     "scores": [
+      null,
+      9.5,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "107",
+     "name": "Сальников Павел",
+     "scores": [
+      1,
+      null,
+      5.5,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 8
+    },
+    {
+     "rank": "108",
+     "name": "Марченко Денис",
+     "scores": [
+      null,
+      null,
+      1,
+      5.5,
+      1,
+      null,
+      null
+     ],
+     "total": 7.5
+    },
+    {
+     "rank": "109",
+     "name": "Шкуров Артём",
+     "scores": [
+      null,
+      null,
+      5.5,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 7
+    },
+    {
+     "rank": "110-114",
+     "name": "Буравлёв Константин",
+     "scores": [
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "110-114",
+     "name": "Денисьев Александр",
+     "scores": [
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "110-114",
+     "name": "Андрощук Александр",
+     "scores": [
+      null,
+      null,
+      null,
+      5.5,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "110-114",
+     "name": "Ахтырский Евгений",
+     "scores": [
+      null,
+      null,
+      null,
+      5.5,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "110-114",
+     "name": "Никитич Сергей",
+     "scores": [
+      null,
+      null,
+      null,
+      5.5,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "-",
+     "name": "Эриксон Хенинг",
+     "scores": [
+      null,
+      null,
+      null,
+      5.5,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "115-116",
+     "name": "Пономаренко Денис",
+     "scores": [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 2.5
+    },
+    {
+     "rank": "115-116",
+     "name": "Якименко Дмитрий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      1.5
+     ],
+     "total": 2.5
+    },
+    {
+     "rank": "117-121",
+     "name": "Афонин Геннадий А.",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "117-121",
+     "name": "Афонин Геннадий Г.",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "117-121",
+     "name": "Городецкий Илья",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "117-121",
+     "name": "Масловский Михаил",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "117-121",
+     "name": "Утембаев Андрей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "122-130",
+     "name": "Ландин Илья",
+     "scores": [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "122-130",
+     "name": "Потан Лилия",
+     "scores": [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "122-130",
+     "name": "Федотова Ирина",
+     "scores": [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "122-130",
+     "name": "Зотов Иван",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "122-130",
+     "name": "Леденёва Наталья",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "122-130",
+     "name": "Навроцкий Дмитрий",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "122-130",
+     "name": "Федуна Игорь",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "122-130",
+     "name": "Вильданов Игорь",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "122-130",
+     "name": "Сорокотяга Олег",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null
+     ],
+     "total": 1
+    }
+   ],
+   "label": "Чоловіки 2014",
+   "year": "2014",
+   "gender": "men"
+  },
+  "men_2013": {
+   "columns": [
+    "Кубок Донбасса 2013",
+    "Кубок Руданы 2013",
+    "Karpaty Open 2013",
+    "Славянск 2013",
+    "Черкассы 2013",
+    "Кубок Волыни 2013",
+    "Мелекино 2013",
+    "Харьков 2013",
+    "ФИНАЛ 2014"
+   ],
+   "rows": [
+    {
+     "rank": "1",
+     "name": "Омельченко Владислав",
+     "scores": [
+      59,
+      100,
+      null,
+      59,
+      null,
+      92,
+      63.5,
+      25.6,
+      81.4
+     ],
+     "total": 480.5
+    },
+    {
+     "rank": "2",
+     "name": "Луков Александр",
+     "scores": [
+      34.5,
+      63.5,
+      null,
+      59,
+      null,
+      21.5,
+      78,
+      78,
+      138
+     ],
+     "total": 472.5
+    },
+    {
+     "rank": "3",
+     "name": "Мамыка Александр",
+     "scores": [
+      34.5,
+      43.25,
+      null,
+      82,
+      null,
+      43.25,
+      92,
+      43.25,
+      126
+     ],
+     "total": 464.25
+    },
+    {
+     "rank": "4",
+     "name": "Усик Артём",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      100,
+      null,
+      100,
+      150
+     ],
+     "total": 350
+    },
+    {
+     "rank": "5",
+     "name": "Емельянов Александр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      75,
+      84,
+      null,
+      63.5,
+      117
+     ],
+     "total": 339.5
+    },
+    {
+     "rank": "6",
+     "name": "Еременко Василий",
+     "scores": [
+      91,
+      13.5,
+      11.25,
+      null,
+      null,
+      63.5,
+      9.5,
+      25.6,
+      81.4
+     ],
+     "total": 295.75
+    },
+    {
+     "rank": "7",
+     "name": "Гросов Алексей",
+     "scores": [
+      34.5,
+      null,
+      null,
+      34.5,
+      null,
+      78,
+      84,
+      25.6,
+      38.25
+     ],
+     "total": 294.85
+    },
+    {
+     "rank": "-",
+     "name": "Лец Дмитрий",
+     "scores": [
+      59,
+      null,
+      null,
+      100,
+      null,
+      43.25,
+      43.25,
+      43.25,
+      null
+     ],
+     "total": 288.75
+    },
+    {
+     "rank": "-",
+     "name": "Бургелов Олег",
+     "scores": [
+      17,
+      null,
+      null,
+      91,
+      null,
+      63.5,
+      63.5,
+      43.25,
+      null
+     ],
+     "total": 278.25
+    },
+    {
+     "rank": "-",
+     "name": "Костылёв Евгений",
+     "scores": [
+      82,
+      null,
+      null,
+      null,
+      null,
+      null,
+      100,
+      92,
+      null
+     ],
+     "total": 274
+    },
+    {
+     "rank": "8",
+     "name": "Химчак Сергей",
+     "scores": [
+      null,
+      84,
+      null,
+      null,
+      null,
+      null,
+      43.25,
+      43.25,
+      99.75
+     ],
+     "total": 270.25
+    },
+    {
+     "rank": "9",
+     "name": "Улезко Анатолий",
+     "scores": [
+      1,
+      63.5,
+      null,
+      17,
+      null,
+      43.25,
+      63.5,
+      null,
+      81.4
+     ],
+     "total": 269.65
+    },
+    {
+     "rank": "10",
+     "name": "Полторацкий Сергей",
+     "scores": [
+      5.5,
+      63.5,
+      null,
+      34.5,
+      null,
+      29.6,
+      63.5,
+      9.5,
+      56.25
+     ],
+     "total": 262.35
+    },
+    {
+     "rank": "11",
+     "name": "Невенчаный Эдуард",
+     "scores": [
+      null,
+      92,
+      null,
+      null,
+      null,
+      null,
+      25.6,
+      43.25,
+      99.75
+     ],
+     "total": 260.6
+    },
+    {
+     "rank": "12",
+     "name": "Брежнев Александр",
+     "scores": [
+      5.5,
+      null,
+      null,
+      59,
+      null,
+      null,
+      43.25,
+      43.25,
+      68.25
+     ],
+     "total": 219.25
+    },
+    {
+     "rank": "13",
+     "name": "Гетманцев Александр",
+     "scores": [
+      1,
+      13.5,
+      null,
+      1,
+      35.6,
+      13.5,
+      43.25,
+      25.6,
+      68.25
+     ],
+     "total": 201.7
+    },
+    {
+     "rank": "14",
+     "name": "Шкуров Артём",
+     "scores": [
+      1,
+      25.6,
+      null,
+      1,
+      11.25,
+      63.5,
+      25.6,
+      25.6,
+      38.25
+     ],
+     "total": 191.8
+    },
+    {
+     "rank": "15",
+     "name": "Десинский Максим",
+     "scores": [
+      34.5,
+      63.5,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null,
+      81.4
+     ],
+     "total": 188.9
+    },
+    {
+     "rank": "16",
+     "name": "Валуце Алексей",
+     "scores": [
+      1,
+      25.6,
+      11.25,
+      34.5,
+      null,
+      5.5,
+      25.6,
+      25.6,
+      56.25
+     ],
+     "total": 185.3
+    },
+    {
+     "rank": "-",
+     "name": "Титков Олег",
+     "scores": [
+      null,
+      null,
+      null,
+      74,
+      null,
+      null,
+      25.6,
+      84,
+      null
+     ],
+     "total": 183.6
+    },
+    {
+     "rank": "17",
+     "name": "Ткаченко Сергей",
+     "scores": [
+      5.5,
+      25.6,
+      null,
+      17,
+      35.6,
+      5.5,
+      25.6,
+      25.6,
+      38.25
+     ],
+     "total": 178.65
+    },
+    {
+     "rank": "18",
+     "name": "Мажан Константин",
+     "scores": [
+      17,
+      null,
+      null,
+      59,
+      null,
+      null,
+      null,
+      null,
+      99.75
+     ],
+     "total": 175.75
+    },
+    {
+     "rank": "19",
+     "name": "Морозов Андрей",
+     "scores": [
+      34.5,
+      13.5,
+      null,
+      1,
+      11.25,
+      43.25,
+      null,
+      9.5,
+      56.25
+     ],
+     "total": 169.25
+    },
+    {
+     "rank": "20",
+     "name": "Кулаков Владимир",
+     "scores": [
+      null,
+      43.25,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      63.5,
+      38.25
+     ],
+     "total": 154.5
+    },
+    {
+     "rank": "21",
+     "name": "Барсуков Виталий",
+     "scores": [
+      null,
+      25.6,
+      null,
+      null,
+      57,
+      null,
+      null,
+      null,
+      68.25
+     ],
+     "total": 150.85
+    },
+    {
+     "rank": "22",
+     "name": "Шумилов Дмитрий",
+     "scores": [
+      1,
+      null,
+      null,
+      17,
+      null,
+      null,
+      25.6,
+      43.25,
+      56.25
+     ],
+     "total": 143.1
+    },
+    {
+     "rank": "23",
+     "name": "Бурмака Павел",
+     "scores": [
+      null,
+      25.6,
+      null,
+      17,
+      11.25,
+      29.6,
+      1,
+      1,
+      56.25
+     ],
+     "total": 141.7
+    },
+    {
+     "rank": "24",
+     "name": "Деркач Дмитрий",
+     "scores": [
+      null,
+      43.25,
+      null,
+      null,
+      null,
+      null,
+      25.6,
+      null,
+      68.25
+     ],
+     "total": 137.1
+    },
+    {
+     "rank": "25",
+     "name": "Леденёв Вадим",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      66,
+      null,
+      null,
+      null,
+      68.25
+     ],
+     "total": 134.25
+    },
+    {
+     "rank": "26",
+     "name": "Савенков Антон",
+     "scores": [
+      null,
+      25.6,
+      null,
+      null,
+      null,
+      null,
+      25.6,
+      null,
+      81.4
+     ],
+     "total": 132.6
+    },
+    {
+     "rank": "27",
+     "name": "Медведев Александр",
+     "scores": [
+      100,
+      25.6,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 125.6
+    },
+    {
+     "rank": "28",
+     "name": "Шинкаренко Василий",
+     "scores": [
+      null,
+      13.5,
+      null,
+      null,
+      null,
+      29.6,
+      25.6,
+      null,
+      56.25
+     ],
+     "total": 124.95
+    },
+    {
+     "rank": "29",
+     "name": "Мороко Максим",
+     "scores": [
+      17,
+      null,
+      null,
+      34.5,
+      null,
+      null,
+      25.6,
+      9.5,
+      38.25
+     ],
+     "total": 124.85
+    },
+    {
+     "rank": "30",
+     "name": "Варивода Владимир",
+     "scores": [
+      null,
+      43.25,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      81.4
+     ],
+     "total": 124.65
+    },
+    {
+     "rank": "31",
+     "name": "Новак Эдуард",
+     "scores": [
+      5.5,
+      43.25,
+      null,
+      null,
+      49.5,
+      null,
+      null,
+      25.6,
+      null
+     ],
+     "total": 123.85
+    },
+    {
+     "rank": "-",
+     "name": "Сыромятников Александр",
+     "scores": [
+      74,
+      null,
+      null,
+      5.5,
+      null,
+      null,
+      43.25,
+      null,
+      null
+     ],
+     "total": 122.75
+    },
+    {
+     "rank": "32",
+     "name": "Квасков Павел",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      43.25,
+      null,
+      43.25,
+      14.25
+     ],
+     "total": 117.75
+    },
+    {
+     "rank": "33-34",
+     "name": "Антипов Денис",
+     "scores": [
+      null,
+      25.6,
+      null,
+      null,
+      null,
+      null,
+      25.6,
+      25.6,
+      38.25
+     ],
+     "total": 115.05
+    },
+    {
+     "rank": "33-34",
+     "name": "Коваль Александр",
+     "scores": [
+      null,
+      25.6,
+      null,
+      null,
+      null,
+      null,
+      25.6,
+      25.6,
+      38.25
+     ],
+     "total": 115.05
+    },
+    {
+     "rank": "35",
+     "name": "Васюра Андрей",
+     "scores": [
+      null,
+      5.5,
+      null,
+      null,
+      35.6,
+      null,
+      null,
+      null,
+      68.25
+     ],
+     "total": 109.35
+    },
+    {
+     "rank": "-",
+     "name": "Андоськин Александр",
+     "scores": [
+      59,
+      null,
+      null,
+      null,
+      null,
+      null,
+      43.25,
+      null,
+      null
+     ],
+     "total": 102.25
+    },
+    {
+     "rank": "36",
+     "name": "Буханцов Тарас",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      99.75
+     ],
+     "total": 99.75
+    },
+    {
+     "rank": "37",
+     "name": "Анисимов Денис",
+     "scores": [
+      34.5,
+      25.6,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 98.35
+    },
+    {
+     "rank": "38",
+     "name": "Попович Андрей",
+     "scores": [
+      null,
+      78,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      9.5,
+      null
+     ],
+     "total": 97
+    },
+    {
+     "rank": "39",
+     "name": "Закиров Марат",
+     "scores": [
+      5.5,
+      5.5,
+      null,
+      null,
+      null,
+      21.5,
+      null,
+      25.6,
+      38.25
+     ],
+     "total": 96.35
+    },
+    {
+     "rank": "40",
+     "name": "Крестников Юрий",
+     "scores": [
+      null,
+      13.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      63.5,
+      14.25
+     ],
+     "total": 91.25
+    },
+    {
+     "rank": "41",
+     "name": "Боев Виктор",
+     "scores": [
+      5.5,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      81.4
+     ],
+     "total": 87.9
+    },
+    {
+     "rank": "42",
+     "name": "Буравлёв Константин",
+     "scores": [
+      5.5,
+      null,
+      null,
+      34.5,
+      null,
+      null,
+      9.5,
+      null,
+      38.25
+     ],
+     "total": 87.75
+    },
+    {
+     "rank": "43",
+     "name": "Скарлат Дмитрий",
+     "scores": [
+      1,
+      null,
+      null,
+      null,
+      null,
+      21.5,
+      null,
+      25.6,
+      38.25
+     ],
+     "total": 86.35
+    },
+    {
+     "rank": "-",
+     "name": "Евмененков Максим",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      21.5,
+      null,
+      63.5,
+      null
+     ],
+     "total": 85
+    },
+    {
+     "rank": "44",
+     "name": "Морозов Сергей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      13.5,
+      null,
+      null,
+      68.25
+     ],
+     "total": 81.75
+    },
+    {
+     "rank": "45",
+     "name": "Пырсиков Александр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      81.4
+     ],
+     "total": 81.4
+    },
+    {
+     "rank": "46",
+     "name": "Гоян Дмитрий",
+     "scores": [
+      null,
+      null,
+      11.25,
+      null,
+      null,
+      null,
+      null,
+      null,
+      68.25
+     ],
+     "total": 79.5
+    },
+    {
+     "rank": "47",
+     "name": "Палённый Игорь",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      11.25,
+      29.6,
+      null,
+      null,
+      38.25
+     ],
+     "total": 79.1
+    },
+    {
+     "rank": "48",
+     "name": "Чумак Дмитрий",
+     "scores": [
+      1,
+      5.5,
+      null,
+      5.5,
+      null,
+      29.6,
+      25.6,
+      9.5,
+      1.5
+     ],
+     "total": 78.2
+    },
+    {
+     "rank": "-",
+     "name": "Береш Карол",
+     "scores": [
+      null,
+      null,
+      75,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 75
+    },
+    {
+     "rank": "49",
+     "name": "Сорокотяга Олег",
+     "scores": [
+      1,
+      25.6,
+      null,
+      null,
+      11.25,
+      null,
+      25.6,
+      9.5,
+      null
+     ],
+     "total": 72.95
+    },
+    {
+     "rank": "50-51",
+     "name": "Шуплецов Станислав",
+     "scores": [
+      17,
+      43.25,
+      null,
+      1,
+      null,
+      null,
+      null,
+      9.5,
+      null
+     ],
+     "total": 70.75
+    },
+    {
+     "rank": "50-51",
+     "name": "Чёрный Виталий",
+     "scores": [
+      null,
+      13.5,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      56.25
+     ],
+     "total": 70.75
+    },
+    {
+     "rank": "52",
+     "name": "Алексеенко Александр",
+     "scores": [
+      5.5,
+      25.6,
+      null,
+      34.5,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 67.1
+    },
+    {
+     "rank": "53",
+     "name": "Стецишин Виталий",
+     "scores": [
+      null,
+      null,
+      66,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 66
+    },
+    {
+     "rank": "54",
+     "name": "Сафаров Александр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      56.25
+     ],
+     "total": 65.75
+    },
+    {
+     "rank": "-",
+     "name": "Вацлавски Лукаш",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      63.5,
+      null,
+      null,
+      null
+     ],
+     "total": 63.5
+    },
+    {
+     "rank": "55",
+     "name": "Смищенко Артём",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      null,
+      43.25,
+      null,
+      null
+     ],
+     "total": 60.25
+    },
+    {
+     "rank": "56",
+     "name": "Хусаинов Сергей",
+     "scores": [
+      1,
+      null,
+      null,
+      5.5,
+      null,
+      null,
+      43.25,
+      9.5,
+      null
+     ],
+     "total": 59.25
+    },
+    {
+     "rank": "57",
+     "name": "Клочков Владимир",
+     "scores": [
+      59,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 59
+    },
+    {
+     "rank": "58",
+     "name": "Штурко Дмитрий",
+     "scores": [
+      null,
+      13.5,
+      null,
+      5.5,
+      null,
+      13.5,
+      25.6,
+      null,
+      null
+     ],
+     "total": 58.1
+    },
+    {
+     "rank": "-",
+     "name": "Горняк Иштван",
+     "scores": [
+      null,
+      null,
+      57,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 57
+    },
+    {
+     "rank": "59",
+     "name": "Пономаренко Денис",
+     "scores": [
+      null,
+      null,
+      null,
+      5.5,
+      null,
+      null,
+      9.5,
+      25.6,
+      14.25
+     ],
+     "total": 54.85
+    },
+    {
+     "rank": "60",
+     "name": "Коропкин Евгений",
+     "scores": [
+      null,
+      1,
+      null,
+      1,
+      null,
+      null,
+      9.5,
+      null,
+      38.25
+     ],
+     "total": 49.75
+    },
+    {
+     "rank": "61",
+     "name": "Баранов Александр",
+     "scores": [
+      null,
+      null,
+      49.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 49.5
+    },
+    {
+     "rank": "62",
+     "name": "Олексенко Александр",
+     "scores": [
+      1,
+      25.6,
+      null,
+      17,
+      null,
+      null,
+      null,
+      1,
+      null
+     ],
+     "total": 44.6
+    },
+    {
+     "rank": "63",
+     "name": "Борисенко Сергей",
+     "scores": [
+      1,
+      25.6,
+      null,
+      5.5,
+      1,
+      null,
+      9.5,
+      1,
+      null
+     ],
+     "total": 43.6
+    },
+    {
+     "rank": "64-65",
+     "name": "Матвиенков Дмитрий",
+     "scores": [
+      null,
+      43.25,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 43.25
+    },
+    {
+     "rank": "64-65",
+     "name": "Брежнев Сергей",
+     "scores": [
+      null,
+      43.25,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 43.25
+    },
+    {
+     "rank": "-",
+     "name": "Навойчик Виталий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      43.25,
+      null,
+      null,
+      null
+     ],
+     "total": 43.25
+    },
+    {
+     "rank": "-",
+     "name": "Тарасенко Андрей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      43.25,
+      null,
+      null,
+      null
+     ],
+     "total": 43.25
+    },
+    {
+     "rank": "-",
+     "name": "Юша Алексей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      43.25,
+      null,
+      null,
+      null
+     ],
+     "total": 43.25
+    },
+    {
+     "rank": "66-68",
+     "name": "Аванесов Артур",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 38.25
+    },
+    {
+     "rank": "66-68",
+     "name": "Вильданов Игорь",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 38.25
+    },
+    {
+     "rank": "66-68",
+     "name": "Афонин Геннадий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 38.25
+    },
+    {
+     "rank": "69-72",
+     "name": "Пайзак Томаш",
+     "scores": [
+      null,
+      null,
+      35.6,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 35.6
+    },
+    {
+     "rank": "-",
+     "name": "Каменицки Тибор",
+     "scores": [
+      null,
+      null,
+      35.6,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 35.6
+    },
+    {
+     "rank": "69-72",
+     "name": "Кенес Василий",
+     "scores": [
+      null,
+      null,
+      35.6,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 35.6
+    },
+    {
+     "rank": "69-72",
+     "name": "Химко Александр",
+     "scores": [
+      null,
+      null,
+      35.6,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 35.6
+    },
+    {
+     "rank": "69-72",
+     "name": "Колесников Юрий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      35.6,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 35.6
+    },
+    {
+     "rank": "73",
+     "name": "Новикова Зоя",
+     "scores": [
+      null,
+      1,
+      null,
+      34.5,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 35.5
+    },
+    {
+     "rank": "74",
+     "name": "Макагон Сергей",
+     "scores": [
+      null,
+      25.6,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null
+     ],
+     "total": 35.1
+    },
+    {
+     "rank": "75-77",
+     "name": "Ерашов Виталий",
+     "scores": [
+      34.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 34.5
+    },
+    {
+     "rank": "75-77",
+     "name": "Кобзарь Игорь",
+     "scores": [
+      34.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 34.5
+    },
+    {
+     "rank": "75-77",
+     "name": "Лопухова Анна",
+     "scores": [
+      null,
+      null,
+      null,
+      34.5,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 34.5
+    },
+    {
+     "rank": "-",
+     "name": "Гулякевич Алексей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      29.6,
+      null,
+      null,
+      null
+     ],
+     "total": 29.6
+    },
+    {
+     "rank": "-",
+     "name": "Роговой Игорь",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      29.6,
+      null,
+      null,
+      null
+     ],
+     "total": 29.6
+    },
+    {
+     "rank": "-",
+     "name": "Якимов Павел",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      29.6,
+      null,
+      null,
+      null
+     ],
+     "total": 29.6
+    },
+    {
+     "rank": "78",
+     "name": "Байдоха Анатолий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      13.5,
+      null,
+      null,
+      14.25
+     ],
+     "total": 27.75
+    },
+    {
+     "rank": "79",
+     "name": "Васильков Владислав",
+     "scores": [
+      1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      25.6,
+      null,
+      null
+     ],
+     "total": 26.6
+    },
+    {
+     "rank": "80-83",
+     "name": "Шевченко Сергей",
+     "scores": [
+      null,
+      25.6,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 25.6
+    },
+    {
+     "rank": "80-83",
+     "name": "Коновалов Олег",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      25.6,
+      null
+     ],
+     "total": 25.6
+    },
+    {
+     "rank": "80-83",
+     "name": "Назаренко Владислав",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      25.6,
+      null
+     ],
+     "total": 25.6
+    },
+    {
+     "rank": "80-83",
+     "name": "Снурников Артём",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      25.6,
+      null
+     ],
+     "total": 25.6
+    },
+    {
+     "rank": "84",
+     "name": "Хоменко Владимир",
+     "scores": [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null,
+      14.25
+     ],
+     "total": 24.75
+    },
+    {
+     "rank": "85",
+     "name": "Николаенко Евгений",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      14.25
+     ],
+     "total": 23.75
+    },
+    {
+     "rank": "86-88",
+     "name": "Волчук Руслан",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      21.5,
+      null,
+      null,
+      null
+     ],
+     "total": 21.5
+    },
+    {
+     "rank": "86-88",
+     "name": "Ромашко Виталий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      21.5,
+      null,
+      null,
+      null
+     ],
+     "total": 21.5
+    },
+    {
+     "rank": "86-88",
+     "name": "Франчук Андрей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      21.5,
+      null,
+      null,
+      null
+     ],
+     "total": 21.5
+    },
+    {
+     "rank": "-",
+     "name": "Шмидтке Анджей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      21.5,
+      null,
+      null,
+      null
+     ],
+     "total": 21.5
+    },
+    {
+     "rank": "89",
+     "name": "Швец Андрей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      5.5,
+      null,
+      null,
+      14.25
+     ],
+     "total": 19.75
+    },
+    {
+     "rank": "90",
+     "name": "Ходяков Владимир",
+     "scores": [
+      null,
+      13.5,
+      null,
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 19
+    },
+    {
+     "rank": "91",
+     "name": "Почепко Сергей",
+     "scores": [
+      null,
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      1,
+      1.5
+     ],
+     "total": 17.5
+    },
+    {
+     "rank": "92-96",
+     "name": "Ивлев Александр",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 17
+    },
+    {
+     "rank": "92-96",
+     "name": "Русанов Андрей",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 17
+    },
+    {
+     "rank": "92-96",
+     "name": "Логоша Евгений",
+     "scores": [
+      null,
+      null,
+      null,
+      17,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 17
+    },
+    {
+     "rank": "92-96",
+     "name": "Шипулин Алексей",
+     "scores": [
+      null,
+      null,
+      null,
+      17,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 17
+    },
+    {
+     "rank": "92-96",
+     "name": "Шипулин Сергей",
+     "scores": [
+      null,
+      null,
+      null,
+      17,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 17
+    },
+    {
+     "rank": "97-105",
+     "name": "Молчанов Михаил",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "97-105",
+     "name": "Якименко Дмитрий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "97-105",
+     "name": "Афонин Геннадий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "97-105",
+     "name": "Колодяжный Константин",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "97-105",
+     "name": "Тесленко Кирилл",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "97-105",
+     "name": "Веремеев Богдан",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "97-105",
+     "name": "Торский Тарас",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "97-105",
+     "name": "Полунин Максим",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "97-105",
+     "name": "Бутов Александр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "106-109",
+     "name": "Каньшин Александр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      13.5,
+      null,
+      null,
+      null
+     ],
+     "total": 13.5
+    },
+    {
+     "rank": "106-109",
+     "name": "Кубчинский Николай",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      13.5,
+      null,
+      null,
+      null
+     ],
+     "total": 13.5
+    },
+    {
+     "rank": "106-109",
+     "name": "Навроцкий Дмитрий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      13.5,
+      null,
+      null,
+      null
+     ],
+     "total": 13.5
+    },
+    {
+     "rank": "106-109",
+     "name": "Федуна Игорь",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      13.5,
+      null,
+      null,
+      null
+     ],
+     "total": 13.5
+    },
+    {
+     "rank": "110-116",
+     "name": "Гарасимчук Игорь",
+     "scores": [
+      null,
+      null,
+      11.25,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.25
+    },
+    {
+     "rank": "110-116",
+     "name": "Дорошенко Игорь",
+     "scores": [
+      null,
+      null,
+      11.25,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.25
+    },
+    {
+     "rank": "110-116",
+     "name": "Носивец Сергей",
+     "scores": [
+      null,
+      null,
+      11.25,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.25
+    },
+    {
+     "rank": "110-116",
+     "name": "Чик Эдуард",
+     "scores": [
+      null,
+      null,
+      11.25,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.25
+    },
+    {
+     "rank": "-",
+     "name": "Чорняк Михай",
+     "scores": [
+      null,
+      null,
+      11.25,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.25
+    },
+    {
+     "rank": "109",
+     "name": "Гойколов Александр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      11.25,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.25
+    },
+    {
+     "rank": "110-116",
+     "name": "Топко Андрей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      11.25,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.25
+    },
+    {
+     "rank": "110-116",
+     "name": "Харченко Татьяна",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      11.25,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.25
+    },
+    {
+     "rank": "117-120",
+     "name": "Белянин Андрей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "-",
+     "name": "Будик Борис",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "-",
+     "name": "Конопченко Даниил",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "-",
+     "name": "Липчевский Артур",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "-",
+     "name": "Попович Карл",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "117-120",
+     "name": "Рудковский Василий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "117-120",
+     "name": "Власенко Виталий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "-",
+     "name": "Еськов Олег",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "-",
+     "name": "Козырев Александр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "117-120",
+     "name": "Пасичниченко Артём",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "-",
+     "name": "Шевченко Сергей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "121",
+     "name": "Марфола Оксана",
+     "scores": [
+      null,
+      1,
+      null,
+      5.5,
+      1,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 7.5
+    },
+    {
+     "rank": "122-130",
+     "name": "Бондаренко Валерий",
+     "scores": [
+      null,
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "122-130",
+     "name": "Ландин Илья",
+     "scores": [
+      null,
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "122-130",
+     "name": "Романенко Кирилл",
+     "scores": [
+      null,
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "122-130",
+     "name": "Тимченко Михаил",
+     "scores": [
+      null,
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "122-130",
+     "name": "Андрощук Александр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      5.5,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "122-130",
+     "name": "Бородулин Дмитрий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      5.5,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "122-130",
+     "name": "Новосад Богдан",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      5.5,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "122-130",
+     "name": "Стариков Владимир",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      5.5,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "122-130",
+     "name": "Федуна Виктор",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      5.5,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "131-140",
+     "name": "Худяшов Станислав",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "131-140",
+     "name": "Скарлат Александр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "131-140",
+     "name": "Дещенко Юрий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "131-140",
+     "name": "Шипицин Олег",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "131-140",
+     "name": "Махневич Валерий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "131-140",
+     "name": "Городецкий Илья",
+     "scores": [
+      1.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "131-140",
+     "name": "Гниденко Валентин",
+     "scores": [
+      1.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "131-140",
+     "name": "Павлов Александр",
+     "scores": [
+      1.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "131-140",
+     "name": "Мороз Сергей",
+     "scores": [
+      1.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "131-140",
+     "name": "Набильский Сергей",
+     "scores": [
+      1.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "141-159",
+     "name": "Кургузов Олег",
+     "scores": [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Чумак Анна",
+     "scores": [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Агневщиков Анатолий",
+     "scores": [
+      1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Агневщиков Олег",
+     "scores": [
+      1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Плуталов Андрей",
+     "scores": [
+      1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Попов Юрий",
+     "scores": [
+      1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Котенко Олег",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Выговский Антон",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Дзебань Дмитрий",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Леденёва Наталья",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Луговская Людмила",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Моисеенко Виталина",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Спекторенко Екатерина",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Витковский Анатолий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Ткачук Сергей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Клюйков Роман",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "-",
+     "name": "Конопченко Виктор",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Лещенко Юрий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Маслий Евгений",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "-",
+     "name": "Носовский Дмитрий",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "141-159",
+     "name": "Топко Александр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "-",
+     "name": "Ходеев Николай",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "160-165",
+     "name": "Чижмадия Томаш",
+     "scores": [
+      null,
+      null,
+      0.75,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 0.75
+    },
+    {
+     "rank": "160-165",
+     "name": "Анисимов Иван",
+     "scores": [
+      null,
+      null,
+      0.75,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 0.75
+    },
+    {
+     "rank": "160-165",
+     "name": "Быстров Владимир",
+     "scores": [
+      null,
+      null,
+      0.75,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 0.75
+    },
+    {
+     "rank": "-",
+     "name": "Лопиш Норбер",
+     "scores": [
+      null,
+      null,
+      0.75,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 0.75
+    },
+    {
+     "rank": "160-165",
+     "name": "Мелашенко Владислав",
+     "scores": [
+      null,
+      null,
+      0.75,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 0.75
+    },
+    {
+     "rank": "160-165",
+     "name": "Роземберский Иосиф",
+     "scores": [
+      null,
+      null,
+      0.75,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 0.75
+    },
+    {
+     "rank": "-",
+     "name": "Товт Золтан",
+     "scores": [
+      null,
+      null,
+      0.75,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 0.75
+    },
+    {
+     "rank": "160-165",
+     "name": "Трубецкой Пётр",
+     "scores": [
+      null,
+      null,
+      0.75,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 0.75
+    }
+   ],
+   "label": "Чоловіки 2013",
+   "year": "2013",
+   "gender": "men"
+  },
+  "women_2013": {
+   "columns": [
+    "Кубок Донбасса 2013",
+    "Славянск 2013",
+    "Кубок Волыни 2013",
+    "Хрустальный дротик 2013",
+    "Харьков 2013",
+    "ФИНАЛ 2013"
+   ],
+   "rows": [
+    {
+     "rank": "1",
+     "name": "Лопухова Анна",
+     "scores": [
+      100,
+      100,
+      75,
+      100,
+      100,
+      71.25
+     ],
+     "total": 660.25
+    },
+    {
+     "rank": "2",
+     "name": "Чумак Анна",
+     "scores": [
+      75,
+      75,
+      100,
+      37.5,
+      55,
+      114
+     ],
+     "total": 555.5
+    },
+    {
+     "rank": "3",
+     "name": "Новикова Зоя",
+     "scores": [
+      23,
+      40,
+      null,
+      null,
+      75,
+      null
+     ],
+     "total": 270
+    },
+    {
+     "rank": "4",
+     "name": "Марфола Оксана",
+     "scores": [
+      23,
+      55,
+      23,
+      37.5,
+      23,
+      35.25
+     ],
+     "total": 232
+    },
+    {
+     "rank": "5",
+     "name": "Гавриш Ольга",
+     "scores": [
+      7,
+      null,
+      null,
+      58,
+      null,
+      71.25
+     ],
+     "total": 171.5
+    },
+    {
+     "rank": "6-7",
+     "name": "Анисимова Светлана",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      150
+     ],
+     "total": 150
+    },
+    {
+     "rank": "6-7",
+     "name": "Перетятько Татьяна",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 150
+    },
+    {
+     "rank": "8",
+     "name": "Черноброва Александра",
+     "scores": [
+      null,
+      null,
+      40,
+      null,
+      null,
+      71.25
+     ],
+     "total": 146.5
+    },
+    {
+     "rank": "9",
+     "name": "Белодед Кристина",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      71.25
+     ],
+     "total": 142.5
+    },
+    {
+     "rank": "10",
+     "name": "Харченко Татьяна",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 132
+    },
+    {
+     "rank": "-",
+     "name": "Соловьёва Юлия",
+     "scores": [
+      55,
+      null,
+      null,
+      70,
+      null,
+      null
+     ],
+     "total": 125
+    },
+    {
+     "rank": "11",
+     "name": "Леденёва Наталья",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      99
+     ],
+     "total": 108.75
+    },
+    {
+     "rank": "-",
+     "name": "Леонова Елизавета",
+     "scores": [
+      null,
+      null,
+      null,
+      84,
+      null,
+      null
+     ],
+     "total": 84
+    },
+    {
+     "rank": "12",
+     "name": "Гудзь Лина",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      7,
+      null
+     ],
+     "total": 78.25
+    },
+    {
+     "rank": "13-14",
+     "name": "Гарапко Инна",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 71.25
+    },
+    {
+     "rank": "13-14",
+     "name": "Пайзак Синтия",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 71.25
+    },
+    {
+     "rank": "15",
+     "name": "Стребиж Татьяна",
+     "scores": [
+      null,
+      7,
+      55,
+      null,
+      null,
+      null
+     ],
+     "total": 62
+    },
+    {
+     "rank": "16",
+     "name": "Шумилова Ирина",
+     "scores": [
+      null,
+      23,
+      null,
+      37.5,
+      null,
+      1
+     ],
+     "total": 61.5
+    },
+    {
+     "rank": "-",
+     "name": "Богданова Дина",
+     "scores": [
+      null,
+      null,
+      null,
+      13,
+      40,
+      null
+     ],
+     "total": 53
+    },
+    {
+     "rank": "17",
+     "name": "Журавель Алла",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      35.25
+     ],
+     "total": 45
+    },
+    {
+     "rank": "-",
+     "name": "Дзюбий Юлия",
+     "scores": [
+      40,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 40
+    },
+    {
+     "rank": "-",
+     "name": "Королёва Элина",
+     "scores": [
+      null,
+      null,
+      null,
+      37.5,
+      null,
+      null
+     ],
+     "total": 37.5
+    },
+    {
+     "rank": "18-20",
+     "name": "Гордиенко Кристина",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      35.25
+     ],
+     "total": 35.25
+    },
+    {
+     "rank": "18-20",
+     "name": "Луговская Людмила",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 35.25
+    },
+    {
+     "rank": "18-20",
+     "name": "Червинская Нина",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 35.25
+    },
+    {
+     "rank": "21",
+     "name": "Гладка Ирина",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      23,
+      null
+     ],
+     "total": 25.5
+    },
+    {
+     "rank": "22-23",
+     "name": "Грушовец Ольга",
+     "scores": [
+      null,
+      23,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 23
+    },
+    {
+     "rank": "22-23",
+     "name": "Бородулина Анна",
+     "scores": [
+      null,
+      null,
+      23,
+      null,
+      null,
+      null
+     ],
+     "total": 23
+    },
+    {
+     "rank": "24",
+     "name": "Иващенко Ирина",
+     "scores": [
+      null,
+      null,
+      null,
+      13,
+      null,
+      null
+     ],
+     "total": 22.75
+    },
+    {
+     "rank": "25",
+     "name": "Черватюк Ирина",
+     "scores": [
+      null,
+      null,
+      7,
+      null,
+      null,
+      9.75
+     ],
+     "total": 18.25
+    },
+    {
+     "rank": "-",
+     "name": "Будик Зоя",
+     "scores": [
+      null,
+      null,
+      null,
+      13,
+      null,
+      null
+     ],
+     "total": 13
+    },
+    {
+     "rank": "-",
+     "name": "Ниценко Ольга",
+     "scores": [
+      null,
+      null,
+      null,
+      13,
+      null,
+      null
+     ],
+     "total": 13
+    },
+    {
+     "rank": "26",
+     "name": "Медведская Людмила",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.75
+     ],
+     "total": 11.25
+    },
+    {
+     "rank": "27-29",
+     "name": "Спекторенко Екатерина",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      9.75,
+      null
+     ],
+     "total": 9.75
+    },
+    {
+     "rank": "27-29",
+     "name": "Якименко Екатерина",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 9.75
+    },
+    {
+     "rank": "27-29",
+     "name": "Боярчук Ирина",
+     "scores": [
+      null,
+      null,
+      9.75,
+      null,
+      null,
+      null
+     ],
+     "total": 9.75
+    },
+    {
+     "rank": "30",
+     "name": "Губина Наталья",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      7,
+      null
+     ],
+     "total": 8
+    },
+    {
+     "rank": "31",
+     "name": "Гайдукова Наталья",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 7
+    },
+    {
+     "rank": "-",
+     "name": "Суслова Евгения",
+     "scores": [
+      null,
+      7,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 7
+    },
+    {
+     "rank": "-",
+     "name": "Яскевич Алёна",
+     "scores": [
+      null,
+      null,
+      7,
+      null,
+      null,
+      null
+     ],
+     "total": 7
+    },
+    {
+     "rank": "32",
+     "name": "Гончарова Марина",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "33",
+     "name": "Потан Лилия",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null
+     ],
+     "total": 1
+    },
+    {
+     "rank": "-",
+     "name": "Косыгина Ольга",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null
+     ],
+     "total": 1
+    }
+   ],
+   "label": "Жінки 2013",
+   "year": "2013",
    "gender": "women"
   }
  }
