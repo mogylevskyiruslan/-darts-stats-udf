@@ -20,6 +20,7 @@ from datetime import datetime, timezone
 TOURNAMENTS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTZxNlB-yHQDjWX3Y_n4GCUL_4sY5oLcLeW9rR_MI5zlm2p0YqZmHUUXw07bLw1YTiUg4Ar6bRbn_Dd/pub?output=csv&gid=0"
 PRIZES_MEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U550qzdDKkLxenpx2LUYMQ8Uccqf9ZdkyP7ruIqdoPt_tX-hQWKhQOnTGc6HG6jiPQmQEuA/pub?output=csv&gid=0"
 PRIZES_WOMEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U550qzdDKkLxenpx2LUYMQ8Uccqf9ZdkyP7ruIqdoPt_tX-hQWKhQOnTGc6HG6jiPQmQEuA/pub?output=csv&gid=109502045"
+RATINGS_SOURCES_PATH = "ratings_sources.json"
 
 OUTPUT_PATH = "data.json"
 
@@ -293,6 +294,118 @@ def build_historical(men_year_data, women_year_data, used_keys_men, used_keys_wo
     return historical
 
 
+# ---------------------------------------------------------------------------
+# "Кубок України" — рейтинги за сезон (15+ вкладок, одна на рік+стать).
+# Структура колонок різна з року в рік (інколи є "Місто"/"Регіон", інколи
+# немає; кількість етапів різна) — тому визначаємо колонки-з-очками
+# автоматично: якщо більшість заповнених клітинок колонки — числа, це
+# етап/рейтинг, інакше — описова колонка (Місто, Регіон), яку пропускаємо.
+# ---------------------------------------------------------------------------
+NAME_SUFFIX_RE = re.compile(r"\s+[+\-=]\d*\s*$")
+
+
+def clean_player_name(raw):
+    """Деякі роки мають доклеєний до імені індикатор зміни місця
+    ('Залевський Володимир =', 'Мелашенко Владислав +2') — прибираємо його."""
+    return NAME_SUFFIX_RE.sub("", raw.strip()).strip()
+
+
+def is_mostly_numeric(values):
+    non_empty = [v for v in values if v.strip()]
+    if not non_empty:
+        return False
+    numeric = sum(1 for v in non_empty if parse_num(v) is not None)
+    return numeric / len(non_empty) >= 0.6
+
+
+def parse_ratings_sheet(rows):
+    """Розбирає одну вкладку рейтингу. Повертає {"columns": [...], "rows": [...]}
+    або None, якщо структура не розпізнана (наприклад, порожня вкладка)."""
+    header_idx = None
+    for i, row in enumerate(rows):
+        if len(row) > 1 and row[1].strip() == "Гравець":
+            header_idx = i
+            break
+    if header_idx is None:
+        return None
+
+    header = rows[header_idx]
+    data_rows = rows[header_idx + 1:]
+
+    ncols = len(header)
+    score_cols = []
+    total_col = None
+    for c in range(2, ncols):
+        col_values = [r[c] if c < len(r) else "" for r in data_rows]
+        if not is_mostly_numeric(col_values):
+            continue
+        label = header[c].split("\n")[0].strip() if header[c].strip() else f"Колонка {c}"
+        is_total = bool(re.search(r"рейтинг|сума", header[c], re.IGNORECASE))
+        if is_total and total_col is None:
+            total_col = c
+        else:
+            score_cols.append((c, label))
+
+    if total_col is None and score_cols:
+        # немає явного підпису "рейтинг"/"сума" — беремо останню числову колонку
+        total_col = score_cols[-1][0]
+        score_cols = score_cols[:-1]
+
+    if total_col is None:
+        return None
+
+    out_rows = []
+    for r in data_rows:
+        if len(r) < 2 or not r[1].strip():
+            continue
+        rank_raw = r[0].strip() if len(r) > 0 else ""
+        name_raw = r[1].strip()
+        if not name_raw:
+            continue
+        name = clean_player_name(name_raw)
+        scores = [parse_num(r[c] if c < len(r) else "") for c, _ in score_cols]
+        total = parse_num(r[total_col] if total_col < len(r) else "")
+        out_rows.append({"rank": rank_raw, "name": name, "scores": scores, "total": total})
+
+    # сортуємо за рейтингом на випадок, якщо вихідні рядки йшли не по порядку
+    out_rows.sort(key=lambda x: -(x["total"] or 0))
+
+    return {"columns": [label for _, label in score_cols], "rows": out_rows}
+
+
+def build_ratings(sources_path):
+    try:
+        with open(sources_path, encoding="utf-8") as f:
+            config = json.load(f)
+    except FileNotFoundError:
+        print(f"  WARNING: {sources_path} not found, skipping ratings")
+        return {}
+
+    ratings = {}
+    for sheet in config["sheets"]:
+        gid, label = sheet["gid"], sheet["label"]
+        year_match = re.search(r"\d{4}", label)
+        year = year_match.group(0) if year_match else "0000"
+        gender = "women" if "Жін" in label else "men"
+        key = f"{gender}_{year}"
+
+        csv_url = f"https://docs.google.com/spreadsheets/d/{config['spreadsheetId']}/export?format=csv&gid={gid}"
+        try:
+            rows = fetch_csv(csv_url)
+            parsed = parse_ratings_sheet(rows)
+            if parsed:
+                parsed["label"] = label
+                parsed["year"] = year
+                parsed["gender"] = gender
+                ratings[key] = parsed
+                print(f"  {label}: {len(parsed['rows'])} players, {len(parsed['columns'])} stages")
+            else:
+                print(f"  {label}: could not parse (unrecognised structure), skipping")
+        except Exception as e:
+            print(f"  {label}: fetch failed ({e}), skipping")
+    return ratings
+
+
 def main():
     print("Fetching tournaments CSV...")
     t_rows = fetch_csv(TOURNAMENTS_CSV_URL)
@@ -330,6 +443,10 @@ def main():
     historical = build_historical(men_year_data, women_year_data, used_keys_men, used_keys_women)
     print(f"{len(historical)} historical-only records (both genders combined)")
 
+    print("Fetching season ratings (Кубок України, all tabs)...")
+    ratings = build_ratings(RATINGS_SOURCES_PATH)
+    print(f"Parsed {len(ratings)} rating seasons")
+
     data = {
         "meta": {
             "lastUpdated": datetime.now(timezone.utc).isoformat(),
@@ -340,6 +457,7 @@ def main():
         "leaderboard": men_aggregate,
         "leaderboardWomen": women_aggregate,
         "historical": historical,
+        "ratings": ratings,
     }
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:

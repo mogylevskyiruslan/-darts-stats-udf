@@ -386,27 +386,17 @@
 
 <section id="ratings">
   <h2><span class="idx">03.1</span> Рейтинги за сезон</h2>
-  <p class="section-sub">Особистий рейтинг гравців за сумою очок з усіх етапів Кубка України (з коефіцієнтом 1.0) та ЧУ (коефіцієнт 1.5). Поки додано сезон 2025 (жінки) як приклад — решта сезонів (2013–2025, чоловіки й жінки) підʼєднаються автоматично на етапі повного пайплайна.</p>
+  <p class="section-sub">Особистий рейтинг гравців за сумою очок з усіх етапів Кубка України (з коефіцієнтом 1.0) та ЧУ (коефіцієнт 1.5) — усі сезони 2013–2025, чоловіки й жінки, з таблиці «Кубок України».</p>
   <div class="controls">
-    <select id="filter-rating-season">
-      <option value="women_2025">Жінки · 2025</option>
-    </select>
+    <select id="filter-rating-season"></select>
     <input type="text" id="search-ratings" placeholder="Пошук гравця…">
   </div>
   <div class="table-wrap">
     <table>
       <thead>
-        <tr>
+        <tr id="ratings-head-row">
           <th class="num">Місце</th>
           <th>Гравець</th>
-          <th class="num mono">I етап</th>
-          <th class="num mono">II етап</th>
-          <th class="num mono">III етап</th>
-          <th class="num mono">IV етап</th>
-          <th class="num mono">V етап</th>
-          <th class="num mono">Фінал</th>
-          <th class="num mono">ЧУ (×1.5)</th>
-          <th class="num mono">Рейтинг</th>
         </tr>
       </thead>
       <tbody id="ratings-body"></tbody>
@@ -696,33 +686,49 @@ function renderLeaderboard(){
   `).join('');
 }
 
-const ratingsData = {
-  women_2025: [
-    {rank:'1', name:'Харченко Тетяна', stages:[100.00,100.00,100.00,100.00,100.00,100.00], chu:132.00, total:732.00},
-    {rank:'2', name:'Гончаренко Інна', stages:[70.00,66.00,88.00,88.00,55.00,47.50], chu:150.00, total:564.50},
-    {rank:'3', name:'Терещенко Любов', stages:[37.50,88.00,47.50,23.50,15.00,88.00], chu:99.00, total:398.50},
-    {rank:'4', name:'Пивошенко Олена', stages:[58.00,47.50,47.50,23.50,40.00,47.50], chu:35.25, total:299.25},
-    {rank:'5', name:'Карнаух Валентина', stages:[13.00,47.50,47.50,76.00,15.00,23.50], chu:71.25, total:293.75},
-    {rank:'6', name:'Ледєньова Наталія', stages:[13.00,76.00,null,47.50,null,23.50], chu:114.00, total:274.00},
-    {rank:'7', name:'Зайцева Інна', stages:[null,23.50,76.00,null,75.00,47.50], chu:9.75, total:231.75},
-    {rank:'8', name:'Лановенко Ксенія', stages:[1.00,47.50,6.50,23.50,1.00,76.00], chu:35.25, total:190.75},
-    {rank:'9', name:'Чабанова Анна', stages:[37.50,6.50,23.50,23.50,1.00,23.50], chu:71.25, total:186.75},
-    {rank:'10', name:'Білоус Жанна', stages:[84.00,47.50,null,6.50,null,6.50], chu:9.75, total:154.25},
-    {rank:'11', name:'Шклярук Наталія', stages:[13.00,1.00,66.00,47.50,15.00,null], chu:null, total:142.50},
-    {rank:'12', name:'Ільясова Альбіна', stages:[13.00,1.00,null,47.50,null,66.00], chu:9.75, total:137.25},
-    {rank:'13', name:'Молдован Вероніка', stages:[null,null,null,null,null,47.50], chu:71.25, total:118.75},
-    {rank:'14', name:'Спекторенко Катерина', stages:[37.50,6.50,23.50,6.50,1.00,null], chu:35.25, total:110.25},
-    {rank:'15', name:'Діденко Оксана', stages:[null,23.50,6.50,66.00,null,null], chu:null, total:96.00},
-  ]
-};
+let ratingsData = {};
 
 function fmtPts(v){ return (v === null || v === undefined) ? '—' : v.toFixed(2); }
+
+function populateRatingSeasons(){
+  const sel = document.getElementById('filter-rating-season');
+  if(sel.dataset.populated) return;
+  // sort seasons: newest year first, men before women within a year
+  const keys = Object.keys(ratingsData).sort((a, b) => {
+    const [, ya] = a.split('_'), [, yb] = b.split('_');
+    if (ya !== yb) return yb.localeCompare(ya);
+    return a.startsWith('men') ? -1 : 1;
+  });
+  sel.innerHTML = keys.map(k => {
+    const s = ratingsData[k];
+    return `<option value="${k}">${s.label}</option>`;
+  }).join('');
+  sel.dataset.populated = '1';
+}
+
+function renderRatingsHeader(season){
+  const row = document.getElementById('ratings-head-row');
+  const cols = (ratingsData[season] && ratingsData[season].columns) || [];
+  row.innerHTML = `
+    <th class="num">Місце</th>
+    <th>Гравець</th>
+    ${cols.map(c => `<th class="num mono">${c}</th>`).join('')}
+    <th class="num mono">Рейтинг</th>
+  `;
+}
 
 function renderRatings(){
   const season = document.getElementById('filter-rating-season').value;
   const q = (document.getElementById('search-ratings').value || '').toLowerCase();
-  const rows = (ratingsData[season] || []).filter(p => !q || p.name.toLowerCase().includes(q));
+  const seasonData = ratingsData[season];
+  renderRatingsHeader(season);
+
   const body = document.getElementById('ratings-body');
+  if(!seasonData){
+    body.innerHTML = `<tr class="empty-row"><td colspan="10">Немає даних для цього сезону.</td></tr>`;
+    return;
+  }
+  const rows = seasonData.rows.filter(p => !q || p.name.toLowerCase().includes(q));
   if(rows.length === 0){
     body.innerHTML = `<tr class="empty-row"><td colspan="10">Нічого не знайдено.</td></tr>`;
     return;
@@ -731,8 +737,7 @@ function renderRatings(){
     <tr>
       <td class="rank-cell num">${p.rank}</td>
       <td class="player-name">${p.name}</td>
-      ${p.stages.map(v => `<td class="num mono">${fmtPts(v)}</td>`).join('')}
-      <td class="num mono">${fmtPts(p.chu)}</td>
+      ${p.scores.map(v => `<td class="num mono">${fmtPts(v)}</td>`).join('')}
       <td class="num mono" style="color:var(--gold); font-weight:700;">${fmtPts(p.total)}</td>
     </tr>
   `).join('');
@@ -836,6 +841,7 @@ async function loadData(){
     leaderboard = data.leaderboard || [];
     leaderboardWomen = data.leaderboardWomen || [];
     historical = data.historical || [];
+    ratingsData = data.ratings || {};
 
     if(data.meta && data.meta.lastUpdated){
       const d = new Date(data.meta.lastUpdated);
@@ -848,6 +854,7 @@ async function loadData(){
     populateFilters();
     renderTournaments();
     renderLeaderboard();
+    populateRatingSeasons();
     renderRatings();
     renderHistorical();
   } catch(err){
