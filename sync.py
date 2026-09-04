@@ -311,7 +311,9 @@ def clean_player_name(raw):
 
 
 def is_mostly_numeric(values):
-    non_empty = [v for v in values if v.strip()]
+    # "-" означає "не брав участі в цьому етапі" — це так само "порожньо",
+    # як і справжня порожня клітинка, а не текстове значення.
+    non_empty = [v for v in values if v.strip() and v.strip() != "-"]
     if not non_empty:
         return False
     numeric = sum(1 for v in non_empty if parse_num(v) is not None)
@@ -323,7 +325,7 @@ def parse_ratings_sheet(rows):
     або None, якщо структура не розпізнана (наприклад, порожня вкладка)."""
     header_idx = None
     for i, row in enumerate(rows):
-        if len(row) > 1 and row[1].strip() == "Гравець":
+        if len(row) > 1 and row[1].strip() in ("Гравець", "Name"):
             header_idx = i
             break
     if header_idx is None:
