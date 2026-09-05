@@ -149,6 +149,15 @@
   .gender-tag.men{background:rgba(58,79,196,0.25); color:#9fb0ff; border:1px solid rgba(58,79,196,0.5);}
   .gender-tag.women{background:rgba(252,194,2,0.15); color:var(--gold); border:1px solid rgba(252,194,2,0.4);}
 
+  .records-tabs{display:flex; flex-wrap:wrap; gap:6px;}
+  .records-tab{
+    padding:9px 14px; background:var(--panel); color:var(--muted); border:1px solid var(--line);
+    border-radius:4px; font-family:'Inter',sans-serif; font-size:13px; cursor:pointer;
+    transition:background .15s,color .15s,border-color .15s;
+  }
+  .records-tab.active{background:var(--gold); color:var(--bg); font-weight:600; border-color:var(--gold);}
+  .records-tab:not(.active):hover{color:var(--cream); border-color:var(--gold);}
+
   .medal-cell{display:flex; flex-direction:column; gap:8px; font-size:12px; line-height:1.4;}
   .medal-group{display:flex; flex-direction:column; gap:2px;}
   .medal-cell .m-row{display:flex; gap:6px; align-items:baseline;}
@@ -304,6 +313,7 @@
   <a href="#ratings">Рейтинги сезону</a>
   <a href="#historical">Історичні етапи</a>
   <a href="#records">Рекорди</a>
+  <a href="#nakka-records">Рекорди статистики</a>
   <a href="#architecture">Як це працює</a>
 </nav>
 
@@ -450,6 +460,32 @@
       <div class="rv">2020</div>
       <div class="rl">Рік, з якого ведеться систематична фіксація рекордів — завдяки поширенню онлайн-застосунків для підрахунку результатів.</div>
     </div>
+  </div>
+</section>
+
+<section id="nakka-records">
+  <h2><span class="idx">04.1</span> Рекорди статистики (Nakka)</h2>
+  <p class="section-sub">Реальна статистика з <span id="nakka-records-count">…</span> зіграних турнірів, підтягнута напряму з Nakka. Мінімум 3 матчі в турнірі для заліку в "середній за турнір".</p>
+  <div class="controls">
+    <div class="records-tabs" id="records-tabs">
+      <button type="button" class="records-tab active" data-cat="avgTournament">Середній за турнір</button>
+      <button type="button" class="records-tab" data-cat="ton80Tournament">180-ки за турнір</button>
+      <button type="button" class="records-tab" data-cat="ton80Career">180-ки за кар'єру</button>
+      <button type="button" class="records-tab" data-cat="finishTournament">100+ за турнір</button>
+      <button type="button" class="records-tab" data-cat="finishCareer">100+ за кар'єру</button>
+    </div>
+    <label class="udl-toggle">
+      <input type="checkbox" id="toggle-udl-records">
+      Додати УДЛ/ЗУДЛ
+    </label>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr id="records-head-row"></tr>
+      </thead>
+      <tbody id="records-body"></tbody>
+    </table>
   </div>
 </section>
 
@@ -656,7 +692,7 @@ function renderTournaments(){
       <td class="num mono">${fmtNum(t.men)}</td>
       <td class="num mono">${fmtNum(t.women)}</td>
       <td class="num mono">${fmtNum(t.menAvg)}</td>
-      <td>${renderMedalCell(t.medals, t.medalsWomen)}</td>
+      <td>${renderMedalCell(t.nakkaMedals || t.medals, t.nakkaMedalsWomen || t.medalsWomen)}</td>
       <td>${renderLinkChips(t.links)}</td>
     </tr>
   `).join('');
@@ -686,7 +722,96 @@ function renderLeaderboard(){
   `).join('');
 }
 
+let nakkaPlayerStats = [];
 let ratingsData = {};
+let recordsCategory = 'avgTournament';
+
+const RECORD_CATEGORIES = {
+  avgTournament: {
+    title: 'Гравець', valueLabel: 'Середній',
+    compute(rows){
+      return rows
+        .filter(r => r.match >= 3)
+        .sort((a,b) => b.avg - a.avg)
+        .slice(0, 10)
+        .map(r => ({ name: r.name, value: r.avg.toFixed(2), context: `${r.tournament} · ${r.date}` }));
+    }
+  },
+  ton80Tournament: {
+    title: 'Гравець', valueLabel: '180-ки',
+    compute(rows){
+      return rows
+        .filter(r => r.ton80 > 0)
+        .sort((a,b) => b.ton80 - a.ton80)
+        .slice(0, 10)
+        .map(r => ({ name: r.name, value: r.ton80, context: `${r.tournament} · ${r.date}` }));
+    }
+  },
+  ton80Career: {
+    title: 'Гравець', valueLabel: '180-ки (сума)',
+    compute(rows){
+      const byName = {};
+      rows.forEach(r => { byName[r.name] = (byName[r.name] || 0) + r.ton80; });
+      return Object.entries(byName)
+        .sort((a,b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([name, value]) => ({ name, value, context: 'за весь період' }));
+    }
+  },
+  finishTournament: {
+    title: 'Гравець', valueLabel: 'Закриттів 100+',
+    compute(rows){
+      return rows
+        .filter(r => r.highOutCount > 0)
+        .sort((a,b) => b.highOutCount - a.highOutCount)
+        .slice(0, 10)
+        .map(r => ({ name: r.name, value: r.highOutCount, context: `${r.tournament} · ${r.date}` }));
+    }
+  },
+  finishCareer: {
+    title: 'Гравець', valueLabel: 'Закриттів 100+ (сума)',
+    compute(rows){
+      const byName = {};
+      rows.forEach(r => { byName[r.name] = (byName[r.name] || 0) + r.highOutCount; });
+      return Object.entries(byName)
+        .sort((a,b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([name, value]) => ({ name, value, context: 'за весь період' }));
+    }
+  },
+};
+
+function renderNakkaRecords(){
+  const includeUDL = document.getElementById('toggle-udl-records').checked;
+  const rows = nakkaPlayerStats.filter(r => includeUDL || !r.isUDL);
+
+  const countEl = document.getElementById('nakka-records-count');
+  if(countEl) countEl.textContent = new Set(rows.map(r => r.tournament + r.date)).size;
+
+  const cat = RECORD_CATEGORIES[recordsCategory];
+  const results = cat.compute(rows);
+
+  document.getElementById('records-head-row').innerHTML = `
+    <th class="num">#</th>
+    <th>${cat.title}</th>
+    <th class="num">${cat.valueLabel}</th>
+    <th>Де</th>
+  `;
+
+  const body = document.getElementById('records-body');
+  if(results.length === 0){
+    body.innerHTML = `<tr class="empty-row"><td colspan="4">Немає даних.</td></tr>`;
+    return;
+  }
+  body.innerHTML = results.map((r, i) => `
+    <tr>
+      <td class="rank-cell num">${i + 1}</td>
+      <td class="player-name">${r.name}</td>
+      <td class="num mono" style="color:var(--gold); font-weight:700;">${r.value}</td>
+      <td class="mono" style="color:var(--muted); font-size:12px;">${r.context}</td>
+    </tr>
+  `).join('');
+}
 
 function fmtPts(v){ return (v === null || v === undefined) ? '—' : v.toFixed(2); }
 
@@ -832,6 +957,16 @@ document.getElementById('search-historical').addEventListener('input', renderHis
 document.getElementById('filter-historical-year').addEventListener('change', renderHistorical);
 document.getElementById('filter-historical-gender').addEventListener('change', renderHistorical);
 
+document.querySelectorAll('#records-tabs .records-tab').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('#records-tabs .records-tab').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    recordsCategory = btn.dataset.cat;
+    renderNakkaRecords();
+  });
+});
+document.getElementById('toggle-udl-records').addEventListener('change', renderNakkaRecords);
+
 async function loadData(){
   try{
     const res = await fetch('./data.json', {cache: 'no-store'});
@@ -842,6 +977,7 @@ async function loadData(){
     leaderboardWomen = data.leaderboardWomen || [];
     historical = data.historical || [];
     ratingsData = data.ratings || {};
+    nakkaPlayerStats = data.nakkaPlayerStats || [];
 
     if(data.meta && data.meta.lastUpdated){
       const d = new Date(data.meta.lastUpdated);
@@ -857,6 +993,7 @@ async function loadData(){
     populateRatingSeasons();
     renderRatings();
     renderHistorical();
+    renderNakkaRecords();
   } catch(err){
     console.error('Не вдалося завантажити data.json', err);
     document.querySelectorAll('.table-wrap tbody').forEach(tb=>{
