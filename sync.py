@@ -14,6 +14,7 @@ import csv
 import io
 import json
 import re
+import time
 import urllib.request
 from datetime import datetime, timezone
 
@@ -21,6 +22,7 @@ TOURNAMENTS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTZxNlB-y
 PRIZES_MEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U550qzdDKkLxenpx2LUYMQ8Uccqf9ZdkyP7ruIqdoPt_tX-hQWKhQOnTGc6HG6jiPQmQEuA/pub?output=csv&gid=0"
 PRIZES_WOMEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U550qzdDKkLxenpx2LUYMQ8Uccqf9ZdkyP7ruIqdoPt_tX-hQWKhQOnTGc6HG6jiPQmQEuA/pub?output=csv&gid=109502045"
 RATINGS_SOURCES_PATH = "ratings_sources.json"
+NAKKA_API_BASE = "https://push.n01darts.com/api/v1"
 
 OUTPUT_PATH = "data.json"
 
@@ -408,6 +410,151 @@ def build_ratings(sources_path):
     return ratings
 
 
+# ---------------------------------------------------------------------------
+# Nakka (n01darts.com) — реальна статистика й призери напряму з офіційного
+# публічного API (без авторизації, без оплати — тільки читання):
+# https://push.n01darts.com/api/v1/n01_api_manual_en.html
+# ---------------------------------------------------------------------------
+NAKKA_TDID_RE = re.compile(r"[?&]id=([a-zA-Z0-9_]+)")
+
+
+def extract_tdid(url):
+    """Дістає tdid (наприклад 't_NtXd_3172') з посилання на n01darts.com."""
+    if not url or "n01darts.com" not in url:
+        return None
+    m = NAKKA_TDID_RE.search(url)
+    return m.group(1) if m else None
+
+
+def fetch_json(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (vfd-darts-sync)"})
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def player_avg(stat):
+    darts = stat.get("darts") or 0
+    score = stat.get("score") or 0
+    if darts <= 0:
+        return None
+    return round(score / darts * 3, 2)
+
+
+def fetch_nakka_tournament(tdid, cache):
+    """Тягне список учасників (tpid->ім'я) і статистику для одного tdid.
+    Кешується, бо той самий tdid іноді трапляється в кількох колонках."""
+    if tdid in cache:
+        return cache[tdid]
+
+    result = None
+    try:
+        get_resp = fetch_json(f"{NAKKA_API_BASE}/tournament/get?tdid={tdid}&entry=1")
+        time.sleep(0.05)
+        stats_resp = fetch_json(f"{NAKKA_API_BASE}/tournament/stats?tdid={tdid}&kind=stats_list")
+        time.sleep(0.05)
+
+        if get_resp.get("result") == 0 and stats_resp.get("result") == 0:
+            entries = {
+                e["tpid"]: e["name"]
+                for e in get_resp.get("tournament", {}).get("entry_list", [])
+                if "tpid" in e and "name" in e
+            }
+            result = {"entries": entries, "stats": stats_resp.get("stats", {})}
+    except Exception as e:
+        print(f"    Nakka API fetch failed for {tdid}: {e}")
+
+    cache[tdid] = result
+    return result
+
+
+def medals_from_nakka(nakka_data):
+    """Визначає 🥇🥈🥉 напряму з поля rank статистики (1/2/3 місце)."""
+    if not nakka_data:
+        return None
+    entries, stats = nakka_data["entries"], nakka_data["stats"]
+    podium = {}
+    for tpid, stat in stats.items():
+        rank = stat.get("rank")
+        if rank in (1, 2, 3):
+            podium[rank] = entries.get(tpid, tpid)
+    if not podium:
+        return None
+    return {
+        "gold": podium.get(1),
+        "silver": podium.get(2),
+        "bronze": podium.get(3),
+    }
+
+
+def enrich_with_nakka(tournaments):
+    """Проходить по всіх турнірах, тягне Nakka tdid з посилань, і додає
+    t['nakkaMedals'] / t['nakkaMedalsWomen'] (надійні призери напряму з API)
+    плюс повертає плаский список усіх гравець-турнір записів статистики
+    (сировина для секції "Рекорди" — топ по середньому, 180-ках тощо)."""
+    cache = {}
+    player_records = []
+    fetched = 0
+
+    for t in tournaments:
+        links = t.get("links", {})
+
+        def link_tdid(*keys):
+            for k in keys:
+                link = links.get(k)
+                if link and link.get("type") == "nakka":
+                    tdid = extract_tdid(link["url"])
+                    if tdid:
+                        return tdid
+            return None
+
+        men_tdid = link_tdid("men", "menAvg")
+        women_tdid = link_tdid("women", "womenAvg")
+        other_tdid = None
+        if not men_tdid and not women_tdid:
+            other_tdid = link_tdid("tournament")
+
+        t["nakkaMedals"] = None
+        t["nakkaMedalsWomen"] = None
+
+        for tdid, gender, medal_field in (
+            (men_tdid, "men", "nakkaMedals"),
+            (women_tdid, "women", "nakkaMedalsWomen"),
+            (other_tdid, "open", "nakkaMedals"),
+        ):
+            if not tdid:
+                continue
+            data = fetch_nakka_tournament(tdid, cache)
+            fetched += 1
+            if not data:
+                continue
+
+            t[medal_field] = medals_from_nakka(data)
+
+            for tpid, stat in data["stats"].items():
+                avg = player_avg(stat)
+                if avg is None:
+                    continue  # гравець не зіграв жодного дротика — пропускаємо
+                player_records.append({
+                    "name": data["entries"].get(tpid, tpid),
+                    "gender": gender,
+                    "isUDL": t["isUDL"],
+                    "date": t["date"],
+                    "tournament": t["name"],
+                    "city": t["city"],
+                    "avg": avg,
+                    "ton80": stat.get("ton80", 0),
+                    "highOutCount": stat.get("highOutCount", 0),
+                    "highOut": stat.get("highOut", 0),
+                    "rank": stat.get("rank", 0),
+                    "match": stat.get("match", 0),
+                    "winMatch": stat.get("winMatch", 0),
+                })
+
+    print(f"  Fetched {fetched} Nakka tournament records ({len(cache)} unique tdid, "
+          f"{sum(1 for v in cache.values() if v)} succeeded)")
+    return player_records
+
+
 def main():
     print("Fetching tournaments CSV...")
     t_rows = fetch_csv(TOURNAMENTS_CSV_URL)
@@ -449,6 +596,10 @@ def main():
     ratings = build_ratings(RATINGS_SOURCES_PATH)
     print(f"Parsed {len(ratings)} rating seasons")
 
+    print("Fetching real Nakka tournament stats (this may take a few minutes)...")
+    nakka_player_records = enrich_with_nakka(tournaments)
+    print(f"Collected {len(nakka_player_records)} player-tournament stat rows from Nakka")
+
     data = {
         "meta": {
             "lastUpdated": datetime.now(timezone.utc).isoformat(),
@@ -460,6 +611,7 @@ def main():
         "leaderboardWomen": women_aggregate,
         "historical": historical,
         "ratings": ratings,
+        "nakkaPlayerStats": nakka_player_records,
     }
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
