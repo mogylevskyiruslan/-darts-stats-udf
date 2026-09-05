@@ -1,8 +1,8 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-05T20:32:44.298772+00:00",
+  "lastUpdated": "2026-09-05T21:02:41.129318+00:00",
   "tournamentsCount": 180,
-  "historicalCount": 64
+  "historicalCount": 65
  },
  "tournaments": [
   {
@@ -370,7 +370,13 @@
     },
     "tournament": null
    },
-   "medals": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Могилевський Руслан",
+    "bronze": [
+     "Сташевський Валентин"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
@@ -730,12 +736,16 @@
    "medals": {
     "gold": "Омельченко Владислав",
     "silver": "Могилевський Руслан",
-    "bronze": "Гринів Олександр"
+    "bronze": [
+     "Гринів Олександр"
+    ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
     "silver": "Гончаренко Інна",
-    "bronze": "Ігнатюк Наталя"
+    "bronze": [
+     "Ігнатюк Наталя"
+    ]
    },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
@@ -875,12 +885,16 @@
    "medals": {
     "gold": "Могилевський Руслан",
     "silver": "Мелашенко Владислав",
-    "bronze": "Козловський Богдан"
+    "bronze": [
+     "Козловський Богдан"
+    ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
     "silver": "Терещенко Любов",
-    "bronze": "Лановенко Ксенія"
+    "bronze": [
+     "Лановенко Ксенія"
+    ]
    },
    "nakkaMedals": {
     "gold": "Могилевський Руслан",
@@ -921,12 +935,16 @@
    "medals": {
     "gold": "Могилевський Руслан",
     "silver": "Абчугський Олександр",
-    "bronze": "Гринів Олександр"
+    "bronze": [
+     "Гринів Олександр"
+    ]
    },
    "medalsWomen": {
     "gold": "Гончаренко Інна",
     "silver": "Харченко Тетяна",
-    "bronze": "Ледєньова Наталія"
+    "bronze": [
+     "Ледєньова Наталія"
+    ]
    },
    "nakkaMedals": {
     "gold": "Могилевський Руслан",
@@ -1201,12 +1219,16 @@
    "medals": {
     "gold": "Омельченко Владислав",
     "silver": "Кіфор Ярослав",
-    "bronze": "Могилевський Руслан"
+    "bronze": [
+     "Могилевський Руслан"
+    ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
     "silver": "Гончаренко Інна",
-    "bronze": "Карнаух Валентина"
+    "bronze": [
+     "Карнаух Валентина"
+    ]
    },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
@@ -1361,12 +1383,16 @@
    "medals": {
     "gold": "Омельченко Владислав",
     "silver": "Лагутін Анрій",
-    "bronze": "Гончаров Едуард"
+    "bronze": [
+     "Гончаров Едуард"
+    ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
     "silver": "Гончаренко Інна",
-    "bronze": "Зайцева Інна"
+    "bronze": [
+     "Зайцева Інна"
+    ]
    },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
@@ -1483,12 +1509,16 @@
    "medals": {
     "gold": "Омельченко Владислав",
     "silver": "Пекарук Ілля",
-    "bronze": "Мелашенко Владислав"
+    "bronze": [
+     "Мелашенко Владислав"
+    ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
     "silver": "Терещенко Любов",
-    "bronze": "Ледєньова Наталія"
+    "bronze": [
+     "Ледєньова Наталія"
+    ]
    },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
@@ -1750,12 +1780,16 @@
    "medals": {
     "gold": "Мелашенко Владислав",
     "silver": "Кіфор Ярослав",
-    "bronze": "Омельченко Владислав"
+    "bronze": [
+     "Омельченко Владислав"
+    ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
     "silver": "Білоус Жанна",
-    "bronze": "Гончаренко Інна"
+    "bronze": [
+     "Гончаренко Інна"
+    ]
    },
    "nakkaMedals": {
     "gold": "Мелашенко Владислав",
@@ -1896,12 +1930,18 @@
    "medals": {
     "gold": "Залевський Володимир",
     "silver": "Аверін Сергій",
-    "bronze": "Омельченко Владислав"
+    "bronze": [
+     "Омельченко Владислав",
+     "Яненко Сергій"
+    ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
     "silver": "Чабанова Анна",
-    "bronze": "Терещенко Любов"
+    "bronze": [
+     "Терещенко Любов",
+     "Карнаух Валентина"
+    ]
    },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
@@ -2114,12 +2154,18 @@
    "medals": {
     "gold": "Залевський Володимир",
     "silver": "Усик Артем",
-    "bronze": "Мелашенко Владислав"
+    "bronze": [
+     "Мелашенко Владислав",
+     "Сташевський Валентин"
+    ]
    },
    "medalsWomen": {
     "gold": "Ільясова Альбіна",
     "silver": "Гончаренко Інна",
-    "bronze": "Харченко Тетяна"
+    "bronze": [
+     "Харченко Тетяна",
+     "Ледєньова Наталія"
+    ]
    },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
@@ -2260,12 +2306,18 @@
    "medals": {
     "gold": "Григоренко Віктор",
     "silver": "Залевський Володимир",
-    "bronze": "Мелашенко Владислав"
+    "bronze": [
+     "Мелашенко Владислав",
+     "Гоян Дмитро"
+    ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
     "silver": "Білоус Жанна",
-    "bronze": "Гончаренко Інна"
+    "bronze": [
+     "Гончаренко Інна",
+     "Молдован Емілія"
+    ]
    },
    "nakkaMedals": {
     "gold": "Григоренко Денис",
@@ -2405,12 +2457,18 @@
    "medals": {
     "gold": "Рогов Віталій",
     "silver": "Залевський Володимир",
-    "bronze": "Троценко Артем"
+    "bronze": [
+     "Троценко Артем",
+     "Могилевський Руслан"
+    ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
     "silver": "Терещенко Любов",
-    "bronze": "Пивошенко Олена"
+    "bronze": [
+     "Пивошенко Олена",
+     "Соколова Вікторія"
+    ]
    },
    "nakkaMedals": {
     "gold": "Рогов Віталій",
@@ -2678,12 +2736,18 @@
    "medals": {
     "gold": "Омельченко Владислав",
     "silver": "Залевський Володимир",
-    "bronze": "Пекарук Ілля"
+    "bronze": [
+     "Пекарук Ілля",
+     "Троценко Артем"
+    ]
    },
    "medalsWomen": {
     "gold": "Терещенко Любов",
     "silver": "Шклярук Наталія",
-    "bronze": "Білоус Жанна"
+    "bronze": [
+     "Білоус Жанна",
+     "Соколова Вікторія"
+    ]
    },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
@@ -2862,12 +2926,18 @@
    "medals": {
     "gold": "Омельченко Владислав",
     "silver": "Залевський Володимир",
-    "bronze": "Сташевський Валентин"
+    "bronze": [
+     "Сташевський Валентин",
+     "Мелашенко Владислав"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Соколова Вікторія",
-    "bronze": "Харченко Тетяна"
+    "bronze": [
+     "Харченко Тетяна",
+     "Пивошенко Олена"
+    ]
    },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
@@ -3008,12 +3078,18 @@
    "medals": {
     "gold": "Залевський Володимир",
     "silver": "Омельченко Владислав",
-    "bronze": "Пекарук Ілля"
+    "bronze": [
+     "Пекарук Ілля",
+     "Мелашенко Владислав"
+    ]
    },
    "medalsWomen": {
     "gold": "Шклярук Наталія",
     "silver": "Лановенко Ксенія",
-    "bronze": "Полтавець Світлана"
+    "bronze": [
+     "Полтавець Світлана",
+     "Паламар Оксана"
+    ]
    },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
@@ -3154,12 +3230,18 @@
    "medals": {
     "gold": "Залевський Володимир",
     "silver": "Мамика Олександ",
-    "bronze": "Луков Олександр"
+    "bronze": [
+     "Луков Олександр",
+     "Фатех Дін"
+    ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
     "silver": "Терещенко Любов",
-    "bronze": "Моісеєнко Віталіна"
+    "bronze": [
+     "Моісеєнко Віталіна",
+     "Пивошенко Олена"
+    ]
    },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
@@ -3296,12 +3378,18 @@
    "medals": {
     "gold": "Залевський Володимир",
     "silver": "Омельченко Владислав",
-    "bronze": "Пекарук Ілля"
+    "bronze": [
+     "Пекарук Ілля",
+     "Усик Артем"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Терещенко Любов",
-    "bronze": "Лановенко Ксенія"
+    "bronze": [
+     "Лановенко Ксенія",
+     "Шклярук Наталія"
+    ]
    },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
@@ -3342,12 +3430,18 @@
    "medals": {
     "gold": "Омельченко Владислав",
     "silver": "Пекарук Ілля",
-    "bronze": "Залевський Володимир"
+    "bronze": [
+     "Залевський Володимир",
+     "Аверін Сергій"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Терещенко Любов",
-    "bronze": "Лановенко Ксенія"
+    "bronze": [
+     "Лановенко Ксенія",
+     "Соколова Вікторія"
+    ]
    },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
@@ -3481,12 +3575,17 @@
    "medals": {
     "gold": "Омельченко Владислав",
     "silver": "Залевський Володимир",
-    "bronze": "Пекарук Ілля"
+    "bronze": [
+     "Пекарук Ілля",
+     "Мелашенко Владислав"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Ледєньова Наталія",
-    "bronze": "Соколова Вікторія"
+    "bronze": [
+     "Соколова Вікторія"
+    ]
    },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
@@ -3639,12 +3738,18 @@
    "medals": {
     "gold": "Бушуй Олексій",
     "silver": "Омельченко Владислав",
-    "bronze": "Мамика Олександр"
+    "bronze": [
+     "Мамика Олександр",
+     "Ковальов Дмитро"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Чумак Ганна",
-    "bronze": "Харченко Тетяна"
+    "bronze": [
+     "Харченко Тетяна",
+     "Ледєньова Наталія"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -3812,12 +3917,18 @@
    "medals": {
     "gold": "Ковальов Дмитро",
     "silver": "Бушуй Олексій",
-    "bronze": "Мамика Олександр"
+    "bronze": [
+     "Мамика Олександр",
+     "Усик Артем"
+    ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
     "silver": "Чумак Ганна",
-    "bronze": "Грушовець Ольга"
+    "bronze": [
+     "Грушовець Ольга",
+     "Марфола Оксана"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -3877,12 +3988,18 @@
    "medals": {
     "gold": "Омельченко Владислав",
     "silver": "Мамика Олександр",
-    "bronze": "Рогов Віталій"
+    "bronze": [
+     "Рогов Віталій",
+     "Пономаренко Денис"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Ледєньова Наталія",
-    "bronze": "Грушовець Ольга"
+    "bronze": [
+     "Грушовець Ольга",
+     "Харченко Тетяна"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -3909,7 +4026,11 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "",
+    "silver": null,
+    "bronze": []
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -3939,12 +4060,18 @@
    "medals": {
     "gold": "Омельченко Владислав",
     "silver": "Усик Артем",
-    "bronze": "Бушуй Олексій"
+    "bronze": [
+     "Бушуй Олексій",
+     "Царолунга Дмитро"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Чумак Ганна",
-    "bronze": "Борисова Марина"
+    "bronze": [
+     "Борисова Марина",
+     "Павлюченко Марина"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -3974,12 +4101,18 @@
    "medals": {
     "gold": "Бушуй Олексій",
     "silver": "Усик Артем",
-    "bronze": "Омельченко Владислав"
+    "bronze": [
+     "Омельченко Владислав",
+     "Пономаренко Денис"
+    ]
    },
    "medalsWomen": {
     "gold": "Чумак Ганна",
     "silver": "Моісеєнко Віталіна",
-    "bronze": "Ледєньова Наталія"
+    "bronze": [
+     "Ледєньова Наталія",
+     "Марфола Оксана"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -4066,12 +4199,18 @@
    "medals": {
     "gold": "Усик Артем",
     "silver": "Омельченко Владислав",
-    "bronze": "Бушуй Олексій"
+    "bronze": [
+     "Бушуй Олексій",
+     "Мороз Ігор"
+    ]
    },
    "medalsWomen": {
     "gold": "Чумак Ганна",
     "silver": "Павлюченко Марина",
-    "bronze": "Марфола Оксана"
+    "bronze": [
+     "Марфола Оксана",
+     "Моісеєнко Віталіна"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -4209,12 +4348,18 @@
    "medals": {
     "gold": "Мамика Олександр",
     "silver": "Усик Артем",
-    "bronze": "Тфмолов Роман"
+    "bronze": [
+     "Тфмолов Роман",
+     "Ємельянов Олесандр"
+    ]
    },
    "medalsWomen": {
     "gold": "Редзюк Тетяна",
     "silver": "Ледєньова Наталія",
-    "bronze": "Солтис Ганна"
+    "bronze": [
+     "Солтис Ганна",
+     "Анісімова Світлана"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -4367,12 +4512,18 @@
    "medals": {
     "gold": "Мамика Олександр",
     "silver": "Буханцов Тарас",
-    "bronze": "Марков Сергій"
+    "bronze": [
+     "Марков Сергій",
+     "Залевський Володимир"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Чумак Ганна",
-    "bronze": "Ледєньова Наталія"
+    "bronze": [
+     "Ледєньова Наталія",
+     "Грушовець Ольга"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -4432,12 +4583,18 @@
    "medals": {
     "gold": "Мамика Олександр",
     "silver": "Омельченко Владислав",
-    "bronze": "Усик Артем"
+    "bronze": [
+     "Усик Артем",
+     "Фатех Дін"
+    ]
    },
    "medalsWomen": {
     "gold": "Чумак Ганна",
     "silver": "Моісеєнко Віталіна",
-    "bronze": "Грушовець Ольга"
+    "bronze": [
+     "Грушовець Ольга",
+     "Ледєньова Наталія"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -4497,12 +4654,18 @@
    "medals": {
     "gold": "Усик Артем",
     "silver": "Бушуй Олексій",
-    "bronze": "Ледєньов Вадим"
+    "bronze": [
+     "Ледєньов Вадим",
+     "Рудковський Василь"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Чумак Ганна",
-    "bronze": "Грушовець Ольга"
+    "bronze": [
+     "Грушовець Ольга",
+     "Марфола Оксана"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -4532,12 +4695,18 @@
    "medals": {
     "gold": "Бушуй Олексій",
     "silver": "Усик Артем",
-    "bronze": "Мамика Олександр"
+    "bronze": [
+     "Мамика Олександр",
+     "Васюра Андрій"
+    ]
    },
    "medalsWomen": {
     "gold": "Ледєньова Наталія",
     "silver": "Моісеєнко Віталіна",
-    "bronze": "Чумак Ганна"
+    "bronze": [
+     "Чумак Ганна",
+     "Марфола Оксана"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -4621,12 +4790,18 @@
    "medals": {
     "gold": "Бушуй Олексій",
     "silver": "Усик Артем",
-    "bronze": "Омельченко Владислав"
+    "bronze": [
+     "Омельченко Владислав",
+     "Васюра Андрій"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Анісімова Світлана",
-    "bronze": "Чумак Ганна"
+    "bronze": [
+     "Чумак Ганна",
+     "Ледєньова Наталія"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -4656,12 +4831,18 @@
    "medals": {
     "gold": "Бушуй Олексій",
     "silver": "Усик Артем",
-    "bronze": "Омельченко Владислав"
+    "bronze": [
+     "Омельченко Владислав",
+     "Васюра Андрій"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Анісімова Світлана",
-    "bronze": "Чумак Ганна"
+    "bronze": [
+     "Чумак Ганна",
+     "Ледєньова Наталія"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -4748,12 +4929,18 @@
    "medals": {
     "gold": "Фатех Дін",
     "silver": "Гетманцев Олександр",
-    "bronze": "Кисельов Дмитро"
+    "bronze": [
+     "Кисельов Дмитро",
+     "Некрістов Станіслав"
+    ]
    },
    "medalsWomen": {
     "gold": "Чумак Ганна",
     "silver": "Моісеєнко Віталіна",
-    "bronze": "Марфола Оксана"
+    "bronze": [
+     "Марфола Оксана",
+     "Арійчук Наталя"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -4783,12 +4970,18 @@
    "medals": {
     "gold": "Фатех Дін",
     "silver": "Ковальов Дмитро",
-    "bronze": "Буханцов Тарас"
+    "bronze": [
+     "Буханцов Тарас",
+     "Подольчук Антон"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Чумак Ганна",
-    "bronze": "Павлюченко Марина"
+    "bronze": [
+     "Павлюченко Марина",
+     "Грушовець Ольга"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -4818,12 +5011,18 @@
    "medals": {
     "gold": "Усик Артем",
     "silver": "Бушуй Олексій",
-    "bronze": "Ледєньов Вадим"
+    "bronze": [
+     "Ледєньов Вадим",
+     "Ємельянов Олександр"
+    ]
    },
    "medalsWomen": {
     "gold": "Чумак Ганна",
     "silver": "Моісеєнко Віталіна",
-    "bronze": "Камелькова Людмила"
+    "bronze": [
+     "Камелькова Людмила",
+     "Ледєньова Наталія"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -4940,12 +5139,18 @@
    "medals": {
     "gold": "Лагутін Андрій",
     "silver": "Григоренко Денис",
-    "bronze": "Марков Сергій"
+    "bronze": [
+     "Марков Сергій",
+     "Івасюк Віталій"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Чумак Ганна",
-    "bronze": "Камелькова Людмила"
+    "bronze": [
+     "Камелькова Людмила",
+     "Арійчук Наталя"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5002,12 +5207,18 @@
    "medals": {
     "gold": "Бушуй Олексій",
     "silver": "Омельченко Владислав",
-    "bronze": "Васюра Андрій"
+    "bronze": [
+     "Васюра Андрій",
+     "Григоренко Денис"
+    ]
    },
    "medalsWomen": {
     "gold": "Чумак Ганна",
     "silver": "Павлюченко Марина",
-    "bronze": "Моісеєнко Віталіна"
+    "bronze": [
+     "Моісеєнко Віталіна",
+     "Анісімова Світлана"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5064,12 +5275,18 @@
    "medals": {
     "gold": "Усик Артем",
     "silver": "Мамика Олександр",
-    "bronze": "Бушуй Олексій"
+    "bronze": [
+     "Бушуй Олексій",
+     "Сташевський Валентин"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Камелькова Людмила",
-    "bronze": "Павлюченко Марина"
+    "bronze": [
+     "Павлюченко Марина",
+     "Ледєньова Наталія"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5099,12 +5316,18 @@
    "medals": {
     "gold": "Усик Артем",
     "silver": "Мамика Олександр",
-    "bronze": "Григоренко Денис"
+    "bronze": [
+     "Григоренко Денис",
+     "Бушуй Олексій"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Павлюченко Марина",
-    "bronze": "Чумак Ганна"
+    "bronze": [
+     "Чумак Ганна",
+     "Камелькова Людмила"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5188,12 +5411,18 @@
    "medals": {
     "gold": "Мамика Олександр",
     "silver": "Бушуй Олексій",
-    "bronze": "Васюра Андрій"
+    "bronze": [
+     "Васюра Андрій",
+     "Григоренко Денис"
+    ]
    },
    "medalsWomen": {
     "gold": "Чумак Ганна",
     "silver": "Анісімова Світлана",
-    "bronze": "Павлюченко Марина"
+    "bronze": [
+     "Павлюченко Марина",
+     "Грушовець Ольга"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5223,12 +5452,18 @@
    "medals": {
     "gold": "Мамика Олександр",
     "silver": "Бушуй Олексій",
-    "bronze": "Васюра Андрій"
+    "bronze": [
+     "Васюра Андрій",
+     "Григоренко Денис"
+    ]
    },
    "medalsWomen": {
     "gold": "Чумак Ганна",
     "silver": "Анісімова Світлана",
-    "bronze": "Павлюченко Марина"
+    "bronze": [
+     "Павлюченко Марина",
+     "Грушовець Ольга"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5255,7 +5490,11 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": ". Деркач Дмитро",
+    "silver": null,
+    "bronze": []
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5282,7 +5521,11 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": ". Кисельов Дмитро / Ровенчук Влада",
+    "silver": null,
+    "bronze": []
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5312,12 +5555,18 @@
    "medals": {
     "gold": "Григоренко Денис",
     "silver": "Мамика Олександр",
-    "bronze": "Бушуй Олексій"
+    "bronze": [
+     "Бушуй Олексій",
+     "Сташевський Валентин"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Чумак Ганна",
-    "bronze": "Павлюченко Марина"
+    "bronze": [
+     "Павлюченко Марина",
+     "Грушовець Ольга"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5374,12 +5623,18 @@
    "medals": {
     "gold": "Григоренко Денис",
     "silver": "Васюра Андрій",
-    "bronze": "Усик Артем"
+    "bronze": [
+     "Усик Артем",
+     "Анісімов Денис"
+    ]
    },
    "medalsWomen": {
     "gold": "Редзюк Тетяна",
     "silver": "Анісімова Світлана",
-    "bronze": "Моісеєнко Віталіна"
+    "bronze": [
+     "Моісеєнко Віталіна",
+     "Ледєньова Наталія"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5433,7 +5688,14 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": ". Пальоний Ігор",
+    "silver": ". Ширяєв Дмитро",
+    "bronze": [
+     ". Царолунга Дмитро",
+     ". Гурський Борис"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5460,7 +5722,14 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": ". Бадира Олександр",
+    "silver": ". Сташевський Валентин",
+    "bronze": [
+     ". Ширяєв Дмитро",
+     ". Акользін Дмитро"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5490,12 +5759,18 @@
    "medals": {
     "gold": "Васюра Андрій",
     "silver": "Марченко Денис",
-    "bronze": "Шинкаренко Василь"
+    "bronze": [
+     "Шинкаренко Василь",
+     "Леденьов Вадим"
+    ]
    },
    "medalsWomen": {
     "gold": "Редзюк Тетяна",
     "silver": "Чумак Ганна",
-    "bronze": "Моісеєнко Віталіна"
+    "bronze": [
+     "Моісеєнко Віталіна",
+     "Грушовець Ольга"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5522,7 +5797,14 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": ". Омельченко Владислав",
+    "silver": ". Байдоха Анатолій",
+    "bronze": [
+     ". Кисельов Дмитро",
+     ". Подольчук Антон"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5552,12 +5834,18 @@
    "medals": {
     "gold": "Усик Артем",
     "silver": "Омельченко Владислав",
-    "bronze": "Васюра Андрій"
+    "bronze": [
+     "Васюра Андрій",
+     "Буханцов Тарас"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Анісімова Світлана",
-    "bronze": "Чумак Ганна"
+    "bronze": [
+     "Чумак Ганна",
+     "Ледєньова Наталія"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5584,7 +5872,13 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "",
+    "silver": "Маріуполь",
+    "bronze": [
+     "Дніпро"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5611,7 +5905,14 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": ". Сташевський Валентин",
+    "silver": ". Мамика Олександр",
+    "bronze": [
+     ". Пекарук Олексій",
+     ". Зарайський Володимир"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5638,7 +5939,13 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": ". Мамика Олександр",
+    "silver": ". Сташевський Валентин",
+    "bronze": [
+     ". Ткаченко Сергій"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5665,7 +5972,11 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": ". Клочков Володимир",
+    "silver": null,
+    "bronze": []
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5692,7 +6003,11 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": ". Омельченко Владислав / Грушовець Ольга",
+    "silver": null,
+    "bronze": []
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5722,12 +6037,18 @@
    "medals": {
     "gold": "Ковальов Дмитро",
     "silver": "Гетманцев Олександр",
-    "bronze": "Усик Артем"
+    "bronze": [
+     "Усик Артем",
+     "Мамика Олександр"
+    ]
    },
    "medalsWomen": {
     "gold": "Марфола Оксана",
     "silver": "Моісеєнко Віталіна",
-    "bronze": "Чумак Ганна"
+    "bronze": [
+     "Чумак Ганна",
+     "Анісімова Світлана"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5754,7 +6075,14 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": ". Мамыка Александр",
+    "silver": ". Омельченко Владислав",
+    "bronze": [
+     ". Усик Артем",
+     ". Григоренко Денис"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5781,7 +6109,14 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": ". Зольдин Феликс",
+    "silver": ". Усик Артем",
+    "bronze": [
+     ". Сташевский В.",
+     ". Бутрий Владимир"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5808,7 +6143,13 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": ". Невенчаный Э./Омельченко В.",
+    "silver": ". Черный В./Антипов Д.",
+    "bronze": [
+     ". Григоренко Д./Морозов С."
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5868,7 +6209,14 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Мамыка Александр",
+    "bronze": [
+     "Бадира Александр",
+     "Ковалев Дмитрий"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5931,12 +6279,18 @@
    "medals": {
     "gold": "Васюра Андрій",
     "silver": "Ковальов Дмитро",
-    "bronze": "Мамика Олександр"
+    "bronze": [
+     "Мамика Олександр",
+     "Савенков Антон"
+    ]
    },
    "medalsWomen": {
     "gold": "Анісімова Світлана",
     "silver": "Ледєньова Наталія",
-    "bronze": "Моісеєнко Віталіна"
+    "bronze": [
+     "Моісеєнко Віталіна",
+     "Харченко Тетяна"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5966,7 +6320,11 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
+   "medals": {
+    "gold": ". Усик Артем",
+    "silver": null,
+    "bronze": []
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5996,7 +6354,11 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
+   "medals": {
+    "gold": ". Омельченко Владислав",
+    "silver": ". Анисимов Денис",
+    "bronze": []
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -6058,1008 +6420,1253 @@
  ],
  "leaderboard": [
   {
-   "rank": 1,
-   "name": "Усик Артем",
-   "gold": 15,
-   "silver": 10,
-   "bronze": 7,
-   "champUA": 2,
-   "total": 34
-  },
-  {
-   "rank": 2,
    "name": "Омельченко Владислав",
-   "gold": 14,
-   "silver": 11,
-   "bronze": 5,
-   "champUA": 3,
-   "total": 33
-  },
-  {
-   "rank": 3,
-   "name": "Мамика Олександр",
-   "gold": 9,
-   "silver": 9,
+   "gold": 18,
+   "silver": 13,
    "bronze": 8,
-   "champUA": 0,
-   "total": 26
-  },
-  {
-   "rank": 4,
-   "name": "Бушуй Олексій",
-   "gold": 7,
-   "silver": 8,
-   "bronze": 5,
    "champUA": 2,
-   "total": 22
+   "total": 39,
+   "rank": 1
   },
   {
-   "rank": 5,
-   "name": "Залевський Володимир",
-   "gold": 4,
-   "silver": 3,
-   "bronze": 2,
+   "name": "Усик Артем",
+   "gold": 16,
+   "silver": 10,
+   "bronze": 9,
    "champUA": 1,
-   "total": 10
+   "total": 35,
+   "rank": 2
   },
   {
-   "rank": 6,
+   "name": "Мамика Олександр",
+   "gold": 8,
+   "silver": 8,
+   "bronze": 11,
+   "champUA": 0,
+   "total": 27,
+   "rank": 3
+  },
+  {
+   "name": "Бушуй Олексій",
+   "gold": 8,
+   "silver": 8,
+   "bronze": 9,
+   "champUA": 1,
+   "total": 25,
+   "rank": 4
+  },
+  {
+   "name": "Залевський Володимир",
+   "gold": 5,
+   "silver": 5,
+   "bronze": 3,
+   "champUA": 1,
+   "total": 13,
+   "rank": 5
+  },
+  {
    "name": "Васюра Андрій",
+   "gold": 2,
+   "silver": 2,
+   "bronze": 7,
+   "champUA": 0,
+   "total": 11,
+   "rank": 6
+  },
+  {
+   "name": "Могилевський Руслан",
+   "gold": 2,
+   "silver": 2,
+   "bronze": 4,
+   "champUA": 1,
+   "total": 8,
+   "rank": 7
+  },
+  {
+   "name": "Ковальов Дмитро",
    "gold": 2,
    "silver": 2,
    "bronze": 3,
    "champUA": 0,
-   "total": 7
+   "total": 7,
+   "rank": 8
   },
   {
-   "rank": 7,
-   "name": "Ковальов Дмитро",
-   "gold": 2,
-   "silver": 2,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 4
-  },
-  {
-   "rank": 8,
    "name": "Григоренко Денис",
    "gold": 2,
    "silver": 1,
-   "bronze": 1,
+   "bronze": 3,
    "champUA": 0,
-   "total": 4
+   "total": 6,
+   "rank": 9
   },
   {
-   "rank": 9,
-   "name": "Waclawski Lukasz",
-   "gold": 2,
-   "silver": 0,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 2
-  },
-  {
-   "rank": 10,
    "name": "Фатех Дін",
    "gold": 2,
    "silver": 0,
-   "bronze": 0,
+   "bronze": 2,
    "champUA": 0,
-   "total": 2
+   "total": 4,
+   "rank": 10
   },
   {
-   "rank": 11,
+   "name": "Waclawski Lukasz",
+   "gold": 2,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 2,
+   "rank": 11
+  },
+  {
    "name": "Понтус Андрій",
    "gold": 1,
    "silver": 2,
    "bronze": 0,
    "champUA": 0,
-   "total": 3
+   "total": 3,
+   "rank": 12
   },
   {
-   "rank": 12,
    "name": "Мелашенко Владислав",
    "gold": 1,
    "silver": 1,
-   "bronze": 3,
+   "bronze": 6,
    "champUA": 0,
-   "total": 5
+   "total": 8,
+   "rank": 13
   },
   {
-   "rank": 13,
-   "name": "Могилевський Руслан",
-   "gold": 2,
-   "silver": 1,
-   "bronze": 2,
-   "champUA": 1,
-   "total": 6
-  },
-  {
-   "rank": 14,
-   "name": "Гончаров Едуард",
-   "gold": 1,
-   "silver": 0,
-   "bronze": 2,
-   "champUA": 0,
-   "total": 3
-  },
-  {
-   "rank": 15,
-   "name": "Рогов Віталій",
-   "gold": 1,
-   "silver": 0,
-   "bronze": 2,
-   "champUA": 0,
-   "total": 3
-  },
-  {
-   "rank": 16,
-   "name": "Григоренко Віктор",
-   "gold": 1,
-   "silver": 0,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 17,
-   "name": "Невінчаний Едуард",
-   "gold": 1,
-   "silver": 1,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 3
-  },
-  {
-   "rank": 18,
-   "name": "Паскару Габріель",
-   "gold": 1,
-   "silver": 0,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 47,
-   "name": "Клочко Володимир",
-   "gold": 1,
-   "silver": 0,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 51,
-   "name": "Медведєв Олександр",
-   "gold": 1,
-   "silver": 0,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 52,
-   "name": "Береш Карол",
-   "gold": 1,
-   "silver": 0,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 54,
-   "name": "Ємельянов Олесандр",
-   "gold": 1,
-   "silver": 2,
-   "bronze": 4,
-   "champUA": 0,
-   "total": 7
-  },
-  {
-   "rank": 55,
    "name": "Костильов Євгкній",
    "gold": 1,
    "silver": 1,
    "bronze": 1,
    "champUA": 0,
-   "total": 3
+   "total": 3,
+   "rank": 14
   },
   {
-   "rank": 19,
+   "name": "Мамика Олександ",
+   "gold": 1,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 2,
+   "rank": 15
+  },
+  {
+   "name": "Ємельянов Олександр",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 2,
+   "champUA": 0,
+   "total": 3,
+   "rank": 16
+  },
+  {
+   "name": "Гончаров Едуард",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 2,
+   "champUA": 0,
+   "total": 3,
+   "rank": 17
+  },
+  {
+   "name": "Рогов Віталій",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 2,
+   "champUA": 0,
+   "total": 3,
+   "rank": 18
+  },
+  {
+   "name": "Береш Карол",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 19
+  },
+  {
+   "name": "Григоренко Віктор",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 20
+  },
+  {
+   "name": "Клочко Володимир",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 21
+  },
+  {
+   "name": "Лагутін Андрій",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 22
+  },
+  {
+   "name": "Лец Дмитро",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 23
+  },
+  {
+   "name": "Медведєв Олександр",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 24
+  },
+  {
+   "name": "Невенчаний Едуард",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 25
+  },
+  {
+   "name": "Паскару Габріель",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 26
+  },
+  {
    "name": "Пекарук Ілля",
    "gold": 0,
    "silver": 2,
-   "bronze": 2,
+   "bronze": 5,
    "champUA": 0,
-   "total": 4
+   "total": 7,
+   "rank": 27
   },
   {
-   "rank": 20,
-   "name": "Гетманцев Олександр",
-   "gold": 0,
-   "silver": 2,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 3
-  },
-  {
-   "rank": 21,
-   "name": "Кіфор Ярослав",
-   "gold": 0,
-   "silver": 2,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 2
-  },
-  {
-   "rank": 22,
    "name": "Ледєньов Вадим",
    "gold": 0,
    "silver": 2,
    "bronze": 2,
    "champUA": 0,
-   "total": 4
+   "total": 4,
+   "rank": 28
   },
   {
-   "rank": 23,
+   "name": "Гетманцев Олександр",
+   "gold": 0,
+   "silver": 2,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 3,
+   "rank": 29
+  },
+  {
+   "name": "Кіфор Ярослав",
+   "gold": 0,
+   "silver": 2,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 2,
+   "rank": 30
+  },
+  {
+   "name": "Сташевський Валентин",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 7,
+   "champUA": 0,
+   "total": 8,
+   "rank": 31
+  },
+  {
    "name": "Луков Олександр",
    "gold": 0,
    "silver": 1,
    "bronze": 5,
    "champUA": 0,
-   "total": 6
+   "total": 6,
+   "rank": 32
   },
   {
-   "rank": 24,
    "name": "Буханцов Тарас",
    "gold": 0,
    "silver": 1,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 2
-  },
-  {
-   "rank": 25,
-   "name": "Сташевський Валентин",
-   "gold": 0,
-   "silver": 1,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 2
-  },
-  {
-   "rank": 26,
-   "name": "Десинський Максим",
-   "gold": 0,
-   "silver": 1,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 27,
-   "name": "Зольдін Фелікс",
-   "gold": 0,
-   "silver": 1,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 28,
-   "name": "Лагутін Андрій",
-   "gold": 1,
-   "silver": 1,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 2
-  },
-  {
-   "rank": 29,
-   "name": "Марченко Денис",
-   "gold": 0,
-   "silver": 1,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 30,
-   "name": "Омесь Ілля",
-   "gold": 0,
-   "silver": 1,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 31,
-   "name": "Субаши Алпер",
-   "gold": 0,
-   "silver": 1,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 32,
-   "name": "Шинкаренко Василь",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 3,
-   "champUA": 0,
-   "total": 3
-  },
-  {
-   "rank": 33,
-   "name": "Кисельов Дмитро",
-   "gold": 0,
-   "silver": 0,
    "bronze": 2,
    "champUA": 0,
-   "total": 2
+   "total": 3,
+   "rank": 33
   },
   {
-   "rank": 34,
-   "name": "Анісімов Денис",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 35,
-   "name": "Бадира Олександр",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 36,
-   "name": "Гринів Олександр",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 37,
-   "name": "Козловський Богдан",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 38,
-   "name": "Марков Сергій",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 2,
-   "champUA": 0,
-   "total": 2
-  },
-  {
-   "rank": 39,
-   "name": "Некрістов Станіслав",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 40,
-   "name": "Пальонний Ігор",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 41,
-   "name": "Пономаренко Денис",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 42,
-   "name": "Рудковський Василь",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 43,
-   "name": "Стейер Себастьян",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 44,
-   "name": "Тямолов Роман",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 45,
-   "name": "Троценко Артем",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 46,
-   "name": "Пасичніченко Артем",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 0,
-   "champUA": 1,
-   "total": 1
-  },
-  {
-   "rank": 48,
-   "name": "Новак Едуард",
+   "name": "Абчугський Олександр",
    "gold": 0,
    "silver": 1,
    "bronze": 1,
    "champUA": 0,
-   "total": 2
+   "total": 2,
+   "rank": 34
   },
   {
-   "rank": 49,
-   "name": "Кулаков Володимир",
+   "name": "Аверін Сергій",
    "gold": 0,
-   "silver": 0,
+   "silver": 1,
    "bronze": 1,
    "champUA": 0,
-   "total": 1
+   "total": 2,
+   "rank": 35
   },
   {
-   "rank": 50,
    "name": "Деркач Дмитро",
    "gold": 0,
    "silver": 1,
    "bronze": 1,
    "champUA": 0,
-   "total": 2
+   "total": 2,
+   "rank": 36
   },
   {
-   "rank": 53,
-   "name": "Лец Дмитро",
+   "name": "Невінчаний Едуард",
    "gold": 0,
-   "silver": 0,
-   "bronze": 0,
+   "silver": 1,
+   "bronze": 1,
    "champUA": 0,
-   "total": 0
+   "total": 2,
+   "rank": 37
   },
   {
-   "rank": 56,
+   "name": "Новак Едуард",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 2,
+   "rank": 38
+  },
+  {
    "name": "Єрєменко Василій",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
    "champUA": 0,
-   "total": 1
+   "total": 1,
+   "rank": 39
   },
   {
-   "rank": 57,
-   "name": "Стецишин Віталий",
+   "name": "Бендрик Олег",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
    "champUA": 0,
-   "total": 1
+   "total": 1,
+   "rank": 40
   },
   {
-   "rank": 58,
    "name": "Бургелов Олег",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
    "champUA": 0,
-   "total": 1
+   "total": 1,
+   "rank": 41
   },
   {
-   "rank": 59,
-   "name": "Хімчак Сергій",
+   "name": "Десинський Максим",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 42
+  },
+  {
+   "name": "Зольдін Фелікс",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 43
+  },
+  {
+   "name": "Лагутін Анрій",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 44
+  },
+  {
+   "name": "Марченко Денис",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 45
+  },
+  {
+   "name": "Омесь Ілля",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 46
+  },
+  {
+   "name": "Стецишин Віталий",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 47
+  },
+  {
+   "name": "Субаши Алпер",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 48
+  },
+  {
+   "name": "Анісімов Денис",
    "gold": 0,
    "silver": 0,
-   "bronze": 1,
+   "bronze": 3,
    "champUA": 0,
-   "total": 1
+   "total": 3,
+   "rank": 49
   },
   {
-   "rank": 60,
-   "name": "Горняк Іштван",
+   "name": "Пономаренко Денис",
    "gold": 0,
    "silver": 0,
-   "bronze": 1,
+   "bronze": 3,
    "champUA": 0,
-   "total": 1
+   "total": 3,
+   "rank": 50
   },
   {
-   "rank": 61,
-   "name": "Барсуков Віталий",
+   "name": "Шинкаренко Василь",
    "gold": 0,
    "silver": 0,
-   "bronze": 1,
+   "bronze": 3,
    "champUA": 0,
-   "total": 1
+   "total": 3,
+   "rank": 51
   },
   {
-   "rank": 62,
+   "name": "Гринів Олександр",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 2,
+   "champUA": 0,
+   "total": 2,
+   "rank": 52
+  },
+  {
    "name": "Гросов Олексій",
    "gold": 0,
    "silver": 0,
-   "bronze": 1,
+   "bronze": 2,
    "champUA": 0,
-   "total": 1
+   "total": 2,
+   "rank": 53
   },
   {
-   "rank": 63,
+   "name": "Кисельов Дмитро",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 2,
+   "champUA": 0,
+   "total": 2,
+   "rank": 54
+  },
+  {
+   "name": "Марков Сергій",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 2,
+   "champUA": 0,
+   "total": 2,
+   "rank": 55
+  },
+  {
+   "name": "Некрістов Станіслав",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 2,
+   "champUA": 0,
+   "total": 2,
+   "rank": 56
+  },
+  {
+   "name": "Рудковський Василь",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 2,
+   "champUA": 0,
+   "total": 2,
+   "rank": 57
+  },
+  {
+   "name": "Солтис Андрій",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 2,
+   "champUA": 0,
+   "total": 2,
+   "rank": 58
+  },
+  {
    "name": "Титков Олег",
    "gold": 0,
    "silver": 0,
-   "bronze": 1,
+   "bronze": 2,
    "champUA": 0,
-   "total": 1
+   "total": 2,
+   "rank": 59
   },
   {
-   "rank": 64,
-   "name": "Баранов Олександр",
+   "name": "Троценко Артем",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 2,
+   "champUA": 0,
+   "total": 2,
+   "rank": 60
+  },
+  {
+   "name": "Ozcan Mustafa",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
    "champUA": 0,
-   "total": 1
+   "total": 1,
+   "rank": 61
   },
   {
-   "rank": 65,
-   "name": "Сиром'ятников Олександр",
+   "name": "Ємельянов Олесандр",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
    "champUA": 0,
-   "total": 1
+   "total": 1,
+   "rank": 62
   },
   {
-   "rank": 66,
    "name": "Івасюк Віталій",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
    "champUA": 0,
-   "total": 0
+   "total": 1,
+   "rank": 63
+  },
+  {
+   "name": "Агневщіков Анатолій",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 64
+  },
+  {
+   "name": "Бадира Олександр",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 65
+  },
+  {
+   "name": "Баранов Олександр",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 66
+  },
+  {
+   "name": "Барсуков Віталий",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 67
+  },
+  {
+   "name": "Волчук Руслан",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 68
+  },
+  {
+   "name": "Горняк Іштван",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 69
+  },
+  {
+   "name": "Гоян Дмитро",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 70
+  },
+  {
+   "name": "Козловський Богдан",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 71
+  },
+  {
+   "name": "Коломієць Андрій",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 72
+  },
+  {
+   "name": "Кулаков Володимир",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 73
+  },
+  {
+   "name": "Леденьов Вадим",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 74
+  },
+  {
+   "name": "Мороз Ігор",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 75
+  },
+  {
+   "name": "Пальонний Ігор",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 76
+  },
+  {
+   "name": "Подольчук Антон",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 77
+  },
+  {
+   "name": "Попович Андрій",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 78
+  },
+  {
+   "name": "Савенков Антон",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 79
+  },
+  {
+   "name": "Сиром'ятников Олександр",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 80
+  },
+  {
+   "name": "Стейер Себастьян",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 81
+  },
+  {
+   "name": "Тфмолов Роман",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 82
+  },
+  {
+   "name": "Хімчак Сергій",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 83
+  },
+  {
+   "name": "Царолунга Дмитро",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 84
+  },
+  {
+   "name": "Шляхов Сергій",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 85
+  },
+  {
+   "name": "Яненко Сергій",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 86
   }
  ],
  "leaderboardWomen": [
   {
-   "rank": 1,
    "name": "Моісеєнко Віталіна",
-   "gold": 23,
-   "silver": 10,
+   "gold": 25,
+   "silver": 9,
    "bronze": 9,
-   "champUA": 4,
-   "total": 46
+   "champUA": 2,
+   "total": 43,
+   "rank": 1
   },
   {
-   "rank": 2,
    "name": "Харченко Тетяна",
-   "gold": 12,
-   "silver": 2,
+   "gold": 13,
+   "silver": 1,
    "bronze": 10,
    "champUA": 1,
-   "total": 25
+   "total": 24,
+   "rank": 2
   },
   {
-   "rank": 3,
    "name": "Чумак Ганна",
-   "gold": 8,
-   "silver": 21,
-   "bronze": 13,
+   "gold": 9,
+   "silver": 17,
+   "bronze": 12,
    "champUA": 1,
-   "total": 43
+   "total": 38,
+   "rank": 3
   },
   {
-   "rank": 4,
    "name": "Редзюк Тетяна",
    "gold": 4,
    "silver": 0,
-   "bronze": 5,
+   "bronze": 2,
    "champUA": 0,
-   "total": 9
+   "total": 6,
+   "rank": 4
   },
   {
-   "rank": 5,
    "name": "Ледєньова Наталія",
    "gold": 3,
    "silver": 8,
-   "bronze": 17,
+   "bronze": 15,
    "champUA": 0,
-   "total": 28
+   "total": 26,
+   "rank": 5
   },
   {
-   "rank": 6,
    "name": "Лопухова Ганна",
-   "gold": 5,
+   "gold": 3,
    "silver": 1,
    "bronze": 0,
    "champUA": 0,
-   "total": 6
+   "total": 4,
+   "rank": 6
   },
   {
-   "rank": 7,
+   "name": "Терещенко Любов",
+   "gold": 2,
+   "silver": 7,
+   "bronze": 1,
+   "champUA": 1,
+   "total": 10,
+   "rank": 7
+  },
+  {
    "name": "Анісімова Світлана",
    "gold": 2,
    "silver": 6,
    "bronze": 8,
-   "champUA": 2,
-   "total": 18
-  },
-  {
-   "rank": 8,
-   "name": "Марфола Оксана",
-   "gold": 2,
-   "silver": 1,
-   "bronze": 7,
    "champUA": 0,
-   "total": 10
+   "total": 16,
+   "rank": 8
   },
   {
-   "rank": 9,
    "name": "Клочек Ксенія",
    "gold": 2,
    "silver": 1,
    "bronze": 0,
    "champUA": 0,
-   "total": 3
+   "total": 3,
+   "rank": 9
   },
   {
-   "rank": 10,
-   "name": "Терещенко Любов",
-   "gold": 1,
-   "silver": 7,
-   "bronze": 1,
-   "champUA": 1,
-   "total": 10
-  },
-  {
-   "rank": 11,
-   "name": "Пивошенко Олена",
-   "gold": 1,
+   "name": "Марфола Оксана",
+   "gold": 2,
    "silver": 0,
-   "bronze": 4,
+   "bronze": 7,
    "champUA": 0,
-   "total": 5
+   "total": 9,
+   "rank": 10
   },
   {
-   "rank": 12,
+   "name": "Лопухова Анна",
+   "gold": 2,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 2,
+   "rank": 11
+  },
+  {
+   "name": "Гончаренко Інна",
+   "gold": 1,
+   "silver": 4,
+   "bronze": 5,
+   "champUA": 1,
+   "total": 10,
+   "rank": 12
+  },
+  {
    "name": "Шклярук Наталія",
    "gold": 1,
    "silver": 2,
    "bronze": 1,
    "champUA": 0,
-   "total": 4
+   "total": 4,
+   "rank": 13
   },
   {
-   "rank": 13,
    "name": "Камелькова Людмила",
    "gold": 1,
    "silver": 1,
    "bronze": 3,
    "champUA": 0,
-   "total": 5
+   "total": 5,
+   "rank": 14
   },
   {
-   "rank": 14,
+   "name": "Пивошенко Олена",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 4,
+   "champUA": 0,
+   "total": 5,
+   "rank": 15
+  },
+  {
    "name": "Ільясова Альбіна",
    "gold": 1,
    "silver": 0,
-   "bronze": 2,
+   "bronze": 1,
    "champUA": 0,
-   "total": 3
+   "total": 2,
+   "rank": 16
   },
   {
-   "rank": 15,
-   "name": "Стребиж Татяна",
-   "gold": 1,
-   "silver": 0,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 16,
-   "name": "Грушовець Ольга",
-   "gold": 0,
-   "silver": 2,
-   "bronze": 12,
-   "champUA": 0,
-   "total": 14
-  },
-  {
-   "rank": 17,
-   "name": "Гончаренко Інна",
-   "gold": 0,
-   "silver": 4,
-   "bronze": 5,
-   "champUA": 1,
-   "total": 10
-  },
-  {
-   "rank": 18,
    "name": "Павлюченко Марина",
    "gold": 0,
    "silver": 3,
-   "bronze": 6,
+   "bronze": 5,
    "champUA": 0,
-   "total": 9
+   "total": 8,
+   "rank": 17
   },
   {
-   "rank": 19,
-   "name": "Соколова Вікторія",
+   "name": "Грушовець Ольга",
    "gold": 0,
-   "silver": 1,
-   "bronze": 4,
+   "silver": 2,
+   "bronze": 11,
    "champUA": 0,
-   "total": 5
+   "total": 13,
+   "rank": 18
   },
   {
-   "rank": 20,
-   "name": "Лановенко Ксенія",
-   "gold": 0,
-   "silver": 1,
-   "bronze": 3,
-   "champUA": 0,
-   "total": 4
-  },
-  {
-   "rank": 21,
-   "name": "Черноброва Олександра",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 4,
-   "champUA": 0,
-   "total": 4
-  },
-  {
-   "rank": 22,
    "name": "Білоус Жанна",
    "gold": 0,
    "silver": 2,
    "bronze": 1,
    "champUA": 0,
-   "total": 3
+   "total": 3,
+   "rank": 19
   },
   {
-   "rank": 23,
-   "name": "Карнаух Валентина",
+   "name": "Чумак Анна",
    "gold": 0,
-   "silver": 0,
-   "bronze": 2,
-   "champUA": 0,
-   "total": 2
-  },
-  {
-   "rank": 24,
-   "name": "Леонова Єлізавета",
-   "gold": 0,
-   "silver": 1,
+   "silver": 2,
    "bronze": 0,
    "champUA": 0,
-   "total": 1
+   "total": 2,
+   "rank": 20
   },
   {
-   "rank": 25,
+   "name": "Соколова Вікторія",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 4,
+   "champUA": 0,
+   "total": 5,
+   "rank": 21
+  },
+  {
+   "name": "Лановенко Ксенія",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 3,
+   "champUA": 0,
+   "total": 4,
+   "rank": 22
+  },
+  {
    "name": "Зайцева Інна",
    "gold": 0,
    "silver": 1,
    "bronze": 1,
    "champUA": 0,
-   "total": 2
+   "total": 2,
+   "rank": 23
   },
   {
-   "rank": 26,
+   "name": "Леонова Єлізавета",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 24
+  },
+  {
    "name": "Чабанова Анна",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
    "champUA": 0,
-   "total": 1
+   "total": 1,
+   "rank": 25
   },
   {
-   "rank": 27,
-   "name": "Квиклене Рената",
+   "name": "Шуплецова Зоя",
    "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 1,
-   "total": 2
-  },
-  {
-   "rank": 28,
-   "name": "Ігнатюк Наталя",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
+   "silver": 1,
+   "bronze": 0,
    "champUA": 0,
-   "total": 1
+   "total": 1,
+   "rank": 26
   },
   {
-   "rank": 29,
-   "name": "Полтавець Світлана",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 30,
-   "name": "Паламар Оксана",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 31,
-   "name": "Молдован Емілія",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 32,
-   "name": "Лях Світлана",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 33,
-   "name": "Борисова Марина",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 34,
-   "name": "Солтис Ганна",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 2,
-   "champUA": 0,
-   "total": 2
-  },
-  {
-   "rank": 35,
-   "name": "Maret Liiri",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 36,
-   "name": "Спекторенко Катерина",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 37,
    "name": "Арійчук Наталя",
    "gold": 0,
    "silver": 0,
    "bronze": 3,
    "champUA": 0,
-   "total": 3
+   "total": 3,
+   "rank": 27
   },
   {
-   "rank": 38,
-   "name": "Некристова Наталя",
+   "name": "Черноброва Олександра",
    "gold": 0,
    "silver": 0,
-   "bronze": 1,
+   "bronze": 3,
    "champUA": 0,
-   "total": 1
+   "total": 3,
+   "rank": 28
   },
   {
-   "rank": 39,
-   "name": "Калаур Інна",
+   "name": "Карнаух Валентина",
    "gold": 0,
    "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 40,
-   "name": "Федотова Ірина",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 41,
-   "name": "Червинська Ніні",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1
-  },
-  {
-   "rank": 42,
-   "name": "Шуплецова Зоя",
-   "gold": 0,
-   "silver": 1,
    "bronze": 2,
    "champUA": 0,
-   "total": 3
+   "total": 2,
+   "rank": 29
   },
   {
-   "rank": 43,
    "name": "Соловьова Юлія",
    "gold": 0,
    "silver": 0,
    "bronze": 2,
    "champUA": 0,
-   "total": 2
+   "total": 2,
+   "rank": 30
   },
   {
-   "rank": 44,
+   "name": "Солтис Ганна",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 2,
+   "champUA": 0,
+   "total": 2,
+   "rank": 31
+  },
+  {
+   "name": "Maret Liiri",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 32
+  },
+  {
+   "name": "Ігнатюк Наталя",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 33
+  },
+  {
    "name": "Богданова Дина",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
    "champUA": 0,
-   "total": 1
+   "total": 1,
+   "rank": 34
   },
   {
-   "rank": 45,
+   "name": "Борисова Марина",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 35
+  },
+  {
+   "name": "Борисова Марія",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 36
+  },
+  {
    "name": "Гавриш Ольга",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
    "champUA": 0,
-   "total": 1
+   "total": 1,
+   "rank": 37
+  },
+  {
+   "name": "Дзюбий Юлія",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 38
+  },
+  {
+   "name": "Калаур Інна",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 39
+  },
+  {
+   "name": "Лях Світлана",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 40
+  },
+  {
+   "name": "Молдован Емілія",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 41
+  },
+  {
+   "name": "Некристова Наталя",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 42
+  },
+  {
+   "name": "Новікова Зоя",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 43
+  },
+  {
+   "name": "Паламар Оксана",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 44
+  },
+  {
+   "name": "Полтавець Світлана",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 45
+  },
+  {
+   "name": "Сидельникова Ганна",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 46
+  },
+  {
+   "name": "Спекторенко Катерина",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 47
+  },
+  {
+   "name": "Стребиж Татяна",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 48
+  },
+  {
+   "name": "Федотова Ірина",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 49
+  },
+  {
+   "name": "Червинська Ніні",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 50
+  },
+  {
+   "name": "Якименко Катерина",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 51
   }
  ],
  "historical": [
+  {
+   "year": 2026,
+   "gender": "men",
+   "stageLabel": "3 етап",
+   "city": "Полтаава",
+   "gold": "Омельченко Владислав",
+   "silver": "Бендрик Олег",
+   "bronze": [
+    "Могилевський Руслан"
+   ]
+  },
   {
    "year": 2025,
    "gender": "men",
@@ -7067,7 +7674,9 @@
    "city": "КР",
    "gold": "Мамика Олександ",
    "silver": "Омельченко Владислав",
-   "bronze": "Могилевський Руслан"
+   "bronze": [
+    "Могилевський Руслан"
+   ]
   },
   {
    "year": 2025,
@@ -7076,7 +7685,9 @@
    "city": "КР",
    "gold": "Харченко Тетяна",
    "silver": "Зайцева Інна",
-   "bronze": "Гончаренко Інна"
+   "bronze": [
+    "Гончаренко Інна"
+   ]
   },
   {
    "year": 2024,
@@ -7085,7 +7696,10 @@
    "city": "КР",
    "gold": "Гончаров Едуард",
    "silver": "Омесь Ілля",
-   "bronze": "Залевський Володимир"
+   "bronze": [
+    "Залевський Володимир",
+    "Абчугський Олександр"
+   ]
   },
   {
    "year": 2024,
@@ -7094,7 +7708,10 @@
    "city": "КР",
    "gold": "Харченко Тетяна",
    "silver": "Терещенко Любов",
-   "bronze": "Гончаренко Інна"
+   "bronze": [
+    "Гончаренко Інна",
+    "Ільясова Альбіна"
+   ]
   },
   {
    "year": 2023,
@@ -7103,7 +7720,10 @@
    "city": "КР",
    "gold": "Омельченко Владислав",
    "silver": "Десинський Максим",
-   "bronze": "Гончаров Едуард"
+   "bronze": [
+    "Гончаров Едуард",
+    "Коломієць Андрій"
+   ]
   },
   {
    "year": 2023,
@@ -7112,7 +7732,10 @@
    "city": "КР",
    "gold": "Терещенко Любов",
    "silver": "Шклярук Наталія",
-   "bronze": "Моісеєнко Віталіна"
+   "bronze": [
+    "Моісеєнко Віталіна",
+    "Гончаренко Інна"
+   ]
   },
   {
    "year": 2021,
@@ -7121,7 +7744,10 @@
    "city": "Черкаси",
    "gold": "Омельченко Владислав",
    "silver": "Усик Артем",
-   "bronze": "Бушуй Олексій"
+   "bronze": [
+    "Бушуй Олексій",
+    "Солтис Андрій"
+   ]
   },
   {
    "year": 2021,
@@ -7130,7 +7756,10 @@
    "city": "Черкаси",
    "gold": "Моісеєнко Віталіна",
    "silver": "Ледєньова Наталія",
-   "bronze": "Харченко Тетяна"
+   "bronze": [
+    "Харченко Тетяна",
+    "Лях Світлана"
+   ]
   },
   {
    "year": 2020,
@@ -7139,7 +7768,10 @@
    "city": "КР",
    "gold": "Омельченко Владислав",
    "silver": "Бушуй Олексій",
-   "bronze": "Луков Олександр"
+   "bronze": [
+    "Луков Олександр",
+    "Солтис Андрій"
+   ]
   },
   {
    "year": 2020,
@@ -7148,7 +7780,10 @@
    "city": "КР",
    "gold": "Пивошенко Олена",
    "silver": "Ледєньова Наталія",
-   "bronze": "Чумак Ганна"
+   "bronze": [
+    "Чумак Ганна",
+    "Харченко Тетяна"
+   ]
   },
   {
    "year": 2020,
@@ -7157,7 +7792,10 @@
    "city": "КР",
    "gold": "Бушуй Олексій",
    "silver": "Омельченко Владислав",
-   "bronze": "Анісімов Денис"
+   "bronze": [
+    "Анісімов Денис",
+    "Пекарук Ілля"
+   ]
   },
   {
    "year": 2020,
@@ -7166,7 +7804,10 @@
    "city": "КР",
    "gold": "Ледєньова Наталія",
    "silver": "Моісеєнко Віталіна",
-   "bronze": "Чумак Ганна"
+   "bronze": [
+    "Чумак Ганна",
+    "Харченко Тетяна"
+   ]
   },
   {
    "year": 2019,
@@ -7175,7 +7816,10 @@
    "city": "КР",
    "gold": "Усик Артем",
    "silver": "Бушуй Олексій",
-   "bronze": "Омельченко Владислав"
+   "bronze": [
+    "Омельченко Владислав",
+    "Мамика Олександр"
+   ]
   },
   {
    "year": 2019,
@@ -7184,7 +7828,10 @@
    "city": "КР",
    "gold": "Моісеєнко Віталіна",
    "silver": "Ледєньова Наталія",
-   "bronze": "Харченко Тетяна"
+   "bronze": [
+    "Харченко Тетяна",
+    "Чумак Ганна"
+   ]
   },
   {
    "year": 2019,
@@ -7193,7 +7840,9 @@
    "city": "UA Open",
    "gold": "Паскару Габріель",
    "silver": "Усик Артем",
-   "bronze": "Стейер Себастьян"
+   "bronze": [
+    "Стейер Себастьян"
+   ]
   },
   {
    "year": 2019,
@@ -7202,7 +7851,10 @@
    "city": "UA Open",
    "gold": "Моісеєнко Віталіна",
    "silver": "Клочек Ксенія",
-   "bronze": "Чумак Ганна"
+   "bronze": [
+    "Чумак Ганна",
+    "Солтис Ганна"
+   ]
   },
   {
    "year": 2019,
@@ -7211,7 +7863,9 @@
    "city": "Kyiv Masters",
    "gold": "Мамика Олександр",
    "silver": "Субаши Алпер",
-   "bronze": "Рогов Віталій"
+   "bronze": [
+    "Рогов Віталій"
+   ]
   },
   {
    "year": 2019,
@@ -7220,7 +7874,10 @@
    "city": "Kyiv Masters",
    "gold": "Клочек Ксенія",
    "silver": "Моісеєнко Віталіна",
-   "bronze": "Чумак Ганна"
+   "bronze": [
+    "Чумак Ганна",
+    "Анісімова Світлана"
+   ]
   },
   {
    "year": 2018,
@@ -7229,7 +7886,10 @@
    "city": "КР",
    "gold": "Усик Артем",
    "silver": "Бушуй Олексій",
-   "bronze": "Рудковський Василь"
+   "bronze": [
+    "Рудковський Василь",
+    "Омельченко Владислав"
+   ]
   },
   {
    "year": 2018,
@@ -7238,7 +7898,10 @@
    "city": "КР",
    "gold": "Моісеєнко Віталіна",
    "silver": "Грушовець Ольга",
-   "bronze": "Чумак Ганна"
+   "bronze": [
+    "Чумак Ганна",
+    "Спекторенко Катерина"
+   ]
   },
   {
    "year": 2018,
@@ -7247,7 +7910,10 @@
    "city": "Київ опен",
    "gold": "Waclawski Lukasz",
    "silver": "Понтус Андрій",
-   "bronze": "Мамика Олександр"
+   "bronze": [
+    "Мамика Олександр",
+    "Сташевський Валентин"
+   ]
   },
   {
    "year": 2018,
@@ -7256,7 +7922,10 @@
    "city": "Київ опен",
    "gold": "Клочек Ксенія",
    "silver": "Ледєньова Наталія",
-   "bronze": "Maret Liiri"
+   "bronze": [
+    "Maret Liiri",
+    "Моісеєнко Віталіна"
+   ]
   },
   {
    "year": 2018,
@@ -7265,7 +7934,10 @@
    "city": "Київ Мастерз",
    "gold": "Waclawski Lukasz",
    "silver": "Бушуй Олексій",
-   "bronze": "Некрістов Станіслав"
+   "bronze": [
+    "Некрістов Станіслав",
+    "Ozcan Mustafa"
+   ]
   },
   {
    "year": 2018,
@@ -7274,7 +7946,10 @@
    "city": "КР",
    "gold": "Усик Артем",
    "silver": "Омельченко Владислав",
-   "bronze": "Мамика Олександр"
+   "bronze": [
+    "Мамика Олександр",
+    "Бушуй Олексій"
+   ]
   },
   {
    "year": 2018,
@@ -7283,7 +7958,10 @@
    "city": "КР",
    "gold": "Анісімова Світлана",
    "silver": "Моісеєнко Віталіна",
-   "bronze": "Борисова Марія"
+   "bronze": [
+    "Борисова Марія",
+    "Харченко Тетяна"
+   ]
   },
   {
    "year": 2018,
@@ -7292,7 +7970,10 @@
    "city": "КР",
    "gold": "Бушуй Олексій",
    "silver": "Омельченко Владислав",
-   "bronze": "Усик Артем"
+   "bronze": [
+    "Усик Артем",
+    "Агневщіков Анатолій"
+   ]
   },
   {
    "year": 2018,
@@ -7301,7 +7982,10 @@
    "city": "КР",
    "gold": "Марфола Оксана",
    "silver": "Грушовець Ольга",
-   "bronze": "Пивошенко Олена"
+   "bronze": [
+    "Пивошенко Олена",
+    "Анісімова Світлана"
+   ]
   },
   {
    "year": 2017,
@@ -7310,7 +7994,10 @@
    "city": "КР",
    "gold": "Мамика Олександр",
    "silver": "Усик Артем",
-   "bronze": "Бушуй Олексій"
+   "bronze": [
+    "Бушуй Олексій",
+    "Анісімов Денис"
+   ]
   },
   {
    "year": 2017,
@@ -7319,7 +8006,10 @@
    "city": "КР",
    "gold": "Моісеєнко Віталіна",
    "silver": "Чумак Ганна",
-   "bronze": "Анісімова Світлана"
+   "bronze": [
+    "Анісімова Світлана",
+    "Сидельникова Ганна"
+   ]
   },
   {
    "year": 2017,
@@ -7328,7 +8018,10 @@
    "city": "Київ опен",
    "gold": "Понтус Андрій",
    "silver": "Усик Артем",
-   "bronze": "Кисельов Дмитро"
+   "bronze": [
+    "Кисельов Дмитро",
+    "Бушуй Олексій"
+   ]
   },
   {
    "year": 2017,
@@ -7337,7 +8030,10 @@
    "city": "Київ опен",
    "gold": "Ледєньова Наталія",
    "silver": "Чумак Ганна",
-   "bronze": "Редзюк Тетяна"
+   "bronze": [
+    "Редзюк Тетяна",
+    "Якименко Катерина"
+   ]
   },
   {
    "year": 2017,
@@ -7346,7 +8042,10 @@
    "city": "Київ опен",
    "gold": "Усик Артем",
    "silver": "Понтус Андрій",
-   "bronze": "Пономаренко Денис"
+   "bronze": [
+    "Пономаренко Денис",
+    "Шляхов Сергій"
+   ]
   },
   {
    "year": 2017,
@@ -7355,7 +8054,10 @@
    "city": "Київ опен",
    "gold": "Камелькова Людмила",
    "silver": "Чумак Ганна",
-   "bronze": "Грушовець Ольга"
+   "bronze": [
+    "Грушовець Ольга",
+    "Ледєньова Наталія"
+   ]
   },
   {
    "year": 2016,
@@ -7364,7 +8066,10 @@
    "city": "КР",
    "gold": "Омельченко Владислав",
    "silver": "Васюра Андрій",
-   "bronze": "Шинкаренко Василь"
+   "bronze": [
+    "Шинкаренко Василь",
+    "Сташевський Валентин"
+   ]
   },
   {
    "year": 2016,
@@ -7373,7 +8078,10 @@
    "city": "КР",
    "gold": "Моісеєнко Віталіна",
    "silver": "Чумак Ганна",
-   "bronze": "Ледєньова Наталія"
+   "bronze": [
+    "Ледєньова Наталія",
+    "Анісімова Світлана"
+   ]
   },
   {
    "year": 2016,
@@ -7382,7 +8090,10 @@
    "city": "Волинь",
    "gold": "Бушуй Олексій",
    "silver": "Сташевський Валентин",
-   "bronze": "Пальонний Ігор"
+   "bronze": [
+    "Пальонний Ігор",
+    "Васюра Андрій"
+   ]
   },
   {
    "year": 2016,
@@ -7391,7 +8102,10 @@
    "city": "Волинь",
    "gold": "Моісеєнко Віталіна",
    "silver": "Чумак Ганна",
-   "bronze": "Редзюк Тетяна"
+   "bronze": [
+    "Редзюк Тетяна",
+    "Арійчук Наталя"
+   ]
   },
   {
    "year": 2015,
@@ -7400,7 +8114,10 @@
    "city": "КР",
    "gold": "Усик Артем",
    "silver": "Омельченко Владислав",
-   "bronze": "Мамика Олександр"
+   "bronze": [
+    "Мамика Олександр",
+    "Ковальов Дмитро"
+   ]
   },
   {
    "year": 2015,
@@ -7409,7 +8126,10 @@
    "city": "КР",
    "gold": "Чумак Ганна",
    "silver": "Анісімова Світлана",
-   "bronze": "Некристова Наталя"
+   "bronze": [
+    "Некристова Наталя",
+    "Черноброва Олександра"
+   ]
   },
   {
    "year": 2015,
@@ -7418,7 +8138,10 @@
    "city": "Волинь",
    "gold": "Усик Артем",
    "silver": "Мамика Олександр",
-   "bronze": "Бадира Олександр"
+   "bronze": [
+    "Бадира Олександр",
+    "Ковальов Дмитро"
+   ]
   },
   {
    "year": 2015,
@@ -7427,7 +8150,10 @@
    "city": "Волинь",
    "gold": "Моісеєнко Віталіна",
    "silver": "Чумак Ганна",
-   "bronze": "Грушовець Ольга"
+   "bronze": [
+    "Грушовець Ольга",
+    "Черноброва Олександра"
+   ]
   },
   {
    "year": 2015,
@@ -7436,7 +8162,10 @@
    "city": "КР",
    "gold": "Мамика Олександр",
    "silver": "Зольдін Фелікс",
-   "bronze": "Омельченко Владислав"
+   "bronze": [
+    "Омельченко Владислав",
+    "Васюра Андрій"
+   ]
   },
   {
    "year": 2015,
@@ -7445,7 +8174,10 @@
    "city": "КР",
    "gold": "Моісеєнко Віталіна",
    "silver": "Анісімова Світлана",
-   "bronze": "Калаур Інна"
+   "bronze": [
+    "Калаур Інна",
+    "Ледєньова Наталія"
+   ]
   },
   {
    "year": 2014,
@@ -7454,7 +8186,10 @@
    "city": "Кубок Донбасса",
    "gold": "Клочко Володимир",
    "silver": "Новак Едуард",
-   "bronze": "Невінчаний Едуард"
+   "bronze": [
+    "Невінчаний Едуард",
+    "Гетманцев Олександр"
+   ]
   },
   {
    "year": 2014,
@@ -7463,7 +8198,10 @@
    "city": "Донбас",
    "gold": "Лопухова Ганна",
    "silver": "Чумак Ганна",
-   "bronze": "Анісімова Світлана"
+   "bronze": [
+    "Анісімова Світлана",
+    "Червинська Ніні"
+   ]
   },
   {
    "year": 2014,
@@ -7472,7 +8210,10 @@
    "city": "Кубок Руданы",
    "gold": "Омельченко Владислав",
    "silver": "Мамика Олександр",
-   "bronze": "Усик Артем"
+   "bronze": [
+    "Усик Артем",
+    "Кулаков Володимир"
+   ]
   },
   {
    "year": 2014,
@@ -7481,7 +8222,10 @@
    "city": "Київ",
    "gold": "Редзюк Тетяна",
    "silver": "Чумак Ганна",
-   "bronze": "Федотова Ірина"
+   "bronze": [
+    "Федотова Ірина",
+    "Моісеєнко Віталіна"
+   ]
   },
   {
    "year": 2014,
@@ -7490,7 +8234,10 @@
    "city": "Черкассы",
    "gold": "Усик Артем",
    "silver": "Деркач Дмитро",
-   "bronze": "Мамика Олександр"
+   "bronze": [
+    "Мамика Олександр",
+    "Луков Олександр"
+   ]
   },
   {
    "year": 2014,
@@ -7499,7 +8246,10 @@
    "city": "Кубок Волыни",
    "gold": "Усик Артем",
    "silver": "Мамика Олександр",
-   "bronze": "Шинкаренко Василь"
+   "bronze": [
+    "Шинкаренко Василь",
+    "Волчук Руслан"
+   ]
   },
   {
    "year": 2014,
@@ -7508,7 +8258,10 @@
    "city": "Киев",
    "gold": "Невенчаний Едуард",
    "silver": "Ледєньов Вадим",
-   "bronze": "Усик Артем"
+   "bronze": [
+    "Усик Артем",
+    "Омельченко Владислав"
+   ]
   },
   {
    "year": 2014,
@@ -7517,7 +8270,10 @@
    "city": "КР",
    "gold": "Мамика Олександр",
    "silver": "Луков Олександр",
-   "bronze": "Усик Артем"
+   "bronze": [
+    "Усик Артем",
+    "Деркач Дмитро"
+   ]
   },
   {
    "year": 2013,
@@ -7526,7 +8282,10 @@
    "city": "Кубок Донбасса",
    "gold": "Медведєв Олександр",
    "silver": "Єрєменко Василій",
-   "bronze": "Костильов Євгкній"
+   "bronze": [
+    "Костильов Євгкній",
+    "Сиром'ятников Олександр"
+   ]
   },
   {
    "year": 2013,
@@ -7535,7 +8294,10 @@
    "city": "Кубок Донбасса",
    "gold": "Лопухова Анна",
    "silver": "Чумак Анна",
-   "bronze": "Соловьова Юлія"
+   "bronze": [
+    "Соловьова Юлія",
+    "Дзюбий Юлія"
+   ]
   },
   {
    "year": 2013,
@@ -7544,7 +8306,10 @@
    "city": "Кубок Руданы",
    "gold": "Омельченко Владислав",
    "silver": "Невінчаний Едуард",
-   "bronze": "Хімчак Сергій"
+   "bronze": [
+    "Хімчак Сергій",
+    "Попович Андрій"
+   ]
   },
   {
    "year": 2013,
@@ -7553,7 +8318,10 @@
    "city": "Славянск",
    "gold": "Лопухова Анна",
    "silver": "Чумак Анна",
-   "bronze": "Марфола Оксана"
+   "bronze": [
+    "Марфола Оксана",
+    "Новікова Зоя"
+   ]
   },
   {
    "year": 2013,
@@ -7562,7 +8330,10 @@
    "city": "Karpaty Open",
    "gold": "Береш Карол",
    "silver": "Стецишин Віталий",
-   "bronze": "Горняк Іштван"
+   "bronze": [
+    "Горняк Іштван",
+    "Баранов Олександр"
+   ]
   },
   {
    "year": 2013,
@@ -7571,7 +8342,10 @@
    "city": "Волинь",
    "gold": "Чумак Ганна",
    "silver": "Лопухова Ганна",
-   "bronze": "Стребиж Татяна"
+   "bronze": [
+    "Стребиж Татяна",
+    "Черноброва Олександра"
+   ]
   },
   {
    "year": 2013,
@@ -7580,7 +8354,10 @@
    "city": "Славянск",
    "gold": "Лец Дмитро",
    "silver": "Бургелов Олег",
-   "bronze": "Мамика Олександр"
+   "bronze": [
+    "Мамика Олександр",
+    "Титков Олег"
+   ]
   },
   {
    "year": 2013,
@@ -7589,7 +8366,10 @@
    "city": "Хрустальний дротик",
    "gold": "Лопухова Ганна",
    "silver": "Леонова Єлізавета",
-   "bronze": "Соловьова Юлія"
+   "bronze": [
+    "Соловьова Юлія",
+    "Гавриш Ольга"
+   ]
   },
   {
    "year": 2013,
@@ -7598,7 +8378,10 @@
    "city": "Черкассы",
    "gold": "Ємельянов Олександр",
    "silver": "Ледєньов Вадим",
-   "bronze": "Барсуков Віталий"
+   "bronze": [
+    "Барсуков Віталий",
+    "Новак Едуард"
+   ]
   },
   {
    "year": 2013,
@@ -7607,7 +8390,10 @@
    "city": "Харків",
    "gold": "Лопухова Ганна",
    "silver": "Шуплецова Зоя",
-   "bronze": "Чумак Ганна"
+   "bronze": [
+    "Чумак Ганна",
+    "Богданова Дина"
+   ]
   },
   {
    "year": 2013,
@@ -7616,7 +8402,10 @@
    "city": "Кубок Волыни",
    "gold": "Усик Артем",
    "silver": "Омельченко Владислав",
-   "bronze": "Ємельянов Олександр"
+   "bronze": [
+    "Ємельянов Олександр",
+    "Гросов Олексій"
+   ]
   },
   {
    "year": 2013,
@@ -7625,7 +8414,10 @@
    "city": "Мелекино",
    "gold": "Костильов Євгкній",
    "silver": "Мамика Олександр",
-   "bronze": "Гросов Олексій"
+   "bronze": [
+    "Гросов Олексій",
+    "Луков Олександр"
+   ]
   },
   {
    "year": 2013,
@@ -7634,7 +8426,10 @@
    "city": "Харьков",
    "gold": "Усик Артем",
    "silver": "Костильов Євгкній",
-   "bronze": "Титков Олег"
+   "bronze": [
+    "Титков Олег",
+    "Луков Олександр"
+   ]
   }
  ],
  "ratings": {
@@ -29460,7 +30255,7 @@
    "winMatch": 7
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": true,
    "date": "15.08.2026",
@@ -30765,7 +31560,7 @@
    "winMatch": 3
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": true,
    "date": "14.08.2026",
@@ -34545,7 +35340,7 @@
    "winMatch": 4
   },
   {
-   "name": "Мороз Артем",
+   "name": "Мороз Ігор",
    "gender": "men",
    "isUDL": false,
    "date": "23.05.2026",
@@ -34620,7 +35415,7 @@
    "winMatch": 1
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "23.05.2026",
@@ -35625,7 +36420,7 @@
    "winMatch": 1
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": true,
    "date": "17.05.2026",
@@ -37140,7 +37935,7 @@
    "winMatch": 0
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": true,
    "date": "15.05.2026",
@@ -37485,7 +38280,7 @@
    "winMatch": 5
   },
   {
-   "name": "Коломієць  Андрій",
+   "name": "Коломієць Андрій",
    "gender": "men",
    "isUDL": true,
    "date": "26.04.2026",
@@ -39915,7 +40710,7 @@
    "winMatch": 1
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": true,
    "date": "21.03.2026",
@@ -41250,7 +42045,7 @@
    "winMatch": 1
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "21.02.2026",
@@ -42495,7 +43290,7 @@
    "winMatch": 3
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": true,
    "date": "24.01.2026",
@@ -43665,7 +44460,7 @@
    "winMatch": 5
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": true,
    "date": "23.01.2026",
@@ -48000,7 +48795,7 @@
    "winMatch": 1
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "12.10.2025",
@@ -50430,7 +51225,7 @@
    "winMatch": 1
   },
   {
-   "name": "Мороз Владислав",
+   "name": "Мороз Ігор",
    "gender": "men",
    "isUDL": false,
    "date": "06.07.2025",
@@ -51840,7 +52635,7 @@
    "winMatch": 1
   },
   {
-   "name": "Мороз Владислав",
+   "name": "Мороз Ігор",
    "gender": "men",
    "isUDL": false,
    "date": "05.07.2025",
@@ -53745,7 +54540,7 @@
    "winMatch": 4
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "18.05.2025",
@@ -54060,7 +54855,7 @@
    "winMatch": 3
   },
   {
-   "name": "Мороз Артем",
+   "name": "Мороз Ігор",
    "gender": "men",
    "isUDL": false,
    "date": "18.05.2025",
@@ -58095,7 +58890,7 @@
    "winMatch": 2
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "15.02.2025",
@@ -58395,7 +59190,7 @@
    "winMatch": 5
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "women",
    "isUDL": false,
    "date": "15.02.2025",
@@ -59115,7 +59910,7 @@
    "winMatch": 4
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": true,
    "date": "25.01.2025",
@@ -60060,7 +60855,7 @@
    "winMatch": 0
   },
   {
-   "name": "Андрій Коломієць",
+   "name": "Коломієць Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "07.12.2024",
@@ -60555,7 +61350,7 @@
    "winMatch": 3
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "07.12.2024",
@@ -61140,7 +61935,7 @@
    "winMatch": 3
   },
   {
-   "name": "Олена Коломієць",
+   "name": "Коломієць Андрій",
    "gender": "women",
    "isUDL": false,
    "date": "07.12.2024",
@@ -62490,7 +63285,7 @@
    "winMatch": 0
   },
   {
-   "name": "Андрій Попович",
+   "name": "Попович Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "13.10.2024",
@@ -62715,7 +63510,7 @@
    "winMatch": 2
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "13.10.2024",
@@ -62820,7 +63615,7 @@
    "winMatch": 0
   },
   {
-   "name": "Андрій Коломієць",
+   "name": "Коломієць Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "13.10.2024",
@@ -63555,7 +64350,7 @@
    "winMatch": 3
   },
   {
-   "name": "Дмитро Царолунга",
+   "name": "Царолунга Дмитро",
    "gender": "men",
    "isUDL": false,
    "date": "08.09.2024",
@@ -63735,7 +64530,7 @@
    "winMatch": 3
   },
   {
-   "name": "Ігор Мороз",
+   "name": "Мороз Ігор",
    "gender": "men",
    "isUDL": false,
    "date": "08.09.2024",
@@ -63780,7 +64575,7 @@
    "winMatch": 2
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "08.09.2024",
@@ -66240,7 +67035,7 @@
    "winMatch": 5
   },
   {
-   "name": "Артем Мороз",
+   "name": "Мороз Ігор",
    "gender": "men",
    "isUDL": false,
    "date": "21.07.2024",
@@ -66750,7 +67545,7 @@
    "winMatch": 1
   },
   {
-   "name": "Мороз",
+   "name": "Мороз Ігор",
    "gender": "men",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66840,7 +67635,7 @@
    "winMatch": 2
   },
   {
-   "name": "Гоян",
+   "name": "Гоян Дмитро",
    "gender": "men",
    "isUDL": false,
    "date": "20.07.2024",
@@ -67875,7 +68670,7 @@
    "winMatch": 3
   },
   {
-   "name": "Артем Мороз",
+   "name": "Мороз Ігор",
    "gender": "men",
    "isUDL": false,
    "date": "19.05.2024",
@@ -68130,7 +68925,7 @@
    "winMatch": 2
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "19.05.2024",
@@ -68175,7 +68970,7 @@
    "winMatch": 3
   },
   {
-   "name": "Андрій Коломієць",
+   "name": "Коломієць Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "19.05.2024",
@@ -69645,7 +70440,7 @@
    "winMatch": 5
   },
   {
-   "name": "Мороз Артем",
+   "name": "Мороз Ігор",
    "gender": "open",
    "isUDL": true,
    "date": "23.03.2024",
@@ -70425,7 +71220,7 @@
    "winMatch": 2
   },
   {
-   "name": "Мороз Артем",
+   "name": "Мороз Ігор",
    "gender": "open",
    "isUDL": true,
    "date": "17.02.2024",
@@ -71055,7 +71850,7 @@
    "winMatch": 1
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "03.12.2023",
@@ -72330,7 +73125,7 @@
    "winMatch": 3
   },
   {
-   "name": "Коломієць Олена",
+   "name": "Коломієць Андрій",
    "gender": "women",
    "isUDL": false,
    "date": "03.12.2023",
@@ -73245,7 +74040,7 @@
    "winMatch": 4
   },
   {
-   "name": "Попович",
+   "name": "Попович Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73395,7 +74190,7 @@
    "winMatch": 4
   },
   {
-   "name": "Коломієць",
+   "name": "Коломієць Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73620,7 +74415,7 @@
    "winMatch": 1
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73965,7 +74760,7 @@
    "winMatch": 0
   },
   {
-   "name": "Коломієць",
+   "name": "Коломієць Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74160,7 +74955,7 @@
    "winMatch": 5
   },
   {
-   "name": "Царолунга",
+   "name": "Царолунга Дмитро",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74445,7 +75240,7 @@
    "winMatch": 1
   },
   {
-   "name": "Мороз",
+   "name": "Мороз Ігор",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74535,7 +75330,7 @@
    "winMatch": 1
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -75705,7 +76500,7 @@
    "winMatch": 4
   },
   {
-   "name": "Мороз Артем",
+   "name": "Мороз Ігор",
    "gender": "open",
    "isUDL": true,
    "date": "19.08.2023",
@@ -76185,7 +76980,7 @@
    "winMatch": 4
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "30.07.2023",
@@ -76335,7 +77130,7 @@
    "winMatch": 0
   },
   {
-   "name": "Артем Мороз",
+   "name": "Мороз Ігор",
    "gender": "men",
    "isUDL": false,
    "date": "30.07.2023",
@@ -76665,7 +77460,7 @@
    "winMatch": 2
   },
   {
-   "name": "Дмитро Гоян",
+   "name": "Гоян Дмитро",
    "gender": "men",
    "isUDL": false,
    "date": "30.07.2023",
@@ -77010,7 +77805,7 @@
    "winMatch": 4
   },
   {
-   "name": "Дмитро Гоян",
+   "name": "Гоян Дмитро",
    "gender": "men",
    "isUDL": false,
    "date": "29.07.2023",
@@ -77250,7 +78045,7 @@
    "winMatch": 2
   },
   {
-   "name": "Артем Мороз",
+   "name": "Мороз Ігор",
    "gender": "men",
    "isUDL": false,
    "date": "29.07.2023",
@@ -77265,7 +78060,7 @@
    "winMatch": 0
   },
   {
-   "name": "Антон Подольчук",
+   "name": "Подольчук Антон",
    "gender": "men",
    "isUDL": false,
    "date": "29.07.2023",
@@ -77295,7 +78090,7 @@
    "winMatch": 3
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "29.07.2023",
@@ -78090,7 +78885,7 @@
    "winMatch": 4
   },
   {
-   "name": "Мороз Артем",
+   "name": "Мороз Ігор",
    "gender": "open",
    "isUDL": true,
    "date": "11.06.2023",
@@ -78405,7 +79200,7 @@
    "winMatch": 2
   },
   {
-   "name": "Мороз Артем",
+   "name": "Мороз Ігор",
    "gender": "open",
    "isUDL": true,
    "date": "10.06.2023",
@@ -78795,7 +79590,7 @@
    "winMatch": 1
   },
   {
-   "name": "Мороз Артем",
+   "name": "Мороз Ігор",
    "gender": "men",
    "isUDL": false,
    "date": "21.05.2023",
@@ -79140,7 +79935,7 @@
    "winMatch": 3
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "21.05.2023",
@@ -79515,7 +80310,7 @@
    "winMatch": 5
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "women",
    "isUDL": false,
    "date": "21.05.2023",
@@ -80745,7 +81540,7 @@
    "winMatch": 5
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "26.03.2023",
@@ -80805,7 +81600,7 @@
    "winMatch": 0
   },
   {
-   "name": "Мороз Артем",
+   "name": "Мороз Ігор",
    "gender": "men",
    "isUDL": false,
    "date": "26.03.2023",
@@ -81450,7 +82245,7 @@
    "winMatch": 5
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Солтис Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "25.03.2023",
@@ -81825,7 +82620,7 @@
    "winMatch": 4
   },
   {
-   "name": "Мороз Артем",
+   "name": "Мороз Ігор",
    "gender": "men",
    "isUDL": false,
    "date": "25.03.2023",
@@ -82635,7 +83430,7 @@
    "winMatch": 3
   },
   {
-   "name": "Мороз Артем",
+   "name": "Мороз Ігор",
    "gender": "open",
    "isUDL": true,
    "date": "04.02.2023",
@@ -83475,7 +84270,7 @@
    "winMatch": 8
   },
   {
-   "name": "Дмитро Гоян",
+   "name": "Гоян Дмитро",
    "gender": "open",
    "isUDL": false,
    "date": "18.09.2022",
