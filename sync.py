@@ -486,15 +486,28 @@ def build_name_index(*name_lists):
 
 
 def resolve_name(name, name_index):
-    """Якщо ім'я з Nakka — це лише одне слово (прізвище), намагається
-    знайти повне ім'я в наших уже відомих джерелах. Інакше — без змін."""
+    """Уніфікує ім'я гравця з Nakka під наш канонічний формат "Прізвище Ім'я":
+    - одне слово (тільки прізвище) → шукає повне ім'я за прізвищем;
+    - два слова у зворотному порядку ("Тетяна Харченко" замість
+      "Харченко Тетяна") → розпізнає за другим словом і розвертає;
+    - вже правильний формат → просто нормалізує (бере канонічний запис,
+      якщо таке прізвище вже відоме, щоб прибрати різнобій в регістрі)."""
     if not name:
         return name
     parts = name.strip().split()
-    if len(parts) >= 2:
-        return name.strip()
-    full = name_index.get(parts[0]) if parts else None
-    return full or name.strip()
+
+    if len(parts) == 1:
+        full = name_index.get(parts[0])
+        return full or name.strip()
+
+    if len(parts) == 2:
+        first_word, second_word = parts
+        if first_word in name_index:
+            return name_index[first_word]
+        if second_word in name_index:
+            return name_index[second_word]
+
+    return name.strip()
 
 
 def medals_from_nakka(nakka_data, name_index):
