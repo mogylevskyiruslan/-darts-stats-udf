@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-05T09:25:02.316456+00:00",
+  "lastUpdated": "2026-09-05T20:19:27.807195+00:00",
   "tournamentsCount": 180,
   "historicalCount": 64
  },
@@ -30,11 +30,11 @@
    "nakkaMedalsWomen": null
   },
   {
-   "total": null,
-   "men": null,
-   "menAvg": null,
-   "women": null,
-   "womenAvg": null,
+   "total": 76,
+   "men": 52,
+   "menAvg": 50.53,
+   "women": 24,
+   "womenAvg": 40.26,
    "name": "ЧУ 2026 Пари",
    "org": "ВФД",
    "format": "501DO",
@@ -2310,9 +2310,9 @@
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": {
-    "gold": "Харченко",
-    "silver": "Лановенко",
-    "bronze": "Гончаренко"
+    "gold": "Харченко Тетяна",
+    "silver": "Лановенко Ксенія",
+    "bronze": "Гончаренко Інна"
    }
   },
   {
@@ -2786,14 +2786,14 @@
    "medals": null,
    "medalsWomen": null,
    "nakkaMedals": {
-    "gold": "Омельченко",
+    "gold": "Омельченко Владислав",
     "silver": "Десинский",
-    "bronze": "Гончаров"
+    "bronze": "Гончаров Едуард"
    },
    "nakkaMedalsWomen": {
-    "gold": "Терещенко",
-    "silver": "Шклярук",
-    "bronze": "Гончаренко"
+    "gold": "Терещенко Любов",
+    "silver": "Шклярук Наталія",
+    "bronze": "Гончаренко Інна"
    }
   },
   {
@@ -2824,14 +2824,14 @@
    "medals": null,
    "medalsWomen": null,
    "nakkaMedals": {
-    "gold": "Омельченко",
-    "silver": "Аверін",
-    "bronze": "Могилевський"
+    "gold": "Омельченко Владислав",
+    "silver": "Аверін Сергій",
+    "bronze": "Могилевський Руслан"
    },
    "nakkaMedalsWomen": {
-    "gold": "Моісеєнко",
-    "silver": "Терещенко",
-    "bronze": "Полтавець"
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Терещенко Любов",
+    "bronze": "Полтавець Світлана"
    }
   },
   {
@@ -2870,14 +2870,14 @@
     "bronze": "Харченко Тетяна"
    },
    "nakkaMedals": {
-    "gold": "Омельченко",
-    "silver": "Залевський",
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
     "bronze": "Сташевский"
    },
    "nakkaMedalsWomen": {
-    "gold": "Моісеєнко",
-    "silver": "Соколова",
-    "bronze": "Харченко"
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Соколова Вікторія",
+    "bronze": "Харченко Тетяна"
    }
   },
   {
@@ -66435,7 +66435,7 @@
    "winMatch": 1
   },
   {
-   "name": "Залевський",
+   "name": "Залевський Володимир",
    "gender": "men",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66495,7 +66495,7 @@
    "winMatch": 0
   },
   {
-   "name": "Кіфор",
+   "name": "Кіфор Ярослав",
    "gender": "men",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66525,7 +66525,7 @@
    "winMatch": 1
   },
   {
-   "name": "Арійчук",
+   "name": "Арійчук Наталя",
    "gender": "men",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66540,7 +66540,7 @@
    "winMatch": 0
   },
   {
-   "name": "Лагутін",
+   "name": "Лагутін Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66570,7 +66570,7 @@
    "winMatch": 0
   },
   {
-   "name": "Григоренко",
+   "name": "Григоренко Денис",
    "gender": "men",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66645,7 +66645,7 @@
    "winMatch": 3
   },
   {
-   "name": "Білоус",
+   "name": "Білоус Жанна",
    "gender": "men",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66660,7 +66660,7 @@
    "winMatch": 0
   },
   {
-   "name": "Мелашенко",
+   "name": "Мелашенко Владислав",
    "gender": "men",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66675,7 +66675,7 @@
    "winMatch": 3
   },
   {
-   "name": "Гринів",
+   "name": "Гринів Олександр",
    "gender": "men",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66690,7 +66690,7 @@
    "winMatch": 0
   },
   {
-   "name": "Козловський",
+   "name": "Козловський Богдан",
    "gender": "men",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66720,7 +66720,7 @@
    "winMatch": 3
   },
   {
-   "name": "Могилевський",
+   "name": "Могилевський Руслан",
    "gender": "men",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66735,7 +66735,7 @@
    "winMatch": 2
   },
   {
-   "name": "Гончаренко",
+   "name": "Гончаренко Інна",
    "gender": "men",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66795,7 +66795,7 @@
    "winMatch": 2
   },
   {
-   "name": "Молдован",
+   "name": "Молдован Емілія",
    "gender": "men",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66900,7 +66900,7 @@
    "winMatch": 2
   },
   {
-   "name": "Харченко",
+   "name": "Харченко Тетяна",
    "gender": "women",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66915,7 +66915,7 @@
    "winMatch": 6
   },
   {
-   "name": "Паламар",
+   "name": "Паламар Оксана",
    "gender": "women",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66930,7 +66930,7 @@
    "winMatch": 1
   },
   {
-   "name": "Лановенко",
+   "name": "Лановенко Ксенія",
    "gender": "women",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66960,7 +66960,7 @@
    "winMatch": 0
   },
   {
-   "name": "Білоус",
+   "name": "Білоус Жанна",
    "gender": "women",
    "isUDL": false,
    "date": "20.07.2024",
@@ -66990,7 +66990,7 @@
    "winMatch": 1
   },
   {
-   "name": "Гончаренко",
+   "name": "Гончаренко Інна",
    "gender": "women",
    "isUDL": false,
    "date": "20.07.2024",
@@ -67005,7 +67005,7 @@
    "winMatch": 4
   },
   {
-   "name": "Ігнатюк",
+   "name": "Ігнатюк Наталя",
    "gender": "women",
    "isUDL": false,
    "date": "20.07.2024",
@@ -72975,7 +72975,7 @@
    "winMatch": 0
   },
   {
-   "name": "Омельченко",
+   "name": "Омельченко Владислав",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73020,7 +73020,7 @@
    "winMatch": 0
   },
   {
-   "name": "Пивошенко",
+   "name": "Пивошенко Олена",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73065,7 +73065,7 @@
    "winMatch": 2
   },
   {
-   "name": "Пекарук",
+   "name": "Пекарук Ілля",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73110,7 +73110,7 @@
    "winMatch": 1
   },
   {
-   "name": "Аверін",
+   "name": "Аверін Сергій",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73230,7 +73230,7 @@
    "winMatch": 2
   },
   {
-   "name": "Троценко",
+   "name": "Троценко Артем",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73260,7 +73260,7 @@
    "winMatch": 1
   },
   {
-   "name": "Гончаренко",
+   "name": "Гончаренко Інна",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73275,7 +73275,7 @@
    "winMatch": 0
   },
   {
-   "name": "Омесь",
+   "name": "Омесь Ілля",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73305,7 +73305,7 @@
    "winMatch": 2
   },
   {
-   "name": "Ковальов",
+   "name": "Ковальов Дмитро",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73380,7 +73380,7 @@
    "winMatch": 0
   },
   {
-   "name": "Могилевський",
+   "name": "Могилевський Руслан",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73425,7 +73425,7 @@
    "winMatch": 1
   },
   {
-   "name": "Луков",
+   "name": "Луков Олександр",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73455,7 +73455,7 @@
    "winMatch": 0
   },
   {
-   "name": "Лагутін",
+   "name": "Лагутін Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73515,7 +73515,7 @@
    "winMatch": 1
   },
   {
-   "name": "Рогов",
+   "name": "Рогов Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73575,7 +73575,7 @@
    "winMatch": 1
   },
   {
-   "name": "Барсуков",
+   "name": "Барсуков Віталий",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73620,7 +73620,7 @@
    "winMatch": 1
   },
   {
-   "name": "Солтис",
+   "name": "Солтис Ганна",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73635,7 +73635,7 @@
    "winMatch": 3
   },
   {
-   "name": "Гончаров",
+   "name": "Гончаров Едуард",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73710,7 +73710,7 @@
    "winMatch": 1
   },
   {
-   "name": "Мамика",
+   "name": "Мамика Олександр",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73725,7 +73725,7 @@
    "winMatch": 3
   },
   {
-   "name": "Шклярук",
+   "name": "Шклярук Наталія",
    "gender": "women",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73755,7 +73755,7 @@
    "winMatch": 0
   },
   {
-   "name": "Чабанова",
+   "name": "Чабанова Анна",
    "gender": "women",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73770,7 +73770,7 @@
    "winMatch": 2
   },
   {
-   "name": "Спекторенко",
+   "name": "Спекторенко Катерина",
    "gender": "women",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73785,7 +73785,7 @@
    "winMatch": 1
   },
   {
-   "name": "Моісеєнко",
+   "name": "Моісеєнко Віталіна",
    "gender": "women",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73800,7 +73800,7 @@
    "winMatch": 3
   },
   {
-   "name": "Терещенко",
+   "name": "Терещенко Любов",
    "gender": "women",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73830,7 +73830,7 @@
    "winMatch": 0
   },
   {
-   "name": "Гончаренко",
+   "name": "Гончаренко Інна",
    "gender": "women",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73845,7 +73845,7 @@
    "winMatch": 3
   },
   {
-   "name": "Полтавець",
+   "name": "Полтавець Світлана",
    "gender": "women",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73860,7 +73860,7 @@
    "winMatch": 1
   },
   {
-   "name": "Пивошенко",
+   "name": "Пивошенко Олена",
    "gender": "women",
    "isUDL": false,
    "date": "12.11.2023",
@@ -73905,7 +73905,7 @@
    "winMatch": 1
   },
   {
-   "name": "Залевський",
+   "name": "Залевський Володимир",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -73935,7 +73935,7 @@
    "winMatch": 4
   },
   {
-   "name": "Пивошенко",
+   "name": "Пивошенко Олена",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -73995,7 +73995,7 @@
    "winMatch": 1
   },
   {
-   "name": "Омельченко",
+   "name": "Омельченко Владислав",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74010,7 +74010,7 @@
    "winMatch": 9
   },
   {
-   "name": "Лагутін",
+   "name": "Лагутін Андрій",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74025,7 +74025,7 @@
    "winMatch": 2
   },
   {
-   "name": "Пекарук",
+   "name": "Пекарук Ілля",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74085,7 +74085,7 @@
    "winMatch": 2
   },
   {
-   "name": "Кіфор",
+   "name": "Кіфор Ярослав",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74115,7 +74115,7 @@
    "winMatch": 0
   },
   {
-   "name": "Мелашенко",
+   "name": "Мелашенко Владислав",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74145,7 +74145,7 @@
    "winMatch": 1
   },
   {
-   "name": "Аверін",
+   "name": "Аверін Сергій",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74205,7 +74205,7 @@
    "winMatch": 1
   },
   {
-   "name": "Гончаренко",
+   "name": "Гончаренко Інна",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74265,7 +74265,7 @@
    "winMatch": 0
   },
   {
-   "name": "Кисельов",
+   "name": "Кисельов Дмитро",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74280,7 +74280,7 @@
    "winMatch": 4
   },
   {
-   "name": "Троценко",
+   "name": "Троценко Артем",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74325,7 +74325,7 @@
    "winMatch": 3
   },
   {
-   "name": "Рогов",
+   "name": "Рогов Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74505,7 +74505,7 @@
    "winMatch": 0
   },
   {
-   "name": "Могилевський",
+   "name": "Могилевський Руслан",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74610,7 +74610,7 @@
    "winMatch": 2
   },
   {
-   "name": "Лях",
+   "name": "Лях Світлана",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74625,7 +74625,7 @@
    "winMatch": 1
   },
   {
-   "name": "Пивошенко",
+   "name": "Пивошенко Олена",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74655,7 +74655,7 @@
    "winMatch": 0
   },
   {
-   "name": "Моісеєнко",
+   "name": "Моісеєнко Віталіна",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74670,7 +74670,7 @@
    "winMatch": 6
   },
   {
-   "name": "Гончаренко",
+   "name": "Гончаренко Інна",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74685,7 +74685,7 @@
    "winMatch": 0
   },
   {
-   "name": "Соколова",
+   "name": "Соколова Вікторія",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74700,7 +74700,7 @@
    "winMatch": 5
   },
   {
-   "name": "Терещенко",
+   "name": "Терещенко Любов",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74730,7 +74730,7 @@
    "winMatch": 1
   },
   {
-   "name": "Спекторенко",
+   "name": "Спекторенко Катерина",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74745,7 +74745,7 @@
    "winMatch": 0
   },
   {
-   "name": "Лановенко",
+   "name": "Лановенко Ксенія",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74760,7 +74760,7 @@
    "winMatch": 2
   },
   {
-   "name": "Полтавець",
+   "name": "Полтавець Світлана",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74790,7 +74790,7 @@
    "winMatch": 3
   },
   {
-   "name": "Чабанова",
+   "name": "Чабанова Анна",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74820,7 +74820,7 @@
    "winMatch": 2
   },
   {
-   "name": "Харченко",
+   "name": "Харченко Тетяна",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -74835,7 +74835,7 @@
    "winMatch": 6
   },
   {
-   "name": "Ільясова",
+   "name": "Ільясова Альбіна",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
