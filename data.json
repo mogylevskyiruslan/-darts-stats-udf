@@ -1,10 +1,54 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-04T20:09:43.610673+00:00",
-  "tournamentsCount": 178,
+  "lastUpdated": "2026-09-05T08:53:01.388687+00:00",
+  "tournamentsCount": 180,
   "historicalCount": 64
  },
  "tournaments": [
+  {
+   "total": null,
+   "men": null,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 4 етап",
+   "date": "06.09.2026",
+   "city": "Одеса",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
+  {
+   "total": null,
+   "men": null,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "ЧУ 2026 Пари",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "05.09.2026",
+   "city": "Одеса",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null
+  },
   {
    "total": 91,
    "men": 64,
