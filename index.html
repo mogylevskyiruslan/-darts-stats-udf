@@ -158,9 +158,27 @@
   .records-tab.active{background:var(--gold); color:var(--bg); font-weight:600; border-color:var(--gold);}
   .records-tab:not(.active):hover{color:var(--cream); border-color:var(--gold);}
 
+  .show-more-wrap{display:flex; justify-content:center; margin-top:16px;}
+  .show-more-btn{
+    padding:11px 22px; background:var(--panel); color:var(--cream); border:1px solid var(--line);
+    border-radius:4px; font-family:'Inter',sans-serif; font-size:13px; cursor:pointer;
+    transition:border-color .15s, color .15s;
+  }
+  .show-more-btn:hover{border-color:var(--gold); color:var(--gold);}
+
   .medal-cell{display:flex; flex-direction:column; gap:8px; font-size:12px; line-height:1.4;}
   .medal-group{display:flex; flex-direction:column; gap:2px;}
   .medal-cell .m-row{display:flex; gap:6px; align-items:baseline;}
+
+  .medal-details summary{
+    cursor:pointer; font-size:13px; color:var(--cream); list-style:none;
+    padding:2px 0; white-space:nowrap;
+  }
+  .medal-details summary::-webkit-details-marker{display:none;}
+  .medal-details summary::before{content:"▸ "; color:var(--gold); font-size:11px;}
+  .medal-details[open] summary::before{content:"▾ ";}
+  .medal-details[open] summary{color:var(--gold); margin-bottom:6px;}
+  .medal-details .medal-cell{padding-top:2px;}
   .medal-cell .m-icon{width:14px;}
   .medal-cell .m-empty{color:var(--muted); font-size:13px;}
 
@@ -364,6 +382,7 @@
       <tbody id="tournaments-body"></tbody>
     </table>
   </div>
+  <div class="show-more-wrap" id="tournaments-more"></div>
 </section>
 
 <section id="leaderboard">
@@ -392,6 +411,7 @@
       <tbody id="leaderboard-body"></tbody>
     </table>
   </div>
+  <div class="show-more-wrap" id="leaderboard-more"></div>
 </section>
 
 <section id="ratings">
@@ -412,6 +432,7 @@
       <tbody id="ratings-body"></tbody>
     </table>
   </div>
+  <div class="show-more-wrap" id="ratings-more"></div>
 </section>
 
 <section id="historical">
@@ -442,6 +463,7 @@
       <tbody id="historical-body"></tbody>
     </table>
   </div>
+  <div class="show-more-wrap" id="historical-more"></div>
 </section>
 
 <section id="records">
@@ -655,7 +677,17 @@ function renderMedalCell(medals, medalsWomen){
     return `<div class="medal-group"><span class="gender-tag ${tagClass}">${tagLabel}</span>${rows.join('')}</div>`;
   }
   const parts = [group(medals, 'men', 'Ч'), group(medalsWomen, 'women', 'Ж')].filter(Boolean);
-  return parts.length ? `<div class="medal-cell">${parts.join('')}</div>` : '<span class="m-empty">—</span>';
+  if(!parts.length) return '<span class="m-empty">—</span>';
+
+  const winnerBits = [];
+  if(medals && medals.gold) winnerBits.push('🥇 ' + medals.gold);
+  if(medalsWomen && medalsWomen.gold) winnerBits.push('🥇 ' + medalsWomen.gold);
+  const summary = winnerBits.join(' · ') || 'Призери';
+
+  return `<details class="medal-details">
+    <summary>${summary}</summary>
+    <div class="medal-cell">${parts.join('')}</div>
+  </details>`;
 }
 
 function renderTournaments(){
@@ -685,9 +717,11 @@ function renderTournaments(){
   const body = document.getElementById('tournaments-body');
   if(rows.length === 0){
     body.innerHTML = `<tr class="empty-row"><td colspan="11">Нічого не знайдено. Спробуйте інший запит.</td></tr>`;
+    document.getElementById('tournaments-more').innerHTML = '';
     return;
   }
-  body.innerHTML = rows.map(t=>`
+  const { visible, total } = paginate('tournaments', rows);
+  body.innerHTML = visible.map(t=>`
     <tr>
       <td class="mono">${t.date}</td>
       <td>${t.name}</td>
@@ -702,6 +736,7 @@ function renderTournaments(){
       <td>${renderLinkChips(t.links)}</td>
     </tr>
   `).join('');
+  renderShowMore('tournaments', 'tournaments-more', total, renderTournaments);
 }
 
 let leaderboardGender = 'men';
@@ -713,9 +748,11 @@ function renderLeaderboard(){
   const body = document.getElementById('leaderboard-body');
   if(rows.length === 0){
     body.innerHTML = `<tr class="empty-row"><td colspan="7">Нічого не знайдено.</td></tr>`;
+    document.getElementById('leaderboard-more').innerHTML = '';
     return;
   }
-  body.innerHTML = rows.map(p=>`
+  const { visible, total } = paginate('leaderboard', rows);
+  body.innerHTML = visible.map(p=>`
     <tr>
       <td class="rank-cell num">${p.rank}</td>
       <td class="player-name">${p.name}</td>
@@ -726,12 +763,44 @@ function renderLeaderboard(){
       <td class="num mono" style="color:var(--gold); font-weight:700;">${p.total}</td>
     </tr>
   `).join('');
+  renderShowMore('leaderboard', 'leaderboard-more', total, renderLeaderboard);
 }
 
 let nakkaPlayerStats = [];
 let ratingsData = {};
 let recordsCategory = 'avgTournament';
 let recordsGender = 'men';
+
+// --- Узагальнена пагінація для довгих таблиць (турніри, рейтинг, історія) ---
+const paginationState = {};
+const PAGE_SIZE = 20;
+
+function paginate(key, allRows){
+  if(!(key in paginationState)) paginationState[key] = PAGE_SIZE;
+  const visible = allRows.slice(0, paginationState[key]);
+  return { visible, hasMore: allRows.length > paginationState[key], total: allRows.length };
+}
+
+function resetPagination(key){
+  paginationState[key] = PAGE_SIZE;
+}
+
+function renderShowMore(key, wrapId, total, rerenderFn){
+  const wrap = document.getElementById(wrapId);
+  if(!wrap) return;
+  const shown = Math.min(paginationState[key] || PAGE_SIZE, total);
+  if(total <= shown){
+    wrap.innerHTML = '';
+    return;
+  }
+  const remaining = total - shown;
+  const nextBatch = Math.min(PAGE_SIZE, remaining);
+  wrap.innerHTML = `<button type="button" class="show-more-btn">Показати ще ${nextBatch} (${shown} з ${total})</button>`;
+  wrap.querySelector('.show-more-btn').addEventListener('click', () => {
+    paginationState[key] += PAGE_SIZE;
+    rerenderFn();
+  });
+}
 
 const RECORD_CATEGORIES = {
   avgTournament: {
@@ -858,14 +927,17 @@ function renderRatings(){
   const body = document.getElementById('ratings-body');
   if(!seasonData){
     body.innerHTML = `<tr class="empty-row"><td colspan="10">Немає даних для цього сезону.</td></tr>`;
+    document.getElementById('ratings-more').innerHTML = '';
     return;
   }
   const rows = seasonData.rows.filter(p => !q || p.name.toLowerCase().includes(q));
   if(rows.length === 0){
     body.innerHTML = `<tr class="empty-row"><td colspan="10">Нічого не знайдено.</td></tr>`;
+    document.getElementById('ratings-more').innerHTML = '';
     return;
   }
-  body.innerHTML = rows.map(p => `
+  const { visible, total } = paginate('ratings', rows);
+  body.innerHTML = visible.map(p => `
     <tr>
       <td class="rank-cell num">${p.rank}</td>
       <td class="player-name">${p.name}</td>
@@ -873,6 +945,7 @@ function renderRatings(){
       <td class="num mono" style="color:var(--gold); font-weight:700;">${fmtPts(p.total)}</td>
     </tr>
   `).join('');
+  renderShowMore('ratings', 'ratings-more', total, renderRatings);
 }
 
 function populateHistoricalYearFilter(){
@@ -909,9 +982,11 @@ function renderHistorical(){
   const body = document.getElementById('historical-body');
   if(rows.length === 0){
     body.innerHTML = `<tr class="empty-row"><td colspan="7">Нічого не знайдено.</td></tr>`;
+    document.getElementById('historical-more').innerHTML = '';
     return;
   }
-  body.innerHTML = rows.map(h => `
+  const { visible, total } = paginate('historical', rows);
+  body.innerHTML = visible.map(h => `
     <tr>
       <td class="num mono">${h.year}</td>
       <td><span class="gender-tag ${h.gender}">${h.gender === 'women' ? 'Ж' : 'Ч'}</span></td>
@@ -922,6 +997,7 @@ function renderHistorical(){
       <td>${h.bronze || '—'}</td>
     </tr>
   `).join('');
+  renderShowMore('historical', 'historical-more', total, renderHistorical);
 }
 
 function populateFilters(){
@@ -945,24 +1021,25 @@ document.querySelectorAll('#tournaments thead th').forEach(th=>{
   });
 });
 
-document.getElementById('search').addEventListener('input', renderTournaments);
-document.getElementById('filter-year').addEventListener('change', renderTournaments);
-document.getElementById('filter-org').addEventListener('change', renderTournaments);
-document.getElementById('toggle-udl').addEventListener('change', ()=>{ renderTournaments(); renderHeroStats(); });
-document.getElementById('filter-rating-season').addEventListener('change', renderRatings);
-document.getElementById('search-ratings').addEventListener('input', renderRatings);
-document.getElementById('search-leaderboard').addEventListener('input', renderLeaderboard);
+document.getElementById('search').addEventListener('input', ()=>{ resetPagination('tournaments'); renderTournaments(); });
+document.getElementById('filter-year').addEventListener('change', ()=>{ resetPagination('tournaments'); renderTournaments(); });
+document.getElementById('filter-org').addEventListener('change', ()=>{ resetPagination('tournaments'); renderTournaments(); });
+document.getElementById('toggle-udl').addEventListener('change', ()=>{ resetPagination('tournaments'); renderTournaments(); renderHeroStats(); });
+document.getElementById('filter-rating-season').addEventListener('change', ()=>{ resetPagination('ratings'); renderRatings(); });
+document.getElementById('search-ratings').addEventListener('input', ()=>{ resetPagination('ratings'); renderRatings(); });
+document.getElementById('search-leaderboard').addEventListener('input', ()=>{ resetPagination('leaderboard'); renderLeaderboard(); });
 document.querySelectorAll('#leaderboard .gender-btn').forEach(btn=>{
   btn.addEventListener('click', ()=>{
     document.querySelectorAll('#leaderboard .gender-btn').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
     leaderboardGender = btn.dataset.gender;
+    resetPagination('leaderboard');
     renderLeaderboard();
   });
 });
-document.getElementById('search-historical').addEventListener('input', renderHistorical);
-document.getElementById('filter-historical-year').addEventListener('change', renderHistorical);
-document.getElementById('filter-historical-gender').addEventListener('change', renderHistorical);
+document.getElementById('search-historical').addEventListener('input', ()=>{ resetPagination('historical'); renderHistorical(); });
+document.getElementById('filter-historical-year').addEventListener('change', ()=>{ resetPagination('historical'); renderHistorical(); });
+document.getElementById('filter-historical-gender').addEventListener('change', ()=>{ resetPagination('historical'); renderHistorical(); });
 
 document.querySelectorAll('#records-tabs .records-tab').forEach(btn=>{
   btn.addEventListener('click', ()=>{
