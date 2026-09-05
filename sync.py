@@ -562,7 +562,7 @@ def medals_from_nakka(nakka_data, name_index):
     return {
         "gold": podium.get(1),
         "silver": podium.get(2),
-        "bronze": podium.get(3),
+        "bronze": [podium[3]] if podium.get(3) else [],
     }
 
 
