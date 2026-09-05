@@ -474,6 +474,12 @@
       <button type="button" class="records-tab" data-cat="finishTournament">100+ за турнір</button>
       <button type="button" class="records-tab" data-cat="finishCareer">100+ за кар'єру</button>
     </div>
+  </div>
+  <div class="controls">
+    <div class="gender-toggle">
+      <button type="button" class="gender-btn active" id="records-gender-men" data-gender="men">Чоловіки</button>
+      <button type="button" class="gender-btn" id="records-gender-women" data-gender="women">Жінки</button>
+    </div>
     <label class="udl-toggle">
       <input type="checkbox" id="toggle-udl-records">
       Додати УДЛ/ЗУДЛ
@@ -725,6 +731,7 @@ function renderLeaderboard(){
 let nakkaPlayerStats = [];
 let ratingsData = {};
 let recordsCategory = 'avgTournament';
+let recordsGender = 'men';
 
 const RECORD_CATEGORIES = {
   avgTournament: {
@@ -783,7 +790,7 @@ const RECORD_CATEGORIES = {
 
 function renderNakkaRecords(){
   const includeUDL = document.getElementById('toggle-udl-records').checked;
-  const rows = nakkaPlayerStats.filter(r => includeUDL || !r.isUDL);
+  const rows = nakkaPlayerStats.filter(r => (includeUDL || !r.isUDL) && r.gender === recordsGender);
 
   const countEl = document.getElementById('nakka-records-count');
   if(countEl) countEl.textContent = new Set(rows.map(r => r.tournament + r.date)).size;
@@ -966,6 +973,14 @@ document.querySelectorAll('#records-tabs .records-tab').forEach(btn=>{
   });
 });
 document.getElementById('toggle-udl-records').addEventListener('change', renderNakkaRecords);
+document.querySelectorAll('#nakka-records .gender-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('#nakka-records .gender-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    recordsGender = btn.dataset.gender;
+    renderNakkaRecords();
+  });
+});
 
 async function loadData(){
   try{
