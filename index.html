@@ -672,7 +672,7 @@ function renderMedalCell(medals, medalsWomen){
     const rows = [];
     if(m.gold) rows.push(`<div class="m-row"><span class="m-icon">🥇</span>${m.gold}</div>`);
     if(m.silver) rows.push(`<div class="m-row"><span class="m-icon">🥈</span>${m.silver}</div>`);
-    if(m.bronze) rows.push(`<div class="m-row"><span class="m-icon">🥉</span>${m.bronze}</div>`);
+    (m.bronze || []).forEach(name => rows.push(`<div class="m-row"><span class="m-icon">🥉</span>${name}</div>`));
     if(!rows.length) return '';
     return `<div class="medal-group"><span class="gender-tag ${tagClass}">${tagLabel}</span>${rows.join('')}</div>`;
   }
@@ -975,7 +975,7 @@ function renderHistorical(){
       (h.city||'').toLowerCase().includes(q) ||
       (h.gold||'').toLowerCase().includes(q) ||
       (h.silver||'').toLowerCase().includes(q) ||
-      (h.bronze||'').toLowerCase().includes(q);
+      (h.bronze||[]).join(' ').toLowerCase().includes(q);
     return matchesYear && matchesGender && matchesQ;
   });
 
@@ -994,7 +994,7 @@ function renderHistorical(){
       <td>${h.city}</td>
       <td>${h.gold || '—'}</td>
       <td>${h.silver || '—'}</td>
-      <td>${h.bronze || '—'}</td>
+      <td>${(h.bronze && h.bronze.length) ? h.bronze.join(' · ') : '—'}</td>
     </tr>
   `).join('');
   renderShowMore('historical', 'historical-more', total, renderHistorical);

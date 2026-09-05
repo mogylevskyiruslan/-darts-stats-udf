@@ -188,10 +188,12 @@ def parse_prizes(rows):
                 if not city:
                     continue
                 names = []
-                for prow in podium_rows[:3]:
+                for prow in podium_rows:
                     val = prow[col_idx].strip() if col_idx < len(prow) else ""
                     names.append(val or None)
-                if any(names):
+                while names and names[-1] is None:
+                    names.pop()
+                if names:
                     year_data[year][stage_label] = {"city": city, "podium": names}
             i = j
             continue
@@ -199,6 +201,41 @@ def parse_prizes(rows):
         i += 1
 
     return year_data, aggregate
+
+
+def build_leaderboard_from_podiums(year_data):
+    """Рахує медальний залік самостійно з даних подіумів (а не з таблиці,
+    яку користувач вручну підбивав в Excel і де можливі помилки).
+    Бронза рахується для КОЖНОГО імені в podium[2:] — тобто за 2013–2024,
+    де обидва півфіналісти вважались призерами, це дає по 2 бронзи за етап."""
+    from collections import defaultdict
+
+    totals = defaultdict(lambda: {"gold": 0, "silver": 0, "bronze": 0, "champUA": 0})
+    for stages in year_data.values():
+        for key, entry in stages.items():
+            podium = entry.get("podium", [])
+            is_chu = key == "ЧУ"
+            if len(podium) > 0 and podium[0]:
+                totals[podium[0]]["gold"] += 1
+                if is_chu:
+                    totals[podium[0]]["champUA"] += 1
+            if len(podium) > 1 and podium[1]:
+                totals[podium[1]]["silver"] += 1
+            for name in podium[2:]:
+                if name:
+                    totals[name]["bronze"] += 1
+
+    rows = []
+    for name, t in totals.items():
+        total = t["gold"] + t["silver"] + t["bronze"]
+        rows.append({
+            "name": name, "gold": t["gold"], "silver": t["silver"],
+            "bronze": t["bronze"], "champUA": t["champUA"], "total": total,
+        })
+    rows.sort(key=lambda r: (-r["gold"], -r["silver"], -r["bronze"], r["name"]))
+    for i, r in enumerate(rows):
+        r["rank"] = i + 1
+    return rows
 
 
 def extract_stage(fmt):
@@ -252,7 +289,7 @@ def attach_medals(tournaments, year_data, field_name, require_exact_format=True)
             t[field_name] = {
                 "gold": podium[0] if len(podium) > 0 else None,
                 "silver": podium[1] if len(podium) > 1 else None,
-                "bronze": podium[2] if len(podium) > 2 else None,
+                "bronze": [n for n in podium[2:] if n],  # 2013–2024: обидва півфіналісти = бронза
             }
             used_keys.add((year, used_key))
 
@@ -281,7 +318,7 @@ def build_historical(men_year_data, women_year_data, used_keys_men, used_keys_wo
                     "city": m_entry["city"] or "—",
                     "gold": p[0] if len(p) > 0 else None,
                     "silver": p[1] if len(p) > 1 else None,
-                    "bronze": p[2] if len(p) > 2 else None,
+                    "bronze": [n for n in p[2:] if n],
                 })
             w_entry = w_year.get(key)
             if w_entry and (year, key) not in used_keys_women:
@@ -291,7 +328,7 @@ def build_historical(men_year_data, women_year_data, used_keys_men, used_keys_wo
                     "city": w_entry["city"] or "—",
                     "gold": p[0] if len(p) > 0 else None,
                     "silver": p[1] if len(p) > 1 else None,
-                    "bronze": p[2] if len(p) > 2 else None,
+                    "bronze": [n for n in p[2:] if n],
                 })
     return historical
 
@@ -598,6 +635,86 @@ def enrich_with_nakka(tournaments, name_index):
     return player_records
 
 
+# ---------------------------------------------------------------------------
+# Для турнірів до появи Nakka в Україні (немає посилання-сітки) єдине
+# джерело призерів — протокол (Google Docs). Повний текст документа нам не
+# потрібен: Google сам генерує короткий опис (og:description) із перших
+# рядків файлу, а туди зазвичай виносять саме підсумкову таблицю місць,
+# на кшталт "1 Усик Артем (Київ)2 Мамика Олександр (Кривий Ріг)3 ...".
+# ---------------------------------------------------------------------------
+import html as _html_module
+
+PROTOCOL_ENTRY_RE = re.compile(r"(\d+)\s*([^\d()]+?)\s*\(([^)]+)\)")
+
+
+def parse_protocol_description(desc):
+    """Читає рядки "1 Ім'я (Місто)2 Ім'я (Місто)..." з опису документа.
+    Зупиняється, як тільки порядок рангів переривається (наприклад "5-8") —
+    це означає, що далі йде групове місце, а не персональний подіум."""
+    podium = []
+    expected = 1
+    for rank_str, name, _city in PROTOCOL_ENTRY_RE.findall(desc):
+        if rank_str != str(expected):
+            break
+        podium.append(name.strip())
+        expected += 1
+        if expected > 4:  # більше нам і не треба (золото/срібло/2×бронза)
+            break
+    return podium
+
+
+def fetch_protocol_podium(url):
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (vfd-darts-sync)"})
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            content = resp.read().decode("utf-8", errors="ignore")
+    except Exception as e:
+        print(f"    protocol fetch failed for {url}: {e}")
+        return None
+
+    m = re.search(r'<meta property="og:description" content="([^"]*)"', content)
+    if not m:
+        return None
+    desc = _html_module.unescape(m.group(1))
+    podium = parse_protocol_description(desc)
+    return podium or None
+
+
+def fill_protocol_medals(tournaments):
+    """Для турнірів, де досі немає жодних призерів (ні з Nakka, ні з таблиці
+    Google Sheets), пробує дістати їх з протоколу (Google Docs), якщо він
+    прив'язаний як посилання на цей турнір."""
+    filled = 0
+    cache = {}
+    for t in tournaments:
+        if t.get("nakkaMedals") or t.get("medals"):
+            continue  # вже є призери з надійнішого джерела — не чіпаємо
+
+        protocol_url = None
+        for key in ("tournament", "men", "menAvg", "women", "womenAvg"):
+            link = t.get("links", {}).get(key)
+            if link and link.get("type") == "protocol_doc":
+                protocol_url = link["url"]
+                break
+        if not protocol_url:
+            continue
+
+        if protocol_url not in cache:
+            cache[protocol_url] = fetch_protocol_podium(protocol_url)
+            time.sleep(0.05)
+        podium = cache[protocol_url]
+        if not podium:
+            continue
+
+        t["medals"] = {
+            "gold": podium[0] if len(podium) > 0 else None,
+            "silver": podium[1] if len(podium) > 1 else None,
+            "bronze": [n for n in podium[2:] if n],
+        }
+        filled += 1
+    return filled
+
+
 def main():
     print("Fetching tournaments CSV...")
     t_rows = fetch_csv(TOURNAMENTS_CSV_URL)
@@ -618,13 +735,19 @@ def main():
     tournaments = parse_tournaments(t_rows)
     print(f"Parsed {len(tournaments)} tournaments")
 
-    men_year_data, men_aggregate = parse_prizes(men_rows)
-    print(f"Parsed men's prize data for {len(men_year_data)} years, {len(men_aggregate)} leaderboard rows")
+    men_year_data, _sheet_men_aggregate = parse_prizes(men_rows)
+    print(f"Parsed men's prize data for {len(men_year_data)} years")
 
-    women_year_data, women_aggregate = ({}, [])
+    women_year_data = {}
     if women_rows:
-        women_year_data, women_aggregate = parse_prizes(women_rows)
-        print(f"Parsed women's prize data for {len(women_year_data)} years, {len(women_aggregate)} leaderboard rows")
+        women_year_data, _sheet_women_aggregate = parse_prizes(women_rows)
+        print(f"Parsed women's prize data for {len(women_year_data)} years")
+
+    # Рахуємо медальний залік самі з даних подіумів, а не з ручної таблиці
+    # внизу аркуша (там могли закрастись помилки при ручному підбитті).
+    men_aggregate = build_leaderboard_from_podiums(men_year_data)
+    women_aggregate = build_leaderboard_from_podiums(women_year_data)
+    print(f"Computed leaderboard ourselves: {len(men_aggregate)} men, {len(women_aggregate)} women")
 
     used_keys_men = attach_medals(tournaments, men_year_data, "medals")
     used_keys_women = attach_medals(tournaments, women_year_data, "medalsWomen")
@@ -643,15 +766,15 @@ def main():
     name_sources = []
     name_sources.extend(p["name"] for p in men_aggregate)
     name_sources.extend(p["name"] for p in women_aggregate)
-    for year_data in (men_year_data, women_year_data):
-        for stages in year_data.values():
-            for entry in stages.values():
-                name_sources.extend(n for n in entry.get("podium", []) if n)
     name_index = build_name_index(name_sources)
     print(f"  Built name index with {len(name_index)} known surnames")
 
     nakka_player_records = enrich_with_nakka(tournaments, name_index)
     print(f"Collected {len(nakka_player_records)} player-tournament stat rows from Nakka")
+
+    print("Fetching prize protocols for pre-Nakka tournaments...")
+    protocol_count = fill_protocol_medals(tournaments)
+    print(f"  Filled medals from protocol documents for {protocol_count} tournaments")
 
     data = {
         "meta": {
