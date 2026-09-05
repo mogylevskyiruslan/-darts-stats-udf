@@ -238,6 +238,24 @@ def build_leaderboard_from_podiums(year_data):
     return rows
 
 
+# У таблиці "Призери" міста часто скорочені інакше, ніж у таблиці турнірів
+# ("КР" замість "Кривий Ріг" тощо) — без цього зіставлення по місту не
+# спрацьовує, і турнір лишається без призерів, хоча дані насправді є.
+CITY_ALIASES = {
+    "КР": "Кривий Ріг",
+    "Волинь": "Луцьк",
+    "Київ опен": "Київ",
+    "Kyiv Masters": "Київ",
+    "Київ Мастерз": "Київ",
+    "Київ мастерз": "Київ",
+    "UA Open": "Одеса",
+}
+
+
+def normalize_city(city):
+    return CITY_ALIASES.get(city, city)
+
+
 def extract_stage(fmt):
     m = re.search(r"(\d+)\s*етап", fmt)
     if m:
@@ -273,15 +291,15 @@ def attach_medals(tournaments, year_data, field_name, require_exact_format=True)
             if numbered:
                 last_key = max(numbered, key=int)
                 cand = yd[last_key]
-                if cand["city"] == t["city"]:
+                if normalize_city(cand["city"]) == normalize_city(t["city"]):
                     entry, used_key = cand, last_key
         elif stage is not None:
             cand = yd.get(stage)
-            if cand and cand["city"] == t["city"]:
+            if cand and normalize_city(cand["city"]) == normalize_city(t["city"]):
                 entry, used_key = cand, stage
         elif (not require_exact_format or t["format"] == "501DO") and t["name"].strip() == f"ЧУ {year}":
             cand = yd.get("ЧУ")
-            if cand and cand["city"] == t["city"]:
+            if cand and normalize_city(cand["city"]) == normalize_city(t["city"]):
                 entry, used_key = cand, "ЧУ"
 
         if entry:

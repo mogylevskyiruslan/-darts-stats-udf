@@ -166,13 +166,14 @@
   }
   .show-more-btn:hover{border-color:var(--gold); color:var(--gold);}
 
-  .medal-cell{display:flex; flex-direction:column; gap:8px; font-size:12px; line-height:1.4;}
+  .medal-cell{display:flex; flex-direction:column; gap:8px; font-size:12px; line-height:1.4; max-width:220px;}
   .medal-group{display:flex; flex-direction:column; gap:2px;}
-  .medal-cell .m-row{display:flex; gap:6px; align-items:baseline;}
+  .medal-cell .m-row{display:flex; gap:6px; align-items:baseline; overflow-wrap:break-word; min-width:0;}
 
+  .medal-details{max-width:220px;}
   .medal-details summary{
     cursor:pointer; font-size:13px; color:var(--cream); list-style:none;
-    padding:2px 0; white-space:nowrap;
+    padding:2px 0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
   }
   .medal-details summary::-webkit-details-marker{display:none;}
   .medal-details summary::before{content:"▸ "; color:var(--gold); font-size:11px;}
