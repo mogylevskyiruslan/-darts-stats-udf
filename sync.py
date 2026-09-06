@@ -702,9 +702,13 @@ def main():
     nakka_player_records = enrich_with_nakka(tournaments, name_index)
     print(f"Collected {len(nakka_player_records)} player-tournament stat rows from Nakka")
 
-    print("Fetching prize protocols for pre-Nakka tournaments...")
-    protocol_count = fill_protocol_medals(tournaments)
-    print(f"  Filled medals from protocol documents for {protocol_count} tournaments")
+    # Протоколи (Google Docs) для турнірів до Nakka НЕ вмикаємо автоматично:
+    # більшість із них — це повний розпис матчів по раундах, а не готова
+    # таблиця місць, тож автопарсинг короткого опису дає ненадійні (іноді
+    # просто неправильні) результати. Функції parse_protocol_description /
+    # fetch_protocol_podium / fill_protocol_medals лишаються в коді нижче —
+    # повернемось до цього, коли протоколи будуть уніфіковані в один формат.
+    # protocol_count = fill_protocol_medals(tournaments)
 
     data = {
         "meta": {
