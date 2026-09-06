@@ -265,90 +265,6 @@ def extract_stage(fmt):
     return None
 
 
-def attach_medals(tournaments, year_data, field_name, require_exact_format=True):
-    """Attach medal podium to matching tournaments for one gender.
-    field_name: 'medals' (men) or 'medalsWomen' (women).
-    Returns the set of (year, stage_key) pairs that were successfully matched,
-    so the caller can compute what's left over for the historical section."""
-    used_keys = set()
-    for t in tournaments:
-        t[field_name] = None
-        if t["isUDL"]:
-            continue
-        try:
-            year = int(t["date"].split(".")[-1])
-        except ValueError:
-            continue
-        yd = year_data.get(year)
-        if not yd:
-            continue
-
-        stage = extract_stage(t["format"])
-        entry, used_key = None, None
-
-        if stage == "FINAL":
-            numbered = [k for k in yd if k.isdigit()]
-            if numbered:
-                last_key = max(numbered, key=int)
-                entry, used_key = yd[last_key], last_key
-        elif stage is not None:
-            cand = yd.get(stage)
-            if cand:
-                entry, used_key = cand, stage
-        elif (not require_exact_format or t["format"] == "501DO") and t["name"].strip() == f"ЧУ {year}":
-            cand = yd.get("ЧУ")
-            if cand:
-                entry, used_key = cand, "ЧУ"
-
-        if entry:
-            podium = entry["podium"]
-            t[field_name] = {
-                "gold": podium[0] if len(podium) > 0 else None,
-                "silver": podium[1] if len(podium) > 1 else None,
-                "bronze": [n for n in podium[2:] if n],  # 2013–2024: обидва півфіналісти = бронза
-            }
-            used_keys.add((year, used_key))
-
-    return used_keys
-
-
-def build_historical(men_year_data, women_year_data, used_keys_men, used_keys_women):
-    """Combine leftover (not matched to a tournament row) entries from both
-    gender tables into one list, tagged with gender, for the historical section."""
-    historical = []
-    all_years = sorted(set(list(men_year_data.keys()) + list(women_year_data.keys())), reverse=True)
-    for year in all_years:
-        m_year = men_year_data.get(year, {})
-        w_year = women_year_data.get(year, {})
-        all_keys = sorted(
-            set(list(m_year.keys()) + list(w_year.keys())),
-            key=lambda k: (0, int(k)) if k.isdigit() else (1, 0),
-        )
-        for key in all_keys:
-            stage_label = "ЧУ" if key == "ЧУ" else f"{key} етап"
-            m_entry = m_year.get(key)
-            if m_entry and (year, key) not in used_keys_men:
-                p = m_entry["podium"]
-                historical.append({
-                    "year": year, "gender": "men", "stageLabel": stage_label,
-                    "city": normalize_city(m_entry["city"]) or "—",
-                    "gold": p[0] if len(p) > 0 else None,
-                    "silver": p[1] if len(p) > 1 else None,
-                    "bronze": [n for n in p[2:] if n],
-                })
-            w_entry = w_year.get(key)
-            if w_entry and (year, key) not in used_keys_women:
-                p = w_entry["podium"]
-                historical.append({
-                    "year": year, "gender": "women", "stageLabel": stage_label,
-                    "city": normalize_city(w_entry["city"]) or "—",
-                    "gold": p[0] if len(p) > 0 else None,
-                    "silver": p[1] if len(p) > 1 else None,
-                    "bronze": [n for n in p[2:] if n],
-                })
-    return historical
-
-
 # ---------------------------------------------------------------------------
 # "Кубок України" — рейтинги за сезон (15+ вкладок, одна на рік+стать).
 # Структура колонок різна з року в рік (інколи є "Місто"/"Регіон", інколи
@@ -703,8 +619,8 @@ def fill_protocol_medals(tournaments):
     filled = 0
     cache = {}
     for t in tournaments:
-        if t.get("nakkaMedals") or t.get("medals"):
-            continue  # вже є призери з надійнішого джерела — не чіпаємо
+        if t.get("nakkaMedals"):
+            continue  # вже є призери з Nakka — не чіпаємо
 
         protocol_url = None
         for key in ("tournament", "men", "menAvg", "women", "womenAvg"):
@@ -761,18 +677,16 @@ def main():
 
     # Рахуємо медальний залік самі з даних подіумів, а не з ручної таблиці
     # внизу аркуша (там могли закрастись помилки при ручному підбитті).
+    # Це єдине призначення таблиці "Призери етапів кубків ВФД" на сайті —
+    # її записи більше НЕ намагаємось зіставляти з конкретними турнірами
+    # (це виявилось занадто крихким через розбіжності в нумерації/містах).
     men_aggregate = build_leaderboard_from_podiums(men_year_data)
     women_aggregate = build_leaderboard_from_podiums(women_year_data)
     print(f"Computed leaderboard ourselves: {len(men_aggregate)} men, {len(women_aggregate)} women")
 
-    used_keys_men = attach_medals(tournaments, men_year_data, "medals")
-    used_keys_women = attach_medals(tournaments, women_year_data, "medalsWomen")
-    matched_men = sum(1 for t in tournaments if t["medals"])
-    matched_women = sum(1 for t in tournaments if t["medalsWomen"])
-    print(f"Matched men's medals for {matched_men} tournaments, women's for {matched_women}")
-
-    historical = build_historical(men_year_data, women_year_data, used_keys_men, used_keys_women)
-    print(f"{len(historical)} historical-only records (both genders combined)")
+    for t in tournaments:
+        t["medals"] = None
+        t["medalsWomen"] = None
 
     print("Fetching season ratings (Кубок України, all tabs)...")
     ratings = build_ratings(RATINGS_SOURCES_PATH)
@@ -796,12 +710,10 @@ def main():
         "meta": {
             "lastUpdated": datetime.now(timezone.utc).isoformat(),
             "tournamentsCount": len(tournaments),
-            "historicalCount": len(historical),
         },
         "tournaments": tournaments,
         "leaderboard": men_aggregate,
         "leaderboardWomen": women_aggregate,
-        "historical": historical,
         "ratings": ratings,
         "nakkaPlayerStats": nakka_player_records,
     }

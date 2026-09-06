@@ -330,7 +330,6 @@
   <a href="#tournaments">Турніри</a>
   <a href="#leaderboard">Рейтинг</a>
   <a href="#ratings">Рейтинги сезону</a>
-  <a href="#historical">Історичні етапи</a>
   <a href="#records">Рекорди</a>
   <a href="#nakka-records">Рекорди статистики</a>
   <a href="#architecture">Як це працює</a>
@@ -434,37 +433,6 @@
     </table>
   </div>
   <div class="show-more-wrap" id="ratings-more"></div>
-</section>
-
-<section id="historical">
-  <h2><span class="idx">03.2</span> Історичні результати етапів</h2>
-  <p class="section-sub">Ці <span id="historical-count">…</span> записів (чоловіки й жінки) є тільки в таблиці «Призери етапів кубків ВФД» (2013–2022) — вони не мають окремого рядка в таблиці учасників і посилання на Nakka, тому показані тут окремо. Медалі з цих турнірів вже враховані в загальному заліку гравців (розділ «Рейтинг гравців») вище.</p>
-  <div class="controls">
-    <input type="text" id="search-historical" placeholder="Пошук гравця або міста…">
-    <select id="filter-historical-year"><option value="">Усі роки</option></select>
-    <select id="filter-historical-gender">
-      <option value="">Чоловіки і жінки</option>
-      <option value="men">Тільки чоловіки</option>
-      <option value="women">Тільки жінки</option>
-    </select>
-  </div>
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th class="num">Рік</th>
-          <th>Стать</th>
-          <th>Етап</th>
-          <th>Місто</th>
-          <th>🥇</th>
-          <th>🥈</th>
-          <th>🥉</th>
-        </tr>
-      </thead>
-      <tbody id="historical-body"></tbody>
-    </table>
-  </div>
-  <div class="show-more-wrap" id="historical-more"></div>
 </section>
 
 <section id="records">
@@ -603,7 +571,6 @@
 let tournaments = [];
 let leaderboard = [];
 let leaderboardWomen = [];
-let historical = [];
 
 function orgTag(org){
   const cls = org === 'ВФД' ? 'vfd' : (org === 'УДЛ' ? 'udl' : 'other');
@@ -949,58 +916,6 @@ function renderRatings(){
   renderShowMore('ratings', 'ratings-more', total, renderRatings);
 }
 
-function populateHistoricalYearFilter(){
-  const sel = document.getElementById('filter-historical-year');
-  if(sel.dataset.populated) return;
-  const years = [...new Set(historical.map(h=>h.year))].sort((a,b)=>b-a);
-  years.forEach(y=>{
-    const o = document.createElement('option'); o.value = y; o.textContent = y; sel.appendChild(o);
-  });
-  sel.dataset.populated = '1';
-}
-
-function renderHistorical(){
-  const countEl = document.getElementById('historical-count');
-  if(countEl) countEl.textContent = historical.length;
-
-  populateHistoricalYearFilter();
-
-  const q = (document.getElementById('search-historical').value || '').toLowerCase();
-  const yearFilter = document.getElementById('filter-historical-year').value;
-  const genderFilter = document.getElementById('filter-historical-gender').value;
-
-  const rows = historical.filter(h=>{
-    const matchesYear = !yearFilter || String(h.year) === yearFilter;
-    const matchesGender = !genderFilter || h.gender === genderFilter;
-    const matchesQ = !q ||
-      (h.city||'').toLowerCase().includes(q) ||
-      (h.gold||'').toLowerCase().includes(q) ||
-      (h.silver||'').toLowerCase().includes(q) ||
-      (h.bronze||[]).join(' ').toLowerCase().includes(q);
-    return matchesYear && matchesGender && matchesQ;
-  });
-
-  const body = document.getElementById('historical-body');
-  if(rows.length === 0){
-    body.innerHTML = `<tr class="empty-row"><td colspan="7">Нічого не знайдено.</td></tr>`;
-    document.getElementById('historical-more').innerHTML = '';
-    return;
-  }
-  const { visible, total } = paginate('historical', rows);
-  body.innerHTML = visible.map(h => `
-    <tr>
-      <td class="num mono">${h.year}</td>
-      <td><span class="gender-tag ${h.gender}">${h.gender === 'women' ? 'Ж' : 'Ч'}</span></td>
-      <td class="mono" style="color:var(--muted)">${h.stageLabel}</td>
-      <td>${h.city}</td>
-      <td>${h.gold || '—'}</td>
-      <td>${h.silver || '—'}</td>
-      <td>${(h.bronze && h.bronze.length) ? h.bronze.join(' · ') : '—'}</td>
-    </tr>
-  `).join('');
-  renderShowMore('historical', 'historical-more', total, renderHistorical);
-}
-
 function populateFilters(){
   const years = [...new Set(tournaments.map(t=>t.date.split('.').pop()))].sort((a,b)=>b-a);
   const orgs = [...new Set(tournaments.map(t=>t.org))];
@@ -1038,9 +953,6 @@ document.querySelectorAll('#leaderboard .gender-btn').forEach(btn=>{
     renderLeaderboard();
   });
 });
-document.getElementById('search-historical').addEventListener('input', ()=>{ resetPagination('historical'); renderHistorical(); });
-document.getElementById('filter-historical-year').addEventListener('change', ()=>{ resetPagination('historical'); renderHistorical(); });
-document.getElementById('filter-historical-gender').addEventListener('change', ()=>{ resetPagination('historical'); renderHistorical(); });
 
 document.querySelectorAll('#records-tabs .records-tab').forEach(btn=>{
   btn.addEventListener('click', ()=>{
@@ -1068,7 +980,6 @@ async function loadData(){
     tournaments = data.tournaments || [];
     leaderboard = data.leaderboard || [];
     leaderboardWomen = data.leaderboardWomen || [];
-    historical = data.historical || [];
     ratingsData = data.ratings || {};
     nakkaPlayerStats = data.nakkaPlayerStats || [];
 
@@ -1085,7 +996,6 @@ async function loadData(){
     renderLeaderboard();
     populateRatingSeasons();
     renderRatings();
-    renderHistorical();
     renderNakkaRecords();
   } catch(err){
     console.error('Не вдалося завантажити data.json', err);
