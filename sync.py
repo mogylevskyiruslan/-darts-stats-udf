@@ -290,16 +290,14 @@ def attach_medals(tournaments, year_data, field_name, require_exact_format=True)
             numbered = [k for k in yd if k.isdigit()]
             if numbered:
                 last_key = max(numbered, key=int)
-                cand = yd[last_key]
-                if normalize_city(cand["city"]) == normalize_city(t["city"]):
-                    entry, used_key = cand, last_key
+                entry, used_key = yd[last_key], last_key
         elif stage is not None:
             cand = yd.get(stage)
-            if cand and normalize_city(cand["city"]) == normalize_city(t["city"]):
+            if cand:
                 entry, used_key = cand, stage
         elif (not require_exact_format or t["format"] == "501DO") and t["name"].strip() == f"ЧУ {year}":
             cand = yd.get("ЧУ")
-            if cand and normalize_city(cand["city"]) == normalize_city(t["city"]):
+            if cand:
                 entry, used_key = cand, "ЧУ"
 
         if entry:
@@ -333,7 +331,7 @@ def build_historical(men_year_data, women_year_data, used_keys_men, used_keys_wo
                 p = m_entry["podium"]
                 historical.append({
                     "year": year, "gender": "men", "stageLabel": stage_label,
-                    "city": m_entry["city"] or "—",
+                    "city": normalize_city(m_entry["city"]) or "—",
                     "gold": p[0] if len(p) > 0 else None,
                     "silver": p[1] if len(p) > 1 else None,
                     "bronze": [n for n in p[2:] if n],
@@ -343,7 +341,7 @@ def build_historical(men_year_data, women_year_data, used_keys_men, used_keys_wo
                 p = w_entry["podium"]
                 historical.append({
                     "year": year, "gender": "women", "stageLabel": stage_label,
-                    "city": w_entry["city"] or "—",
+                    "city": normalize_city(w_entry["city"]) or "—",
                     "gold": p[0] if len(p) > 0 else None,
                     "silver": p[1] if len(p) > 1 else None,
                     "bronze": [n for n in p[2:] if n],
