@@ -1,14 +1,14 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-06T09:15:37.790700+00:00",
+  "lastUpdated": "2026-09-06T10:14:22.714617+00:00",
   "tournamentsCount": 180
  },
  "tournaments": [
   {
-   "total": null,
-   "men": null,
+   "total": 68,
+   "men": 44,
    "menAvg": null,
-   "women": null,
+   "women": 24,
    "womenAvg": null,
    "name": "Кубок України",
    "org": "ВФД",
@@ -4034,11 +4034,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": "",
-    "silver": null,
-    "bronze": []
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -4461,11 +4457,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": "",
-    "silver": null,
-    "bronze": []
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5074,14 +5066,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Григоренко Денис",
-    "silver": ". Пономаренко Денис",
-    "bronze": [
-     ". Стецишин Віталій",
-     ". Кондарюк Микола"
-    ]
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5243,11 +5228,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Деркач Дмитро",
-    "silver": null,
-    "bronze": []
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5274,11 +5255,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Кисельов Дмитро / Ровенчук Влада",
-    "silver": null,
-    "bronze": []
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5413,14 +5390,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Пальоний Ігор",
-    "silver": ". Ширяєв Дмитро",
-    "bronze": [
-     ". Царолунга Дмитро",
-     ". Гурський Борис"
-    ]
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5447,14 +5417,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Бадира Олександр",
-    "silver": ". Сташевський Валентин",
-    "bronze": [
-     ". Ширяєв Дмитро",
-     ". Акользін Дмитро"
-    ]
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5481,14 +5444,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Омельченко Владислав",
-    "silver": ". Сташевський Валентин",
-    "bronze": [
-     ". Морозов Сергій",
-     ". Чумак Дмитро"
-    ]
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5515,14 +5471,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Омельченко Владислав",
-    "silver": ". Байдоха Анатолій",
-    "bronze": [
-     ". Кисельов Дмитро",
-     ". Подольчук Антон"
-    ]
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5576,13 +5525,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": "",
-    "silver": "Маріуполь",
-    "bronze": [
-     "Дніпро"
-    ]
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5609,14 +5552,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Сташевський Валентин",
-    "silver": ". Мамика Олександр",
-    "bronze": [
-     ". Пекарук Олексій",
-     ". Зарайський Володимир"
-    ]
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5643,13 +5579,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Мамика Олександр",
-    "silver": ". Сташевський Валентин",
-    "bronze": [
-     ". Ткаченко Сергій"
-    ]
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5676,11 +5606,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Клочков Володимир",
-    "silver": null,
-    "bronze": []
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5707,11 +5633,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Омельченко Владислав / Грушовець Ольга",
-    "silver": null,
-    "bronze": []
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5738,14 +5660,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Ковалев Дмитрий",
-    "silver": ". Гетманцев Александр",
-    "bronze": [
-     ". Усик Артем",
-     ". Мамыка Александр"
-    ]
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5772,14 +5687,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Мамыка Александр",
-    "silver": ". Омельченко Владислав",
-    "bronze": [
-     ". Усик Артем",
-     ". Григоренко Денис"
-    ]
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5806,14 +5714,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Зольдин Феликс",
-    "silver": ". Усик Артем",
-    "bronze": [
-     ". Сташевский В.",
-     ". Бутрий Владимир"
-    ]
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5840,13 +5741,7 @@
      "type": "protocol_doc"
     }
    },
-   "medals": {
-    "gold": ". Невенчаный Э./Омельченко В.",
-    "silver": ". Черный В./Антипов Д.",
-    "bronze": [
-     ". Григоренко Д./Морозов С."
-    ]
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -5906,14 +5801,7 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": {
-    "gold": "Усик Артем",
-    "silver": "Мамыка Александр",
-    "bronze": [
-     "Бадира Александр",
-     "Ковалев Дмитрий"
-    ]
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -6003,11 +5891,7 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": {
-    "gold": ". Усик Артем",
-    "silver": null,
-    "bronze": []
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -6037,11 +5921,7 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": {
-    "gold": ". Омельченко Владислав",
-    "silver": ". Анисимов Денис",
-    "bronze": []
-   },
+   "medals": null,
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
