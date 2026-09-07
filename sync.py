@@ -23,6 +23,7 @@ PRIZES_MEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U5
 PRIZES_WOMEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U550qzdDKkLxenpx2LUYMQ8Uccqf9ZdkyP7ruIqdoPt_tX-hQWKhQOnTGc6HG6jiPQmQEuA/pub?output=csv&gid=109502045"
 RATINGS_SOURCES_PATH = "ratings_sources.json"
 NAKKA_API_BASE = "https://push.n01darts.com/api/v1"
+YOUTUBE_CHANNEL_ID = "UClyHuQB21ETTD7Q6V0cKmXQ"  # Ukrainian Darts Federation
 
 OUTPUT_PATH = "data.json"
 
@@ -714,6 +715,47 @@ def fill_protocol_medals(tournaments):
     return filled
 
 
+# ---------------------------------------------------------------------------
+# YouTube — останні відео каналу федерації через публічну RSS-стрічку
+# (не потребує API-ключа; сторінка каналу/videos блокує ботів, а цей
+# фід — ні).
+# ---------------------------------------------------------------------------
+def fetch_latest_youtube_videos(count=4):
+    import xml.etree.ElementTree as ET
+
+    url = f"https://www.youtube.com/feeds/videos.xml?channel_id={YOUTUBE_CHANNEL_ID}"
+    ns = {
+        "atom": "http://www.w3.org/2005/Atom",
+        "yt": "http://www.youtube.com/xml/schemas/2015",
+        "media": "http://search.yahoo.com/mrss/",
+    }
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (vfd-darts-sync)"})
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            xml_text = resp.read().decode("utf-8")
+        root = ET.fromstring(xml_text)
+        videos = []
+        for entry in root.findall("atom:entry", ns)[:count]:
+            video_id_el = entry.find("yt:videoId", ns)
+            title_el = entry.find("atom:title", ns)
+            published_el = entry.find("atom:published", ns)
+            thumb_el = entry.find(".//media:thumbnail", ns)
+            if video_id_el is None or title_el is None:
+                continue
+            video_id = video_id_el.text
+            videos.append({
+                "id": video_id,
+                "title": title_el.text,
+                "published": (published_el.text or "")[:10] if published_el is not None else "",
+                "thumbnail": thumb_el.get("url") if thumb_el is not None
+                             else f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg",
+            })
+        return videos
+    except Exception as e:
+        print(f"  YouTube RSS fetch failed: {e}")
+        return []
+
+
 def main():
     print("Fetching tournaments CSV...")
     t_rows = fetch_csv(TOURNAMENTS_CSV_URL)
@@ -785,6 +827,10 @@ def main():
     # повернемось до цього, коли протоколи будуть уніфіковані в один формат.
     # protocol_count = fill_protocol_medals(tournaments)
 
+    print("Fetching latest YouTube videos...")
+    youtube_videos = fetch_latest_youtube_videos(4)
+    print(f"  Got {len(youtube_videos)} videos")
+
     data = {
         "meta": {
             "lastUpdated": datetime.now(timezone.utc).isoformat(),
@@ -795,6 +841,7 @@ def main():
         "leaderboardWomen": women_aggregate,
         "ratings": ratings,
         "nakkaPlayerStats": nakka_player_records,
+        "youtubeVideos": youtube_videos,
     }
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
