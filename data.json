@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-07T13:03:39.936211+00:00",
+  "lastUpdated": "2026-09-07T14:25:14.191476+00:00",
   "tournamentsCount": 180
  },
  "tournaments": [
@@ -84806,6 +84806,32 @@
    "rank": 1,
    "match": 5,
    "winMatch": 5
+  }
+ ],
+ "youtubeVideos": [
+  {
+   "id": "jfDZdKuT7SM",
+   "title": "ВФД КУ Чоловіки (особистий залік) Одеса 2026",
+   "published": "2026-09-06",
+   "thumbnail": "https://i3.ytimg.com/vi/jfDZdKuT7SM/hqdefault.jpg"
+  },
+  {
+   "id": "cx4nj0_8dqE",
+   "title": "ВФД КУ Чоловіки (особистий залік) Одеса 2026 ч.2",
+   "published": "2026-09-06",
+   "thumbnail": "https://i4.ytimg.com/vi/cx4nj0_8dqE/hqdefault.jpg"
+  },
+  {
+   "id": "MT_BImyYQkM",
+   "title": "ВФД ЧУ Чоловіки (пари) Одеса 2026 ч.2",
+   "published": "2026-09-06",
+   "thumbnail": "https://i2.ytimg.com/vi/MT_BImyYQkM/hqdefault.jpg"
+  },
+  {
+   "id": "H7viXNtL21Q",
+   "title": "ВФД ЧУ Чоловіки (пари) Одеса 2026 ч.3",
+   "published": "2026-09-05",
+   "thumbnail": "https://i1.ytimg.com/vi/H7viXNtL21Q/hqdefault.jpg"
   }
  ]
 }
