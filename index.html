@@ -503,6 +503,7 @@
           <th class="num" data-key="men">Чол.</th>
           <th class="num" data-key="women">Жін.</th>
           <th class="num" data-key="menAvg">Avg Ч.</th>
+          <th class="num" data-key="womenAvg">Avg Ж.</th>
           <th>Призери 🥇🥈🥉</th>
           <th>Джерела</th>
         </tr>
@@ -857,7 +858,7 @@ function renderTournaments(){
 
   const body = document.getElementById('tournaments-body');
   if(rows.length === 0){
-    body.innerHTML = `<tr class="empty-row"><td colspan="11">Нічого не знайдено. Спробуйте інший запит.</td></tr>`;
+    body.innerHTML = `<tr class="empty-row"><td colspan="12">Нічого не знайдено. Спробуйте інший запит.</td></tr>`;
     document.getElementById('tournaments-more').innerHTML = '';
     return;
   }
@@ -873,6 +874,7 @@ function renderTournaments(){
       <td class="num mono">${fmtNum(t.men)}</td>
       <td class="num mono">${fmtNum(t.women)}</td>
       <td class="num mono">${fmtNum(t.menAvg)}</td>
+      <td class="num mono">${fmtNum(t.womenAvg)}</td>
       <td>${renderMedalCell(t.nakkaMedals || t.medals, t.nakkaMedalsWomen || t.medalsWomen)}</td>
       <td>${renderLinkChips(t.links)}</td>
     </tr>
@@ -1192,7 +1194,7 @@ async function loadData(){
   } catch(err){
     console.error('Не вдалося завантажити data.json', err);
     document.querySelectorAll('.table-wrap tbody').forEach(tb=>{
-      tb.innerHTML = '<tr class="empty-row"><td colspan="11">Не вдалося завантажити дані. Спробуйте оновити сторінку.</td></tr>';
+      tb.innerHTML = '<tr class="empty-row"><td colspan="12">Не вдалося завантажити дані. Спробуйте оновити сторінку.</td></tr>';
     });
   }
 }

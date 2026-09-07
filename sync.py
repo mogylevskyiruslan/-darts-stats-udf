@@ -527,6 +527,27 @@ def resolve_name(name, name_index, canonical_names=None, fuzzy_cutoff=0.84):
 
 
 
+def extract_podium_tpids(stats):
+    """Повертає {1: tpid, 2: tpid, 3: tpid}. Спершу пробує поле rank (працює
+    для турнірів на вибування). Якщо rank ніде не проставлено (типово для
+    групових/round-robin турнірів — часто трапляється в командних форматах),
+    інферимо місця самі: за перемогами в матчах, потім у сетах, потім у легах."""
+    podium = {}
+    for tpid, stat in stats.items():
+        rank = stat.get("rank")
+        if rank in (1, 2, 3):
+            podium[rank] = tpid
+    if podium:
+        return podium
+
+    ranked = sorted(
+        stats.items(),
+        key=lambda kv: (kv[1].get("winMatch", 0), kv[1].get("winSet", 0), kv[1].get("winLeg", 0)),
+        reverse=True,
+    )
+    return {i + 1: tpid for i, (tpid, _) in enumerate(ranked[:3])}
+
+
 def split_medals_by_gender(nakka_data, name_index, canonical_names, known_women, default_gender):
     """Визначає стать КОЖНОГО призера окремо за відомим списком імен, а не
     за тим, з якої колонки (Men/Women) прийшло посилання. Це критично для
@@ -536,11 +557,9 @@ def split_medals_by_gender(nakka_data, name_index, canonical_names, known_women,
     if not nakka_data:
         return None, None
     entries, stats = nakka_data["entries"], nakka_data["stats"]
+    podium_tpids = extract_podium_tpids(stats)
     podium_men, podium_women = {}, {}
-    for tpid, stat in stats.items():
-        rank = stat.get("rank")
-        if rank not in (1, 2, 3):
-            continue
+    for rank, tpid in podium_tpids.items():
         name = resolve_name(entries.get(tpid, tpid), name_index, canonical_names)
         if name in known_women:
             podium_women[rank] = name
