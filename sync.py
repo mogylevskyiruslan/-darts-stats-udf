@@ -525,26 +525,37 @@ def resolve_name(name, name_index, canonical_names=None, fuzzy_cutoff=0.84):
 
 
 
-def medals_from_nakka(nakka_data, name_index, canonical_names=None):
-    """Визначає 🥇🥈🥉 напряму з поля rank статистики (1/2/3 місце)."""
+def split_medals_by_gender(nakka_data, name_index, canonical_names, known_women, default_gender):
+    """Визначає стать КОЖНОГО призера окремо за відомим списком імен, а не
+    за тим, з якої колонки (Men/Women) прийшло посилання. Це критично для
+    Мікст/Пар/Команд, де Nakka часто веде ОДНУ спільну сітку на обидві
+    статі — раніше такі турніри показували лише "чоловічих" призерів,
+    бо посилання лежало в колонці Men."""
     if not nakka_data:
-        return None
+        return None, None
     entries, stats = nakka_data["entries"], nakka_data["stats"]
-    podium = {}
+    podium_men, podium_women = {}, {}
     for tpid, stat in stats.items():
         rank = stat.get("rank")
-        if rank in (1, 2, 3):
-            podium[rank] = resolve_name(entries.get(tpid, tpid), name_index, canonical_names)
-    if not podium:
-        return None
-    return {
-        "gold": podium.get(1),
-        "silver": podium.get(2),
-        "bronze": [podium[3]] if podium.get(3) else [],
-    }
+        if rank not in (1, 2, 3):
+            continue
+        name = resolve_name(entries.get(tpid, tpid), name_index, canonical_names)
+        if name in known_women:
+            podium_women[rank] = name
+        elif default_gender == "women":
+            podium_women[rank] = name
+        else:
+            podium_men[rank] = name
+
+    def to_medal(podium):
+        if not podium:
+            return None
+        return {"gold": podium.get(1), "silver": podium.get(2), "bronze": [podium[3]] if podium.get(3) else []}
+
+    return to_medal(podium_men), to_medal(podium_women)
 
 
-def enrich_with_nakka(tournaments, name_index, canonical_names=None):
+def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women=None):
     """Проходить по всіх турнірах, тягне Nakka tdid з посилань, і додає
     t['nakkaMedals'] / t['nakkaMedalsWomen'] (надійні призери напряму з API)
     плюс повертає плаский список усіх гравець-турнір записів статистики
@@ -552,6 +563,7 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None):
     cache = {}
     player_records = []
     fetched = 0
+    known_women = known_women or set()
 
     for t in tournaments:
         links = t.get("links", {})
@@ -574,10 +586,10 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None):
         t["nakkaMedals"] = None
         t["nakkaMedalsWomen"] = None
 
-        for tdid, gender, medal_field in (
-            (men_tdid, "men", "nakkaMedals"),
-            (women_tdid, "women", "nakkaMedalsWomen"),
-            (other_tdid, "open", "nakkaMedals"),
+        for tdid, default_gender in (
+            (men_tdid, "men"),
+            (women_tdid, "women"),
+            (other_tdid, "men"),
         ):
             if not tdid:
                 continue
@@ -586,14 +598,22 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None):
             if not data:
                 continue
 
-            t[medal_field] = medals_from_nakka(data, name_index, canonical_names)
+            medals_men, medals_women = split_medals_by_gender(
+                data, name_index, canonical_names, known_women, default_gender
+            )
+            if medals_men and not t["nakkaMedals"]:
+                t["nakkaMedals"] = medals_men
+            if medals_women and not t["nakkaMedalsWomen"]:
+                t["nakkaMedalsWomen"] = medals_women
 
             for tpid, stat in data["stats"].items():
                 avg = player_avg(stat)
                 if avg is None:
                     continue  # гравець не зіграв жодного дротика — пропускаємо
+                name = resolve_name(data["entries"].get(tpid, tpid), name_index, canonical_names)
+                gender = "women" if name in known_women else default_gender
                 player_records.append({
-                    "name": resolve_name(data["entries"].get(tpid, tpid), name_index, canonical_names),
+                    "name": name,
                     "gender": gender,
                     "isUDL": t["isUDL"],
                     "date": t["date"],
@@ -607,6 +627,7 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None):
                     "match": stat.get("match", 0),
                     "winMatch": stat.get("winMatch", 0),
                 })
+
 
     print(f"  Fetched {fetched} Nakka tournament records ({len(cache)} unique tdid, "
           f"{sum(1 for v in cache.values() if v)} succeeded)")
@@ -752,7 +773,8 @@ def main():
     print(f"Parsed {len(ratings)} rating seasons")
 
     print("Fetching real Nakka tournament stats (this may take a few minutes)...")
-    nakka_player_records = enrich_with_nakka(tournaments, name_index, canonical_names)
+    known_women = {p["name"] for p in women_aggregate}
+    nakka_player_records = enrich_with_nakka(tournaments, name_index, canonical_names, known_women)
     print(f"Collected {len(nakka_player_records)} player-tournament stat rows from Nakka")
 
     # Протоколи (Google Docs) для турнірів до Nakka НЕ вмикаємо автоматично:

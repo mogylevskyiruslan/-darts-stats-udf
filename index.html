@@ -316,6 +316,17 @@
   .map-city-label{font-family:'Inter',sans-serif; font-size:9px; fill:var(--cream); pointer-events:none;}
   .map-city-count{font-family:'JetBrains Mono',monospace; font-size:8px; fill:var(--bg); font-weight:700; text-anchor:middle; pointer-events:none;}
 
+  /* YOUTUBE */
+  .youtube-card{
+    display:flex; align-items:center; gap:16px; max-width:520px;
+    background:var(--panel); border:1px solid var(--line); border-radius:8px;
+    padding:18px 20px; text-decoration:none; transition:border-color .15s, transform .15s;
+  }
+  .youtube-card:hover{border-color:#FF0000; transform:translateY(-1px);}
+  .youtube-icon{width:40px; height:40px; flex-shrink:0;}
+  .youtube-card strong{display:block; color:var(--cream); font-size:16px; margin-bottom:2px;}
+  .youtube-sub{display:block; color:var(--muted); font-size:12.5px;}
+
   .player-name.pp-clickable{cursor:pointer; text-decoration:underline; text-decoration-color:transparent; transition:text-decoration-color .15s;}
   .player-name.pp-clickable:hover{text-decoration-color:var(--gold); color:var(--gold);}
 
@@ -399,6 +410,7 @@
   <a href="#ratings">Рейтинги сезону</a>
   <a href="#records">Рекорди</a>
   <a href="#nakka-records">Рекорди статистики</a>
+  <a href="#youtube">Трансляції</a>
   <a href="#architecture">Як це працює</a>
   <label class="udl-toggle global-udl-toggle">
     <input type="checkbox" id="global-toggle-udl">
@@ -561,6 +573,18 @@
       <tbody id="records-body"></tbody>
     </table>
   </div>
+</section>
+
+<section id="youtube">
+  <h2><span class="idx">05.1</span> Трансляції</h2>
+  <p class="section-sub">Наживо та в записі — на YouTube-каналі Всеукраїнської Федерації Дартсу.</p>
+  <a class="youtube-card" href="https://www.youtube.com/@UkranianDartsFederation" target="_blank" rel="noopener">
+    <svg class="youtube-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" fill="#FF0000"/></svg>
+    <span>
+      <strong>Ukrainian Darts Federation</strong>
+      <span class="youtube-sub">youtube.com/@UkranianDartsFederation — перейти на канал</span>
+    </span>
+  </a>
 </section>
 
 <section id="architecture">
@@ -1115,6 +1139,7 @@ function parseUaDate(d){
 function svgLineChart(points, opts){
   // points: [{x: label, y: number}], малює просту лінію без бібліотек
   const w = opts.width || 720, h = opts.height || 220;
+  const invert = !!opts.invert; // true = менше значення вгорі (напр. місце в рейтингу)
   const padL = 46, padR = 16, padT = 26, padB = 34;
   const innerW = w - padL - padR, innerH = h - padT - padB;
   if(points.length === 0) return '';
@@ -1127,16 +1152,18 @@ function svgLineChart(points, opts){
 
   const xStep = points.length > 1 ? innerW / (points.length - 1) : 0;
   const xAt = i => padL + i * xStep;
-  const yAt = v => padT + innerH - ((v - yMin) / (yMax - yMin)) * innerH;
+  const yAt = v => invert
+    ? padT + ((v - yMin) / (yMax - yMin)) * innerH
+    : padT + innerH - ((v - yMin) / (yMax - yMin)) * innerH;
 
   const pathD = points.map((p,i) => `${i===0?'M':'L'}${xAt(i).toFixed(1)},${yAt(p.y).toFixed(1)}`).join(' ');
   const areaD = pathD + ` L${xAt(points.length-1).toFixed(1)},${(padT+innerH).toFixed(1)} L${xAt(0).toFixed(1)},${(padT+innerH).toFixed(1)} Z`;
 
   const gridLines = [0,0.5,1].map(t => {
     const y = padT + innerH * t;
-    const val = (yMax - (yMax-yMin)*t).toFixed(1);
+    const val = invert ? (yMin + (yMax-yMin)*t) : (yMax - (yMax-yMin)*t);
     return `<line x1="${padL}" y1="${y}" x2="${w-padR}" y2="${y}" stroke="var(--line)" stroke-width="1"/>
-            <text x="${padL-8}" y="${y+4}" text-anchor="end" font-size="10" fill="var(--muted)" font-family="JetBrains Mono, monospace">${val}</text>`;
+            <text x="${padL-8}" y="${y+4}" text-anchor="end" font-size="10" fill="var(--muted)" font-family="JetBrains Mono, monospace">${val.toFixed(1)}</text>`;
   }).join('');
 
   const xLabels = points.map((p,i) => {
@@ -1207,21 +1234,28 @@ function renderGrowthChart(){
     : '<div class="pp-chart-empty">Немає даних.</div>';
 }
 
+function parseRankNumber(rankStr){
+  if(rankStr == null) return null;
+  const m = String(rankStr).match(/-?\d+/);
+  return m ? parseInt(m[0], 10) : null;
+}
+
 function renderPlayerRatingChart(name){
   const seasonPoints = [];
   Object.keys(ratingsData).forEach(key => {
     const season = ratingsData[key];
     const row = season.rows.find(r => r.name === name);
-    if(row && row.total != null){
-      seasonPoints.push({ year: parseInt(season.year), gender: season.gender, total: row.total });
+    const rank = row ? parseRankNumber(row.rank) : null;
+    if(row && rank != null){
+      seasonPoints.push({ year: parseInt(season.year), gender: season.gender, rank });
     }
   });
   seasonPoints.sort((a,b) => a.year - b.year);
   if(seasonPoints.length < 2) return '';
-  const points = seasonPoints.map(p => ({ x: String(p.year), y: p.total }));
+  const points = seasonPoints.map(p => ({ x: String(p.year), y: p.rank }));
   return `
-    <div class="pp-section-title">Динаміка рейтингу за сезонами (Кубок України)</div>
-    <div class="pp-chart-wrap">${svgLineChart(points, {height:180})}</div>
+    <div class="pp-section-title">Динаміка місця за сезонами (Кубок України)</div>
+    <div class="pp-chart-wrap">${svgLineChart(points, {height:180, invert:true})}</div>
   `;
 }
 
