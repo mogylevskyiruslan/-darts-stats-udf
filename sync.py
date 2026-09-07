@@ -576,13 +576,44 @@ def split_medals_by_gender(nakka_data, name_index, canonical_names, known_women,
     return to_medal(podium_men), to_medal(podium_women)
 
 
+def fetch_match_averages(tdid, cache):
+    """Тягне список матчів турніру (match/list вже включає statsData за
+    замовчуванням — окремий запит на кожен матч не потрібен) і рахує
+    середній КОЖНОГО ОКРЕМОГО МАТЧУ для кожного гравця."""
+    if tdid in cache:
+        return cache[tdid]
+
+    matches = []
+    skip = 0
+    try:
+        while True:
+            url = f"{NAKKA_API_BASE}/match/list?tdid={tdid}&endMatch=1&count=100&skip={skip}"
+            resp = fetch_json(url)
+            time.sleep(0.05)
+            if resp.get("result") != 0:
+                break
+            batch = resp.get("list", [])
+            matches.extend(batch)
+            if len(batch) < 100 or skip > 500:  # запобіжник від нескінченної пагінації
+                break
+            skip += 100
+    except Exception as e:
+        print(f"    match/list fetch failed for {tdid}: {e}")
+
+    cache[tdid] = matches
+    return matches
+
+
 def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women=None):
     """Проходить по всіх турнірах, тягне Nakka tdid з посилань, і додає
     t['nakkaMedals'] / t['nakkaMedalsWomen'] (надійні призери напряму з API)
     плюс повертає плаский список усіх гравець-турнір записів статистики
-    (сировина для секції "Рекорди" — топ по середньому, 180-ках тощо)."""
+    (сировина для секції "Рекорди" — топ по середньому, 180-ках тощо) і
+    список середніх ПО КОЖНОМУ ОКРЕМОМУ МАТЧУ (для рекорду "середній за матч")."""
     cache = {}
+    match_cache = {}
     player_records = []
+    match_records = []
     fetched = 0
     known_women = known_women or set()
 
@@ -649,10 +680,39 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                     "winMatch": stat.get("winMatch", 0),
                 })
 
+            # Фаза 1: середній за окремий матч (match/list вже дає statsData,
+            # без потреби в окремому запиті на кожен матч).
+            matches = fetch_match_averages(tdid, match_cache)
+            for m in matches:
+                stats_data = m.get("statsData") or []
+                if len(stats_data) != 2:
+                    continue
+                for i, side in enumerate(stats_data):
+                    all_score = side.get("allScore") or 0
+                    all_darts = side.get("allDarts") or 0
+                    if all_darts <= 0:
+                        continue
+                    match_avg = round(all_score / all_darts * 3, 2)
+                    raw_name = side.get("name") or ""
+                    name = resolve_name(raw_name, name_index, canonical_names)
+                    gender = "women" if name in known_women else default_gender
+                    opponent_raw = stats_data[1 - i].get("name") or ""
+                    match_records.append({
+                        "name": name,
+                        "gender": gender,
+                        "isUDL": t["isUDL"],
+                        "date": t["date"],
+                        "tournament": t["name"],
+                        "city": t["city"],
+                        "opponent": resolve_name(opponent_raw, name_index, canonical_names),
+                        "avg": match_avg,
+                    })
 
     print(f"  Fetched {fetched} Nakka tournament records ({len(cache)} unique tdid, "
           f"{sum(1 for v in cache.values() if v)} succeeded)")
-    return player_records
+    print(f"  Fetched match-level averages: {len(match_records)} rows from "
+          f"{sum(len(v) for v in match_cache.values())} matches across {len(match_cache)} tdid")
+    return player_records, match_records
 
 
 # ---------------------------------------------------------------------------
@@ -903,7 +963,7 @@ def main():
 
     print("Fetching real Nakka tournament stats (this may take a few minutes)...")
     known_women = {p["name"] for p in women_aggregate}
-    nakka_player_records = enrich_with_nakka(tournaments, name_index, canonical_names, known_women)
+    nakka_player_records, nakka_match_records = enrich_with_nakka(tournaments, name_index, canonical_names, known_women)
     print(f"Collected {len(nakka_player_records)} player-tournament stat rows from Nakka")
 
     # Протоколи (Google Docs) для турнірів до Nakka НЕ вмикаємо автоматично:
@@ -933,6 +993,7 @@ def main():
         "leaderboardWomen": women_aggregate,
         "ratings": ratings,
         "nakkaPlayerStats": nakka_player_records,
+        "nakkaMatchStats": nakka_match_records,
         "youtubeVideos": youtube_videos,
         "telegramNews": telegram_news,
     }

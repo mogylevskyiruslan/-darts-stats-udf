@@ -601,6 +601,7 @@
   <div class="controls">
     <div class="records-tabs" id="records-tabs">
       <button type="button" class="records-tab active" data-cat="avgTournament">Середній за турнір</button>
+      <button type="button" class="records-tab" data-cat="avgMatch">Середній за матч</button>
       <button type="button" class="records-tab" data-cat="ton80Tournament">180-ки за турнір</button>
       <button type="button" class="records-tab" data-cat="ton80Career">180-ки за кар'єру</button>
       <button type="button" class="records-tab" data-cat="finishTournament">100+ за турнір</button>
@@ -911,6 +912,7 @@ const UKRAINE_MAP_PATH = "M525.2,271.3L503.9,272.1L497.4,279.6L488.1,281.6L480.1
 const UKRAINE_CITY_COORDS = {"Львів": [74.3, 139.8], "Черкаси": [329.6, 158.7], "Одеса": [287.1, 300.4], "Полтава": [408.8, 151.8], "Кривий Ріг": [371.9, 232.1], "Вижниця": [114.1, 215.7], "Луцьк": [115.5, 96.3], "Ужгород": [19.0, 198.1], "Славсько": [58.5, 186.3], "Харків": [462.2, 132.4], "Чернівці": [134.9, 213.8], "Київ": [280.7, 110.6]};
 
 let nakkaPlayerStats = [];
+let nakkaMatchStats = [];
 let youtubeVideos = [];
 let telegramNews = [];
 let ratingsData = {};
@@ -949,6 +951,15 @@ function renderShowMore(key, wrapId, total, rerenderFn){
 }
 
 const RECORD_CATEGORIES = {
+  avgMatch: {
+    title: 'Гравець', valueLabel: 'Середній', source: 'match',
+    compute(rows){
+      return rows
+        .sort((a,b) => b.avg - a.avg)
+        .slice(0, 10)
+        .map(r => ({ name: r.name, value: r.avg.toFixed(2), context: `vs ${r.opponent} · ${r.tournament} · ${r.date}` }));
+    }
+  },
   avgTournament: {
     title: 'Гравець', valueLabel: 'Середній',
     compute(rows){
@@ -1005,12 +1016,13 @@ const RECORD_CATEGORIES = {
 
 function renderNakkaRecords(){
   const includeUDL = document.getElementById('global-toggle-udl').checked;
-  const rows = nakkaPlayerStats.filter(r => (includeUDL || !r.isUDL) && r.gender === recordsGender);
+  const cat = RECORD_CATEGORIES[recordsCategory];
+  const sourceData = cat.source === 'match' ? nakkaMatchStats : nakkaPlayerStats;
+  const rows = sourceData.filter(r => (includeUDL || !r.isUDL) && r.gender === recordsGender);
 
   const countEl = document.getElementById('nakka-records-count');
-  if(countEl) countEl.textContent = new Set(rows.map(r => r.tournament + r.date)).size;
+  if(countEl) countEl.textContent = new Set(nakkaPlayerStats.filter(r => includeUDL || !r.isUDL).map(r => r.tournament + r.date)).size;
 
-  const cat = RECORD_CATEGORIES[recordsCategory];
   const results = cat.compute(rows);
 
   document.getElementById('records-head-row').innerHTML = `
@@ -1168,6 +1180,7 @@ async function loadData(){
     leaderboardWomen = data.leaderboardWomen || [];
     ratingsData = data.ratings || {};
     nakkaPlayerStats = data.nakkaPlayerStats || [];
+    nakkaMatchStats = data.nakkaMatchStats || [];
     youtubeVideos = data.youtubeVideos || [];
     telegramNews = data.telegramNews || [];
 
