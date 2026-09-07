@@ -780,7 +780,14 @@ def is_ukraine_relevant(text, known_names, known_cities):
 def strip_html_tags(fragment):
     text = re.sub(r"<br\s*/?>", "\n", fragment)
     text = re.sub(r"<[^>]+>", "", text)
-    return _html_module.unescape(text).strip()
+    text = _html_module.unescape(text).strip()
+    # Голі посилання не несуть змісту на карточці (Nakka/YouTube лінки в
+    # тексті поста) — прибираємо їх, лишаючи чистий текст новини.
+    text = re.sub(r"https?://\S+", "", text)
+    # Прибираємо порожні рядки, що лишились після видалення посилань
+    text = re.sub(r"\n\s*\n+", "\n", text)
+    text = re.sub(r"[ \t]+", " ", text)
+    return text.strip()
 
 
 def fetch_telegram_news(channel, known_names, known_cities, limit=6):

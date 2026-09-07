@@ -367,12 +367,13 @@
     overflow:hidden; text-decoration:none; transition:border-color .15s, transform .15s;
   }
   .news-card:hover{border-color:var(--gold); transform:translateY(-1px);}
-  .news-card img{width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:var(--panel-2);}
+  .news-card img{width:100%; aspect-ratio:1/1; object-fit:cover; object-position:top; display:block; background:var(--panel-2);}
   .news-card-body{padding:14px 16px;}
   .news-card-date{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--gold); margin-bottom:6px; display:block;}
   .news-card-text{font-size:13.5px; color:var(--cream); line-height:1.5;
-    display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden;
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
   }
+  .news-card-more{font-size:12px; color:var(--muted); margin-top:8px; display:block;}
 
   .player-name.pp-clickable{cursor:pointer; text-decoration:underline; text-decoration-color:transparent; transition:text-decoration-color .15s;}
   .player-name.pp-clickable:hover{text-decoration-color:var(--gold); color:var(--gold);}
@@ -1340,6 +1341,7 @@ function renderNews(){
       <div class="news-card-body">
         <span class="news-card-date">${n.date}</span>
         <div class="news-card-text">${n.text}</div>
+        <span class="news-card-more">Читати в Telegram →</span>
       </div>
     </a>
   `).join('');
