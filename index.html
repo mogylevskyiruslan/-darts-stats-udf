@@ -308,6 +308,14 @@
   .pp-rank-badge{font-family:'JetBrains Mono',monospace; font-size:12px;}
   .pp-rank-badge.medal{color:var(--gold); font-weight:700;}
 
+  /* MAP */
+  .map-wrap{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:16px; max-width:640px; margin:0 auto;}
+  .map-wrap svg{width:100%; height:auto; display:block;}
+  .map-city-dot{fill:var(--gold); stroke:var(--bg); stroke-width:1.5; cursor:pointer; transition:r .12s;}
+  .map-city-dot:hover{fill:#fff;}
+  .map-city-label{font-family:'Inter',sans-serif; font-size:9px; fill:var(--cream); pointer-events:none;}
+  .map-city-count{font-family:'JetBrains Mono',monospace; font-size:8px; fill:var(--bg); font-weight:700; text-anchor:middle; pointer-events:none;}
+
   .player-name.pp-clickable{cursor:pointer; text-decoration:underline; text-decoration-color:transparent; transition:text-decoration-color .15s;}
   .player-name.pp-clickable:hover{text-decoration-color:var(--gold); color:var(--gold);}
 
@@ -385,6 +393,8 @@
 <nav>
   <a href="#history">Історія</a>
   <a href="#tournaments">Турніри</a>
+  <a href="#growth">Динаміка</a>
+  <a href="#geography">Географія</a>
   <a href="#leaderboard">Рейтинг</a>
   <a href="#ratings">Рейтинги сезону</a>
   <a href="#records">Рекорди</a>
@@ -440,6 +450,20 @@
     </table>
   </div>
   <div class="show-more-wrap" id="tournaments-more"></div>
+</section>
+
+<section id="growth">
+  <h2><span class="idx">02.1</span> Зростання участі по роках</h2>
+  <p class="section-sub">Сумарна кількість учасників турнірів ВФД за кожен рік.</p>
+  <div class="pp-chart-wrap" id="growth-chart-wrap"></div>
+</section>
+
+<section id="geography">
+  <h2><span class="idx">02.2</span> Географія турнірів</h2>
+  <p class="section-sub">Міста, де приймали турніри Кубка України та Чемпіонати України. Розмір мітки — кількість турнірів у місті.</p>
+  <div class="map-wrap">
+    <svg id="ukraine-map" viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg"></svg>
+  </div>
 </section>
 
 <section id="leaderboard">
@@ -794,6 +818,9 @@ function renderLeaderboard(){
   renderShowMore('leaderboard', 'leaderboard-more', total, renderLeaderboard);
 }
 
+const UKRAINE_MAP_PATH = "M525.2,271.3L503.9,272.1L497.4,279.6L488.1,281.6L480.1,289.3L472.6,287.0L463.7,292.0L449.3,293.6L435.8,305.2L431.2,313.7L424.8,318.5L432.0,310.1L432.3,305.8L430.4,302.4L425.1,310.7L418.3,314.4L418.5,324.1L423.1,336.3L421.3,336.5L416.7,333.5L416.5,328.7L413.1,324.6L405.6,325.1L402.5,320.6L392.1,318.4L385.1,313.5L380.5,313.0L378.4,318.9L373.1,320.7L365.9,315.1L342.8,319.5L328.8,311.0L322.3,310.0L320.7,308.0L327.4,306.1L328.0,302.9L318.6,300.9L313.5,297.0L339.2,300.8L346.1,294.0L338.9,296.5L329.1,292.8L325.9,286.0L325.8,276.5L320.0,265.5L324.9,279.2L323.6,292.4L312.8,291.7L313.8,286.3L308.7,293.4L289.4,297.1L285.0,310.7L271.1,329.9L258.4,336.3L252.3,336.8L251.4,342.6L253.6,345.5L255.4,354.9L254.8,358.9L250.4,353.6L245.2,351.3L229.0,357.5L225.4,356.5L224.7,360.1L214.9,357.4L207.3,349.8L216.4,346.6L216.2,339.5L223.7,330.6L224.0,326.5L230.7,321.1L232.5,315.1L230.1,306.2L231.0,301.6L238.2,298.4L238.8,305.3L242.0,301.2L251.9,304.4L254.8,302.0L259.0,306.7L266.5,305.4L268.3,303.3L261.7,297.7L262.3,288.9L260.2,283.8L250.5,277.4L248.6,269.5L249.5,262.7L236.6,252.2L239.0,238.6L236.3,229.5L229.9,230.1L225.1,222.1L217.4,220.6L215.3,223.5L214.0,220.8L211.4,220.9L211.6,217.6L209.8,216.4L203.3,215.5L194.8,207.9L186.2,204.9L176.0,210.0L163.9,209.3L156.6,215.4L146.7,218.0L142.1,228.2L119.9,232.1L110.6,236.3L107.5,240.0L101.8,241.3L91.8,231.1L88.8,230.3L79.0,232.3L62.9,228.2L54.6,228.3L46.0,223.6L43.3,227.5L37.7,230.3L34.3,222.5L28.3,221.4L26.3,218.0L20.9,215.5L17.9,208.3L14.0,208.4L14.4,200.6L19.2,195.0L26.9,176.5L36.5,178.1L36.7,176.1L32.2,171.7L33.1,165.8L30.5,154.1L32.3,150.9L42.8,136.9L64.2,114.0L72.5,112.5L76.2,106.7L76.4,102.6L72.7,94.5L76.4,90.3L72.9,87.1L62.7,69.4L63.2,65.3L60.8,59.5L60.9,55.0L66.8,53.8L72.7,55.9L84.9,42.7L113.7,39.4L134.6,40.5L173.3,48.3L178.2,55.7L190.7,56.8L191.0,61.4L196.0,55.9L200.9,57.5L206.4,55.2L219.6,58.3L221.1,62.4L223.8,63.5L227.5,58.4L235.6,54.2L243.3,65.9L269.2,61.4L273.9,65.1L274.7,68.7L281.4,71.6L284.2,67.2L281.1,55.7L282.7,51.3L288.1,41.4L295.3,34.2L314.1,31.2L331.6,34.0L336.7,30.9L339.2,23.4L341.5,21.7L353.3,24.3L364.2,20.1L382.8,19.9L388.8,24.4L394.9,37.4L403.9,46.9L403.3,50.0L395.1,51.7L397.6,57.7L398.6,66.9L400.0,68.0L398.1,72.0L413.9,76.0L425.1,74.5L428.1,81.3L433.0,82.1L433.1,86.6L437.0,97.3L435.5,102.9L436.1,106.3L441.8,114.4L444.5,115.5L451.3,111.2L458.5,112.5L464.6,118.7L470.7,118.7L474.5,122.1L479.0,118.1L500.1,112.4L505.1,118.1L509.0,126.9L519.9,135.9L523.1,135.0L524.1,130.9L526.6,129.6L532.8,133.8L539.0,134.3L547.6,140.5L555.8,139.0L559.8,144.4L564.9,145.1L575.0,152.6L584.6,152.3L583.8,159.3L586.0,162.3L585.4,167.9L578.5,176.9L572.0,179.6L574.1,184.0L582.1,188.5L575.4,189.1L572.6,192.4L570.7,199.5L576.8,201.8L578.5,210.5L577.1,213.3L580.7,214.9L574.9,229.5L575.0,233.2L571.1,235.4L547.0,234.7L544.6,235.6L538.8,243.8L530.1,246.5L527.5,248.9L524.8,260.3L527.3,262.4L524.8,267.3L525.2,271.3ZM328.1,313.7L332.5,316.1L328.0,315.5L313.8,311.2L312.1,305.6L316.2,310.5L328.1,313.7ZM378.4,318.9L380.5,313.0L385.1,313.5L392.1,318.4L402.5,320.6L405.6,325.1L413.1,324.6L416.5,328.7L416.7,333.5L423.1,336.3L431.3,350.0L437.6,356.2L449.5,352.1L455.2,353.6L460.3,349.7L473.1,352.5L469.2,360.2L467.3,368.2L450.7,371.1L444.6,366.5L438.1,366.6L434.4,372.4L428.0,376.3L425.8,380.8L414.1,380.6L406.2,384.7L400.2,393.4L393.6,398.9L383.5,400.1L373.8,392.7L378.9,375.8L377.1,366.7L372.0,362.4L365.4,362.0L356.9,354.7L347.1,355.7L343.8,352.0L364.0,335.5L368.4,334.7L380.6,326.0L378.4,318.9Z";
+const UKRAINE_CITY_COORDS = {"Львів": [74.3, 139.8], "Черкаси": [329.6, 158.7], "Одеса": [287.1, 300.4], "Полтава": [408.8, 151.8], "Кривий Ріг": [371.9, 232.1], "Вижниця": [114.1, 215.7], "Луцьк": [115.5, 96.3], "Ужгород": [19.0, 198.1], "Славсько": [58.5, 186.3], "Харків": [462.2, 132.4], "Чернівці": [134.9, 213.8], "Київ": [280.7, 110.6]};
+
 let nakkaPlayerStats = [];
 let ratingsData = {};
 let recordsCategory = 'avgTournament';
@@ -1009,6 +1036,8 @@ document.getElementById('global-toggle-udl').addEventListener('change', ()=>{
   renderTournaments();
   renderHeroStats();
   renderNakkaRecords();
+  renderGrowthChart();
+  renderUkraineMap();
 });
 document.querySelectorAll('#leaderboard .gender-btn').forEach(btn=>{
   btn.addEventListener('click', ()=>{
@@ -1063,6 +1092,8 @@ async function loadData(){
     populateRatingSeasons();
     renderRatings();
     renderNakkaRecords();
+    renderGrowthChart();
+    renderUkraineMap();
   } catch(err){
     console.error('Не вдалося завантажити data.json', err);
     document.querySelectorAll('.table-wrap tbody').forEach(tb=>{
@@ -1124,6 +1155,67 @@ function svgLineChart(points, opts){
   </svg>`;
 }
 
+function renderUkraineMap(){
+  const includeUDL = document.getElementById('global-toggle-udl').checked;
+  const rows = tournaments.filter(t => includeUDL || !t.isUDL);
+  const cityCounts = {};
+  rows.forEach(t => { if(t.city) cityCounts[t.city] = (cityCounts[t.city]||0) + 1; });
+
+  const counts = Object.values(cityCounts);
+  const maxCount = counts.length ? Math.max(...counts) : 1;
+
+  const markers = Object.entries(UKRAINE_CITY_COORDS).map(([name, [x,y]]) => {
+    const count = cityCounts[name] || 0;
+    if(count === 0) return '';
+    const r = 6 + (count / maxCount) * 14;
+    return `
+      <g class="map-city-marker">
+        <circle class="map-city-dot" cx="${x}" cy="${y}" r="${r.toFixed(1)}"><title>${name}: ${count} турнір(ів)</title></circle>
+        <text class="map-city-count" x="${x}" y="${y+3}">${count}</text>
+        <text class="map-city-label" x="${x}" y="${y - r - 4}" text-anchor="middle">${name}</text>
+      </g>`;
+  }).join('');
+
+  document.getElementById('ukraine-map').innerHTML = `
+    <path d="${UKRAINE_MAP_PATH}" fill="var(--royal)" stroke="var(--gold)" stroke-width="1.2" fill-rule="evenodd" opacity="0.85"/>
+    ${markers}
+  `;
+}
+
+function renderGrowthChart(){
+  const includeUDL = document.getElementById('global-toggle-udl').checked;
+  const rows = tournaments.filter(t => includeUDL || !t.isUDL);
+  const byYear = {};
+  rows.forEach(t => {
+    const y = t.date.split('.').pop();
+    byYear[y] = (byYear[y]||0) + (t.total || 0);
+  });
+  const years = Object.keys(byYear).sort();
+  const points = years.map(y => ({ x: y, y: byYear[y] }));
+  document.getElementById('growth-chart-wrap').innerHTML = points.length
+    ? svgLineChart(points, {height: 200})
+    : '<div class="pp-chart-empty">Немає даних.</div>';
+}
+
+function renderPlayerRatingChart(name){
+  const seasonPoints = [];
+  Object.keys(ratingsData).forEach(key => {
+    const season = ratingsData[key];
+    const row = season.rows.find(r => r.name === name);
+    if(row && row.total != null){
+      seasonPoints.push({ year: parseInt(season.year), gender: season.gender, total: row.total });
+    }
+  });
+  seasonPoints.sort((a,b) => a.year - b.year);
+  if(seasonPoints.length < 2) return '';
+  const points = seasonPoints.map(p => ({ x: String(p.year), y: p.total }));
+  return `
+    <div class="pp-section-title">Динаміка рейтингу за сезонами (Кубок України)</div>
+    <div class="pp-chart-wrap">${svgLineChart(points, {height:180})}</div>
+  `;
+}
+
+
 function openPlayerProfile(name){
   const includeUDL = document.getElementById('global-toggle-udl').checked;
   let rows = nakkaPlayerStats.filter(r => r.name === name && (includeUDL || !r.isUDL));
@@ -1167,6 +1259,8 @@ function openPlayerProfile(name){
 
       <div class="pp-section-title">Динаміка середнього по турнірах</div>
       <div class="pp-chart-wrap">${avgChartSvg}</div>
+
+      ${renderPlayerRatingChart(name)}
 
       ${checkouts.length ? `
         <div class="pp-section-title">Найкращі закриття (топ ${checkouts.length})</div>
