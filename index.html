@@ -317,6 +317,13 @@
   .map-city-count{font-family:'JetBrains Mono',monospace; font-size:8px; fill:var(--bg); font-weight:700; text-anchor:middle; pointer-events:none;}
 
   /* YOUTUBE */
+  /* YOUTUBE */
+  .youtube-embed-wrap{
+    position:relative; width:100%; max-width:720px; aspect-ratio:16/9;
+    background:#000; border-radius:8px; overflow:hidden; margin-bottom:16px;
+    border:1px solid var(--line);
+  }
+  .youtube-embed-wrap iframe{position:absolute; inset:0; width:100%; height:100%; border:0;}
   .youtube-card{
     display:flex; align-items:center; gap:16px; max-width:520px;
     background:var(--panel); border:1px solid var(--line); border-radius:8px;
@@ -578,11 +585,20 @@
 <section id="youtube">
   <h2><span class="idx">05.1</span> Трансляції</h2>
   <p class="section-sub">Наживо та в записі — на YouTube-каналі Всеукраїнської Федерації Дартсу.</p>
+  <div class="youtube-embed-wrap">
+    <iframe
+      src="https://www.youtube.com/embed/live_stream?channel=UClyHuQB21ETTD7Q6V0cKmXQ"
+      title="Ukrainian Darts Federation — наживо"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
   <a class="youtube-card" href="https://www.youtube.com/@UkranianDartsFederation" target="_blank" rel="noopener">
     <svg class="youtube-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" fill="#FF0000"/></svg>
     <span>
-      <strong>Ukrainian Darts Federation</strong>
-      <span class="youtube-sub">youtube.com/@UkranianDartsFederation — перейти на канал</span>
+      <strong>Усі відео на каналі</strong>
+      <span class="youtube-sub">youtube.com/@UkranianDartsFederation — записи турнірів, огляди</span>
     </span>
   </a>
 </section>
