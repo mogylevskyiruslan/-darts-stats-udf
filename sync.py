@@ -346,7 +346,7 @@ def parse_ratings_sheet(rows):
     return {"columns": [label for _, label in score_cols], "rows": out_rows}
 
 
-def build_ratings(sources_path):
+def build_ratings(sources_path, name_index=None, canonical_names=None):
     try:
         with open(sources_path, encoding="utf-8") as f:
             config = json.load(f)
@@ -367,6 +367,9 @@ def build_ratings(sources_path):
             rows = fetch_csv(csv_url)
             parsed = parse_ratings_sheet(rows)
             if parsed:
+                if name_index is not None:
+                    for row in parsed["rows"]:
+                        row["name"] = resolve_name(row["name"], name_index, canonical_names)
                 parsed["label"] = label
                 parsed["year"] = year
                 parsed["gender"] = gender
@@ -454,32 +457,75 @@ def build_name_index(*name_lists):
     return {surname: counter.most_common(1)[0][0] for surname, counter in by_surname.items()}
 
 
-def resolve_name(name, name_index):
-    """Уніфікує ім'я гравця з Nakka під наш канонічний формат "Прізвище Ім'я":
+def build_canonical_names(*name_lists):
+    """Повний список канонічних імен (для нечіткого зіставлення) —
+    беремо з найнадійнішого джерела: самостійно порахований медальний залік
+    (він завжди українською, завжди "Прізвище Ім'я")."""
+    from collections import Counter
+    counter = Counter()
+    for names in name_lists:
+        for name in names:
+            if name and len(name.strip().split()) >= 2:
+                counter[name.strip()] += 1
+    # найчастіші написання йдуть першими — при однаковій схожості обирається популярніший варіант
+    return [name for name, _ in counter.most_common()]
+
+
+def resolve_name(name, name_index, canonical_names=None, fuzzy_cutoff=0.84):
+    """Уніфікує ім'я гравця під наш канонічний формат "Прізвище Ім'я":
     - одне слово (тільки прізвище) → шукає повне ім'я за прізвищем;
     - два слова у зворотному порядку ("Тетяна Харченко" замість
       "Харченко Тетяна") → розпізнає за другим словом і розвертає;
-    - вже правильний формат → просто нормалізує (бере канонічний запис,
-      якщо таке прізвище вже відоме, щоб прибрати різнобій в регістрі)."""
+    - одруківки й українська/російська різниця в написанні
+      ("Мгилевський"/"Могилевський", "Александр"/"Олександр") →
+      нечітке зіставлення з повним списком відомих імен;
+    - вже правильний формат → просто нормалізує."""
     if not name:
         return name
     parts = name.strip().split()
 
     if len(parts) == 1:
         full = name_index.get(parts[0])
-        return full or name.strip()
+        if full:
+            return full
 
     if len(parts) == 2:
         first_word, second_word = parts
         if first_word in name_index:
             return name_index[first_word]
         if second_word in name_index:
-            return name_index[second_word]
+            # Схоже на "Ім'я Прізвище" замість "Прізвище Ім'я" — але
+            # перевіряємо, що ім'я справді збігається з відомим, а не
+            # просто зливаємо різних людей з однаковим прізвищем.
+            canonical = name_index[second_word]
+            canon_parts = canonical.split()
+            canon_first = canon_parts[1] if len(canon_parts) > 1 else ""
+            if first_word == canon_first:
+                return canonical
+            if canonical_names:
+                import difflib
+                if difflib.SequenceMatcher(None, first_word, canon_first).ratio() >= fuzzy_cutoff:
+                    return canonical
 
-    return name.strip()
+    candidate = name.strip()
+
+    if canonical_names:
+        import difflib
+        best = difflib.get_close_matches(candidate, canonical_names, n=1, cutoff=fuzzy_cutoff)
+        if best:
+            return best[0]
+        if len(parts) == 2:
+            reversed_candidate = f"{parts[1]} {parts[0]}"
+            best_rev = difflib.get_close_matches(reversed_candidate, canonical_names, n=1, cutoff=fuzzy_cutoff)
+            if best_rev:
+                return best_rev[0]
+
+    return candidate
 
 
-def medals_from_nakka(nakka_data, name_index):
+
+
+def medals_from_nakka(nakka_data, name_index, canonical_names=None):
     """Визначає 🥇🥈🥉 напряму з поля rank статистики (1/2/3 місце)."""
     if not nakka_data:
         return None
@@ -488,7 +534,7 @@ def medals_from_nakka(nakka_data, name_index):
     for tpid, stat in stats.items():
         rank = stat.get("rank")
         if rank in (1, 2, 3):
-            podium[rank] = resolve_name(entries.get(tpid, tpid), name_index)
+            podium[rank] = resolve_name(entries.get(tpid, tpid), name_index, canonical_names)
     if not podium:
         return None
     return {
@@ -498,7 +544,7 @@ def medals_from_nakka(nakka_data, name_index):
     }
 
 
-def enrich_with_nakka(tournaments, name_index):
+def enrich_with_nakka(tournaments, name_index, canonical_names=None):
     """Проходить по всіх турнірах, тягне Nakka tdid з посилань, і додає
     t['nakkaMedals'] / t['nakkaMedalsWomen'] (надійні призери напряму з API)
     плюс повертає плаский список усіх гравець-турнір записів статистики
@@ -540,14 +586,14 @@ def enrich_with_nakka(tournaments, name_index):
             if not data:
                 continue
 
-            t[medal_field] = medals_from_nakka(data, name_index)
+            t[medal_field] = medals_from_nakka(data, name_index, canonical_names)
 
             for tpid, stat in data["stats"].items():
                 avg = player_avg(stat)
                 if avg is None:
                     continue  # гравець не зіграв жодного дротика — пропускаємо
                 player_records.append({
-                    "name": resolve_name(data["entries"].get(tpid, tpid), name_index),
+                    "name": resolve_name(data["entries"].get(tpid, tpid), name_index, canonical_names),
                     "gender": gender,
                     "isUDL": t["isUDL"],
                     "date": t["date"],
@@ -688,18 +734,25 @@ def main():
         t["medals"] = None
         t["medalsWomen"] = None
 
-    print("Fetching season ratings (Кубок України, all tabs)...")
-    ratings = build_ratings(RATINGS_SOURCES_PATH)
-    print(f"Parsed {len(ratings)} rating seasons")
-
-    print("Fetching real Nakka tournament stats (this may take a few minutes)...")
+    # Єдина база відомих імен (канонічно — "Прізвище Ім'я", українською),
+    # побудована з нашого найнадійнішого джерела — самостійно порахованого
+    # медального заліку. Використовується для уніфікації імен всюди далі:
+    # в рейтингах сезону і в статистиці Nakka — де прізвища часто пишуть
+    # по-різному (одруківки, порядок слів, українська/російська форма).
     name_sources = []
     name_sources.extend(p["name"] for p in men_aggregate)
     name_sources.extend(p["name"] for p in women_aggregate)
     name_index = build_name_index(name_sources)
-    print(f"  Built name index with {len(name_index)} known surnames")
+    canonical_names = build_canonical_names(name_sources)
+    print(f"  Built name index with {len(name_index)} known surnames, "
+          f"{len(canonical_names)} canonical full names")
 
-    nakka_player_records = enrich_with_nakka(tournaments, name_index)
+    print("Fetching season ratings (Кубок України, all tabs)...")
+    ratings = build_ratings(RATINGS_SOURCES_PATH, name_index, canonical_names)
+    print(f"Parsed {len(ratings)} rating seasons")
+
+    print("Fetching real Nakka tournament stats (this may take a few minutes)...")
+    nakka_player_records = enrich_with_nakka(tournaments, name_index, canonical_names)
     print(f"Collected {len(nakka_player_records)} player-tournament stat rows from Nakka")
 
     # Протоколи (Google Docs) для турнірів до Nakka НЕ вмикаємо автоматично:

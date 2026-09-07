@@ -423,7 +423,7 @@
 
 <section id="tournaments">
   <h2><span class="idx">02</span> Турніри</h2>
-  <p class="section-sub">Дані з таблиці «UA darts stat (учасники)» — <span id="tournaments-count">…</span> записів, <span id="tournaments-participants">…</span> учасників сумарно. Клікабельні джерела: Nakka (сітки/легі) або протоколи ВФД у Google Docs/Sheets. Пошук, сортування і фільтр за роком/організатором.</p>
+  <p class="section-sub">Дані з таблиці «UA darts stat (учасники)» — <span id="tournaments-count">…</span> записів, <span id="tournaments-participants">…</span> унікальних учасників (за даними Nakka). Клікабельні джерела: Nakka (сітки/легі) або протоколи ВФД у Google Docs/Sheets. Пошук, сортування і фільтр за роком/організатором.</p>
   <div class="controls">
     <input type="text" id="search" placeholder="Пошук за назвою турніру або містом…">
     <select id="filter-year"><option value="">Усі роки</option></select>
@@ -454,7 +454,7 @@
 
 <section id="growth">
   <h2><span class="idx">02.1</span> Зростання участі по роках</h2>
-  <p class="section-sub">Сумарна кількість учасників турнірів ВФД за кожен рік.</p>
+  <p class="section-sub">Кількість унікальних учасників турнірів ВФД за кожен рік (за даними Nakka).</p>
   <div class="pp-chart-wrap" id="growth-chart-wrap"></div>
 </section>
 
@@ -692,12 +692,14 @@ function renderLinkChips(links){
 function renderHeroStats(){
   const includeUDL = document.getElementById('global-toggle-udl').checked;
   const visible = tournaments.filter(t => includeUDL || !t.isUDL);
-  const totalParticipants = visible.reduce((s,t)=> s + (t.total||0), 0);
+  const uniquePlayers = new Set(
+    nakkaPlayerStats.filter(r => includeUDL || !r.isUDL).map(r => r.name)
+  );
   const cities = new Set(visible.map(t=>t.city).filter(Boolean));
   const years = new Set(visible.map(t=>t.date.split('.').pop()).filter(Boolean));
   const stats = [
     {num: visible.length, label:'турнірів у базі'},
-    {num: totalParticipants.toLocaleString('uk-UA'), label:'учасників сумарно'},
+    {num: uniquePlayers.size.toLocaleString('uk-UA'), label:'унікальних учасників'},
     {num: cities.size, label:'міст-господарів'},
     {num: years.size, label:'сезонів (' + Math.min(...years) + '–' + Math.max(...years) + ')'},
   ];
@@ -708,7 +710,7 @@ function renderHeroStats(){
   const countEl = document.getElementById('tournaments-count');
   const sumEl = document.getElementById('tournaments-participants');
   if(countEl) countEl.textContent = visible.length;
-  if(sumEl) sumEl.textContent = totalParticipants.toLocaleString('uk-UA');
+  if(sumEl) sumEl.textContent = uniquePlayers.size.toLocaleString('uk-UA');
 }
 
 let sortKey = 'date', sortDir = -1;
@@ -1184,14 +1186,15 @@ function renderUkraineMap(){
 
 function renderGrowthChart(){
   const includeUDL = document.getElementById('global-toggle-udl').checked;
-  const rows = tournaments.filter(t => includeUDL || !t.isUDL);
+  const rows = nakkaPlayerStats.filter(r => includeUDL || !r.isUDL);
   const byYear = {};
-  rows.forEach(t => {
-    const y = t.date.split('.').pop();
-    byYear[y] = (byYear[y]||0) + (t.total || 0);
+  rows.forEach(r => {
+    const y = r.date.split('.').pop();
+    if(!byYear[y]) byYear[y] = new Set();
+    byYear[y].add(r.name);
   });
   const years = Object.keys(byYear).sort();
-  const points = years.map(y => ({ x: y, y: byYear[y] }));
+  const points = years.map(y => ({ x: y, y: byYear[y].size }));
   document.getElementById('growth-chart-wrap').innerHTML = points.length
     ? svgLineChart(points, {height: 200})
     : '<div class="pp-chart-empty">Немає даних.</div>';
