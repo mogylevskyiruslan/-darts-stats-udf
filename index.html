@@ -453,6 +453,7 @@
   <a href="#growth">Динаміка</a>
   <a href="#geography">Географія</a>
   <a href="#leaderboard">Рейтинг</a>
+  <a href="#current-rating">Поточний рейтинг</a>
   <a href="#ratings">Рейтинги сезону</a>
   <a href="#records">Рекорди</a>
   <a href="#nakka-records">Рекорди статистики</a>
@@ -553,6 +554,30 @@
     </table>
   </div>
   <div class="show-more-wrap" id="leaderboard-more"></div>
+</section>
+
+<section id="current-rating">
+  <h2><span class="idx">03.05</span> Поточний рейтинг</h2>
+  <p class="section-sub">Живий рейтинг поточного сезону — оновлюється щодня разом з таблицею гравців. Клікніть на гравця, щоб побачити динаміку його позиції.</p>
+  <div class="controls">
+    <div class="gender-toggle">
+      <button type="button" class="gender-btn active" id="current-rating-men" data-gender="men">Чоловіки</button>
+      <button type="button" class="gender-btn" id="current-rating-women" data-gender="women">Жінки</button>
+    </div>
+    <input type="text" id="search-current-rating" placeholder="Пошук гравця…">
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr id="current-rating-head-row">
+          <th class="num">Місце</th>
+          <th>Гравець</th>
+        </tr>
+      </thead>
+      <tbody id="current-rating-body"></tbody>
+    </table>
+  </div>
+  <div class="show-more-wrap" id="current-rating-more"></div>
 </section>
 
 <section id="ratings">
@@ -913,6 +938,10 @@ const UKRAINE_CITY_COORDS = {"Львів": [74.3, 139.8], "Черкаси": [329
 
 let nakkaPlayerStats = [];
 let nakkaMatchStats = [];
+let currentRatingMen = null;
+let currentRatingWomen = null;
+let ratingHistory = null;
+let currentRatingGender = 'men';
 let youtubeVideos = [];
 let telegramNews = [];
 let ratingsData = {};
@@ -1065,6 +1094,46 @@ function populateRatingSeasons(){
   sel.dataset.populated = '1';
 }
 
+function renderCurrentRatingHeader(season){
+  const row = document.getElementById('current-rating-head-row');
+  const cols = (season && season.columns) || [];
+  row.innerHTML = `
+    <th class="num">Місце</th>
+    <th>Гравець</th>
+    ${cols.map(c => `<th class="num mono">${c}</th>`).join('')}
+    <th class="num mono">Рейтинг</th>
+  `;
+}
+
+function renderCurrentRating(){
+  const season = currentRatingGender === 'women' ? currentRatingWomen : currentRatingMen;
+  const q = (document.getElementById('search-current-rating').value || '').toLowerCase();
+  renderCurrentRatingHeader(season);
+
+  const body = document.getElementById('current-rating-body');
+  if(!season){
+    body.innerHTML = `<tr class="empty-row"><td colspan="10">Немає даних.</td></tr>`;
+    document.getElementById('current-rating-more').innerHTML = '';
+    return;
+  }
+  const rows = season.rows.filter(p => !q || p.name.toLowerCase().includes(q));
+  if(rows.length === 0){
+    body.innerHTML = `<tr class="empty-row"><td colspan="10">Нічого не знайдено.</td></tr>`;
+    document.getElementById('current-rating-more').innerHTML = '';
+    return;
+  }
+  const { visible, total } = paginate('current-rating', rows);
+  body.innerHTML = visible.map(p => `
+    <tr>
+      <td class="rank-cell num">${p.rank}</td>
+      <td class="player-name pp-clickable" onclick="openPlayerProfile('${p.name.replace(/'/g, "\\'")}')">${p.name}</td>
+      ${p.scores.map(v => `<td class="num mono">${fmtPts(v)}</td>`).join('')}
+      <td class="num mono" style="color:var(--gold); font-weight:700;">${fmtPts(p.total)}</td>
+    </tr>
+  `).join('');
+  renderShowMore('current-rating', 'current-rating-more', total, renderCurrentRating);
+}
+
 function renderRatingsHeader(season){
   const row = document.getElementById('ratings-head-row');
   const cols = (ratingsData[season] && ratingsData[season].columns) || [];
@@ -1133,6 +1202,16 @@ document.getElementById('filter-org').addEventListener('change', ()=>{ resetPagi
 
 document.getElementById('filter-rating-season').addEventListener('change', ()=>{ resetPagination('ratings'); renderRatings(); });
 document.getElementById('search-ratings').addEventListener('input', ()=>{ resetPagination('ratings'); renderRatings(); });
+document.getElementById('search-current-rating').addEventListener('input', ()=>{ resetPagination('current-rating'); renderCurrentRating(); });
+document.querySelectorAll('#current-rating .gender-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('#current-rating .gender-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    currentRatingGender = btn.dataset.gender;
+    resetPagination('current-rating');
+    renderCurrentRating();
+  });
+});
 document.getElementById('search-leaderboard').addEventListener('input', ()=>{ resetPagination('leaderboard'); renderLeaderboard(); });
 document.getElementById('global-toggle-udl').addEventListener('change', ()=>{
   resetPagination('tournaments');
@@ -1181,6 +1260,15 @@ async function loadData(){
     ratingsData = data.ratings || {};
     nakkaPlayerStats = data.nakkaPlayerStats || [];
     nakkaMatchStats = data.nakkaMatchStats || [];
+    currentRatingMen = data.currentRatingMen || null;
+    currentRatingWomen = data.currentRatingWomen || null;
+
+    try {
+      const histRes = await fetch('./rating_history.json', {cache: 'no-store'});
+      if(histRes.ok) ratingHistory = await histRes.json();
+    } catch(e) {
+      console.warn('rating_history.json недоступний', e);
+    }
     youtubeVideos = data.youtubeVideos || [];
     telegramNews = data.telegramNews || [];
 
@@ -1202,6 +1290,7 @@ async function loadData(){
     renderUkraineMap();
     renderYoutubeVideos();
     renderNews();
+    renderCurrentRating();
   } catch(err){
     console.error('Не вдалося завантажити data.json', err);
     document.querySelectorAll('.table-wrap tbody').forEach(tb=>{
@@ -1341,6 +1430,26 @@ function renderPlayerRatingChart(name){
   `;
 }
 
+function renderPlayerCurrentRatingChart(name){
+  if(!ratingHistory) return '';
+  const points = [];
+  ['men', 'women'].forEach(gender => {
+    const byDate = ratingHistory[gender] || {};
+    Object.keys(byDate).sort().forEach(date => {
+      const row = (byDate[date] || []).find(r => r.name === name);
+      const rank = row ? parseRankNumber(row.rank) : null;
+      if(rank != null){
+        points.push({ x: date.slice(5), y: rank }); // MM-DD
+      }
+    });
+  });
+  if(points.length < 2) return '';
+  return `
+    <div class="pp-section-title">Динаміка позиції в поточному рейтингу</div>
+    <div class="pp-chart-wrap">${svgLineChart(points, {height:180, invert:true})}</div>
+  `;
+}
+
 
 function renderNews(){
   const wrap = document.getElementById('news-grid');
@@ -1388,7 +1497,9 @@ function openPlayerProfile(name){
 
   const content = document.getElementById('player-modal-content');
   if(rows.length === 0){
-    content.innerHTML = `<div class="pp-header"><h2>${name}</h2></div><p class="pp-chart-empty">Немає даних Nakka для цього гравця (з поточними фільтрами).</p>`;
+    const ratingCharts = renderPlayerCurrentRatingChart(name) + renderPlayerRatingChart(name);
+    content.innerHTML = `<div class="pp-header"><h2>${name}</h2></div>` +
+      (ratingCharts || `<p class="pp-chart-empty">Немає даних Nakka для цього гравця (з поточними фільтрами).</p>`);
   } else {
     const gender = rows[0].gender === 'women' ? 'Жінки' : 'Чоловіки';
     const totalTournaments = rows.length;
@@ -1424,6 +1535,8 @@ function openPlayerProfile(name){
 
       <div class="pp-section-title">Динаміка середнього по турнірах</div>
       <div class="pp-chart-wrap">${avgChartSvg}</div>
+
+      ${renderPlayerCurrentRatingChart(name)}
 
       ${renderPlayerRatingChart(name)}
 

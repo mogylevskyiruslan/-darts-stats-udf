@@ -22,6 +22,9 @@ TOURNAMENTS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTZxNlB-y
 PRIZES_MEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U550qzdDKkLxenpx2LUYMQ8Uccqf9ZdkyP7ruIqdoPt_tX-hQWKhQOnTGc6HG6jiPQmQEuA/pub?output=csv&gid=0"
 PRIZES_WOMEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U550qzdDKkLxenpx2LUYMQ8Uccqf9ZdkyP7ruIqdoPt_tX-hQWKhQOnTGc6HG6jiPQmQEuA/pub?output=csv&gid=109502045"
 RATINGS_SOURCES_PATH = "ratings_sources.json"
+RATING_HISTORY_PATH = "rating_history.json"
+CURRENT_RATING_MEN_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRcI0fGxtfTf05rfc-bjKQEj1bwhh9f1n_Hs5zfZbA81Kd5DxBIHyxP54CJfJNSAl5FyZdq8H1J_pdA/pub?output=csv"
+CURRENT_RATING_WOMEN_URL = "https://docs.google.com/spreadsheets/d/13BTy_ZDFgS1sz5iZ7dKHr1FXnVsbS5hzAS08R91n3as/export?format=csv&gid=964362865"
 NAKKA_API_BASE = "https://push.n01darts.com/api/v1"
 YOUTUBE_CHANNEL_ID = "UClyHuQB21ETTD7Q6V0cKmXQ"  # Ukrainian Darts Federation
 TELEGRAM_CHANNEL = "fullbull"  # інформаційний партнер ВФД
@@ -567,7 +570,7 @@ def extract_podium_tpids(stats):
     return {i + 1: tpid for i, (tpid, _) in enumerate(ranked[:3])}
 
 
-def split_medals_by_gender(nakka_data, name_index, canonical_names, known_women, default_gender):
+def split_medals_by_gender(nakka_data, name_index, canonical_names, known_women, known_men, default_gender):
     """Визначає стать КОЖНОГО призера окремо за відомим списком імен, а не
     за тим, з якої колонки (Men/Women) прийшло посилання. Це критично для
     Мікст/Пар/Команд, де Nakka часто веде ОДНУ спільну сітку на обидві
@@ -582,6 +585,8 @@ def split_medals_by_gender(nakka_data, name_index, canonical_names, known_women,
         name = resolve_name(entries.get(tpid, tpid), name_index, canonical_names)
         if name in known_women:
             podium_women[rank] = name
+        elif name in known_men:
+            podium_men[rank] = name
         elif default_gender == "women":
             podium_women[rank] = name
         else:
@@ -623,7 +628,7 @@ def fetch_match_averages(tdid, cache):
     return matches
 
 
-def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women=None):
+def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women=None, known_men=None):
     """Проходить по всіх турнірах, тягне Nakka tdid з посилань, і додає
     t['nakkaMedals'] / t['nakkaMedalsWomen'] (надійні призери напряму з API)
     плюс повертає плаский список усіх гравець-турнір записів статистики
@@ -635,6 +640,7 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
     match_records = []
     fetched = 0
     known_women = known_women or set()
+    known_men = known_men or set()
 
     for t in tournaments:
         links = t.get("links", {})
@@ -670,7 +676,7 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                 continue
 
             medals_men, medals_women = split_medals_by_gender(
-                data, name_index, canonical_names, known_women, default_gender
+                data, name_index, canonical_names, known_women, known_men, default_gender
             )
             if medals_men and not t["nakkaMedals"]:
                 t["nakkaMedals"] = medals_men
@@ -682,7 +688,12 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                 if avg is None:
                     continue  # гравець не зіграв жодного дротика — пропускаємо
                 name = resolve_name(data["entries"].get(tpid, tpid), name_index, canonical_names)
-                gender = "women" if name in known_women else default_gender
+                if name in known_women:
+                    gender = "women"
+                elif name in known_men:
+                    gender = "men"
+                else:
+                    gender = default_gender
                 player_records.append({
                     "name": name,
                     "gender": gender,
@@ -719,7 +730,12 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                     match_avg = round(all_score / all_darts * 3, 2)
                     raw_name = side.get("name") or ""
                     name = resolve_name(raw_name, name_index, canonical_names)
-                    gender = "women" if name in known_women else default_gender
+                    if name in known_women:
+                        gender = "women"
+                    elif name in known_men:
+                        gender = "men"
+                    else:
+                        gender = default_gender
                     opponent_raw = stats_data[1 - i].get("name") or ""
                     match_records.append({
                         "name": name,
@@ -927,6 +943,45 @@ def fetch_telegram_news(channel, known_names, known_cities, limit=6):
     return filtered[:limit]
 
 
+# ---------------------------------------------------------------------------
+# Поточний рейтинг (живий, змінюється протягом сезону). На відміну від 15
+# архівних сезонів "Кубка України", тут нам потрібна ІСТОРІЯ — як позиція
+# кожного гравця змінювалась із часом. Документ сам показує лише різницю
+# з попередньої версії (+2/-1/=), тому щоб намалювати графік, ми самі
+# накопичуємо щоденні знімки в окремий файл, який зберігається в репозиторії
+# між запусками (на відміну від data.json, який завжди перезаписується
+# повністю, rating_history.json НАРОЩУЄТЬСЯ з кожним запуском).
+# ---------------------------------------------------------------------------
+def fetch_current_rating(url, name_index, canonical_names):
+    rows = fetch_csv(url)
+    parsed = parse_ratings_sheet(rows)
+    if not parsed:
+        return None
+    for row in parsed["rows"]:
+        row["name"] = resolve_name(row["name"], name_index, canonical_names)
+    return parsed
+
+
+def load_rating_history(path):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {"men": {}, "women": {}}
+
+
+def append_rating_snapshot(history, gender, snapshot_rows):
+    """Додає сьогоднішній знімок рейтингу. Якщо синхронізація вже
+    запускалась сьогодні (напр. вручну кілька разів), сьогоднішній запис
+    просто перезаписується — не множимо однакові дні."""
+    today = datetime.now(timezone.utc).date().isoformat()
+    history.setdefault(gender, {})[today] = [
+        {"name": r["name"], "rank": r["rank"], "total": r["total"]}
+        for r in snapshot_rows
+        if r.get("total") is not None
+    ]
+
+
 def main():
     print("Fetching tournaments CSV...")
     t_rows = fetch_csv(TOURNAMENTS_CSV_URL)
@@ -987,7 +1042,8 @@ def main():
 
     print("Fetching real Nakka tournament stats (this may take a few minutes)...")
     known_women = {p["name"] for p in women_aggregate}
-    nakka_player_records, nakka_match_records = enrich_with_nakka(tournaments, name_index, canonical_names, known_women)
+    known_men = {p["name"] for p in men_aggregate}
+    nakka_player_records, nakka_match_records = enrich_with_nakka(tournaments, name_index, canonical_names, known_women, known_men)
     print(f"Collected {len(nakka_player_records)} player-tournament stat rows from Nakka")
 
     # Протоколи (Google Docs) для турнірів до Nakka НЕ вмикаємо автоматично:
@@ -997,6 +1053,22 @@ def main():
     # fetch_protocol_podium / fill_protocol_medals лишаються в коді нижче —
     # повернемось до цього, коли протоколи будуть уніфіковані в один формат.
     # protocol_count = fill_protocol_medals(tournaments)
+
+    print("Fetching current-season live rating (men + women)...")
+    current_rating_men = fetch_current_rating(CURRENT_RATING_MEN_URL, name_index, canonical_names)
+    current_rating_women = fetch_current_rating(CURRENT_RATING_WOMEN_URL, name_index, canonical_names)
+    print(f"  Men: {len(current_rating_men['rows']) if current_rating_men else 0} players, "
+          f"Women: {len(current_rating_women['rows']) if current_rating_women else 0} players")
+
+    rating_history = load_rating_history(RATING_HISTORY_PATH)
+    if current_rating_men:
+        append_rating_snapshot(rating_history, "men", current_rating_men["rows"])
+    if current_rating_women:
+        append_rating_snapshot(rating_history, "women", current_rating_women["rows"])
+    with open(RATING_HISTORY_PATH, "w", encoding="utf-8") as f:
+        json.dump(rating_history, f, ensure_ascii=False, indent=1)
+    total_snapshots = sum(len(v) for v in rating_history.values())
+    print(f"  rating_history.json now has {total_snapshots} daily snapshots total")
 
     print("Fetching latest YouTube videos...")
     youtube_videos = fetch_latest_youtube_videos(3)
@@ -1018,6 +1090,8 @@ def main():
         "ratings": ratings,
         "nakkaPlayerStats": nakka_player_records,
         "nakkaMatchStats": nakka_match_records,
+        "currentRatingMen": current_rating_men,
+        "currentRatingWomen": current_rating_women,
         "youtubeVideos": youtube_videos,
         "telegramNews": telegram_news,
     }
