@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-07T15:00:23.855340+00:00",
+  "lastUpdated": "2026-09-07T15:08:24.282028+00:00",
   "tournamentsCount": 180
  },
  "tournaments": [
@@ -199,7 +199,13 @@
    },
    "medals": null,
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Гакман Степан",
+    "silver": "Почкай Андрій",
+    "bronze": [
+     "Льохарт Олег"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -404,7 +410,13 @@
      "Харків"
     ]
    },
-   "nakkaMedalsWomen": null
+   "nakkaMedalsWomen": {
+    "gold": "Черкаси -1 (Дніпровські перлини)",
+    "silver": "Кривий Ріг - 1 (Сталеві леді)",
+    "bronze": [
+     "Черкаси-2 (Lucky Shot)"
+    ]
+   }
   },
   {
    "total": 70,
@@ -559,7 +571,13 @@
    },
    "medals": null,
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Могилевський Руслан",
+    "silver": "Абчугський Олександр",
+    "bronze": [
+     "Гакман Степан"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -673,7 +691,13 @@
    },
    "medals": null,
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Залевський Володимир",
+    "silver": "Головень Юрій",
+    "bronze": [
+     "Абчугський Олександр"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -937,7 +961,13 @@
    },
    "medals": null,
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Окуліцький Євгеній",
+    "bronze": [
+     "Абчугський Олександр"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -2461,7 +2491,13 @@
    },
    "medals": null,
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Кіфор Ярослав",
+    "silver": "Ферар",
+    "bronze": [
+     "Мелашенко Владислав"
+    ]
+   },
    "nakkaMedalsWomen": {
     "gold": "Харченко Тетяна",
     "silver": "Лановенко Ксенія",
@@ -3421,7 +3457,13 @@
    },
    "medals": null,
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "DreamTeam",
+    "silver": "Буковина",
+    "bronze": [
+     "PDC (Porter Darts Club)"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -3674,7 +3716,13 @@
      "Пекарук Ілля"
     ]
    },
-   "nakkaMedalsWomen": null
+   "nakkaMedalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Ледєньова Наталія",
+    "bronze": [
+     "Соколова Вікторія"
+    ]
+   }
   },
   {
    "total": 14,
