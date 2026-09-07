@@ -488,14 +488,12 @@ MANUAL_NAME_ALIASES = {
 def resolve_name(name, name_index, canonical_names=None, fuzzy_cutoff=0.88):
     """Уніфікує ім'я гравця під наш канонічний формат "Прізвище Ім'я".
 
-    Найважливіше правило: НІКОЛИ не змінюємо прізвище на основі одного лише
-    прізвища, якщо в базі є кілька різних людей з таким прізвищем — інакше
-    "Гринів Юрій" перетвориться на "Гринів Олександр". Зіставлення завжди
-    йде по ЦІЛОМУ імені (нечітка схожість усього рядка), що природньо
-    захищає від злиття різних людей: "Гринів Олександр" і "Гринів Юрій"
-    відрізняються значною часткою рядка (низька схожість), а одруківка на
-    кшталт "Могилевский Руслан" — лише однією-двома літерами (висока
-    схожість)."""
+    Найважливіше правило: ІМ'Я НІКОЛИ не виправляємо нечітко — тільки
+    точний збіг. Короткі різні імена (напр. "Марина"/"Арина") можуть мати
+    оманливо високу формальну схожість рядка, хоча це різні люди. Нечітким
+    може бути тільки ПРІЗВИЩЕ (одруківки на кшталт "Мгилевський", або
+    українська/російська різниця написання на кшталт "Могилевский") — і
+    тільки коли ім'я збігається ТОЧНО."""
     if not name:
         return name
     candidate = name.strip()
@@ -516,26 +514,32 @@ def resolve_name(name, name_index, canonical_names=None, fuzzy_cutoff=0.88):
     if len(parts) == 2:
         first_word, second_word = parts
 
-        # Вже правильний порядок і точний збіг — нічого міняти не треба.
         if candidate in (canonical_names or []):
             return candidate
 
         if canonical_names:
             import difflib
-            # Нечітке зіставлення ЦІЛОГО імені (не лише прізвища) —
-            # ловить одруківки й укр./рос. відмінності написання, але не
-            # плутає різних людей з однаковим прізвищем.
-            best = difflib.get_close_matches(candidate, canonical_names, n=1, cutoff=fuzzy_cutoff)
-            if best:
-                return best[0]
+            # Пряме зіставлення: "Прізвище Ім'я" — ім'я (second_word) має
+            # збігатись ТОЧНО, прізвище (first_word) може бути одруківкою.
+            for cname in canonical_names:
+                cparts = cname.split()
+                if len(cparts) != 2:
+                    continue
+                csurname, cfirst = cparts
+                if cfirst == second_word:
+                    if difflib.SequenceMatcher(None, first_word, csurname).ratio() >= fuzzy_cutoff:
+                        return cname
 
-            # Порядок слів переплутано ("Ім'я Прізвище") — пробуємо розвернути.
-            reversed_candidate = f"{second_word} {first_word}"
-            if reversed_candidate in canonical_names:
-                return reversed_candidate
-            best_rev = difflib.get_close_matches(reversed_candidate, canonical_names, n=1, cutoff=fuzzy_cutoff)
-            if best_rev:
-                return best_rev[0]
+            # Порядок слів переплутано ("Ім'я Прізвище") — тут ім'я вже у
+            # позиції first_word, теж має збігатись ТОЧНО.
+            for cname in canonical_names:
+                cparts = cname.split()
+                if len(cparts) != 2:
+                    continue
+                csurname, cfirst = cparts
+                if cfirst == first_word:
+                    if difflib.SequenceMatcher(None, second_word, csurname).ratio() >= fuzzy_cutoff:
+                        return cname
 
     return candidate
 
