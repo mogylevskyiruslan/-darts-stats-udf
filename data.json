@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-07T12:28:08.551171+00:00",
+  "lastUpdated": "2026-09-07T13:03:39.936211+00:00",
   "tournamentsCount": 180
  },
  "tournaments": [
@@ -28289,7 +28289,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "06.09.2026",
    "tournament": "Кубок України",
@@ -28754,7 +28754,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "06.09.2026",
    "tournament": "Кубок України",
@@ -30914,7 +30914,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "15.08.2026",
    "tournament": "UDL FEST 2 CB&V SILVER",
@@ -30929,7 +30929,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "15.08.2026",
    "tournament": "UDL FEST 2 CB&V SILVER",
@@ -32159,7 +32159,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "12.07.2026",
    "tournament": "Кубок України",
@@ -32954,7 +32954,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "11.07.2026",
    "tournament": "ЧУ 2026 DIDO",
@@ -34394,7 +34394,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "20.06.2026",
    "tournament": "UDL SILVER",
@@ -35429,7 +35429,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "23.05.2026",
    "tournament": "Кубок України",
@@ -36794,7 +36794,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "17.05.2026",
    "tournament": "UDL FEST CB&V SILVER",
@@ -36974,7 +36974,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "17.05.2026",
    "tournament": "UDL FEST CB&V SILVER",
@@ -37949,7 +37949,7 @@
   },
   {
    "name": "Харченко Тетяна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "15.05.2026",
    "tournament": "UDL FEST CB&V GOLD",
@@ -38039,7 +38039,7 @@
   },
   {
    "name": "Ігнатюк Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "15.05.2026",
    "tournament": "UDL FEST CB&V GOLD",
@@ -38084,7 +38084,7 @@
   },
   {
    "name": "Молдован Емілія",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "15.05.2026",
    "tournament": "UDL FEST CB&V GOLD",
@@ -38294,7 +38294,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "15.05.2026",
    "tournament": "UDL FEST CB&V GOLD",
@@ -38744,7 +38744,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "26.04.2026",
    "tournament": "UDL BUKOVYNA CUP",
@@ -38804,7 +38804,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "26.04.2026",
    "tournament": "UDL BUKOVYNA CUP",
@@ -38849,7 +38849,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "26.04.2026",
    "tournament": "UDL BUKOVYNA CUP",
@@ -39359,7 +39359,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "25.04.2026",
    "tournament": "UDL SILVER",
@@ -39554,7 +39554,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "25.04.2026",
    "tournament": "UDL SILVER",
@@ -39659,7 +39659,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "25.04.2026",
    "tournament": "UDL SILVER",
@@ -40124,7 +40124,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "24.04.2026",
    "tournament": "UDL GOLD",
@@ -40229,7 +40229,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "24.04.2026",
    "tournament": "UDL GOLD",
@@ -41054,7 +41054,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "21.03.2026",
    "tournament": "UDL SILVER",
@@ -41219,7 +41219,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "21.03.2026",
    "tournament": "UDL SILVER",
@@ -41939,7 +41939,7 @@
   },
   {
    "name": "Усик Сергій/Мєльтєва Ірина",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -41954,7 +41954,7 @@
   },
   {
    "name": "Солтис Микита/Терещенко Любов",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -41969,7 +41969,7 @@
   },
   {
    "name": "Пивошенко Максим/Ганечко Марина",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -41984,7 +41984,7 @@
   },
   {
    "name": "Чепурний Едуард/Харченко Тетяна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -41999,7 +41999,7 @@
   },
   {
    "name": "Гакман Степан/Ігнатюк Наталія",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42014,7 +42014,7 @@
   },
   {
    "name": "Гончаров Едуард/Пивошенко Олена",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42029,7 +42029,7 @@
   },
   {
    "name": "Зубаль Василь/Шклярук Юлія",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42044,7 +42044,7 @@
   },
   {
    "name": "Овсієнко Євген/Паламар Оксана",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42059,7 +42059,7 @@
   },
   {
    "name": "Омельченко Владислав/Карнаух Валентина",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42074,7 +42074,7 @@
   },
   {
    "name": "Микитин Ярослав/Спекторенко Катерина",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42089,7 +42089,7 @@
   },
   {
    "name": "Матвіїшин Михайло/Павленко Ірина",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42104,7 +42104,7 @@
   },
   {
    "name": "Абчугський Олександр/Ледєньова Наталія",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42119,7 +42119,7 @@
   },
   {
    "name": "Могилевський Руслан/Лановенко Ксенія",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42134,7 +42134,7 @@
   },
   {
    "name": "Мильо Тарас/Чабанова Анна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42149,7 +42149,7 @@
   },
   {
    "name": "Агневщиков Юрій/Зайцева Інна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42164,7 +42164,7 @@
   },
   {
    "name": "Кіфор Ярослав/Гончаренко Інна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42179,7 +42179,7 @@
   },
   {
    "name": "Цебратенко Андрій/Шклярук Наталія",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42194,7 +42194,7 @@
   },
   {
    "name": "Залевський Володимир/Білоус Жанна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42209,7 +42209,7 @@
   },
   {
    "name": "Почкай Андрій/Почкай Маріанна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42224,7 +42224,7 @@
   },
   {
    "name": "Гринів Олександр/Молдован Вероніка",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "22.02.2026",
    "tournament": "ЧУ 2026 Мікст",
@@ -42404,7 +42404,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "21.02.2026",
    "tournament": "Кубок України",
@@ -42599,7 +42599,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "21.02.2026",
    "tournament": "Кубок України",
@@ -43109,7 +43109,7 @@
   },
   {
    "name": "Олександр Гринів/Хоменко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43124,7 +43124,7 @@
   },
   {
    "name": "Плакса Андрій/Попова Наталі",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43139,7 +43139,7 @@
   },
   {
    "name": "Солтис Микита/Коломієць Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43154,7 +43154,7 @@
   },
   {
    "name": "Цілуйко Владислав/Логоша Євген",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43169,7 +43169,7 @@
   },
   {
    "name": "Омельченко Владислав/Ананенко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43184,7 +43184,7 @@
   },
   {
    "name": "Павленко Сергій/Топчу Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43199,7 +43199,7 @@
   },
   {
    "name": "Абчугський Олександр/Головень Юрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43214,7 +43214,7 @@
   },
   {
    "name": "Залевський Володимир/Воронюк Михайло",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43229,7 +43229,7 @@
   },
   {
    "name": "Овсієнко Євген/Антіпов Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43244,7 +43244,7 @@
   },
   {
    "name": "Зубаль Василь/Шклярук Наталія",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43259,7 +43259,7 @@
   },
   {
    "name": "Заборний Д/Царолунга М",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43274,7 +43274,7 @@
   },
   {
    "name": "Стецишин Віталій/Кордівський Арсен",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43289,7 +43289,7 @@
   },
   {
    "name": "Панченко Олексій/Бабанін Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43304,7 +43304,7 @@
   },
   {
    "name": "Цебратенко Андрій/Гончаренко Інна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43319,7 +43319,7 @@
   },
   {
    "name": "Арійчук Святослав/Аверін Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43334,7 +43334,7 @@
   },
   {
    "name": "Мильо Тарас/Білоус Жанна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43349,7 +43349,7 @@
   },
   {
    "name": "Чепак Василь/Ананенко Альона",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43364,7 +43364,7 @@
   },
   {
    "name": "Мелашенко Владислав/Почкай Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43379,7 +43379,7 @@
   },
   {
    "name": "Лагутін Андрій/Діденко Оксана",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43394,7 +43394,7 @@
   },
   {
    "name": "Гакман Степан/Чабанова Анна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43409,7 +43409,7 @@
   },
   {
    "name": "Баранов Олександр/Паламар Оксана",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43424,7 +43424,7 @@
   },
   {
    "name": "Царолунга Дмитро/Заборний Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43439,7 +43439,7 @@
   },
   {
    "name": "Сташевський Валентин/Харченко Тетяна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43454,7 +43454,7 @@
   },
   {
    "name": "Плакса Володимир/Фісяк Павло",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43469,7 +43469,7 @@
   },
   {
    "name": "Кондарюк Микола/Ільясова Альбіна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43484,7 +43484,7 @@
   },
   {
    "name": "Sol Deen/Карнаух Валентина",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43499,7 +43499,7 @@
   },
   {
    "name": "Білоус Іван/Мокан Микола",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43514,7 +43514,7 @@
   },
   {
    "name": "Могилевський Руслан/Селіхова Тетяна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43529,7 +43529,7 @@
   },
   {
    "name": "Усик Артем/Агневщиков Юрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43544,7 +43544,7 @@
   },
   {
    "name": "Корпусов Андрій/Спекторенко Катерина",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43559,7 +43559,7 @@
   },
   {
    "name": "Арійчук Олександр/Лановенко Ксенія",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43574,7 +43574,7 @@
   },
   {
    "name": "Окуліцький Євгеній/Сапронов Петро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43589,7 +43589,7 @@
   },
   {
    "name": "Микитин Ярослав/Ігнатюк Наталія",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43604,7 +43604,7 @@
   },
   {
    "name": "Льохарт Олег/Терещенко Любов",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "25.01.2026",
    "tournament": "UDL SLAVSKO CUP",
@@ -43919,7 +43919,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "24.01.2026",
    "tournament": "UDL SILVER",
@@ -44024,7 +44024,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "24.01.2026",
    "tournament": "UDL SILVER",
@@ -44324,7 +44324,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "24.01.2026",
    "tournament": "UDL SILVER",
@@ -44684,7 +44684,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "23.01.2026",
    "tournament": "UDL GOLD",
@@ -44744,7 +44744,7 @@
   },
   {
    "name": "Ігнатюк Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "23.01.2026",
    "tournament": "UDL GOLD",
@@ -44834,7 +44834,7 @@
   },
   {
    "name": "Харченко Тетяна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "23.01.2026",
    "tournament": "UDL GOLD",
@@ -44939,7 +44939,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "23.01.2026",
    "tournament": "UDL GOLD",
@@ -45059,7 +45059,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "23.01.2026",
    "tournament": "UDL GOLD",
@@ -45194,7 +45194,7 @@
   },
   {
    "name": "Молдован Емілія",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "14.12.2025",
    "tournament": "Кубок України",
@@ -45524,7 +45524,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "14.12.2025",
    "tournament": "Кубок України",
@@ -45569,7 +45569,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "14.12.2025",
    "tournament": "Кубок України",
@@ -45599,7 +45599,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "14.12.2025",
    "tournament": "Кубок України",
@@ -45614,7 +45614,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "14.12.2025",
    "tournament": "Кубок України",
@@ -45689,7 +45689,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "14.12.2025",
    "tournament": "Кубок України",
@@ -46229,7 +46229,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "13.12.2025",
    "tournament": "ЧУ 2025",
@@ -46334,7 +46334,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "13.12.2025",
    "tournament": "ЧУ 2025",
@@ -46514,7 +46514,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "13.12.2025",
    "tournament": "ЧУ 2025",
@@ -46559,7 +46559,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "13.12.2025",
    "tournament": "ЧУ 2025",
@@ -46619,7 +46619,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "13.12.2025",
    "tournament": "ЧУ 2025",
@@ -47144,7 +47144,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "12.12.2025",
    "tournament": "UDL GRAND FINAL",
@@ -47264,7 +47264,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "12.12.2025",
    "tournament": "UDL GRAND FINAL",
@@ -47894,7 +47894,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "16.11.2025",
    "tournament": "UDL STAGE 6",
@@ -48164,7 +48164,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "16.11.2025",
    "tournament": "UDL STAGE 6",
@@ -48764,7 +48764,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "12.10.2025",
    "tournament": "Кубок України",
@@ -49244,7 +49244,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "12.10.2025",
    "tournament": "Кубок України",
@@ -50204,7 +50204,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "13.09.2025",
    "tournament": "Кубок України",
@@ -50234,7 +50234,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "13.09.2025",
    "tournament": "Кубок України",
@@ -50264,7 +50264,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "13.09.2025",
    "tournament": "Кубок України",
@@ -51209,7 +51209,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "09.08.2025",
    "tournament": "UDL STAGE 5",
@@ -51254,7 +51254,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "09.08.2025",
    "tournament": "UDL STAGE 5",
@@ -51674,7 +51674,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "06.07.2025",
    "tournament": "ЧУ 2025 DIDO",
@@ -51839,7 +51839,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "06.07.2025",
    "tournament": "ЧУ 2025 DIDO",
@@ -52649,7 +52649,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "05.07.2025",
    "tournament": "Кубок України",
@@ -53084,7 +53084,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "05.07.2025",
    "tournament": "Кубок України",
@@ -53804,7 +53804,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "21.06.2025",
    "tournament": "UDL STAGE 4",
@@ -54029,7 +54029,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "21.06.2025",
    "tournament": "UDL STAGE 4",
@@ -54719,7 +54719,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "18.05.2025",
    "tournament": "Кубок України",
@@ -54899,7 +54899,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "18.05.2025",
    "tournament": "Кубок України",
@@ -55364,7 +55364,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "18.05.2025",
    "tournament": "Кубок України",
@@ -56144,7 +56144,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "27.04.2025",
    "tournament": "UDL BUKOVYNA CUP",
@@ -56174,7 +56174,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "27.04.2025",
    "tournament": "UDL BUKOVYNA CUP",
@@ -56189,7 +56189,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "27.04.2025",
    "tournament": "UDL BUKOVYNA CUP",
@@ -56294,7 +56294,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "27.04.2025",
    "tournament": "UDL BUKOVYNA CUP",
@@ -56849,7 +56849,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "26.04.2025",
    "tournament": "UDL STAGE 3",
@@ -56984,7 +56984,7 @@
   },
   {
    "name": "Молдован Емілія",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "26.04.2025",
    "tournament": "UDL STAGE 3",
@@ -56999,7 +56999,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "26.04.2025",
    "tournament": "UDL STAGE 3",
@@ -57014,7 +57014,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "26.04.2025",
    "tournament": "UDL STAGE 3",
@@ -57134,7 +57134,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "26.04.2025",
    "tournament": "UDL STAGE 3",
@@ -57989,7 +57989,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "22.03.2025",
    "tournament": "UDL STAGE 2",
@@ -58049,7 +58049,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "22.03.2025",
    "tournament": "UDL STAGE 2",
@@ -58664,7 +58664,7 @@
   },
   {
    "name": "Цебратенко/Терещенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58679,7 +58679,7 @@
   },
   {
    "name": "Рудковский/Шклярук",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58694,7 +58694,7 @@
   },
   {
    "name": "Залевський/Білоус",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58709,7 +58709,7 @@
   },
   {
    "name": "Абчугський/Букетова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58724,7 +58724,7 @@
   },
   {
    "name": "Капран/Шклярук",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58739,7 +58739,7 @@
   },
   {
    "name": "Мелашенко/Ледєньова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58754,7 +58754,7 @@
   },
   {
    "name": "Чепурний/Харченко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58769,7 +58769,7 @@
   },
   {
    "name": "Гончаров/Пивошенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58784,7 +58784,7 @@
   },
   {
    "name": "Чепак/Паламар",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58799,7 +58799,7 @@
   },
   {
    "name": "Микитин/Чабанова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58814,7 +58814,7 @@
   },
   {
    "name": "Солтис/Солтис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58829,7 +58829,7 @@
   },
   {
    "name": "Гончаренко/Гончаренко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58844,7 +58844,7 @@
   },
   {
    "name": "Кіфор/Ільясова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58859,7 +58859,7 @@
   },
   {
    "name": "Пекарук/Спекторенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58874,7 +58874,7 @@
   },
   {
    "name": "Любих/Карнаух",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -58889,7 +58889,7 @@
   },
   {
    "name": "Могилевський/Лановенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "16.02.2025",
    "tournament": "ЧУ 2025 Мікст",
@@ -59009,7 +59009,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "15.02.2025",
    "tournament": "Кубок України",
@@ -59369,7 +59369,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "15.02.2025",
    "tournament": "Кубок України",
@@ -59654,7 +59654,7 @@
   },
   {
    "name": "Павленко/Гончаренко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59669,7 +59669,7 @@
   },
   {
    "name": "Паламар/Заборний",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59684,7 +59684,7 @@
   },
   {
    "name": "Любих/Ледєньова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59699,7 +59699,7 @@
   },
   {
    "name": "Залевський/Зубаль",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59714,7 +59714,7 @@
   },
   {
    "name": "Плакса.А/Селіхова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59729,7 +59729,7 @@
   },
   {
    "name": "Григоренко/Ігнатюк",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59744,7 +59744,7 @@
   },
   {
    "name": "Пішта.Л/Гакман",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59759,7 +59759,7 @@
   },
   {
    "name": "Царолунга.М/Заборний.Д",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59774,7 +59774,7 @@
   },
   {
    "name": "Чепурний/Спекторенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59789,7 +59789,7 @@
   },
   {
    "name": "Корпусов/Гончаренко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59804,7 +59804,7 @@
   },
   {
    "name": "Кіфор/Лановенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59819,7 +59819,7 @@
   },
   {
    "name": "Плакса.В/Царолунга",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59834,7 +59834,7 @@
   },
   {
    "name": "Долганенко/Попова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59849,7 +59849,7 @@
   },
   {
    "name": "Бублик/Стецишин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59864,7 +59864,7 @@
   },
   {
    "name": "Кондарюк/Кулик",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59879,7 +59879,7 @@
   },
   {
    "name": "Микитин/Чабанова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59894,7 +59894,7 @@
   },
   {
    "name": "Білоус.І/Халеєв",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59909,7 +59909,7 @@
   },
   {
    "name": "Абчугський/Рудковский",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59924,7 +59924,7 @@
   },
   {
    "name": "Пішта.І/Панченко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59939,7 +59939,7 @@
   },
   {
    "name": "Могилевський/Солтис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59954,7 +59954,7 @@
   },
   {
    "name": "Василь/Гой",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59969,7 +59969,7 @@
   },
   {
    "name": "Пекарук/Сидоренко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59984,7 +59984,7 @@
   },
   {
    "name": "Білоус.Ж/Мильо",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -59999,7 +59999,7 @@
   },
   {
    "name": "Цебратенко/Овчаренко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -60014,7 +60014,7 @@
   },
   {
    "name": "Лагутін/Карнаух",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -60029,7 +60029,7 @@
   },
   {
    "name": "Sol/Шикирюк",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -60044,7 +60044,7 @@
   },
   {
    "name": "Ільясова/Арійчук",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "26.01.2025",
    "tournament": "UDL SLAVSKO CUP",
@@ -60164,7 +60164,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "25.01.2025",
    "tournament": "UDL STAGE 1",
@@ -60284,7 +60284,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "25.01.2025",
    "tournament": "UDL STAGE 1",
@@ -60614,7 +60614,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": true,
    "date": "25.01.2025",
    "tournament": "UDL STAGE 1",
@@ -60884,7 +60884,7 @@
   },
   {
    "name": "Кіфор Я./Ільясова А.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -60899,7 +60899,7 @@
   },
   {
    "name": "Абчугський О./Букетова І.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -60914,7 +60914,7 @@
   },
   {
    "name": "Любих С./Зволякевич О.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -60929,7 +60929,7 @@
   },
   {
    "name": "Залевський В./Білоус Ж.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -60944,7 +60944,7 @@
   },
   {
    "name": "Рудковський В./Шклярук Н.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -60959,7 +60959,7 @@
   },
   {
    "name": "Fateh Deen/Селіхова Т.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -60974,7 +60974,7 @@
   },
   {
    "name": "Назаренко О./Назаренко О.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -60989,7 +60989,7 @@
   },
   {
    "name": "Лагутін А./Спекторенко К.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61004,7 +61004,7 @@
   },
   {
    "name": "Цебратенко А./Карнаух В.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61019,7 +61019,7 @@
   },
   {
    "name": "Чепурний Е./Харченко Т.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61034,7 +61034,7 @@
   },
   {
    "name": "Солтис М./Солтис А.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61049,7 +61049,7 @@
   },
   {
    "name": "Ледєньова Н./Мелашенко В.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61064,7 +61064,7 @@
   },
   {
    "name": "Павленко С./Паламар О.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61079,7 +61079,7 @@
   },
   {
    "name": "Пекарук І./Чабанова А.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61094,7 +61094,7 @@
   },
   {
    "name": "Гакман С./Ігнатюк Н.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61109,7 +61109,7 @@
   },
   {
    "name": "Коломієць А./Коломієць О.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61124,7 +61124,7 @@
   },
   {
    "name": "Омельченко В./Терещенко Л.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61139,7 +61139,7 @@
   },
   {
    "name": "Могилевський Р./Лановенко К.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61154,7 +61154,7 @@
   },
   {
    "name": "Кулик В./Шклярук Ю.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61169,7 +61169,7 @@
   },
   {
    "name": "Панасюк С./Панасюк Л.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61184,7 +61184,7 @@
   },
   {
    "name": "Гончаров Е./Пивошенко О.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61199,7 +61199,7 @@
   },
   {
    "name": "Капран О./Капран А.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -61214,7 +61214,7 @@
   },
   {
    "name": "Гончаренко В./Гончаренко І.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "08.12.2024",
    "tournament": "ЧУ 2024 Мікст",
@@ -62384,7 +62384,7 @@
   },
   {
    "name": "Могилевський Руслан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62399,7 +62399,7 @@
   },
   {
    "name": "Чепурний Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62414,7 +62414,7 @@
   },
   {
    "name": "SOL Deen",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62429,7 +62429,7 @@
   },
   {
    "name": "Яненко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62444,7 +62444,7 @@
   },
   {
    "name": "Василь Чепак",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62459,7 +62459,7 @@
   },
   {
    "name": "Павленко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62474,7 +62474,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62489,7 +62489,7 @@
   },
   {
    "name": "Троценко Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62504,7 +62504,7 @@
   },
   {
    "name": "Абчугський Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62519,7 +62519,7 @@
   },
   {
    "name": "Пламада Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62534,7 +62534,7 @@
   },
   {
    "name": "Цебратенко Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62549,7 +62549,7 @@
   },
   {
    "name": "Лагутін Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62564,7 +62564,7 @@
   },
   {
    "name": "Гончаров Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62579,7 +62579,7 @@
   },
   {
    "name": "Корпусов Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62594,7 +62594,7 @@
   },
   {
    "name": "Плакса Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62609,7 +62609,7 @@
   },
   {
    "name": "Залевський Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62624,7 +62624,7 @@
   },
   {
    "name": "Кіфор Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62639,7 +62639,7 @@
   },
   {
    "name": "Омельченко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62654,7 +62654,7 @@
   },
   {
    "name": "Аверін Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62669,7 +62669,7 @@
   },
   {
    "name": "Мелашенко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62684,7 +62684,7 @@
   },
   {
    "name": "Микитин Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62699,7 +62699,7 @@
   },
   {
    "name": "Чорний Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62714,7 +62714,7 @@
   },
   {
    "name": "Григоренко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
@@ -62729,7 +62729,7 @@
   },
   {
    "name": "Пекарук Ілля",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62744,7 +62744,7 @@
   },
   {
    "name": "Залевський Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62759,7 +62759,7 @@
   },
   {
    "name": "Василь Чепак",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62774,7 +62774,7 @@
   },
   {
    "name": "Мильо Тарас",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62789,7 +62789,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62804,7 +62804,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62819,7 +62819,7 @@
   },
   {
    "name": "Павленко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62834,7 +62834,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62849,7 +62849,7 @@
   },
   {
    "name": "Мелашенко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62864,7 +62864,7 @@
   },
   {
    "name": "Сапронов Петро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62879,7 +62879,7 @@
   },
   {
    "name": "Абчугський Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62894,7 +62894,7 @@
   },
   {
    "name": "Цебратенко Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62909,7 +62909,7 @@
   },
   {
    "name": "Пішта Людмила",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62924,7 +62924,7 @@
   },
   {
    "name": "Омельченко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62939,7 +62939,7 @@
   },
   {
    "name": "Телятник Максим",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62954,7 +62954,7 @@
   },
   {
    "name": "Ющик Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62969,7 +62969,7 @@
   },
   {
    "name": "Пішта Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62984,7 +62984,7 @@
   },
   {
    "name": "Григоренко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -62999,7 +62999,7 @@
   },
   {
    "name": "Трубецькой Петро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63014,7 +63014,7 @@
   },
   {
    "name": "Сташевський Валентин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63029,7 +63029,7 @@
   },
   {
    "name": "Грицай Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63044,7 +63044,7 @@
   },
   {
    "name": "Яненко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63059,7 +63059,7 @@
   },
   {
    "name": "Агневщиков Юрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63074,7 +63074,7 @@
   },
   {
    "name": "Кіфор Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63089,7 +63089,7 @@
   },
   {
    "name": "Плакса Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63104,7 +63104,7 @@
   },
   {
    "name": "Пламада Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63119,7 +63119,7 @@
   },
   {
    "name": "Аверін Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63134,7 +63134,7 @@
   },
   {
    "name": "Любих Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63149,7 +63149,7 @@
   },
   {
    "name": "Юрій Гринів",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63164,7 +63164,7 @@
   },
   {
    "name": "SOL Deen",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63179,7 +63179,7 @@
   },
   {
    "name": "Плакса Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63194,7 +63194,7 @@
   },
   {
    "name": "Кулик Віталій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63209,7 +63209,7 @@
   },
   {
    "name": "Ільясова Альбіна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63224,7 +63224,7 @@
   },
   {
    "name": "Чорний Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63239,7 +63239,7 @@
   },
   {
    "name": "Гринів Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63254,7 +63254,7 @@
   },
   {
    "name": "Чепурний Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63269,7 +63269,7 @@
   },
   {
    "name": "Гончаров Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63284,7 +63284,7 @@
   },
   {
    "name": "Гакман Степан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63299,7 +63299,7 @@
   },
   {
    "name": "Микитин Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63314,7 +63314,7 @@
   },
   {
    "name": "Кондарюк Микола",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63329,7 +63329,7 @@
   },
   {
    "name": "Корпусов Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63344,7 +63344,7 @@
   },
   {
    "name": "Баранов Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63359,7 +63359,7 @@
   },
   {
    "name": "Долганенко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63374,7 +63374,7 @@
   },
   {
    "name": "Молдован Емілія",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
@@ -63389,7 +63389,7 @@
   },
   {
    "name": "BANDERSHTAT",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "09.11.2024",
    "tournament": "UDL CHERVNITSI CUP",
@@ -63404,7 +63404,7 @@
   },
   {
    "name": "БАТЯРИ",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "09.11.2024",
    "tournament": "UDL CHERVNITSI CUP",
@@ -63419,7 +63419,7 @@
   },
   {
    "name": "ODESA SHARKS",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "09.11.2024",
    "tournament": "UDL CHERVNITSI CUP",
@@ -63434,7 +63434,7 @@
   },
   {
    "name": "ЛЕВЕШ",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "09.11.2024",
    "tournament": "UDL CHERVNITSI CUP",
@@ -63449,7 +63449,7 @@
   },
   {
    "name": "ГІЛЬДІЯ",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "09.11.2024",
    "tournament": "UDL CHERVNITSI CUP",
@@ -63464,7 +63464,7 @@
   },
   {
    "name": "MISH-MASH",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "09.11.2024",
    "tournament": "UDL CHERVNITSI CUP",
@@ -63479,7 +63479,7 @@
   },
   {
    "name": "UBK",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "09.11.2024",
    "tournament": "UDL CHERVNITSI CUP",
@@ -63494,7 +63494,7 @@
   },
   {
    "name": "ГАБЕЛІ",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "09.11.2024",
    "tournament": "UDL CHERVNITSI CUP",
@@ -63509,7 +63509,7 @@
   },
   {
    "name": "ГАЛИЦЬКО-ВОЛИНСЬКІ ЛЕВИ",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "09.11.2024",
    "tournament": "UDL CHERVNITSI CUP",
@@ -63524,7 +63524,7 @@
   },
   {
    "name": "БФД",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "09.11.2024",
    "tournament": "UDL CHERVNITSI CUP",
@@ -63539,7 +63539,7 @@
   },
   {
    "name": "GL DARTS LEAGUE",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "09.11.2024",
    "tournament": "UDL CHERVNITSI CUP",
@@ -63554,7 +63554,7 @@
   },
   {
    "name": "PDC",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "09.11.2024",
    "tournament": "UDL CHERVNITSI CUP",
@@ -65744,7 +65744,7 @@
   },
   {
    "name": "Гончаров Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65759,7 +65759,7 @@
   },
   {
    "name": "Агневщиков Юрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65774,7 +65774,7 @@
   },
   {
    "name": "Залевський Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65789,7 +65789,7 @@
   },
   {
    "name": "Любих Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65804,7 +65804,7 @@
   },
   {
    "name": "Зуєв Олег",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65819,7 +65819,7 @@
   },
   {
    "name": "Цебратенко Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65834,7 +65834,7 @@
   },
   {
    "name": "Бабанін Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65849,7 +65849,7 @@
   },
   {
    "name": "Абчугський Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65864,7 +65864,7 @@
   },
   {
    "name": "Мелашенко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65879,7 +65879,7 @@
   },
   {
    "name": "Мартов Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65894,7 +65894,7 @@
   },
   {
    "name": "Пішта Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65909,7 +65909,7 @@
   },
   {
    "name": "Пекарук Ілля",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65924,7 +65924,7 @@
   },
   {
    "name": "Григоренко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65939,7 +65939,7 @@
   },
   {
    "name": "Плакса Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65954,7 +65954,7 @@
   },
   {
    "name": "Аверін Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65969,7 +65969,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65984,7 +65984,7 @@
   },
   {
    "name": "Лагутін Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -65999,7 +65999,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66014,7 +66014,7 @@
   },
   {
    "name": "Микитин Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66029,7 +66029,7 @@
   },
   {
    "name": "Пішта Людмила",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66044,7 +66044,7 @@
   },
   {
    "name": "Кумовіцький Павло",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66059,7 +66059,7 @@
   },
   {
    "name": "Кіфор Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66074,7 +66074,7 @@
   },
   {
    "name": "SOL Deen",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66089,7 +66089,7 @@
   },
   {
    "name": "Чепурний Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66104,7 +66104,7 @@
   },
   {
    "name": "Халеєв Костянтин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66119,7 +66119,7 @@
   },
   {
    "name": "Телятник Максим",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66134,7 +66134,7 @@
   },
   {
    "name": "Могилевський Руслан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66149,7 +66149,7 @@
   },
   {
    "name": "Долганенко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66164,7 +66164,7 @@
   },
   {
    "name": "Павленко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66179,7 +66179,7 @@
   },
   {
    "name": "Логоша Євген",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66194,7 +66194,7 @@
   },
   {
    "name": "Плакса Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66209,7 +66209,7 @@
   },
   {
    "name": "Троценко Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66224,7 +66224,7 @@
   },
   {
    "name": "Яворський Костянтин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66239,7 +66239,7 @@
   },
   {
    "name": "Чорний Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66254,7 +66254,7 @@
   },
   {
    "name": "Полтавець Світлана",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66269,7 +66269,7 @@
   },
   {
    "name": "Бублик Вячеслав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66284,7 +66284,7 @@
   },
   {
    "name": "Корпусов Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
@@ -66299,7 +66299,7 @@
   },
   {
    "name": "Лагутін Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66314,7 +66314,7 @@
   },
   {
    "name": "Логоша Євген",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66329,7 +66329,7 @@
   },
   {
    "name": "Любих Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66344,7 +66344,7 @@
   },
   {
    "name": "Абчугський Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66359,7 +66359,7 @@
   },
   {
    "name": "Залевський Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66374,7 +66374,7 @@
   },
   {
    "name": "Мартов Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66389,7 +66389,7 @@
   },
   {
    "name": "Халеєв Костянтин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66404,7 +66404,7 @@
   },
   {
    "name": "Пекарук Ілля",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66419,7 +66419,7 @@
   },
   {
    "name": "Мелашенко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66434,7 +66434,7 @@
   },
   {
    "name": "Плакса Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66449,7 +66449,7 @@
   },
   {
    "name": "Павленко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66464,7 +66464,7 @@
   },
   {
    "name": "Пішта Людмила",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66479,7 +66479,7 @@
   },
   {
    "name": "SOL Deen",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66494,7 +66494,7 @@
   },
   {
    "name": "Гончаров Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66509,7 +66509,7 @@
   },
   {
    "name": "Григоренко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66524,7 +66524,7 @@
   },
   {
    "name": "Аверін Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66539,7 +66539,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66554,7 +66554,7 @@
   },
   {
    "name": "Плакса Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66569,7 +66569,7 @@
   },
   {
    "name": "Агневщиков Юрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66584,7 +66584,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66599,7 +66599,7 @@
   },
   {
    "name": "Кіфор Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66614,7 +66614,7 @@
   },
   {
    "name": "Пішта Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66629,7 +66629,7 @@
   },
   {
    "name": "Цебратенко Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66644,7 +66644,7 @@
   },
   {
    "name": "Полтавець Світлана",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66659,7 +66659,7 @@
   },
   {
    "name": "Чепурний Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66674,7 +66674,7 @@
   },
   {
    "name": "Ледєньов Вадим",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66689,7 +66689,7 @@
   },
   {
    "name": "Телятник Максим",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66704,7 +66704,7 @@
   },
   {
    "name": "Могилевський Руслан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66719,7 +66719,7 @@
   },
   {
    "name": "Долганенко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66734,7 +66734,7 @@
   },
   {
    "name": "Ледєньова Наталія",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66749,7 +66749,7 @@
   },
   {
    "name": "Корпусов Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66764,7 +66764,7 @@
   },
   {
    "name": "Троценко Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66779,7 +66779,7 @@
   },
   {
    "name": "Кумовіцький Павло",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66794,7 +66794,7 @@
   },
   {
    "name": "Яворський Костянтин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66809,7 +66809,7 @@
   },
   {
    "name": "Чорний Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66824,7 +66824,7 @@
   },
   {
    "name": "Бублик Вячеслав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66839,7 +66839,7 @@
   },
   {
    "name": "Микитин Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66854,7 +66854,7 @@
   },
   {
    "name": "Буханцов Тарас",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -66869,7 +66869,7 @@
   },
   {
    "name": "Бабанін Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
@@ -67364,7 +67364,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "21.07.2024",
    "tournament": "Кубок України",
@@ -67409,7 +67409,7 @@
   },
   {
    "name": "Молдован Емілія",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "21.07.2024",
    "tournament": "Кубок України",
@@ -67724,7 +67724,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "20.07.2024",
    "tournament": "ЧУ 2024 DIDO",
@@ -67844,7 +67844,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "20.07.2024",
    "tournament": "ЧУ 2024 DIDO",
@@ -67934,7 +67934,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "20.07.2024",
    "tournament": "ЧУ 2024 DIDO",
@@ -67994,7 +67994,7 @@
   },
   {
    "name": "Молдован Емілія",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "20.07.2024",
    "tournament": "ЧУ 2024 DIDO",
@@ -68234,7 +68234,7 @@
   },
   {
    "name": "Ільясова/Кондарюк",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68249,7 +68249,7 @@
   },
   {
    "name": "Пішта/Пішта",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68264,7 +68264,7 @@
   },
   {
    "name": "Агневщиков/Абчугський",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68279,7 +68279,7 @@
   },
   {
    "name": "Залевський/Мелашенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68294,7 +68294,7 @@
   },
   {
    "name": "Чепак/Яворський",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68309,7 +68309,7 @@
   },
   {
    "name": "Царолунга/Скуртов",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68324,7 +68324,7 @@
   },
   {
    "name": "Троценко/Лагутін",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68339,7 +68339,7 @@
   },
   {
    "name": "Кумовіцький/Бублик",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68354,7 +68354,7 @@
   },
   {
    "name": "Могилевський/Чепурний",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68369,7 +68369,7 @@
   },
   {
    "name": "Усик/Кисельов",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68384,7 +68384,7 @@
   },
   {
    "name": "Заборний/Панченко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68399,7 +68399,7 @@
   },
   {
    "name": "Микитин/Павленко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68414,7 +68414,7 @@
   },
   {
    "name": "Сташевський/SOL",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68429,7 +68429,7 @@
   },
   {
    "name": "Чорний/Корпусов",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68444,7 +68444,7 @@
   },
   {
    "name": "Цебратенко/Долганенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68459,7 +68459,7 @@
   },
   {
    "name": "Попова/Селіхова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.06.2024",
    "tournament": "UDL ODESA CUP",
@@ -68474,7 +68474,7 @@
   },
   {
    "name": "Телятник Максим",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68489,7 +68489,7 @@
   },
   {
    "name": "Залевський Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68504,7 +68504,7 @@
   },
   {
    "name": "Павленко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68519,7 +68519,7 @@
   },
   {
    "name": "Абчугський Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68534,7 +68534,7 @@
   },
   {
    "name": "Мелашенко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68549,7 +68549,7 @@
   },
   {
    "name": "Бублик Вячеслав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68564,7 +68564,7 @@
   },
   {
    "name": "Яворський Костянтин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68579,7 +68579,7 @@
   },
   {
    "name": "Пішта Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68594,7 +68594,7 @@
   },
   {
    "name": "Усик Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68609,7 +68609,7 @@
   },
   {
    "name": "Могилевський Руслан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68624,7 +68624,7 @@
   },
   {
    "name": "Березін Руслан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68639,7 +68639,7 @@
   },
   {
    "name": "Корпусов Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68654,7 +68654,7 @@
   },
   {
    "name": "Чорний Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68669,7 +68669,7 @@
   },
   {
    "name": "Кондарюк Микола",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68684,7 +68684,7 @@
   },
   {
    "name": "Ільясова Альбіна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68699,7 +68699,7 @@
   },
   {
    "name": "Царолунга Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68714,7 +68714,7 @@
   },
   {
    "name": "Лагутін Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68729,7 +68729,7 @@
   },
   {
    "name": "Сташевський Валентин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68744,7 +68744,7 @@
   },
   {
    "name": "Агневщиков Юрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68759,7 +68759,7 @@
   },
   {
    "name": "Пішта Людмила",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68774,7 +68774,7 @@
   },
   {
    "name": "Кисельов Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68789,7 +68789,7 @@
   },
   {
    "name": "Василь Чепак",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68804,7 +68804,7 @@
   },
   {
    "name": "Цебратенко Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68819,7 +68819,7 @@
   },
   {
    "name": "Попова Наталі",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68834,7 +68834,7 @@
   },
   {
    "name": "Микитин Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68849,7 +68849,7 @@
   },
   {
    "name": "Кумовіцький Павло",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68864,7 +68864,7 @@
   },
   {
    "name": "Панченко Олексій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68879,7 +68879,7 @@
   },
   {
    "name": "Долганенко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68894,7 +68894,7 @@
   },
   {
    "name": "Селіхова Тетяна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68909,7 +68909,7 @@
   },
   {
    "name": "SOL Deen",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68924,7 +68924,7 @@
   },
   {
    "name": "Троценко Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -68939,7 +68939,7 @@
   },
   {
    "name": "Чепурний Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
@@ -69899,7 +69899,7 @@
   },
   {
    "name": "PXzV",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -69914,7 +69914,7 @@
   },
   {
    "name": "jDwW",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -69929,7 +69929,7 @@
   },
   {
    "name": "0nva",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -69944,7 +69944,7 @@
   },
   {
    "name": "4Uuh",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -69959,7 +69959,7 @@
   },
   {
    "name": "2Fpw",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -69974,7 +69974,7 @@
   },
   {
    "name": "giC2",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -69989,7 +69989,7 @@
   },
   {
    "name": "QcZJ",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70004,7 +70004,7 @@
   },
   {
    "name": "qkiV",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70019,7 +70019,7 @@
   },
   {
    "name": "im8p",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70034,7 +70034,7 @@
   },
   {
    "name": "oe2o",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70049,7 +70049,7 @@
   },
   {
    "name": "ciCs",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70064,7 +70064,7 @@
   },
   {
    "name": "iyKQ",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70079,7 +70079,7 @@
   },
   {
    "name": "ClDq",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70094,7 +70094,7 @@
   },
   {
    "name": "psbi",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70109,7 +70109,7 @@
   },
   {
    "name": "DcKM",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70124,7 +70124,7 @@
   },
   {
    "name": "aTh8",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70139,7 +70139,7 @@
   },
   {
    "name": "yrv5",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70154,7 +70154,7 @@
   },
   {
    "name": "E2jH",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70169,7 +70169,7 @@
   },
   {
    "name": "EC1F",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70184,7 +70184,7 @@
   },
   {
    "name": "oqKT",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70199,7 +70199,7 @@
   },
   {
    "name": "WeUx",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70214,7 +70214,7 @@
   },
   {
    "name": "xsar",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70229,7 +70229,7 @@
   },
   {
    "name": "Wzox",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70244,7 +70244,7 @@
   },
   {
    "name": "BwyJ",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70259,7 +70259,7 @@
   },
   {
    "name": "Kvre",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70274,7 +70274,7 @@
   },
   {
    "name": "XOzs",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70289,7 +70289,7 @@
   },
   {
    "name": "sivO",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70304,7 +70304,7 @@
   },
   {
    "name": "9HkT",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70319,7 +70319,7 @@
   },
   {
    "name": "D0Yi",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70334,7 +70334,7 @@
   },
   {
    "name": "2oPC",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70349,7 +70349,7 @@
   },
   {
    "name": "I6mZ",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70364,7 +70364,7 @@
   },
   {
    "name": "BuWO",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "13.04.2024",
    "tournament": "UDL STAGE 3",
@@ -70379,7 +70379,7 @@
   },
   {
    "name": "Омельченко/Троценко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70394,7 +70394,7 @@
   },
   {
    "name": "Чорний/Корпусов",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70409,7 +70409,7 @@
   },
   {
    "name": "Яворський/Бадира",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70424,7 +70424,7 @@
   },
   {
    "name": "Бурмака/Бублик",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70439,7 +70439,7 @@
   },
   {
    "name": "Гончаров/Агневщиков",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70454,7 +70454,7 @@
   },
   {
    "name": "Микитин/Кіфор",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70469,7 +70469,7 @@
   },
   {
    "name": "Мороз/Чепурний",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70484,7 +70484,7 @@
   },
   {
    "name": "Кондарюк/Ільясова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70499,7 +70499,7 @@
   },
   {
    "name": "Залевський/Чепак",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70514,7 +70514,7 @@
   },
   {
    "name": "Пламада/Григоренко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70529,7 +70529,7 @@
   },
   {
    "name": "Ющик/Яненко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70544,7 +70544,7 @@
   },
   {
    "name": "Мелашенко/Павленко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70559,7 +70559,7 @@
   },
   {
    "name": "Паламар/Шум",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70574,7 +70574,7 @@
   },
   {
    "name": "Мартов/Бабанін",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70589,7 +70589,7 @@
   },
   {
    "name": "Цебратенко/Долганенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70604,7 +70604,7 @@
   },
   {
    "name": "Аверін/Лагутін",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70619,7 +70619,7 @@
   },
   {
    "name": "Могилевський/Пекарук",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70634,7 +70634,7 @@
   },
   {
    "name": "Плакса/Плакса",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "24.03.2024",
    "tournament": "UDL LUTSK CUP",
@@ -70649,7 +70649,7 @@
   },
   {
    "name": "Чепурний Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70664,7 +70664,7 @@
   },
   {
    "name": "Гончаров Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70679,7 +70679,7 @@
   },
   {
    "name": "Залевський Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70694,7 +70694,7 @@
   },
   {
    "name": "Кондарюк Микола",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70709,7 +70709,7 @@
   },
   {
    "name": "Василь Чепак",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70724,7 +70724,7 @@
   },
   {
    "name": "Зволякевич Олена",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70739,7 +70739,7 @@
   },
   {
    "name": "Мартов Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70754,7 +70754,7 @@
   },
   {
    "name": "Омельченко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70769,7 +70769,7 @@
   },
   {
    "name": "Полтавець Світлана",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70784,7 +70784,7 @@
   },
   {
    "name": "Кідиба Антон",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70799,7 +70799,7 @@
   },
   {
    "name": "Чорний Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70814,7 +70814,7 @@
   },
   {
    "name": "Шум Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70829,7 +70829,7 @@
   },
   {
    "name": "Яненко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70844,7 +70844,7 @@
   },
   {
    "name": "Мороз Ігор",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70859,7 +70859,7 @@
   },
   {
    "name": "Могилевський Руслан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70874,7 +70874,7 @@
   },
   {
    "name": "Долганенко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70889,7 +70889,7 @@
   },
   {
    "name": "Мелашенко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70904,7 +70904,7 @@
   },
   {
    "name": "Троценко Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70919,7 +70919,7 @@
   },
   {
    "name": "Бурмака Павло",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70934,7 +70934,7 @@
   },
   {
    "name": "Ющик Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70949,7 +70949,7 @@
   },
   {
    "name": "Пекарук Ілля",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70964,7 +70964,7 @@
   },
   {
    "name": "Агневщиков Юрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70979,7 +70979,7 @@
   },
   {
    "name": "Микитин Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -70994,7 +70994,7 @@
   },
   {
    "name": "Плакса Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71009,7 +71009,7 @@
   },
   {
    "name": "Аверін Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71024,7 +71024,7 @@
   },
   {
    "name": "Гринів Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71039,7 +71039,7 @@
   },
   {
    "name": "Яворський Костянтин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71054,7 +71054,7 @@
   },
   {
    "name": "Григоренко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71069,7 +71069,7 @@
   },
   {
    "name": "Паламар Оксана",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71084,7 +71084,7 @@
   },
   {
    "name": "Кіфор Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71099,7 +71099,7 @@
   },
   {
    "name": "Карпевич Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71114,7 +71114,7 @@
   },
   {
    "name": "Бабанін Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71129,7 +71129,7 @@
   },
   {
    "name": "Пламада Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71144,7 +71144,7 @@
   },
   {
    "name": "Павленко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71159,7 +71159,7 @@
   },
   {
    "name": "Цебратенко Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71174,7 +71174,7 @@
   },
   {
    "name": "Бублик Вячеслав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71189,7 +71189,7 @@
   },
   {
    "name": "Рихлюк Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71204,7 +71204,7 @@
   },
   {
    "name": "Плакса Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71219,7 +71219,7 @@
   },
   {
    "name": "Юрій Гринів",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71234,7 +71234,7 @@
   },
   {
    "name": "Корпусов Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71249,7 +71249,7 @@
   },
   {
    "name": "Покладок Олег",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71264,7 +71264,7 @@
   },
   {
    "name": "Лагутін Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71279,7 +71279,7 @@
   },
   {
    "name": "Ільясова Альбіна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "23.03.2024",
    "tournament": "UDL STAGE 2",
@@ -71294,7 +71294,7 @@
   },
   {
    "name": "Омельченко / Троценко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71309,7 +71309,7 @@
   },
   {
    "name": "Павленко / Чепак",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71324,7 +71324,7 @@
   },
   {
    "name": "Плакса / Плакса",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71339,7 +71339,7 @@
   },
   {
    "name": "Мартов / Могилевський",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71354,7 +71354,7 @@
   },
   {
    "name": "Яворський / Любих",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71369,7 +71369,7 @@
   },
   {
    "name": "Кондарюк / Ільясова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71384,7 +71384,7 @@
   },
   {
    "name": "Корпусов / Чорний",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71399,7 +71399,7 @@
   },
   {
    "name": "Білоус / Білоус",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71414,7 +71414,7 @@
   },
   {
    "name": "Залевський / Мелашенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71429,7 +71429,7 @@
   },
   {
    "name": "Бабанін / Полтавець",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71444,7 +71444,7 @@
   },
   {
    "name": "Микитин / Кіфор",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71459,7 +71459,7 @@
   },
   {
    "name": "Пламада / Григоренко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71474,7 +71474,7 @@
   },
   {
    "name": "Цебратенко / Долганенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71489,7 +71489,7 @@
   },
   {
    "name": "Мороз / Чепурний",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71504,7 +71504,7 @@
   },
   {
    "name": "Аверін / Лагутін",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71519,7 +71519,7 @@
   },
   {
    "name": "Покладок / Ющик",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71534,7 +71534,7 @@
   },
   {
    "name": "Коломієць / Шильцин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "18.02.2024",
    "tournament": "UDL LVIV CUP",
@@ -71549,7 +71549,7 @@
   },
   {
    "name": "Омельченко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71564,7 +71564,7 @@
   },
   {
    "name": "Стецишин Віталий",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71579,7 +71579,7 @@
   },
   {
    "name": "Полтавець Світлана",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71594,7 +71594,7 @@
   },
   {
    "name": "Трубецькой Петро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71609,7 +71609,7 @@
   },
   {
    "name": "Чорний Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71624,7 +71624,7 @@
   },
   {
    "name": "Мороз Ігор",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71639,7 +71639,7 @@
   },
   {
    "name": "Залевський Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71654,7 +71654,7 @@
   },
   {
    "name": "Мартов Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71669,7 +71669,7 @@
   },
   {
    "name": "Мильо Тарас",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71684,7 +71684,7 @@
   },
   {
    "name": "Павленко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71699,7 +71699,7 @@
   },
   {
    "name": "Гринів Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71714,7 +71714,7 @@
   },
   {
    "name": "Мелашенко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71729,7 +71729,7 @@
   },
   {
    "name": "Кондарюк Микола",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71744,7 +71744,7 @@
   },
   {
    "name": "Аверін Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71759,7 +71759,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71774,7 +71774,7 @@
   },
   {
    "name": "Яворський Костянтин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71789,7 +71789,7 @@
   },
   {
    "name": "Троценко Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71804,7 +71804,7 @@
   },
   {
    "name": "Цебратенко Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71819,7 +71819,7 @@
   },
   {
    "name": "Василь Чепак",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71834,7 +71834,7 @@
   },
   {
    "name": "Плакса Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71849,7 +71849,7 @@
   },
   {
    "name": "Любих Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71864,7 +71864,7 @@
   },
   {
    "name": "Покладок Олег",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71879,7 +71879,7 @@
   },
   {
    "name": "Микитин Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71894,7 +71894,7 @@
   },
   {
    "name": "Могилевський Руслан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71909,7 +71909,7 @@
   },
   {
    "name": "Долганенко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71924,7 +71924,7 @@
   },
   {
    "name": "Бабанін Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71939,7 +71939,7 @@
   },
   {
    "name": "Чепурний Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71954,7 +71954,7 @@
   },
   {
    "name": "Корпусов Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71969,7 +71969,7 @@
   },
   {
    "name": "Ющик Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71984,7 +71984,7 @@
   },
   {
    "name": "Юрій Гринів",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -71999,7 +71999,7 @@
   },
   {
    "name": "Коломієць Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -72014,7 +72014,7 @@
   },
   {
    "name": "Плакса Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -72029,7 +72029,7 @@
   },
   {
    "name": "Лагутін Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -72044,7 +72044,7 @@
   },
   {
    "name": "Григоренко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -72059,7 +72059,7 @@
   },
   {
    "name": "Кіфор Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -72074,7 +72074,7 @@
   },
   {
    "name": "Ільясова Альбіна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -72089,7 +72089,7 @@
   },
   {
    "name": "Пламада Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -72104,7 +72104,7 @@
   },
   {
    "name": "Шильцин Юрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -72119,7 +72119,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "17.02.2024",
    "tournament": "UDL STAGE 1",
@@ -72764,7 +72764,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "03.12.2023",
    "tournament": "ЧУ 2023",
@@ -72824,7 +72824,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "03.12.2023",
    "tournament": "ЧУ 2023",
@@ -72914,7 +72914,7 @@
   },
   {
    "name": "Білоус Жанна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "03.12.2023",
    "tournament": "ЧУ 2023",
@@ -73544,7 +73544,7 @@
   },
   {
    "name": "Шильцин/Герасименко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73559,7 +73559,7 @@
   },
   {
    "name": "Овелько/Паламар",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73574,7 +73574,7 @@
   },
   {
    "name": "Кива/Кива",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73589,7 +73589,7 @@
   },
   {
    "name": "Омельченко/Терещенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73604,7 +73604,7 @@
   },
   {
    "name": "Усик Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73619,7 +73619,7 @@
   },
   {
    "name": "Ферар/Ферар",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73634,7 +73634,7 @@
   },
   {
    "name": "Пекарук/Соколова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73649,7 +73649,7 @@
   },
   {
    "name": "Любих/Зволякевич",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73664,7 +73664,7 @@
   },
   {
    "name": "Лагутін/Спекторенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73679,7 +73679,7 @@
   },
   {
    "name": "Баширов/Шклярук Ю.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73694,7 +73694,7 @@
   },
   {
    "name": "Гончаренко/Гончаренко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73709,7 +73709,7 @@
   },
   {
    "name": "Бурмака/Бублик Л.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73724,7 +73724,7 @@
   },
   {
    "name": "Ананенко/Ананенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73739,7 +73739,7 @@
   },
   {
    "name": "Залевський/Ігнатюк",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73754,7 +73754,7 @@
   },
   {
    "name": "Долганенко/Долганенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73769,7 +73769,7 @@
   },
   {
    "name": "Бабанін/Полтавець",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73784,7 +73784,7 @@
   },
   {
    "name": "Капран/Капран",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73799,7 +73799,7 @@
   },
   {
    "name": "Могилевський/Лановенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73814,7 +73814,7 @@
   },
   {
    "name": "Луков/Лукова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73829,7 +73829,7 @@
   },
   {
    "name": "Фатех/Попова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73844,7 +73844,7 @@
   },
   {
    "name": "Чепурний/Чепурна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73859,7 +73859,7 @@
   },
   {
    "name": "Сидоренко/Шклярук Н.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73874,7 +73874,7 @@
   },
   {
    "name": "Коломієць/Коломієць",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73889,7 +73889,7 @@
   },
   {
    "name": "Троценко/Чабанова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73904,7 +73904,7 @@
   },
   {
    "name": "Сташевський/Селіхова",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73919,7 +73919,7 @@
   },
   {
    "name": "Білоус/Білоус",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73934,7 +73934,7 @@
   },
   {
    "name": "Мелашенко/Осадча",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "02.12.2023",
    "tournament": "ЧУ 2023 Мікст",
@@ -73949,7 +73949,7 @@
   },
   {
    "name": "Козловський Богдан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -73964,7 +73964,7 @@
   },
   {
    "name": "Мелашенко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -73979,7 +73979,7 @@
   },
   {
    "name": "Овелько Антон",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -73994,7 +73994,7 @@
   },
   {
    "name": "Баширов Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -74009,7 +74009,7 @@
   },
   {
    "name": "Усик Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -74024,7 +74024,7 @@
   },
   {
    "name": "Гоян Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -74039,7 +74039,7 @@
   },
   {
    "name": "Омельченко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -74054,7 +74054,7 @@
   },
   {
    "name": "Залевський Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -74069,7 +74069,7 @@
   },
   {
    "name": "Павленко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -74084,7 +74084,7 @@
   },
   {
    "name": "Григоренко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -74099,7 +74099,7 @@
   },
   {
    "name": "Троценко Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -74114,7 +74114,7 @@
   },
   {
    "name": "Кіфор Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -74129,7 +74129,7 @@
   },
   {
    "name": "Микитин Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -74144,7 +74144,7 @@
   },
   {
    "name": "Корпусов Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -74159,7 +74159,7 @@
   },
   {
    "name": "Лагутін Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "01.12.2023",
    "tournament": "WUDL GRAND FINAL",
@@ -74219,7 +74219,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "12.11.2023",
    "tournament": "Кубок України",
@@ -74459,7 +74459,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "12.11.2023",
    "tournament": "Кубок України",
@@ -75134,7 +75134,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
    "tournament": "Кубок України",
@@ -75404,7 +75404,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
    "tournament": "Кубок України",
@@ -76589,7 +76589,7 @@
   },
   {
    "name": "Шум Олександр/Паламар Оксана",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76604,7 +76604,7 @@
   },
   {
    "name": "Мартов Володимир/Бабанін Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76619,7 +76619,7 @@
   },
   {
    "name": "Омельченко Владислав /Баширов Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76634,7 +76634,7 @@
   },
   {
    "name": "Бурмака Павло/Бублик В'ячеслав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76649,7 +76649,7 @@
   },
   {
    "name": "Гринів Олександр/Гринів Юрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76664,7 +76664,7 @@
   },
   {
    "name": "Козловський Богдан/Пекарук Ілля",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76679,7 +76679,7 @@
   },
   {
    "name": "Залевський Володимир/Моісеєнко Віталіна",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76694,7 +76694,7 @@
   },
   {
    "name": "Мороз Артем/Чепурний Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76709,7 +76709,7 @@
   },
   {
    "name": "Мелашенко Влад/Павленко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76724,7 +76724,7 @@
   },
   {
    "name": "Корпусов Андрій/Чорний Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76739,7 +76739,7 @@
   },
   {
    "name": "Микитин Ярослав/Кіфор Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76754,7 +76754,7 @@
   },
   {
    "name": "Карпевич Олександр/Сапронов Петро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76769,7 +76769,7 @@
   },
   {
    "name": "Яворський Костянтин/Любих Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76784,7 +76784,7 @@
   },
   {
    "name": "Ющик Сергій/Долганенко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76799,7 +76799,7 @@
   },
   {
    "name": "Троценко Артем /Лагутін Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76814,7 +76814,7 @@
   },
   {
    "name": "Покладок Олег/Бадира Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76829,7 +76829,7 @@
   },
   {
    "name": "Агневщиков Юрій/Федуна Ігор",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "20.08.2023",
    "tournament": "WUDL LUTSK CUP",
@@ -76844,7 +76844,7 @@
   },
   {
    "name": "Омельченко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -76859,7 +76859,7 @@
   },
   {
    "name": "Гринів Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -76874,7 +76874,7 @@
   },
   {
    "name": "Моісеєнко Віталіна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -76889,7 +76889,7 @@
   },
   {
    "name": "Бадира Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -76904,7 +76904,7 @@
   },
   {
    "name": "Мороз Ігор",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -76919,7 +76919,7 @@
   },
   {
    "name": "Бабанiн Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -76934,7 +76934,7 @@
   },
   {
    "name": "Залевський Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -76949,7 +76949,7 @@
   },
   {
    "name": "Паламар Оксана",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -76964,7 +76964,7 @@
   },
   {
    "name": "Павленко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -76979,7 +76979,7 @@
   },
   {
    "name": "Мелашенко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -76994,7 +76994,7 @@
   },
   {
    "name": "Мартов Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77009,7 +77009,7 @@
   },
   {
    "name": "Агневщиков Юрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77024,7 +77024,7 @@
   },
   {
    "name": "Долганенко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77039,7 +77039,7 @@
   },
   {
    "name": "Мильо Тарас",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77054,7 +77054,7 @@
   },
   {
    "name": "Баширов Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77069,7 +77069,7 @@
   },
   {
    "name": "Шум Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77084,7 +77084,7 @@
   },
   {
    "name": "Карпевич Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77099,7 +77099,7 @@
   },
   {
    "name": "Бурмака Павло",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77114,7 +77114,7 @@
   },
   {
    "name": "Бублик В'ячеслав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77129,7 +77129,7 @@
   },
   {
    "name": "Козловський Богдан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77144,7 +77144,7 @@
   },
   {
    "name": "Любих Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77159,7 +77159,7 @@
   },
   {
    "name": "Ющик Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77174,7 +77174,7 @@
   },
   {
    "name": "Лагутін Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77189,7 +77189,7 @@
   },
   {
    "name": "Яворський Костянтин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77204,7 +77204,7 @@
   },
   {
    "name": "Стецишин Віталий",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77219,7 +77219,7 @@
   },
   {
    "name": "Троценко Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77234,7 +77234,7 @@
   },
   {
    "name": "Кіфор Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77249,7 +77249,7 @@
   },
   {
    "name": "Федуна Ігор",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77264,7 +77264,7 @@
   },
   {
    "name": "Микитин Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77279,7 +77279,7 @@
   },
   {
    "name": "Сапронов Петро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77294,7 +77294,7 @@
   },
   {
    "name": "Пекарук Ілля",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77309,7 +77309,7 @@
   },
   {
    "name": "Чорний Іван",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77324,7 +77324,7 @@
   },
   {
    "name": "Покладок Олег",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77339,7 +77339,7 @@
   },
   {
    "name": "Гринів Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77354,7 +77354,7 @@
   },
   {
    "name": "Корпусов Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -77369,7 +77369,7 @@
   },
   {
    "name": "Чепурний Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "19.08.2023",
    "tournament": "WUDL STAGE 4",
@@ -78869,7 +78869,7 @@
   },
   {
    "name": "Шум Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -78884,7 +78884,7 @@
   },
   {
    "name": "Омельченко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -78899,7 +78899,7 @@
   },
   {
    "name": "Моісеєнко Віталіна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -78914,7 +78914,7 @@
   },
   {
    "name": "Пекарук Ілля",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -78929,7 +78929,7 @@
   },
   {
    "name": "Чікало Костянтин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -78944,7 +78944,7 @@
   },
   {
    "name": "Покладок Олег",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -78959,7 +78959,7 @@
   },
   {
    "name": "Ясинський Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -78974,7 +78974,7 @@
   },
   {
    "name": "Залевський Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -78989,7 +78989,7 @@
   },
   {
    "name": "Микитин Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79004,7 +79004,7 @@
   },
   {
    "name": "Ющик Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79019,7 +79019,7 @@
   },
   {
    "name": "Яворський Костянтин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79034,7 +79034,7 @@
   },
   {
    "name": "Баширов Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79049,7 +79049,7 @@
   },
   {
    "name": "Бабанін Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79064,7 +79064,7 @@
   },
   {
    "name": "Усик Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79079,7 +79079,7 @@
   },
   {
    "name": "Мелашенко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79094,7 +79094,7 @@
   },
   {
    "name": "Козловський Богдан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79109,7 +79109,7 @@
   },
   {
    "name": "Долганенко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79124,7 +79124,7 @@
   },
   {
    "name": "Павленко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79139,7 +79139,7 @@
   },
   {
    "name": "Бублик В'ячеслав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79154,7 +79154,7 @@
   },
   {
    "name": "Троценко Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79169,7 +79169,7 @@
   },
   {
    "name": "Кіфор Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79184,7 +79184,7 @@
   },
   {
    "name": "Мартов Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79199,7 +79199,7 @@
   },
   {
    "name": "Овелько Антон",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79214,7 +79214,7 @@
   },
   {
    "name": "Корпусов Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79229,7 +79229,7 @@
   },
   {
    "name": "Чепак Василь",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79244,7 +79244,7 @@
   },
   {
    "name": "Боровик Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79259,7 +79259,7 @@
   },
   {
    "name": "Сокол Роман",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79274,7 +79274,7 @@
   },
   {
    "name": "Григоренко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79289,7 +79289,7 @@
   },
   {
    "name": "Мороз Ігор",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79304,7 +79304,7 @@
   },
   {
    "name": "Паламар Оксана",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79319,7 +79319,7 @@
   },
   {
    "name": "Агневщиков Юрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79334,7 +79334,7 @@
   },
   {
    "name": "Гоян Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79349,7 +79349,7 @@
   },
   {
    "name": "Бурмака Павло",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "11.06.2023",
    "tournament": "WUDL CHIK CUP",
@@ -79364,7 +79364,7 @@
   },
   {
    "name": "Омельченко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79379,7 +79379,7 @@
   },
   {
    "name": "Покладок Олег",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79394,7 +79394,7 @@
   },
   {
    "name": "Ясинський Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79409,7 +79409,7 @@
   },
   {
    "name": "Бейреш Ласло",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79424,7 +79424,7 @@
   },
   {
    "name": "Залевський Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79439,7 +79439,7 @@
   },
   {
    "name": "Мартов Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79454,7 +79454,7 @@
   },
   {
    "name": "Філіпець Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79469,7 +79469,7 @@
   },
   {
    "name": "Микитин Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79484,7 +79484,7 @@
   },
   {
    "name": "Яворський Костянтин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79499,7 +79499,7 @@
   },
   {
    "name": "Баширов Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79514,7 +79514,7 @@
   },
   {
    "name": "Корпусов Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79529,7 +79529,7 @@
   },
   {
    "name": "Шум Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79544,7 +79544,7 @@
   },
   {
    "name": "Бурмака Павло",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79559,7 +79559,7 @@
   },
   {
    "name": "Мелашенко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79574,7 +79574,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79589,7 +79589,7 @@
   },
   {
    "name": "Ющик Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79604,7 +79604,7 @@
   },
   {
    "name": "Мороз Ігор",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79619,7 +79619,7 @@
   },
   {
    "name": "Козловський Богдан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79634,7 +79634,7 @@
   },
   {
    "name": "Бабанін Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79649,7 +79649,7 @@
   },
   {
    "name": "Лагутін Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79664,7 +79664,7 @@
   },
   {
    "name": "Агневщиков Юрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79679,7 +79679,7 @@
   },
   {
    "name": "Пекарук Ілля",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79694,7 +79694,7 @@
   },
   {
    "name": "Бублик В'ячеслав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79709,7 +79709,7 @@
   },
   {
    "name": "Овелько Антон",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79724,7 +79724,7 @@
   },
   {
    "name": "Усик Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79739,7 +79739,7 @@
   },
   {
    "name": "Павленко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79754,7 +79754,7 @@
   },
   {
    "name": "Долганенко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79769,7 +79769,7 @@
   },
   {
    "name": "Григоренко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79784,7 +79784,7 @@
   },
   {
    "name": "Чепак Василь",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79799,7 +79799,7 @@
   },
   {
    "name": "Кіфор Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79814,7 +79814,7 @@
   },
   {
    "name": "Гоян Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79829,7 +79829,7 @@
   },
   {
    "name": "Сокол Роман",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79844,7 +79844,7 @@
   },
   {
    "name": "Чікало Костянтин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79859,7 +79859,7 @@
   },
   {
    "name": "Моісеєнко Віталіна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79874,7 +79874,7 @@
   },
   {
    "name": "Паламар Оксана",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "10.06.2023",
    "tournament": "WUDL STAGE 3",
@@ -79919,7 +79919,7 @@
   },
   {
    "name": "Пивошенко Олена",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "21.05.2023",
    "tournament": "Кубок України",
@@ -80999,7 +80999,7 @@
   },
   {
    "name": "UKR dumpling",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "30.04.2023",
    "tournament": "WUDL CHERVNITSI CUP",
@@ -81014,7 +81014,7 @@
   },
   {
    "name": "Буковина",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "30.04.2023",
    "tournament": "WUDL CHERVNITSI CUP",
@@ -81029,7 +81029,7 @@
   },
   {
    "name": "Гарбузи",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "30.04.2023",
    "tournament": "WUDL CHERVNITSI CUP",
@@ -81044,7 +81044,7 @@
   },
   {
    "name": "MVB (The Most Valuable of Bukovina)",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "30.04.2023",
    "tournament": "WUDL CHERVNITSI CUP",
@@ -81059,7 +81059,7 @@
   },
   {
    "name": "\"rus-нi Реасe-да\"",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "30.04.2023",
    "tournament": "WUDL CHERVNITSI CUP",
@@ -81074,7 +81074,7 @@
   },
   {
    "name": "Wild Wild WEST",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "30.04.2023",
    "tournament": "WUDL CHERVNITSI CUP",
@@ -81089,7 +81089,7 @@
   },
   {
    "name": "Сакура",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "30.04.2023",
    "tournament": "WUDL CHERVNITSI CUP",
@@ -81104,7 +81104,7 @@
   },
   {
    "name": "PDC (Porter Darts Club)",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "30.04.2023",
    "tournament": "WUDL CHERVNITSI CUP",
@@ -81119,7 +81119,7 @@
   },
   {
    "name": "Гоян Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81134,7 +81134,7 @@
   },
   {
    "name": "Шум Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81149,7 +81149,7 @@
   },
   {
    "name": "Лагутін Андрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81164,7 +81164,7 @@
   },
   {
    "name": "Баширов Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81179,7 +81179,7 @@
   },
   {
    "name": "Покладок Олег",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81194,7 +81194,7 @@
   },
   {
    "name": "Чепак Василь",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81209,7 +81209,7 @@
   },
   {
    "name": "Григоренко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81224,7 +81224,7 @@
   },
   {
    "name": "Омельченко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81239,7 +81239,7 @@
   },
   {
    "name": "Бублик В'ячеслав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81254,7 +81254,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81269,7 +81269,7 @@
   },
   {
    "name": "Аверін Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81284,7 +81284,7 @@
   },
   {
    "name": "Яненко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81299,7 +81299,7 @@
   },
   {
    "name": "Ясинський Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81314,7 +81314,7 @@
   },
   {
    "name": "Залевський Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81329,7 +81329,7 @@
   },
   {
    "name": "Мелашенко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81344,7 +81344,7 @@
   },
   {
    "name": "Троценко Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81359,7 +81359,7 @@
   },
   {
    "name": "Ферар Максим",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81374,7 +81374,7 @@
   },
   {
    "name": "Капран Анастасія",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81389,7 +81389,7 @@
   },
   {
    "name": "Соколов Роман",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81404,7 +81404,7 @@
   },
   {
    "name": "Подольчук Антон",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81419,7 +81419,7 @@
   },
   {
    "name": "Нечипуренко Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81434,7 +81434,7 @@
   },
   {
    "name": "Філіпець Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81449,7 +81449,7 @@
   },
   {
    "name": "Акользін Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81464,7 +81464,7 @@
   },
   {
    "name": "Бейреш Ласло",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81479,7 +81479,7 @@
   },
   {
    "name": "Бурмака Павло",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81494,7 +81494,7 @@
   },
   {
    "name": "Овелько Антон",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81509,7 +81509,7 @@
   },
   {
    "name": "Ющик Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81524,7 +81524,7 @@
   },
   {
    "name": "Баранов Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81539,7 +81539,7 @@
   },
   {
    "name": "Паламар Оксана",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81554,7 +81554,7 @@
   },
   {
    "name": "КорпусовАндрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81569,7 +81569,7 @@
   },
   {
    "name": "Сєлєзньов Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81584,7 +81584,7 @@
   },
   {
    "name": "Павленко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81599,7 +81599,7 @@
   },
   {
    "name": "Микитин Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81614,7 +81614,7 @@
   },
   {
    "name": "Козловський Богдан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81629,7 +81629,7 @@
   },
   {
    "name": "Кіфор Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81644,7 +81644,7 @@
   },
   {
    "name": "Агневщиков Юрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81659,7 +81659,7 @@
   },
   {
    "name": "Пламада Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "29.04.2023",
    "tournament": "WUDL STAGE 2",
@@ -81884,7 +81884,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "26.03.2023",
    "tournament": "Кубок України",
@@ -82664,7 +82664,7 @@
   },
   {
    "name": "Гончаренко Інна",
-   "gender": "men",
+   "gender": "women",
    "isUDL": false,
    "date": "25.03.2023",
    "tournament": "Кубок України",
@@ -83249,7 +83249,7 @@
   },
   {
    "name": "Гоян/Яненко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83264,7 +83264,7 @@
   },
   {
    "name": "Микитин/Нечипуренко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83279,7 +83279,7 @@
   },
   {
    "name": "Морозов/Бурмака",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83294,7 +83294,7 @@
   },
   {
    "name": "Овелько/Подольчук",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83309,7 +83309,7 @@
   },
   {
    "name": "Покладок/Ющик",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83324,7 +83324,7 @@
   },
   {
    "name": "Омельченко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83339,7 +83339,7 @@
   },
   {
    "name": "Мороз/Чепурний",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83354,7 +83354,7 @@
   },
   {
    "name": "Моісеєнко/Троценко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83369,7 +83369,7 @@
   },
   {
    "name": "Козловський/Кіфор",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83384,7 +83384,7 @@
   },
   {
    "name": "Аверін/Агневщиков",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83399,7 +83399,7 @@
   },
   {
    "name": "Арійчук/Григоренко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83414,7 +83414,7 @@
   },
   {
    "name": "Кондарюк/Сас",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83429,7 +83429,7 @@
   },
   {
    "name": "Усик А./Усик С.",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83444,7 +83444,7 @@
   },
   {
    "name": "Мартов/Бабанін",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83459,7 +83459,7 @@
   },
   {
    "name": "Стецишин/Носівець",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83474,7 +83474,7 @@
   },
   {
    "name": "Залевський/Мелашенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83489,7 +83489,7 @@
   },
   {
    "name": "Корпусов/Сапронов",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "05.02.2023",
    "tournament": "WUDL LVIV CUP",
@@ -83504,7 +83504,7 @@
   },
   {
    "name": "Овелько Антон",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83519,7 +83519,7 @@
   },
   {
    "name": "Залевський Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83534,7 +83534,7 @@
   },
   {
    "name": "Ющик Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83549,7 +83549,7 @@
   },
   {
    "name": "Морозов Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83564,7 +83564,7 @@
   },
   {
    "name": "Гринів Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83579,7 +83579,7 @@
   },
   {
    "name": "Стецишин Віталий",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83594,7 +83594,7 @@
   },
   {
    "name": "Усик Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83609,7 +83609,7 @@
   },
   {
    "name": "Сас Олег",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83624,7 +83624,7 @@
   },
   {
    "name": "Гринів Олександр",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83639,7 +83639,7 @@
   },
   {
    "name": "Арійчук Наталя",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83654,7 +83654,7 @@
   },
   {
    "name": "Волощук Олег",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83669,7 +83669,7 @@
   },
   {
    "name": "Аверін Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83684,7 +83684,7 @@
   },
   {
    "name": "Мильо Тарас",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83699,7 +83699,7 @@
   },
   {
    "name": "Носівець Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83714,7 +83714,7 @@
   },
   {
    "name": "Нечипуренко Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83729,7 +83729,7 @@
   },
   {
    "name": "Мартов Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83744,7 +83744,7 @@
   },
   {
    "name": "Бабанiн Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83759,7 +83759,7 @@
   },
   {
    "name": "Яненко Сергій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83774,7 +83774,7 @@
   },
   {
    "name": "Микитин Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83789,7 +83789,7 @@
   },
   {
    "name": "Козловський Богдан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83804,7 +83804,7 @@
   },
   {
    "name": "Мелашенко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83819,7 +83819,7 @@
   },
   {
    "name": "Агневщиков Юрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83834,7 +83834,7 @@
   },
   {
    "name": "Мороз Ігор",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83849,7 +83849,7 @@
   },
   {
    "name": "Кондарюк Микола",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83864,7 +83864,7 @@
   },
   {
    "name": "Гоян Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83879,7 +83879,7 @@
   },
   {
    "name": "Покладок Олег",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83894,7 +83894,7 @@
   },
   {
    "name": "Омельченко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83909,7 +83909,7 @@
   },
   {
    "name": "Бурмака Павло",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83924,7 +83924,7 @@
   },
   {
    "name": "Григоренко Денис",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83939,7 +83939,7 @@
   },
   {
    "name": "Троценко Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83954,7 +83954,7 @@
   },
   {
    "name": "Баширов Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83969,7 +83969,7 @@
   },
   {
    "name": "Сулім Роман",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83984,7 +83984,7 @@
   },
   {
    "name": "Моісеєнко Віталіна",
-   "gender": "open",
+   "gender": "women",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -83999,7 +83999,7 @@
   },
   {
    "name": "Сапронов Петро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -84014,7 +84014,7 @@
   },
   {
    "name": "КорпусовАндрій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -84029,7 +84029,7 @@
   },
   {
    "name": "Чепурний Едуард",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -84044,7 +84044,7 @@
   },
   {
    "name": "Подольчук Антон",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -84059,7 +84059,7 @@
   },
   {
    "name": "Кіфор Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -84074,7 +84074,7 @@
   },
   {
    "name": "Бейреш Ласлов",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -84089,7 +84089,7 @@
   },
   {
    "name": "Усик Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": true,
    "date": "04.02.2023",
    "tournament": "WUDL STAGE 1",
@@ -84104,7 +84104,7 @@
   },
   {
    "name": "Аверін/Агневщиков",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "04.12.2022",
    "tournament": "ЧУ 2022 Пари",
@@ -84119,7 +84119,7 @@
   },
   {
    "name": "Черкас/Бублик",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "04.12.2022",
    "tournament": "ЧУ 2022 Пари",
@@ -84134,7 +84134,7 @@
   },
   {
    "name": "Гоян/Овелько",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "04.12.2022",
    "tournament": "ЧУ 2022 Пари",
@@ -84149,7 +84149,7 @@
   },
   {
    "name": "Микитин/Нечипуренко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "04.12.2022",
    "tournament": "ЧУ 2022 Пари",
@@ -84164,7 +84164,7 @@
   },
   {
    "name": "Верхоляк/Верхоляк",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "04.12.2022",
    "tournament": "ЧУ 2022 Пари",
@@ -84179,7 +84179,7 @@
   },
   {
    "name": "Чепурний/Мороз",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "04.12.2022",
    "tournament": "ЧУ 2022 Пари",
@@ -84194,7 +84194,7 @@
   },
   {
    "name": "Могилевськи/Пекарук",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "04.12.2022",
    "tournament": "ЧУ 2022 Пари",
@@ -84209,7 +84209,7 @@
   },
   {
    "name": "Солтис/Троценко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "04.12.2022",
    "tournament": "ЧУ 2022 Пари",
@@ -84224,7 +84224,7 @@
   },
   {
    "name": "Омельченко/Баширов",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "04.12.2022",
    "tournament": "ЧУ 2022 Пари",
@@ -84239,7 +84239,7 @@
   },
   {
    "name": "Залевський/Бейреш",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "04.12.2022",
    "tournament": "ЧУ 2022 Пари",
@@ -84479,7 +84479,7 @@
   },
   {
    "name": "Мелашенко Владислав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "18.09.2022",
    "tournament": "Chernivtsi Open",
@@ -84494,7 +84494,7 @@
   },
   {
    "name": "Пекарук Ілля",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "18.09.2022",
    "tournament": "Chernivtsi Open",
@@ -84509,7 +84509,7 @@
   },
   {
    "name": "Олександр Арійчук",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "18.09.2022",
    "tournament": "Chernivtsi Open",
@@ -84524,7 +84524,7 @@
   },
   {
    "name": "Артем Нечипуренко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "18.09.2022",
    "tournament": "Chernivtsi Open",
@@ -84539,7 +84539,7 @@
   },
   {
    "name": "Антон Овелько",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "18.09.2022",
    "tournament": "Chernivtsi Open",
@@ -84554,7 +84554,7 @@
   },
   {
    "name": "Олександр Вонхольський",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "18.09.2022",
    "tournament": "Chernivtsi Open",
@@ -84569,7 +84569,7 @@
   },
   {
    "name": "Кіфор Ярослав",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "18.09.2022",
    "tournament": "Chernivtsi Open",
@@ -84584,7 +84584,7 @@
   },
   {
    "name": "Ярослав Микитин",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "18.09.2022",
    "tournament": "Chernivtsi Open",
@@ -84599,7 +84599,7 @@
   },
   {
    "name": "Івасюк Віталій",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "18.09.2022",
    "tournament": "Chernivtsi Open",
@@ -84614,7 +84614,7 @@
   },
   {
    "name": "Олександр Сєлєзньов",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "18.09.2022",
    "tournament": "Chernivtsi Open",
@@ -84629,7 +84629,7 @@
   },
   {
    "name": "Залевський Володимир",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "18.09.2022",
    "tournament": "Chernivtsi Open",
@@ -84644,7 +84644,7 @@
   },
   {
    "name": "Козловський Богдан",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "18.09.2022",
    "tournament": "Chernivtsi Open",
@@ -84659,7 +84659,7 @@
   },
   {
    "name": "Усик Артем",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "18.09.2022",
    "tournament": "Chernivtsi Open",
@@ -84674,7 +84674,7 @@
   },
   {
    "name": "Гоян Дмитро",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "18.09.2022",
    "tournament": "Chernivtsi Open",
@@ -84689,7 +84689,7 @@
   },
   {
    "name": "Залевський/Пекарук",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "17.09.2022",
    "tournament": "Independence Championship",
@@ -84704,7 +84704,7 @@
   },
   {
    "name": "Козловський/Шапка",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "17.09.2022",
    "tournament": "Independence Championship",
@@ -84719,7 +84719,7 @@
   },
   {
    "name": "Овелько/Ферар",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "17.09.2022",
    "tournament": "Independence Championship",
@@ -84734,7 +84734,7 @@
   },
   {
    "name": "Гоян/Івасюк",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "17.09.2022",
    "tournament": "Independence Championship",
@@ -84749,7 +84749,7 @@
   },
   {
    "name": "Микитин/Нечипуренко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "17.09.2022",
    "tournament": "Independence Championship",
@@ -84764,7 +84764,7 @@
   },
   {
    "name": "Арійчук/Сєлєзньов",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "17.09.2022",
    "tournament": "Independence Championship",
@@ -84779,7 +84779,7 @@
   },
   {
    "name": "Філіпець/Вишневський",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "17.09.2022",
    "tournament": "Independence Championship",
@@ -84794,7 +84794,7 @@
   },
   {
    "name": "Усик/Мелашенко",
-   "gender": "open",
+   "gender": "men",
    "isUDL": false,
    "date": "17.09.2022",
    "tournament": "Independence Championship",
