@@ -1115,7 +1115,7 @@ function parseUaDate(d){
 function svgLineChart(points, opts){
   // points: [{x: label, y: number}], малює просту лінію без бібліотек
   const w = opts.width || 720, h = opts.height || 220;
-  const padL = 46, padR = 16, padT = 16, padB = 34;
+  const padL = 46, padR = 16, padT = 26, padB = 34;
   const innerW = w - padL - padR, innerH = h - padT - padB;
   if(points.length === 0) return '';
 
@@ -1148,11 +1148,18 @@ function svgLineChart(points, opts){
     `<circle cx="${xAt(i).toFixed(1)}" cy="${yAt(p.y).toFixed(1)}" r="3" fill="var(--gold)"><title>${p.x}: ${p.y}</title></circle>`
   ).join('');
 
+  const valueLabels = points.map((p,i) => {
+    const vx = xAt(i), vy = yAt(p.y);
+    const label = Number.isInteger(p.y) ? p.y : p.y.toFixed(1);
+    return `<text x="${vx.toFixed(1)}" y="${(vy-9).toFixed(1)}" text-anchor="middle" font-size="9" fill="var(--cream)" font-family="JetBrains Mono, monospace">${label}</text>`;
+  }).join('');
+
   return `<svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg">
     ${gridLines}
     <path d="${areaD}" fill="var(--gold)" opacity="0.08"/>
     <path d="${pathD}" fill="none" stroke="var(--gold)" stroke-width="2"/>
     ${dots}
+    ${valueLabels}
     ${xLabels}
   </svg>`;
 }
