@@ -24,6 +24,7 @@ PRIZES_WOMEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8
 RATINGS_SOURCES_PATH = "ratings_sources.json"
 NAKKA_API_BASE = "https://push.n01darts.com/api/v1"
 YOUTUBE_CHANNEL_ID = "UClyHuQB21ETTD7Q6V0cKmXQ"  # Ukrainian Darts Federation
+TELEGRAM_CHANNEL = "fullbull"  # інформаційний партнер ВФД
 
 OUTPUT_PATH = "data.json"
 
@@ -756,6 +757,66 @@ def fetch_latest_youtube_videos(count=4):
         return []
 
 
+# ---------------------------------------------------------------------------
+# Telegram — новини від інформаційного партнера ВФД (Fullbull). Канал пише
+# і про світовий дартс, тому фільтруємо: лишаємо тільки пости, де є явний
+# український сигнал (слово "україн", ВФД/УДЛ/ЗУДЛ, наше місто-господар,
+# або ім'я гравця з нашої ж бази).
+# ---------------------------------------------------------------------------
+UKRAINE_SIGNAL_WORDS = ["україн", "вфд", " удл", "зудл", "чемпіонат україни", "кубок україни"]
+
+
+def is_ukraine_relevant(text, known_names, known_cities):
+    t = text.lower()
+    if any(w in t for w in UKRAINE_SIGNAL_WORDS):
+        return True
+    if any(city.lower() in t for city in known_cities):
+        return True
+    if any(name.lower() in t for name in known_names if len(name) > 3):
+        return True
+    return False
+
+
+def strip_html_tags(fragment):
+    text = re.sub(r"<br\s*/?>", "\n", fragment)
+    text = re.sub(r"<[^>]+>", "", text)
+    return _html_module.unescape(text).strip()
+
+
+def fetch_telegram_news(channel, known_names, known_cities, limit=6):
+    url = f"https://t.me/s/{channel}"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (vfd-darts-sync)"})
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            page = resp.read().decode("utf-8", errors="ignore")
+    except Exception as e:
+        print(f"  Telegram fetch failed: {e}")
+        return []
+
+    blocks = re.split(r'(?=<div class="tgme_widget_message_wrap)', page)
+    posts = []
+    for block in blocks:
+        text_m = re.search(r'<div class="tgme_widget_message_text[^"]*"[^>]*>(.*?)</div>', block, re.DOTALL)
+        date_m = re.search(r'<time[^>]*datetime="([^"]+)"', block)
+        link_m = re.search(r'href="(https://t\.me/[a-zA-Z0-9_]+/\d+)"', block)
+        photo_m = re.search(r"tgme_widget_message_photo_wrap[^\"']*[\"'][^>]*background-image:url\('([^']+)'\)", block)
+        if not text_m or not date_m:
+            continue
+        text = strip_html_tags(text_m.group(1))
+        if not text:
+            continue
+        posts.append({
+            "text": text[:500],
+            "date": date_m.group(1)[:10],
+            "url": link_m.group(1) if link_m else f"https://t.me/{channel}",
+            "photo": photo_m.group(1) if photo_m else None,
+        })
+
+    posts.reverse()  # t.me/s/ віддає від найстарішого до найновішого
+    filtered = [p for p in posts if is_ukraine_relevant(p["text"], known_names, known_cities)]
+    return filtered[:limit]
+
+
 def main():
     print("Fetching tournaments CSV...")
     t_rows = fetch_csv(TOURNAMENTS_CSV_URL)
@@ -828,8 +889,13 @@ def main():
     # protocol_count = fill_protocol_medals(tournaments)
 
     print("Fetching latest YouTube videos...")
-    youtube_videos = fetch_latest_youtube_videos(4)
+    youtube_videos = fetch_latest_youtube_videos(3)
     print(f"  Got {len(youtube_videos)} videos")
+
+    print("Fetching Telegram news (Fullbull)...")
+    ukr_cities = list({t["city"] for t in tournaments if t.get("city")})
+    telegram_news = fetch_telegram_news(TELEGRAM_CHANNEL, canonical_names, ukr_cities, limit=6)
+    print(f"  Got {len(telegram_news)} Ukraine-relevant posts")
 
     data = {
         "meta": {
@@ -842,6 +908,7 @@ def main():
         "ratings": ratings,
         "nakkaPlayerStats": nakka_player_records,
         "youtubeVideos": youtube_videos,
+        "telegramNews": telegram_news,
     }
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:

@@ -349,6 +349,31 @@
   .youtube-card strong{display:block; color:var(--cream); font-size:16px; margin-bottom:2px;}
   .youtube-sub{display:block; color:var(--muted); font-size:12.5px;}
 
+  /* NEWS (Telegram) */
+  .news-partner-line{
+    display:flex; align-items:center; gap:10px; color:var(--muted); font-size:14px;
+    margin-bottom:20px;
+  }
+  .news-partner-line a{color:var(--gold); font-weight:600;}
+  .news-partner-logo{
+    display:flex; align-items:center; justify-content:center; width:28px; height:28px;
+    background:linear-gradient(135deg, var(--gold), var(--gold-2)); color:var(--bg);
+    font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; border-radius:6px;
+    flex-shrink:0;
+  }
+  .news-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:16px;}
+  .news-card{
+    display:block; background:var(--panel); border:1px solid var(--line); border-radius:8px;
+    overflow:hidden; text-decoration:none; transition:border-color .15s, transform .15s;
+  }
+  .news-card:hover{border-color:var(--gold); transform:translateY(-1px);}
+  .news-card img{width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:var(--panel-2);}
+  .news-card-body{padding:14px 16px;}
+  .news-card-date{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--gold); margin-bottom:6px; display:block;}
+  .news-card-text{font-size:13.5px; color:var(--cream); line-height:1.5;
+    display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden;
+  }
+
   .player-name.pp-clickable{cursor:pointer; text-decoration:underline; text-decoration-color:transparent; transition:text-decoration-color .15s;}
   .player-name.pp-clickable:hover{text-decoration-color:var(--gold); color:var(--gold);}
 
@@ -433,6 +458,7 @@
   <a href="#records">Рекорди</a>
   <a href="#nakka-records">Рекорди статистики</a>
   <a href="#youtube">Трансляції</a>
+  <a href="#news">Новини</a>
   <a href="#architecture">Як це працює</a>
   <label class="udl-toggle global-udl-toggle">
     <input type="checkbox" id="global-toggle-udl">
@@ -610,6 +636,17 @@
       <span class="youtube-sub">youtube.com/@UkranianDartsFederation — записи турнірів, огляди</span>
     </span>
   </a>
+</section>
+
+<section id="news">
+  <h2><span class="idx">05.2</span> Новини українського дартсу</h2>
+  <p class="news-partner-line">
+    <span class="news-partner-logo">FB</span>
+    Новини від інформаційного партнера Всеукраїнської Федерації Дартсу — <a href="https://t.me/fullbull" target="_blank" rel="noopener">Fullbull</a>
+  </p>
+  <div class="news-grid" id="news-grid">
+    <div class="pp-chart-empty">Завантаження…</div>
+  </div>
 </section>
 
 <section id="architecture">
@@ -874,6 +911,7 @@ const UKRAINE_CITY_COORDS = {"Львів": [74.3, 139.8], "Черкаси": [329
 
 let nakkaPlayerStats = [];
 let youtubeVideos = [];
+let telegramNews = [];
 let ratingsData = {};
 let recordsCategory = 'avgTournament';
 let recordsGender = 'men';
@@ -1130,6 +1168,7 @@ async function loadData(){
     ratingsData = data.ratings || {};
     nakkaPlayerStats = data.nakkaPlayerStats || [];
     youtubeVideos = data.youtubeVideos || [];
+    telegramNews = data.telegramNews || [];
 
     if(data.meta && data.meta.lastUpdated){
       const d = new Date(data.meta.lastUpdated);
@@ -1148,6 +1187,7 @@ async function loadData(){
     renderGrowthChart();
     renderUkraineMap();
     renderYoutubeVideos();
+    renderNews();
   } catch(err){
     console.error('Не вдалося завантажити data.json', err);
     document.querySelectorAll('.table-wrap tbody').forEach(tb=>{
@@ -1287,6 +1327,23 @@ function renderPlayerRatingChart(name){
   `;
 }
 
+
+function renderNews(){
+  const wrap = document.getElementById('news-grid');
+  if(!telegramNews.length){
+    wrap.innerHTML = '<div class="pp-chart-empty">Новин поки немає.</div>';
+    return;
+  }
+  wrap.innerHTML = telegramNews.map(n => `
+    <a class="news-card" href="${n.url}" target="_blank" rel="noopener">
+      ${n.photo ? `<img src="${n.photo}" alt="" loading="lazy">` : ''}
+      <div class="news-card-body">
+        <span class="news-card-date">${n.date}</span>
+        <div class="news-card-text">${n.text}</div>
+      </div>
+    </a>
+  `).join('');
+}
 
 function renderYoutubeVideos(){
   const wrap = document.getElementById('youtube-grid');
