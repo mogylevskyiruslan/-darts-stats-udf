@@ -442,10 +442,11 @@ def fetch_nakka_tournament(tdid, cache):
 
 
 def build_name_index(*name_lists):
-    """Будує словник 'Прізвище' -> 'Прізвище Ім'я' з усіх наших джерел
-    (медальний залік, рейтинги), де імена завжди повні. Використовується,
-    щоб добудувати ім'я там, де Nakka зберігає тільки прізвище гравця."""
-    from collections import Counter
+    """Будує словник 'Прізвище' -> 'Прізвище Ім'я', але ТІЛЬКИ для прізвищ,
+    де в нашій базі є РІВНО ОДНА людина. Якщо прізвище носять кілька різних
+    гравців (напр. і "Гринів Олександр", і "Гринів Юрій") — беремо його
+    заднім числом, оскільки автоматично вгадати, кого мали на увазі,
+    неможливо, і це раніше призводило до помилкового злиття різних людей."""
     by_surname = {}
     for names in name_lists:
         for name in names:
@@ -455,14 +456,14 @@ def build_name_index(*name_lists):
             if len(parts) < 2:
                 continue
             surname = parts[0]
-            by_surname.setdefault(surname, Counter())[name.strip()] += 1
-    return {surname: counter.most_common(1)[0][0] for surname, counter in by_surname.items()}
+            by_surname.setdefault(surname, set()).add(name.strip())
+    return {surname: next(iter(variants)) for surname, variants in by_surname.items() if len(variants) == 1}
 
 
 def build_canonical_names(*name_lists):
-    """Повний список канонічних імен (для нечіткого зіставлення) —
-    беремо з найнадійнішого джерела: самостійно порахований медальний залік
-    (він завжди українською, завжди "Прізвище Ім'я")."""
+    """Повний список канонічних імен (для нечіткого зіставлення ЦІЛОГО
+    імені) — беремо з найнадійнішого джерела: самостійно порахований
+    медальний залік (він завжди українською, завжди "Прізвище Ім'я")."""
     from collections import Counter
     counter = Counter()
     for names in name_lists:
@@ -473,51 +474,65 @@ def build_canonical_names(*name_lists):
     return [name for name, _ in counter.most_common()]
 
 
-def resolve_name(name, name_index, canonical_names=None, fuzzy_cutoff=0.84):
-    """Уніфікує ім'я гравця під наш канонічний формат "Прізвище Ім'я":
-    - одне слово (тільки прізвище) → шукає повне ім'я за прізвищем;
-    - два слова у зворотному порядку ("Тетяна Харченко" замість
-      "Харченко Тетяна") → розпізнає за другим словом і розвертає;
-    - одруківки й українська/російська різниця в написанні
-      ("Мгилевський"/"Могилевський", "Александр"/"Олександр") →
-      нечітке зіставлення з повним списком відомих імен;
-    - вже правильний формат → просто нормалізує."""
+# Пари імен, які насправді позначають ОДНУ Й ТУ Ж людину (підтверджено
+# вручну) — прізвище там настільки різне, що жоден автоматичний алгоритм
+# зіставлення не може (і не повинен) вгадати це сам. Ключ -> буде замінено
+# на значення.
+MANUAL_NAME_ALIASES = {
+    "Бурмака Павло": "Кумовицький Павло",
+    "Гончаренко Вадим": "Братченко Вадим",
+    "Рудковський Василь": "Дідов Василь",
+}
+
+
+def resolve_name(name, name_index, canonical_names=None, fuzzy_cutoff=0.88):
+    """Уніфікує ім'я гравця під наш канонічний формат "Прізвище Ім'я".
+
+    Найважливіше правило: НІКОЛИ не змінюємо прізвище на основі одного лише
+    прізвища, якщо в базі є кілька різних людей з таким прізвищем — інакше
+    "Гринів Юрій" перетвориться на "Гринів Олександр". Зіставлення завжди
+    йде по ЦІЛОМУ імені (нечітка схожість усього рядка), що природньо
+    захищає від злиття різних людей: "Гринів Олександр" і "Гринів Юрій"
+    відрізняються значною часткою рядка (низька схожість), а одруківка на
+    кшталт "Могилевский Руслан" — лише однією-двома літерами (висока
+    схожість)."""
     if not name:
         return name
-    parts = name.strip().split()
+    candidate = name.strip()
 
+    if candidate in MANUAL_NAME_ALIASES:
+        return MANUAL_NAME_ALIASES[candidate]
+
+    parts = candidate.split()
+
+    # Одне слово (тільки прізвище) — розгортаємо, лише якщо прізвище
+    # однозначне (рівно одна людина в базі під цим прізвищем).
     if len(parts) == 1:
         full = name_index.get(parts[0])
         if full:
             return full
+        return candidate
 
     if len(parts) == 2:
         first_word, second_word = parts
-        if first_word in name_index:
-            return name_index[first_word]
-        if second_word in name_index:
-            # Схоже на "Ім'я Прізвище" замість "Прізвище Ім'я" — але
-            # перевіряємо, що ім'я справді збігається з відомим, а не
-            # просто зливаємо різних людей з однаковим прізвищем.
-            canonical = name_index[second_word]
-            canon_parts = canonical.split()
-            canon_first = canon_parts[1] if len(canon_parts) > 1 else ""
-            if first_word == canon_first:
-                return canonical
-            if canonical_names:
-                import difflib
-                if difflib.SequenceMatcher(None, first_word, canon_first).ratio() >= fuzzy_cutoff:
-                    return canonical
 
-    candidate = name.strip()
+        # Вже правильний порядок і точний збіг — нічого міняти не треба.
+        if candidate in (canonical_names or []):
+            return candidate
 
-    if canonical_names:
-        import difflib
-        best = difflib.get_close_matches(candidate, canonical_names, n=1, cutoff=fuzzy_cutoff)
-        if best:
-            return best[0]
-        if len(parts) == 2:
-            reversed_candidate = f"{parts[1]} {parts[0]}"
+        if canonical_names:
+            import difflib
+            # Нечітке зіставлення ЦІЛОГО імені (не лише прізвища) —
+            # ловить одруківки й укр./рос. відмінності написання, але не
+            # плутає різних людей з однаковим прізвищем.
+            best = difflib.get_close_matches(candidate, canonical_names, n=1, cutoff=fuzzy_cutoff)
+            if best:
+                return best[0]
+
+            # Порядок слів переплутано ("Ім'я Прізвище") — пробуємо розвернути.
+            reversed_candidate = f"{second_word} {first_word}"
+            if reversed_candidate in canonical_names:
+                return reversed_candidate
             best_rev = difflib.get_close_matches(reversed_candidate, canonical_names, n=1, cutoff=fuzzy_cutoff)
             if best_rev:
                 return best_rev[0]
@@ -682,6 +697,11 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
 
             # Фаза 1: середній за окремий матч (match/list вже дає statsData,
             # без потреби в окремому запиті на кожен матч).
+            # Командні змагання виключаємо повністю: там statsData часто
+            # відображає командні (не персональні) цифри і псує рейтинг.
+            is_team_format = "команди" in (t.get("format", "") + " " + t.get("name", "")).lower()
+            if is_team_format:
+                continue
             matches = fetch_match_averages(tdid, match_cache)
             for m in matches:
                 stats_data = m.get("statsData") or []
