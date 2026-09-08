@@ -453,6 +453,7 @@
   <a href="#history">Історія</a>
   <a href="#tournaments">Турніри</a>
   <a href="#growth">Динаміка</a>
+  <a href="#participants-chart">Учасники по турнірах</a>
   <a href="#geography">Географія</a>
   <a href="#leaderboard">Призери</a>
   <a href="#current-rating">Поточний рейтинг</a>
@@ -501,8 +502,10 @@
           <th data-key="format">Формат</th>
           <th data-key="city">Місто</th>
           <th class="num" data-key="total">Всього</th>
-          <th class="num" title="Чоловіки / Жінки">Ч / Ж</th>
-          <th class="num" title="Середній: чоловіки / жінки">Avg Ч/Ж</th>
+          <th class="num" data-key="men">Чол.</th>
+          <th class="num" data-key="women">Жін.</th>
+          <th class="num" data-key="menAvg">Avg Ч.</th>
+          <th class="num" data-key="womenAvg">Avg Ж.</th>
           <th>Призери 🥇🥈🥉</th>
           <th>Джерела</th>
         </tr>
@@ -515,8 +518,14 @@
 
 <section id="growth">
   <h2><span class="idx">02.1</span> Зростання участі по роках</h2>
-  <p class="section-sub">Кількість унікальних учасників турнірів ВФД за кожен рік (за даними Nakka).</p>
+  <p class="section-sub">Унікальні учасники за рік: усього, нові (вперше зіграли) та втрачені (грали торік, не грають цього). ВФД, за даними Nakka.</p>
   <div class="pp-chart-wrap" id="growth-chart-wrap"></div>
+</section>
+
+<section id="participants-chart">
+  <h2><span class="idx">02.15</span> Кількість учасників по турнірах</h2>
+  <p class="section-sub">Чоловіки й жінки на кожному турнірі ВФД окремо. Увімкніть загальний перемикач УДЛ/ЗУДЛ вгорі, щоб додати їх сумарну кількість (зелена лінія).</p>
+  <div class="pp-chart-wrap" id="participants-chart-wrap"></div>
 </section>
 
 <section id="geography">
@@ -641,6 +650,7 @@
       <button type="button" class="records-tab" data-cat="ton80Career">180-ки за кар'єру</button>
       <button type="button" class="records-tab" data-cat="finishTournament">Checkout 100+</button>
       <button type="button" class="records-tab" data-cat="finishCareer">Checkout 100+ (кар'єра)</button>
+      <button type="button" class="records-tab" data-cat="bestLeg">Найкращий лег</button>
     </div>
   </div>
   <div class="controls">
@@ -905,8 +915,10 @@ function renderTournaments(){
       <td class="mono" style="color:var(--muted)">${t.format}</td>
       <td>${t.city}</td>
       <td class="num mono">${fmtNum(t.total)}</td>
-      <td class="num mono">${fmtNum(t.men)} / ${fmtNum(t.women)}</td>
-      <td class="num mono">${fmtNum(t.menAvg)} / ${fmtNum(t.womenAvg)}</td>
+      <td class="num mono">${fmtNum(t.men)}</td>
+      <td class="num mono">${fmtNum(t.women)}</td>
+      <td class="num mono">${fmtNum(t.menAvg)}</td>
+      <td class="num mono">${fmtNum(t.womenAvg)}</td>
       <td>${renderMedalCell(t.nakkaMedals || t.medals, t.nakkaMedalsWomen || t.medalsWomen)}</td>
       <td>${renderLinkChips(t.links)}</td>
     </tr>
@@ -1068,6 +1080,16 @@ const RECORD_CATEGORIES = {
         .sort((a,b) => b[1] - a[1])
         .slice(0, 10)
         .map(([name, value]) => ({ name, value, context: 'за весь період' }));
+    }
+  },
+  bestLeg: {
+    title: 'Гравець', valueLabel: 'Найкращий лег (дротиків)',
+    compute(rows){
+      return rows
+        .filter(r => r.bestLeg > 0)
+        .sort((a,b) => a.bestLeg - b.bestLeg)  // менше дротиків = краще
+        .slice(0, 10)
+        .map(r => ({ name: r.name, value: r.bestLeg, context: `${r.tournament} · ${r.date}` }));
     }
   },
 };
@@ -1256,6 +1278,7 @@ document.getElementById('global-toggle-udl').addEventListener('change', ()=>{
   renderHeroStats();
   renderNakkaRecords();
   renderGrowthChart();
+  renderParticipantsChart();
   renderUkraineMap();
 });
 document.querySelectorAll('#leaderboard .gender-btn').forEach(btn=>{
@@ -1325,6 +1348,7 @@ async function loadData(){
     renderRatings();
     renderNakkaRecords();
     renderGrowthChart();
+    renderParticipantsChart();
     renderUkraineMap();
     renderYoutubeVideos();
     renderNews();
@@ -1343,6 +1367,66 @@ async function loadData(){
 function parseUaDate(d){
   const [dd,mm,yyyy] = d.split('.');
   return new Date(`${yyyy}-${mm}-${dd}`);
+}
+
+function svgMultiLineChart(series, opts){
+  // series: [{name, color, points: [{x,y}]}] — спільна вісь X (за індексом),
+  // окремий колір і легенда для кожної лінії. Використовує ту саму вісь X,
+  // що й перша серія з непорожніми точками.
+  opts = opts || {};
+  const w = opts.width || 720, h = opts.height || 260;
+  const padL = 46, padR = 16, padT = 26, padB = 50;
+  const innerW = w - padL - padR, innerH = h - padT - padB;
+
+  const active = series.filter(s => s.points && s.points.length);
+  if(active.length === 0) return '<div class="pp-chart-empty">Немає даних.</div>';
+
+  const xLabels = active.reduce((longest, s) => s.points.length > longest.length ? s.points.map(p=>p.x) : longest, []);
+  const allYs = active.flatMap(s => s.points.map(p=>p.y));
+  let yMin = Math.min(0, ...allYs), yMax = Math.max(...allYs);
+  if(yMin === yMax){ yMax += 5; }
+  const yPad = (yMax - yMin) * 0.1;
+  yMax += yPad;
+
+  const xStep = xLabels.length > 1 ? innerW / (xLabels.length - 1) : 0;
+  const xAt = i => padL + i * xStep;
+  const yAt = v => padT + innerH - ((v - yMin) / (yMax - yMin)) * innerH;
+
+  const gridLines = [0,0.5,1].map(t => {
+    const y = padT + innerH * t;
+    const val = yMax - (yMax-yMin)*t;
+    return `<line x1="${padL}" y1="${y}" x2="${w-padR}" y2="${y}" stroke="var(--line)" stroke-width="1"/>
+            <text x="${padL-8}" y="${y+4}" text-anchor="end" font-size="10" fill="var(--muted)" font-family="JetBrains Mono, monospace">${val.toFixed(0)}</text>`;
+  }).join('');
+
+  const xLabelsHtml = xLabels.map((lbl,i) => {
+    if(xLabels.length > 10 && i % Math.ceil(xLabels.length/10) !== 0 && i !== xLabels.length-1) return '';
+    return `<text x="${xAt(i).toFixed(1)}" y="${h-32}" text-anchor="middle" font-size="9" fill="var(--muted)" font-family="JetBrains Mono, monospace">${lbl}</text>`;
+  }).join('');
+
+  const seriesHtml = active.map(s => {
+    const pathD = s.points.map((p,i) => `${i===0?'M':'L'}${xAt(i).toFixed(1)},${yAt(p.y).toFixed(1)}`).join(' ');
+    const dots = s.points.map((p,i) =>
+      `<circle cx="${xAt(i).toFixed(1)}" cy="${yAt(p.y).toFixed(1)}" r="2.5" fill="${s.color}"><title>${s.name}: ${p.x} = ${p.y}</title></circle>`
+    ).join('');
+    return `<path d="${pathD}" fill="none" stroke="${s.color}" stroke-width="2"/>${dots}`;
+  }).join('');
+
+  const legend = active.map((s,i) =>
+    `<span style="display:inline-flex;align-items:center;gap:5px;margin-right:16px;">
+      <span style="width:10px;height:10px;border-radius:2px;background:${s.color};display:inline-block;"></span>
+      <span style="font-size:12px;color:var(--muted);">${s.name}</span>
+    </span>`
+  ).join('');
+
+  return `
+    <svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg">
+      ${gridLines}
+      ${seriesHtml}
+      ${xLabelsHtml}
+    </svg>
+    <div style="margin-top:6px;">${legend}</div>
+  `;
 }
 
 function svgLineChart(points, opts){
@@ -1437,10 +1521,54 @@ function renderGrowthChart(){
     byYear[y].add(r.name);
   });
   const years = Object.keys(byYear).sort();
-  const points = years.map(y => ({ x: y, y: byYear[y].size }));
-  document.getElementById('growth-chart-wrap').innerHTML = points.length
-    ? svgLineChart(points, {height: 200})
+
+  const everSeen = new Set();
+  const totalPoints = [], newPoints = [], lostPoints = [];
+  let prevYearSet = null;
+  years.forEach(y => {
+    const thisYearSet = byYear[y];
+    totalPoints.push({ x: y, y: thisYearSet.size });
+
+    let newCount = 0;
+    thisYearSet.forEach(name => { if(!everSeen.has(name)) newCount++; });
+    newPoints.push({ x: y, y: newCount });
+    thisYearSet.forEach(name => everSeen.add(name));
+
+    let lostCount = 0;
+    if(prevYearSet){
+      prevYearSet.forEach(name => { if(!thisYearSet.has(name)) lostCount++; });
+    }
+    lostPoints.push({ x: y, y: prevYearSet ? lostCount : 0 });
+    prevYearSet = thisYearSet;
+  });
+
+  document.getElementById('growth-chart-wrap').innerHTML = years.length
+    ? svgMultiLineChart([
+        { name: 'Всього', color: 'var(--gold)', points: totalPoints },
+        { name: 'Нові', color: '#4ade80', points: newPoints },
+        { name: 'Втрачені', color: '#f87171', points: lostPoints },
+      ], { height: 240 })
     : '<div class="pp-chart-empty">Немає даних.</div>';
+}
+
+function renderParticipantsChart(){
+  const includeUDL = document.getElementById('global-toggle-udl').checked;
+  const vfd = tournaments.filter(t => !t.isUDL).slice().sort((a,b) => parseUaDate(a.date) - parseUaDate(b.date));
+  const menPoints = vfd.map(t => ({ x: t.date.slice(0,5), y: t.men || 0 }));
+  const womenPoints = vfd.map(t => ({ x: t.date.slice(0,5), y: t.women || 0 }));
+
+  const series = [
+    { name: 'Чоловіки (ВФД)', color: 'var(--gold)', points: menPoints },
+    { name: 'Жінки (ВФД)', color: '#c084fc', points: womenPoints },
+  ];
+
+  if(includeUDL){
+    const udl = tournaments.filter(t => t.isUDL).slice().sort((a,b) => parseUaDate(a.date) - parseUaDate(b.date));
+    const udlPoints = udl.map(t => ({ x: t.date.slice(0,5), y: (t.men||0) + (t.women||0) }));
+    series.push({ name: 'УДЛ/ЗУДЛ (всього)', color: '#4ade80', points: udlPoints });
+  }
+
+  document.getElementById('participants-chart-wrap').innerHTML = svgMultiLineChart(series, { height: 240 });
 }
 
 function parseRankNumber(rankStr){
@@ -1483,7 +1611,7 @@ function renderPlayerCurrentRatingChart(name){
   });
   if(points.length < 2) return '';
   return `
-    <div class="pp-section-title">Динаміка позиції в поточному рейтингу</div>
+    <div class="pp-section-title">Динаміка зміни рейтингу</div>
     <div class="pp-chart-wrap">${svgLineChart(points, {height:180, invert:true})}</div>
   `;
 }
@@ -1545,6 +1673,10 @@ function openPlayerProfile(name){
     const totalFinishes = rows.reduce((s,r)=>s+(r.highOutCount||0), 0);
     const bestAvg = Math.max(...rows.map(r=>r.avg||0));
     const bestCheckout = Math.max(...rows.map(r=>r.highOut||0));
+    const bestLegDarts = Math.min(...rows.filter(r=>r.bestLeg>0).map(r=>r.bestLeg), Infinity);
+    const includeUDLmatch = includeUDL;
+    const myMatches = nakkaMatchStats.filter(r => r.name === name && (includeUDLmatch || !r.isUDL));
+    const bestMatchAvg = myMatches.length ? Math.max(...myMatches.map(r=>r.avg)) : null;
     const medalCount = {1:0,2:0,3:0};
     rows.forEach(r => { if(medalCount[r.rank] !== undefined) medalCount[r.rank]++; });
 
@@ -1565,9 +1697,11 @@ function openPlayerProfile(name){
 
       <div class="pp-stat-row">
         <div class="pp-stat-cell"><div class="num">${bestAvg.toFixed(2)}</div><div class="label">Найкращий середній</div></div>
+        <div class="pp-stat-cell"><div class="num">${bestMatchAvg !== null ? bestMatchAvg.toFixed(2) : '—'}</div><div class="label">Найкращий середній матчу</div></div>
         <div class="pp-stat-cell"><div class="num">${total180}</div><div class="label">180-ки всього</div></div>
         <div class="pp-stat-cell"><div class="num">${totalFinishes}</div><div class="label">Закриттів 100+</div></div>
         <div class="pp-stat-cell"><div class="num">${bestCheckout || '—'}</div><div class="label">Найкраще закриття</div></div>
+        <div class="pp-stat-cell"><div class="num">${bestLegDarts === Infinity ? '—' : bestLegDarts}</div><div class="label">Найкращий лег (дротиків)</div></div>
         <div class="pp-stat-cell"><div class="num">🥇${medalCount[1]} 🥈${medalCount[2]} 🥉${medalCount[3]}</div><div class="label">Місця на турнірах</div></div>
       </div>
 
@@ -1588,11 +1722,12 @@ function openPlayerProfile(name){
 
       <div class="pp-section-title">Історія виступів</div>
       <table class="pp-history-table">
-        <thead><tr><th>Дата</th><th>Турнір</th><th class="num">Середній</th><th class="num">180</th><th class="num">100+</th><th class="num">Місце</th></tr></thead>
+        <thead><tr><th>Дата</th><th>Турнір</th><th>Місто</th><th class="num">Середній</th><th class="num">180</th><th class="num">100+</th><th class="num">Місце</th></tr></thead>
         <tbody>${rows.slice().reverse().map(r => `
           <tr>
             <td class="mono">${r.date}</td>
             <td>${r.tournament}</td>
+            <td>${r.city || '—'}</td>
             <td class="num mono">${r.avg.toFixed(2)}</td>
             <td class="num mono">${r.ton80 || '—'}</td>
             <td class="num mono">${r.highOutCount || '—'}</td>

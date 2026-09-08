@@ -23,7 +23,7 @@ PRIZES_MEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U5
 PRIZES_WOMEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U550qzdDKkLxenpx2LUYMQ8Uccqf9ZdkyP7ruIqdoPt_tX-hQWKhQOnTGc6HG6jiPQmQEuA/pub?output=csv&gid=109502045"
 RATINGS_SOURCES_PATH = "ratings_sources.json"
 RATING_HISTORY_PATH = "rating_history.json"
-CURRENT_RATING_MEN_URL = "https://docs.google.com/spreadsheets/d/13BTy_ZDFgS1sz5iZ7dKHr1FXnVsbS5hzAS08R91n3as/export?format=csv&gid=0"
+CURRENT_RATING_MEN_URL = "https://docs.google.com/spreadsheets/d/13BTy_ZDFgS1sz5iZ7dKHr1FXnVsbS5hzAS08R91n3as/export?format=csv&gid=583085584"
 CURRENT_RATING_WOMEN_URL = "https://docs.google.com/spreadsheets/d/13BTy_ZDFgS1sz5iZ7dKHr1FXnVsbS5hzAS08R91n3as/export?format=csv&gid=964362865"
 NAKKA_API_BASE = "https://push.n01darts.com/api/v1"
 YOUTUBE_CHANNEL_ID = "UClyHuQB21ETTD7Q6V0cKmXQ"  # Ukrainian Darts Federation
@@ -721,6 +721,7 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                     "ton80": stat.get("ton80", 0),
                     "highOutCount": stat.get("highOutCount", 0),
                     "highOut": stat.get("highOut", 0),
+                    "bestLeg": stat.get("best", 0),
                     "rank": stat.get("rank", 0),
                     "match": stat.get("match", 0),
                     "winMatch": stat.get("winMatch", 0),
@@ -814,6 +815,44 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
           f"{sum(1 for v in cache.values() if v)} succeeded)")
     print(f"  Fetched match-level averages: {len(match_records)} rows from "
           f"{sum(len(v) for v in match_cache.values())} matches across {len(match_cache)} tdid")
+    # Другий прохід: добудовуємо голі прізвища (без імені), яких лишилось
+    # багато після того, як ми прибрали ризиковане розгортання "наосліп".
+    # Тепер робимо це БЕЗПЕЧНІШЕ: збираємо повні імена не тільки з медалістів
+    # (canonical_names), а з УСІХ імен, які реально зустрілись у статистиці
+    # цього ж запуску — і розгортаємо голе прізвище, лише якщо серед УСІХ
+    # цих джерел воно теж лишається однозначним (рівно один варіант).
+    from collections import defaultdict
+    surname_variants = defaultdict(set)
+    for full_name in canonical_names:
+        parts = full_name.split()
+        if len(parts) == 2:
+            surname_variants[parts[0]].add(full_name)
+    for rec in player_records:
+        parts = rec["name"].split()
+        if len(parts) == 2:
+            surname_variants[parts[0]].add(rec["name"])
+
+    expanded_index = {s: next(iter(v)) for s, v in surname_variants.items() if len(v) == 1}
+
+    def backfill(rec, *fields):
+        for field in fields:
+            val = rec.get(field)
+            if val and len(val.split()) == 1 and val in expanded_index:
+                rec[field] = expanded_index[val]
+
+    backfilled = 0
+    for rec in player_records:
+        before = rec["name"]
+        backfill(rec, "name")
+        if before != rec["name"]:
+            backfilled += 1
+    for rec in match_records:
+        backfill(rec, "name", "opponent")
+    for rec in h2h_records:
+        backfill(rec, "name1", "name2")
+    if backfilled:
+        print(f"  Добудовано ім'я для {backfilled} записів (голе прізвище -> повне ім'я, безпечно)")
+
     return player_records, match_records, h2h_records
 
 
