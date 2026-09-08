@@ -627,7 +627,7 @@
     <div class="records-tabs" id="records-tabs">
       <button type="button" class="records-tab active" data-cat="avgTournament">Середній за турнір</button>
       <button type="button" class="records-tab" data-cat="avgMatch">Середній за матч</button>
-      <button type="button" class="records-tab" data-cat="h2hMatch">Найвидовищніші матчі</button>
+      <button type="button" class="records-tab" data-cat="h2hMatch">H2H з найкращим AVG</button>
       <button type="button" class="records-tab" data-cat="ton80Tournament">180-ки за турнір</button>
       <button type="button" class="records-tab" data-cat="ton80Career">180-ки за кар'єру</button>
       <button type="button" class="records-tab" data-cat="finishTournament">100+ за турнір</button>
@@ -983,15 +983,15 @@ function renderShowMore(key, wrapId, total, rerenderFn){
 
 const RECORD_CATEGORIES = {
   h2hMatch: {
-    title: 'Матч', valueLabel: 'Сумарний середній', source: 'h2h', isH2H: true,
+    title: 'Матч', valueLabel: 'Середній обох', source: 'h2h', isH2H: true,
     compute(rows){
       return rows
-        .sort((a,b) => b.combinedAvg - a.combinedAvg)
+        .sort((a,b) => b.avgAvg - a.avgAvg)
         .slice(0, 10)
         .map(r => ({
           name1: r.name1, avg1: r.avg1, name2: r.name2, avg2: r.avg2,
-          value: r.combinedAvg.toFixed(2),
-          context: `${r.tournament} · ${r.city} · ${r.date}`,
+          value: r.avgAvg.toFixed(2),
+          context: `${r.result} · ${r.tournament} · ${r.city} · ${r.date}`,
         }));
     }
   },

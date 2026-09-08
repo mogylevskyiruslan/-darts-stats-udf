@@ -715,8 +715,12 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
             # без потреби в окремому запиті на кожен матч).
             # Командні змагання виключаємо повністю: там statsData часто
             # відображає командні (не персональні) цифри і псує рейтинг.
-            is_team_format = "команди" in (t.get("format", "") + " " + t.get("name", "")).lower()
-            if is_team_format:
+            # "Команди" і "Пари" виключаємо повністю: там "сторона" матчу
+            # може бути командою/змішаною парою, а не однією людиною —
+            # це псує і середній, і head-to-head, і саму стать гравця.
+            format_and_name = (t.get("format", "") + " " + t.get("name", "")).lower()
+            is_excluded_format = "команди" in format_and_name or "пари" in format_and_name
+            if is_excluded_format:
                 continue
             matches = fetch_match_averages(tdid, match_cache)
             for m in matches:
@@ -739,7 +743,11 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                         gender = "men"
                     else:
                         gender = default_gender
-                    resolved_sides.append({"name": name, "gender": gender, "avg": match_avg})
+                    resolved_sides.append({
+                        "name": name, "gender": gender, "avg": match_avg,
+                        "winSets": side.get("winSets") or 0,
+                        "winLegs": side.get("winLegs") or 0,
+                    })
 
                 if len(resolved_sides) != 2:
                     continue  # хтось не кинув жодного дротика — не рахуємо цей матч
@@ -758,12 +766,18 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                     })
 
                 # Head-to-head: один запис на матч (обидва гравці разом) —
-                # сировина для "найвидовищніші матчі" (найвища сума середніх).
+                # сировина для "H2H з найкращим AVG" (найвищий середній АВГ обох).
                 p1, p2 = resolved_sides
+                # Рахунок матчу: спершу сети, якщо формат безсетовий (0-0) — леги.
+                if p1["winSets"] or p2["winSets"]:
+                    result = f"{p1['winSets']}-{p2['winSets']}"
+                else:
+                    result = f"{p1['winLegs']}-{p2['winLegs']}"
                 h2h_records.append({
                     "name1": p1["name"], "avg1": p1["avg"],
                     "name2": p2["name"], "avg2": p2["avg"],
-                    "combinedAvg": round(p1["avg"] + p2["avg"], 2),
+                    "avgAvg": round((p1["avg"] + p2["avg"]) / 2, 2),
+                    "result": result,
                     "gender": p1["gender"],  # обидва гравці одного матчу — одна стать
                     "isUDL": t["isUDL"],
                     "date": t["date"],
