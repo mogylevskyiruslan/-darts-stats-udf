@@ -506,12 +506,15 @@ def resolve_name(name, name_index, canonical_names=None, fuzzy_cutoff=0.88):
 
     parts = candidate.split()
 
-    # Одне слово (тільки прізвище) — розгортаємо, лише якщо прізвище
-    # однозначне (рівно одна людина в базі під цим прізвищем).
+    # Одне слово (тільки прізвище) — НЕ розгортаємо автоматично. Наша база
+    # відомих імен (name_index) будується лише з медалістів таблиці
+    # "Призери" — вона не знає про кожного реального гравця. Якщо в родині
+    # двоє гравців з однаковим прізвищем (напр. Пивошенко Олена й Максим),
+    # а медалі є тільки в одного з них — "однозначність" у НАШІЙ базі не
+    # означає однозначність У РЕАЛЬНОСТІ. Це реально трапилось і помилково
+    # приписало матчі Максима Олені. Краще лишити голе прізвище як є, ніж
+    # ризикувати підмінити особу (і навіть стать).
     if len(parts) == 1:
-        full = name_index.get(parts[0])
-        if full:
-            return full
         return candidate
 
     if len(parts) == 2:
@@ -752,6 +755,22 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                 if len(resolved_sides) != 2:
                     continue  # хтось не кинув жодного дротика — не рахуємо цей матч
 
+                p1, p2 = resolved_sides
+                # Рахунок матчу: спершу сети, якщо формат безсетовий (0-0) — леги.
+                if p1["winSets"] or p2["winSets"]:
+                    score1, score2 = p1["winSets"], p2["winSets"]
+                else:
+                    score1, score2 = p1["winLegs"], p2["winLegs"]
+
+                # ВФД завжди грає до мінімум 3 перемог — рахунок переможця
+                # менше 3 означає незавершений/аномальний матч (обрив
+                # зв'язку, технічна поразка тощо). Такі матчі спотворюють і
+                # "середній за матч", і H2H — виключаємо їх повністю.
+                if max(score1, score2) < 3:
+                    continue
+
+                result = f"{score1}-{score2}"
+
                 for i, side in enumerate(resolved_sides):
                     opponent = resolved_sides[1 - i]
                     match_records.append({
@@ -767,12 +786,6 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
 
                 # Head-to-head: один запис на матч (обидва гравці разом) —
                 # сировина для "H2H з найкращим AVG" (найвищий середній АВГ обох).
-                p1, p2 = resolved_sides
-                # Рахунок матчу: спершу сети, якщо формат безсетовий (0-0) — леги.
-                if p1["winSets"] or p2["winSets"]:
-                    result = f"{p1['winSets']}-{p2['winSets']}"
-                else:
-                    result = f"{p1['winLegs']}-{p2['winLegs']}"
                 h2h_records.append({
                     "name1": p1["name"], "avg1": p1["avg"],
                     "name2": p2["name"], "avg2": p2["avg"],
