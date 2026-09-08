@@ -373,8 +373,8 @@
   }
   .news-card-more{font-size:12px; color:var(--muted); margin-top:8px; display:block;}
 
-  .player-name.pp-clickable{cursor:pointer; text-decoration:underline; text-decoration-color:transparent; transition:text-decoration-color .15s;}
-  .player-name.pp-clickable:hover{text-decoration-color:var(--gold); color:var(--gold);}
+  .player-name.pp-clickable, .player-name .pp-clickable{cursor:pointer; text-decoration:underline; text-decoration-color:transparent; transition:text-decoration-color .15s;}
+  .player-name.pp-clickable:hover, .player-name .pp-clickable:hover{text-decoration-color:var(--gold); color:var(--gold);}
 
   @media (max-width:640px){
     .hero{padding:40px 16px;}
@@ -627,6 +627,7 @@
     <div class="records-tabs" id="records-tabs">
       <button type="button" class="records-tab active" data-cat="avgTournament">Середній за турнір</button>
       <button type="button" class="records-tab" data-cat="avgMatch">Середній за матч</button>
+      <button type="button" class="records-tab" data-cat="h2hMatch">Найвидовищніші матчі</button>
       <button type="button" class="records-tab" data-cat="ton80Tournament">180-ки за турнір</button>
       <button type="button" class="records-tab" data-cat="ton80Career">180-ки за кар'єру</button>
       <button type="button" class="records-tab" data-cat="finishTournament">100+ за турнір</button>
@@ -938,6 +939,7 @@ const UKRAINE_CITY_COORDS = {"Львів": [74.3, 139.8], "Черкаси": [329
 
 let nakkaPlayerStats = [];
 let nakkaMatchStats = [];
+let nakkaH2HStats = [];
 let currentRatingMen = null;
 let currentRatingWomen = null;
 let ratingHistory = null;
@@ -980,6 +982,19 @@ function renderShowMore(key, wrapId, total, rerenderFn){
 }
 
 const RECORD_CATEGORIES = {
+  h2hMatch: {
+    title: 'Матч', valueLabel: 'Сумарний середній', source: 'h2h', isH2H: true,
+    compute(rows){
+      return rows
+        .sort((a,b) => b.combinedAvg - a.combinedAvg)
+        .slice(0, 10)
+        .map(r => ({
+          name1: r.name1, avg1: r.avg1, name2: r.name2, avg2: r.avg2,
+          value: r.combinedAvg.toFixed(2),
+          context: `${r.tournament} · ${r.city} · ${r.date}`,
+        }));
+    }
+  },
   avgMatch: {
     title: 'Гравець', valueLabel: 'Середній', source: 'match',
     compute(rows){
@@ -1046,7 +1061,9 @@ const RECORD_CATEGORIES = {
 function renderNakkaRecords(){
   const includeUDL = document.getElementById('global-toggle-udl').checked;
   const cat = RECORD_CATEGORIES[recordsCategory];
-  const sourceData = cat.source === 'match' ? nakkaMatchStats : nakkaPlayerStats;
+  const sourceData = cat.source === 'match' ? nakkaMatchStats
+    : cat.source === 'h2h' ? nakkaH2HStats
+    : nakkaPlayerStats;
   const rows = sourceData.filter(r => (includeUDL || !r.isUDL) && r.gender === recordsGender);
 
   const countEl = document.getElementById('nakka-records-count');
@@ -1069,7 +1086,11 @@ function renderNakkaRecords(){
   body.innerHTML = results.map((r, i) => `
     <tr>
       <td class="rank-cell num">${i + 1}</td>
-      <td class="player-name pp-clickable" onclick="openPlayerProfile('${r.name.replace(/'/g, "\\'")}')">${r.name}</td>
+      <td class="player-name">${
+        cat.isH2H
+          ? `<span class="pp-clickable" onclick="openPlayerProfile('${r.name1.replace(/'/g, "\\'")}')">${r.name1}</span> (${r.avg1.toFixed(2)}) <span style="color:var(--muted)">vs</span> <span class="pp-clickable" onclick="openPlayerProfile('${r.name2.replace(/'/g, "\\'")}')">${r.name2}</span> (${r.avg2.toFixed(2)})`
+          : `<span class="pp-clickable" onclick="openPlayerProfile('${r.name.replace(/'/g, "\\'")}')">${r.name}</span>`
+      }</td>
       <td class="num mono" style="color:var(--gold); font-weight:700;">${r.value}</td>
       <td class="mono" style="color:var(--muted); font-size:12px;">${r.context}</td>
     </tr>
@@ -1260,6 +1281,7 @@ async function loadData(){
     ratingsData = data.ratings || {};
     nakkaPlayerStats = data.nakkaPlayerStats || [];
     nakkaMatchStats = data.nakkaMatchStats || [];
+    nakkaH2HStats = data.nakkaH2HStats || [];
     currentRatingMen = data.currentRatingMen || null;
     currentRatingWomen = data.currentRatingWomen || null;
 

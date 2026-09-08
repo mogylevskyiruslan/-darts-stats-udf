@@ -638,6 +638,7 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
     match_cache = {}
     player_records = []
     match_records = []
+    h2h_records = []
     fetched = 0
     known_women = known_women or set()
     known_men = known_men or set()
@@ -722,37 +723,59 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                 stats_data = m.get("statsData") or []
                 if len(stats_data) != 2:
                     continue
+
+                resolved_sides = []
                 for i, side in enumerate(stats_data):
                     all_score = side.get("allScore") or 0
                     all_darts = side.get("allDarts") or 0
                     if all_darts <= 0:
-                        continue
+                        resolved_sides = []
+                        break
                     match_avg = round(all_score / all_darts * 3, 2)
-                    raw_name = side.get("name") or ""
-                    name = resolve_name(raw_name, name_index, canonical_names)
+                    name = resolve_name(side.get("name") or "", name_index, canonical_names)
                     if name in known_women:
                         gender = "women"
                     elif name in known_men:
                         gender = "men"
                     else:
                         gender = default_gender
-                    opponent_raw = stats_data[1 - i].get("name") or ""
+                    resolved_sides.append({"name": name, "gender": gender, "avg": match_avg})
+
+                if len(resolved_sides) != 2:
+                    continue  # хтось не кинув жодного дротика — не рахуємо цей матч
+
+                for i, side in enumerate(resolved_sides):
+                    opponent = resolved_sides[1 - i]
                     match_records.append({
-                        "name": name,
-                        "gender": gender,
+                        "name": side["name"],
+                        "gender": side["gender"],
                         "isUDL": t["isUDL"],
                         "date": t["date"],
                         "tournament": t["name"],
                         "city": t["city"],
-                        "opponent": resolve_name(opponent_raw, name_index, canonical_names),
-                        "avg": match_avg,
+                        "opponent": opponent["name"],
+                        "avg": side["avg"],
                     })
+
+                # Head-to-head: один запис на матч (обидва гравці разом) —
+                # сировина для "найвидовищніші матчі" (найвища сума середніх).
+                p1, p2 = resolved_sides
+                h2h_records.append({
+                    "name1": p1["name"], "avg1": p1["avg"],
+                    "name2": p2["name"], "avg2": p2["avg"],
+                    "combinedAvg": round(p1["avg"] + p2["avg"], 2),
+                    "gender": p1["gender"],  # обидва гравці одного матчу — одна стать
+                    "isUDL": t["isUDL"],
+                    "date": t["date"],
+                    "tournament": t["name"],
+                    "city": t["city"],
+                })
 
     print(f"  Fetched {fetched} Nakka tournament records ({len(cache)} unique tdid, "
           f"{sum(1 for v in cache.values() if v)} succeeded)")
     print(f"  Fetched match-level averages: {len(match_records)} rows from "
           f"{sum(len(v) for v in match_cache.values())} matches across {len(match_cache)} tdid")
-    return player_records, match_records
+    return player_records, match_records, h2h_records
 
 
 # ---------------------------------------------------------------------------
@@ -1043,7 +1066,7 @@ def main():
     print("Fetching real Nakka tournament stats (this may take a few minutes)...")
     known_women = {p["name"] for p in women_aggregate}
     known_men = {p["name"] for p in men_aggregate}
-    nakka_player_records, nakka_match_records = enrich_with_nakka(tournaments, name_index, canonical_names, known_women, known_men)
+    nakka_player_records, nakka_match_records, nakka_h2h_records = enrich_with_nakka(tournaments, name_index, canonical_names, known_women, known_men)
     print(f"Collected {len(nakka_player_records)} player-tournament stat rows from Nakka")
 
     # Протоколи (Google Docs) для турнірів до Nakka НЕ вмикаємо автоматично:
@@ -1090,6 +1113,7 @@ def main():
         "ratings": ratings,
         "nakkaPlayerStats": nakka_player_records,
         "nakkaMatchStats": nakka_match_records,
+        "nakkaH2HStats": nakka_h2h_records,
         "currentRatingMen": current_rating_men,
         "currentRatingWomen": current_rating_women,
         "youtubeVideos": youtube_videos,
