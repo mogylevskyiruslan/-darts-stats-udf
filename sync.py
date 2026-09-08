@@ -23,7 +23,7 @@ PRIZES_MEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U5
 PRIZES_WOMEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U550qzdDKkLxenpx2LUYMQ8Uccqf9ZdkyP7ruIqdoPt_tX-hQWKhQOnTGc6HG6jiPQmQEuA/pub?output=csv&gid=109502045"
 RATINGS_SOURCES_PATH = "ratings_sources.json"
 RATING_HISTORY_PATH = "rating_history.json"
-CURRENT_RATING_MEN_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRcI0fGxtfTf05rfc-bjKQEj1bwhh9f1n_Hs5zfZbA81Kd5DxBIHyxP54CJfJNSAl5FyZdq8H1J_pdA/pub?output=csv"
+CURRENT_RATING_MEN_URL = "https://docs.google.com/spreadsheets/d/13BTy_ZDFgS1sz5iZ7dKHr1FXnVsbS5hzAS08R91n3as/export?format=csv&gid=0"
 CURRENT_RATING_WOMEN_URL = "https://docs.google.com/spreadsheets/d/13BTy_ZDFgS1sz5iZ7dKHr1FXnVsbS5hzAS08R91n3as/export?format=csv&gid=964362865"
 NAKKA_API_BASE = "https://push.n01darts.com/api/v1"
 YOUTUBE_CHANNEL_ID = "UClyHuQB21ETTD7Q6V0cKmXQ"  # Ukrainian Darts Federation
@@ -1117,8 +1117,16 @@ def main():
     # protocol_count = fill_protocol_medals(tournaments)
 
     print("Fetching current-season live rating (men + women)...")
-    current_rating_men = fetch_current_rating(CURRENT_RATING_MEN_URL, name_index, canonical_names)
-    current_rating_women = fetch_current_rating(CURRENT_RATING_WOMEN_URL, name_index, canonical_names)
+    try:
+        current_rating_men = fetch_current_rating(CURRENT_RATING_MEN_URL, name_index, canonical_names)
+    except Exception as e:
+        print(f"  WARNING: men's current rating fetch failed ({e}), skipping")
+        current_rating_men = None
+    try:
+        current_rating_women = fetch_current_rating(CURRENT_RATING_WOMEN_URL, name_index, canonical_names)
+    except Exception as e:
+        print(f"  WARNING: women's current rating fetch failed ({e}), skipping")
+        current_rating_women = None
     print(f"  Men: {len(current_rating_men['rows']) if current_rating_men else 0} players, "
           f"Women: {len(current_rating_women['rows']) if current_rating_women else 0} players")
 
