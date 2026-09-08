@@ -104,6 +104,7 @@
   }
 
   section{padding:56px 24px; max-width:1080px; margin:0 auto;}
+  #tournaments{max-width:1360px;}
   section h2{
     font-size:28px; margin:0 0 8px; display:flex; align-items:baseline; gap:12px;
   }
@@ -195,6 +196,7 @@
     font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.06em;
     border-bottom:1px solid var(--line); cursor:pointer; user-select:none;
   }
+  thead th:not([data-key]){cursor:default;}
   /* Липка шапка потрібна лише для довгої таблиці турнірів — на коротших
      таблицях (рейтинг, історія) вона лише обрізає перший рядок */
   /* Липку шапку для таблиці турнірів прибрано: коли перший рядок опинявся
@@ -452,7 +454,7 @@
   <a href="#tournaments">Турніри</a>
   <a href="#growth">Динаміка</a>
   <a href="#geography">Географія</a>
-  <a href="#leaderboard">Рейтинг</a>
+  <a href="#leaderboard">Призери</a>
   <a href="#current-rating">Поточний рейтинг</a>
   <a href="#ratings">Рейтинги сезону</a>
   <a href="#records">Рекорди</a>
@@ -499,10 +501,8 @@
           <th data-key="format">Формат</th>
           <th data-key="city">Місто</th>
           <th class="num" data-key="total">Всього</th>
-          <th class="num" data-key="men">Чол.</th>
-          <th class="num" data-key="women">Жін.</th>
-          <th class="num" data-key="menAvg">Avg Ч.</th>
-          <th class="num" data-key="womenAvg">Avg Ж.</th>
+          <th class="num" title="Чоловіки / Жінки">Ч / Ж</th>
+          <th class="num" title="Середній: чоловіки / жінки">Avg Ч/Ж</th>
           <th>Призери 🥇🥈🥉</th>
           <th>Джерела</th>
         </tr>
@@ -528,7 +528,7 @@
 </section>
 
 <section id="leaderboard">
-  <h2><span class="idx">03</span> Рейтинг гравців</h2>
+  <h2><span class="idx">03</span> Призери етапів Кубку України</h2>
   <p class="section-sub">Медальний залік за етапами Кубка України та перемогами на ЧУ — з таблиці «Призери етапів кубків ВФД».</p>
   <div class="controls">
     <div class="gender-toggle">
@@ -536,6 +536,15 @@
       <button type="button" class="gender-btn" data-gender="women">Жінки</button>
     </div>
     <input type="text" id="search-leaderboard" placeholder="Пошук гравця…">
+    <select id="filter-leaderboard-medal">
+      <option value="">Усі гравці</option>
+      <option value="gold">Тільки із золотом</option>
+      <option value="silver">Тільки із сріблом</option>
+      <option value="bronze">Тільки із бронзою</option>
+      <option value="chu">Тільки чемпіони ЧУ</option>
+      <option value="5">Мінімум 5 медалей</option>
+      <option value="10">Мінімум 10 медалей</option>
+    </select>
   </div>
   <div class="table-wrap">
     <table>
@@ -630,8 +639,8 @@
       <button type="button" class="records-tab" data-cat="h2hMatch">H2H з найкращим AVG</button>
       <button type="button" class="records-tab" data-cat="ton80Tournament">180-ки за турнір</button>
       <button type="button" class="records-tab" data-cat="ton80Career">180-ки за кар'єру</button>
-      <button type="button" class="records-tab" data-cat="finishTournament">100+ за турнір</button>
-      <button type="button" class="records-tab" data-cat="finishCareer">100+ за кар'єру</button>
+      <button type="button" class="records-tab" data-cat="finishTournament">Checkout 100+</button>
+      <button type="button" class="records-tab" data-cat="finishCareer">Checkout 100+ (кар'єра)</button>
     </div>
   </div>
   <div class="controls">
@@ -896,10 +905,8 @@ function renderTournaments(){
       <td class="mono" style="color:var(--muted)">${t.format}</td>
       <td>${t.city}</td>
       <td class="num mono">${fmtNum(t.total)}</td>
-      <td class="num mono">${fmtNum(t.men)}</td>
-      <td class="num mono">${fmtNum(t.women)}</td>
-      <td class="num mono">${fmtNum(t.menAvg)}</td>
-      <td class="num mono">${fmtNum(t.womenAvg)}</td>
+      <td class="num mono">${fmtNum(t.men)} / ${fmtNum(t.women)}</td>
+      <td class="num mono">${fmtNum(t.menAvg)} / ${fmtNum(t.womenAvg)}</td>
       <td>${renderMedalCell(t.nakkaMedals || t.medals, t.nakkaMedalsWomen || t.medalsWomen)}</td>
       <td>${renderLinkChips(t.links)}</td>
     </tr>
@@ -911,8 +918,15 @@ let leaderboardGender = 'men';
 
 function renderLeaderboard(){
   const q = (document.getElementById('search-leaderboard').value || '').toLowerCase();
+  const medalFilter = document.getElementById('filter-leaderboard-medal').value;
   const source = leaderboardGender === 'women' ? leaderboardWomen : leaderboard;
-  const rows = source.filter(p => !q || p.name.toLowerCase().includes(q));
+  let rows = source.filter(p => !q || p.name.toLowerCase().includes(q));
+  if(medalFilter === 'gold') rows = rows.filter(p => p.gold > 0);
+  else if(medalFilter === 'silver') rows = rows.filter(p => p.silver > 0);
+  else if(medalFilter === 'bronze') rows = rows.filter(p => p.bronze > 0);
+  else if(medalFilter === 'chu') rows = rows.filter(p => p.champUA > 0);
+  else if(medalFilter === '5' || medalFilter === '10') rows = rows.filter(p => p.total >= parseInt(medalFilter));
+
   const body = document.getElementById('leaderboard-body');
   if(rows.length === 0){
     body.innerHTML = `<tr class="empty-row"><td colspan="7">Нічого не знайдено.</td></tr>`;
@@ -1212,6 +1226,7 @@ function populateFilters(){
 document.querySelectorAll('#tournaments thead th').forEach(th=>{
   th.addEventListener('click', ()=>{
     const key = th.dataset.key;
+    if(!key) return;
     if(sortKey === key){ sortDir *= -1; } else { sortKey = key; sortDir = -1; }
     renderTournaments();
   });
@@ -1234,6 +1249,7 @@ document.querySelectorAll('#current-rating .gender-btn').forEach(btn=>{
   });
 });
 document.getElementById('search-leaderboard').addEventListener('input', ()=>{ resetPagination('leaderboard'); renderLeaderboard(); });
+document.getElementById('filter-leaderboard-medal').addEventListener('change', ()=>{ resetPagination('leaderboard'); renderLeaderboard(); });
 document.getElementById('global-toggle-udl').addEventListener('change', ()=>{
   resetPagination('tournaments');
   renderTournaments();

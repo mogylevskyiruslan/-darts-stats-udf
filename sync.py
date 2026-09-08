@@ -29,6 +29,13 @@ NAKKA_API_BASE = "https://push.n01darts.com/api/v1"
 YOUTUBE_CHANNEL_ID = "UClyHuQB21ETTD7Q6V0cKmXQ"  # Ukrainian Darts Federation
 TELEGRAM_CHANNEL = "fullbull"  # інформаційний партнер ВФД
 
+# tdid турнірів, дані Nakka по яких явно биті (незрозумілі символи, аномальна
+# кількість 180-ок тощо) — призерів з них показуємо як завжди, але в жодну
+# статистику (Рекорди, середні, H2H) ці турніри не потрапляють.
+EXCLUDED_STATS_TDIDS = {
+    "t_tjg4_1053",  # UDL STAGE 3, Ужгород, 13.04.2024 — биті дані 180-ок
+}
+
 OUTPUT_PATH = "data.json"
 
 
@@ -686,6 +693,11 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                 t["nakkaMedals"] = medals_men
             if medals_women and not t["nakkaMedalsWomen"]:
                 t["nakkaMedalsWomen"] = medals_women
+
+            if tdid in EXCLUDED_STATS_TDIDS:
+                # Призерів (вище) лишаємо, а от у жодну статистику (Рекорди,
+                # середні, H2H тощо) цей турнір не потрапляє — дані биті.
+                continue
 
             for tpid, stat in data["stats"].items():
                 avg = player_avg(stat)
