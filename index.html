@@ -1567,8 +1567,12 @@ function renderGrowthChart(){
 
 function renderParticipantsChart(){
   const includeUDL = document.getElementById('global-toggle-udl').checked;
+  const monthYearLabel = dateStr => {
+    const [dd, mm, yyyy] = dateStr.split('.');
+    return `${mm}.${yyyy}`;
+  };
   const vfd = tournaments.filter(t => !t.isUDL).slice().sort((a,b) => parseUaDate(a.date) - parseUaDate(b.date));
-  const totalPoints = vfd.map(t => ({ x: t.date.slice(0,5), y: (t.men||0) + (t.women||0) }));
+  const totalPoints = vfd.map(t => ({ x: monthYearLabel(t.date), y: (t.men||0) + (t.women||0) }));
 
   const series = [
     { name: 'Учасники (ВФД)', color: 'var(--gold)', points: totalPoints },
@@ -1576,7 +1580,7 @@ function renderParticipantsChart(){
 
   if(includeUDL){
     const udl = tournaments.filter(t => t.isUDL).slice().sort((a,b) => parseUaDate(a.date) - parseUaDate(b.date));
-    const udlPoints = udl.map(t => ({ x: t.date.slice(0,5), y: (t.men||0) + (t.women||0) }));
+    const udlPoints = udl.map(t => ({ x: monthYearLabel(t.date), y: (t.men||0) + (t.women||0) }));
     series.push({ name: 'УДЛ/ЗУДЛ (всього)', color: '#4ade80', points: udlPoints });
   }
 
