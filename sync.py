@@ -699,6 +699,17 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                 # середні, H2H тощо) цей турнір не потрапляє — дані биті.
                 continue
 
+            # "Команди" і "Пари" виключаємо повністю з БУДЬ-ЯКОЇ статистики
+            # (не тільки з середнього за матч) — там "сторона"/"гравець" у
+            # Nakka може бути командою чи змішаною парою ("Kyiv Bulls",
+            # "Залевський/Чепак" тощо), а не однією людиною. Раніше це
+            # виключалось лише для матчів, а базова турнірна статистика
+            # (найкращий лег, 180-ки, checkout) досі мала биті записи.
+            format_and_name = (t.get("format", "") + " " + t.get("name", "")).lower()
+            is_excluded_format = "команди" in format_and_name or "пари" in format_and_name
+            if is_excluded_format:
+                continue
+
             for tpid, stat in data["stats"].items():
                 avg = player_avg(stat)
                 if avg is None:
@@ -729,15 +740,6 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
 
             # Фаза 1: середній за окремий матч (match/list вже дає statsData,
             # без потреби в окремому запиті на кожен матч).
-            # Командні змагання виключаємо повністю: там statsData часто
-            # відображає командні (не персональні) цифри і псує рейтинг.
-            # "Команди" і "Пари" виключаємо повністю: там "сторона" матчу
-            # може бути командою/змішаною парою, а не однією людиною —
-            # це псує і середній, і head-to-head, і саму стать гравця.
-            format_and_name = (t.get("format", "") + " " + t.get("name", "")).lower()
-            is_excluded_format = "команди" in format_and_name or "пари" in format_and_name
-            if is_excluded_format:
-                continue
             matches = fetch_match_averages(tdid, match_cache)
             for m in matches:
                 stats_data = m.get("statsData") or []

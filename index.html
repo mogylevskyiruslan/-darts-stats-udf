@@ -524,7 +524,7 @@
 
 <section id="participants-chart">
   <h2><span class="idx">02.15</span> Кількість учасників по турнірах</h2>
-  <p class="section-sub">Чоловіки й жінки на кожному турнірі ВФД окремо. Увімкніть загальний перемикач УДЛ/ЗУДЛ вгорі, щоб додати їх сумарну кількість (зелена лінія).</p>
+  <p class="section-sub">Сумарна кількість учасників (чоловіки + жінки) на кожному турнірі ВФД, у хронологічному порядку.</p>
   <div class="pp-chart-wrap" id="participants-chart-wrap"></div>
 </section>
 
@@ -1086,7 +1086,7 @@ const RECORD_CATEGORIES = {
     title: 'Гравець', valueLabel: 'Найкращий лег (дротиків)',
     compute(rows){
       return rows
-        .filter(r => r.bestLeg > 0)
+        .filter(r => r.bestLeg > 8)  // менше 9 дротиків фізично неможливо в 501 — биті дані
         .sort((a,b) => a.bestLeg - b.bestLeg)  // менше дротиків = краще
         .slice(0, 10)
         .map(r => ({ name: r.name, value: r.bestLeg, context: `${r.tournament} · ${r.date}` }));
@@ -1371,23 +1371,30 @@ function parseUaDate(d){
 
 function svgMultiLineChart(series, opts){
   // series: [{name, color, points: [{x,y}]}] — спільна вісь X (за індексом),
-  // окремий колір і легенда для кожної лінії. Використовує ту саму вісь X,
-  // що й перша серія з непорожніми точками.
+  // окремий колір і легенда для кожної лінії.
   opts = opts || {};
-  const w = opts.width || 720, h = opts.height || 260;
+  const h = opts.height || 260;
   const padL = 46, padR = 16, padT = 26, padB = 50;
-  const innerW = w - padL - padR, innerH = h - padT - padB;
 
   const active = series.filter(s => s.points && s.points.length);
   if(active.length === 0) return '<div class="pp-chart-empty">Немає даних.</div>';
 
   const xLabels = active.reduce((longest, s) => s.points.length > longest.length ? s.points.map(p=>p.x) : longest, []);
+
+  // Широкий/скрольований режим: фіксована ширина на точку замість
+  // стиснення всього в один контейнер — інакше багато точок зливаються.
+  const pointSpacing = opts.pointSpacing || 0;
+  const minInnerW = opts.width ? opts.width - padL - padR : 640;
+  const innerW = pointSpacing ? Math.max(minInnerW, (xLabels.length - 1) * pointSpacing) : minInnerW;
+  const w = innerW + padL + padR;
+
   const allYs = active.flatMap(s => s.points.map(p=>p.y));
   let yMin = Math.min(0, ...allYs), yMax = Math.max(...allYs);
   if(yMin === yMax){ yMax += 5; }
-  const yPad = (yMax - yMin) * 0.1;
+  const yPad = (yMax - yMin) * 0.12;
   yMax += yPad;
 
+  const innerH = h - padT - padB;
   const xStep = xLabels.length > 1 ? innerW / (xLabels.length - 1) : 0;
   const xAt = i => padL + i * xStep;
   const yAt = v => padT + innerH - ((v - yMin) / (yMax - yMin)) * innerH;
@@ -1399,17 +1406,22 @@ function svgMultiLineChart(series, opts){
             <text x="${padL-8}" y="${y+4}" text-anchor="end" font-size="10" fill="var(--muted)" font-family="JetBrains Mono, monospace">${val.toFixed(0)}</text>`;
   }).join('');
 
+  const labelStep = pointSpacing ? 1 : Math.max(1, Math.ceil(xLabels.length/10));
   const xLabelsHtml = xLabels.map((lbl,i) => {
-    if(xLabels.length > 10 && i % Math.ceil(xLabels.length/10) !== 0 && i !== xLabels.length-1) return '';
+    if(i % labelStep !== 0 && i !== xLabels.length-1) return '';
     return `<text x="${xAt(i).toFixed(1)}" y="${h-32}" text-anchor="middle" font-size="9" fill="var(--muted)" font-family="JetBrains Mono, monospace">${lbl}</text>`;
   }).join('');
 
+  const showValueLabels = opts.valueLabels !== false;
   const seriesHtml = active.map(s => {
     const pathD = s.points.map((p,i) => `${i===0?'M':'L'}${xAt(i).toFixed(1)},${yAt(p.y).toFixed(1)}`).join(' ');
     const dots = s.points.map((p,i) =>
       `<circle cx="${xAt(i).toFixed(1)}" cy="${yAt(p.y).toFixed(1)}" r="2.5" fill="${s.color}"><title>${s.name}: ${p.x} = ${p.y}</title></circle>`
     ).join('');
-    return `<path d="${pathD}" fill="none" stroke="${s.color}" stroke-width="2"/>${dots}`;
+    const valueLabels = showValueLabels ? s.points.map((p,i) =>
+      `<text x="${xAt(i).toFixed(1)}" y="${(yAt(p.y)-8).toFixed(1)}" text-anchor="middle" font-size="8.5" fill="${s.color}" font-family="JetBrains Mono, monospace">${p.y}</text>`
+    ).join('') : '';
+    return `<path d="${pathD}" fill="none" stroke="${s.color}" stroke-width="2"/>${dots}${valueLabels}`;
   }).join('');
 
   const legend = active.map((s,i) =>
@@ -1419,12 +1431,14 @@ function svgMultiLineChart(series, opts){
     </span>`
   ).join('');
 
-  return `
-    <svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg">
+  const svg = `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="${pointSpacing ? `width:${w}px; max-width:none; flex-shrink:0;` : ''} display:block;">
       ${gridLines}
       ${seriesHtml}
       ${xLabelsHtml}
-    </svg>
+    </svg>`;
+
+  return `
+    ${pointSpacing ? `<div style="overflow-x:auto;">${svg}</div>` : svg}
     <div style="margin-top:6px;">${legend}</div>
   `;
 }
@@ -1554,12 +1568,10 @@ function renderGrowthChart(){
 function renderParticipantsChart(){
   const includeUDL = document.getElementById('global-toggle-udl').checked;
   const vfd = tournaments.filter(t => !t.isUDL).slice().sort((a,b) => parseUaDate(a.date) - parseUaDate(b.date));
-  const menPoints = vfd.map(t => ({ x: t.date.slice(0,5), y: t.men || 0 }));
-  const womenPoints = vfd.map(t => ({ x: t.date.slice(0,5), y: t.women || 0 }));
+  const totalPoints = vfd.map(t => ({ x: t.date.slice(0,5), y: (t.men||0) + (t.women||0) }));
 
   const series = [
-    { name: 'Чоловіки (ВФД)', color: 'var(--gold)', points: menPoints },
-    { name: 'Жінки (ВФД)', color: '#c084fc', points: womenPoints },
+    { name: 'Учасники (ВФД)', color: 'var(--gold)', points: totalPoints },
   ];
 
   if(includeUDL){
@@ -1568,7 +1580,7 @@ function renderParticipantsChart(){
     series.push({ name: 'УДЛ/ЗУДЛ (всього)', color: '#4ade80', points: udlPoints });
   }
 
-  document.getElementById('participants-chart-wrap').innerHTML = svgMultiLineChart(series, { height: 240 });
+  document.getElementById('participants-chart-wrap').innerHTML = svgMultiLineChart(series, { height: 260, pointSpacing: 55 });
 }
 
 function parseRankNumber(rankStr){
@@ -1673,7 +1685,7 @@ function openPlayerProfile(name){
     const totalFinishes = rows.reduce((s,r)=>s+(r.highOutCount||0), 0);
     const bestAvg = Math.max(...rows.map(r=>r.avg||0));
     const bestCheckout = Math.max(...rows.map(r=>r.highOut||0));
-    const bestLegDarts = Math.min(...rows.filter(r=>r.bestLeg>0).map(r=>r.bestLeg), Infinity);
+    const bestLegDarts = Math.min(...rows.filter(r=>r.bestLeg>8).map(r=>r.bestLeg), Infinity);
     const includeUDLmatch = includeUDL;
     const myMatches = nakkaMatchStats.filter(r => r.name === name && (includeUDLmatch || !r.isUDL));
     const bestMatchAvg = myMatches.length ? Math.max(...myMatches.map(r=>r.avg)) : null;
