@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-09T15:04:36.896075+00:00",
+  "lastUpdated": "2026-09-09T20:27:20.737588+00:00",
   "tournamentsCount": 180
  },
  "tournaments": [
@@ -30233,6 +30233,3160 @@
    ],
    "label": "Жінки 2013",
    "year": "2013",
+   "gender": "women"
+  },
+  "men_2019": {
+   "columns": [
+    "1 етап КУ",
+    "2 етап КУ",
+    "3 етап КУ",
+    "4 етап КУ",
+    "5 етап КУ",
+    "6 етап КУ",
+    "7 етап КУ",
+    "ЧУ 2019"
+   ],
+   "rows": [
+    {
+     "rank": "1",
+     "name": "Бушуй Олексій",
+     "scores": [
+      115.0,
+      100.0,
+      56.25,
+      67.8,
+      115.0,
+      83.1,
+      67.8,
+      150.0
+     ],
+     "total": 754.95
+    },
+    {
+     "rank": "2",
+     "name": "Омельченко Владислав",
+     "scores": [
+      105.0,
+      75.0,
+      75.0,
+      125.0,
+      67.8,
+      67.8,
+      83.1,
+      138.0
+     ],
+     "total": 736.7
+    },
+    {
+     "rank": "3",
+     "name": "Усик Артем",
+     "scores": [
+      125.0,
+      90.0,
+      67.5,
+      83.1,
+      101.25,
+      115.0,
+      51.9,
+      99.75
+     ],
+     "total": 733.5
+    },
+    {
+     "rank": "4",
+     "name": "Мамика Олександр",
+     "scores": [
+      97.5,
+      null,
+      null,
+      115.0,
+      101.25,
+      67.8,
+      125.0,
+      126.0
+     ],
+     "total": 632.55
+    },
+    {
+     "rank": "5",
+     "name": "Солтис Андрій",
+     "scores": [
+      67.8,
+      55.0,
+      18.75,
+      67.8,
+      67.8,
+      51.9,
+      51.9,
+      81.4
+     ],
+     "total": 462.35
+    },
+    {
+     "rank": "6",
+     "name": "Пономаренко Денис",
+     "scores": [
+      51.9,
+      75.0,
+      18.75,
+      97.5,
+      67.8,
+      51.9,
+      31.9,
+      56.25
+     ],
+     "total": 451.0
+    },
+    {
+     "rank": "7",
+     "name": "Ледєньов Вадим",
+     "scores": [
+      83.1,
+      55.0,
+      41.25,
+      67.8,
+      51.9,
+      51.9,
+      1.25,
+      81.4
+     ],
+     "total": 433.6
+    },
+    {
+     "rank": "8",
+     "name": "Рогов Віталій",
+     "scores": [
+      67.8,
+      null,
+      null,
+      105.0,
+      51.9,
+      67.8,
+      101.25,
+      38.25
+     ],
+     "total": 432.0
+    },
+    {
+     "rank": "9",
+     "name": "Солтис Микита",
+     "scores": [
+      51.9,
+      25.0,
+      41.25,
+      67.8,
+      67.8,
+      31.9,
+      51.9,
+      56.25
+     ],
+     "total": 393.8
+    },
+    {
+     "rank": "10",
+     "name": "Кисельов Дмитро",
+     "scores": [
+      83.1,
+      null,
+      null,
+      83.1,
+      31.9,
+      51.9,
+      31.9,
+      81.4
+     ],
+     "total": 363.3
+    },
+    {
+     "rank": "11",
+     "name": "Дідов Василь",
+     "scores": [
+      67.8,
+      25.0,
+      18.75,
+      31.9,
+      83.1,
+      51.9,
+      51.9,
+      14.25
+     ],
+     "total": 344.6
+    },
+    {
+     "rank": "12",
+     "name": "Царолунга Дмитро",
+     "scores": [
+      51.9,
+      25.0,
+      56.25,
+      67.8,
+      51.9,
+      31.9,
+      51.9,
+      null
+     ],
+     "total": 336.65
+    },
+    {
+     "rank": "13",
+     "name": "Кулаков Володимир",
+     "scores": [
+      31.9,
+      null,
+      null,
+      51.9,
+      83.1,
+      31.9,
+      51.9,
+      81.4
+     ],
+     "total": 332.1
+    },
+    {
+     "rank": "14",
+     "name": "Григоренко Віктор",
+     "scores": [
+      51.9,
+      55.0,
+      18.75,
+      31.9,
+      11.9,
+      51.9,
+      51.9,
+      56.25
+     ],
+     "total": 329.5
+    },
+    {
+     "rank": "15",
+     "name": "Марков Сергій",
+     "scores": [
+      51.9,
+      25.0,
+      18.75,
+      31.9,
+      67.8,
+      11.9,
+      51.9,
+      68.25
+     ],
+     "total": 327.4
+    },
+    {
+     "rank": "16",
+     "name": "Ковальов Дмитро",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      125.0,
+      31.9,
+      51.9,
+      117.0
+     ],
+     "total": 325.8
+    },
+    {
+     "rank": "17",
+     "name": "Мороз Ігор",
+     "scores": [
+      67.8,
+      null,
+      null,
+      null,
+      51.9,
+      51.9,
+      51.9,
+      81.4
+     ],
+     "total": 304.9
+    },
+    {
+     "rank": "18",
+     "name": "Пивошенко Максим",
+     "scores": [
+      51.9,
+      null,
+      null,
+      51.9,
+      83.1,
+      1.25,
+      31.9,
+      81.4
+     ],
+     "total": 301.45
+    },
+    {
+     "rank": "19",
+     "name": "Усик Сергій",
+     "scores": [
+      51.9,
+      null,
+      null,
+      83.1,
+      11.9,
+      83.1,
+      67.8,
+      null
+     ],
+     "total": 297.8
+    },
+    {
+     "rank": "20",
+     "name": "Гетманцев Олександр",
+     "scores": [
+      51.9,
+      6.25,
+      41.25,
+      51.9,
+      11.9,
+      31.9,
+      31.9,
+      68.25
+     ],
+     "total": 295.25
+    },
+    {
+     "rank": "21",
+     "name": "Хімчак Сергій",
+     "scores": [
+      51.9,
+      null,
+      null,
+      31.9,
+      51.9,
+      11.9,
+      31.9,
+      99.75
+     ],
+     "total": 279.25
+    },
+    {
+     "rank": "22",
+     "name": "Пекарук Ілля",
+     "scores": [
+      31.9,
+      25.0,
+      18.75,
+      67.8,
+      51.9,
+      51.9,
+      31.9,
+      null
+     ],
+     "total": 279.15
+    },
+    {
+     "rank": "23",
+     "name": "Троценко Артем",
+     "scores": [
+      51.9,
+      null,
+      null,
+      67.8,
+      51.9,
+      31.9,
+      31.9,
+      38.25
+     ],
+     "total": 273.65
+    },
+    {
+     "rank": "24",
+     "name": "Лещенко Юрій",
+     "scores": [
+      67.8,
+      null,
+      null,
+      51.9,
+      67.8,
+      31.9,
+      11.9,
+      38.25
+     ],
+     "total": 269.55
+    },
+    {
+     "rank": "25",
+     "name": "Залевський Володимир",
+     "scores": [
+      null,
+      25.0,
+      41.25,
+      null,
+      null,
+      67.8,
+      31.9,
+      99.75
+     ],
+     "total": 265.7
+    },
+    {
+     "rank": "26",
+     "name": "Тямолов Роман",
+     "scores": [
+      31.9,
+      null,
+      null,
+      67.8,
+      51.9,
+      51.9,
+      31.9,
+      null
+     ],
+     "total": 235.4
+    },
+    {
+     "rank": "27",
+     "name": "Sol Deen",
+     "scores": [
+      null,
+      null,
+      null,
+      51.9,
+      67.8,
+      31.9,
+      11.9,
+      68.25
+     ],
+     "total": 231.75
+    },
+    {
+     "rank": "28",
+     "name": "Лагутін Андрій",
+     "scores": [
+      31.9,
+      55.0,
+      18.75,
+      51.9,
+      11.9,
+      null,
+      null,
+      56.25
+     ],
+     "total": 225.7
+    },
+    {
+     "rank": "29",
+     "name": "Чумак Дмитро",
+     "scores": [
+      31.9,
+      1.0,
+      18.75,
+      51.9,
+      11.9,
+      31.9,
+      31.9,
+      38.25
+     ],
+     "total": 217.5
+    },
+    {
+     "rank": "30",
+     "name": "Анисимов Денис",
+     "scores": [
+      31.9,
+      null,
+      null,
+      null,
+      null,
+      51.9,
+      31.9,
+      99.75
+     ],
+     "total": 215.45
+    },
+    {
+     "rank": "31",
+     "name": "Агневщіков Анатолій",
+     "scores": [
+      83.1,
+      null,
+      null,
+      null,
+      51.9,
+      null,
+      null,
+      68.25
+     ],
+     "total": 203.25
+    },
+    {
+     "rank": "32",
+     "name": "Буравльов Костянтин",
+     "scores": [
+      null,
+      null,
+      null,
+      51.9,
+      67.8,
+      null,
+      null,
+      81.4
+     ],
+     "total": 201.1
+    },
+    {
+     "rank": "33",
+     "name": "Бабанін Дмитро",
+     "scores": [
+      31.9,
+      null,
+      null,
+      51.9,
+      51.9,
+      31.9,
+      31.9,
+      1.5
+     ],
+     "total": 201.0
+    },
+    {
+     "rank": "34",
+     "name": "Русанов Андрій",
+     "scores": [
+      31.9,
+      null,
+      null,
+      51.9,
+      83.1,
+      1.25,
+      31.9,
+      null
+     ],
+     "total": 200.05
+    },
+    {
+     "rank": "35",
+     "name": "Паскару Габріель",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      125.0,
+      67.8,
+      null
+     ],
+     "total": 192.8
+    },
+    {
+     "rank": "36-37",
+     "name": "Грєков Юрій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      101.25,
+      83.1,
+      null
+     ],
+     "total": 184.35
+    },
+    {
+     "rank": "36-37",
+     "name": "Холліуелл Вейн",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      83.1,
+      101.25,
+      null
+     ],
+     "total": 184.35
+    },
+    {
+     "rank": "38",
+     "name": "Стейер Себастьян",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      101.25,
+      67.8,
+      null
+     ],
+     "total": 169.05
+    },
+    {
+     "rank": "39",
+     "name": "Субаши Алпер",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      51.9,
+      115.0,
+      null
+     ],
+     "total": 166.9
+    },
+    {
+     "rank": "40-41",
+     "name": "Васюра Андрій",
+     "scores": [
+      83.1,
+      null,
+      null,
+      83.1,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 166.2
+    },
+    {
+     "rank": "40-41",
+     "name": "Вацлавскі Лукаш",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      83.1,
+      83.1,
+      null
+     ],
+     "total": 166.2
+    },
+    {
+     "rank": "42",
+     "name": "Некрістов Станіслав",
+     "scores": [
+      51.9,
+      25.0,
+      null,
+      51.9,
+      null,
+      31.9,
+      null,
+      null
+     ],
+     "total": 160.7
+    },
+    {
+     "rank": "43",
+     "name": "Могилевський Руслан",
+     "scores": [
+      11.9,
+      null,
+      null,
+      null,
+      51.9,
+      null,
+      null,
+      81.4
+     ],
+     "total": 145.2
+    },
+    {
+     "rank": "44",
+     "name": "Акользін Дмитро",
+     "scores": [
+      31.9,
+      6.25,
+      3.5,
+      31.9,
+      31.9,
+      null,
+      null,
+      38.25
+     ],
+     "total": 143.7
+    },
+    {
+     "rank": "45",
+     "name": "Кульбаченко Олег",
+     "scores": [
+      51.9,
+      null,
+      null,
+      31.9,
+      null,
+      null,
+      null,
+      56.25
+     ],
+     "total": 140.05
+    },
+    {
+     "rank": "46-47",
+     "name": "Волков Владислав",
+     "scores": [
+      31.9,
+      null,
+      null,
+      11.9,
+      51.9,
+      1.25,
+      1.25,
+      38.25
+     ],
+     "total": 136.45
+    },
+    {
+     "rank": "46-47",
+     "name": "Котляр Юрій",
+     "scores": [
+      31.9,
+      null,
+      null,
+      51.9,
+      11.9,
+      1.25,
+      1.25,
+      38.25
+     ],
+     "total": 136.45
+    },
+    {
+     "rank": "48",
+     "name": "Лужанков Дмитро",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      67.8,
+      67.8,
+      null
+     ],
+     "total": 135.6
+    },
+    {
+     "rank": "49",
+     "name": "Лобода Валерій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      51.9,
+      83.1,
+      null
+     ],
+     "total": 135.0
+    },
+    {
+     "rank": "50",
+     "name": "Кумовицький Павло",
+     "scores": [
+      31.9,
+      6.25,
+      3.5,
+      51.9,
+      11.9,
+      1.25,
+      1.25,
+      14.25
+     ],
+     "total": 122.2
+    },
+    {
+     "rank": "51",
+     "name": "Бублик В'ячеслав",
+     "scores": [
+      31.9,
+      6.25,
+      0.75,
+      11.9,
+      31.9,
+      null,
+      null,
+      38.25
+     ],
+     "total": 120.95
+    },
+    {
+     "rank": "52-57",
+     "name": "Коваль Олександр",
+     "scores": [
+      67.8,
+      null,
+      null,
+      51.9,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 119.7
+    },
+    {
+     "rank": "52-57",
+     "name": "Ковач Золтан",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      67.8,
+      51.9,
+      null
+     ],
+     "total": 119.7
+    },
+    {
+     "rank": "52-57",
+     "name": "Мелашенко Владислав",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      51.9,
+      67.8,
+      null
+     ],
+     "total": 119.7
+    },
+    {
+     "rank": "52-57",
+     "name": "Понтус Андрій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      51.9,
+      67.8,
+      null
+     ],
+     "total": 119.7
+    },
+    {
+     "rank": "52-57",
+     "name": "Секелі Пал",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      51.9,
+      67.8,
+      null
+     ],
+     "total": 119.7
+    },
+    {
+     "rank": "52-57",
+     "name": "Сіташ Габор",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      67.8,
+      51.9,
+      null
+     ],
+     "total": 119.7
+    },
+    {
+     "rank": "58",
+     "name": "Цибух Антон",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      11.9,
+      51.9,
+      51.9,
+      null
+     ],
+     "total": 115.7
+    },
+    {
+     "rank": "59",
+     "name": "Кулік Віталій",
+     "scores": [
+      11.9,
+      6.25,
+      3.5,
+      11.9,
+      51.9,
+      11.9,
+      11.9,
+      1.5
+     ],
+     "total": 110.75
+    },
+    {
+     "rank": "60",
+     "name": "Гончаренко Олександр",
+     "scores": [
+      11.9,
+      null,
+      null,
+      31.9,
+      31.9,
+      31.9,
+      1.25,
+      1.5
+     ],
+     "total": 110.35
+    },
+    {
+     "rank": "61",
+     "name": "Гутнік Анатолій",
+     "scores": [
+      1.25,
+      6.25,
+      0.75,
+      11.9,
+      31.9,
+      31.9,
+      11.9,
+      14.25
+     ],
+     "total": 110.1
+    },
+    {
+     "rank": "62",
+     "name": "Тямолов Ростислав",
+     "scores": [
+      51.9,
+      null,
+      null,
+      31.9,
+      null,
+      11.9,
+      11.9,
+      null
+     ],
+     "total": 107.6
+    },
+    {
+     "rank": "63",
+     "name": "Луков Олександр",
+     "scores": [
+      67.8,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 106.05
+    },
+    {
+     "rank": "64",
+     "name": "Мотуз Єгор",
+     "scores": [
+      51.9,
+      null,
+      null,
+      51.9,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 103.8
+    },
+    {
+     "rank": "65",
+     "name": "Барсуков Віталій",
+     "scores": [
+      31.9,
+      null,
+      null,
+      null,
+      null,
+      31.9,
+      31.9,
+      null
+     ],
+     "total": 95.7
+    },
+    {
+     "rank": "66",
+     "name": "Чепурний Едуард",
+     "scores": [
+      null,
+      null,
+      null,
+      31.9,
+      11.9,
+      11.9,
+      1.25,
+      38.25
+     ],
+     "total": 95.2
+    },
+    {
+     "rank": "67",
+     "name": "Кунченко Євген",
+     "scores": [
+      null,
+      null,
+      null,
+      31.9,
+      31.9,
+      11.9,
+      11.9,
+      null
+     ],
+     "total": 87.6
+    },
+    {
+     "rank": "68",
+     "name": "Сергєєв Кирило",
+     "scores": [
+      11.9,
+      null,
+      null,
+      11.9,
+      11.9,
+      1.25,
+      11.9,
+      38.25
+     ],
+     "total": 87.1
+    },
+    {
+     "rank": "69-70",
+     "name": "Сабунджуоглу Алі Енвер",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      31.9,
+      51.9,
+      null
+     ],
+     "total": 83.8
+    },
+    {
+     "rank": "69-70",
+     "name": "Янгу Панайотіс",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      31.9,
+      51.9,
+      null
+     ],
+     "total": 83.8
+    },
+    {
+     "rank": "71",
+     "name": "Овчаренко Сергій",
+     "scores": [
+      null,
+      null,
+      null,
+      31.9,
+      11.9,
+      null,
+      null,
+      38.25
+     ],
+     "total": 82.05
+    },
+    {
+     "rank": "72-73",
+     "name": "Шляхов Сергій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      67.8,
+      11.9,
+      null
+     ],
+     "total": 79.7
+    },
+    {
+     "rank": "72-73",
+     "name": "Мартов Володимир",
+     "scores": [
+      31.9,
+      null,
+      null,
+      11.9,
+      31.9,
+      1.25,
+      1.25,
+      1.5
+     ],
+     "total": 79.7
+    },
+    {
+     "rank": "74",
+     "name": "Куча Валерій",
+     "scores": [
+      51.9,
+      null,
+      null,
+      null,
+      null,
+      11.9,
+      11.9,
+      null
+     ],
+     "total": 75.7
+    },
+    {
+     "rank": "75",
+     "name": "Карабан Юрій",
+     "scores": [
+      null,
+      null,
+      null,
+      31.9,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 70.15
+    },
+    {
+     "rank": "76",
+     "name": "Льянов Олег",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      31.9,
+      11.9,
+      11.9,
+      14.25
+     ],
+     "total": 69.95
+    },
+    {
+     "rank": "77",
+     "name": "Бутов Олександр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      null,
+      null,
+      68.25
+     ],
+     "total": 69.5
+    },
+    {
+     "rank": "78",
+     "name": "Зуєв Олег",
+     "scores": [
+      null,
+      1.0,
+      null,
+      null,
+      null,
+      11.9,
+      null,
+      56.25
+     ],
+     "total": 69.15
+    },
+    {
+     "rank": "79-81",
+     "name": "Григоренко Денис",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      68.25
+     ],
+     "total": 68.25
+    },
+    {
+     "rank": "79-81",
+     "name": "Соколов Роман",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      68.25
+     ],
+     "total": 68.25
+    },
+    {
+     "rank": "79-81",
+     "name": "Шепута Володимир",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      68.25
+     ],
+     "total": 68.25
+    },
+    {
+     "rank": "82",
+     "name": "Жук Валерій",
+     "scores": [
+      67.8,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 67.8
+    },
+    {
+     "rank": "83",
+     "name": "Бєлов Артем",
+     "scores": [
+      null,
+      null,
+      null,
+      51.9,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 66.15
+    },
+    {
+     "rank": "84-86",
+     "name": "Зязюля Андрій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      11.9,
+      51.9,
+      null
+     ],
+     "total": 63.8
+    },
+    {
+     "rank": "84-86",
+     "name": "Криницький Юрій",
+     "scores": [
+      31.9,
+      null,
+      null,
+      null,
+      31.9,
+      null,
+      null,
+      null
+     ],
+     "total": 63.8
+    },
+    {
+     "rank": "84-86",
+     "name": "Скуртов Дмитро",
+     "scores": [
+      null,
+      null,
+      null,
+      31.9,
+      31.9,
+      null,
+      null,
+      null
+     ],
+     "total": 63.8
+    },
+    {
+     "rank": "87",
+     "name": "Заборний Андрій",
+     "scores": [
+      11.9,
+      null,
+      null,
+      11.9,
+      11.9,
+      11.9,
+      null,
+      14.25
+     ],
+     "total": 61.85
+    },
+    {
+     "rank": "88",
+     "name": "Якименко Віталій",
+     "scores": [
+      1.25,
+      null,
+      null,
+      11.9,
+      31.9,
+      1.25,
+      11.9,
+      null
+     ],
+     "total": 58.2
+    },
+    {
+     "rank": "89",
+     "name": "Ішутін Ігор",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      null,
+      56.25
+     ],
+     "total": 57.5
+    },
+    {
+     "rank": "90",
+     "name": "Степаненко Віталій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      56.25
+     ],
+     "total": 56.25
+    },
+    {
+     "rank": "91",
+     "name": "Бутрій Володимир",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      31.9,
+      11.9,
+      11.9,
+      null
+     ],
+     "total": 55.7
+    },
+    {
+     "rank": "92",
+     "name": "Зарайський Володимир",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      51.9,
+      null,
+      null,
+      1.5
+     ],
+     "total": 53.4
+    },
+    {
+     "rank": "93",
+     "name": "Гриб Олександр",
+     "scores": [
+      51.9,
+      null,
+      null,
+      1.25,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 53.15
+    },
+    {
+     "rank": "94-95",
+     "name": "Рижиков Сергій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      51.9,
+      null,
+      null,
+      null
+     ],
+     "total": 51.9
+    },
+    {
+     "rank": "94-95",
+     "name": "Шмідтке Анджей",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      51.9,
+      null,
+      null,
+      null
+     ],
+     "total": 51.9
+    },
+    {
+     "rank": "96",
+     "name": "Подкопаєв Андрій",
+     "scores": [
+      11.9,
+      null,
+      null,
+      null,
+      31.9,
+      1.25,
+      1.25,
+      null
+     ],
+     "total": 46.3
+    },
+    {
+     "rank": "97",
+     "name": "Шкуров Артем",
+     "scores": [
+      null,
+      null,
+      null,
+      31.9,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 46.15
+    },
+    {
+     "rank": "98-99",
+     "name": "Денов Микола",
+     "scores": [
+      null,
+      null,
+      null,
+      31.9,
+      11.9,
+      null,
+      null,
+      null
+     ],
+     "total": 43.8
+    },
+    {
+     "rank": "98-99",
+     "name": "Решат Нурі Аслан",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      11.9,
+      31.9,
+      null
+     ],
+     "total": 43.8
+    },
+    {
+     "rank": "100",
+     "name": "Шаблій Ігор",
+     "scores": [
+      1.25,
+      null,
+      null,
+      11.9,
+      1.25,
+      11.9,
+      1.25,
+      14.25
+     ],
+     "total": 41.8
+    },
+    {
+     "rank": "101",
+     "name": "Морозов Сергій",
+     "scores": [
+      11.9,
+      null,
+      null,
+      11.9,
+      null,
+      null,
+      1.25,
+      14.25
+     ],
+     "total": 39.3
+    },
+    {
+     "rank": "102-104",
+     "name": "Беляєв Сергій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 38.25
+    },
+    {
+     "rank": "102-104",
+     "name": "Миндра Євген",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 38.25
+    },
+    {
+     "rank": "102-104",
+     "name": "Морозов Андрій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      38.25
+     ],
+     "total": 38.25
+    },
+    {
+     "rank": "105",
+     "name": "Бондарєв Євген",
+     "scores": [
+      11.9,
+      null,
+      null,
+      11.9,
+      11.9,
+      null,
+      null,
+      1.5
+     ],
+     "total": 37.2
+    },
+    {
+     "rank": "106",
+     "name": "Гоян Дмитро",
+     "scores": [
+      null,
+      25.0,
+      8.25,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 33.25
+    },
+    {
+     "rank": "107",
+     "name": "Аспербаккен Кай",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      31.9,
+      null
+     ],
+     "total": 33.15
+    },
+    {
+     "rank": "108-111",
+     "name": "Варивода Сергій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      31.9,
+      null,
+      null,
+      null
+     ],
+     "total": 31.9
+    },
+    {
+     "rank": "108-111",
+     "name": "Панченко Олексій",
+     "scores": [
+      null,
+      null,
+      null,
+      31.9,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 31.9
+    },
+    {
+     "rank": "108-111",
+     "name": "Торський Тарас",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      31.9,
+      null,
+      null,
+      null
+     ],
+     "total": 31.9
+    },
+    {
+     "rank": "108-111",
+     "name": "Цитович Андрій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      31.9,
+      null,
+      null,
+      null
+     ],
+     "total": 31.9
+    },
+    {
+     "rank": "112",
+     "name": "Антіпов Денис",
+     "scores": [
+      11.9,
+      null,
+      null,
+      11.9,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 23.8
+    },
+    {
+     "rank": "113",
+     "name": "Новак Андрій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      1.25,
+      14.25
+     ],
+     "total": 16.75
+    },
+    {
+     "rank": "114",
+     "name": "Мигалюк Родіон",
+     "scores": [
+      null,
+      6.25,
+      8.25,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 14.5
+    },
+    {
+     "rank": "115-120",
+     "name": "Аверін Сергій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "115-120",
+     "name": "Агневщиков Юрій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "115-120",
+     "name": "Закіров Марат",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "115-120",
+     "name": "Корпусов Андрій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "115-120",
+     "name": "Лавренюк Сергій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "115-120",
+     "name": "Семейко Віталій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "121-122",
+     "name": "Кудрявцев Євген",
+     "scores": [
+      null,
+      null,
+      null,
+      11.9,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 13.4
+    },
+    {
+     "rank": "121-122",
+     "name": "Скиданчук Віктор",
+     "scores": [
+      null,
+      null,
+      null,
+      11.9,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 13.4
+    },
+    {
+     "rank": "123-127",
+     "name": "Лепень Олександр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      11.9,
+      1.25,
+      null
+     ],
+     "total": 13.15
+    },
+    {
+     "rank": "123-127",
+     "name": "Лисаков Олексій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      11.9,
+      null
+     ],
+     "total": 13.15
+    },
+    {
+     "rank": "123-127",
+     "name": "Оттерлей Ендре",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      11.9,
+      null
+     ],
+     "total": 13.15
+    },
+    {
+     "rank": "123-127",
+     "name": "Усетс Терьер",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      11.9,
+      null
+     ],
+     "total": 13.15
+    },
+    {
+     "rank": "123-127",
+     "name": "Чорба Золтан",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      11.9,
+      null
+     ],
+     "total": 13.15
+    },
+    {
+     "rank": "128-139",
+     "name": "Багрянцев Иван",
+     "scores": [
+      null,
+      null,
+      null,
+      11.9,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.9
+    },
+    {
+     "rank": "128-139",
+     "name": "Бондаренко Валерій",
+     "scores": [
+      11.9,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.9
+    },
+    {
+     "rank": "128-139",
+     "name": "Буханцов Тарас",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      11.9,
+      null,
+      null
+     ],
+     "total": 11.9
+    },
+    {
+     "rank": "128-139",
+     "name": "Гурський Борис",
+     "scores": [
+      11.9,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.9
+    },
+    {
+     "rank": "128-139",
+     "name": "Дегтярьов Михайло",
+     "scores": [
+      11.9,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.9
+    },
+    {
+     "rank": "128-139",
+     "name": "Дмитров Дмитро",
+     "scores": [
+      11.9,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.9
+    },
+    {
+     "rank": "128-139",
+     "name": "Звягін Юрій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      11.9,
+      null,
+      null,
+      null
+     ],
+     "total": 11.9
+    },
+    {
+     "rank": "128-139",
+     "name": "Кудінов Павло",
+     "scores": [
+      null,
+      null,
+      null,
+      11.9,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.9
+    },
+    {
+     "rank": "128-139",
+     "name": "Куча Леонід",
+     "scores": [
+      11.9,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.9
+    },
+    {
+     "rank": "128-139",
+     "name": "Пєлєнов Сергій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      11.9,
+      null,
+      null,
+      null
+     ],
+     "total": 11.9
+    },
+    {
+     "rank": "128-139",
+     "name": "Трофімов Дмитро",
+     "scores": [
+      11.9,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.9
+    },
+    {
+     "rank": "128-139",
+     "name": "Чорний Віталій",
+     "scores": [
+      11.9,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.9
+    },
+    {
+     "rank": "140",
+     "name": "Подольчук Антон",
+     "scores": [
+      null,
+      6.25,
+      0.75,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 7.0
+    },
+    {
+     "rank": "141-143",
+     "name": "Арійчук Олександр",
+     "scores": [
+      null,
+      1.0,
+      3.5,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 4.5
+    },
+    {
+     "rank": "141-143",
+     "name": "Вонхольський Олександр",
+     "scores": [
+      null,
+      1.0,
+      3.5,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 4.5
+    },
+    {
+     "rank": "141-143",
+     "name": "Селєзньов Олександр",
+     "scores": [
+      null,
+      1.0,
+      3.5,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 4.5
+    },
+    {
+     "rank": "144",
+     "name": "Сас Олег",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      null,
+      null,
+      1.5
+     ],
+     "total": 2.75
+    },
+    {
+     "rank": "145-148",
+     "name": "Бустебакке Роар",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      1.25,
+      null
+     ],
+     "total": 2.5
+    },
+    {
+     "rank": "145-148",
+     "name": "Доган Ісмаіл",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      1.25,
+      null
+     ],
+     "total": 2.5
+    },
+    {
+     "rank": "145-148",
+     "name": "Жуковський Микола",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      1.25,
+      null
+     ],
+     "total": 2.5
+    },
+    {
+     "rank": "145-148",
+     "name": "Заволокін Дмитро",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      1.25,
+      null
+     ],
+     "total": 2.5
+    },
+    {
+     "rank": "149-150",
+     "name": "Зеленько Віталій",
+     "scores": [
+      null,
+      1.0,
+      0.75,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.75
+    },
+    {
+     "rank": "149-150",
+     "name": "Івасюк Віталій",
+     "scores": [
+      null,
+      1.0,
+      0.75,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.75
+    },
+    {
+     "rank": "151-157",
+     "name": "Борисенко Сергій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "151-157",
+     "name": "Бугаєнко Олександр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "151-157",
+     "name": "Коропкін Євген",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "151-157",
+     "name": "Кудрявцев Руслан",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "151-157",
+     "name": "Ніколаєнко Євген",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "151-157",
+     "name": "Сальніков Павло",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "151-157",
+     "name": "Соколов Володимир",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "158-160",
+     "name": "Зубков Юрій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      null,
+      null,
+      null
+     ],
+     "total": 1.25
+    },
+    {
+     "rank": "158-160",
+     "name": "Кондарюк Микола",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      null,
+      null,
+      null
+     ],
+     "total": 1.25
+    },
+    {
+     "rank": "158-160",
+     "name": "Павленко Сергій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.25,
+      null,
+      null
+     ],
+     "total": 1.25
+    },
+    {
+     "rank": "161",
+     "name": "Яненко Сергій",
+     "scores": [
+      null,
+      1.0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "162",
+     "name": "Філіпець Дмитро",
+     "scores": [
+      null,
+      null,
+      0.75,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 0.75
+    }
+   ],
+   "label": "Чоловіки 2019",
+   "year": "2019",
+   "gender": "men"
+  },
+  "women_2019": {
+   "columns": [
+    "1 етап КУ",
+    "2 етап КУ",
+    "3 етап КУ",
+    "4 етап КУ",
+    "5 етап КУ",
+    "6 етап КУ",
+    "7 етап КУ",
+    "ЧУ 2019"
+   ],
+   "rows": [
+    {
+     "rank": "1",
+     "name": "Моісеєнко Віталіна",
+     "scores": [
+      100.0,
+      75.0,
+      100.0,
+      100.0,
+      37.5,
+      100.0,
+      88.0,
+      150.0
+     ],
+     "total": 750.5
+    },
+    {
+     "rank": "2",
+     "name": "Чумак Ганна",
+     "scores": [
+      66.0,
+      100.0,
+      75.0,
+      47.5,
+      84.0,
+      75.0,
+      71.0,
+      135.0
+     ],
+     "total": 653.5
+    },
+    {
+     "rank": "3",
+     "name": "Ледєньова Наталя",
+     "scores": [
+      88.0,
+      47.5,
+      23.0,
+      88.0,
+      37.5,
+      55.0,
+      47.5,
+      105.0
+     ],
+     "total": 491.5
+    },
+    {
+     "rank": "4",
+     "name": "Харченко Тетяна",
+     "scores": [
+      76.0,
+      null,
+      null,
+      66.0,
+      100.0,
+      55.0,
+      47.5,
+      120.0
+     ],
+     "total": 464.5
+    },
+    {
+     "rank": "5",
+     "name": "Марфола Оксана",
+     "scores": [
+      23.5,
+      47.5,
+      23.0,
+      47.5,
+      64.0,
+      17.5,
+      15.0,
+      16.5
+     ],
+     "total": 254.5
+    },
+    {
+     "rank": "6",
+     "name": "Пивошенко Олена",
+     "scores": [
+      47.5,
+      null,
+      null,
+      47.5,
+      37.5,
+      17.5,
+      15.0,
+      37.5
+     ],
+     "total": 202.5
+    },
+    {
+     "rank": "7",
+     "name": "Клочек Ксенія",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      90.0,
+      100.0,
+      null
+     ],
+     "total": 190.0
+    },
+    {
+     "rank": "8",
+     "name": "Грушовець Ольга",
+     "scores": [
+      47.5,
+      null,
+      null,
+      76.0,
+      64.0,
+      null,
+      null,
+      null
+     ],
+     "total": 187.5
+    },
+    {
+     "rank": "9",
+     "name": "Солтис Ганна",
+     "scores": [
+      6.5,
+      null,
+      null,
+      null,
+      37.5,
+      75.0,
+      15.0,
+      37.5
+     ],
+     "total": 171.5
+    },
+    {
+     "rank": "10",
+     "name": "Борисова Марина",
+     "scores": [
+      23.5,
+      7.0,
+      47.5,
+      null,
+      null,
+      null,
+      null,
+      37.5
+     ],
+     "total": 115.5
+    },
+    {
+     "rank": "11",
+     "name": "Анісімова Світлана",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      3.5,
+      71.0,
+      37.5
+     ],
+     "total": 112.0
+    },
+    {
+     "rank": "12",
+     "name": "Смірнова Світлана",
+     "scores": [
+      null,
+      null,
+      null,
+      23.5,
+      null,
+      null,
+      null,
+      82.5
+     ],
+     "total": 106.0
+    },
+    {
+     "rank": "13",
+     "name": "Палахіна Альона",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      55.0,
+      47.5,
+      null
+     ],
+     "total": 102.5
+    },
+    {
+     "rank": "14",
+     "name": "Павлюченко Марина",
+     "scores": [
+      null,
+      7.0,
+      47.5,
+      null,
+      null,
+      32.5,
+      15.0,
+      null
+     ],
+     "total": 102.0
+    },
+    {
+     "rank": "15",
+     "name": "Спекторенко Катерина",
+     "scores": [
+      47.5,
+      null,
+      null,
+      47.5,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 95.0
+    },
+    {
+     "rank": "16-19",
+     "name": "Ільясова Альбіна",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      82.5
+     ],
+     "total": 82.5
+    },
+    {
+     "rank": "16-19",
+     "name": "Нестеренко Олена",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      82.5
+     ],
+     "total": 82.5
+    },
+    {
+     "rank": "16-19",
+     "name": "Полтавець Світлана",
+     "scores": [
+      6.5,
+      null,
+      null,
+      23.5,
+      13.0,
+      17.5,
+      15.0,
+      7.0
+     ],
+     "total": 82.5
+    },
+    {
+     "rank": "16-19",
+     "name": "Степанець Ольга",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      82.5
+     ],
+     "total": 82.5
+    },
+    {
+     "rank": "20",
+     "name": "Нужнова Тетяна",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      55.0,
+      15.0,
+      null
+     ],
+     "total": 70.0
+    },
+    {
+     "rank": "21",
+     "name": "Чабанова Анна",
+     "scores": [
+      1.0,
+      23.0,
+      7.0,
+      23.5,
+      1.0,
+      9.0,
+      1.0,
+      1.5
+     ],
+     "total": 67.0
+    },
+    {
+     "rank": "22",
+     "name": "Тужикова Світлана",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.0,
+      47.5,
+      null
+     ],
+     "total": 56.5
+    },
+    {
+     "rank": "23",
+     "name": "Селіхова Тетяна",
+     "scores": [
+      null,
+      null,
+      null,
+      6.5,
+      1.0,
+      3.5,
+      1.0,
+      37.5
+     ],
+     "total": 49.5
+    },
+    {
+     "rank": "24-25",
+     "name": "Свирид Марія",
+     "scores": [
+      23.5,
+      null,
+      null,
+      null,
+      13.0,
+      3.5,
+      1.0,
+      7.0
+     ],
+     "total": 48.0
+    },
+    {
+     "rank": "24-25",
+     "name": "Стомаченко Ксенія",
+     "scores": [
+      6.5,
+      null,
+      null,
+      6.5,
+      null,
+      32.5,
+      1.0,
+      1.5
+     ],
+     "total": 48.0
+    },
+    {
+     "rank": "26",
+     "name": "Кузнєцова Вікторія",
+     "scores": [
+      47.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 47.5
+    },
+    {
+     "rank": "27",
+     "name": "Попова Наталія",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1.0,
+      3.5,
+      1.0,
+      37.5
+     ],
+     "total": 43.0
+    },
+    {
+     "rank": "28",
+     "name": "Мєльтєва Ірина",
+     "scores": [
+      6.5,
+      null,
+      null,
+      6.5,
+      null,
+      9.0,
+      1.0,
+      16.5
+     ],
+     "total": 39.5
+    },
+    {
+     "rank": "29-30",
+     "name": "Лях Світлана",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      37.5
+     ],
+     "total": 37.5
+    },
+    {
+     "rank": "29-30",
+     "name": "Соколова Вікторія",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      37.5
+     ],
+     "total": 37.5
+    },
+    {
+     "rank": "31",
+     "name": "Горяйнова Марія",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      13.0,
+      1.0,
+      15.0,
+      7.0
+     ],
+     "total": 36.0
+    },
+    {
+     "rank": "32",
+     "name": "Черноброва Олександра",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      32.5,
+      null,
+      1.5
+     ],
+     "total": 34.0
+    },
+    {
+     "rank": "33",
+     "name": "Тараненко Лілія",
+     "scores": [
+      null,
+      null,
+      null,
+      23.5,
+      null,
+      9.0,
+      1.0,
+      null
+     ],
+     "total": 33.5
+    },
+    {
+     "rank": "34-35",
+     "name": "Букетова Ірина",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      32.5,
+      null,
+      null
+     ],
+     "total": 32.5
+    },
+    {
+     "rank": "34-35",
+     "name": "Маслянок Вікторія",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      17.5,
+      15.0,
+      null
+     ],
+     "total": 32.5
+    },
+    {
+     "rank": "36",
+     "name": "Саїнчук Тетяна",
+     "scores": [
+      null,
+      23.0,
+      7.0,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 30.0
+    },
+    {
+     "rank": "37",
+     "name": "Калаур Інна",
+     "scores": [
+      23.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 23.5
+    },
+    {
+     "rank": "38",
+     "name": "Скуртова Анастасія",
+     "scores": [
+      null,
+      null,
+      null,
+      6.5,
+      13.0,
+      null,
+      null,
+      null
+     ],
+     "total": 19.5
+    },
+    {
+     "rank": "39-41",
+     "name": "Зелюкіна Світлана",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      7.0
+     ],
+     "total": 7.0
+    },
+    {
+     "rank": "39-41",
+     "name": "Онищенко Тетяна",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      7.0
+     ],
+     "total": 7.0
+    },
+    {
+     "rank": "39-41",
+     "name": "Шемет Наталя",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      7.0
+     ],
+     "total": 7.0
+    },
+    {
+     "rank": "42",
+     "name": "Лосєва Марія",
+     "scores": [
+      null,
+      null,
+      null,
+      1.0,
+      null,
+      null,
+      1.0,
+      null
+     ],
+     "total": 2.0
+    },
+    {
+     "rank": "43-45",
+     "name": "Захарова Зоя",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "43-45",
+     "name": "Іргізова Неля",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "43-45",
+     "name": "Шпитко Вікторія",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "46",
+     "name": "Вісковатова Ганна",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1.0,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    }
+   ],
+   "label": "Жінки 2019",
+   "year": "2019",
    "gender": "women"
   }
  },
@@ -290295,13 +293449,13 @@
    "text": "🏆У чоловіків кубковий етап в Одесі за Овсієнко Євгеном. Вже традиційний двобій зі Сташевським Валентином вийшов на користь киянина 5-4.\n🥇Овсієнко Є.\n🥈Сташевський В.\n🥉Мелашенко В.\n1️⃣8️⃣0️⃣х3️⃣ - Омельченко В.\n1️⃣8️⃣0️⃣х2️⃣ - Сташевський В.\n1️⃣8️⃣0️⃣ - Гакман С., Овсієнко Є., Мелашенко В.,\nАбчугський О., Солтис М., \n☑️Чекаути 100+:\n1️⃣4️⃣4️⃣ - Овсієнко Є.\n1️⃣4️⃣2️⃣ - Могилевський Р.\n1️⃣2️⃣6️⃣ - Мелашенко В.\n1️⃣1️⃣7️⃣ - Мелашенко В. \n1️⃣1️⃣6️⃣ - Сташевський В.\n1️⃣1️⃣5️⃣ - Омельченко В.\n1️⃣1️⃣0️⃣ -",
    "date": "2026-09-06",
    "url": "https://t.me/fullbull/12652",
-   "photo": "https://cdn4.telesco.pe/file/Id-ikwvPn3NX4x-i-7Y8uGfpbXQ3G6QnY18Mst0NedOUJdMvbZLFM_VctzRacpm7uU9AJU9ex83wDXPZdR8_Ndpjr97gLgYmqyq1DCfVUhFQSNg8SN-pnssMXYvHfADo_Nmj5quM46KmHYDctHnao7aH9oVxbnw1GFHsNuonC8Jg-KgFPnkQ8pKdKEfwbi78dBtadVLvx2aCJcDQcgq-Y7_5dLhyl9k7-LlpwtVKMKBSLdqnNBHmIeWR18wewZ0ukMo_kJ4F0GedVW0lW4xqxdS2Nb72uHaoBXQiyfZfTRvSjbWlCd5i5ArbGwQmhsyYOjtxxNbzIcF-gKCSK1MXAg.jpg"
+   "photo": "https://cdn4.telesco.pe/file/pi0G37KHRp6Tu50ybStV22XFFYUOK5nstJJHg03rjlULkDHpTrXGMnoHc2F3Nqsm_ppDkbJTImA4K27tjRrd45vg5v8PuPuu2_tP2iXpo0B1bFrUlvhOxgQ5WVY3QcJzDUwgnm8uVhgUm_Ve0f3dV_59JU-jZlf8x82gj0pURygPL3aXXk9gTERVqasOTbFEyAA0XXBvOz28ALEeYQoFw5BB81eruurZxYHX895_1D_qo3PfqMDpJBbxNiDNyULAfOcM2chPtDFj9A01n69rs398kzK5DQWH9PtHZLGDeSNUbi-df0eSNXaZ1YREa2GLBySTae1aFYnIP7fmxJFhig.jpg"
   },
   {
    "text": "🏆Переможниця ІV-етапу Кубку України в Одесі серед жінок - Харченко Тетяна.\n🥇Харченко Т.\n🥈Гончаренко І.\n🥉Шклярук Н.\n1️⃣8️⃣0️⃣ - Харченко Т.\n👀",
    "date": "2026-09-06",
    "url": "https://t.me/fullbull/12651",
-   "photo": "https://cdn4.telesco.pe/file/jIW1I_HvE7j7KNkwy5Xt0Oq1V1TJDmsCNhDvUAOfrZvchb97cHJDAVBpf3tnJc0buWnCFPZcFZ7flwa5KwBwJOHtpx0yOa_ZsRo-yBp_O7etZUPfOlOok60GwufMgjWqtRrrhosQbAdZXJN2QxjZdZDVgA7vINQJWEPqIW3vYeKQvSgN45eF4iIFAe_o8torFCZ6x3IH4GpxF3I4fEqcoLKytuUfH7QX-z_fqCFeIaQ6Od8f1shBhAeXy9xAiDuU-b0TfT0qM-HvhHwT1Qea0RNkQ1rr5Wpjd3qZhIjwGquyEgSk-febieaAHkgT53fjcGr8W6YWR-jgdkDvX056Xw.jpg"
+   "photo": "https://cdn4.telesco.pe/file/B1QD3Z93FtTuDsJlyOqiRaRyhmHs7PsPlRIh7UJTiZqGfO_6Ru7IqVQXq8fSHNrXPFz7eos92sWUGO5xiPp1QDXukKWeCD6g-CHScR04Ch-oI0oH032hRAsuFtGXbM-saGQgNopBxydX_aTvqZveBEDBorMvhdidP1poN1q-WW2HbHlAisI81xs6vIzNsVZTGpE5wMxV8YSpEfz0sto79X54T2z1xpAY2WKMlHvKZqBWBQIg4_xTArrse-m1MqQ2zgZeSq5xpGbC-vfKDAD5dASk8gx8cWAA58tZ9iQ5vh2NXyxVsQAC2sG_EKDFrxkV1o22TqY6IWXVQL5DmfLy4g.jpg"
   },
   {
    "text": "6-го вересня у Одесі розігрують титул переможця ІV-го етапу Кубку України 2026 року.\n👀🙋‍♀️Жінки:\n👀🙋‍♂️Чоловіки:\n🎥Трансляція 👉",
@@ -290313,13 +293467,13 @@
    "text": "🏆У чоловіків титул Чемпіонів України у парному розряді в 2026 році вибороли одесити: Сташевський В./Фатех Д. \n🥇Сташевський В./Фатех Д. \n🥈Овсієнко Є./Абчугський О.\n🥉Гончаров Е./Агневщиков Ю. \n1️⃣8️⃣0️⃣х3️⃣ - Сташевський В./Фатех Д. \n1️⃣8️⃣0️⃣ - Омельченко В./Гакман С., Могилевський Р./Шапка Є., Гончаров Е./Агневщиков Ю., Аверін С./Братченко В., Микитин Я./Стецишин В., Акользін Д./Пивошенко М., Мельник О./Урсаки О.\n☑️Чекаути 100+:\n1️⃣3️⃣9️⃣ - Овсієнко Є./Абчугський О.\n1️⃣2️⃣9️⃣ - Мелашенко В./Павл",
    "date": "2026-09-05",
    "url": "https://t.me/fullbull/12644",
-   "photo": "https://cdn4.telesco.pe/file/CpV_o-nCAB6e5mifGIfgXPDOS8yMy63iY4U0_aobHdVpKDUwMTKbRu8baudfj0RzkLNFu3vL2fG77QxXK1EcUi3n6ozg4CKj8hYYbhpHROiQbehps1XrN0dXre8ckM5IOX2ttJjcTgl0vEXcwQ0-TyXo5qHUCWx-CsIn4AY7MgsdCIC6wM4Fquiljd3u5bbnWELIfPBwDiCQaHhSz_MZnc3WScZ2zFat3VYghenPd3eYTD29FmhOPbQd3yW6VbPBPQf5N6zqyJxhzDTZBhdgGxgG9AOwONQ_xhvUUWTi_xAmmFhd-qg-spxTYtE80ad81thG-7m3S3I6rLzLQYabCQ.jpg"
+   "photo": "https://cdn4.telesco.pe/file/UCtBs8LfqA_CCy8k6VnSRUMrQPu8mzWOFToWtNilNQrC-2B7A2C-sb3vAypiGZHK5UVeI_IJ4HrkIT7mZMfscw4iH1RrbTK37DSsbONcSG-d8rizJIyym3lf_mb_ZLWlvnnaq-hvQ6-1BTqxC9JzLVYrwXLNVGJlJYP-2lV6beVJhY0caS6pjHsbIz1JxOZCnBArE-5LY3Vfe-ECGf_nYoGvzLE9zmo-qKPwA2lCRodP5zxi0IcbU64sOnNlMLHTv-yW0wY9v5RszMR7YqiaEVhypXUjw-V66qd96ZI7-aHC9vrvGm3gwxwSiXRWh94toxk0zZnCu3JHTUiEzNdv-A.jpg"
   },
   {
    "text": "🏆Чемпіонки України 2026 у парному розряді серед жінок: черкащанки Гончаренко Інна і Харченко Тетяна!\n🥇Гончаренко І./Харченко Т.\n🥈Спекторенко К./Терещенко Л.\n🥉 Білоус Ж./Ільясова А.\n👀",
    "date": "2026-09-05",
    "url": "https://t.me/fullbull/12643",
-   "photo": "https://cdn4.telesco.pe/file/PdvWs3m6XvEnHszaTcsCL9bY3Ofj7cFMfd7ELF9GurjZA0F-ecbptdz86tooJDIerYPHEriG0F9pnLxuQm2I9957aeXjsjcQBV5lU27JZAkVpHGAmWkZA-YgrmBsebZ9hXt_0oMmo59lPaYpGrN_RzB5eLhp9VX-Yt7clXQsp_GDSyFuu0Is1hwr-HgtnS2wK6KFjm1ii2vpDrGC-rKKnHRn7OCZ82qpD8htUjvz7U1X1YxMH0K7oevOji-LQcYMVc9EsHzGTNxkqD1yrKccF_f21Uc4wQv-KicGUyo9KydfY4DlSHmJb-l0ZT6Mv7lkwwKlAgPWxclQQEXsp0GsGA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/PVpozQ0m9V5gNgMvkIuXHiJ_vi6Oez0lKAXqP5f35WYCc-g1uOzzRYLfE85xYgQ_9lbOBz47MTOcOOOgn_-ST5UUp6MLSBSRB_lAlFUSuk8Wla9clCiXLepdW7fR15iReTrIaUsv-IEXA6FYC0SZxlhb5PMgw5owfciHbhBtQzGwfVrYMe3_52lVqw1U8-rLm4M9UhlQE79Ql2q34luJfa-Vb-alDoHKeHvaa8Nph8-pBfxb1dZ1mRUV3P0A9P9fjTv9G94qJRWHDkM4KP_-PEw_nWyGaG2jp7t1wCe9ZJgNRs9kF_Rj6fjh4FOvj08_Uz-ZwnsrWkR7j0u8UiFYSg.jpg"
   },
   {
    "text": "🎥Трансляція Чемпіонату України 2026 (пари):",
