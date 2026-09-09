@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-08T20:49:45.267674+00:00",
+  "lastUpdated": "2026-09-09T09:32:44.180547+00:00",
   "tournamentsCount": 180
  },
  "tournaments": [
@@ -2832,7 +2832,7 @@
    "womenAvg": null,
    "name": "UDL STAGE 1",
    "org": "УДЛ/ЗУДЛ",
-   "format": "501DO / 2 етап",
+   "format": "501DO / 1 етап",
    "date": "17.02.2024",
    "city": "Львів",
    "isUDL": true,
@@ -6067,39 +6067,39 @@
  ],
  "leaderboard": [
   {
-   "name": "Омельченко Владислав",
-   "gold": 18,
-   "silver": 13,
-   "bronze": 8,
-   "champUA": 2,
+   "name": "Усик Артем",
+   "gold": 19,
+   "silver": 11,
+   "bronze": 9,
+   "champUA": 4,
    "total": 39,
    "rank": 1
   },
   {
-   "name": "Усик Артем",
-   "gold": 16,
-   "silver": 10,
-   "bronze": 9,
-   "champUA": 1,
-   "total": 35,
+   "name": "Омельченко Владислав",
+   "gold": 18,
+   "silver": 14,
+   "bronze": 12,
+   "champUA": 2,
+   "total": 44,
    "rank": 2
   },
   {
    "name": "Мамика Олександр",
    "gold": 9,
-   "silver": 9,
+   "silver": 10,
    "bronze": 11,
    "champUA": 0,
-   "total": 29,
+   "total": 30,
    "rank": 3
   },
   {
    "name": "Бушуй Олексій",
-   "gold": 8,
+   "gold": 9,
    "silver": 8,
    "bronze": 9,
-   "champUA": 1,
-   "total": 25,
+   "champUA": 2,
+   "total": 26,
    "rank": 4
   },
   {
@@ -6115,10 +6115,19 @@
    "name": "Васюра Андрій",
    "gold": 2,
    "silver": 2,
-   "bronze": 7,
+   "bronze": 8,
    "champUA": 0,
-   "total": 11,
+   "total": 12,
    "rank": 6
+  },
+  {
+   "name": "Григоренко Денис",
+   "gold": 2,
+   "silver": 2,
+   "bronze": 4,
+   "champUA": 0,
+   "total": 8,
+   "rank": 7
   },
   {
    "name": "Могилевський Руслан",
@@ -6127,7 +6136,7 @@
    "bronze": 4,
    "champUA": 1,
    "total": 8,
-   "rank": 7
+   "rank": 8
   },
   {
    "name": "Ковальов Дмитро",
@@ -6136,16 +6145,16 @@
    "bronze": 3,
    "champUA": 0,
    "total": 7,
-   "rank": 8
+   "rank": 9
   },
   {
-   "name": "Григоренко Денис",
+   "name": "Мелашенко Владислав",
    "gold": 2,
    "silver": 1,
-   "bronze": 3,
-   "champUA": 0,
-   "total": 6,
-   "rank": 9
+   "bronze": 7,
+   "champUA": 1,
+   "total": 10,
+   "rank": 10
   },
   {
    "name": "Фатех Дін",
@@ -6154,7 +6163,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 4,
-   "rank": 10
+   "rank": 11
   },
   {
    "name": "Waclawski Lukasz",
@@ -6163,7 +6172,16 @@
    "bronze": 0,
    "champUA": 0,
    "total": 2,
-   "rank": 11
+   "rank": 12
+  },
+  {
+   "name": "Ледєньов Вадим",
+   "gold": 1,
+   "silver": 2,
+   "bronze": 2,
+   "champUA": 1,
+   "total": 5,
+   "rank": 13
   },
   {
    "name": "Понтус Андрій",
@@ -6172,16 +6190,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 3,
-   "rank": 12
-  },
-  {
-   "name": "Мелашенко Владислав",
-   "gold": 1,
-   "silver": 1,
-   "bronze": 6,
-   "champUA": 0,
-   "total": 8,
-   "rank": 13
+   "rank": 14
   },
   {
    "name": "Костильов Євгеній",
@@ -6190,7 +6199,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 3,
-   "rank": 14
+   "rank": 15
   },
   {
    "name": "Ємельянов Олександр",
@@ -6199,7 +6208,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 3,
-   "rank": 15
+   "rank": 16
   },
   {
    "name": "Гончаров Едуард",
@@ -6208,7 +6217,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 3,
-   "rank": 16
+   "rank": 17
   },
   {
    "name": "Рогов Віталій",
@@ -6217,7 +6226,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 3,
-   "rank": 17
+   "rank": 18
   },
   {
    "name": "Береш Карол",
@@ -6226,7 +6235,16 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 18
+   "rank": 19
+  },
+  {
+   "name": "Воронін Олександр",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 1,
+   "total": 1,
+   "rank": 20
   },
   {
    "name": "Григоренко Віктор",
@@ -6235,7 +6253,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 19
+   "rank": 21
   },
   {
    "name": "Клочко Володимир",
@@ -6244,7 +6262,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 20
+   "rank": 22
   },
   {
    "name": "Лагутін Андрій",
@@ -6253,7 +6271,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 21
+   "rank": 23
   },
   {
    "name": "Лец Дмитро",
@@ -6262,7 +6280,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 22
+   "rank": 24
   },
   {
    "name": "Медведєв Олександр",
@@ -6271,7 +6289,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 23
+   "rank": 25
   },
   {
    "name": "Невенчаний Едуард",
@@ -6280,7 +6298,25 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 24
+   "rank": 26
+  },
+  {
+   "name": "Овсієнко Євген",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 27
+  },
+  {
+   "name": "Пасичніченко Артрем",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 1,
+   "total": 1,
+   "rank": 28
   },
   {
    "name": "Паскару Габріель",
@@ -6289,7 +6325,16 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 25
+   "rank": 29
+  },
+  {
+   "name": "Сташевський Валентин",
+   "gold": 0,
+   "silver": 2,
+   "bronze": 7,
+   "champUA": 0,
+   "total": 9,
+   "rank": 30
   },
   {
    "name": "Пекарук Ілля",
@@ -6298,16 +6343,7 @@
    "bronze": 5,
    "champUA": 0,
    "total": 7,
-   "rank": 26
-  },
-  {
-   "name": "Ледєньов Вадим",
-   "gold": 0,
-   "silver": 2,
-   "bronze": 2,
-   "champUA": 0,
-   "total": 4,
-   "rank": 27
+   "rank": 31
   },
   {
    "name": "Гетманцев Олександр",
@@ -6316,7 +6352,16 @@
    "bronze": 1,
    "champUA": 0,
    "total": 3,
-   "rank": 28
+   "rank": 32
+  },
+  {
+   "name": "Невінчаний Едуард",
+   "gold": 0,
+   "silver": 2,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 3,
+   "rank": 33
   },
   {
    "name": "Кіфор Ярослав",
@@ -6325,16 +6370,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 2,
-   "rank": 29
-  },
-  {
-   "name": "Сташевський Валентин",
-   "gold": 0,
-   "silver": 1,
-   "bronze": 7,
-   "champUA": 0,
-   "total": 8,
-   "rank": 30
+   "rank": 34
   },
   {
    "name": "Луков Олександр",
@@ -6343,7 +6379,7 @@
    "bronze": 5,
    "champUA": 0,
    "total": 6,
-   "rank": 31
+   "rank": 35
   },
   {
    "name": "Буханцов Тарас",
@@ -6352,7 +6388,16 @@
    "bronze": 2,
    "champUA": 0,
    "total": 3,
-   "rank": 32
+   "rank": 36
+  },
+  {
+   "name": "Десинський Максим",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 2,
+   "champUA": 0,
+   "total": 3,
+   "rank": 37
   },
   {
    "name": "Абчугський Олександр",
@@ -6361,7 +6406,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 2,
-   "rank": 33
+   "rank": 38
   },
   {
    "name": "Аверін Сергій",
@@ -6370,7 +6415,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 2,
-   "rank": 34
+   "rank": 39
   },
   {
    "name": "Деркач Дмитро",
@@ -6379,16 +6424,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 2,
-   "rank": 35
-  },
-  {
-   "name": "Невінчаний Едуард",
-   "gold": 0,
-   "silver": 1,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 2,
-   "rank": 36
+   "rank": 40
   },
   {
    "name": "Новак Едуард",
@@ -6397,7 +6433,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 2,
-   "rank": 37
+   "rank": 41
   },
   {
    "name": "Єрєменко Василій",
@@ -6406,7 +6442,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 38
+   "rank": 42
   },
   {
    "name": "Бендрик Олег",
@@ -6415,7 +6451,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 39
+   "rank": 43
   },
   {
    "name": "Бургелов Олег",
@@ -6424,16 +6460,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 40
-  },
-  {
-   "name": "Десинський Максим",
-   "gold": 0,
-   "silver": 1,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 1,
-   "rank": 41
+   "rank": 44
   },
   {
    "name": "Зольдін Фелікс",
@@ -6442,7 +6469,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 42
+   "rank": 45
   },
   {
    "name": "Лагутін Анрій",
@@ -6451,7 +6478,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 43
+   "rank": 46
   },
   {
    "name": "Марченко Денис",
@@ -6460,7 +6487,16 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 44
+   "rank": 47
+  },
+  {
+   "name": "Мінченок Юрій",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 48
   },
   {
    "name": "Омесь Ілля",
@@ -6469,7 +6505,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 45
+   "rank": 49
   },
   {
    "name": "Стецишин Віталий",
@@ -6478,7 +6514,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 46
+   "rank": 50
   },
   {
    "name": "Субаши Алпер",
@@ -6487,7 +6523,16 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 47
+   "rank": 51
+  },
+  {
+   "name": "Чік Едуард",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 52
   },
   {
    "name": "Анісімов Денис",
@@ -6496,7 +6541,16 @@
    "bronze": 3,
    "champUA": 0,
    "total": 3,
-   "rank": 48
+   "rank": 53
+  },
+  {
+   "name": "Марков Сергій",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 3,
+   "champUA": 0,
+   "total": 3,
+   "rank": 54
   },
   {
    "name": "Пономаренко Денис",
@@ -6505,7 +6559,7 @@
    "bronze": 3,
    "champUA": 0,
    "total": 3,
-   "rank": 49
+   "rank": 55
   },
   {
    "name": "Шинкаренко Василь",
@@ -6514,7 +6568,7 @@
    "bronze": 3,
    "champUA": 0,
    "total": 3,
-   "rank": 50
+   "rank": 56
   },
   {
    "name": "Гринів Олександр",
@@ -6523,7 +6577,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 51
+   "rank": 57
   },
   {
    "name": "Гросов Олексій",
@@ -6532,7 +6586,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 52
+   "rank": 58
   },
   {
    "name": "Кисельов Дмитро",
@@ -6541,16 +6595,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 53
-  },
-  {
-   "name": "Марков Сергій",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 2,
-   "champUA": 0,
-   "total": 2,
-   "rank": 54
+   "rank": 59
   },
   {
    "name": "Некрістов Станіслав",
@@ -6559,7 +6604,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 55
+   "rank": 60
   },
   {
    "name": "Рудковський Василь",
@@ -6568,7 +6613,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 56
+   "rank": 61
   },
   {
    "name": "Солтис Андрій",
@@ -6577,7 +6622,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 57
+   "rank": 62
   },
   {
    "name": "Титков Олег",
@@ -6586,7 +6631,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 58
+   "rank": 63
   },
   {
    "name": "Троценко Артем",
@@ -6595,7 +6640,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 59
+   "rank": 64
   },
   {
    "name": "Ozcan Mustafa",
@@ -6604,7 +6649,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 60
+   "rank": 65
   },
   {
    "name": "Ємельянов Олесандр",
@@ -6613,7 +6658,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 61
+   "rank": 66
   },
   {
    "name": "Івасюк Віталій",
@@ -6622,7 +6667,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 62
+   "rank": 67
   },
   {
    "name": "Агневщіков Анатолій",
@@ -6631,7 +6676,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 63
+   "rank": 68
   },
   {
    "name": "Бадира Олександр",
@@ -6640,7 +6685,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 64
+   "rank": 69
   },
   {
    "name": "Баранов Олександр",
@@ -6649,7 +6694,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 65
+   "rank": 70
   },
   {
    "name": "Барсуков Віталий",
@@ -6658,7 +6703,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 66
+   "rank": 71
   },
   {
    "name": "Волчук Руслан",
@@ -6667,7 +6712,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 67
+   "rank": 72
   },
   {
    "name": "Горняк Іштван",
@@ -6676,7 +6721,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 68
+   "rank": 73
   },
   {
    "name": "Гоян Дмитро",
@@ -6685,55 +6730,10 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 69
-  },
-  {
-   "name": "Козловський Богдан",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1,
-   "rank": 70
-  },
-  {
-   "name": "Коломієць Андрій",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1,
-   "rank": 71
-  },
-  {
-   "name": "Кулаков Володимир",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1,
-   "rank": 72
-  },
-  {
-   "name": "Леденьов Вадим",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1,
-   "rank": 73
-  },
-  {
-   "name": "Мороз Ігор",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1,
    "rank": 74
   },
   {
-   "name": "Пальонний Ігор",
+   "name": "Кобзар Ігор",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -6742,7 +6742,7 @@
    "rank": 75
   },
   {
-   "name": "Подольчук Антон",
+   "name": "Козловський Богдан",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -6751,7 +6751,7 @@
    "rank": 76
   },
   {
-   "name": "Попович Андрій",
+   "name": "Коломієць Андрій",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -6760,7 +6760,7 @@
    "rank": 77
   },
   {
-   "name": "Савенков Антон",
+   "name": "Кулаков Володимир",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -6769,7 +6769,7 @@
    "rank": 78
   },
   {
-   "name": "Сиром'ятников Олександр",
+   "name": "Леденьов Вадим",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -6778,7 +6778,7 @@
    "rank": 79
   },
   {
-   "name": "Стейер Себастьян",
+   "name": "Мороз Ігор",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -6787,7 +6787,7 @@
    "rank": 80
   },
   {
-   "name": "Тфмолов Роман",
+   "name": "Пальонний Ігор",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -6796,7 +6796,7 @@
    "rank": 81
   },
   {
-   "name": "Хімчак Сергій",
+   "name": "Подольчук Антон",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -6805,7 +6805,7 @@
    "rank": 82
   },
   {
-   "name": "Царолунга Дмитро",
+   "name": "Попович Андрій",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -6814,7 +6814,7 @@
    "rank": 83
   },
   {
-   "name": "Шляхов Сергій",
+   "name": "Савенков Антон",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -6823,13 +6823,67 @@
    "rank": 84
   },
   {
-   "name": "Яненко Сергій",
+   "name": "Сиром'ятников Олександр",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
    "champUA": 0,
    "total": 1,
    "rank": 85
+  },
+  {
+   "name": "Стейер Себастьян",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 86
+  },
+  {
+   "name": "Тфмолов Роман",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 87
+  },
+  {
+   "name": "Хімчак Сергій",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 88
+  },
+  {
+   "name": "Царолунга Дмитро",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 89
+  },
+  {
+   "name": "Шляхов Сергій",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 90
+  },
+  {
+   "name": "Яненко Сергій",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 91
   }
  ],
  "leaderboardWomen": [
@@ -6844,11 +6898,11 @@
   },
   {
    "name": "Харченко Тетяна",
-   "gold": 15,
+   "gold": 16,
    "silver": 1,
    "bronze": 10,
    "champUA": 1,
-   "total": 26,
+   "total": 27,
    "rank": 2
   },
   {
@@ -6935,19 +6989,19 @@
   {
    "name": "Гончаренко Інна",
    "gold": 1,
-   "silver": 5,
+   "silver": 6,
    "bronze": 6,
    "champUA": 1,
-   "total": 12,
+   "total": 13,
    "rank": 12
   },
   {
    "name": "Шклярук Наталія",
    "gold": 1,
    "silver": 2,
-   "bronze": 1,
+   "bronze": 2,
    "champUA": 0,
-   "total": 4,
+   "total": 5,
    "rank": 13
   },
   {
@@ -317592,6 +317646,12 @@
  ],
  "telegramNews": [
   {
+   "text": "🏆У чоловіків кубковий етап в Одесі за Овсієнко Євгеном. Вже традиційний двобій зі Сташевським Валентином вийшов на користь киянина 5-4.\n🥇Овсієнко Є.\n🥈Сташевський В.\n🥉Мелашенко В.\n1️⃣8️⃣0️⃣х3️⃣ - Омельченко В.\n1️⃣8️⃣0️⃣х2️⃣ - Сташевський В.\n1️⃣8️⃣0️⃣ - Гакман С., Овсієнко Є., Мелашенко В.,\nАбчугський О., Солтис М., \n☑️Чекаути 100+:\n1️⃣4️⃣4️⃣ - Овсієнко Є.\n1️⃣4️⃣2️⃣ - Могилевський Р.\n1️⃣2️⃣6️⃣ - Мелашенко В.\n1️⃣1️⃣7️⃣ - Мелашенко В. \n1️⃣1️⃣6️⃣ - Сташевський В.\n1️⃣1️⃣5️⃣ - Омельченко В.\n1️⃣1️⃣0️⃣ -",
+   "date": "2026-09-06",
+   "url": "https://t.me/fullbull/12652",
+   "photo": "https://cdn4.telesco.pe/file/Id-ikwvPn3NX4x-i-7Y8uGfpbXQ3G6QnY18Mst0NedOUJdMvbZLFM_VctzRacpm7uU9AJU9ex83wDXPZdR8_Ndpjr97gLgYmqyq1DCfVUhFQSNg8SN-pnssMXYvHfADo_Nmj5quM46KmHYDctHnao7aH9oVxbnw1GFHsNuonC8Jg-KgFPnkQ8pKdKEfwbi78dBtadVLvx2aCJcDQcgq-Y7_5dLhyl9k7-LlpwtVKMKBSLdqnNBHmIeWR18wewZ0ukMo_kJ4F0GedVW0lW4xqxdS2Nb72uHaoBXQiyfZfTRvSjbWlCd5i5ArbGwQmhsyYOjtxxNbzIcF-gKCSK1MXAg.jpg"
+  },
+  {
    "text": "🏆Переможниця ІV-етапу Кубку України в Одесі серед жінок - Харченко Тетяна.\n🥇Харченко Т.\n🥈Гончаренко І.\n🥉Шклярук Н.\n1️⃣8️⃣0️⃣ - Харченко Т.\n👀",
    "date": "2026-09-06",
    "url": "https://t.me/fullbull/12651",
@@ -317601,7 +317661,7 @@
    "text": "6-го вересня у Одесі розігрують титул переможця ІV-го етапу Кубку України 2026 року.\n👀🙋‍♀️Жінки:\n👀🙋‍♂️Чоловіки:\n🎥Трансляція 👉",
    "date": "2026-09-06",
    "url": "https://t.me/fullbull/12645",
-   "photo": "https://cdn4.telesco.pe/file/gPuvWo1BchvsbOP-54n5tlN9RWrovtYVW-AlSEpzgwhCFb_T9xgGlkNI1xOqvYLPGz_AZqRkAyrKBrceJeOVkwE225xXS613lRUl70w03mfX-NSxU9REY4zZA0BM5DfELH-37yy32VF3NyiHEoYXNmdEw83FE0G3s8l0wFpVQI8a6tXFV8t8fFt1BRVqCYASFg8lQbJRtvh34OderkJG-5xGC9t_a70IWusbMAulr83TVt6htfJbSuhsUVK4JvVwbv-yrG1ecBt_FC2QKf-wG3ykQRcnpxgiCbEkL6AnrUkRKVsaijoOoqIxHpdp4Yo-ncUZg0wJ4FAULmNrMP1i4w.jpg"
+   "photo": "https://cdn4.telesco.pe/file/olAXFRhosGzWalMMou1k0Cq7whfI7RsVdZi07xtMKt1XVRPfFpF7gD1MmRe-H3EVLKr13UwY-8xzd0AVm9akK_aef1gKIe2byJc1IA3sVZ0wfGh4Ilu8UwNedoKEmlaexLcMngO80yO5Ajvm4RUjD-vpZMOHDF0A9eiZcoV6sxTjlXd9Hun5jOs8f3o-5Tvqjb5a_TgNdunLS5cja23eX3qQyw5xznp9swddvOQdqTQ2bawIgewkPlUzB8bDU08F8TW7vTOsjjeuDbfZSMQLoQJK8IUH3cAA72M_yQ3bmMoG_oKlTA-6zWLljsXgpOd0aG3q_I3nAw8mMdOFvSaoYw.jpg"
   },
   {
    "text": "🏆У чоловіків титул Чемпіонів України у парному розряді в 2026 році вибороли одесити: Сташевський В./Фатех Д. \n🥇Сташевський В./Фатех Д. \n🥈Овсієнко Є./Абчугський О.\n🥉Гончаров Е./Агневщиков Ю. \n1️⃣8️⃣0️⃣х3️⃣ - Сташевський В./Фатех Д. \n1️⃣8️⃣0️⃣ - Омельченко В./Гакман С., Могилевський Р./Шапка Є., Гончаров Е./Агневщиков Ю., Аверін С./Братченко В., Микитин Я./Стецишин В., Акользін Д./Пивошенко М., Мельник О./Урсаки О.\n☑️Чекаути 100+:\n1️⃣3️⃣9️⃣ - Овсієнко Є./Абчугський О.\n1️⃣2️⃣9️⃣ - Мелашенко В./Павл",
@@ -317620,12 +317680,6 @@
    "date": "2026-09-05",
    "url": "https://t.me/fullbull/12640",
    "photo": null
-  },
-  {
-   "text": "В Одесі, у суботу, 5-го вересня - Чемпіонат України 2026 (пари):\n🙋‍♀️Жінки.\n🙋‍♂️Чоловіки .",
-   "date": "2026-09-05",
-   "url": "https://t.me/fullbull/12639",
-   "photo": "https://cdn4.telesco.pe/file/mSftsecOb00yMqjTf4Ray0JwR1ABqfdmcNkI2qU3RlsgskB1FlzqFw8UDRqHe6_q6OXXRVbxODktZW11zzXJNP6xi4Lls22Qv8PM3PvKTa_nhx0ZRhuf3DHI_RCU4XKAqn_vstRxJ__WKmJWoPVdDlB6j32KXX8LOPkZk0i3ZvZMIKmxSoI38oE1-HV2_vQ62-BWWOPbVlSIykOhGlmQbV_hy9IAIGBAy_v05pqxrMophg-ycqLr-X6hjqWH1IeG4kYVbiz0zYmZqQF2-lppsW7pSKb02sMrju0FJiMPbmNtWjsJvJ_U_ZJ2Jva4frDmzDhzO5-c_isKqDkqdlySJA.jpg"
   }
  ]
 }
