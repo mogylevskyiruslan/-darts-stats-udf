@@ -1496,6 +1496,58 @@ def fetch_protocol_podium(url):
     return podium or None
 
 
+def fill_medals_from_prizes_sheet(tournaments, men_year_data, women_year_data, name_index, canonical_names):
+    """Заповнює t['medals']/t['medalsWomen'] з таблиці 'Призери етапів кубків
+    ВФД' — критично для турнірів до 2022 року, коли Nakka ще не існувала.
+    Зіставлення йде за РОКОМ + НОМЕРОМ ЕТАПУ (не за містом чи назвою — це
+    показало себе ненадійним раніше через дрібні розбіжності написання).
+    Фронтенд сам віддає перевагу nakkaMedals, якщо вони є, тож тут можна
+    сміливо заповнювати medals для ВСІХ турнірів без ризику щось перебити."""
+
+    def stage_key(t):
+        name = t.get("name", "")
+        if name.strip().upper().startswith("ЧУ") or "чемпіонат україни" in name.lower():
+            return "ЧУ"
+        m = re.search(r"(\d+)\s*етап", t.get("format", ""), re.IGNORECASE)
+        return m.group(1) if m else None
+
+    def podium_to_medals(podium, name_index, canonical_names):
+        names = [resolve_name(n, name_index, canonical_names) if n else None for n in podium]
+        if not names or not names[0]:
+            return None
+        return {
+            "gold": names[0],
+            "silver": names[1] if len(names) > 1 else None,
+            "bronze": [n for n in names[2:] if n],
+        }
+
+    filled_men = filled_women = 0
+    for t in tournaments:
+        try:
+            year = int(t["date"].split(".")[-1])
+        except (ValueError, IndexError):
+            continue
+        key = stage_key(t)
+        if not key:
+            continue
+
+        men_entry = men_year_data.get(year, {}).get(key)
+        if men_entry and not t.get("medals"):
+            medals = podium_to_medals(men_entry["podium"], name_index, canonical_names)
+            if medals:
+                t["medals"] = medals
+                filled_men += 1
+
+        women_entry = women_year_data.get(year, {}).get(key)
+        if women_entry and not t.get("medalsWomen"):
+            medals = podium_to_medals(women_entry["podium"], name_index, canonical_names)
+            if medals:
+                t["medalsWomen"] = medals
+                filled_women += 1
+
+    return filled_men, filled_women
+
+
 def fill_protocol_medals(tournaments):
     """Для турнірів, де досі немає жодних призерів (ні з Nakka, ні з таблиці
     Google Sheets), пробує дістати їх з протоколу (Google Docs), якщо він
@@ -1731,6 +1783,12 @@ def main():
     canonical_names = build_canonical_names(name_sources)
     print(f"  Built name index with {len(name_index)} known surnames, "
           f"{len(canonical_names)} canonical full names")
+
+    filled_m, filled_w = fill_medals_from_prizes_sheet(
+        tournaments, men_year_data, women_year_data, name_index, canonical_names
+    )
+    print(f"  Filled medals from prizes sheet: {filled_m} men, {filled_w} women "
+          f"(переважно турніри до 2022 року, без Nakka)")
 
     print("Fetching season ratings (Кубок України, all tabs)...")
     ratings = build_ratings(RATINGS_SOURCES_PATH, name_index, canonical_names)
