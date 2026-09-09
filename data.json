@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-09T14:52:04.587428+00:00",
+  "lastUpdated": "2026-09-09T15:04:36.896075+00:00",
   "tournamentsCount": 180
  },
  "tournaments": [
@@ -29,8 +29,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Овсієнко Євген",
+    "silver": "Сташевський Валентин",
+    "bronze": [
+     "Мелашенко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Шклярук Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Овсієнко Євген",
     "silver": "Сташевський Валентин",
@@ -197,8 +209,20 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Овсієнко Євген",
+    "silver": "Сташевський Валентин",
+    "bronze": [
+     "Мелашенко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Шклярук Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Гакман Степан",
     "silver": "Почкай Андрій",
@@ -233,8 +257,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Бендрик Олег",
+    "bronze": [
+     "Могилевський Руслан"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Лановенко Ксенія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Бендрик Олег",
@@ -443,8 +479,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Могилевський Руслан",
+    "bronze": [
+     "Сташевський Валентин"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Чабанова Анна",
+    "bronze": [
+     "Гончаренко Інна"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Могилевський Руслан",
@@ -485,8 +533,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Овсієнко Євген",
+    "silver": "Сташевський Валентин",
+    "bronze": [
+     "Мелашенко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Шклярук Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Мелашенко Владислав",
@@ -569,8 +629,20 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Бендрик Олег",
+    "bronze": [
+     "Могилевський Руслан"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Лановенко Ксенія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Могилевський Руслан",
     "silver": "Абчугський Олександр",
@@ -647,8 +719,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Бендрик Олег",
+    "bronze": [
+     "Могилевський Руслан"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Лановенко Ксенія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Мелашенко Владислав",
     "silver": "Абчугський Олександр",
@@ -689,8 +773,20 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Могилевський Руслан",
+    "bronze": [
+     "Сташевський Валентин"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Чабанова Анна",
+    "bronze": [
+     "Гончаренко Інна"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
     "silver": "Головень Юрій",
@@ -767,8 +863,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Могилевський Руслан",
+    "bronze": [
+     "Сташевський Валентин"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Чабанова Анна",
+    "bronze": [
+     "Гончаренко Інна"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Сташевський Валентин",
     "silver": "Могилевський Руслан",
@@ -842,8 +950,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Могилевський Руслан",
+    "bronze": [
+     "Гринів Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Ігнатюк Наталя"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Могилевський Руслан",
@@ -917,8 +1037,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Могилевський Руслан",
+    "bronze": [
+     "Гринів Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Ігнатюк Наталя"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Сташевський Валентин",
     "silver": "Овсієнко Євген",
@@ -959,8 +1091,20 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Могилевський Руслан",
+    "bronze": [
+     "Гринів Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Ігнатюк Наталя"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Окуліцький Євген",
@@ -1037,8 +1181,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Могилевський Руслан",
+    "silver": "Абчугський Олександр",
+    "bronze": [
+     "Гринів Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Гончаренко Інна",
+    "silver": "Харченко Тетяна",
+    "bronze": [
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Могилевський Руслан",
     "silver": "Абчугський Олександр",
@@ -1121,8 +1277,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Могилевський Руслан",
+    "silver": "Мелашенко Владислав",
+    "bronze": [
+     "Козловський Богдан"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Терещенко Любов",
+    "bronze": [
+     "Лановенко Ксенія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Мелашенко Владислав",
@@ -1211,8 +1379,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Мамика Олександр",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Могилевський Руслан"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Зайцева Інна",
+    "bronze": [
+     "Гончаренко Інна"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Мамика Олександр",
     "silver": "Омельченко Владислав",
@@ -1253,8 +1433,20 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Могилевський Руслан",
+    "silver": "Абчугський Олександр",
+    "bronze": [
+     "Гринів Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Гончаренко Інна",
+    "silver": "Харченко Тетяна",
+    "bronze": [
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Мамика Олександр",
     "silver": "Рогов Віталій",
@@ -1295,8 +1487,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Могилевський Руслан",
+    "silver": "Абчугський Олександр",
+    "bronze": [
+     "Гринів Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Гончаренко Інна",
+    "silver": "Харченко Тетяна",
+    "bronze": [
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко/Рудковський",
     "silver": "Кіфор/Гринів О.",
@@ -1337,8 +1541,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Кіфор Ярослав",
+    "bronze": [
+     "Могилевський Руслан"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Карнаух Валентина"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Кіфор Ярослав",
@@ -1421,8 +1637,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Мамика Олександр",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Могилевський Руслан"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Зайцева Інна",
+    "bronze": [
+     "Гончаренко Інна"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Мелашенко Владислав",
@@ -1463,8 +1691,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Могилевський Руслан",
+    "silver": "Абчугський Олександр",
+    "bronze": [
+     "Гринів Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Гончаренко Інна",
+    "silver": "Харченко Тетяна",
+    "bronze": [
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Десинський Максим",
@@ -1505,8 +1745,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Лагутін Анрій",
+    "bronze": [
+     "Гончаров Едуард"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Зайцева Інна"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Лагутін Андрій",
@@ -1589,8 +1841,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Кіфор Ярослав",
+    "bronze": [
+     "Могилевський Руслан"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Карнаух Валентина"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Залевський Володимир",
@@ -1631,8 +1895,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Пекарук Ілля",
+    "bronze": [
+     "Мелашенко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Терещенко Любов",
+    "bronze": [
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Пекарук Ілля",
@@ -1673,8 +1949,20 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Могилевський Руслан",
+    "silver": "Абчугський Олександр",
+    "bronze": [
+     "Гринів Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Гончаренко Інна",
+    "silver": "Харченко Тетяна",
+    "bronze": [
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "United West",
     "silver": "Кривий Ріг",
@@ -1757,8 +2045,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Лагутін Анрій",
+    "bronze": [
+     "Гончаров Едуард"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Зайцева Інна"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Залевський Володимир",
@@ -1841,8 +2141,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Пекарук Ілля",
+    "bronze": [
+     "Мелашенко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Терещенко Любов",
+    "bronze": [
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Григоренко Віктор",
@@ -1880,8 +2192,20 @@
      "type": "nakka"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Могилевський Руслан",
+    "silver": "Абчугський Олександр",
+    "bronze": [
+     "Гринів Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Гончаренко Інна",
+    "silver": "Харченко Тетяна",
+    "bronze": [
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Кіфор/Ільясова",
     "silver": "Залевський/Білоус",
@@ -1916,8 +2240,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Мелашенко Владислав",
+    "silver": "Кіфор Ярослав",
+    "bronze": [
+     "Омельченко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Білоус Жанна",
+    "bronze": [
+     "Гончаренко Інна"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Мелашенко Владислав",
     "silver": "Кіфор Ярослав",
@@ -1991,8 +2327,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Мелашенко Владислав",
+    "silver": "Кіфор Ярослав",
+    "bronze": [
+     "Омельченко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Білоус Жанна",
+    "bronze": [
+     "Гончаренко Інна"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
     "silver": "Чепурний Едуард",
@@ -2030,8 +2378,22 @@
      "type": "nakka"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Аверін Сергій",
+    "bronze": [
+     "Омельченко Владислав",
+     "Яненко Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Чабанова Анна",
+    "bronze": [
+     "Терещенко Любов",
+     "Карнаух Валентина"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Чепурний Е./Харченко Т.",
     "silver": "Залевський В./Білоус Ж.",
@@ -2066,8 +2428,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Аверін Сергій",
+    "bronze": [
+     "Омельченко Владислав",
+     "Яненко Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Чабанова Анна",
+    "bronze": [
+     "Терещенко Любов",
+     "Карнаух Валентина"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
     "silver": "Аверін Сергій",
@@ -2210,8 +2586,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Гончаров Едуард",
+    "silver": "Омесь Ілля",
+    "bronze": [
+     "Залевський Володимир",
+     "Абчугський Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Терещенко Любов",
+    "bronze": [
+     "Гончаренко Інна",
+     "Ільясова Альбіна"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Гончаров Едуард",
     "silver": "Омесь Ілля",
@@ -2252,8 +2642,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Аверін Сергій",
+    "bronze": [
+     "Омельченко Владислав",
+     "Яненко Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Чабанова Анна",
+    "bronze": [
+     "Терещенко Любов",
+     "Карнаух Валентина"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
     "silver": "Сидоренко Олександр",
@@ -2294,8 +2698,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Мелашенко Владислав",
+     "Сташевський Валентин"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Ільясова Альбіна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Харченко Тетяна",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
     "silver": "Усик Артем",
@@ -2336,8 +2754,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Аверін Сергій",
+    "bronze": [
+     "Омельченко Владислав",
+     "Яненко Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Чабанова Анна",
+    "bronze": [
+     "Терещенко Любов",
+     "Карнаух Валентина"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Залевський\\Мелашенко",
     "silver": "Кисельов\\Усик",
@@ -2444,8 +2876,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Григоренко Віктор",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Мелашенко Владислав",
+     "Гоян Дмитро"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Білоус Жанна",
+    "bronze": [
+     "Гончаренко Інна",
+     "Молдован Емілія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Григоренко Віктор",
     "silver": "Залевський Володимир",
@@ -2489,8 +2935,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Аверін Сергій",
+    "bronze": [
+     "Омельченко Владислав",
+     "Яненко Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Чабанова Анна",
+    "bronze": [
+     "Терещенко Любов",
+     "Карнаух Валентина"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Кіфор",
     "silver": "Ферар Максим",
@@ -2561,8 +3021,22 @@
      "type": "nakka"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Гончаров Едуард",
+    "silver": "Омесь Ілля",
+    "bronze": [
+     "Залевський Володимир",
+     "Абчугський Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Терещенко Любов",
+    "bronze": [
+     "Гончаренко Інна",
+     "Ільясова Альбіна"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Сташевський Валентин",
     "silver": "Кисельов Дмитро",
@@ -2597,8 +3071,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Рогов Віталій",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Троценко Артем",
+     "Могилевський Руслан"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Терещенко Любов",
+    "bronze": [
+     "Пивошенко Олена",
+     "Соколова Вікторія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Рогов Віталій",
     "silver": "Залевський Володимир",
@@ -2639,8 +3127,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Аверін Сергій",
+    "bronze": [
+     "Омельченко Владислав",
+     "Яненко Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Чабанова Анна",
+    "bronze": [
+     "Терещенко Любов",
+     "Карнаух Валентина"
+    ]
+   },
    "nakkaMedals": {
     "gold": "United Ukraine",
     "silver": "Черкаси - 1",
@@ -2714,8 +3216,22 @@
      "type": "nakka"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Мелашенко Владислав",
+     "Сташевський Валентин"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Ільясова Альбіна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Харченко Тетяна",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "giC2",
     "silver": "jDwW",
@@ -2780,8 +3296,22 @@
      "type": "nakka"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Григоренко Віктор",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Мелашенко Владислав",
+     "Гоян Дмитро"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Білоус Жанна",
+    "bronze": [
+     "Гончаренко Інна",
+     "Молдован Емілія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
     "silver": "Омельченко Владислав",
@@ -2846,8 +3376,22 @@
      "type": "nakka"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Рогов Віталій",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Троценко Артем",
+     "Могилевський Руслан"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Терещенко Любов",
+    "bronze": [
+     "Пивошенко Олена",
+     "Соколова Вікторія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Залевський Володимир",
@@ -2882,8 +3426,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Пекарук Ілля",
+     "Троценко Артем"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Терещенко Любов",
+    "silver": "Шклярук Наталія",
+    "bronze": [
+     "Білоус Жанна",
+     "Соколова Вікторія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Залевський Володимир",
@@ -2921,8 +3479,22 @@
      "type": "nakka"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Пекарук Ілля",
+     "Троценко Артем"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Терещенко Любов",
+    "silver": "Шклярук Наталія",
+    "bronze": [
+     "Білоус Жанна",
+     "Соколова Вікторія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко/Терещенко",
     "silver": "Могилевський/Лановенко",
@@ -2990,8 +3562,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Десинський Максим",
+    "bronze": [
+     "Гончаров Едуард",
+     "Коломієць Андрій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Терещенко Любов",
+    "silver": "Шклярук Наталія",
+    "bronze": [
+     "Моісеєнко Віталіна",
+     "Гончаренко Інна"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Десинський Максим",
@@ -3032,8 +3618,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Пекарук Ілля",
+     "Троценко Артем"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Терещенко Любов",
+    "silver": "Шклярук Наталія",
+    "bronze": [
+     "Білоус Жанна",
+     "Соколова Вікторія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Аверін",
@@ -3074,8 +3674,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Сташевський Валентин",
+     "Мелашенко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Соколова Вікторія",
+    "bronze": [
+     "Харченко Тетяна",
+     "Пивошенко Олена"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Залевський",
@@ -3116,8 +3730,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Пекарук Ілля",
+     "Троценко Артем"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Терещенко Любов",
+    "silver": "Шклярук Наталія",
+    "bronze": [
+     "Білоус Жанна",
+     "Соколова Вікторія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Залевський\\Мелашенко",
     "silver": "Троценко\\Лагутін",
@@ -3188,8 +3816,22 @@
      "type": "nakka"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Пекарук Ілля",
+     "Мелашенко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Шклярук Наталія",
+    "silver": "Лановенко Ксенія",
+    "bronze": [
+     "Полтавець Світлана",
+     "Паламар Оксана"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
     "silver": "Омельченко Владислав",
@@ -3224,8 +3866,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Пекарук Ілля",
+     "Мелашенко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Шклярук Наталія",
+    "silver": "Лановенко Ксенія",
+    "bronze": [
+     "Полтавець Світлана",
+     "Паламар Оксана"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
     "silver": "Омельченко Владислав",
@@ -3266,8 +3922,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Пекарук Ілля",
+     "Троценко Артем"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Терещенко Любов",
+    "silver": "Шклярук Наталія",
+    "bronze": [
+     "Білоус Жанна",
+     "Соколова Вікторія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Залевський Володимир",
@@ -3338,8 +4008,22 @@
      "type": "nakka"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Луков Олександр",
+     "Sol Deen"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Терещенко Любов",
+    "bronze": [
+     "Моісеєнко Віталіна",
+     "Пивошенко Олена"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Залевський Володимир",
@@ -3374,8 +4058,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Луков Олександр",
+     "Sol Deen"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Терещенко Любов",
+    "bronze": [
+     "Моісеєнко Віталіна",
+     "Пивошенко Олена"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
     "silver": "Мамика Олександр",
@@ -3416,8 +4114,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Пекарук Ілля",
+     "Троценко Артем"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Терещенко Любов",
+    "silver": "Шклярук Наталія",
+    "bronze": [
+     "Білоус Жанна",
+     "Соколова Вікторія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Харків-1",
     "silver": "United Ukraine",
@@ -3488,8 +4200,22 @@
      "type": "nakka"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Пекарук Ілля",
+     "Усик Артем"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Терещенко Любов",
+    "bronze": [
+     "Лановенко Ксенія",
+     "Шклярук Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Троценко Артем",
@@ -3524,8 +4250,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Пекарук Ілля",
+     "Усик Артем"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Терещенко Любов",
+    "bronze": [
+     "Лановенко Ксенія",
+     "Шклярук Наталія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Залевський Володимир",
     "silver": "Омельченко Владислав",
@@ -3566,8 +4306,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Пекарук Ілля",
+    "bronze": [
+     "Залевський Володимир",
+     "Аверін Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Терещенко Любов",
+    "bronze": [
+     "Лановенко Ксенія",
+     "Соколова Вікторія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Пекарук Ілля",
@@ -3638,8 +4392,22 @@
      "type": "nakka"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Пекарук Ілля",
+    "bronze": [
+     "Залевський Володимир",
+     "Аверін Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Терещенко Любов",
+    "bronze": [
+     "Лановенко Ксенія",
+     "Соколова Вікторія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Усик Артем",
     "silver": "Баширов Ярослав",
@@ -3671,8 +4439,21 @@
      "type": "nakka"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Пекарук Ілля",
+     "Мелашенко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Ледєньова Наталія",
+    "bronze": [
+     "Соколова Вікторія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко/Баширов",
     "silver": "Залевський/Бейреш",
@@ -3707,8 +4488,21 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Пекарук Ілля",
+     "Мелашенко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Ледєньова Наталія",
+    "bronze": [
+     "Соколова Вікторія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Залевський Володимир",
@@ -3812,8 +4606,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Анісімов Денис",
+     "Пекарук Ілля"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Ледєньова Наталія",
+    "silver": "Моісеєнко Віталіна",
+    "bronze": [
+     "Чумак Ганна",
+     "Харченко Тетяна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -3839,8 +4647,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Бушуй Олексій",
+    "bronze": [
+     "Луков Олександр",
+     "Солтис Андрій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Пивошенко Олена",
+    "silver": "Ледєньова Наталія",
+    "bronze": [
+     "Чумак Ганна",
+     "Харченко Тетяна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -3869,8 +4691,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Мамика Олександр",
+     "Ковальов Дмитро"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Харченко Тетяна",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -3896,8 +4732,22 @@
      "type": "protocol_sheet"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Мамика Олександр",
+     "Ковальов Дмитро"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Харченко Тетяна",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -3950,8 +4800,21 @@
      "type": "udf_online"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Мамика Олександр",
+    "silver": "Субаши Алпер",
+    "bronze": [
+     "Рогов Віталій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Клочек Ксенія",
+    "silver": "Моісеєнко Віталіна",
+    "bronze": [
+     "Чумак Ганна",
+     "Анісімова Світлана"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4004,8 +4867,21 @@
      "type": "udf_online"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Паскару Габріель",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Стейер Себастьян"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Клочек Ксенія",
+    "bronze": [
+     "Чумак Ганна",
+     "Солтис Ганна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4034,8 +4910,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Ковальов Дмитро",
+    "silver": "Бушуй Олексій",
+    "bronze": [
+     "Мамика Олександр",
+     "Усик Артем"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Грушовець Ольга",
+     "Марфола Оксана"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4064,8 +4954,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Мамика Олександр",
+     "Ковальов Дмитро"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Харченко Тетяна",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4091,8 +4995,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Рогов Віталій",
+     "Пономаренко Денис"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Ледєньова Наталія",
+    "bronze": [
+     "Грушовець Ольга",
+     "Харченко Тетяна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4118,8 +5036,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Мамика Олександр",
+     "Ковальов Дмитро"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Харченко Тетяна",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4145,8 +5077,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Бушуй Олексій",
+     "Царолунга Дмитро"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Борисова Марина",
+     "Павлюченко Марина"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4172,8 +5118,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Омельченко Владислав",
+     "Пономаренко Денис"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Моісеєнко Віталіна",
+    "bronze": [
+     "Ледєньова Наталія",
+     "Марфола Оксана"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4199,8 +5159,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Бушуй Олексій",
+    "bronze": [
+     "Омельченко Владислав",
+     "Мамика Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Ледєньова Наталія",
+    "bronze": [
+     "Харченко Тетяна",
+     "Чумак Ганна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4226,8 +5200,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Мамика Олександр",
+     "Ковальов Дмитро"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Харченко Тетяна",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4256,8 +5244,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Бушуй Олексій",
+     "Мороз Ігор"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Павлюченко Марина",
+    "bronze": [
+     "Марфола Оксана",
+     "Моісеєнко Віталіна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4283,8 +5285,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Бушуй Олексій",
+     "Мороз Ігор"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Павлюченко Марина",
+    "bronze": [
+     "Марфола Оксана",
+     "Моісеєнко Віталіна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4310,8 +5326,22 @@
      "type": "protocol_sheet"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Бушуй Олексій",
+     "Мороз Ігор"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Павлюченко Марина",
+    "bronze": [
+     "Марфола Оксана",
+     "Моісеєнко Віталіна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4337,8 +5367,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Усик Артем",
+     "Агневщіков Анатолій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Марфола Оксана",
+    "silver": "Грушовець Ольга",
+    "bronze": [
+     "Пивошенко Олена",
+     "Анісімова Світлана"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4364,8 +5408,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Мамика Олександр",
+     "Бушуй Олексій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Анісімова Світлана",
+    "silver": "Моісеєнко Віталіна",
+    "bronze": [
+     "Борисова Марія",
+     "Харченко Тетяна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4391,8 +5449,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Мамика Олександр",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Тфмолов Роман",
+     "Ємельянов Олесандр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Редзюк Тетяна",
+    "silver": "Ледєньова Наталія",
+    "bronze": [
+     "Солтис Ганна",
+     "Анісімова Світлана"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4418,8 +5490,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Бушуй Олексій",
+     "Мороз Ігор"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Павлюченко Марина",
+    "bronze": [
+     "Марфола Оксана",
+     "Моісеєнко Віталіна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4466,7 +5552,14 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
+   "medals": {
+    "gold": "Waclawski Lukasz",
+    "silver": "Бушуй Олексій",
+    "bronze": [
+     "Некрістов Станіслав",
+     "Ozcan Mustafa"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -4514,8 +5607,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Waclawski Lukasz",
+    "silver": "Понтус Андрій",
+    "bronze": [
+     "Мамика Олександр",
+     "Сташевський Валентин"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Клочек Ксенія",
+    "silver": "Ледєньова Наталія",
+    "bronze": [
+     "Maret Liiri",
+     "Моісеєнко Віталіна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4541,8 +5648,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Мамика Олександр",
+    "silver": "Буханцов Тарас",
+    "bronze": [
+     "Марков Сергій",
+     "Залевський Володимир"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Ледєньова Наталія",
+     "Грушовець Ольга"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4568,8 +5689,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Бушуй Олексій",
+     "Мороз Ігор"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Павлюченко Марина",
+    "bronze": [
+     "Марфола Оксана",
+     "Моісеєнко Віталіна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4598,8 +5733,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Мамика Олександр",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Усик Артем",
+     "Sol Deen"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Моісеєнко Віталіна",
+    "bronze": [
+     "Грушовець Ольга",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4628,8 +5777,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Бушуй Олексій",
+     "Мороз Ігор"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Павлюченко Марина",
+    "bronze": [
+     "Марфола Оксана",
+     "Моісеєнко Віталіна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4655,8 +5818,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Бушуй Олексій",
+    "bronze": [
+     "Ледєньов Вадим",
+     "Дідов Василь"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Грушовець Ольга",
+     "Марфола Оксана"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4682,8 +5859,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Мамика Олександр",
+     "Васюра Андрій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Ледєньова Наталія",
+    "silver": "Моісеєнко Віталіна",
+    "bronze": [
+     "Чумак Ганна",
+     "Марфола Оксана"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4709,8 +5900,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Бушуй Олексій",
+    "bronze": [
+     "Дідов Василь",
+     "Омельченко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Грушовець Ольга",
+    "bronze": [
+     "Чумак Ганна",
+     "Спекторенко Катерина"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4736,8 +5941,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Бушуй Олексій",
+     "Мороз Ігор"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Павлюченко Марина",
+    "bronze": [
+     "Марфола Оксана",
+     "Моісеєнко Віталіна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4763,8 +5982,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Омельченко Владислав",
+     "Васюра Андрій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Анісімова Світлана",
+    "bronze": [
+     "Чумак Ганна",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4790,8 +6023,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Омельченко Владислав",
+     "Васюра Андрій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Анісімова Світлана",
+    "bronze": [
+     "Чумак Ганна",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4820,8 +6067,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Невінчаний Едуард",
+    "bronze": [
+     "Омельченко Владислав",
+     "Марков Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Ледєньова Наталія",
+     "Павлюченко Марина"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4847,8 +6108,22 @@
      "type": "protocol_sheet"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Невінчаний Едуард",
+    "bronze": [
+     "Омельченко Владислав",
+     "Марков Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Ледєньова Наталія",
+     "Павлюченко Марина"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4874,8 +6149,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Sol Deen",
+    "silver": "Гетманцев Олександр",
+    "bronze": [
+     "Кисельов Дмитро",
+     "Некрістов Станіслав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Моісеєнко Віталіна",
+    "bronze": [
+     "Марфола Оксана",
+     "Арійчук Наталя"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4901,8 +6190,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Sol Deen",
+    "silver": "Ковальов Дмитро",
+    "bronze": [
+     "Буханцов Тарас",
+     "Подольчук Антон"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Павлюченко Марина",
+     "Грушовець Ольга"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4928,8 +6231,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Бушуй Олексій",
+    "bronze": [
+     "Ледєньов Вадим",
+     "Ємельянов Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Моісеєнко Віталіна",
+    "bronze": [
+     "Камелькова Людмила",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4955,8 +6272,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Невінчаний Едуард",
+    "bronze": [
+     "Омельченко Владислав",
+     "Марков Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Ледєньова Наталія",
+     "Павлюченко Марина"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -4985,8 +6316,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Понтус Андрій",
+    "bronze": [
+     "Пономаренко Денис",
+     "Шляхов Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Камелькова Людмила",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Грушовець Ольга",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5015,8 +6360,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Понтус Андрій",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Кисельов Дмитро",
+     "Бушуй Олексій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Ледєньова Наталія",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Редзюк Тетяна",
+     "Якименко Катерина"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5042,8 +6401,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Лагутін Андрій",
+    "silver": "Григоренко Денис",
+    "bronze": [
+     "Марков Сергій",
+     "Івасюк Віталій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Камелькова Людмила",
+     "Арійчук Наталя"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5069,8 +6442,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Невінчаний Едуард",
+    "bronze": [
+     "Омельченко Владислав",
+     "Марков Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Ледєньова Наталія",
+     "Павлюченко Марина"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5096,8 +6483,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Васюра Андрій",
+     "Григоренко Денис"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Павлюченко Марина",
+    "bronze": [
+     "Моісеєнко Віталіна",
+     "Анісімова Світлана"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5123,8 +6524,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Невінчаний Едуард",
+    "bronze": [
+     "Омельченко Владислав",
+     "Марков Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Ледєньова Наталія",
+     "Павлюченко Марина"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5150,8 +6565,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Бушуй Олексій",
+     "Сташевський Валентин"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Камелькова Людмила",
+    "bronze": [
+     "Павлюченко Марина",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5177,8 +6606,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Григоренко Денис",
+     "Бушуй Олексій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Павлюченко Марина",
+    "bronze": [
+     "Чумак Ганна",
+     "Камелькова Людмила"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5204,8 +6647,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Мамика Олександр",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Бушуй Олексій",
+     "Анісімов Денис"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Анісімова Світлана",
+     "Сидельникова Ганна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5231,8 +6688,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Невінчаний Едуард",
+    "bronze": [
+     "Омельченко Владислав",
+     "Марков Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Ледєньова Наталія",
+     "Павлюченко Марина"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5258,8 +6729,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Мамика Олександр",
+    "silver": "Бушуй Олексій",
+    "bronze": [
+     "Васюра Андрій",
+     "Григоренко Денис"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Анісімова Світлана",
+    "bronze": [
+     "Павлюченко Марина",
+     "Грушовець Ольга"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5285,8 +6770,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Мамика Олександр",
+    "silver": "Бушуй Олексій",
+    "bronze": [
+     "Васюра Андрій",
+     "Григоренко Денис"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Анісімова Світлана",
+    "bronze": [
+     "Павлюченко Марина",
+     "Грушовець Ольга"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5312,8 +6811,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Григоренко Денис",
+    "bronze": [
+     "Васюра Андрій",
+     "Омельченко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Анісімова Світлана",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Редзюк Тетяна",
+     "Грушовець Ольга"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5339,8 +6852,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Григоренко Денис",
+    "bronze": [
+     "Васюра Андрій",
+     "Омельченко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Анісімова Світлана",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Редзюк Тетяна",
+     "Грушовець Ольга"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5366,8 +6893,22 @@
      "type": "protocol_sheet"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Григоренко Денис",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Бушуй Олексій",
+     "Сташевський Валентин"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Павлюченко Марина",
+     "Грушовець Ольга"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5393,8 +6934,22 @@
      "type": "protocol_sheet"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Григоренко Денис",
+    "bronze": [
+     "Васюра Андрій",
+     "Омельченко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Анісімова Світлана",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Редзюк Тетяна",
+     "Грушовець Ольга"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5420,8 +6975,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Григоренко Денис",
+    "silver": "Васюра Андрій",
+    "bronze": [
+     "Усик Артем",
+     "Анісімов Денис"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Редзюк Тетяна",
+    "silver": "Анісімова Світлана",
+    "bronze": [
+     "Моісеєнко Віталіна",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5447,8 +7016,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Григоренко Денис",
+    "bronze": [
+     "Васюра Андрій",
+     "Омельченко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Анісімова Світлана",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Редзюк Тетяна",
+     "Грушовець Ольга"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5474,8 +7057,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Сташевський Валентин",
+    "bronze": [
+     "Пальонний Ігор",
+     "Васюра Андрій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Редзюк Тетяна",
+     "Арійчук Наталя"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5501,8 +7098,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Васюра Андрій",
+    "silver": "Марченко Денис",
+    "bronze": [
+     "Шинкаренко Василь",
+     "Леденьов Вадим"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Редзюк Тетяна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Моісеєнко Віталіна",
+     "Грушовець Ольга"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5528,8 +7139,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Васюра Андрій",
+    "silver": "Марченко Денис",
+    "bronze": [
+     "Шинкаренко Василь",
+     "Леденьов Вадим"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Редзюк Тетяна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Моісеєнко Віталіна",
+     "Грушовець Ольга"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5555,8 +7180,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Васюра Андрій",
+     "Буханцов Тарас"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Анісімова Світлана",
+    "bronze": [
+     "Чумак Ганна",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5582,8 +7221,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Васюра Андрій",
+     "Буханцов Тарас"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Анісімова Світлана",
+    "bronze": [
+     "Чумак Ганна",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5609,8 +7262,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Бушуй Олексій",
+    "silver": "Григоренко Денис",
+    "bronze": [
+     "Васюра Андрій",
+     "Омельченко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Анісімова Світлана",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Редзюк Тетяна",
+     "Грушовець Ольга"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5636,8 +7303,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Васюра Андрій",
+    "bronze": [
+     "Шинкаренко Василь",
+     "Сташевський Валентин"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Ледєньова Наталія",
+     "Анісімова Світлана"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5663,8 +7344,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Васюра Андрій",
+    "bronze": [
+     "Шинкаренко Василь",
+     "Сташевський Валентин"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Ледєньова Наталія",
+     "Анісімова Світлана"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5690,8 +7385,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Пасичніченко Артрем",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Омельченко Владислав",
+     "Григоренко Денис"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Марфола Оксана",
+    "bronze": [
+     "Редзюк Тетяна",
+     "Квиклене Рената"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5717,8 +7426,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Пасичніченко Артрем",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Омельченко Владислав",
+     "Григоренко Денис"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Марфола Оксана",
+    "bronze": [
+     "Редзюк Тетяна",
+     "Квиклене Рената"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5744,8 +7467,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Ковальов Дмитро",
+    "silver": "Гетманцев Олександр",
+    "bronze": [
+     "Усик Артем",
+     "Мамика Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Марфола Оксана",
+    "silver": "Моісеєнко Віталіна",
+    "bronze": [
+     "Чумак Ганна",
+     "Анісімова Світлана"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5771,8 +7508,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Пасичніченко Артрем",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Омельченко Владислав",
+     "Григоренко Денис"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Марфола Оксана",
+    "bronze": [
+     "Редзюк Тетяна",
+     "Квиклене Рената"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5798,8 +7549,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Мамика Олександр",
+    "silver": "Зольдін Фелікс",
+    "bronze": [
+     "Омельченко Владислав",
+     "Васюра Андрій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Анісімова Світлана",
+    "bronze": [
+     "Калаур Інна",
+     "Ледєньова Наталія"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5825,8 +7590,22 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Пасичніченко Артрем",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Омельченко Владислав",
+     "Григоренко Денис"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Марфола Оксана",
+    "bronze": [
+     "Редзюк Тетяна",
+     "Квиклене Рената"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5855,8 +7634,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Васюра Андрій",
+    "silver": "Ковальов Дмитро",
+    "bronze": [
+     "Мамика Олександр",
+     "Савенков Антон"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Анісімова Світлана",
+    "silver": "Ледєньова Наталія",
+    "bronze": [
+     "Моісеєнко Віталіна",
+     "Харченко Тетяна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5885,8 +7678,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Бадира Олександр",
+     "Ковальов Дмитро"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Грушовець Ольга",
+     "Черноброва Олександра"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5915,8 +7722,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Пасичніченко Артрем",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Омельченко Владислав",
+     "Григоренко Денис"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Марфола Оксана",
+    "bronze": [
+     "Редзюк Тетяна",
+     "Квиклене Рената"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5945,8 +7766,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Васюра Андрій",
+    "silver": "Ковальов Дмитро",
+    "bronze": [
+     "Мамика Олександр",
+     "Савенков Антон"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Анісімова Світлана",
+    "silver": "Ледєньова Наталія",
+    "bronze": [
+     "Моісеєнко Віталіна",
+     "Харченко Тетяна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -5975,8 +7810,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Мамика Олександр",
+     "Ковальов Дмитро"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Анісімова Світлана",
+    "bronze": [
+     "Некристова Наталя",
+     "Черноброва Олександра"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -6005,8 +7854,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Мамика Олександр",
+     "Ковальов Дмитро"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Анісімова Світлана",
+    "bronze": [
+     "Некристова Наталя",
+     "Черноброва Олександра"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -6032,8 +7895,20 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Десинський Максим"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Перетятько Тетяна",
+    "silver": "Новикова Зоя",
+    "bronze": [
+     "Лопухова Ганна"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
