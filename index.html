@@ -979,30 +979,34 @@ let recordsGender = 'men';
 // --- Узагальнена пагінація для довгих таблиць (турніри, рейтинг, історія) ---
 const paginationState = {};
 const PAGE_SIZE = 20;
+// Деякі таблиці показують менше рядків за замовчуванням (тут — 10 замість 20)
+const CUSTOM_PAGE_SIZE = { leaderboard: 10, ratings: 10 };
+const pageSizeFor = key => CUSTOM_PAGE_SIZE[key] || PAGE_SIZE;
 
 function paginate(key, allRows){
-  if(!(key in paginationState)) paginationState[key] = PAGE_SIZE;
+  if(!(key in paginationState)) paginationState[key] = pageSizeFor(key);
   const visible = allRows.slice(0, paginationState[key]);
   return { visible, hasMore: allRows.length > paginationState[key], total: allRows.length };
 }
 
 function resetPagination(key){
-  paginationState[key] = PAGE_SIZE;
+  paginationState[key] = pageSizeFor(key);
 }
 
 function renderShowMore(key, wrapId, total, rerenderFn){
   const wrap = document.getElementById(wrapId);
   if(!wrap) return;
-  const shown = Math.min(paginationState[key] || PAGE_SIZE, total);
+  const pageSize = pageSizeFor(key);
+  const shown = Math.min(paginationState[key] || pageSize, total);
   if(total <= shown){
     wrap.innerHTML = '';
     return;
   }
   const remaining = total - shown;
-  const nextBatch = Math.min(PAGE_SIZE, remaining);
+  const nextBatch = Math.min(pageSize, remaining);
   wrap.innerHTML = `<button type="button" class="show-more-btn">Показати ще ${nextBatch} (${shown} з ${total})</button>`;
   wrap.querySelector('.show-more-btn').addEventListener('click', () => {
-    paginationState[key] += PAGE_SIZE;
+    paginationState[key] += pageSize;
     rerenderFn();
   });
 }
