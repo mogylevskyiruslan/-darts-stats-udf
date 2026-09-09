@@ -374,6 +374,8 @@
     display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
   }
   .news-card-more{font-size:12px; color:var(--muted); margin-top:8px; display:block;}
+  .ap-flag{color:var(--gold); font-weight:600;}
+  .ap-incomplete{background:rgba(252,194,2,0.08);}
 
   .player-name.pp-clickable, .player-name .pp-clickable{cursor:pointer; text-decoration:underline; text-decoration-color:transparent; transition:text-decoration-color .15s;}
   .player-name.pp-clickable:hover, .player-name .pp-clickable:hover{text-decoration-color:var(--gold); color:var(--gold);}
@@ -462,6 +464,7 @@
   <a href="#nakka-records">Рекорди статистики</a>
   <a href="#youtube">Трансляції</a>
   <a href="#news">Новини</a>
+  <a href="#all-players">Усі гравці</a>
   <a href="#architecture">Як це працює</a>
   <label class="udl-toggle global-udl-toggle">
     <input type="checkbox" id="global-toggle-udl">
@@ -693,6 +696,35 @@
   <div class="news-grid" id="news-grid">
     <div class="pp-chart-empty">Завантаження…</div>
   </div>
+</section>
+
+<section id="all-players">
+  <h2><span class="idx">06</span> Усі гравці в базі</h2>
+  <p class="section-sub">
+    Повний список унікальних імен зі статистики Nakka — для перевірки якості даних.
+    Рядки з <span class="ap-flag">жовтою позначкою</span> — ім'я складається лише з одного слова (ймовірно, без імені).
+    Однакові/схожі люди в різному написанні (одруківки, переплутаний порядок) видно поруч, бо список відсортовано за абеткою.
+  </p>
+  <div class="controls">
+    <input type="text" id="search-all-players" placeholder="Пошук імені…">
+    <select id="filter-all-players">
+      <option value="">Усі записи</option>
+      <option value="incomplete">Лише неповні (одне слово)</option>
+    </select>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Ім'я</th>
+          <th class="num">Записів</th>
+          <th>Стать</th>
+        </tr>
+      </thead>
+      <tbody id="all-players-body"></tbody>
+    </table>
+  </div>
+  <div class="show-more-wrap" id="all-players-more"></div>
 </section>
 
 <section id="architecture">
@@ -1261,6 +1293,8 @@ document.getElementById('filter-org').addEventListener('change', ()=>{ resetPagi
 document.getElementById('filter-rating-season').addEventListener('change', ()=>{ resetPagination('ratings'); renderRatings(); });
 document.getElementById('search-ratings').addEventListener('input', ()=>{ resetPagination('ratings'); renderRatings(); });
 document.getElementById('search-current-rating').addEventListener('input', ()=>{ resetPagination('current-rating'); renderCurrentRating(); });
+document.getElementById('search-all-players').addEventListener('input', ()=>{ resetPagination('all-players'); renderAllPlayers(); });
+document.getElementById('filter-all-players').addEventListener('change', ()=>{ resetPagination('all-players'); renderAllPlayers(); });
 document.querySelectorAll('#current-rating .gender-btn').forEach(btn=>{
   btn.addEventListener('click', ()=>{
     document.querySelectorAll('#current-rating .gender-btn').forEach(b=>b.classList.remove('active'));
@@ -1353,6 +1387,7 @@ async function loadData(){
     renderYoutubeVideos();
     renderNews();
     renderCurrentRating();
+    renderAllPlayers();
   } catch(err){
     console.error('Не вдалося завантажити data.json', err);
     document.querySelectorAll('.table-wrap tbody').forEach(tb=>{
@@ -1370,8 +1405,11 @@ function parseUaDate(d){
 }
 
 function svgMultiLineChart(series, opts){
-  // series: [{name, color, points: [{x,y}]}] — спільна вісь X (за індексом),
-  // окремий колір і легенда для кожної лінії.
+  // series: [{name, color, points: [{x,y,t?}]}] — якщо є поле `t` (числовий
+  // час/дата), позиціюємо по РЕАЛЬНІЙ даті на спільній безперервній шкалі
+  // (критично, коли серії мають РІЗНІ дати й різну кількість точок — напр.
+  // турніри ВФД і УДЛ). Без `t` — стара поведінка "за індексом" (підходить,
+  // коли всі серії йдуть по одних і тих самих X, напр. роки).
   opts = opts || {};
   const h = opts.height || 260;
   const padL = 46, padR = 16, padT = 26, padB = 50;
@@ -1379,25 +1417,59 @@ function svgMultiLineChart(series, opts){
   const active = series.filter(s => s.points && s.points.length);
   if(active.length === 0) return '<div class="pp-chart-empty">Немає даних.</div>';
 
-  const xLabels = active.reduce((longest, s) => s.points.length > longest.length ? s.points.map(p=>p.x) : longest, []);
-
-  // Широкий/скрольований режим: фіксована ширина на точку замість
-  // стиснення всього в один контейнер — інакше багато точок зливаються.
+  const byDate = active.every(s => s.points.every(p => p.t != null));
   const pointSpacing = opts.pointSpacing || 0;
   const minInnerW = opts.width ? opts.width - padL - padR : 640;
-  const innerW = pointSpacing ? Math.max(minInnerW, (xLabels.length - 1) * pointSpacing) : minInnerW;
-  const w = innerW + padL + padR;
 
   const allYs = active.flatMap(s => s.points.map(p=>p.y));
   let yMin = Math.min(0, ...allYs), yMax = Math.max(...allYs);
   if(yMin === yMax){ yMax += 5; }
-  const yPad = (yMax - yMin) * 0.12;
-  yMax += yPad;
-
+  yMax += (yMax - yMin) * 0.12;
   const innerH = h - padT - padB;
-  const xStep = xLabels.length > 1 ? innerW / (xLabels.length - 1) : 0;
-  const xAt = i => padL + i * xStep;
   const yAt = v => padT + innerH - ((v - yMin) / (yMax - yMin)) * innerH;
+
+  let xAt, w, innerW, xLabelsHtml;
+
+  if(byDate){
+    // Позиціювання за реальною датою — кожна серія кладеться на свою
+    // справжню позицію в часі, незалежно від того, скільки точок у неї
+    // чи скільки в іншої серії.
+    const allT = active.flatMap(s => s.points.map(p=>p.t));
+    const tMin = Math.min(...allT), tMax = Math.max(...allT);
+    const totalPoints = Math.max(...active.map(s=>s.points.length));
+    innerW = pointSpacing ? Math.max(minInnerW, totalPoints * pointSpacing) : minInnerW;
+    w = innerW + padL + padR;
+    xAt = t => padL + (tMax > tMin ? (t - tMin) / (tMax - tMin) : 0.5) * innerW;
+
+    // Підписи по осі X — рівномірні позначки часу (не одна на точку, бо
+    // точки різних серій не збігаються), беремо ~10 позначок.
+    const tickCount = Math.min(12, Math.max(4, Math.round(innerW / 90)));
+    const longestSeries = active.reduce((a,b)=> b.points.length > a.points.length ? b : a);
+    const labelForT = t => {
+      let closest = longestSeries.points[0];
+      let bestDiff = Infinity;
+      for(const p of longestSeries.points){
+        const diff = Math.abs(p.t - t);
+        if(diff < bestDiff){ bestDiff = diff; closest = p; }
+      }
+      return closest.x;
+    };
+    xLabelsHtml = Array.from({length: tickCount+1}, (_,i) => {
+      const t = tMin + (tMax-tMin)*(i/tickCount);
+      return `<text x="${xAt(t).toFixed(1)}" y="${h-32}" text-anchor="middle" font-size="9" fill="var(--muted)" font-family="JetBrains Mono, monospace">${labelForT(t)}</text>`;
+    }).join('');
+  } else {
+    const xLabels = active.reduce((longest, s) => s.points.length > longest.length ? s.points.map(p=>p.x) : longest, []);
+    innerW = pointSpacing ? Math.max(minInnerW, (xLabels.length - 1) * pointSpacing) : minInnerW;
+    w = innerW + padL + padR;
+    const xStep = xLabels.length > 1 ? innerW / (xLabels.length - 1) : 0;
+    xAt = i => padL + i * xStep;
+    const labelStep = pointSpacing ? 1 : Math.max(1, Math.ceil(xLabels.length/10));
+    xLabelsHtml = xLabels.map((lbl,i) => {
+      if(i % labelStep !== 0 && i !== xLabels.length-1) return '';
+      return `<text x="${xAt(i).toFixed(1)}" y="${h-32}" text-anchor="middle" font-size="9" fill="var(--muted)" font-family="JetBrains Mono, monospace">${lbl}</text>`;
+    }).join('');
+  }
 
   const gridLines = [0,0.5,1].map(t => {
     const y = padT + innerH * t;
@@ -1406,20 +1478,15 @@ function svgMultiLineChart(series, opts){
             <text x="${padL-8}" y="${y+4}" text-anchor="end" font-size="10" fill="var(--muted)" font-family="JetBrains Mono, monospace">${val.toFixed(0)}</text>`;
   }).join('');
 
-  const labelStep = pointSpacing ? 1 : Math.max(1, Math.ceil(xLabels.length/10));
-  const xLabelsHtml = xLabels.map((lbl,i) => {
-    if(i % labelStep !== 0 && i !== xLabels.length-1) return '';
-    return `<text x="${xAt(i).toFixed(1)}" y="${h-32}" text-anchor="middle" font-size="9" fill="var(--muted)" font-family="JetBrains Mono, monospace">${lbl}</text>`;
-  }).join('');
-
   const showValueLabels = opts.valueLabels !== false;
   const seriesHtml = active.map(s => {
-    const pathD = s.points.map((p,i) => `${i===0?'M':'L'}${xAt(i).toFixed(1)},${yAt(p.y).toFixed(1)}`).join(' ');
+    const xOf = (p,i) => byDate ? xAt(p.t) : xAt(i);
+    const pathD = s.points.map((p,i) => `${i===0?'M':'L'}${xOf(p,i).toFixed(1)},${yAt(p.y).toFixed(1)}`).join(' ');
     const dots = s.points.map((p,i) =>
-      `<circle cx="${xAt(i).toFixed(1)}" cy="${yAt(p.y).toFixed(1)}" r="2.5" fill="${s.color}"><title>${s.name}: ${p.x} = ${p.y}</title></circle>`
+      `<circle cx="${xOf(p,i).toFixed(1)}" cy="${yAt(p.y).toFixed(1)}" r="2.5" fill="${s.color}"><title>${s.name}: ${p.x} = ${p.y}</title></circle>`
     ).join('');
     const valueLabels = showValueLabels ? s.points.map((p,i) =>
-      `<text x="${xAt(i).toFixed(1)}" y="${(yAt(p.y)-8).toFixed(1)}" text-anchor="middle" font-size="8.5" fill="${s.color}" font-family="JetBrains Mono, monospace">${p.y}</text>`
+      `<text x="${xOf(p,i).toFixed(1)}" y="${(yAt(p.y)-8).toFixed(1)}" text-anchor="middle" font-size="8.5" fill="${s.color}" font-family="JetBrains Mono, monospace">${p.y}</text>`
     ).join('') : '';
     return `<path d="${pathD}" fill="none" stroke="${s.color}" stroke-width="2"/>${dots}${valueLabels}`;
   }).join('');
@@ -1572,7 +1639,7 @@ function renderParticipantsChart(){
     return `${mm}.${yyyy}`;
   };
   const vfd = tournaments.filter(t => !t.isUDL).slice().sort((a,b) => parseUaDate(a.date) - parseUaDate(b.date));
-  const totalPoints = vfd.map(t => ({ x: monthYearLabel(t.date), y: (t.men||0) + (t.women||0) }));
+  const totalPoints = vfd.map(t => ({ x: monthYearLabel(t.date), t: parseUaDate(t.date).getTime(), y: (t.men||0) + (t.women||0) }));
 
   const series = [
     { name: 'Учасники (ВФД)', color: 'var(--gold)', points: totalPoints },
@@ -1580,7 +1647,7 @@ function renderParticipantsChart(){
 
   if(includeUDL){
     const udl = tournaments.filter(t => t.isUDL).slice().sort((a,b) => parseUaDate(a.date) - parseUaDate(b.date));
-    const udlPoints = udl.map(t => ({ x: monthYearLabel(t.date), y: (t.men||0) + (t.women||0) }));
+    const udlPoints = udl.map(t => ({ x: monthYearLabel(t.date), t: parseUaDate(t.date).getTime(), y: (t.men||0) + (t.women||0) }));
     series.push({ name: 'УДЛ/ЗУДЛ (всього)', color: '#4ade80', points: udlPoints });
   }
 
@@ -1632,6 +1699,43 @@ function renderPlayerCurrentRatingChart(name){
   `;
 }
 
+
+function renderAllPlayers(){
+  const q = (document.getElementById('search-all-players').value || '').toLowerCase();
+  const filter = document.getElementById('filter-all-players').value;
+
+  const byName = {};
+  nakkaPlayerStats.forEach(r => {
+    if(!byName[r.name]) byName[r.name] = { count: 0, genders: new Set() };
+    byName[r.name].count++;
+    byName[r.name].genders.add(r.gender);
+  });
+
+  let names = Object.keys(byName).sort((a,b) => a.localeCompare(b, 'uk'));
+  if(q) names = names.filter(n => n.toLowerCase().includes(q));
+  if(filter === 'incomplete') names = names.filter(n => n.trim().split(/\s+/).length === 1);
+
+  const body = document.getElementById('all-players-body');
+  if(names.length === 0){
+    body.innerHTML = `<tr class="empty-row"><td colspan="3">Нічого не знайдено.</td></tr>`;
+    document.getElementById('all-players-more').innerHTML = '';
+    return;
+  }
+  const { visible, total } = paginate('all-players', names);
+  body.innerHTML = visible.map(name => {
+    const info = byName[name];
+    const isIncomplete = name.trim().split(/\s+/).length === 1;
+    const genderLabel = [...info.genders].map(g => g === 'women' ? 'Ж' : g === 'men' ? 'Ч' : g).join('/');
+    return `
+      <tr class="${isIncomplete ? 'ap-incomplete' : ''}">
+        <td>${isIncomplete ? `<span class="ap-flag">●</span> ` : ''}${name}</td>
+        <td class="num mono">${info.count}</td>
+        <td class="mono">${genderLabel}</td>
+      </tr>
+    `;
+  }).join('');
+  renderShowMore('all-players', 'all-players-more', total, renderAllPlayers);
+}
 
 function renderNews(){
   const wrap = document.getElementById('news-grid');
