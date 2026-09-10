@@ -1524,6 +1524,17 @@ def fetch_protocol_podium(url):
     return podium or None
 
 
+MANUAL_MEDAL_OVERRIDES = {
+    # Ключ: (дата, назва турніру) — точні перевизначення за протоколом, коли
+    # автоматичне зіставлення рік+етап дало неправильний результат (напр.
+    # у той рік було кілька "ЧУ"-подій і зіставилась не та).
+    ("24.06.2017", "ЧУ 2017 DIDO"): {
+        "medals": {"gold": "Григоренко Денис", "silver": "Чумак Дмитро", "bronze": ["Лагутін Андрій"]},
+        "medalsWomen": {"gold": "Чумак Ганна", "silver": "Камелькова Людмила", "bronze": ["Моісеєнко Віталіна"]},
+    },
+}
+
+
 def fill_medals_from_prizes_sheet(tournaments, men_year_data, women_year_data, name_index, canonical_names):
     """Заповнює t['medals']/t['medalsWomen'] з таблиці 'Призери етапів кубків
     ВФД' — критично для турнірів до 2022 року, коли Nakka ще не існувала.
@@ -1572,6 +1583,13 @@ def fill_medals_from_prizes_sheet(tournaments, men_year_data, women_year_data, n
             if medals:
                 t["medalsWomen"] = medals
                 filled_women += 1
+
+        # Ручні перевизначення — завжди перебивають автоматичне зіставлення
+        # для конкретного турніру (звірено з протоколом вручну).
+        override = MANUAL_MEDAL_OVERRIDES.get((t["date"], t["name"]))
+        if override:
+            t["medals"] = override.get("medals", t.get("medals"))
+            t["medalsWomen"] = override.get("medalsWomen", t.get("medalsWomen"))
 
     return filled_men, filled_women
 
