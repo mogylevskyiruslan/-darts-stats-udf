@@ -1335,6 +1335,7 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                 stats_data = m.get("statsData") or []
                 if len(stats_data) != 2:
                     continue
+                match_round = (m.get("title") or "").strip()
 
                 resolved_sides = []
                 for i, side in enumerate(stats_data):
@@ -1404,6 +1405,7 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                     "date": t["date"],
                     "tournament": t["name"],
                     "format": t.get("format", ""),
+                    "round": match_round,
                     "city": t["city"],
                 })
 
@@ -1446,8 +1448,32 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
         backfill(rec, "name", "opponent")
     for rec in h2h_records:
         backfill(rec, "name1", "name2")
+
+    # Той самий безпечний backfill — і для медалей у таблиці "Турніри"
+    # (nakkaMedals/medals), інакше там і далі лишались би голі прізвища
+    # навіть коли ми вже знаємо повне ім'я з іншого турніру цього ж запуску.
+    medals_backfilled = 0
+    for t in tournaments:
+        for key in ("medals", "medalsWomen", "nakkaMedals", "nakkaMedalsWomen"):
+            medal = t.get(key)
+            if not medal:
+                continue
+            before_gold, before_silver = medal.get("gold"), medal.get("silver")
+            if medal.get("gold"):
+                backfill(medal, "gold")
+            if medal.get("silver"):
+                backfill(medal, "silver")
+            if medal.get("bronze"):
+                medal["bronze"] = [
+                    expanded_index.get(n, n) if n and len(n.split()) == 1 else n
+                    for n in medal["bronze"]
+                ]
+            if medal.get("gold") != before_gold or medal.get("silver") != before_silver:
+                medals_backfilled += 1
     if backfilled:
         print(f"  Добудовано ім'я для {backfilled} записів (голе прізвище -> повне ім'я, безпечно)")
+    if medals_backfilled:
+        print(f"  Добудовано ім'я для {medals_backfilled} медальних заліків турнірів")
 
     return player_records, match_records, h2h_records
 
