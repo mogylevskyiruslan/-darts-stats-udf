@@ -1403,6 +1403,7 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                     "isUDL": t["isUDL"],
                     "date": t["date"],
                     "tournament": t["name"],
+                    "format": t.get("format", ""),
                     "city": t["city"],
                 })
 

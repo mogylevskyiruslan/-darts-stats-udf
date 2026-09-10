@@ -375,6 +375,35 @@
   }
   .news-card-more{font-size:12px; color:var(--muted); margin-top:8px; display:block;}
 
+  /* H2H LOOKUP */
+  .h2h-picker{display:flex; align-items:center; gap:16px; max-width:720px; margin-bottom:24px;}
+  .h2h-picker-side{position:relative; flex:1;}
+  .h2h-search{
+    width:100%; padding:12px 14px; background:var(--panel); border:1px solid var(--line);
+    border-radius:8px; color:var(--cream); font-family:inherit; font-size:14px;
+  }
+  .h2h-search:focus{outline:none; border-color:var(--gold);}
+  .h2h-vs{font-family:'JetBrains Mono',monospace; font-weight:800; color:var(--gold); font-size:14px; flex-shrink:0;}
+  .h2h-suggest{
+    position:absolute; top:calc(100% + 4px); left:0; right:0; z-index:20;
+    background:var(--panel-2); border:1px solid var(--line); border-radius:8px;
+    max-height:240px; overflow-y:auto; display:none;
+  }
+  .h2h-suggest.open{display:block;}
+  .h2h-suggest-item{padding:9px 14px; cursor:pointer; font-size:13.5px; color:var(--cream);}
+  .h2h-suggest-item:hover{background:rgba(252,194,2,0.1); color:var(--gold);}
+  .h2h-summary{
+    display:flex; align-items:center; justify-content:center; gap:28px;
+    background:var(--panel); border:1px solid var(--line); border-radius:8px;
+    padding:24px; margin-bottom:20px; flex-wrap:wrap;
+  }
+  .h2h-summary-player{text-align:center; min-width:160px;}
+  .h2h-summary-player .name{font-family:'Montserrat',sans-serif; font-weight:800; font-size:16px; color:var(--cream); margin-bottom:6px;}
+  .h2h-summary-player .wins{font-family:'JetBrains Mono',monospace; font-size:32px; font-weight:800; color:var(--gold);}
+  .h2h-summary-player .avg{font-size:12px; color:var(--muted); margin-top:4px;}
+  .h2h-summary-mid{font-family:'JetBrains Mono',monospace; color:var(--muted); font-size:13px; text-align:center;}
+  .h2h-row-win{color:var(--gold); font-weight:700;}
+
   .player-name.pp-clickable, .player-name .pp-clickable{cursor:pointer; text-decoration:underline; text-decoration-color:transparent; transition:text-decoration-color .15s;}
   .player-name.pp-clickable:hover, .player-name .pp-clickable:hover{text-decoration-color:var(--gold); color:var(--gold);}
 
@@ -460,6 +489,7 @@
   <a href="#ratings">Рейтинги сезону</a>
   <a href="#records">Рекорди</a>
   <a href="#nakka-records">Рекорди статистики</a>
+  <a href="#h2h-lookup">Протистояння</a>
   <a href="#youtube">Трансляції</a>
   <a href="#news">Новини</a>
   <a href="#architecture">Як це працює</a>
@@ -667,6 +697,23 @@
       <tbody id="records-body"></tbody>
     </table>
   </div>
+</section>
+
+<section id="h2h-lookup">
+  <h2><span class="idx">04.2</span> Протистояння гравців</h2>
+  <p class="section-sub">Оберіть двох гравців, щоб побачити всю історію їхніх особистих зустрічей.</p>
+  <div class="h2h-picker">
+    <div class="h2h-picker-side">
+      <input type="text" id="h2h-search-1" class="h2h-search" placeholder="Гравець 1…" autocomplete="off">
+      <div class="h2h-suggest" id="h2h-suggest-1"></div>
+    </div>
+    <div class="h2h-vs">VS</div>
+    <div class="h2h-picker-side">
+      <input type="text" id="h2h-search-2" class="h2h-search" placeholder="Гравець 2…" autocomplete="off">
+      <div class="h2h-suggest" id="h2h-suggest-2"></div>
+    </div>
+  </div>
+  <div id="h2h-result"></div>
 </section>
 
 <section id="youtube">
@@ -1357,6 +1404,7 @@ async function loadData(){
     renderYoutubeVideos();
     renderNews();
     renderCurrentRating();
+    initH2HLookup();
   } catch(err){
     console.error('Не вдалося завантажити data.json', err);
     document.querySelectorAll('.table-wrap tbody').forEach(tb=>{
@@ -1668,6 +1716,104 @@ function renderPlayerCurrentRatingChart(name){
   `;
 }
 
+
+let h2hAllNames = [];
+let h2hSelected = { 1: null, 2: null };
+
+function initH2HLookup(){
+  const names = new Set();
+  nakkaH2HStats.forEach(r => { names.add(r.name1); names.add(r.name2); });
+  h2hAllNames = [...names].sort((a,b) => a.localeCompare(b, 'uk'));
+
+  [1, 2].forEach(side => {
+    const input = document.getElementById(`h2h-search-${side}`);
+    const suggestBox = document.getElementById(`h2h-suggest-${side}`);
+
+    input.addEventListener('input', () => {
+      h2hSelected[side] = null;
+      const q = input.value.trim().toLowerCase();
+      if(!q){ suggestBox.classList.remove('open'); renderH2HResult(); return; }
+      const matches = h2hAllNames.filter(n => n.toLowerCase().includes(q)).slice(0, 12);
+      if(matches.length === 0){ suggestBox.classList.remove('open'); return; }
+      suggestBox.innerHTML = matches.map(n => `<div class="h2h-suggest-item">${n}</div>`).join('');
+      suggestBox.classList.add('open');
+      suggestBox.querySelectorAll('.h2h-suggest-item').forEach((el, i) => {
+        el.addEventListener('click', () => {
+          input.value = matches[i];
+          h2hSelected[side] = matches[i];
+          suggestBox.classList.remove('open');
+          renderH2HResult();
+        });
+      });
+    });
+    input.addEventListener('blur', () => setTimeout(() => suggestBox.classList.remove('open'), 150));
+  });
+}
+
+function renderH2HResult(){
+  const wrap = document.getElementById('h2h-result');
+  const p1 = h2hSelected[1], p2 = h2hSelected[2];
+  if(!p1 || !p2){ wrap.innerHTML = ''; return; }
+  if(p1 === p2){ wrap.innerHTML = '<div class="pp-chart-empty">Оберіть двох різних гравців.</div>'; return; }
+
+  const matches = nakkaH2HStats.filter(r =>
+    (r.name1 === p1 && r.name2 === p2) || (r.name1 === p2 && r.name2 === p1)
+  ).slice().sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date));
+
+  if(matches.length === 0){
+    wrap.innerHTML = `<div class="pp-chart-empty">${p1} та ${p2} ще не зустрічались один з одним.</div>`;
+    return;
+  }
+
+  let wins1 = 0, wins2 = 0, avgSum1 = 0, avgSum2 = 0;
+  const rows = matches.map(r => {
+    const isP1First = r.name1 === p1;
+    const avgP1 = isP1First ? r.avg1 : r.avg2;
+    const avgP2 = isP1First ? r.avg2 : r.avg1;
+    avgSum1 += avgP1; avgSum2 += avgP2;
+    const [sA, sB] = r.result.split('-').map(Number);
+    const scoreP1 = isP1First ? sA : sB;
+    const scoreP2 = isP1First ? sB : sA;
+    const p1Won = scoreP1 > scoreP2;
+    if(p1Won) wins1++; else wins2++;
+    return { ...r, avgP1, avgP2, scoreP1, scoreP2, p1Won };
+  });
+
+  wrap.innerHTML = `
+    <div class="h2h-summary">
+      <div class="h2h-summary-player">
+        <div class="name">${p1}</div>
+        <div class="wins">${wins1}</div>
+        <div class="avg">перемог · середній AVG ${(avgSum1/matches.length).toFixed(2)}</div>
+      </div>
+      <div class="h2h-summary-mid">${matches.length} зустріч(ей)<br>усього</div>
+      <div class="h2h-summary-player">
+        <div class="name">${p2}</div>
+        <div class="wins">${wins2}</div>
+        <div class="avg">перемог · середній AVG ${(avgSum2/matches.length).toFixed(2)}</div>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>Дата</th><th>Турнір</th><th>Стадія</th>
+          <th class="num">Рахунок</th>
+          <th class="num">AVG ${p1}</th><th class="num">AVG ${p2}</th>
+        </tr></thead>
+        <tbody>${rows.map(r => `
+          <tr>
+            <td class="mono">${r.date}</td>
+            <td>${r.tournament}</td>
+            <td>${r.format || '—'}</td>
+            <td class="num mono">${r.scoreP1}-${r.scoreP2}</td>
+            <td class="num mono ${r.p1Won ? 'h2h-row-win' : ''}">${r.avgP1.toFixed(2)}</td>
+            <td class="num mono ${!r.p1Won ? 'h2h-row-win' : ''}">${r.avgP2.toFixed(2)}</td>
+          </tr>
+        `).join('')}</tbody>
+      </table>
+    </div>
+  `;
+}
 
 function renderNews(){
   const wrap = document.getElementById('news-grid');
