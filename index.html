@@ -90,11 +90,11 @@
     position:sticky; top:0; z-index:50;
     background:rgba(20,22,26,0.92); backdrop-filter:blur(6px);
     border-bottom:1px solid var(--line);
-    display:flex; gap:2px; padding:0 24px; overflow-x:auto;
+    display:flex; flex-wrap:wrap; gap:2px; padding:4px 24px; row-gap:0;
   }
   nav a{
-    padding:16px 18px; font-family:'Oswald',sans-serif; font-size:14px;
-    letter-spacing:0.06em; text-transform:uppercase; color:var(--muted);
+    padding:12px 14px; font-family:'Oswald',sans-serif; font-size:13px;
+    letter-spacing:0.05em; text-transform:uppercase; color:var(--muted);
     text-decoration:none; white-space:nowrap; border-bottom:2px solid transparent;
   }
   nav a:hover{color:var(--cream); border-bottom-color:var(--gold);}
@@ -493,8 +493,8 @@
     </g>
   </g>
 </svg></div>
-  <div class="eyebrow"><span class="dot"></span> ВФД · Архів статистики · Оновлюється автоматично</div>
-  <h1>Історія українського дартсу — <span>в одному місці.</span></h1>
+  <div class="eyebrow"><span class="dot"></span> ВФД · Архів статистики</div>
+  <h1>Історія та статистика <span>українського дартсу</span></h1>
   <p class="lede">Консолідований архів турнірів, рейтингів і рекордів Всеукраїнської Федерації Дартсу — зібраний з таблиць учасників, протоколів кубків та відкритих джерел.</p>
   <div class="stat-row" id="hero-stats"></div>
 </div>
