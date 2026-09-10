@@ -548,7 +548,7 @@
 
 <section id="growth">
   <h2><span class="idx">02.1</span> Зростання участі по роках</h2>
-  <p class="section-sub">Унікальні учасники за рік: усього, нові (вперше зіграли) та втрачені (грали торік, не грають цього). ВФД, за даними Nakka.</p>
+  <p class="section-sub">Унікальні учасники за рік: усього, нові (вперше зіграли) та неактивні (грали торік, не грають цього). ВФД, за даними Nakka.</p>
   <div class="pp-chart-wrap" id="growth-chart-wrap"></div>
 </section>
 
@@ -1644,7 +1644,7 @@ function renderGrowthChart(){
     ? svgMultiLineChart([
         { name: 'Всього', color: 'var(--gold)', points: totalPoints },
         { name: 'Нові', color: '#4ade80', points: newPoints },
-        { name: 'Втрачені', color: '#f87171', points: lostPoints },
+        { name: 'Неактивні', color: '#f87171', points: lostPoints },
       ], { height: 240 })
     : '<div class="pp-chart-empty">Немає даних.</div>';
 }
@@ -1796,7 +1796,7 @@ function renderH2HResult(){
     <div class="table-wrap">
       <table>
         <thead><tr>
-          <th>Дата</th><th>Турнір</th><th>Стадія</th>
+          <th>Дата</th><th>Турнір</th><th>Етап</th><th>Стадія сітки</th>
           <th class="num">Рахунок</th>
           <th class="num">AVG ${p1}</th><th class="num">AVG ${p2}</th>
         </tr></thead>
@@ -1805,6 +1805,7 @@ function renderH2HResult(){
             <td class="mono">${r.date}</td>
             <td>${r.tournament}</td>
             <td>${r.format || '—'}</td>
+            <td>${r.round || '—'}</td>
             <td class="num mono">${r.scoreP1}-${r.scoreP2}</td>
             <td class="num mono ${r.p1Won ? 'h2h-row-win' : ''}">${r.avgP1.toFixed(2)}</td>
             <td class="num mono ${!r.p1Won ? 'h2h-row-win' : ''}">${r.avgP2.toFixed(2)}</td>
