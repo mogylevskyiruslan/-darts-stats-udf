@@ -404,6 +404,27 @@
   .h2h-summary-mid{font-family:'JetBrains Mono',monospace; color:var(--muted); font-size:13px; text-align:center;}
   .h2h-row-win{color:var(--gold); font-weight:700;}
 
+  /* CALENDAR 2026 */
+  .tag.udl{background:rgba(59,130,246,0.12); color:#7cb0ff; border:1px solid #3b82f6;}
+  .tag.final{background:rgba(252,194,2,0.18); color:var(--gold); border:1px solid var(--gold); font-weight:800;}
+  .cal-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(170px,1fr)); gap:14px;}
+  .cal-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:8px;
+    padding:16px; text-align:center; transition:border-color .15s, transform .15s;
+  }
+  .cal-card:hover{border-color:var(--gold); transform:translateY(-2px);}
+  .cal-month{
+    font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:0.08em; color:var(--muted); margin-bottom:10px;
+  }
+  .cal-dates{font-family:'Montserrat',sans-serif; font-weight:800; font-size:20px; color:var(--cream); margin-top:10px;}
+  .cal-city{font-size:13px; color:var(--muted); margin-top:2px;}
+  .cal-final{
+    background:linear-gradient(160deg, rgba(252,194,2,0.14), var(--panel));
+    border:1px solid var(--gold);
+  }
+  .cal-final .cal-dates{color:var(--gold);}
+
   .player-name.pp-clickable, .player-name .pp-clickable{cursor:pointer; text-decoration:underline; text-decoration-color:transparent; transition:text-decoration-color .15s;}
   .player-name.pp-clickable:hover, .player-name .pp-clickable:hover{text-decoration-color:var(--gold); color:var(--gold);}
 
@@ -484,6 +505,7 @@
   <a href="#growth">Динаміка</a>
   <a href="#participants-chart">Учасники по турнірах</a>
   <a href="#geography">Географія</a>
+  <a href="#calendar-2026">Календар 2026</a>
   <a href="#leaderboard">Призери</a>
   <a href="#current-rating">Поточний рейтинг</a>
   <a href="#ratings">Рейтинги сезону</a>
@@ -739,6 +761,25 @@
   </p>
   <div class="news-grid" id="news-grid">
     <div class="pp-chart-empty">Завантаження…</div>
+  </div>
+</section>
+
+<section id="calendar-2026">
+  <h2><span class="idx">02.3</span> Календар змагань 2026</h2>
+  <p class="section-sub">Усі етапи Кубка України (ВФД) та ліги UDL за рік — одним поглядом.</p>
+  <div class="cal-grid">
+    <div class="cal-card"><div class="cal-month">Січень</div><span class="tag udl">UDL</span><div class="cal-dates">23–25</div><div class="cal-city">Славсько</div></div>
+    <div class="cal-card"><div class="cal-month">Лютий</div><span class="tag vfd">ВФД</span><div class="cal-dates">20–22</div><div class="cal-city">Львів</div></div>
+    <div class="cal-card"><div class="cal-month">Березень</div><span class="tag udl">UDL</span><div class="cal-dates">21–22</div><div class="cal-city">Луцьк</div></div>
+    <div class="cal-card"><div class="cal-month">Квітень</div><span class="tag udl">UDL</span><div class="cal-dates">24–26</div><div class="cal-city">Вижниця</div></div>
+    <div class="cal-card"><div class="cal-month">Травень</div><span class="tag vfd">ВФД</span><div class="cal-dates">22–24</div><div class="cal-city">Черкаси</div></div>
+    <div class="cal-card"><div class="cal-month">Червень</div><span class="tag udl">UDL</span><div class="cal-dates">20–21</div><div class="cal-city">Одеса</div></div>
+    <div class="cal-card"><div class="cal-month">Липень</div><span class="tag vfd">ВФД</span><div class="cal-dates">03–05</div><div class="cal-city">Полтава</div></div>
+    <div class="cal-card"><div class="cal-month">Серпень</div><span class="tag udl">UDL</span><div class="cal-dates">14–16</div><div class="cal-city">Ужгород</div></div>
+    <div class="cal-card"><div class="cal-month">Вересень</div><span class="tag vfd">ВФД</span><div class="cal-dates">04–06</div><div class="cal-city">Одеса</div></div>
+    <div class="cal-card"><div class="cal-month">Жовтень</div><span class="tag vfd">ВФД</span><div class="cal-dates">16–18</div><div class="cal-city">Черкаси</div></div>
+    <div class="cal-card"><div class="cal-month">Листопад</div><span class="tag udl">UDL</span><div class="cal-dates">14–15</div><div class="cal-city">Львів</div></div>
+    <div class="cal-card cal-final"><div class="cal-month">Грудень</div><span class="tag final">ФІНАЛ</span><div class="cal-dates">11–13</div><div class="cal-city">Київ</div></div>
   </div>
 </section>
 
