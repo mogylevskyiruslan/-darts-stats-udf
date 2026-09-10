@@ -514,6 +514,7 @@
   <a href="#h2h-lookup">Протистояння</a>
   <a href="#youtube">Трансляції</a>
   <a href="#news">Новини</a>
+  <a href="#masters">Майстри спорту</a>
   <a href="#architecture">Як це працює</a>
   <label class="udl-toggle global-udl-toggle">
     <input type="checkbox" id="global-toggle-udl">
@@ -781,6 +782,30 @@
     <div class="cal-card"><div class="cal-month">Листопад</div><span class="tag udl">UDL</span><div class="cal-dates">14–15</div><div class="cal-city">Львів</div></div>
     <div class="cal-card cal-final"><div class="cal-month">Грудень</div><span class="tag final">ФІНАЛ</span><div class="cal-dates">11–13</div><div class="cal-city">Київ</div></div>
   </div>
+</section>
+
+<section id="masters">
+  <h2><span class="idx">05.3</span> Майстри спорту України з дартсу</h2>
+  <p class="section-sub">Офіційний реєстр звань (Міністерство молоді та спорту України) — усі носії звання "Майстер спорту України" з дартсу.</p>
+  <div class="controls">
+    <input type="text" id="search-masters" placeholder="Пошук за ім'ям…">
+    <div class="gender-toggle">
+      <button type="button" class="gender-btn active" data-gender="all">Усі</button>
+      <button type="button" class="gender-btn" data-gender="Чоловік">Чоловіки</button>
+      <button type="button" class="gender-btn" data-gender="Жінка">Жінки</button>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Присвоєно</th><th>ПІБ</th><th>Регіон</th><th>Тренер</th><th>Досягнення</th>
+        </tr>
+      </thead>
+      <tbody id="masters-body"></tbody>
+    </table>
+  </div>
+  <div class="show-more-wrap" id="masters-more"></div>
 </section>
 
 <section id="architecture">
@@ -1353,6 +1378,16 @@ document.getElementById('filter-org').addEventListener('change', ()=>{ resetPagi
 document.getElementById('filter-rating-season').addEventListener('change', ()=>{ resetPagination('ratings'); renderRatings(); });
 document.getElementById('search-ratings').addEventListener('input', ()=>{ resetPagination('ratings'); renderRatings(); });
 document.getElementById('search-current-rating').addEventListener('input', ()=>{ resetPagination('current-rating'); renderCurrentRating(); });
+document.getElementById('search-masters').addEventListener('input', ()=>{ resetPagination('masters'); renderMasters(); });
+document.querySelectorAll('#masters .gender-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('#masters .gender-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    mastersGender = btn.dataset.gender;
+    resetPagination('masters');
+    renderMasters();
+  });
+});
 document.querySelectorAll('#current-rating .gender-btn').forEach(btn=>{
   btn.addEventListener('click', ()=>{
     document.querySelectorAll('#current-rating .gender-btn').forEach(b=>b.classList.remove('active'));
@@ -1446,6 +1481,7 @@ async function loadData(){
     renderNews();
     renderCurrentRating();
     initH2HLookup();
+    renderMasters();
   } catch(err){
     console.error('Не вдалося завантажити data.json', err);
     document.querySelectorAll('.table-wrap tbody').forEach(tb=>{
@@ -1856,6 +1892,85 @@ function renderH2HResult(){
     </div>
   `;
 }
+
+const MASTERS_DATA = [
+  { date: "21.08.2026", name: "Григоренко Віктор Іванович", gender: "Чоловік", region: "Чернівецька область", trainer: "Арійчук Олександр Миколайович", achievement: "Чемпіонат України серед чоловіків" },
+  { date: "03.06.2026", name: "Абчугський Олександр Маркович", gender: "Чоловік", region: "Донецька область", trainer: "Усик Сергій Васильович", achievement: "Чемпіонат України серед дорослих" },
+  { date: "03.06.2026", name: "Могилевський Руслан Олегович", gender: "Чоловік", region: "Харківська область", trainer: "Гетманцев Александр Борисович", achievement: "Чемпіонат України серед чоловіків" },
+  { date: "03.06.2026", name: "Білоус Іван Зіновійович", gender: "Чоловік", region: "Чернівецька область", trainer: "Арійчук Олександр Миколайович", achievement: "Чемпіонат України серед чоловіків" },
+  { date: "03.06.2026", name: "Лановенко Ксенія Володимирівна", gender: "Жінка", region: "Харківська область", trainer: "Терещенко Любов Анисимівна", achievement: "Чемпіонат України серед дорослих" },
+  { date: "04.03.2026", name: "Гакман Степан Олексійович", gender: "Чоловік", region: "Чернівецька область", trainer: "Арійчук Олександр Миколайович", achievement: "Чемпіонат України серед чоловіків" },
+  { date: "13.02.2026", name: "Кіфор Ярослав Юрійович", gender: "Чоловік", region: "Львівська область", trainer: "Микитин Ярослав Юрійович", achievement: "Національний турнір «Чемпіонат України серед чоловіків»" },
+  { date: "18.12.2025", name: "Гринів Олександр Юрійович", gender: "Чоловік", region: "Львівська область", trainer: "Микитин Ярослав Юрійович", achievement: "Національний турнір «Чемпіонат України серед чоловіків»" },
+  { date: "06.10.2025", name: "Харченко Тетяна Анатоліївна", gender: "Жінка", region: "Черкаська область", trainer: "Чепурний Едуард Михайлович", achievement: "Чемпіонат України серед дорослих" },
+  { date: "01.08.2025", name: "Чепурний Едуард Михайлович", gender: "Чоловік", region: "Черкаська область", trainer: "Усик Сергій Васильович", achievement: "Чемпіонат України серед дорослих" },
+  { date: "10.04.2025", name: "Микитин Ярослав Юрійович", gender: "Чоловік", region: "Львівська область", trainer: "Микитин Ярослав Юрійович", achievement: "ЧУ (команди, 501DO) та I етап Кубку України «Дніпровські хвилі»" },
+  { date: "17.03.2025", name: "Аверін Сергій Миколайович", gender: "Чоловік", region: "Запорізька область", trainer: "Усик Сергій Васильович", achievement: "Чемпіонат України серед чоловіків" },
+  { date: "30.06.2022", name: "Анисимов Денис Олегович", gender: "Чоловік", region: "—", trainer: "Мамика О.", achievement: "Чемпіонат України 2021 р., I місце" },
+  { date: "26.01.2022", name: "Рудковський Василь Володимирович", gender: "Чоловік", region: "—", trainer: "Омельченко В.", achievement: "Чемпіонат України 2021 р., IІ місце" },
+  { date: "26.01.2022", name: "Кулик Віталій Ігорович", gender: "Чоловік", region: "—", trainer: "Омельченко В.", achievement: "Чемпіонат України 2021 р., IІ місце" },
+  { date: "26.01.2022", name: "Залевський Володимир Володимирович", gender: "Чоловік", region: "—", trainer: "Гоян Д., Залевський В.", achievement: "Чемпіонат України 2021 р., IІ місце" },
+  { date: "26.01.2022", name: "Арійчук Олександр Миколайович", gender: "Чоловік", region: "—", trainer: "Гоян Д., Бистров В.", achievement: "Чемпіонат України 2021 р., IІ місце" },
+  { date: "23.01.2018", name: "Зарайський Володимир Юрійович", gender: "Чоловік", region: "—", trainer: "—", achievement: "Чемпіонат України 2017 р., IІ місце" },
+  { date: "30.11.2017", name: "Сташевський Валентин Анатолійович", gender: "Чоловік", region: "—", trainer: "—", achievement: "Чемпіонат України 2017 р., I місце" },
+  { date: "30.11.2017", name: "Бублик В'ячеслав Анатолійович", gender: "Чоловік", region: "—", trainer: "—", achievement: "Чемпіонат України 2017 р., IІ місце" },
+  { date: "30.11.2017", name: "Іванов Олександр Вікторович", gender: "Чоловік", region: "—", trainer: "—", achievement: "Чемпіонат України 2017 р., I місце" },
+  { date: "27.09.2017", name: "Спекторенко Катерина Юріївна", gender: "Жінка", region: "—", trainer: "—", achievement: "Чемпіонат України 2017 р., IІ місце" },
+  { date: "27.09.2017", name: "Марфола Оксана Олександрівна", gender: "Жінка", region: "—", trainer: "—", achievement: "Чемпіонат України 2017 р., I місце" },
+  { date: "27.09.2017", name: "Гетманцев Олександр Борисович", gender: "Чоловік", region: "—", trainer: "—", achievement: "Чемпіонат України 2017 р., IІ місце" },
+  { date: "27.09.2017", name: "Пасічніченко Артем Вячеславович", gender: "Чоловік", region: "—", trainer: "—", achievement: "Чемпіонат України 2017 р., IІ місце" },
+  { date: "27.09.2017", name: "Чумак Дмитро Юрійович", gender: "Чоловік", region: "—", trainer: "Ромашко В.І., Боєв В.В., Полторацький С.В.", achievement: "Чемпіонат України 2017 р., IІ місце" },
+  { date: "27.09.2017", name: "Павлюченко Марина Володимирівна", gender: "Жінка", region: "—", trainer: "—", achievement: "Чемпіонат України 2017 р., I місце" },
+  { date: "16.08.2017", name: "Пирсіков Олександр Олександрович", gender: "Чоловік", region: "—", trainer: "Ромашко В.І.", achievement: "Чемпіонат України 2017 р., IІ місце" },
+  { date: "16.08.2017", name: "Білодід Крістіна Володимирівна", gender: "Жінка", region: "—", trainer: "Ромашко В.І.", achievement: "Чемпіонат України 2017 р., IІ місце" },
+  { date: "16.08.2017", name: "Морозов Сергій Валерійович", gender: "Чоловік", region: "—", trainer: "—", achievement: "Чемпіонат України 2017 р., IІ місце" },
+  { date: "15.08.2017", name: "Некрістов Станіслав Геннадійович", gender: "Чоловік", region: "—", trainer: "—", achievement: "Чемпіонат України 2017 р., IІІ місце" },
+  { date: "15.08.2017", name: "Камелькова Людмила Леонідівна", gender: "Жінка", region: "—", trainer: "—", achievement: "Чемпіонат України 2017 р., IІ місце" },
+  { date: "15.08.2017", name: "Бурмака Павло Миколайович", gender: "Чоловік", region: "—", trainer: "Ткаченко С.Л.", achievement: "Чемпіонат України 2017 р., I місце" },
+  { date: "15.08.2017", name: "Невінчаний Едуард Олександрович", gender: "Чоловік", region: "—", trainer: "—", achievement: "Чемпіонат України 2017 р., I місце" },
+  { date: "15.08.2017", name: "Лагутін Андрій Анатолійович", gender: "Чоловік", region: "—", trainer: "—", achievement: "Чемпіонат України 2017 р., I місце" },
+  { date: "16.05.2017", name: "Моісеєнко Віта Олексіївна", gender: "Жінка", region: "—", trainer: "Ширяєв Д.В., Бурмака П.М.", achievement: "Чемпіонат України 2017 р., I місце" },
+  { date: "23.03.2017", name: "Бушуй Олексій Вікторович", gender: "Чоловік", region: "—", trainer: "—", achievement: "Чемпіонат України 2016 р., I місце" },
+  { date: "23.03.2017", name: "Анісімова Світлана Олегівна", gender: "Жінка", region: "—", trainer: "Боєв В.М., Анисимов Д.О.", achievement: "Чемпіонат України 2016 р., I місце" },
+  { date: "07.09.2016", name: "Ледєньова Наталія Сергіївна", gender: "Жінка", region: "—", trainer: "Ромашко В.І., Морозов С.В.", achievement: "Чемпіонат України 2016 р., I місце" },
+  { date: "07.09.2016", name: "Редзюк Тетяна Сергіївна", gender: "Жінка", region: "—", trainer: "Усик А.С., Ромашко В.І.", achievement: "Чемпіонат України 2016 р., I місце" },
+  { date: "07.09.2016", name: "Усик Артем Сергійович", gender: "Чоловік", region: "—", trainer: "Ромашко В.І., Морозов С.В.", achievement: "Чемпіонат України 2016 р., I місце" },
+  { date: "18.08.2016", name: "Васюра Андрій Миколайович", gender: "Чоловік", region: "—", trainer: "—", achievement: "Чемпіонат України 2016 р., IІ місце" },
+  { date: "18.08.2016", name: "Чумак Ганна Олександрівна", gender: "Жінка", region: "—", trainer: "—", achievement: "Чемпіонат України 2016 р., IІ місце" },
+  { date: "18.08.2016", name: "Ледєньов Вадим Володимирович", gender: "Чоловік", region: "—", trainer: "Ромашков В.І., Морозов С.В.", achievement: "Чемпіонат України 2016 р., I місце" },
+  { date: "18.08.2016", name: "Григоренко Денис Андрійович", gender: "Чоловік", region: "—", trainer: "Ромашков В.І., Морозов С.В.", achievement: "Чемпіонат України 2016 р., I місце" },
+  { date: "18.08.2016", name: "Грушовець Ольга Валеріївна", gender: "Жінка", region: "—", trainer: "—", achievement: "Чемпіонат України 2016 р., IІ місце" },
+  { date: "18.08.2016", name: "Луков Олександр Іванович", gender: "Чоловік", region: "—", trainer: "Усик А.С., Ромашко В.І.", achievement: "Чемпіонат України 2016 р., IІ місце" },
+  { date: "18.08.2016", name: "Омельченко Владислав Вікторович", gender: "Чоловік", region: "—", trainer: "—", achievement: "Чемпіонат України 2016 р., IІ місце" },
+  { date: "18.08.2016", name: "Ромашко Віталій Іванович", gender: "Чоловік", region: "—", trainer: "Єрашов Д.В.", achievement: "Чемпіонат України 2016 р., I місце" },
+  { date: "18.08.2016", name: "Мамика Олександр Вячеславович", gender: "Чоловік", region: "—", trainer: "Крестніков Ю.Ю., Князєв В.В.", achievement: "Чемпіонат України 2016 р., IІ місце" },
+];
+
+function renderMasters(){
+  const q = (document.getElementById('search-masters').value || '').toLowerCase();
+  let rows = MASTERS_DATA.slice().sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date));
+  if(q) rows = rows.filter(r => r.name.toLowerCase().includes(q));
+  if(mastersGender !== 'all') rows = rows.filter(r => r.gender === mastersGender);
+
+  const body = document.getElementById('masters-body');
+  if(rows.length === 0){
+    body.innerHTML = `<tr class="empty-row"><td colspan="5">Нічого не знайдено.</td></tr>`;
+    document.getElementById('masters-more').innerHTML = '';
+    return;
+  }
+  const { visible, total } = paginate('masters', rows);
+  body.innerHTML = visible.map(r => `
+    <tr>
+      <td class="mono">${r.date}</td>
+      <td>${r.name}</td>
+      <td>${r.region}</td>
+      <td>${r.trainer}</td>
+      <td>${r.achievement}</td>
+    </tr>
+  `).join('');
+  renderShowMore('masters', 'masters-more', total, renderMasters);
+}
+let mastersGender = 'all';
 
 function renderNews(){
   const wrap = document.getElementById('news-grid');
