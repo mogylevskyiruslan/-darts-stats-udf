@@ -412,6 +412,16 @@
   .h2h-summary-mid{font-family:'JetBrains Mono',monospace; color:var(--muted); font-size:13px; text-align:center;}
   .h2h-row-win{color:var(--gold); font-weight:700;}
 
+  /* Позначка "Чемпіонат України" в таблиці турнірів */
+  .chu-badge{
+    display:inline-block; margin-left:8px; padding:1px 6px; border-radius:4px;
+    font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:700;
+    background:rgba(199,162,82,0.12); color:var(--gold); border:1px solid rgba(252,194,2,0.4);
+    vertical-align:middle;
+  }
+  .chu-badge-main{background:var(--gold); color:#1a1200; border-color:var(--gold);}
+  tr.row-chu-main{box-shadow:inset 3px 0 0 var(--gold);}
+
   /* CALENDAR 2026 */
   .tag.udl{background:rgba(59,130,246,0.12); color:#7cb0ff; border:1px solid #3b82f6;}
   .tag.final{background:rgba(252,194,2,0.18); color:var(--gold); border:1px solid var(--gold); font-weight:800;}
@@ -561,6 +571,16 @@
     <input type="text" id="search" placeholder="Пошук за назвою турніру або містом…">
     <select id="filter-year"><option value="">Усі роки</option></select>
     <select id="filter-org"><option value="">Усі організатори</option></select>
+    <select id="filter-chu">
+      <option value="">Усі турніри</option>
+      <option value="__any__">Тільки ЧУ (усі види)</option>
+      <option value="501DO">ЧУ · 501DO</option>
+      <option value="пари">ЧУ · Пари</option>
+      <option value="команди">ЧУ · Команди</option>
+      <option value="мікст">ЧУ · Мікст</option>
+      <option value="cricket">ЧУ · Cricket</option>
+      <option value="501DIDO">ЧУ · 501DIDO</option>
+    </select>
   </div>
   <div class="table-wrap">
     <table>
@@ -1010,6 +1030,7 @@ function renderTournaments(){
   const q = document.getElementById('search').value.toLowerCase();
   const yearFilter = document.getElementById('filter-year').value;
   const orgFilter = document.getElementById('filter-org').value;
+  const chuFilter = document.getElementById('filter-chu').value;
   const includeUDL = document.getElementById('global-toggle-udl').checked;
 
   let rows = tournaments.filter(t=>{
@@ -1017,7 +1038,9 @@ function renderTournaments(){
     const matchesQ = !q || t.name.toLowerCase().includes(q) || t.city.toLowerCase().includes(q);
     const matchesYear = !yearFilter || t.date.endsWith(yearFilter);
     const matchesOrg = !orgFilter || t.org === orgFilter;
-    return matchesQ && matchesYear && matchesOrg;
+    const chuCat = (t.chuCategory || '').trim().toLowerCase();
+    const matchesChu = !chuFilter || (chuFilter === '__any__' ? !!chuCat : chuCat === chuFilter.toLowerCase());
+    return matchesQ && matchesYear && matchesOrg && matchesChu;
   });
 
   rows.sort((a,b)=>{
@@ -1037,10 +1060,13 @@ function renderTournaments(){
     return;
   }
   const { visible, total } = paginate('tournaments', rows);
-  body.innerHTML = visible.map(t=>`
-    <tr>
+  body.innerHTML = visible.map(t=>{
+    const chuCat = (t.chuCategory || '').trim();
+    const is501DO = chuCat.toLowerCase() === '501do';
+    return `
+    <tr class="${is501DO ? 'row-chu-main' : ''}">
       <td class="mono">${t.date}</td>
-      <td>${t.name}</td>
+      <td>${t.name}${chuCat ? `<span class="chu-badge ${is501DO ? 'chu-badge-main' : ''}" title="Чемпіонат України · ${chuCat}">ЧУ</span>` : ''}</td>
       <td>${orgTag(t.org)}</td>
       <td class="mono" style="color:var(--muted)">${t.format}</td>
       <td>${t.city}</td>
@@ -1052,7 +1078,8 @@ function renderTournaments(){
       <td>${renderMedalCell(t.nakkaMedals || t.medals, t.nakkaMedalsWomen || t.medalsWomen)}</td>
       <td>${renderLinkChips(t.links)}</td>
     </tr>
-  `).join('');
+  `;
+  }).join('');
   renderShowMore('tournaments', 'tournaments-more', total, renderTournaments);
 }
 
@@ -1391,6 +1418,7 @@ document.querySelectorAll('#tournaments thead th').forEach(th=>{
 document.getElementById('search').addEventListener('input', ()=>{ resetPagination('tournaments'); renderTournaments(); });
 document.getElementById('filter-year').addEventListener('change', ()=>{ resetPagination('tournaments'); renderTournaments(); });
 document.getElementById('filter-org').addEventListener('change', ()=>{ resetPagination('tournaments'); renderTournaments(); });
+document.getElementById('filter-chu').addEventListener('change', ()=>{ resetPagination('tournaments'); renderTournaments(); });
 
 document.getElementById('filter-rating-season').addEventListener('change', ()=>{ resetPagination('ratings'); renderRatings(); });
 document.getElementById('search-ratings').addEventListener('input', ()=>{ resetPagination('ratings'); renderRatings(); });

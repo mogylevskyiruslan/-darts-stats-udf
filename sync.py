@@ -83,6 +83,7 @@ def parse_tournaments(rows):
             continue
         row = row + [""] * (16 - len(row))
         total, men, men_avg, women, women_avg, name, org, fmt, date, city = row[:10]
+        chu_category = row[10].strip() if len(row) > 10 else ""
         link_men, link_menavg, link_women, link_womenavg, link_tour = row[11:16]
 
         name = name.strip()
@@ -104,6 +105,7 @@ def parse_tournaments(rows):
             "women": parse_num(women), "womenAvg": parse_num(women_avg),
             "name": name, "org": org_norm, "format": fmt.strip(),
             "date": date, "city": city.strip(), "isUDL": is_udl,
+            "chuCategory": chu_category,
             "links": {
                 "men": link_obj(link_men),
                 "menAvg": link_obj(link_menavg),
