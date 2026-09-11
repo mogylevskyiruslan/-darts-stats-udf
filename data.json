@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-11T14:04:09.916938+00:00",
+  "lastUpdated": "2026-09-11T15:06:12.742410+00:00",
   "tournamentsCount": 185
  },
  "tournaments": [
@@ -4146,10 +4146,10 @@
    }
   },
   {
-   "total": null,
-   "men": null,
+   "total": 36,
+   "men": 34,
    "menAvg": null,
-   "women": null,
+   "women": 2,
    "womenAvg": null,
    "name": "WUDL CHERVNITSI CUP",
    "org": "УДЛ/ЗУДЛ",
@@ -4158,7 +4158,10 @@
    "city": "Чернівці",
    "isUDL": true,
    "links": {
-    "men": null,
+    "men": {
+     "url": "https://docs.google.com/document/d/1igThzehzvfy5JTd954NRA5mXX_czZrm3jgJ6uFc5bn4/edit?tab=t.0",
+     "type": "protocol_doc"
+    },
     "menAvg": null,
     "women": null,
     "womenAvg": null,
@@ -4737,8 +4740,22 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Київ-1",
+    "silver": "Кривий Ріг",
+    "bronze": [
+     "Чернівці",
+     "Черкаси-2"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Черкаси (Моісеєнко В. / Соколова В.)",
+    "silver": "Київ/Харків (Ледєньова Н. / Лановенко К.)",
+    "bronze": [
+     "Київ (Мєльтєва І. / Лях С.)",
+     "Кривий Ріг (Чабанова А. / Спекторенко К.)"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
