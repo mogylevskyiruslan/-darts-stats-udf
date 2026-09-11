@@ -1039,7 +1039,7 @@ function renderTournaments(){
     const matchesYear = !yearFilter || t.date.endsWith(yearFilter);
     const matchesOrg = !orgFilter || t.org === orgFilter;
     const chuCat = (t.chuCategory || '').trim().toLowerCase().replace(/\s+/g, '');
-    const matchesChu = !chuFilter || (chuFilter === '__any__' ? !!chuCat : chuCat === chuFilter.toLowerCase().replace(/\s+/g, ''));
+    const matchesChu = !chuFilter || (chuFilter === '__any__' ? !!chuCat : chuCat.includes(chuFilter.toLowerCase().replace(/\s+/g, '')));
     return matchesQ && matchesYear && matchesOrg && matchesChu;
   });
 
@@ -1062,7 +1062,7 @@ function renderTournaments(){
   const { visible, total } = paginate('tournaments', rows);
   body.innerHTML = visible.map(t=>{
     const chuCat = (t.chuCategory || '').trim();
-    const is501DO = chuCat.toLowerCase().replace(/\s+/g, '') === '501do';
+    const is501DO = chuCat.toLowerCase().replace(/\s+/g, '').includes('501do');
     return `
     <tr class="${is501DO ? 'row-chu-main' : ''}">
       <td class="mono">${t.date}</td>
