@@ -1039,7 +1039,9 @@ function renderTournaments(){
     const matchesYear = !yearFilter || t.date.endsWith(yearFilter);
     const matchesOrg = !orgFilter || t.org === orgFilter;
     const chuCat = (t.chuCategory || '').trim().toLowerCase().replace(/\s+/g, '');
-    const matchesChu = !chuFilter || (chuFilter === '__any__' ? !!chuCat : chuCat.includes(chuFilter.toLowerCase().replace(/\s+/g, '')));
+    const chuAliases = { cricket: ['cricket', 'крикет'] };
+    const matchesChu = !chuFilter || (chuFilter === '__any__' ? !!chuCat :
+      (chuAliases[chuFilter] || [chuFilter]).some(alias => chuCat.includes(alias.toLowerCase().replace(/\s+/g, ''))));
     return matchesQ && matchesYear && matchesOrg && matchesChu;
   });
 
