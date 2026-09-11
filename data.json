@@ -1,7 +1,7 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-11T10:35:05.513814+00:00",
-  "tournamentsCount": 182
+  "lastUpdated": "2026-09-11T14:04:09.916938+00:00",
+  "tournamentsCount": 185
  },
  "tournaments": [
   {
@@ -4590,7 +4590,7 @@
    "menAvg": 47.68,
    "women": 17,
    "womenAvg": 37.51,
-   "name": "Чемпіонат Одеси",
+   "name": "Кубок Одеси",
    "org": "ВФД",
    "format": "501DO / Мастерс",
    "date": "12.09.2021",
@@ -4667,6 +4667,80 @@
      "Лузан/Черевко"
     ]
    }
+  },
+  {
+   "total": 56,
+   "men": 43,
+   "menAvg": null,
+   "women": 13,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 1 етап",
+   "date": "23.05.2021",
+   "city": "Черкаси",
+   "isUDL": false,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/document/d/1qXjLtDVZoni3in3duLCflqw42CJQn8mf9_GziuhhsrM/edit?tab=t.0",
+     "type": "protocol_doc"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/document/d/1QaVi4io3yKxgpozFWV_sd9voAuTLtZTwf9O6c6FB1D8/edit?tab=t.0",
+     "type": "protocol_doc"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Бушуй Олексій",
+     "Солтис Андрій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Ледєньова Наталія",
+    "bronze": [
+     "Харченко Тетяна",
+     "Лях Світлана"
+    ]
+   },
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 56,
+   "men": 48,
+   "menAvg": null,
+   "women": 8,
+   "womenAvg": null,
+   "name": "ЧУ 2021 Команди",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "22.05.2021",
+   "city": "Черкаси",
+   "isUDL": false,
+   "links": {
+    "men": {
+     "url": "https://docs.google.com/document/d/1wpUzT3mH-HmaFdhT4kZAGalohTZm6J3RyO3v-KSqRIk/edit?tab=t.0",
+     "type": "protocol_doc"
+    },
+    "menAvg": null,
+    "women": {
+     "url": "https://docs.google.com/document/d/1wsBGRLA1bZsZt3ZLXZmj27_K_x8YgbvmHUcQ-9e44F8/edit?tab=t.0",
+     "type": "protocol_doc"
+    },
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
   },
   {
    "total": 84,
@@ -8045,6 +8119,41 @@
    },
    "medals": null,
    "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 63,
+   "men": 51,
+   "menAvg": null,
+   "women": 12,
+   "womenAvg": null,
+   "name": "ЧУ 2008",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "31.01.2009",
+   "city": "Черкаси",
+   "isUDL": false,
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1KiG-mJv4esMcJj4KndIV-C_CDrgSKDa8YodYunEUD3Y/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": null,
+    "bronze": []
+   },
+   "medalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": null,
+    "bronze": []
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   }
@@ -87256,7 +87365,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 65.93,
    "ton80": 0,
@@ -87272,7 +87381,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 44.24,
    "ton80": 0,
@@ -87288,7 +87397,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 44.7,
    "ton80": 0,
@@ -87304,7 +87413,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 55.72,
    "ton80": 0,
@@ -87320,7 +87429,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 47.31,
    "ton80": 0,
@@ -87336,7 +87445,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 77.18,
    "ton80": 1,
@@ -87352,7 +87461,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 46.42,
    "ton80": 0,
@@ -87368,7 +87477,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 47.8,
    "ton80": 0,
@@ -87384,7 +87493,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 49.19,
    "ton80": 0,
@@ -87400,7 +87509,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 49.03,
    "ton80": 0,
@@ -87416,7 +87525,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 43.44,
    "ton80": 0,
@@ -87432,7 +87541,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 58.23,
    "ton80": 1,
@@ -87448,7 +87557,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 49.36,
    "ton80": 0,
@@ -87464,7 +87573,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 50.55,
    "ton80": 0,
@@ -87480,7 +87589,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 50.84,
    "ton80": 0,
@@ -87496,7 +87605,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 64.34,
    "ton80": 3,
@@ -87512,7 +87621,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 57.39,
    "ton80": 0,
@@ -87528,7 +87637,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 45.81,
    "ton80": 0,
@@ -87544,7 +87653,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 45.81,
    "ton80": 0,
@@ -87560,7 +87669,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 44.44,
    "ton80": 0,
@@ -87576,7 +87685,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 47.87,
    "ton80": 0,
@@ -87592,7 +87701,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 42.01,
    "ton80": 0,
@@ -87608,7 +87717,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 55.36,
    "ton80": 0,
@@ -87624,7 +87733,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 49.73,
    "ton80": 0,
@@ -87640,7 +87749,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 40.4,
    "ton80": 0,
@@ -87656,7 +87765,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 44.48,
    "ton80": 0,
@@ -87672,7 +87781,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 55.69,
    "ton80": 0,
@@ -87688,7 +87797,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 44.99,
    "ton80": 0,
@@ -87704,7 +87813,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 51.99,
    "ton80": 0,
@@ -87720,7 +87829,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 35.57,
    "ton80": 0,
@@ -87736,7 +87845,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 43.62,
    "ton80": 0,
@@ -87752,7 +87861,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 48.67,
    "ton80": 0,
@@ -87768,7 +87877,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 44.34,
    "ton80": 0,
@@ -87784,7 +87893,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 58.25,
    "ton80": 1,
@@ -87800,7 +87909,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 38.66,
    "ton80": 0,
@@ -87816,7 +87925,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 54.15,
    "ton80": 1,
@@ -87832,7 +87941,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 36.22,
    "ton80": 0,
@@ -87848,7 +87957,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 55.0,
    "ton80": 0,
@@ -87864,7 +87973,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 40.07,
    "ton80": 0,
@@ -87880,7 +87989,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 52.9,
    "ton80": 0,
@@ -87896,7 +88005,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 57.58,
    "ton80": 0,
@@ -87912,7 +88021,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 39.67,
    "ton80": 0,
@@ -87928,7 +88037,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 51.1,
    "ton80": 0,
@@ -87944,7 +88053,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 50.43,
    "ton80": 0,
@@ -87960,7 +88069,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 38.62,
    "ton80": 0,
@@ -87976,7 +88085,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 43.22,
    "ton80": 0,
@@ -87992,7 +88101,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 53.26,
    "ton80": 0,
@@ -88008,7 +88117,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 37.98,
    "ton80": 0,
@@ -88024,7 +88133,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 40.2,
    "ton80": 0,
@@ -88040,7 +88149,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 46.48,
    "ton80": 0,
@@ -88056,7 +88165,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 45.25,
    "ton80": 0,
@@ -88072,7 +88181,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 37.7,
    "ton80": 0,
@@ -88088,7 +88197,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 45.01,
    "ton80": 0,
@@ -88104,7 +88213,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 49.29,
    "ton80": 0,
@@ -88120,7 +88229,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 35.77,
    "ton80": 0,
@@ -88136,7 +88245,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 47.34,
    "ton80": 0,
@@ -88152,7 +88261,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 49.37,
    "ton80": 0,
@@ -88168,7 +88277,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 31.91,
    "ton80": 0,
@@ -88184,7 +88293,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 28.5,
    "ton80": 0,
@@ -88200,7 +88309,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 46.03,
    "ton80": 0,
@@ -88216,7 +88325,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 33.3,
    "ton80": 0,
@@ -88232,7 +88341,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 43.15,
    "ton80": 0,
@@ -88248,7 +88357,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 33.91,
    "ton80": 0,
@@ -88264,7 +88373,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 29.12,
    "ton80": 0,
@@ -88280,7 +88389,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 43.1,
    "ton80": 0,
@@ -88296,7 +88405,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 41.75,
    "ton80": 0,
@@ -88312,7 +88421,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 38.38,
    "ton80": 0,
@@ -88328,7 +88437,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 37.61,
    "ton80": 0,
@@ -88344,7 +88453,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 37.56,
    "ton80": 0,
@@ -88360,7 +88469,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 36.79,
    "ton80": 0,
@@ -88376,7 +88485,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 35.5,
    "ton80": 0,
@@ -88392,7 +88501,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 44.58,
    "ton80": 0,
@@ -88408,7 +88517,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 29.27,
    "ton80": 0,
@@ -88424,7 +88533,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 35.73,
    "ton80": 0,
@@ -88440,7 +88549,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 37.09,
    "ton80": 0,
@@ -88456,7 +88565,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 36.04,
    "ton80": 0,
@@ -88472,7 +88581,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "avg": 35.7,
    "ton80": 0,
@@ -214610,7 +214719,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бушуй Олексій",
    "avg": 76.05
@@ -214620,7 +214729,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Омельченко Владислав",
    "avg": 76.01
@@ -214630,7 +214739,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Рогов Віталій",
    "avg": 65.15
@@ -214640,7 +214749,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Омельченко Владислав",
    "avg": 68.07
@@ -214650,7 +214759,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Усик Артем",
    "avg": 78.85
@@ -214660,7 +214769,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бушуй Олексій",
    "avg": 64.99
@@ -214670,7 +214779,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пекарук Ілля",
    "avg": 69.1
@@ -214680,7 +214789,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Рогов Віталій",
    "avg": 56.82
@@ -214690,7 +214799,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Усик Сергій",
    "avg": 60.74
@@ -214700,7 +214809,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Усик Артем",
    "avg": 57.52
@@ -214710,7 +214819,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кисельов Дмитро",
    "avg": 82.3
@@ -214720,7 +214829,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бушуй Олексій",
    "avg": 68.26
@@ -214730,7 +214839,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Луков Олександр",
    "avg": 60.73
@@ -214740,7 +214849,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Усик Артем",
    "avg": 47.03
@@ -214750,7 +214859,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Фатех Дін",
    "avg": 62.09
@@ -214760,7 +214869,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Рогов Віталій",
    "avg": 57.66
@@ -214770,7 +214879,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кисельов Дмитро",
    "avg": 49.7
@@ -214780,7 +214889,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Дідов Василь",
    "avg": 50.34
@@ -214790,7 +214899,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зеркаль Сергій",
    "avg": 59.4
@@ -214800,7 +214909,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пекарук Ілля",
    "avg": 52.95
@@ -214810,7 +214919,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Марков Сергій",
    "avg": 53.64
@@ -214820,7 +214929,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Усик Сергій",
    "avg": 47.36
@@ -214830,7 +214939,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мороз Ігор",
    "avg": 60.96
@@ -214840,7 +214949,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Цибух Антон",
    "avg": 61.8
@@ -214850,7 +214959,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Козловський Богдан",
    "avg": 69.1
@@ -214860,7 +214969,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Омельченко Владислав",
    "avg": 62.79
@@ -214870,7 +214979,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кондарюк Микола",
    "avg": 79.11
@@ -214880,7 +214989,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бушуй Олексій",
    "avg": 61.88
@@ -214890,7 +214999,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Троценко Артем",
    "avg": 48.45
@@ -214900,7 +215009,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Усик Артем",
    "avg": 45.63
@@ -214910,7 +215019,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лагутін Андрій",
    "avg": 49.35
@@ -214920,7 +215029,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Марков Сергій",
    "avg": 47.43
@@ -214930,7 +215039,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лисаков Олексій",
    "avg": 48.76
@@ -214940,7 +215049,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кисельов Дмитро",
    "avg": 59.52
@@ -214950,7 +215059,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Подкопаєв Андрій",
    "avg": 57.27
@@ -214960,7 +215069,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Рогов Віталій",
    "avg": 47.04
@@ -214970,7 +215079,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бабанин Дмитрий",
    "avg": 44.56
@@ -214980,7 +215089,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Дідов Василь",
    "avg": 42.12
@@ -214990,7 +215099,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лепень Олександр",
    "avg": 69.91
@@ -215000,7 +215109,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бушуй Олексій",
    "avg": 54.38
@@ -215010,7 +215119,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Льянов Олег",
    "avg": 71.57
@@ -215020,7 +215129,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Омельченко Владислав",
    "avg": 52.04
@@ -215030,7 +215139,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Фатех Дін",
    "avg": 57.64
@@ -215040,7 +215149,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Тямолов Роман",
    "avg": 63.76
@@ -215050,7 +215159,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чепурний Едуард",
    "avg": 60.22
@@ -215060,7 +215169,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Козловський Богдан",
    "avg": 51.52
@@ -215070,7 +215179,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Воловод Ростислав",
    "avg": 63.28
@@ -215080,7 +215189,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мороз Ігор",
    "avg": 48.0
@@ -215090,7 +215199,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пекарук Ілля",
    "avg": 48.85
@@ -215100,7 +215209,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Стецишин Виталий",
    "avg": 69.91
@@ -215110,7 +215219,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Цибух Антон",
    "avg": 57.0
@@ -215120,7 +215229,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сташевський Валентин",
    "avg": 56.88
@@ -215130,7 +215239,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Арійчук Олександр",
    "avg": 46.25
@@ -215140,7 +215249,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зеркаль Сергій",
    "avg": 43.33
@@ -215150,7 +215259,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Герман Олег",
    "avg": 48.8
@@ -215160,7 +215269,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лепень Олександр",
    "avg": 44.02
@@ -215170,7 +215279,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мартов Володимир",
    "avg": 39.29
@@ -215180,7 +215289,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Овчаренко Сергій",
    "avg": 47.24
@@ -215190,7 +215299,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лагутін Андрій",
    "avg": 62.92
@@ -215200,7 +215309,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мороз Ігор",
    "avg": 60.78
@@ -215210,7 +215319,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сас Олег",
    "avg": 50.66
@@ -215220,7 +215329,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Козловський Богдан",
    "avg": 45.72
@@ -215230,7 +215339,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Стецишин Виталий",
    "avg": 53.05
@@ -215240,7 +215349,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Романов Олександр",
    "avg": 64.41
@@ -215250,7 +215359,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "МорозовСергій",
    "avg": 38.94
@@ -215260,7 +215369,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Гончаренко Олександр",
    "avg": 38.43
@@ -215270,7 +215379,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лисаков Олексій",
    "avg": 58.56
@@ -215280,7 +215389,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зеркаль Сергій",
    "avg": 50.33
@@ -215290,7 +215399,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бублик В'ячеслав",
    "avg": 52.43
@@ -215300,7 +215409,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Царолунга Дмитро",
    "avg": 31.63
@@ -215310,7 +215419,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лепень Олександр",
    "avg": 44.92
@@ -215320,7 +215429,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мартов Володимир",
    "avg": 48.5
@@ -215330,7 +215439,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Герман Олег",
    "avg": 56.58
@@ -215340,7 +215449,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лагутін Андрій",
    "avg": 46.72
@@ -215350,7 +215459,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сагайдачный Роман",
    "avg": 41.37
@@ -215360,7 +215469,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зеркаль Сергій",
    "avg": 33.86
@@ -215370,7 +215479,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Козловський Богдан",
    "avg": 44.28
@@ -215380,7 +215489,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Варивода Сергій",
    "avg": 60.12
@@ -215390,7 +215499,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Романов Олександр",
    "avg": 42.14
@@ -215400,7 +215509,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "МорозовСергій",
    "avg": 34.29
@@ -215410,7 +215519,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чумак Дмитро",
    "avg": 57.08
@@ -215420,7 +215529,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Рогов Віталій",
    "avg": 49.44
@@ -215430,7 +215539,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Микитин Ярослав",
    "avg": 41.6
@@ -215440,7 +215549,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сас Олег",
    "avg": 41.96
@@ -215450,7 +215559,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Овчаренко Сергій",
    "avg": 52.43
@@ -215460,7 +215569,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мороз Ігор",
    "avg": 42.79
@@ -215470,7 +215579,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Стецишин Виталий",
    "avg": 54.37
@@ -215480,7 +215589,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Цибух Антон",
    "avg": 59.69
@@ -215490,7 +215599,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Гончаренко Олександр",
    "avg": 43.22
@@ -215500,7 +215609,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пономаренко Денис",
    "avg": 42.9
@@ -215510,7 +215619,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зарайський Володимир",
    "avg": 52.43
@@ -215520,7 +215629,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Акользін Дмитро",
    "avg": 43.11
@@ -215530,7 +215639,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Матюшенко Володимир",
    "avg": 36.96
@@ -215540,7 +215649,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Доманін Евген",
    "avg": 35.78
@@ -215550,7 +215659,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лепень Олександр",
    "avg": 33.41
@@ -215560,7 +215669,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Овчаренко Сергій",
    "avg": 45.09
@@ -215570,7 +215679,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лисаков Олексій",
    "avg": 33.49
@@ -215580,7 +215689,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бублик В'ячеслав",
    "avg": 40.99
@@ -215590,7 +215699,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Микитин Ярослав",
    "avg": 43.59
@@ -215600,7 +215709,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чумак Дмитро",
    "avg": 40.52
@@ -215610,7 +215719,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Фатех Дін",
    "avg": 54.45
@@ -215620,7 +215729,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Дідов Василь",
    "avg": 59.16
@@ -215630,7 +215739,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чепурний Едуард",
    "avg": 55.05
@@ -215640,7 +215749,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Усик Сергій",
    "avg": 54.23
@@ -215650,7 +215759,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сташевський Валентин",
    "avg": 52.23
@@ -215660,7 +215769,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пєлєнов Сергій",
    "avg": 53.73
@@ -215670,7 +215779,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мартов Володимир",
    "avg": 48.6
@@ -215680,7 +215789,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лагутін Андрій",
    "avg": 46.48
@@ -215690,7 +215799,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сальніков Павло",
    "avg": 31.13
@@ -215700,7 +215809,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зуєв Олег",
    "avg": 33.47
@@ -215710,7 +215819,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Агневщиков Юрий",
    "avg": 41.0
@@ -215720,7 +215829,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кумовицький Павло",
    "avg": 44.64
@@ -215730,7 +215839,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Цебратенко Андрей",
    "avg": 45.72
@@ -215740,7 +215849,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кара Евген",
    "avg": 48.05
@@ -215750,7 +215859,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "МорозовСергій",
    "avg": 57.81
@@ -215760,7 +215869,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Цибух Антон",
    "avg": 44.62
@@ -215770,7 +215879,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Тямолов Роман",
    "avg": 62.76
@@ -215780,7 +215889,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Омельченко Владислав",
    "avg": 60.5
@@ -215790,7 +215899,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Варивода Сергій",
    "avg": 70.45
@@ -215800,7 +215909,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Рогов Віталій",
    "avg": 43.09
@@ -215810,7 +215919,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бабанин Дмитрий",
    "avg": 46.37
@@ -215820,7 +215929,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кисельов Дмитро",
    "avg": 41.81
@@ -215830,7 +215939,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Романов Олександр",
    "avg": 35.02
@@ -215840,7 +215949,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Гончаренко Олександр",
    "avg": 34.46
@@ -215850,7 +215959,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пєлєнов Сергій",
    "avg": 33.5
@@ -215860,7 +215969,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Семейко Віталій",
    "avg": 54.33
@@ -215870,7 +215979,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Герман Олег",
    "avg": 43.84
@@ -215880,7 +215989,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мороз Ігор",
    "avg": 38.07
@@ -215890,7 +215999,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Марков Сергій",
    "avg": 43.62
@@ -215900,7 +216009,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Троценко Артем",
    "avg": 62.62
@@ -215910,7 +216019,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сагайдачный Роман",
    "avg": 51.18
@@ -215920,7 +216029,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Царолунга Дмитро",
    "avg": 37.46
@@ -215930,7 +216039,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Луков Олександр",
    "avg": 65.35
@@ -215940,7 +216049,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бушуй Олексій",
    "avg": 51.61
@@ -215950,7 +216059,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Козловський Богдан",
    "avg": 50.77
@@ -215960,7 +216069,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чумак Дмитро",
    "avg": 54.99
@@ -215970,7 +216079,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кара Евген",
    "avg": 47.66
@@ -215980,7 +216089,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Агневщиков Юрий",
    "avg": 50.17
@@ -215990,7 +216099,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Панченко Олексій",
    "avg": 47.06
@@ -216000,7 +216109,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Подкопаєв Андрій",
    "avg": 47.29
@@ -216010,7 +216119,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Доманін Евген",
    "avg": 46.38
@@ -216020,7 +216129,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зарайський Володимир",
    "avg": 43.63
@@ -216030,7 +216139,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мороз Артем",
    "avg": 39.9
@@ -216040,7 +216149,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кулик Віталій",
    "avg": 39.54
@@ -216050,7 +216159,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Матюшенко Володимир",
    "avg": 48.44
@@ -216060,7 +216169,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Тямолов Роман",
    "avg": 39.54
@@ -216070,7 +216179,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Льянов Олег",
    "avg": 66.31
@@ -216080,7 +216189,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Усик Артем",
    "avg": 49.23
@@ -216090,7 +216199,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Цебратенко Андрей",
    "avg": 48.48
@@ -216100,7 +216209,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Луков Олександр",
    "avg": 46.83
@@ -216110,7 +216219,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Воловод Ростислав",
    "avg": 41.93
@@ -216120,7 +216229,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зуєв Олег",
    "avg": 51.83
@@ -216130,7 +216239,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Акользін Дмитро",
    "avg": 65.35
@@ -216140,7 +216249,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Омельченко Владислав",
    "avg": 48.17
@@ -216150,7 +216259,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Овчаренко Сергій",
    "avg": 38.21
@@ -216160,7 +216269,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лагутін Андрій",
    "avg": 30.92
@@ -216170,7 +216279,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Шаблій Іґор",
    "avg": 47.29
@@ -216180,7 +216289,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пекарук Ілля",
    "avg": 40.81
@@ -216190,7 +216299,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Разінков Олександр",
    "avg": 57.81
@@ -216200,7 +216309,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Тямолов Ростислав",
    "avg": 36.04
@@ -216210,7 +216319,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кумовицький Павло",
    "avg": 79.11
@@ -216220,7 +216329,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бушуй Олексій",
    "avg": 36.84
@@ -216230,7 +216339,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зеркаль Сергій",
    "avg": 27.38
@@ -216240,7 +216349,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бублик В'ячеслав",
    "avg": 31.31
@@ -216250,7 +216359,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сас Олег",
    "avg": 37.55
@@ -216260,7 +216369,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Варивода Сергій",
    "avg": 42.6
@@ -216270,7 +216379,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Баширов Ярослав",
    "avg": 35.32
@@ -216280,7 +216389,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пекарук Олексій",
    "avg": 43.36
@@ -216290,7 +216399,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Арійчук Олександр",
    "avg": 48.29
@@ -216300,7 +216409,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кулик Віталій",
    "avg": 46.21
@@ -216310,7 +216419,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Стецишин Виталий",
    "avg": 47.74
@@ -216320,7 +216429,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пономаренко Денис",
    "avg": 45.47
@@ -216330,7 +216439,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зарайський Володимир",
    "avg": 49.55
@@ -216340,7 +216449,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Тямолов Роман",
    "avg": 45.83
@@ -216350,7 +216459,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бінат Ігор",
    "avg": 35.79
@@ -216360,7 +216469,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Подкопаєв Андрій",
    "avg": 33.02
@@ -216370,7 +216479,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пєлєнов Сергій",
    "avg": 42.93
@@ -216380,7 +216489,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Шаблій Іґор",
    "avg": 50.1
@@ -216390,7 +216499,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сальніков Павло",
    "avg": 49.26
@@ -216400,7 +216509,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Марков Сергій",
    "avg": 43.73
@@ -216410,7 +216519,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кондарюк Микола",
    "avg": 54.2
@@ -216420,7 +216529,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Тямолов Ростислав",
    "avg": 46.29
@@ -216430,7 +216539,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Микитин Ярослав",
    "avg": 79.11
@@ -216440,7 +216549,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Рогов Віталій",
    "avg": 61.95
@@ -216450,7 +216559,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Гончаренко Олександр",
    "avg": 45.82
@@ -216460,7 +216569,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Цибух Антон",
    "avg": 40.34
@@ -216470,7 +216579,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кара Евген",
    "avg": 42.64
@@ -216480,7 +216589,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кумовицький Павло",
    "avg": 47.64
@@ -216490,7 +216599,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Панченко Олексій",
    "avg": 53.95
@@ -216500,7 +216609,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чепурний Едуард",
    "avg": 53.44
@@ -216510,7 +216619,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мороз Артем",
    "avg": 32.67
@@ -216520,7 +216629,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бабанин Дмитрий",
    "avg": 31.42
@@ -216530,7 +216639,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Виговський Антон",
    "avg": 58.17
@@ -216540,7 +216649,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Фатех Дін",
    "avg": 50.64
@@ -216550,7 +216659,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Разінков Олександр",
    "avg": 47.46
@@ -216560,7 +216669,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Льянов Олег",
    "avg": 40.13
@@ -216570,7 +216679,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Доманін Евген",
    "avg": 43.12
@@ -216580,7 +216689,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Акользін Дмитро",
    "avg": 46.24
@@ -216590,7 +216699,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сташевський Валентин",
    "avg": 51.46
@@ -216600,7 +216709,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пекарук Ілля",
    "avg": 53.68
@@ -216610,7 +216719,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Воловод Ростислав",
    "avg": 55.64
@@ -216620,7 +216729,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Троценко Артем",
    "avg": 54.92
@@ -216630,7 +216739,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Герман Олег",
    "avg": 31.09
@@ -216640,7 +216749,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мартов Володимир",
    "avg": 32.24
@@ -216650,7 +216759,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Варивода Сергій",
    "avg": 44.11
@@ -216660,7 +216769,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чумак Дмитро",
    "avg": 45.04
@@ -216670,7 +216779,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Агневщиков Юрий",
    "avg": 47.97
@@ -216680,7 +216789,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Луков Олександр",
    "avg": 44.66
@@ -216690,7 +216799,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Матюшенко Володимир",
    "avg": 68.32
@@ -216700,7 +216809,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Омельченко Владислав",
    "avg": 42.19
@@ -216710,7 +216819,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сагайдачный Роман",
    "avg": 38.23
@@ -216720,7 +216829,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лисаков Олексій",
    "avg": 37.21
@@ -216730,7 +216839,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пекарук Олексій",
    "avg": 48.48
@@ -216740,7 +216849,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Фатех Дін",
    "avg": 35.57
@@ -216750,7 +216859,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Арійчук Олександр",
    "avg": 49.18
@@ -216760,7 +216869,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кисельов Дмитро",
    "avg": 46.59
@@ -216770,7 +216879,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зуєв Олег",
    "avg": 49.01
@@ -216780,7 +216889,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Марков Сергій",
    "avg": 39.45
@@ -216790,7 +216899,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Цебратенко Андрей",
    "avg": 83.5
@@ -216800,7 +216909,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бушуй Олексій",
    "avg": 60.44
@@ -216810,7 +216919,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кондарюк Микола",
    "avg": 48.61
@@ -216820,7 +216929,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Усик Артем",
    "avg": 53.65
@@ -216830,7 +216939,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Микитин Ярослав",
    "avg": 52.43
@@ -216840,7 +216949,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Козловський Богдан",
    "avg": 42.32
@@ -216850,7 +216959,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сташевський Валентин",
    "avg": 39.37
@@ -216860,7 +216969,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Семейко Віталій",
    "avg": 49.55
@@ -216870,7 +216979,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Акользін Дмитро",
    "avg": 55.67
@@ -216880,7 +216989,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Тямолов Роман",
    "avg": 47.81
@@ -216890,7 +216999,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Романов Олександр",
    "avg": 57.81
@@ -216900,7 +217009,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пономаренко Денис",
    "avg": 42.76
@@ -216910,7 +217019,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Цибух Антон",
    "avg": 57.45
@@ -216920,7 +217029,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пономаренко Денис",
    "avg": 57.59
@@ -216930,7 +217039,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Стецишин Виталий",
    "avg": 41.76
@@ -216940,7 +217049,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "МорозовСергій",
    "avg": 46.56
@@ -216950,7 +217059,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Тямолов Ростислав",
    "avg": 55.67
@@ -216960,7 +217069,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Льянов Олег",
    "avg": 46.11
@@ -216970,7 +217079,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кулик Віталій",
    "avg": 49.55
@@ -216980,7 +217089,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бабанин Дмитрий",
    "avg": 49.21
@@ -216990,7 +217099,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Подкопаєв Андрій",
    "avg": 48.18
@@ -217000,7 +217109,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чепурний Едуард",
    "avg": 48.43
@@ -217010,7 +217119,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кумовицький Павло",
    "avg": 51.83
@@ -217020,7 +217129,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Луков Олександр",
    "avg": 43.23
@@ -217030,7 +217139,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лепень Олександр",
    "avg": 57.03
@@ -217040,7 +217149,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мороз Ігор",
    "avg": 53.11
@@ -217050,7 +217159,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сас Олег",
    "avg": 57.08
@@ -217060,7 +217169,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Рогов Віталій",
    "avg": 50.76
@@ -217070,7 +217179,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зеркаль Сергій",
    "avg": 48.21
@@ -217080,7 +217189,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Царолунга Дмитро",
    "avg": 51.57
@@ -217090,7 +217199,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Баширов Ярослав",
    "avg": 42.08
@@ -217100,7 +217209,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Виговський Антон",
    "avg": 40.42
@@ -217110,7 +217219,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Стецишин Виталий",
    "avg": 39.87
@@ -217120,7 +217229,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Гончаренко Олександр",
    "avg": 49.55
@@ -217130,7 +217239,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Матюшенко Володимир",
    "avg": 50.32
@@ -217140,7 +217249,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зарайський Володимир",
    "avg": 41.0
@@ -217150,7 +217259,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Воловод Ростислав",
    "avg": 38.74
@@ -217160,7 +217269,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сальніков Павло",
    "avg": 36.42
@@ -217170,7 +217279,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Цебратенко Андрей",
    "avg": 44.91
@@ -217180,7 +217289,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Агневщиков Юрий",
    "avg": 46.01
@@ -217190,7 +217299,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пєлєнов Сергій",
    "avg": 55.47
@@ -217200,7 +217309,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пекарук Ілля",
    "avg": 54.8
@@ -217210,7 +217319,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Арійчук Олександр",
    "avg": 38.23
@@ -217220,7 +217329,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мороз Артем",
    "avg": 42.54
@@ -217230,7 +217339,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кондарюк Микола",
    "avg": 49.18
@@ -217240,7 +217349,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Разінков Олександр",
    "avg": 42.18
@@ -217250,7 +217359,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Доманін Евген",
    "avg": 61.77
@@ -217260,7 +217369,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Омельченко Владислав",
    "avg": 45.58
@@ -217270,7 +217379,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бінат Ігор",
    "avg": 33.65
@@ -217280,7 +217389,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Панченко Олексій",
    "avg": 33.07
@@ -217290,7 +217399,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бінат Ігор",
    "avg": 54.99
@@ -217300,7 +217409,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Усик Сергій",
    "avg": 39.04
@@ -217310,7 +217419,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пекарук Олексій",
    "avg": 48.48
@@ -217320,7 +217429,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Дідов Василь",
    "avg": 46.9
@@ -217330,7 +217439,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кара Евген",
    "avg": 73.92
@@ -217340,7 +217449,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бушуй Олексій",
    "avg": 46.95
@@ -217350,7 +217459,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Микитин Ярослав",
    "avg": 44.46
@@ -217360,7 +217469,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Варивода Сергій",
    "avg": 47.59
@@ -217370,7 +217479,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Герман Олег",
    "avg": 36.92
@@ -217380,7 +217489,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Овчаренко Сергій",
    "avg": 40.78
@@ -217390,7 +217499,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сташевський Валентин",
    "avg": 46.13
@@ -217400,7 +217509,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Шаблій Іґор",
    "avg": 61.77
@@ -217410,7 +217519,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зуєв Олег",
    "avg": 42.54
@@ -217420,7 +217529,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Троценко Артем",
    "avg": 37.5
@@ -217430,7 +217539,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кулик Віталій",
    "avg": 56.4
@@ -217440,7 +217549,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кисельов Дмитро",
    "avg": 49.18
@@ -217450,7 +217559,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Подкопаєв Андрій",
    "avg": 51.83
@@ -217460,7 +217569,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Усик Сергій",
    "avg": 41.56
@@ -217470,7 +217579,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Тямолов Ростислав",
    "avg": 59.69
@@ -217480,7 +217589,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Усик Артем",
    "avg": 46.05
@@ -217490,7 +217599,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Матюшенко Володимир",
    "avg": 42.14
@@ -217500,7 +217609,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Акользін Дмитро",
    "avg": 34.39
@@ -217510,7 +217619,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Баширов Ярослав",
    "avg": 60.12
@@ -217520,7 +217629,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Фатех Дін",
    "avg": 51.92
@@ -217530,7 +217639,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Романов Олександр",
    "avg": 54.27
@@ -217540,7 +217649,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Цибух Антон",
    "avg": 46.65
@@ -217550,7 +217659,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сас Олег",
    "avg": 51.23
@@ -217560,7 +217669,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чумак Дмитро",
    "avg": 50.68
@@ -217570,7 +217679,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сагайдачный Роман",
    "avg": 26.22
@@ -217580,7 +217689,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бублик В'ячеслав",
    "avg": 26.1
@@ -217590,7 +217699,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сташевський Валентин",
    "avg": 65.35
@@ -217600,7 +217709,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сергєєв Кирило",
    "avg": 30.09
@@ -217610,7 +217719,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Цебратенко Андрей",
    "avg": 38.98
@@ -217620,7 +217729,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кумовицький Павло",
    "avg": 39.74
@@ -217630,7 +217739,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бінат Ігор",
    "avg": 54.33
@@ -217640,7 +217749,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чепурний Едуард",
    "avg": 40.42
@@ -217650,7 +217759,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Доманін Евген",
    "avg": 53.05
@@ -217660,7 +217769,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Тямолов Роман",
    "avg": 43.48
@@ -217670,7 +217779,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лепень Олександр",
    "avg": 46.82
@@ -217680,7 +217789,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лагутін Андрій",
    "avg": 49.46
@@ -217690,7 +217799,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кондарюк Микола",
    "avg": 49.22
@@ -217700,7 +217809,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Льянов Олег",
    "avg": 48.4
@@ -217710,7 +217819,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Воловод Ростислав",
    "avg": 45.22
@@ -217720,7 +217829,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Марков Сергій",
    "avg": 41.48
@@ -217730,7 +217839,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Виговський Антон",
    "avg": 44.64
@@ -217740,7 +217849,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Дідов Василь",
    "avg": 44.52
@@ -217750,7 +217859,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Арійчук Олександр",
    "avg": 36.85
@@ -217760,7 +217869,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бабанин Дмитрий",
    "avg": 37.26
@@ -217770,7 +217879,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кара Евген",
    "avg": 51.83
@@ -217780,7 +217889,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Луков Олександр",
    "avg": 48.03
@@ -217790,7 +217899,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Панченко Олексій",
    "avg": 62.62
@@ -217800,7 +217909,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Усик Сергій",
    "avg": 48.73
@@ -217810,7 +217919,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лисаков Олексій",
    "avg": 45.75
@@ -217820,7 +217929,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Царолунга Дмитро",
    "avg": 55.67
@@ -217830,7 +217939,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Разінков Олександр",
    "avg": 67.3
@@ -217840,7 +217949,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Усик Артем",
    "avg": 45.67
@@ -217850,7 +217959,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Зарайський Володимир",
    "avg": 51.23
@@ -217860,7 +217969,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Омельченко Владислав",
    "avg": 41.08
@@ -217870,7 +217979,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Баширов Ярослав",
    "avg": 52.07
@@ -217880,7 +217989,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Дідов Василь",
    "avg": 43.5
@@ -217890,7 +217999,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мороз Артем",
    "avg": 58.56
@@ -217900,7 +218009,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Кисельов Дмитро",
    "avg": 46.77
@@ -217910,7 +218019,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Агневщиков Юрий",
    "avg": 90.18
@@ -217920,7 +218029,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Бушуй Олексій",
    "avg": 50.06
@@ -217930,7 +218039,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мартов Володимир",
    "avg": 62.62
@@ -217940,7 +218049,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мороз Ігор",
    "avg": 42.17
@@ -217950,7 +218059,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Козловський Богдан",
    "avg": 61.23
@@ -217960,7 +218069,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Рогов Віталій",
    "avg": 54.18
@@ -217970,7 +218079,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Семейко Віталій",
    "avg": 42.14
@@ -217980,7 +218089,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пекарук Ілля",
    "avg": 37.66
@@ -217990,7 +218099,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Сальніков Павло",
    "avg": 37.26
@@ -218000,7 +218109,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Троценко Артем",
    "avg": 36.67
@@ -218010,7 +218119,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "МорозовСергій",
    "avg": 46.04
@@ -218020,7 +218129,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Пономаренко Денис",
    "avg": 45.37
@@ -218030,7 +218139,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Букетова Iрина",
    "avg": 47.49
@@ -218040,7 +218149,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Моісеєнко Вiталiна",
    "avg": 41.85
@@ -218050,7 +218159,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чумак Ганна",
    "avg": 60.12
@@ -218060,7 +218169,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лузан Юлiя",
    "avg": 51.21
@@ -218070,7 +218179,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чабанова Ганна",
    "avg": 44.21
@@ -218080,7 +218189,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лузан Юлiя",
    "avg": 40.95
@@ -218090,7 +218199,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Букетова Iрина",
    "avg": 42.77
@@ -218100,7 +218209,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Черевко Свiтлана",
    "avg": 46.66
@@ -218110,7 +218219,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лях Свiтлана",
    "avg": 39.67
@@ -218120,7 +218229,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Моісеєнко Вiталiна",
    "avg": 37.8
@@ -218130,7 +218239,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Соколова Вiкторiя",
    "avg": 36.78
@@ -218140,7 +218249,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чумак Ганна",
    "avg": 34.45
@@ -218150,7 +218259,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Миколюк Яна",
    "avg": 33.15
@@ -218160,7 +218269,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Селіхова Тетяна",
    "avg": 33.02
@@ -218170,7 +218279,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Соколова Вiкторiя",
    "avg": 43.02
@@ -218180,7 +218289,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мєльтєва Iрина",
    "avg": 42.73
@@ -218190,7 +218299,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Черевко Свiтлана",
    "avg": 37.41
@@ -218200,7 +218309,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Селіхова Тетяна",
    "avg": 40.58
@@ -218210,7 +218319,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Спекторенко Катерина",
    "avg": 41.25
@@ -218220,7 +218329,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чумак Ганна",
    "avg": 41.16
@@ -218230,7 +218339,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Миколюк Яна",
    "avg": 32.46
@@ -218240,7 +218349,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Соколова Вiкторiя",
    "avg": 30.26
@@ -218250,7 +218359,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Черевко Свiтлана",
    "avg": 35.2
@@ -218260,7 +218369,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мєльтєва Iрина",
    "avg": 32.21
@@ -218270,7 +218379,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Полтавец Свiтлана",
    "avg": 51.83
@@ -218280,7 +218389,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Моісеєнко Вiталiна",
    "avg": 40.0
@@ -218290,7 +218399,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Гончаренко Мар'яна",
    "avg": 45.02
@@ -218300,7 +218409,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Букетова Iрина",
    "avg": 41.24
@@ -218310,7 +218419,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Селіхова Тетяна",
    "avg": 37.57
@@ -218320,7 +218429,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Соколова Вiкторiя",
    "avg": 35.13
@@ -218330,7 +218439,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Попова Наталiя",
    "avg": 37.19
@@ -218340,7 +218449,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лях Свiтлана",
    "avg": 36.06
@@ -218350,7 +218459,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Гончаренко Мар'яна",
    "avg": 46.97
@@ -218360,7 +218469,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чумак Ганна",
    "avg": 34.5
@@ -218370,7 +218479,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Черевко Свiтлана",
    "avg": 26.81
@@ -218380,7 +218489,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Миколюк Яна",
    "avg": 30.67
@@ -218390,7 +218499,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лузан Юлiя",
    "avg": 37.33
@@ -218400,7 +218509,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Стецюра Олена",
    "avg": 37.58
@@ -218410,7 +218519,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Висковатова Ганна",
    "avg": 24.77
@@ -218420,7 +218529,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чабанова Ганна",
    "avg": 24.39
@@ -218430,7 +218539,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Висковатова Ганна",
    "avg": 36.36
@@ -218440,7 +218549,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Моісеєнко Вiталiна",
    "avg": 35.62
@@ -218450,7 +218559,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лузан Юлiя",
    "avg": 37.3
@@ -218460,7 +218569,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лях Свiтлана",
    "avg": 43.47
@@ -218470,7 +218579,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Селіхова Тетяна",
    "avg": 38.25
@@ -218480,7 +218589,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мєльтєва Iрина",
    "avg": 37.17
@@ -218490,7 +218599,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чабанова Ганна",
    "avg": 28.35
@@ -218500,7 +218609,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Полтавец Свiтлана",
    "avg": 33.15
@@ -218510,7 +218619,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Стецюра Олена",
    "avg": 35.79
@@ -218520,7 +218629,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Попова Наталiя",
    "avg": 34.74
@@ -218530,7 +218639,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Черевко Свiтлана",
    "avg": 35.28
@@ -218540,7 +218649,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Соколова Вiкторiя",
    "avg": 37.54
@@ -218550,7 +218659,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Гончаренко Мар'яна",
    "avg": 34.83
@@ -218560,7 +218669,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Спекторенко Катерина",
    "avg": 36.21
@@ -218570,7 +218679,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Букетова Iрина",
    "avg": 39.9
@@ -218580,7 +218689,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Спекторенко Катерина",
    "avg": 42.29
@@ -218590,7 +218699,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Висковатова Ганна",
    "avg": 35.79
@@ -218600,7 +218709,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Полтавец Свiтлана",
    "avg": 29.8
@@ -218610,7 +218719,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лузан Юлiя",
    "avg": 34.33
@@ -218620,7 +218729,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Попова Наталiя",
    "avg": 41.37
@@ -218630,7 +218739,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Миколюк Яна",
    "avg": 27.66
@@ -218640,7 +218749,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Мєльтєва Iрина",
    "avg": 27.24
@@ -218650,7 +218759,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Букетова Iрина",
    "avg": 42.09
@@ -218660,7 +218769,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чумак Ганна",
    "avg": 37.68
@@ -218670,7 +218779,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Чабанова Ганна",
    "avg": 46.01
@@ -218680,7 +218789,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Моісеєнко Вiталiна",
    "avg": 38.94
@@ -218690,7 +218799,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Стецюра Олена",
    "avg": 37.83
@@ -218700,7 +218809,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "city": "Одеса",
    "opponent": "Лях Свiтлана",
    "avg": 38.07
@@ -313307,7 +313416,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Final",
    "city": "Одеса"
@@ -313322,7 +313431,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Semi-final",
    "city": "Одеса"
@@ -313337,7 +313446,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Semi-final",
    "city": "Одеса"
@@ -313352,7 +313461,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 3",
    "city": "Одеса"
@@ -313367,7 +313476,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 3",
    "city": "Одеса"
@@ -313382,7 +313491,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 3",
    "city": "Одеса"
@@ -313397,7 +313506,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 2",
    "city": "Одеса"
@@ -313412,7 +313521,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 2",
    "city": "Одеса"
@@ -313427,7 +313536,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 2",
    "city": "Одеса"
@@ -313442,7 +313551,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 2",
    "city": "Одеса"
@@ -313457,7 +313566,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 2",
    "city": "Одеса"
@@ -313472,7 +313581,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 2",
    "city": "Одеса"
@@ -313487,7 +313596,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 2",
    "city": "Одеса"
@@ -313502,7 +313611,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 2",
    "city": "Одеса"
@@ -313517,7 +313626,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -313532,7 +313641,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -313547,7 +313656,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -313562,7 +313671,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -313577,7 +313686,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -313592,7 +313701,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -313607,7 +313716,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -313622,7 +313731,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -313637,7 +313746,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -313652,7 +313761,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -313667,7 +313776,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -313682,7 +313791,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -313697,7 +313806,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -313712,7 +313821,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -313727,7 +313836,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -313742,7 +313851,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -313757,7 +313866,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -313772,7 +313881,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -313787,7 +313896,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -313802,7 +313911,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 12",
    "city": "Одеса"
@@ -313817,7 +313926,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 12",
    "city": "Одеса"
@@ -313832,7 +313941,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -313847,7 +313956,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -313862,7 +313971,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 12",
    "city": "Одеса"
@@ -313877,7 +313986,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -313892,7 +314001,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -313907,7 +314016,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -313922,7 +314031,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -313937,7 +314046,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -313952,7 +314061,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -313967,7 +314076,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -313982,7 +314091,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -313997,7 +314106,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -314012,7 +314121,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -314027,7 +314136,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 12",
    "city": "Одеса"
@@ -314042,7 +314151,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -314057,7 +314166,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 7",
    "city": "Одеса"
@@ -314072,7 +314181,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 6",
    "city": "Одеса"
@@ -314087,7 +314196,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 8",
    "city": "Одеса"
@@ -314102,7 +314211,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -314117,7 +314226,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 11",
    "city": "Одеса"
@@ -314132,7 +314241,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -314147,7 +314256,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -314162,7 +314271,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -314177,7 +314286,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -314192,7 +314301,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -314207,7 +314316,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 10",
    "city": "Одеса"
@@ -314222,7 +314331,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -314237,7 +314346,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 8",
    "city": "Одеса"
@@ -314252,7 +314361,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -314267,7 +314376,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 11",
    "city": "Одеса"
@@ -314282,7 +314391,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 12",
    "city": "Одеса"
@@ -314297,7 +314406,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -314312,7 +314421,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -314327,7 +314436,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -314342,7 +314451,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 6",
    "city": "Одеса"
@@ -314357,7 +314466,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -314372,7 +314481,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 10",
    "city": "Одеса"
@@ -314387,7 +314496,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -314402,7 +314511,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -314417,7 +314526,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -314432,7 +314541,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 11",
    "city": "Одеса"
@@ -314447,7 +314556,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -314462,7 +314571,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -314477,7 +314586,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 8",
    "city": "Одеса"
@@ -314492,7 +314601,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -314507,7 +314616,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -314522,7 +314631,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 12",
    "city": "Одеса"
@@ -314537,7 +314646,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -314552,7 +314661,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 7",
    "city": "Одеса"
@@ -314567,7 +314676,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 10",
    "city": "Одеса"
@@ -314582,7 +314691,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -314597,7 +314706,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -314612,7 +314721,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 6",
    "city": "Одеса"
@@ -314627,7 +314736,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 8",
    "city": "Одеса"
@@ -314642,7 +314751,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 11",
    "city": "Одеса"
@@ -314657,7 +314766,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -314672,7 +314781,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -314687,7 +314796,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -314702,7 +314811,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -314717,7 +314826,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 6",
    "city": "Одеса"
@@ -314732,7 +314841,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 10",
    "city": "Одеса"
@@ -314747,7 +314856,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 7",
    "city": "Одеса"
@@ -314762,7 +314871,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -314777,7 +314886,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -314792,7 +314901,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 8",
    "city": "Одеса"
@@ -314807,7 +314916,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 11",
    "city": "Одеса"
@@ -314822,7 +314931,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -314837,7 +314946,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -314852,7 +314961,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -314867,7 +314976,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -314882,7 +314991,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 12",
    "city": "Одеса"
@@ -314897,7 +315006,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 7",
    "city": "Одеса"
@@ -314912,7 +315021,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 10",
    "city": "Одеса"
@@ -314927,7 +315036,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 11",
    "city": "Одеса"
@@ -314942,7 +315051,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -314957,7 +315066,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -314972,7 +315081,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -314987,7 +315096,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 8",
    "city": "Одеса"
@@ -315002,7 +315111,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -315017,7 +315126,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -315032,7 +315141,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -315047,7 +315156,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -315062,7 +315171,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -315077,7 +315186,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 10",
    "city": "Одеса"
@@ -315092,7 +315201,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 6",
    "city": "Одеса"
@@ -315107,7 +315216,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -315122,7 +315231,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -315137,7 +315246,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -315152,7 +315261,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 12",
    "city": "Одеса"
@@ -315167,7 +315276,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 7",
    "city": "Одеса"
@@ -315182,7 +315291,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -315197,7 +315306,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -315212,7 +315321,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 11",
    "city": "Одеса"
@@ -315227,7 +315336,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -315242,7 +315351,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 8",
    "city": "Одеса"
@@ -315257,7 +315366,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 10",
    "city": "Одеса"
@@ -315272,7 +315381,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -315287,7 +315396,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -315302,7 +315411,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 6",
    "city": "Одеса"
@@ -315317,7 +315426,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 6",
    "city": "Одеса"
@@ -315332,7 +315441,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 7",
    "city": "Одеса"
@@ -315347,7 +315456,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -315362,7 +315471,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -315377,7 +315486,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -315392,7 +315501,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 8",
    "city": "Одеса"
@@ -315407,7 +315516,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 11",
    "city": "Одеса"
@@ -315422,7 +315531,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 10",
    "city": "Одеса"
@@ -315437,7 +315546,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 6",
    "city": "Одеса"
@@ -315452,7 +315561,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -315467,7 +315576,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -315482,7 +315591,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 7",
    "city": "Одеса"
@@ -315497,7 +315606,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -315512,7 +315621,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -315527,7 +315636,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 12",
    "city": "Одеса"
@@ -315542,7 +315651,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 8",
    "city": "Одеса"
@@ -315557,7 +315666,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -315572,7 +315681,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 6",
    "city": "Одеса"
@@ -315587,7 +315696,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -315602,7 +315711,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -315617,7 +315726,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -315632,7 +315741,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 11",
    "city": "Одеса"
@@ -315647,7 +315756,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 7",
    "city": "Одеса"
@@ -315662,7 +315771,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 10",
    "city": "Одеса"
@@ -315677,7 +315786,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -315692,7 +315801,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 6",
    "city": "Одеса"
@@ -315707,7 +315816,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 12",
    "city": "Одеса"
@@ -315722,7 +315831,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -315737,7 +315846,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -315752,7 +315861,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 7",
    "city": "Одеса"
@@ -315767,7 +315876,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 10",
    "city": "Одеса"
@@ -315782,7 +315891,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -315797,7 +315906,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 9",
    "city": "Одеса"
@@ -315812,7 +315921,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -315827,7 +315936,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 8",
    "city": "Одеса"
@@ -315842,7 +315951,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 11",
    "city": "Одеса"
@@ -315857,7 +315966,7 @@
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Mens - Odessa Mama Darts Fest Group 5",
    "city": "Одеса"
@@ -315872,7 +315981,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Semi-final",
    "city": "Одеса"
@@ -315887,7 +315996,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Semi-final",
    "city": "Одеса"
@@ -315902,7 +316011,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -315917,7 +316026,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -315932,7 +316041,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -315947,7 +316056,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Round 1",
    "city": "Одеса"
@@ -315962,7 +316071,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -315977,7 +316086,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -315992,7 +316101,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -316007,7 +316116,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -316022,7 +316131,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -316037,7 +316146,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -316052,7 +316161,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -316067,7 +316176,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -316082,7 +316191,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -316097,7 +316206,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -316112,7 +316221,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -316127,7 +316236,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -316142,7 +316251,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -316157,7 +316266,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -316172,7 +316281,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -316187,7 +316296,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -316202,7 +316311,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -316217,7 +316326,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -316232,7 +316341,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -316247,7 +316356,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -316262,7 +316371,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -316277,7 +316386,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -316292,7 +316401,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -316307,7 +316416,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
@@ -316322,7 +316431,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 4",
    "city": "Одеса"
@@ -316337,7 +316446,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 2",
    "city": "Одеса"
@@ -316352,7 +316461,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 1",
    "city": "Одеса"
@@ -316367,7 +316476,7 @@
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
-   "tournament": "Чемпіонат Одеси",
+   "tournament": "Кубок Одеси",
    "format": "501DO / Мастерс",
    "round": "Womens - Odessa Mama Darts Fest Group 3",
    "city": "Одеса"
