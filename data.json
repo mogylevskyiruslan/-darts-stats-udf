@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-11T17:46:52.816028+00:00",
+  "lastUpdated": "2026-09-11T19:42:54.628886+00:00",
   "tournamentsCount": 185
  },
  "tournaments": [
@@ -1444,13 +1444,13 @@
    "menAvg": null,
    "women": 11,
    "womenAvg": null,
-   "name": "ЧУ 2024 Criket",
+   "name": "ЧУ 2024 Cricket",
    "org": "ВФД",
-   "format": "Criket",
+   "format": "Cricket",
    "date": "11.10.2025",
    "city": "Кривий Ріг",
    "isUDL": false,
-   "chuCategory": "ЧУ Criket",
+   "chuCategory": "ЧУ Cricket",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/tournament/comp.php?id=t_DFrH_7545",
@@ -1611,7 +1611,7 @@
    "womenAvg": null,
    "name": "UDL CHIK CUP",
    "org": "УДЛ/ЗУДЛ",
-   "format": "Criket",
+   "format": "Cricket",
    "date": "10.08.2025",
    "city": "Ужгород",
    "isUDL": true,
@@ -2678,13 +2678,13 @@
    "menAvg": null,
    "women": 14,
    "womenAvg": null,
-   "name": "ЧУ 2024 Criket",
+   "name": "ЧУ 2024 Cricket",
    "org": "ВФД",
-   "format": "Criket",
+   "format": "Cricket",
    "date": "12.10.2024",
    "city": "Кривий Ріг",
    "isUDL": false,
-   "chuCategory": "ЧУ Criket",
+   "chuCategory": "ЧУ Cricket",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/tournament/comp.php?id=t_cEUL_6354",
@@ -3232,7 +3232,7 @@
    "womenAvg": null,
    "name": "UDL CHIK CUP",
    "org": "УДЛ/ЗУДЛ",
-   "format": "Criket",
+   "format": "Cricket",
    "date": "14.04.2024",
    "city": "Ужгород",
    "isUDL": true,
@@ -3675,13 +3675,13 @@
    "menAvg": null,
    "women": 8,
    "womenAvg": null,
-   "name": "ЧУ 2023 Criket",
+   "name": "ЧУ 2023 Cricket",
    "org": "ВФД",
-   "format": "Criket",
+   "format": "Cricket",
    "date": "11.11.2023",
    "city": "Кривий Ріг",
    "isUDL": false,
-   "chuCategory": "ЧУ Criket",
+   "chuCategory": "ЧУ Cricket",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/tournament/comp.php?id=t_tgVk_7027",
@@ -5013,11 +5013,10 @@
     }
    },
    "medals": {
-    "gold": "Бушуй Олексій",
-    "silver": "Омельченко Владислав",
+    "gold": "Омельченко Владислав/Марфола Оксана",
+    "silver": "Усик Артем/Ледєньова Наталя",
     "bronze": [
-     "Мамика Олександр",
-     "Ковальов Дмитро"
+     "Мамика Олександр/Харченко Тетяна"
     ]
    },
    "medalsWomen": {
@@ -5243,19 +5242,19 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Бушуй Олексій",
-    "silver": "Омельченко Владислав",
+    "gold": "Омельченко Владислав/Мамика Олександр",
+    "silver": "Усик Артем/Ледєньов Вадим",
     "bronze": [
-     "Мамика Олександр",
-     "Ковальов Дмитро"
+     "Тямолов Роман/Агневщиков Анатолій",
+     "Солтис Андрій/Рогов Віталій"
     ]
    },
    "medalsWomen": {
-    "gold": "Моісеєнко Віталіна",
-    "silver": "Чумак Ганна",
+    "gold": "Моісеєнко Віталіна/Ледєньова Наталя",
+    "silver": "Марфола Оксана/Харченко Тетяна",
     "bronze": [
-     "Харченко Тетяна",
-     "Ледєньова Наталія"
+     "Пивошенко Олена/Солтис Ганна",
+     "Чумак Ганна/Грушовець Ольга"
     ]
    },
    "nakkaMedals": null,
@@ -5327,19 +5326,17 @@
     }
    },
    "medals": {
-    "gold": "Бушуй Олексій",
-    "silver": "Омельченко Владислав",
+    "gold": "Кривий Ріг-1",
+    "silver": "Київ-1",
     "bronze": [
-     "Мамика Олександр",
-     "Ковальов Дмитро"
+     "Харків-1"
     ]
    },
    "medalsWomen": {
-    "gold": "Моісеєнко Віталіна",
-    "silver": "Чумак Ганна",
+    "gold": "Маріуполь",
+    "silver": "Дніпро-Київ",
     "bronze": [
-     "Харченко Тетяна",
-     "Ледєньова Наталія"
+     "Черкаси"
     ]
    },
    "nakkaMedals": null,
@@ -5477,13 +5474,13 @@
    "menAvg": null,
    "women": 15,
    "womenAvg": null,
-   "name": "ЧУ 2019 Criket",
+   "name": "ЧУ 2019 Cricket",
    "org": "ВФД",
-   "format": "Criket",
+   "format": "Cricket",
    "date": "16.03.2019",
    "city": "Кривий Ріг",
    "isUDL": false,
-   "chuCategory": "ЧУ Criket",
+   "chuCategory": "ЧУ Cricket",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5582,11 +5579,10 @@
     }
    },
    "medals": {
-    "gold": "Усик Артем",
-    "silver": "Омельченко Владислав",
+    "gold": "Усик Артем/Ледєньова Наталя",
+    "silver": "Ледєньов Вадим/Ільясова Альбіна",
     "bronze": [
-     "Бушуй Олексій",
-     "Мороз Ігор"
+     "Омельченко Владислав/Марфола Оксана"
     ]
    },
    "medalsWomen": {
@@ -5624,11 +5620,10 @@
     }
    },
    "medals": {
-    "gold": "Усик Артем",
-    "silver": "Омельченко Владислав",
+    "gold": "Усик Артем/Ледєньова Наталя",
+    "silver": "Ледєньов Вадим/Ільясова Альбіна",
     "bronze": [
-     "Бушуй Олексій",
-     "Мороз Ігор"
+     "Омельченко Владислав/Марфола Оксана"
     ]
    },
    "medalsWomen": {
@@ -5792,19 +5787,17 @@
     }
    },
    "medals": {
-    "gold": "Усик Артем",
-    "silver": "Омельченко Владислав",
+    "gold": "Усик Артем/Ледєньов Вадим",
+    "silver": "Бушуй Олексій/Котляр Юрій",
     "bronze": [
-     "Бушуй Олексій",
-     "Мороз Ігор"
+     "Омельченко Владислав/Мамика Олександр"
     ]
    },
    "medalsWomen": {
-    "gold": "Чумак Ганна",
-    "silver": "Павлюченко Марина",
+    "gold": "Редзюк Тетяна/Некрістова Наталія",
+    "silver": "Моісеєнко Віталіна/Ледєньова Наталя",
     "bronze": [
-     "Марфола Оксана",
-     "Моісеєнко Віталіна"
+     "Звягіна Анастасія/Ільясова Альбіна"
     ]
    },
    "nakkaMedals": null,
@@ -6022,19 +6015,17 @@
     }
    },
    "medals": {
-    "gold": "Усик Артем",
-    "silver": "Омельченко Владислав",
+    "gold": "Мамика Олександр",
+    "silver": "Залевський Володимир",
     "bronze": [
-     "Бушуй Олексій",
-     "Мороз Ігор"
+     "Рудковський Василь"
     ]
    },
    "medalsWomen": {
-    "gold": "Чумак Ганна",
-    "silver": "Павлюченко Марина",
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Грушовець Ольга",
     "bronze": [
-     "Марфола Оксана",
-     "Моісеєнко Віталіна"
+     "Чумак Ганна"
     ]
    },
    "nakkaMedals": null,
@@ -6112,19 +6103,17 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Усик Артем",
-    "silver": "Омельченко Владислав",
+    "gold": "Харків-1",
+    "silver": "Кривий Ріг-1",
     "bronze": [
-     "Бушуй Олексій",
-     "Мороз Ігор"
+     "Київ-1"
     ]
    },
    "medalsWomen": {
-    "gold": "Чумак Ганна",
-    "silver": "Павлюченко Марина",
+    "gold": "Маріуполь",
+    "silver": "Київ",
     "bronze": [
-     "Марфола Оксана",
-     "Моісеєнко Віталіна"
+     "Харків"
     ]
    },
    "nakkaMedals": null,
@@ -6262,13 +6251,13 @@
    "menAvg": null,
    "women": 11,
    "womenAvg": null,
-   "name": "ЧУ 2018 Criket",
+   "name": "ЧУ 2018 Cricket",
    "org": "ВФД",
-   "format": "Criket",
+   "format": "Cricket",
    "date": "17.03.2018",
    "city": "Кривий Ріг",
    "isUDL": false,
-   "chuCategory": "ЧУ Criket",
+   "chuCategory": "ЧУ Cricket",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6451,11 +6440,10 @@
     }
    },
    "medals": {
-    "gold": "Усик Артем",
-    "silver": "Невінчаний Едуард",
+    "gold": "Бушуй Олексій/Павлюченко Марина",
+    "silver": "Бурмака Павло/Моісеєнко Віталіна",
     "bronze": [
-     "Омельченко Владислав",
-     "Марков Сергій"
+     "Мигалюк Родіон/Саїнчук Тетяна"
     ]
    },
    "medalsWomen": {
@@ -6619,19 +6607,17 @@
     }
    },
    "medals": {
-    "gold": "Усик Артем",
-    "silver": "Невінчаний Едуард",
+    "gold": "Сташевський Валентин/Сохаіл Соул",
+    "silver": "Усик Артем/Ледєньов Вадим",
     "bronze": [
-     "Омельченко Владислав",
-     "Марков Сергій"
+     "Омельченко Владислав/Васюра Андрій"
     ]
    },
    "medalsWomen": {
-    "gold": "Моісеєнко Віталіна",
-    "silver": "Чумак Ганна",
+    "gold": "Моісеєнко Віталіна/Анісімова Світлана",
+    "silver": "Чумак Ганна/Грушовець Ольга",
     "bronze": [
-     "Ледєньова Наталія",
-     "Павлюченко Марина"
+     "Ледєньова Наталя/Павлюченко Марина"
     ]
    },
    "nakkaMedals": null,
@@ -6875,19 +6861,17 @@
     }
    },
    "medals": {
-    "gold": "Усик Артем",
-    "silver": "Невінчаний Едуард",
+    "gold": "Кривбас-1",
+    "silver": "Київ-1",
     "bronze": [
-     "Омельченко Владислав",
-     "Марков Сергій"
+     "Черкаси-1"
     ]
    },
    "medalsWomen": {
-    "gold": "Моісеєнко Віталіна",
-    "silver": "Чумак Ганна",
+    "gold": "Моісеєнко Віталіна/Анісімова Світлана",
+    "silver": "Чумак Ганна/Грушовець Ольга",
     "bronze": [
-     "Ледєньова Наталія",
-     "Павлюченко Марина"
+     "Ледєньова Наталя/Павлюченко Марина"
     ]
    },
    "nakkaMedals": null,
@@ -7025,13 +7009,13 @@
    "menAvg": null,
    "women": 7,
    "womenAvg": null,
-   "name": "ЧУ 2017 Criket",
+   "name": "ЧУ 2017 Cricket",
    "org": "ВФД",
-   "format": "Criket",
+   "format": "Cricket",
    "date": "18.03.2017",
    "city": "Кривий Ріг",
    "isUDL": false,
-   "chuCategory": "ЧУ Criket",
+   "chuCategory": "ЧУ Cricket",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7211,11 +7195,10 @@
     }
    },
    "medals": {
-    "gold": "Бушуй Олексій",
-    "silver": "Григоренко Денис",
+    "gold": "Усик Артем/Ледєньова Наталія",
+    "silver": "Мамика Олександр/Чумак Ганна",
     "bronze": [
-     "Васюра Андрій",
-     "Омельченко Владислав"
+     "Григоренко Денис/Редзюк Тетяна"
     ]
    },
    "medalsWomen": {
@@ -7277,13 +7260,13 @@
    "menAvg": null,
    "women": 6,
    "womenAvg": null,
-   "name": "ЧУ 2016 Criket",
+   "name": "ЧУ 2016 Cricket",
    "org": "ВФД",
-   "format": "Criket",
+   "format": "Cricket",
    "date": "15.10.2016",
    "city": "Харків",
    "isUDL": false,
-   "chuCategory": "ЧУ Criket",
+   "chuCategory": "ЧУ Cricket",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7379,19 +7362,18 @@
     }
    },
    "medals": {
-    "gold": "Бушуй Олексій",
-    "silver": "Григоренко Денис",
+    "gold": "Усик Артем/Григоренко Денис",
+    "silver": "Бадира/Томчук",
     "bronze": [
-     "Васюра Андрій",
-     "Омельченко Владислав"
+     "Омельченко Владислав/Васюра Андрій",
+     "Агневщиков Юрій/Буханцов Тарас"
     ]
    },
    "medalsWomen": {
-    "gold": "Анісімова Світлана",
-    "silver": "Чумак Ганна",
+    "gold": "Редзюк Тетяна/Ледєньова Наталя",
+    "silver": "Моісеєнко Віталіна/Анісімова Світлана",
     "bronze": [
-     "Редзюк Тетяна",
-     "Грушовець Ольга"
+     "Чумак Ганна/Грушовець Ольга"
     ]
    },
    "nakkaMedals": null,
@@ -7447,7 +7429,7 @@
    "womenAvg": null,
    "name": "Кубок України",
    "org": "ВФД",
-   "format": "Criket / 3 етап",
+   "format": "Cricket / 3 етап",
    "date": "06.08.2016",
    "city": "Луцьк",
    "isUDL": false,
@@ -7531,7 +7513,7 @@
    "womenAvg": null,
    "name": "Кубок України",
    "org": "ВФД",
-   "format": "Criket / 2 етап",
+   "format": "Cricket / 2 етап",
    "date": "25.06.2016",
    "city": "Чернівці",
    "isUDL": false,
@@ -7631,19 +7613,17 @@
     }
    },
    "medals": {
-    "gold": "Бушуй Олексій",
-    "silver": "Григоренко Денис",
+    "gold": "Київ-1",
+    "silver": "Кривий Ріг-1",
     "bronze": [
-     "Васюра Андрій",
-     "Омельченко Владислав"
+     "Черкаси-2"
     ]
    },
    "medalsWomen": {
-    "gold": "Анісімова Світлана",
-    "silver": "Чумак Ганна",
+    "gold": "Київ-1",
+    "silver": "Маріуполь",
     "bronze": [
-     "Редзюк Тетяна",
-     "Грушовець Ольга"
+     "Дніпро"
     ]
    },
    "nakkaMedals": null,
@@ -7699,7 +7679,7 @@
    "womenAvg": null,
    "name": "Кубок України",
    "org": "ВФД",
-   "format": "Criket / 1 етап",
+   "format": "Cricket / 1 етап",
    "date": "19.03.2016",
    "city": "Кривий Ріг",
    "isUDL": false,
@@ -7799,11 +7779,10 @@
     }
    },
    "medals": {
-    "gold": "Пасичніченко Артрем",
-    "silver": "Усик Артем",
+    "gold": "Усик Артем/Ледєньова Наталя",
+    "silver": "Мамика Олександр/Чумак Ганна",
     "bronze": [
-     "Омельченко Владислав",
-     "Григоренко Денис"
+     "Бурмака Павло/Моісеєнко Віталіна"
     ]
    },
    "medalsWomen": {
@@ -7865,13 +7844,13 @@
    "menAvg": null,
    "women": 6,
    "womenAvg": null,
-   "name": "ЧУ 2015 Criket",
+   "name": "ЧУ 2015 Cricket",
    "org": "ВФД",
-   "format": "Criket",
+   "format": "Cricket",
    "date": "17.10.2015",
    "city": "Харків",
    "isUDL": false,
-   "chuCategory": "ЧУ Criket",
+   "chuCategory": "ЧУ Cricket",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7967,19 +7946,17 @@
     }
    },
    "medals": {
-    "gold": "Пасичніченко Артрем",
-    "silver": "Усик Артем",
+    "gold": "Усик Артем/Ледєньов Вадим",
+    "silver": "Савенков Антон/Бутрій Володимир",
     "bronze": [
-     "Омельченко Владислав",
-     "Григоренко Денис"
+     "Алхімов Андрій/Мороз Ігор"
     ]
    },
    "medalsWomen": {
-    "gold": "Моісеєнко Віталіна",
-    "silver": "Марфола Оксана",
+    "gold": "Моісеєнко Віталіна/Марфола Оксана",
+    "silver": "Чумак Ганна/Анісімова Світлана",
     "bronze": [
-     "Редзюк Тетяна",
-     "Квиклене Рената"
+     "Потан Лілія/Калаур Інна"
     ]
    },
    "nakkaMedals": null,
@@ -7993,7 +7970,7 @@
    "womenAvg": null,
    "name": "Кубок України",
    "org": "ВФД",
-   "format": "Criket / 2 етап",
+   "format": "Cricket / 2 етап",
    "date": "02.08.2015",
    "city": "Луцьк",
    "isUDL": false,
@@ -8102,19 +8079,17 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Пасичніченко Артрем",
-    "silver": "Усик Артем",
+    "gold": "Черкаси-2",
+    "silver": "Кривий Ріг-1",
     "bronze": [
-     "Омельченко Владислав",
-     "Григоренко Денис"
+     "Волинь"
     ]
    },
    "medalsWomen": {
-    "gold": "Моісеєнко Віталіна",
-    "silver": "Марфола Оксана",
+    "gold": "Черкаси-1",
+    "silver": "Дніпропетровськ",
     "bronze": [
-     "Редзюк Тетяна",
-     "Квиклене Рената"
+     "Маріуполь"
     ]
    },
    "nakkaMedals": null,
@@ -8218,7 +8193,7 @@
    "womenAvg": null,
    "name": "Кубок України",
    "org": "ВФД",
-   "format": "Criket / 1 етап",
+   "format": "Cricket / 1 етап",
    "date": "14.03.2015",
    "city": "Кривий Ріг",
    "isUDL": false,
@@ -318972,10 +318947,10 @@
  ],
  "telegramNews": [
   {
-   "text": "ВФД запустила статистичний сайт:\n- історичні результати\n- статистику і рекорди\n- поточні показники\n- профіль гравця з вичерпною особистою статистикою\n- історію протистоянь\n- новини дартсу УкраЇни\n- трансляції турнірів\n- і багато іншого.\n👀 \n🤝Подяка за величезну роботу Могилевскому Руслану, Кудрявцеву Євгену.",
+   "text": "ВФД запустила статистичний сайт:\n- історичні результати\n- статистику і рекорди\n- поточні показники\n- профіль гравця з вичерпною особистою статистикою\n- історію протистоянь\n- новини дартсу України\n- трансляції турнірів\n- і багато іншого.\n👀 \n🤝Подяка за величезну роботу Могилевскому Руслану, Кудрявцеву Євгену.",
    "date": "2026-09-10",
    "url": "https://t.me/fullbull/12664",
-   "photo": "https://cdn4.telesco.pe/file/rwvTl3Y2mA_AaEnniGr5rVy7usdr9XNuOcfjRVEv0iqq71QwSlTqDr1262PQXVYBgxP7lp45Iz10GH9Y8nvvplUUlgYoVc6bKRxc-psCLzF1Wab4aFQi3W760GtLlRwaTF5u-uORhrtErH1q9HVGbMwjblBpfiyJkK4wvfElwTTaFDDjbeG5LZRGbiAiL2ePzpzrXxT53WCal000nIA3sKrUcLk3OWNlcpuAPQusynI4UI7c9ZZ1dYY6GebckX9tjVBtNdeD-kC1L1P8pukOQhlxN8wodKz2sT0Wha1wkdK6iNTNJiSOHc_GrtTaIcF9ZzFUjFQl7c9zOmpO057HJg.jpg"
+   "photo": "https://cdn4.telesco.pe/file/JQj5dk6iRcCkAfqi6gjFvZxFSOfLsfynfAllhtr0fAeH-GqyyJdnr1Qq-mH2lKfiW_OUtlr5wWX0juoXeUV9b2SXCLfjLQKPASA8GG603eUE5iUZQdVqG-WvAIGVhgtxz19mTkTLXJXTjjVyLCkDn9gfvfNpBC6v16DveZ1QoOquyzIFAeRZFRJjI3Dgv6M7oJZmMkrUoj-5_4TWUEyFtGFNyJl-9VPlceuv0-57LQpqVQz9I-HLicqWA3KvDSMSM1xFpC5KawM5n4495rL4oxZB7lMX4M_3ec74lh1zuKHycUvc-w7G9nCmlJf1CXjXSsuGBZD_ok2CgvupreJ9Xw.jpg"
   },
   {
    "text": "Після 22 турнірів FullBull Series 2026, на перших стрічках обох рейтингів повна рівність, лише за кількістю титулів Абчугський Олександр випереджає Бабаніна Дмитра: 6 проти 3.",
@@ -318987,7 +318962,7 @@
    "text": "🏆У чоловіків кубковий етап в Одесі за Овсієнко Євгеном. Вже традиційний двобій зі Сташевським Валентином вийшов на користь киянина 5-4.\n🥇Овсієнко Є.\n🥈Сташевський В.\n🥉Мелашенко В.\n1️⃣8️⃣0️⃣х3️⃣ - Омельченко В.\n1️⃣8️⃣0️⃣х2️⃣ - Сташевський В.\n1️⃣8️⃣0️⃣ - Гакман С., Овсієнко Є., Мелашенко В.,\nАбчугський О., Солтис М., \n☑️Чекаути 100+:\n1️⃣4️⃣4️⃣ - Овсієнко Є.\n1️⃣4️⃣2️⃣ - Могилевський Р.\n1️⃣2️⃣6️⃣ - Мелашенко В.\n1️⃣1️⃣7️⃣ - Мелашенко В. \n1️⃣1️⃣6️⃣ - Сташевський В.\n1️⃣1️⃣5️⃣ - Омельченко В.\n1️⃣1️⃣0️⃣ -",
    "date": "2026-09-06",
    "url": "https://t.me/fullbull/12652",
-   "photo": "https://cdn4.telesco.pe/file/nbqqNXwVvXuuX-r0Oizo1SEuA_Z-Rv2Dv5f-1pChfYadhe4S5ZFlO2B3YmWEP1y7UU8Y2tR4h9fgPk1c0H-n7ZmZN7cz4eeQ638xGfKVyTI23FFv-G9jorTogR_IEZnF13xYqp6rgtpZkU3cee3ijoLCj6sDFv5p-1Ipa_Qq5exCPwUEiYogGpkpPk5f3EaTiAOzraKMf6rCwrmsalK7FdGtT6rr8jmYGz2XiY3FHe2Fm5gs9WcKzbcn6Lb5pxmcNeAdQJd3rgcUAaGxbXRpHPTqbAwi5A2i39XsFTeswJmDlRBcrpHZY2cWuGjkiUoiAEdiU5POUhU6_HoGFx10BA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/CbFh2AaKmJOJ2tn6WKVP-sGPVkyJ4vt1dRBgeoPjjV2BKWTDaVAHpFHNpyxIaHIMa3qA_9ik9LYIMB0vPSwzfo8GxK7J29j3-xnjONY5U2uLZiMUPkMdfNI9mj2HU4gvBagXJWM7voZYt9d4FgROUfIGaumOF5lRi92r9M2vTdgyUbvgPqLje8_GMDa3OSehJQDfdUdSRv0GqUxs4Dezf9q6krDUWvjM4EmmJFXJNOPsqS1dYKQ03IJnVSLiu7yD0UCVML5vfec8XgKDD3hb25W6otPKZZjUOKi4fT1wPGtdvtaZC_2Rqffu4PGInH-hA4uIwahXYXBK9MxbGWYR6Q.jpg"
   },
   {
    "text": "🏆Переможниця ІV-етапу Кубку України в Одесі серед жінок - Харченко Тетяна.\n🥇Харченко Т.\n🥈Гончаренко І.\n🥉Шклярук Н.\n1️⃣8️⃣0️⃣ - Харченко Т.\n👀",
@@ -319005,7 +318980,7 @@
    "text": "🏆У чоловіків титул Чемпіонів України у парному розряді в 2026 році вибороли одесити: Сташевський В./Фатех Д. \n🥇Сташевський В./Фатех Д. \n🥈Овсієнко Є./Абчугський О.\n🥉Гончаров Е./Агневщиков Ю. \n1️⃣8️⃣0️⃣х3️⃣ - Сташевський В./Фатех Д. \n1️⃣8️⃣0️⃣ - Омельченко В./Гакман С., Могилевський Р./Шапка Є., Гончаров Е./Агневщиков Ю., Аверін С./Братченко В., Микитин Я./Стецишин В., Акользін Д./Пивошенко М., Мельник О./Урсаки О.\n☑️Чекаути 100+:\n1️⃣3️⃣9️⃣ - Овсієнко Є./Абчугський О.\n1️⃣2️⃣9️⃣ - Мелашенко В./Павл",
    "date": "2026-09-05",
    "url": "https://t.me/fullbull/12644",
-   "photo": "https://cdn4.telesco.pe/file/URP_ISpqwC3qzBSpt7G25XvXfcduJli1PRwOtUGpvBKcXl_eH_Q530cgWKMoCzxDQ2Gx8EsT0C8hTjuWR8Eg83B9Px8zW5gVFeaZii6lmTNFX1s-mc4rh-vHQm01cT1iwrxYrmC8n4lcARkP8c6O8DebycQ0ZB-ElU5yjAlK1R_ubG9YTVSqR_J4kuCQl_BY5ehPA-Q15xwRLl-NGStUrU1NCJX5g7OaAKZc3gTPEU8zhewzTCFuKY5h8TYvzwS41Q2tpVQmGyHJ6PnS24JpLrEgp09XRskGlAhUtNLBGcjq1NWA6vi-zD9s5g9GxoUEIj6BiDK-yGX0eCiZrwzYnQ.jpg"
+   "photo": "https://cdn4.telesco.pe/file/KgrPMiloQ6uOqvVZrUFtWpjA0yziAzFUrj0VjjmalMzYY0n3m_UdnwJYQO_kYbJnNUxgVvLUursfIyjeaSlSb6X_ftozsofamsm4Ps5yuGmbhu4eZDvnyOIah882xuPSHyTAb59G7eSEl81LsHuzs24JsT2a_ddsqXqJKq48ew3ZIchYvPXValb33lnNfjjjGSoi4y_XFeY9QQ5b_l7kqWGSFJE8I6A_jNIkBMyKyb3E7zgzPwjTCiv3S0SxtpU6P3YWtrWY706hn3g1JpabL40mGLrfeW_8ugb4RRkLwpLlcR2u5agtKT1HlmAFmKJ1E8Y3dQGyKmpMR-Ai70iYBg.jpg"
   }
  ]
 }
