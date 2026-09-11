@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-11T15:06:12.742410+00:00",
+  "lastUpdated": "2026-09-11T17:46:52.816028+00:00",
   "tournamentsCount": 185
  },
  "tournaments": [
@@ -16,6 +16,7 @@
    "date": "06.09.2026",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -70,6 +71,7 @@
    "date": "05.09.2026",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "ЧУ Пари",
    "links": {
     "men": null,
     "menAvg": {
@@ -112,6 +114,7 @@
    "date": "16.08.2026",
    "city": "Львів",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -154,6 +157,7 @@
    "date": "15.08.2026",
    "city": "Львів",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -196,6 +200,7 @@
    "date": "14.08.2026",
    "city": "Львів",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/league/season.php?id=t_RINS_8291",
@@ -244,6 +249,7 @@
    "date": "12.07.2026",
    "city": "Полтава",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -298,6 +304,7 @@
    "date": "11.07.2026",
    "city": "Полтава",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DIDO",
    "links": {
     "men": null,
     "menAvg": {
@@ -340,6 +347,7 @@
    "date": "21.06.2026",
    "city": "Одеса",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -382,6 +390,7 @@
    "date": "20.06.2026",
    "city": "Одеса",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -424,6 +433,7 @@
    "date": "24.05.2026",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "ЧУ Команди",
    "links": {
     "men": null,
     "menAvg": {
@@ -466,6 +476,7 @@
    "date": "23.05.2026",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -520,6 +531,7 @@
    "date": "17.05.2026",
    "city": "Львів",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -574,6 +586,7 @@
    "date": "16.05.2026",
    "city": "Львів",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -616,6 +629,7 @@
    "date": "15.05.2026",
    "city": "Львів",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/league/season.php?id=t_8Nch_0492",
@@ -664,6 +678,7 @@
    "date": "26.04.2026",
    "city": "Вижниця",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -706,6 +721,7 @@
    "date": "25.04.2026",
    "city": "Вижниця",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -760,6 +776,7 @@
    "date": "24.04.2026",
    "city": "Вижниця",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/league/season.php?id=t_yobD_8897",
@@ -808,6 +825,7 @@
    "date": "22.03.2026",
    "city": "Луцьк",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -850,6 +868,7 @@
    "date": "21.03.2026",
    "city": "Луцьк",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -904,6 +923,7 @@
    "date": "22.02.2026",
    "city": "Львів",
    "isUDL": false,
+   "chuCategory": "ЧУ Мікст",
    "links": {
     "men": null,
     "menAvg": null,
@@ -937,6 +957,7 @@
    "date": "21.02.2026",
    "city": "Львів",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -991,6 +1012,7 @@
    "date": "25.01.2026",
    "city": "Славсько",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -1024,6 +1046,7 @@
    "date": "24.01.2026",
    "city": "Славсько",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -1078,6 +1101,7 @@
    "date": "23.01.2026",
    "city": "Славсько",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/league/season.php?id=t_3Pgs_7890",
@@ -1126,6 +1150,7 @@
    "date": "14.12.2025",
    "city": "Вижниця",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -1168,6 +1193,7 @@
    "date": "13.12.2025",
    "city": "Вижниця",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
    "links": {
     "men": null,
     "menAvg": {
@@ -1222,6 +1248,7 @@
    "date": "12.12.2025",
    "city": "Вижниця",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -1264,6 +1291,7 @@
    "date": "16.11.2025",
    "city": "Львів",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -1318,6 +1346,7 @@
    "date": "15.11.2025",
    "city": "Львів",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/league/season.php?id=t_cPxa_8532",
@@ -1366,6 +1395,7 @@
    "date": "12.10.2025",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -1420,6 +1450,7 @@
    "date": "11.10.2025",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "ЧУ Criket",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/tournament/comp.php?id=t_DFrH_7545",
@@ -1474,6 +1505,7 @@
    "date": "14.09.2025",
    "city": "Львів",
    "isUDL": false,
+   "chuCategory": "ЧУ Пари",
    "links": {
     "men": null,
     "menAvg": {
@@ -1528,6 +1560,7 @@
    "date": "13.09.2025",
    "city": "Львів",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -1582,6 +1615,7 @@
    "date": "10.08.2025",
    "city": "Ужгород",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/league/season.php?id=t_SzVl_9545",
@@ -1624,6 +1658,7 @@
    "date": "09.08.2025",
    "city": "Ужгород",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -1678,6 +1713,7 @@
    "date": "06.07.2025",
    "city": "Полтава",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DIDO",
    "links": {
     "men": null,
     "menAvg": {
@@ -1732,6 +1768,7 @@
    "date": "05.07.2025",
    "city": "Полтава",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -1786,6 +1823,7 @@
    "date": "22.06.2025",
    "city": "Одеса",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -1828,6 +1866,7 @@
    "date": "21.06.2025",
    "city": "Одеса",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -1882,6 +1921,7 @@
    "date": "18.05.2025",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -1936,6 +1976,7 @@
    "date": "17.05.2025",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "ЧУ Команди",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/tournament/comp.php?id=t_cH5L_1628",
@@ -1990,6 +2031,7 @@
    "date": "27.04.2025",
    "city": "Вижниця",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -2032,6 +2074,7 @@
    "date": "26.04.2025",
    "city": "Вижниця",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -2086,6 +2129,7 @@
    "date": "23.03.2025",
    "city": "Луцьк",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -2128,6 +2172,7 @@
    "date": "22.03.2025",
    "city": "Луцьк",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -2182,6 +2227,7 @@
    "date": "16.02.2025",
    "city": "Львів",
    "isUDL": false,
+   "chuCategory": "ЧУ Мікст",
    "links": {
     "men": null,
     "menAvg": null,
@@ -2227,6 +2273,7 @@
    "date": "15.02.2025",
    "city": "Львів",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -2281,6 +2328,7 @@
    "date": "26.01.2025",
    "city": "Славсько",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -2314,6 +2362,7 @@
    "date": "25.01.2025",
    "city": "Славсько",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -2368,6 +2417,7 @@
    "date": "08.12.2024",
    "city": "Львів",
    "isUDL": false,
+   "chuCategory": "ЧУ Мікст",
    "links": {
     "men": null,
     "menAvg": null,
@@ -2415,6 +2465,7 @@
    "date": "07.12.2024",
    "city": "Львів",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
    "links": {
     "men": null,
     "menAvg": {
@@ -2471,6 +2522,7 @@
    "date": "06.12.2024",
    "city": "Львів",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -2504,6 +2556,7 @@
    "date": "10.11.2024",
    "city": "Чернівці",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -2537,6 +2590,7 @@
    "date": "09.11.2024",
    "city": "Чернівці",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -2573,6 +2627,7 @@
    "date": "13.10.2024",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -2629,6 +2684,7 @@
    "date": "12.10.2024",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "ЧУ Criket",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/tournament/comp.php?id=t_cEUL_6354",
@@ -2685,6 +2741,7 @@
    "date": "08.09.2024",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -2741,6 +2798,7 @@
    "date": "07.09.2024",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "ЧУ Пари",
    "links": {
     "men": null,
     "menAvg": {
@@ -2797,6 +2855,7 @@
    "date": "11.08.2024",
    "city": "Київ",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -2830,6 +2889,7 @@
    "date": "10.08.2024",
    "city": "Київ",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -2863,6 +2923,7 @@
    "date": "21.07.2024",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -2919,6 +2980,7 @@
    "date": "20.07.2024",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DIDO",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/tournament/comp.php?id=t_znnr_3293",
@@ -2978,6 +3040,7 @@
    "date": "23.06.2024",
    "city": "Одеса",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -3011,6 +3074,7 @@
    "date": "22.06.2024",
    "city": "Одеса",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -3058,6 +3122,7 @@
    "date": "19.05.2024",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -3114,6 +3179,7 @@
    "date": "18.05.2024",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "ЧУ Команди",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/tournament/comp.php?id=t_OY6O_0762",
@@ -3170,6 +3236,7 @@
    "date": "14.04.2024",
    "city": "Ужгород",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -3203,6 +3270,7 @@
    "date": "13.04.2024",
    "city": "Ужгород",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -3253,6 +3321,7 @@
    "date": "24.03.2024",
    "city": "Луцьк",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -3286,6 +3355,7 @@
    "date": "23.03.2024",
    "city": "Луцьк",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -3333,6 +3403,7 @@
    "date": "18.02.2024",
    "city": "Львів",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -3366,6 +3437,7 @@
    "date": "17.02.2024",
    "city": "Львів",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -3413,6 +3485,7 @@
    "date": "03.12.2023",
    "city": "Львів",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
    "links": {
     "men": null,
     "menAvg": {
@@ -3469,6 +3542,7 @@
    "date": "02.12.2023",
    "city": "Львів",
    "isUDL": false,
+   "chuCategory": "ЧУ Мікст",
    "links": {
     "men": null,
     "menAvg": null,
@@ -3516,6 +3590,7 @@
    "date": "01.12.2023",
    "city": "Львів",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -3549,6 +3624,7 @@
    "date": "12.11.2023",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -3605,6 +3681,7 @@
    "date": "11.11.2023",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "ЧУ Criket",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/tournament/comp.php?id=t_tgVk_7027",
@@ -3661,6 +3738,7 @@
    "date": "10.09.2023",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -3717,6 +3795,7 @@
    "date": "09.09.2023",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "ЧУ Пари",
    "links": {
     "men": null,
     "menAvg": {
@@ -3773,6 +3852,7 @@
    "date": "20.08.2023",
    "city": "Луцьк",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -3806,6 +3886,7 @@
    "date": "19.08.2023",
    "city": "Луцьк",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -3853,6 +3934,7 @@
    "date": "30.07.2023",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -3909,6 +3991,7 @@
    "date": "29.07.2023",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DIDO",
    "links": {
     "men": null,
     "menAvg": {
@@ -3965,6 +4048,7 @@
    "date": "11.06.2023",
    "city": "Ужгород",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -3998,6 +4082,7 @@
    "date": "10.06.2023",
    "city": "Ужгород",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -4045,6 +4130,7 @@
    "date": "21.05.2023",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -4101,6 +4187,7 @@
    "date": "20.05.2023",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "ЧУ Команди",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/tournament/comp.php?id=t_L4br_3066",
@@ -4157,6 +4244,7 @@
    "date": "30.04.2023",
    "city": "Чернівці",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://docs.google.com/document/d/1igThzehzvfy5JTd954NRA5mXX_czZrm3jgJ6uFc5bn4/edit?tab=t.0",
@@ -4193,6 +4281,7 @@
    "date": "29.04.2023",
    "city": "Чернівці",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -4240,6 +4329,7 @@
    "date": "26.03.2023",
    "city": "Львів",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -4296,6 +4386,7 @@
    "date": "25.03.2023",
    "city": "Львів",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -4352,6 +4443,7 @@
    "date": "05.02.2023",
    "city": "Львів",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -4385,6 +4477,7 @@
    "date": "04.02.2023",
    "city": "Львів",
    "isUDL": true,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -4432,6 +4525,7 @@
    "date": "04.12.2022",
    "city": "Львів",
    "isUDL": false,
+   "chuCategory": "ЧУ Пари",
    "links": {
     "men": null,
     "menAvg": null,
@@ -4478,6 +4572,7 @@
    "date": "03.12.2022",
    "city": "Львів",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
    "links": {
     "men": {
      "url": "https://n01darts.com/n01/tournament/comp.php?id=t_tZUs_2669",
@@ -4533,6 +4628,7 @@
    "date": "18.09.2022",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -4566,6 +4662,7 @@
    "date": "17.09.2022",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -4599,6 +4696,7 @@
    "date": "12.09.2021",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -4641,6 +4739,7 @@
    "date": "11.09.2021",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": {
@@ -4683,6 +4782,7 @@
    "date": "23.05.2021",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://docs.google.com/document/d/1qXjLtDVZoni3in3duLCflqw42CJQn8mf9_GziuhhsrM/edit?tab=t.0",
@@ -4727,6 +4827,7 @@
    "date": "22.05.2021",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "ЧУ Команди",
    "links": {
     "men": {
      "url": "https://docs.google.com/document/d/1wpUzT3mH-HmaFdhT4kZAGalohTZm6J3RyO3v-KSqRIk/edit?tab=t.0",
@@ -4771,6 +4872,7 @@
    "date": "01.03.2020",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -4812,6 +4914,7 @@
    "date": "29.02.2020",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -4853,6 +4956,7 @@
    "date": "07.12.2019",
    "city": "Харків",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
    "links": {
     "men": {
      "url": "https://docs.google.com/spreadsheets/d/1SUK5AScW6R2XN2LslXWCeaHxFey0hxlaMTJNP8zqtDo/edit?gid=1331416495#gid=1331416495",
@@ -4897,6 +5001,7 @@
    "date": "06.12.2019",
    "city": "Харків",
    "isUDL": false,
+   "chuCategory": "ЧУ Мікст",
    "links": {
     "men": null,
     "menAvg": null,
@@ -4938,6 +5043,7 @@
    "date": "15.09.2019",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -4965,6 +5071,7 @@
    "date": "15.09.2019",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5006,6 +5113,7 @@
    "date": "14.09.2019",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5033,6 +5141,7 @@
    "date": "14.09.2019",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5074,6 +5183,7 @@
    "date": "16.06.2019",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://docs.google.com/spreadsheets/d/1k4GELE-3q38mLDiYx9KekS4b3o1VUbPVu6tZ0As38P4/edit?gid=885816906#gid=885816906",
@@ -5118,6 +5228,7 @@
    "date": "15.06.2019",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "ЧУ Пари",
    "links": {
     "men": {
      "url": "https://docs.google.com/spreadsheets/d/1GEqBy_yIowuqoms3GLtiqnbPH_otNa3OFAVNe36vc0I/edit?gid=1984699608#gid=1984699608",
@@ -5162,6 +5273,7 @@
    "date": "19.05.2019",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5203,6 +5315,7 @@
    "date": "18.05.2019",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "ЧУ Команди",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5244,6 +5357,7 @@
    "date": "14.04.2019",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5285,6 +5399,7 @@
    "date": "13.04.2019",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5326,6 +5441,7 @@
    "date": "17.03.2019",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5367,6 +5483,7 @@
    "date": "16.03.2019",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "ЧУ Criket",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5408,6 +5525,7 @@
    "date": "09.12.2018",
    "city": "Харків",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
    "links": {
     "men": {
      "url": "https://docs.google.com/spreadsheets/d/16vdSOoiiuTudVpfqFHDt6yAOUFLsbN2tXy-rPqDS5L8/edit?gid=1331416495#gid=1331416495",
@@ -5452,6 +5570,7 @@
    "date": "08.12.2018",
    "city": "Харків",
    "isUDL": false,
+   "chuCategory": "ЧУ Юнаки",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5493,6 +5612,7 @@
    "date": "08.12.2018",
    "city": "Харків",
    "isUDL": false,
+   "chuCategory": "ЧУ Мікст",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5534,6 +5654,7 @@
    "date": "04.11.2018",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5575,6 +5696,7 @@
    "date": "03.11.2018",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5616,6 +5738,7 @@
    "date": "09.09.2018",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5657,6 +5780,7 @@
    "date": "08.09.2018",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "ЧУ Пари",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5698,6 +5822,7 @@
    "date": "12.08.2018",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5725,6 +5850,7 @@
    "date": "12.08.2018",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://docs.google.com/spreadsheets/d/1f45KdyqT6UwvM2bWvNJETvQxABPlfnH1SC3pk0GFrqo/edit?gid=1090590442#gid=1090590442",
@@ -5769,6 +5895,7 @@
    "date": "11.08.2018",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5796,6 +5923,7 @@
    "date": "11.08.2018",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://docs.google.com/spreadsheets/d/1dDi-rWI69jtfg_NtNeAP6d4XR07vjqScil4VQ6WTo2M/edit?gid=1735956739#gid=1735956739",
@@ -5840,6 +5968,7 @@
    "date": "01.07.2018",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5881,6 +6010,7 @@
    "date": "30.06.2018",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DIDO",
    "links": {
     "men": null,
     "menAvg": null,
@@ -5922,6 +6052,7 @@
    "date": "27.05.2018",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://docs.google.com/spreadsheets/d/1Dc7UbQqN7lPuW9mx8RKdgfqhdaeEUHiw-RPtOrm8VKg/edit?gid=1089848303#gid=1089848303",
@@ -5966,6 +6097,7 @@
    "date": "26.05.2018",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "ЧУ Команди",
    "links": {
     "men": {
      "url": "https://docs.google.com/spreadsheets/d/1Z3wZGCMNZet-EYjHq4yoQGBqZW0vy3c_QTIwehodhiE/edit?gid=1703991921#gid=1703991921",
@@ -6010,6 +6142,7 @@
    "date": "29.04.2018",
    "city": "Запоріжжя",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6051,6 +6184,7 @@
    "date": "28.04.2018",
    "city": "Запоріжжя",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6092,6 +6226,7 @@
    "date": "18.03.2018",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6133,6 +6268,7 @@
    "date": "17.03.2018",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "ЧУ Criket",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6174,6 +6310,7 @@
    "date": "11.02.2018",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6215,6 +6352,7 @@
    "date": "10.02.2018",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6256,6 +6394,7 @@
    "date": "26.11.2017",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
    "links": {
     "men": {
      "url": "https://docs.google.com/spreadsheets/d/1Cfej_PNYFoBsBwdV9JQjGyBNYomMs3W9s_8nDlUew9g/edit?gid=738414203#gid=738414203",
@@ -6300,6 +6439,7 @@
    "date": "25.11.2017",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "ЧУ Мікст",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6341,6 +6481,7 @@
    "date": "15.10.2017",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6382,6 +6523,7 @@
    "date": "14.10.2017",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6423,6 +6565,7 @@
    "date": "10.09.2017",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6464,6 +6607,7 @@
    "date": "09.09.2017",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "ЧУ Пари",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6505,6 +6649,7 @@
    "date": "06.08.2017",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://docs.google.com/spreadsheets/d/1IKinuAli2ZlpS3TeFHNIUfF5Ce71dvY9m2he1i5bo8U/edit?gid=1626152929#gid=1626152929",
@@ -6549,6 +6694,7 @@
    "date": "05.08.2017",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://docs.google.com/spreadsheets/d/1htMjPS-har_Y-t18MZFBNy_vkIE8dAz03CcyWlpSK0c/edit?gid=296352996#gid=296352996",
@@ -6593,6 +6739,7 @@
    "date": "25.06.2017",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6634,6 +6781,7 @@
    "date": "24.06.2017",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DIDO",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6673,6 +6821,7 @@
    "date": "04.06.2017",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6714,6 +6863,7 @@
    "date": "03.06.2017",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "ЧУ Команди",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6755,6 +6905,7 @@
    "date": "30.04.2017",
    "city": "Луцьк",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6796,6 +6947,7 @@
    "date": "29.04.2017",
    "city": "Луцьк",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6837,6 +6989,7 @@
    "date": "19.03.2017",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6878,6 +7031,7 @@
    "date": "18.03.2017",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "ЧУ Criket",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6919,6 +7073,7 @@
    "date": "12.02.2017",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -6960,6 +7115,7 @@
    "date": "11.02.2017",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7001,6 +7157,7 @@
    "date": "27.11.2016",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7042,6 +7199,7 @@
    "date": "26.11.2016",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "ЧУ Мікст",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7083,6 +7241,7 @@
    "date": "16.10.2016",
    "city": "Харків",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7124,6 +7283,7 @@
    "date": "15.10.2016",
    "city": "Харків",
    "isUDL": false,
+   "chuCategory": "ЧУ Criket",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7165,6 +7325,7 @@
    "date": "11.09.2016",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7206,6 +7367,7 @@
    "date": "10.09.2016",
    "city": "Одеса",
    "isUDL": false,
+   "chuCategory": "ЧУ Пари",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7247,6 +7409,7 @@
    "date": "07.08.2016",
    "city": "Луцьк",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7288,6 +7451,7 @@
    "date": "06.08.2016",
    "city": "Луцьк",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7329,6 +7493,7 @@
    "date": "26.06.2016",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7370,6 +7535,7 @@
    "date": "25.06.2016",
    "city": "Чернівці",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7411,6 +7577,7 @@
    "date": "29.05.2016",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7452,6 +7619,7 @@
    "date": "28.05.2016",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "ЧУ Команди",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7493,6 +7661,7 @@
    "date": "20.03.2016",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7534,6 +7703,7 @@
    "date": "19.03.2016",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7575,6 +7745,7 @@
    "date": "29.11.2015",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7616,6 +7787,7 @@
    "date": "28.11.2015",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "ЧУ Мікст",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7657,6 +7829,7 @@
    "date": "18.10.2015",
    "city": "Харків",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7698,6 +7871,7 @@
    "date": "17.10.2015",
    "city": "Харків",
    "isUDL": false,
+   "chuCategory": "ЧУ Criket",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7739,6 +7913,7 @@
    "date": "13.09.2015",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7780,6 +7955,7 @@
    "date": "12.09.2015",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "ЧУ Пари",
    "links": {
     "men": null,
     "menAvg": null,
@@ -7821,6 +7997,7 @@
    "date": "02.08.2015",
    "city": "Луцьк",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://docs.google.com/document/d/1wQCcZQ7VgFpqNqgrD_ZWwp0sKurucsgz/edit#heading=h.ec9nydam8oab",
@@ -7865,6 +8042,7 @@
    "date": "01.08.2015",
    "city": "Луцьк",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://docs.google.com/document/d/18S28fS7GpEs4I3OV-_Y6xo9ccdjpvquOBhEtLkvOhhw/edit?tab=t.0#heading=h.3rmxyd3idwtf",
@@ -7909,6 +8087,7 @@
    "date": "31.05.2015",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "ЧУ Команди",
    "links": {
     "men": {
      "url": "https://docs.google.com/spreadsheets/d/1doR6ZpbX7tdIIQeZroz8F-CHZ50pIm4BOujqWC2_fZg/edit?gid=1547692153#gid=1547692153",
@@ -7953,6 +8132,7 @@
    "date": "30.05.2015",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://docs.google.com/spreadsheets/d/1T19FgABkHtWYTQolVve5AuE9rPd0pE9NtUqCCD2bsFo/edit?gid=1168871155#gid=1168871155",
@@ -7997,6 +8177,7 @@
    "date": "15.03.2015",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://docs.google.com/document/d/1AZYN5GYEIbSHA0fTqcLZxwx5Bm0txYeYTzU3E__i7Eo/edit?tab=t.0#heading=h.y7e7stp4bc9i",
@@ -8041,6 +8222,7 @@
    "date": "14.03.2015",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": {
      "url": "https://docs.google.com/document/d/16pxag5ibKLOyfrW8U_5f7-qQywkXA2vXpgy48zZGLAg/edit?tab=t.0#heading=h.zaql62ansg0y",
@@ -8085,6 +8267,7 @@
    "date": "25.11.2012",
    "city": "Київ",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
    "links": {
     "men": null,
     "menAvg": null,
@@ -8124,6 +8307,7 @@
    "date": "17.03.2012",
    "city": "Кривий Ріг",
    "isUDL": false,
+   "chuCategory": "",
    "links": {
     "men": null,
     "menAvg": null,
@@ -8151,6 +8335,7 @@
    "date": "31.01.2009",
    "city": "Черкаси",
    "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
    "links": {
     "men": null,
     "menAvg": null,
@@ -318808,7 +318993,7 @@
    "text": "🏆Переможниця ІV-етапу Кубку України в Одесі серед жінок - Харченко Тетяна.\n🥇Харченко Т.\n🥈Гончаренко І.\n🥉Шклярук Н.\n1️⃣8️⃣0️⃣ - Харченко Т.\n👀",
    "date": "2026-09-06",
    "url": "https://t.me/fullbull/12651",
-   "photo": "https://cdn4.telesco.pe/file/ilOcBVsVOl5DVItIjne4TFMZ_DQL9peBC1aT2PEKCD2piGSyQGotUeGJv64jAekdn0KdTVjgsLoXNXaE476o4_pUr4ywCBoKRzkQcKWiL7H_xwSbnywjgfKMYHeZLg8_JJ9lecN8mJdNTPzLARHaB3sJj20uVJ91XdawbzVa8Ckv96FGS0I_zkSMMypLiJ2CZaU0BLq2AYq0w-heLLspPMc0u16FoSem14fXziPygh6XDiahrCWO8gLgwpZb5qW5-yKdDFNgIipas61cDXXXefWnj5iex-IY3bzpsXUlR2Vkmo7EYNdJaSOwKWOo7FnRnwTeJx5Z_XdcUk3Lv5Sk3w.jpg"
+   "photo": "https://cdn4.telesco.pe/file/sslOlaRBNmfIA5l6y3Xk-GB9xQI25XM7gfkLtj3qsNOId4jHM7c5yZlvmCJxAggYOOfYxEXQU47MK7uLQXxG_Ndj5KPo3rpKmx2MRNXYIUJGZZMROgs-O-aL8G8w5K_kcNGAo_g1bAVmSCR09kKGbFxDaiI2CFSsjBjjZ1yR23n6E1y0n-srlEOJ3GX5o3lpxecLmEslRSa109jGCuEHSwH7bC3RxpQJjH0YCxOxUEPo-kuQngyWqyOzdRdH9SAU4amEvjEPUWF_7ZdgIKQlcNGD48Cja5bvOU7pUW4pVbgPhjkc356nE8d3QJMWUzO7UiN92po5M2SpbnGHL3m_cg.jpg"
   },
   {
    "text": "6-го вересня у Одесі розігрують титул переможця ІV-го етапу Кубку України 2026 року.\n👀🙋‍♀️Жінки:\n👀🙋‍♂️Чоловіки:\n🎥Трансляція 👉",
