@@ -283,10 +283,10 @@
 
   .pp-header{display:flex; align-items:flex-start; gap:16px;}
   .pp-header h2{font-size:26px; margin:0 0 4px;}
-  .pp-photo-wrap{flex-shrink:0; width:64px; height:64px;}
-  .pp-photo{width:64px; height:64px; border-radius:50%; object-fit:cover; border:2px solid var(--gold); display:block;}
+  .pp-photo-wrap{flex-shrink:0; width:76px; height:76px;}
+  .pp-photo{width:76px; height:76px; border-radius:50%; object-fit:cover; object-position:50% 20%; border:2px solid var(--gold); display:block;}
   .pp-photo-placeholder{
-    width:64px; height:64px; border-radius:50%; border:2px solid var(--line);
+    width:76px; height:76px; border-radius:50%; border:2px solid var(--line);
     background:var(--panel-2); align-items:center; justify-content:center; color:var(--muted);
   }
   .pp-share-btn{
@@ -2079,7 +2079,7 @@ function playerPhotoHtml(name){
       <img class="pp-photo" src="./player_photos/${encoded}.jpg" alt="${name}"
         onerror="this.onerror=function(){this.onerror=function(){this.style.display='none';this.nextElementSibling.style.display='flex';};this.src='./player_photos/${encoded}.jpeg';};this.src='./player_photos/${encoded}.png';">
       <div class="pp-photo-placeholder" style="display:none;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
       </div>
     </div>
   `;
