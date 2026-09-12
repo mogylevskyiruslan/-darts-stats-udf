@@ -1,7 +1,7 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-11T20:10:06.338932+00:00",
-  "tournamentsCount": 185
+  "lastUpdated": "2026-09-12T09:10:43.959119+00:00",
+  "tournamentsCount": 193
  },
  "tournaments": [
   {
@@ -4861,6 +4861,118 @@
    "nakkaMedalsWomen": null
   },
   {
+   "total": 32,
+   "men": 28,
+   "menAvg": null,
+   "women": 4,
+   "womenAvg": null,
+   "name": "Кубок Харкова",
+   "org": "ВФД",
+   "format": "501DO / Мастерс",
+   "date": "11.04.2021",
+   "city": "Харків",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/spreadsheets/d/1VIw8jAYIcHAieR64ErWmntA_taiE5z2QTWdUr_YCFGI/edit?gid=49932443#gid=49932443",
+     "type": "protocol_sheet"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 38,
+   "men": 32,
+   "menAvg": null,
+   "women": 6,
+   "womenAvg": null,
+   "name": "Кубок Харкова Пари",
+   "org": "ВФД",
+   "format": "501DO / Мастерс",
+   "date": "10.04.2021",
+   "city": "Харків",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/spreadsheets/d/1HIjUVegzBowkXcXANf_JiedCvHnJuK5ZJ5zEi_5c-1s/edit?gid=1429392288#gid=1429392288",
+     "type": "protocol_sheet"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 27,
+   "men": 19,
+   "menAvg": null,
+   "women": 8,
+   "womenAvg": null,
+   "name": "Кубок Харкова",
+   "org": "ВФД",
+   "format": "501DO / Мастерс",
+   "date": "09.08.2020",
+   "city": "Харків",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/spreadsheets/d/1KZejllc2_fgz9xrcxJpiSOHJr8dwwvq-QHRCb7VgF_o/edit?gid=1398248052#gid=1398248052",
+     "type": "protocol_sheet"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 24,
+   "men": 18,
+   "menAvg": null,
+   "women": 6,
+   "womenAvg": null,
+   "name": "Кубок Харкова Пари",
+   "org": "ВФД",
+   "format": "501DO / Мастерс",
+   "date": "08.08.2020",
+   "city": "Харків",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/spreadsheets/d/1RhJvFBvSjY0-_Wea4qkN4AhXlONEqTb043J2yy9Rgyg/edit?gid=1293830474#gid=1293830474",
+     "type": "protocol_sheet"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
    "total": 84,
    "men": 65,
    "menAvg": null,
@@ -5167,6 +5279,62 @@
      "Солтис Ганна"
     ]
    },
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 32,
+   "men": 30,
+   "menAvg": null,
+   "women": 2,
+   "womenAvg": null,
+   "name": "Кубок Харкова",
+   "org": "ВФД",
+   "format": "501DO / Мастерс",
+   "date": "11.08.2019",
+   "city": "Харків",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/spreadsheets/d/1DmdvmuUEGhsNf3Wy4jeBSRmCTbh6AO3bHWpyot2CQ-4/edit?gid=98179675#gid=98179675",
+     "type": "protocol_sheet"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 32,
+   "men": 30,
+   "menAvg": null,
+   "women": 2,
+   "womenAvg": null,
+   "name": "Кубок Харкова Пари",
+   "org": "ВФД",
+   "format": "501DO / Мастерс",
+   "date": "10.08.2019",
+   "city": "Харків",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/spreadsheets/d/1CJYfHH6bTLYurQiRywArJ7T1jHXSuS6w46H7RO2KvDM/edit?gid=52356778#gid=52356778",
+     "type": "protocol_sheet"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -8269,7 +8437,7 @@
    "name": "Кубок Рудани",
    "org": "ВФД",
    "format": "501DO",
-   "date": "17.03.2012",
+   "date": "17.03.2013",
    "city": "Кривий Ріг",
    "isUDL": false,
    "chuCategory": "",
@@ -8285,6 +8453,86 @@
    },
    "medals": null,
    "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 98,
+   "men": 77,
+   "menAvg": null,
+   "women": 21,
+   "womenAvg": null,
+   "name": "ЧУ 2011",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "04.12.2011",
+   "city": "Київ",
+   "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1YtCMG2329-nBm1FKQgsth94Zx-kE3Fg3iKdT3oIzQfs/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Мінченок Юрій",
+    "bronze": [
+     "Омельченко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Лопухова Ганна",
+    "silver": "Журавель Алла",
+    "bronze": [
+     "Спекторенко Катерина"
+    ]
+   },
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 65,
+   "men": 49,
+   "menAvg": null,
+   "women": 16,
+   "womenAvg": null,
+   "name": "ЧУ 2010",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "30.01.2011",
+   "city": "Черкаси",
+   "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1KzUbI5DNOk8zQruTGIXOgif3dXruDK7CfI9mgc3U47o/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Мінченок Юрій",
+    "bronze": [
+     "Омельченко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Лопухова Ганна",
+    "silver": "Журавель Алла",
+    "bronze": [
+     "Спекторенко Катерина"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -318964,7 +319212,7 @@
    "text": "6-го вересня у Одесі розігрують титул переможця ІV-го етапу Кубку України 2026 року.\n👀🙋‍♀️Жінки:\n👀🙋‍♂️Чоловіки:\n🎥Трансляція 👉",
    "date": "2026-09-06",
    "url": "https://t.me/fullbull/12645",
-   "photo": "https://cdn4.telesco.pe/file/LZdzTW7jbGr9Vf0jPnKd0VH17tjE-CxOgobBGeW_AK8pWwj7QD_KjrUxVIo7BN1nqJWyXeCfxjxzxbYUVCXaudeydE2A9_libgMA9C0_VIBDWNor8TFFbmJqZmvvm6g4-Cv1J3o3vFzGxEJ2oDe8zfMRKk8BGMiKjjJBoCEFeTNaRbqrUAXbbtpqimq7uMjWVyKwjuJbhxznOWWyvBFMHrO1KsZdkDprIYFYwhnGmzSzrGwKJtK91Q6iOwlPA4x8iCRd0f3aFQrQHu7ndDwkdGCPwmkUnrBqlJMObZWzQMMa6OKc70mXTGMZxE2I4mW6t2cCoPUy4B2EdR7w6Ird6Q.jpg"
+   "photo": "https://cdn4.telesco.pe/file/F-VuEy58oDxFqSzfux4k3Fv_Sq-Q2vHO3KrBNhBT4WicWS7FoVhffcTTgpos8n_LguKxtJCACBYuNTANGbDJ2DrFxvOWa0vPg4MXnP3iFeuFuI5PURuY7NsgIRijEq1zvOX3h1rph0N504iHj9glvKWGHrEIv1q8xmQT-2PPnOtyX5R1nMXOPPk5hWEjGhlZCn5Q1V1VQr6VbFGIT0at-prdjG9JGjRAc7ldBaEUKGdEtgFNSZOqSqMjCiwWiwSZUQwY8bnUKCgCv1q-ArQ7cCu1aovLT6_koThDUYqP8fUr6Ck41431vxLhn-GFV5y3drNx4TzfzeT64L9T9OJzVg.jpg"
   },
   {
    "text": "🏆У чоловіків титул Чемпіонів України у парному розряді в 2026 році вибороли одесити: Сташевський В./Фатех Д. \n🥇Сташевський В./Фатех Д. \n🥈Овсієнко Є./Абчугський О.\n🥉Гончаров Е./Агневщиков Ю. \n1️⃣8️⃣0️⃣х3️⃣ - Сташевський В./Фатех Д. \n1️⃣8️⃣0️⃣ - Омельченко В./Гакман С., Могилевський Р./Шапка Є., Гончаров Е./Агневщиков Ю., Аверін С./Братченко В., Микитин Я./Стецишин В., Акользін Д./Пивошенко М., Мельник О./Урсаки О.\n☑️Чекаути 100+:\n1️⃣3️⃣9️⃣ - Овсієнко Є./Абчугський О.\n1️⃣2️⃣9️⃣ - Мелашенко В./Павл",
