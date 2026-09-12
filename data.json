@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-12T09:10:43.959119+00:00",
+  "lastUpdated": "2026-09-12T14:15:53.788041+00:00",
   "tournamentsCount": 193
  },
  "tournaments": [
@@ -8389,6 +8389,34 @@
    "nakkaMedalsWomen": null
   },
   {
+   "total": 54,
+   "men": 51,
+   "menAvg": null,
+   "women": 3,
+   "womenAvg": null,
+   "name": "Кубок Рудани",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "17.03.2013",
+   "city": "Кривий Ріг",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1K33JAK_zRif7gsUUAdBHnrk68aean6v-O205xelMQAg/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": null,
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
    "total": 102,
    "men": 82,
    "menAvg": null,
@@ -8425,34 +8453,6 @@
      "Лопухова Ганна"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
-  },
-  {
-   "total": 54,
-   "men": 51,
-   "menAvg": null,
-   "women": 3,
-   "womenAvg": null,
-   "name": "Кубок Рудани",
-   "org": "ВФД",
-   "format": "501DO",
-   "date": "17.03.2013",
-   "city": "Кривий Ріг",
-   "isUDL": false,
-   "chuCategory": "",
-   "links": {
-    "men": null,
-    "menAvg": null,
-    "women": null,
-    "womenAvg": null,
-    "tournament": {
-     "url": "https://docs.google.com/document/d/1K33JAK_zRif7gsUUAdBHnrk68aean6v-O205xelMQAg/edit?tab=t.0",
-     "type": "protocol_doc"
-    }
-   },
-   "medals": null,
-   "medalsWomen": null,
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -319213,12 +319213,6 @@
    "date": "2026-09-06",
    "url": "https://t.me/fullbull/12645",
    "photo": "https://cdn4.telesco.pe/file/F-VuEy58oDxFqSzfux4k3Fv_Sq-Q2vHO3KrBNhBT4WicWS7FoVhffcTTgpos8n_LguKxtJCACBYuNTANGbDJ2DrFxvOWa0vPg4MXnP3iFeuFuI5PURuY7NsgIRijEq1zvOX3h1rph0N504iHj9glvKWGHrEIv1q8xmQT-2PPnOtyX5R1nMXOPPk5hWEjGhlZCn5Q1V1VQr6VbFGIT0at-prdjG9JGjRAc7ldBaEUKGdEtgFNSZOqSqMjCiwWiwSZUQwY8bnUKCgCv1q-ArQ7cCu1aovLT6_koThDUYqP8fUr6Ck41431vxLhn-GFV5y3drNx4TzfzeT64L9T9OJzVg.jpg"
-  },
-  {
-   "text": "🏆У чоловіків титул Чемпіонів України у парному розряді в 2026 році вибороли одесити: Сташевський В./Фатех Д. \n🥇Сташевський В./Фатех Д. \n🥈Овсієнко Є./Абчугський О.\n🥉Гончаров Е./Агневщиков Ю. \n1️⃣8️⃣0️⃣х3️⃣ - Сташевський В./Фатех Д. \n1️⃣8️⃣0️⃣ - Омельченко В./Гакман С., Могилевський Р./Шапка Є., Гончаров Е./Агневщиков Ю., Аверін С./Братченко В., Микитин Я./Стецишин В., Акользін Д./Пивошенко М., Мельник О./Урсаки О.\n☑️Чекаути 100+:\n1️⃣3️⃣9️⃣ - Овсієнко Є./Абчугський О.\n1️⃣2️⃣9️⃣ - Мелашенко В./Павл",
-   "date": "2026-09-05",
-   "url": "https://t.me/fullbull/12644",
-   "photo": "https://cdn4.telesco.pe/file/KgrPMiloQ6uOqvVZrUFtWpjA0yziAzFUrj0VjjmalMzYY0n3m_UdnwJYQO_kYbJnNUxgVvLUursfIyjeaSlSb6X_ftozsofamsm4Ps5yuGmbhu4eZDvnyOIah882xuPSHyTAb59G7eSEl81LsHuzs24JsT2a_ddsqXqJKq48ew3ZIchYvPXValb33lnNfjjjGSoi4y_XFeY9QQ5b_l7kqWGSFJE8I6A_jNIkBMyKyb3E7zgzPwjTCiv3S0SxtpU6P3YWtrWY706hn3g1JpabL40mGLrfeW_8ugb4RRkLwpLlcR2u5agtKT1HlmAFmKJ1E8Y3dQGyKmpMR-Ai70iYBg.jpg"
   }
  ]
 }
