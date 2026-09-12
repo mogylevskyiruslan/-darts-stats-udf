@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-12T17:41:06.698389+00:00",
+  "lastUpdated": "2026-09-12T20:22:39.856210+00:00",
   "tournamentsCount": 193
  },
  "tournaments": [
@@ -24063,7 +24063,7 @@
     },
     {
      "rank": "64-67",
-     "name": "Агневщиков Юрий",
+     "name": "Агневщиков Юрій",
      "scores": [
       null,
       null,
@@ -26485,7 +26485,7 @@
     },
     {
      "rank": "78-79",
-     "name": "Агневщиков Юрий",
+     "name": "Агневщиков Юрій",
      "scores": [
       null,
       null,
@@ -78724,7 +78724,7 @@
    "winMatch": 1
   },
   {
-   "name": "Агневщиков",
+   "name": "Агневщиков Юрій",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -79828,7 +79828,7 @@
    "winMatch": 0
   },
   {
-   "name": "Агневщиков",
+   "name": "Агневщиков Юрій",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -87940,7 +87940,7 @@
    "winMatch": 9
   },
   {
-   "name": "Агневщиков Юрий",
+   "name": "Агневщиков Юрій",
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
@@ -194078,7 +194078,7 @@
    "avg": 51.6
   },
   {
-   "name": "Агневщиков",
+   "name": "Агневщиков Юрій",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -194094,7 +194094,7 @@
    "date": "12.11.2023",
    "tournament": "Кубок України",
    "city": "Кривий Ріг",
-   "opponent": "Агневщиков",
+   "opponent": "Агневщиков Юрій",
    "avg": 44.81
   },
   {
@@ -194458,7 +194458,7 @@
    "avg": 42.82
   },
   {
-   "name": "Агневщиков",
+   "name": "Агневщиков Юрій",
    "gender": "men",
    "isUDL": false,
    "date": "12.11.2023",
@@ -194474,7 +194474,7 @@
    "date": "12.11.2023",
    "tournament": "Кубок України",
    "city": "Кривий Ріг",
-   "opponent": "Агневщиков",
+   "opponent": "Агневщиков Юрій",
    "avg": 45.42
   },
   {
@@ -195038,7 +195038,7 @@
    "avg": 63.86
   },
   {
-   "name": "Агневщиков",
+   "name": "Агневщиков Юрій",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -195054,7 +195054,7 @@
    "date": "10.09.2023",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Агневщиков",
+   "opponent": "Агневщиков Юрій",
    "avg": 59.52
   },
   {
@@ -195558,7 +195558,7 @@
    "avg": 69.0
   },
   {
-   "name": "Агневщиков",
+   "name": "Агневщиков Юрій",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -195574,7 +195574,7 @@
    "date": "10.09.2023",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Агневщиков",
+   "opponent": "Агневщиков Юрій",
    "avg": 50.17
   },
   {
@@ -196118,7 +196118,7 @@
    "avg": 60.93
   },
   {
-   "name": "Агневщиков",
+   "name": "Агневщиков Юрій",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -196134,7 +196134,7 @@
    "date": "10.09.2023",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Агневщиков",
+   "opponent": "Агневщиков Юрій",
    "avg": 50.52
   },
   {
@@ -196538,7 +196538,7 @@
    "avg": 49.71
   },
   {
-   "name": "Агневщиков",
+   "name": "Агневщиков Юрій",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -196554,7 +196554,7 @@
    "date": "10.09.2023",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Агневщиков",
+   "opponent": "Агневщиков Юрій",
    "avg": 45.9
   },
   {
@@ -216304,11 +216304,11 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Агневщиков Юрий",
+   "opponent": "Агневщиков Юрій",
    "avg": 41.0
   },
   {
-   "name": "Агневщиков Юрий",
+   "name": "Агневщиков Юрій",
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
@@ -216558,7 +216558,7 @@
    "avg": 54.99
   },
   {
-   "name": "Агневщиков Юрий",
+   "name": "Агневщиков Юрій",
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
@@ -216574,7 +216574,7 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Агневщиков Юрий",
+   "opponent": "Агневщиков Юрій",
    "avg": 50.17
   },
   {
@@ -217264,11 +217264,11 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Агневщиков Юрий",
+   "opponent": "Агневщиков Юрій",
    "avg": 47.97
   },
   {
-   "name": "Агневщиков Юрий",
+   "name": "Агневщиков Юрій",
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
@@ -217758,7 +217758,7 @@
    "avg": 36.42
   },
   {
-   "name": "Агневщиков Юрий",
+   "name": "Агневщиков Юрій",
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
@@ -217774,7 +217774,7 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Агневщиков Юрий",
+   "opponent": "Агневщиков Юрій",
    "avg": 46.01
   },
   {
@@ -218504,11 +218504,11 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Агневщиков Юрий",
+   "opponent": "Агневщиков Юрій",
    "avg": 90.18
   },
   {
-   "name": "Агневщиков Юрий",
+   "name": "Агневщиков Юрій",
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
@@ -298050,7 +298050,7 @@
    "city": "Кривий Ріг"
   },
   {
-   "name1": "Агневщиков",
+   "name1": "Агневщиков Юрій",
    "avg1": 46.39,
    "name2": "Самодій Петро",
    "avg2": 44.81,
@@ -298335,7 +298335,7 @@
    "city": "Кривий Ріг"
   },
   {
-   "name1": "Агневщиков",
+   "name1": "Агневщиков Юрій",
    "avg1": 47.31,
    "name2": "Чепак Василь",
    "avg2": 45.42,
@@ -298770,7 +298770,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Агневщиков",
+   "name1": "Агневщиков Юрій",
    "avg1": 54.82,
    "name2": "Троценко Артем",
    "avg2": 59.52,
@@ -299160,7 +299160,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Агневщиков",
+   "name1": "Агневщиков Юрій",
    "avg1": 55.86,
    "name2": "Усик Сергій",
    "avg2": 50.17,
@@ -299580,7 +299580,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Агневщиков",
+   "name1": "Агневщиков Юрій",
    "avg1": 52.27,
    "name2": "Панченко Олексій",
    "avg2": 50.52,
@@ -299895,7 +299895,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Агневщиков",
+   "name1": "Агневщиков Юрій",
    "avg1": 48.48,
    "name2": "Кумовицький Павло",
    "avg2": 45.9,
@@ -314717,7 +314717,7 @@
   {
    "name1": "Кумовицький Павло",
    "avg1": 41.0,
-   "name2": "Агневщиков Юрий",
+   "name2": "Агневщиков Юрій",
    "avg2": 44.64,
    "avgAvg": 42.82,
    "result": "0-3",
@@ -314910,7 +314910,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Агневщиков Юрий",
+   "name1": "Агневщиков Юрій",
    "avg1": 47.66,
    "name2": "Кара Евген",
    "avg2": 50.17,
@@ -315437,7 +315437,7 @@
   {
    "name1": "Луков Олександр",
    "avg1": 47.97,
-   "name2": "Агневщиков Юрий",
+   "name2": "Агневщиков Юрій",
    "avg2": 44.66,
    "avgAvg": 46.31,
    "result": "3-0",
@@ -315810,7 +315810,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Агневщиков Юрий",
+   "name1": "Агневщиков Юрій",
    "avg1": 44.91,
    "name2": "Цебратенко Андрей",
    "avg2": 46.01,
@@ -316367,7 +316367,7 @@
   {
    "name1": "Бушуй Олексій",
    "avg1": 90.18,
-   "name2": "Агневщиков Юрий",
+   "name2": "Агневщиков Юрій",
    "avg2": 50.06,
    "avgAvg": 70.12,
    "result": "3-0",
@@ -319256,13 +319256,13 @@
    "text": "ВФД запустила статистичний сайт:\n- історичні результати\n- статистику і рекорди\n- поточні показники\n- профіль гравця з вичерпною особистою статистикою\n- історію протистоянь\n- новини дартсу України\n- трансляції турнірів\n- і багато іншого.\n👀 \n🤝Подяка за величезну роботу Могилевскому Руслану, Кудрявцеву Євгену.",
    "date": "2026-09-10",
    "url": "https://t.me/fullbull/12664",
-   "photo": "https://cdn4.telesco.pe/file/JQj5dk6iRcCkAfqi6gjFvZxFSOfLsfynfAllhtr0fAeH-GqyyJdnr1Qq-mH2lKfiW_OUtlr5wWX0juoXeUV9b2SXCLfjLQKPASA8GG603eUE5iUZQdVqG-WvAIGVhgtxz19mTkTLXJXTjjVyLCkDn9gfvfNpBC6v16DveZ1QoOquyzIFAeRZFRJjI3Dgv6M7oJZmMkrUoj-5_4TWUEyFtGFNyJl-9VPlceuv0-57LQpqVQz9I-HLicqWA3KvDSMSM1xFpC5KawM5n4495rL4oxZB7lMX4M_3ec74lh1zuKHycUvc-w7G9nCmlJf1CXjXSsuGBZD_ok2CgvupreJ9Xw.jpg"
+   "photo": "https://cdn4.telesco.pe/file/gELpd3bZ89N_8YCCG_YVvSp6iVb8h2geycFwfV18Rh8IQpKCQ9FdOnhY66NRNuun5u_gOSjBexNMdTVcCXFSN2Xge5MQRnHGkXmLhdC09prKoCDh6YNkz_I4n3wvsyuhIuTwB_IkNS0bkXscXLqVJWQJtZWMFhxwxsX1JlShvt8w1mTM-LWQcvjy9Mb7cBLNoFIgBNaNdvUhWpsZz6UbsIgcSQpIx5UcoiuTZrrumVKBc2a_9CS9h4FYkjv7Yije2kzwGgP6qzjEc_0iU-J7X6ukEvOj4X3cb7xH_q2tEE3UtrBxczAcKZXPjavgyEEMu3XxY8fDFQyCi8LkXFHY3g.jpg"
   },
   {
    "text": "Після 22 турнірів FullBull Series 2026, на перших стрічках обох рейтингів повна рівність, лише за кількістю титулів Абчугський Олександр випереджає Бабаніна Дмитра: 6 проти 3.",
    "date": "2026-09-09",
    "url": "https://t.me/fullbull/12662",
-   "photo": "https://cdn4.telesco.pe/file/JNNby7mKs3A-xWb0ev6GoYqDkancd-_LD6UDmxlI3D_cmK_PDQce0NSXUUP_PgzOCcEUiG_SQeo0cf0W3myVLL585tH225lfnWHTb0U7jUR8H5BnFrJTd8pDdwIOSVknqx4pckVcvxQuOFIWEV2UeQxEL8O5cDPcL_jA-wEiVuK_4hFNTP7JCAL1Roklm5dYXB5AfxrPneMZVGdpqFNPq-Qyglv1q3dPUsGr4gIx7wdz-BoKebGadguy0Fr6DALse0j0HSO7lx_eII_yQXAMf1rYk01KjHDHhpfYc5Raj-cRR2CFEm2f0WitZZNWt1TDZYJWr6WxUmp5SoMBX5lTKQ.jpg"
+   "photo": "https://cdn4.telesco.pe/file/A9akJXSopqh0FZIVWD7WEYmpq6NmlYP16wYZFuAHlqw9-jkGaoOKZ-c8wDbKylbh9B_eOTx6z25XglvSsL_vw8-Lh6VduQ1EKjGws4Hnb0yYVI1oNFAuUa5yScrKAwnLusSoQUvIUDaCcim0HBx8VgKmHRDUWT5YDPqX10FZfjF1YpgVOpWdpKlBvWvrpJmfP6ygJhxwKoKulinyelzf_DiBWpzHC42gK3CF4URGrDYID77PXOp8PWojYqPnq4UOOOfMOZfDl5dcwq95N-WCYcanaaAjxACDMVM70LsIR2RSZttMw-CY91KxjScp1XK2eyy3BOSG2tVRrnIzx2lXzA.jpg"
   },
   {
    "text": "🏆У чоловіків кубковий етап в Одесі за Овсієнко Євгеном. Вже традиційний двобій зі Сташевським Валентином вийшов на користь киянина 5-4.\n🥇Овсієнко Є.\n🥈Сташевський В.\n🥉Мелашенко В.\n1️⃣8️⃣0️⃣х3️⃣ - Омельченко В.\n1️⃣8️⃣0️⃣х2️⃣ - Сташевський В.\n1️⃣8️⃣0️⃣ - Гакман С., Овсієнко Є., Мелашенко В.,\nАбчугський О., Солтис М., \n☑️Чекаути 100+:\n1️⃣4️⃣4️⃣ - Овсієнко Є.\n1️⃣4️⃣2️⃣ - Могилевський Р.\n1️⃣2️⃣6️⃣ - Мелашенко В.\n1️⃣1️⃣7️⃣ - Мелашенко В. \n1️⃣1️⃣6️⃣ - Сташевський В.\n1️⃣1️⃣5️⃣ - Омельченко В.\n1️⃣1️⃣0️⃣ -",
