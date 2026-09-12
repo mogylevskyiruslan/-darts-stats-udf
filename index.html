@@ -281,7 +281,14 @@
   }
   .player-modal-close:hover{color:var(--gold); border-color:var(--gold);}
 
+  .pp-header{display:flex; align-items:flex-start; gap:16px;}
   .pp-header h2{font-size:26px; margin:0 0 4px;}
+  .pp-photo-wrap{flex-shrink:0; width:64px; height:64px;}
+  .pp-photo{width:64px; height:64px; border-radius:50%; object-fit:cover; border:2px solid var(--gold); display:block;}
+  .pp-photo-placeholder{
+    width:64px; height:64px; border-radius:50%; border:2px solid var(--line);
+    background:var(--panel-2); align-items:center; justify-content:center; color:var(--muted);
+  }
   .pp-share-btn{
     display:inline-flex; align-items:center; gap:6px; margin-bottom:12px;
     padding:6px 12px; background:var(--panel); border:1px solid var(--line); border-radius:6px;
@@ -2064,6 +2071,20 @@ function playYoutubeVideo(i){
   el.innerHTML = `<iframe src="https://www.youtube.com/embed/${v.id}?autoplay=1" title="${v.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
 }
 
+function playerPhotoHtml(name){
+  const encoded = encodeURIComponent(name);
+  // Каскад: пробуємо .jpg, потім .png, потім .jpeg; якщо нічого немає — заглушка-іконка.
+  return `
+    <div class="pp-photo-wrap">
+      <img class="pp-photo" src="./player_photos/${encoded}.jpg" alt="${name}"
+        onerror="this.onerror=function(){this.onerror=function(){this.style.display='none';this.nextElementSibling.style.display='flex';};this.src='./player_photos/${encoded}.jpeg';};this.src='./player_photos/${encoded}.png';">
+      <div class="pp-photo-placeholder" style="display:none;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+      </div>
+    </div>
+  `;
+}
+
 function shareButtonHtml(name){
   return `<button type="button" class="pp-share-btn" onclick="sharePlayerProfile('${name.replace(/'/g, "\\'")}', this)" title="Поділитись профілем">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="10.6" x2="15.4" y2="6.4"/><line x1="8.6" y1="13.4" x2="15.4" y2="17.6"/></svg>
@@ -2095,7 +2116,7 @@ function openPlayerProfile(name){
   const content = document.getElementById('player-modal-content');
   if(rows.length === 0){
     const ratingCharts = renderPlayerCurrentRatingChart(name) + renderPlayerRatingChart(name);
-    content.innerHTML = `<div class="pp-header"><h2>${name}</h2>${shareButtonHtml(name)}</div>` +
+    content.innerHTML = `<div class="pp-header">${playerPhotoHtml(name)}<div><h2>${name}</h2>${shareButtonHtml(name)}</div></div>` +
       (ratingCharts || `<p class="pp-chart-empty">Немає даних Nakka для цього гравця (з поточними фільтрами).</p>`);
   } else {
     const gender = rows[0].gender === 'women' ? 'Жінки' : 'Чоловіки';
@@ -2122,9 +2143,12 @@ function openPlayerProfile(name){
 
     content.innerHTML = `
       <div class="pp-header">
-        <h2>${name}</h2>
-        ${shareButtonHtml(name)}
-        <div class="pp-sub">${gender} · дані Nakka з ${totalTournaments} турнір(ів), ${rows[0].date}–${rows[rows.length-1].date}</div>
+        ${playerPhotoHtml(name)}
+        <div>
+          <h2>${name}</h2>
+          ${shareButtonHtml(name)}
+          <div class="pp-sub">${gender} · дані Nakka з ${totalTournaments} турнір(ів), ${rows[0].date}–${rows[rows.length-1].date}</div>
+        </div>
       </div>
 
       <div class="pp-stat-row">
