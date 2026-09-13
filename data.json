@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-13T11:19:28.382572+00:00",
+  "lastUpdated": "2026-09-13T20:20:05.211419+00:00",
   "tournamentsCount": 194
  },
  "tournaments": [
@@ -2429,11 +2429,10 @@
     }
    },
    "medals": {
-    "gold": "Залевський Володимир",
-    "silver": "Аверін Сергій",
+    "gold": "Чепурний Едуард/Харченко Тетяна",
+    "silver": "Залевський Володимир/Білоус Жанна",
     "bronze": [
-     "Омельченко Владислав",
-     "Яненко Сергій"
+     "Могилевський Руслан/Лановенко Ксенія"
     ]
    },
    "medalsWomen": {
@@ -2999,18 +2998,17 @@
    },
    "medals": {
     "gold": "Залевський Володимир",
-    "silver": "Аверін Сергій",
+    "silver": "Кіфор Ярослав",
     "bronze": [
-     "Омельченко Владислав",
-     "Яненко Сергій"
+     "Гоян Дмитро",
+     "Григоренко Віктор"
     ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
-    "silver": "Чабанова Ганна",
+    "silver": "Лановенко Ксенія",
     "bronze": [
-     "Терещенко Любов",
-     "Карнаух Валентина"
+     "Гончаренко Інна"
     ]
    },
    "nakkaMedals": {
@@ -3194,20 +3192,16 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Залевський Володимир",
-    "silver": "Аверін Сергій",
+    "gold": "United Ukraine (Микитин Ярослав, Залевський Володимир, Ледєньов Вадим, Мелашенко Владислав)",
+    "silver": "Черкаси-1 (Чепурний Едуард, Соколов Володимир, Подольський Святослав, Пальонний Ігор)",
     "bronze": [
-     "Омельченко Владислав",
-     "Яненко Сергій"
+     "Харків-1 (Могилевський Руслан, Бутов Олександр, Пекарук Ілля, Василевський Володимир)"
     ]
    },
    "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Чабанова Ганна",
-    "bronze": [
-     "Терещенко Любов",
-     "Карнаух Валентина"
-    ]
+    "gold": "Черкаси (Харченко Тетяна, Гончаренко Інна)",
+    "silver": "Одеса-Кривий Ріг (Ільясова Альбіна, Терещенко Любов, Соколова Вікторія, Лановенко Ксенія)",
+    "bronze": []
    },
    "nakkaMedals": {
     "gold": "United Ukraine",
@@ -3554,11 +3548,10 @@
     }
    },
    "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Залевський Володимир",
+    "gold": "Омельченко Владислав/Терещенко Любов",
+    "silver": "Могилевський Руслан/Лановенко Ксенія",
     "bronze": [
-     "Пекарук Ілля",
-     "Троценко Артем"
+     "Луков Олександр/Лукова Вікторія"
     ]
    },
    "medalsWomen": {
@@ -4537,11 +4530,10 @@
     }
    },
    "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Залевський Володимир",
+    "gold": "Омельченко Владислав/Баширов Ярослав",
+    "silver": "Залевський Володимир/Бейреш Ласло",
     "bronze": [
-     "Пекарук Ілля",
-     "Мелашенко Владислав"
+     "Могилевський Руслан/Пекарук Ілля"
     ]
    },
    "medalsWomen": {
@@ -5114,16 +5106,14 @@
     "gold": "Бушуй Олексій",
     "silver": "Омельченко Владислав",
     "bronze": [
-     "Мамика Олександр",
-     "Ковальов Дмитро"
+     "Мамика Олександр"
     ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Чумак Ганна",
     "bronze": [
-     "Харченко Тетяна",
-     "Ледєньова Наталія"
+     "Харченко Тетяна"
     ]
    },
    "nakkaMedals": null,
@@ -5758,16 +5748,14 @@
     "gold": "Усик Артем",
     "silver": "Омельченко Владислав",
     "bronze": [
-     "Бушуй Олексій",
-     "Мороз Ігор"
+     "Бушуй Олексій"
     ]
    },
    "medalsWomen": {
     "gold": "Чумак Ганна",
     "silver": "Павлюченко Марина",
     "bronze": [
-     "Марфола Оксана",
-     "Моісеєнко Віталіна"
+     "Марфола Оксана"
     ]
    },
    "nakkaMedals": null,
@@ -5797,10 +5785,10 @@
     }
    },
    "medals": {
-    "gold": "Усик Артем/Ледєньова Наталя",
-    "silver": "Ледєньов Вадим/Ільясова Альбіна",
+    "gold": "Солтис Микита",
+    "silver": "Мотуз Єгор",
     "bronze": [
-     "Омельченко Владислав/Марфола Оксана"
+     "Пекарук Ілля"
     ]
    },
    "medalsWomen": {
@@ -6627,16 +6615,14 @@
     "gold": "Усик Артем",
     "silver": "Невінчаний Едуард",
     "bronze": [
-     "Омельченко Владислав",
-     "Марков Сергій"
+     "Омельченко Владислав"
     ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Чумак Ганна",
     "bronze": [
-     "Ледєньова Наталія",
-     "Павлюченко Марина"
+     "Ледєньова Наталія"
     ]
    },
    "nakkaMedals": null,
@@ -7380,16 +7366,14 @@
     "gold": "Бушуй Олексій",
     "silver": "Григоренко Денис",
     "bronze": [
-     "Васюра Андрій",
-     "Омельченко Владислав"
+     "Васюра Андрій"
     ]
    },
    "medalsWomen": {
     "gold": "Анісімова Світлана",
     "silver": "Чумак Ганна",
     "bronze": [
-     "Редзюк Тетяна",
-     "Грушовець Ольга"
+     "Редзюк Тетяна"
     ]
    },
    "nakkaMedals": null,
@@ -7959,19 +7943,17 @@
     }
    },
    "medals": {
-    "gold": "Пасичніченко Артрем",
+    "gold": "Пасічніченко Артем",
     "silver": "Усик Артем",
     "bronze": [
-     "Омельченко Владислав",
-     "Григоренко Денис"
+     "Омельченко Владислав"
     ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Марфола Оксана",
     "bronze": [
-     "Редзюк Тетяна",
-     "Квиклене Рената"
+     "Редзюк Тетяна"
     ]
    },
    "nakkaMedals": null,
@@ -319093,13 +319075,13 @@
    "text": "ВФД запустила статистичний сайт:\n- історичні результати\n- статистику і рекорди\n- поточні показники\n- профіль гравця з вичерпною особистою статистикою\n- історію протистоянь\n- новини дартсу України\n- трансляції турнірів\n- і багато іншого.\n👀 \n🤝Подяка за величезну роботу Могилевскому Руслану, Кудрявцеву Євгену.",
    "date": "2026-09-10",
    "url": "https://t.me/fullbull/12664",
-   "photo": "https://cdn4.telesco.pe/file/gELpd3bZ89N_8YCCG_YVvSp6iVb8h2geycFwfV18Rh8IQpKCQ9FdOnhY66NRNuun5u_gOSjBexNMdTVcCXFSN2Xge5MQRnHGkXmLhdC09prKoCDh6YNkz_I4n3wvsyuhIuTwB_IkNS0bkXscXLqVJWQJtZWMFhxwxsX1JlShvt8w1mTM-LWQcvjy9Mb7cBLNoFIgBNaNdvUhWpsZz6UbsIgcSQpIx5UcoiuTZrrumVKBc2a_9CS9h4FYkjv7Yije2kzwGgP6qzjEc_0iU-J7X6ukEvOj4X3cb7xH_q2tEE3UtrBxczAcKZXPjavgyEEMu3XxY8fDFQyCi8LkXFHY3g.jpg"
+   "photo": "https://cdn4.telesco.pe/file/ChkzGSJqvSyGnIeybY1y3mPMK6zGd5EMjCeZJJfjlxrs6s3jDLrUXpCUUWi4HlTqUKQOqG9xO7mc80bON3EVunw1vifVjDqA6bHgr0JjUKIej5oj-7B6eLxApDb8jvBsOSTVXTsMgGWtjRML4l66JEzd0QwDRuSQ1WXNtfFjE67vMuTLtjaQQrRrDPrXeO54N76rN3X7I6BOxu9gQN7kkPo_vFmy1o8pNQeM0rX8Nzp0hgNpO7F9p0Jh3liwA9JoxI7tWO1ULiHVs7V-j1ouoX58XewUNdasVsdMOCg1L2Ktt0baZ3mVgYvb6mK6VBD1tmJHbNPkWZ_c7Mr_sPBxwg.jpg"
   },
   {
    "text": "Після 22 турнірів FullBull Series 2026, на перших стрічках обох рейтингів повна рівність, лише за кількістю титулів Абчугський Олександр випереджає Бабаніна Дмитра: 6 проти 3.",
    "date": "2026-09-09",
    "url": "https://t.me/fullbull/12662",
-   "photo": "https://cdn4.telesco.pe/file/A9akJXSopqh0FZIVWD7WEYmpq6NmlYP16wYZFuAHlqw9-jkGaoOKZ-c8wDbKylbh9B_eOTx6z25XglvSsL_vw8-Lh6VduQ1EKjGws4Hnb0yYVI1oNFAuUa5yScrKAwnLusSoQUvIUDaCcim0HBx8VgKmHRDUWT5YDPqX10FZfjF1YpgVOpWdpKlBvWvrpJmfP6ygJhxwKoKulinyelzf_DiBWpzHC42gK3CF4URGrDYID77PXOp8PWojYqPnq4UOOOfMOZfDl5dcwq95N-WCYcanaaAjxACDMVM70LsIR2RSZttMw-CY91KxjScp1XK2eyy3BOSG2tVRrnIzx2lXzA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/qm3YZ8ii2iIz7GR6TZgc5aJw84TtWzk7teNYoO5iCQIlAIKCP33sN1ttoLvfsMxEuty5LklFFIlHpvr4R18CfG5DXK9IlOoIBzOiVcF5RHn4zBljMln6gftHSXZStj6o7knLumlLTgoweuRYGi5uYKBLmWrZtlPYPRM4i67qtXo2WZMLHMQHxArjvYPVr-beB8Lw9JQdMo37axDIaw9sjXTRK31HPLa9qXqOyJJ9LekhFWDWyPHavgpODzcBZBCXbvUCBXCeAdpZVkB7bTteuTTeUSH9YWXdrD82a-4DDLjBUdAv8Ljk7P2qFMM_JELn9B0p9PQI4ZJ0BAcbs-IPaQ.jpg"
   }
  ]
 }
