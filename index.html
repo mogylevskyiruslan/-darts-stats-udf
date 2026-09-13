@@ -312,6 +312,41 @@
   .pp-medal-icon{font-size:22px; line-height:1;}
   .pp-medal-num{font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--gold); line-height:1;}
 
+  /* TOP-10 RACE */
+  .race-wrap{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:20px 24px;}
+  .race-date{
+    font-family:'JetBrains Mono',monospace; font-size:28px; font-weight:800; color:var(--gold);
+    text-align:right; margin-bottom:16px;
+  }
+  .race-bars{position:relative; min-height:420px;}
+  .race-bar-row{
+    position:absolute; left:0; right:0; height:36px;
+    display:flex; align-items:center; gap:10px;
+    transition:top 0.6s ease;
+  }
+  .race-bar-rank{
+    width:22px; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--muted); flex-shrink:0; text-align:right;
+  }
+  .race-bar-track{flex:1; position:relative; height:32px;}
+  .race-bar-fill{
+    position:absolute; left:0; top:0; height:100%; border-radius:4px;
+    background:linear-gradient(90deg, var(--royal), var(--royal-light));
+    transition:width 0.6s ease;
+    display:flex; align-items:center; padding:0 10px; overflow:hidden; white-space:nowrap;
+  }
+  .race-bar-label{font-size:12.5px; color:var(--cream); font-weight:600; overflow:hidden; text-overflow:ellipsis;}
+  .race-bar-value{
+    width:44px; flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:800;
+    color:var(--gold); text-align:left;
+  }
+  .race-controls{margin-top:16px; text-align:center;}
+  .race-btn{
+    padding:9px 20px; background:var(--gold); color:#1a1200; border:none; border-radius:6px;
+    font-family:'Oswald',sans-serif; font-weight:700; letter-spacing:0.04em; cursor:pointer; font-size:13px;
+  }
+  .race-btn:hover{filter:brightness(1.1);}
+  .race-btn:disabled{opacity:0.5; cursor:default;}
+
   .pp-section-title{
     font-family:'Montserrat',sans-serif; font-weight:700; text-transform:uppercase;
     font-size:14px; letter-spacing:0.04em; color:var(--cream); margin:24px 0 12px;
@@ -540,6 +575,7 @@
   <a href="#tournaments">Турніри</a>
   <a href="#growth">Динаміка</a>
   <a href="#participants-chart">Учасники по турнірах</a>
+  <a href="#top10-race">ТОП-10 гонка</a>
   <a href="#geography">Географія</a>
   <a href="#calendar-2026">Календар 2026</a>
   <a href="#leaderboard">Призери</a>
@@ -628,6 +664,18 @@
   <h2><span class="idx">02.15</span> Кількість учасників по турнірах</h2>
   <p class="section-sub">Сумарна кількість учасників (чоловіки + жінки) на кожному турнірі ВФД, у хронологічному порядку.</p>
   <div class="pp-chart-wrap" id="participants-chart-wrap"></div>
+</section>
+
+<section id="top10-race">
+  <h2><span class="idx">02.16</span> ТОП-10 турнірів за кількістю учасників</h2>
+  <p class="section-sub">Анімація формування рекордного списку — від першого турніру до сьогодні, серед усіх організаторів (ВФД + УДЛ/ЗУДЛ).</p>
+  <div class="race-wrap">
+    <div class="race-date" id="race-date">—</div>
+    <div class="race-bars" id="race-bars"></div>
+    <div class="race-controls">
+      <button type="button" class="race-btn" id="race-play-btn">▶ Відтворити</button>
+    </div>
+  </div>
 </section>
 
 <section id="geography">
@@ -1541,6 +1589,7 @@ async function loadData(){
     renderCurrentRating();
     initH2HLookup();
     renderMasters();
+    initTop10Race();
 
     // Якщо перейшли за посиланням "поділитись профілем" (?player=Ім'я) —
     // одразу відкриваємо потрібний профіль гравця.
@@ -1789,6 +1838,102 @@ function renderGrowthChart(){
         { name: 'Неактивні', color: '#f87171', points: lostPoints },
       ], { height: 240 })
     : '<div class="pp-chart-empty">Немає даних.</div>';
+}
+
+function computeTop10Timeline(){
+  // Усі турніри, усі організатори (ВФД + УДЛ/ЗУДЛ), хронологічно.
+  const sorted = tournaments.slice().sort((a,b) => parseUaDate(a.date) - parseUaDate(b.date));
+  const allTimeSeen = [];
+  const snapshots = [];
+  let lastKey = null;
+  sorted.forEach(t => {
+    const total = (t.men || 0) + (t.women || 0);
+    if(total <= 0) return;
+    allTimeSeen.push({ name: t.name, date: t.date, city: t.city, org: t.org, total });
+    const top10 = allTimeSeen.slice().sort((a,b) => b.total - a.total).slice(0, 10);
+    const key = top10.map(x => x.name + x.date).join('|');
+    if(key !== lastKey){
+      snapshots.push({ date: t.date, top10 });
+      lastKey = key;
+    }
+  });
+  return snapshots;
+}
+
+let raceSnapshots = [];
+let raceFrameIndex = 0;
+let racePlaying = false;
+
+function renderRaceFrame(idx){
+  const snap = raceSnapshots[idx];
+  if(!snap) return;
+  document.getElementById('race-date').textContent = snap.date;
+  const maxVal = snap.top10[0] ? snap.top10[0].total : 1;
+  const container = document.getElementById('race-bars');
+  const rowHeight = 40;
+  container.style.height = (snap.top10.length * rowHeight) + 'px';
+
+  snap.top10.forEach((item, rank) => {
+    const key = item.name + item.date;
+    let row = container.querySelector(`[data-key="${CSS.escape(key)}"]`);
+    if(!row){
+      row = document.createElement('div');
+      row.className = 'race-bar-row';
+      row.dataset.key = key;
+      row.style.top = (rank * rowHeight) + 'px';
+      row.innerHTML = `
+        <div class="race-bar-rank"></div>
+        <div class="race-bar-track"><div class="race-bar-fill"><span class="race-bar-label"></span></div></div>
+        <div class="race-bar-value"></div>
+      `;
+      container.appendChild(row);
+    }
+    requestAnimationFrame(() => { row.style.top = (rank * rowHeight) + 'px'; });
+    row.querySelector('.race-bar-rank').textContent = (rank + 1) + '.';
+    row.querySelector('.race-bar-fill').style.width = (item.total / maxVal * 100) + '%';
+    row.querySelector('.race-bar-label').textContent = `${item.name} · ${item.city} · ${item.date}`;
+    row.querySelector('.race-bar-value').textContent = item.total;
+  });
+
+  const currentKeys = new Set(snap.top10.map(item => item.name + item.date));
+  container.querySelectorAll('.race-bar-row').forEach(row => {
+    if(!currentKeys.has(row.dataset.key)) row.remove();
+  });
+}
+
+function playRace(){
+  if(racePlaying || raceSnapshots.length === 0) return;
+  racePlaying = true;
+  raceFrameIndex = 0;
+  document.getElementById('race-bars').innerHTML = '';
+  const btn = document.getElementById('race-play-btn');
+  btn.disabled = true;
+  btn.textContent = '▶ Відтворюється…';
+
+  function step(){
+    renderRaceFrame(raceFrameIndex);
+    raceFrameIndex++;
+    if(raceFrameIndex < raceSnapshots.length){
+      setTimeout(step, 900);
+    } else {
+      racePlaying = false;
+      btn.disabled = false;
+      btn.textContent = '↻ Відтворити ще раз';
+    }
+  }
+  step();
+}
+
+function initTop10Race(){
+  raceSnapshots = computeTop10Timeline();
+  const btn = document.getElementById('race-play-btn');
+  if(raceSnapshots.length === 0){
+    document.getElementById('race-bars').innerHTML = '<div class="pp-chart-empty">Немає даних.</div>';
+    btn.disabled = true;
+    return;
+  }
+  renderRaceFrame(raceSnapshots.length - 1); // одразу показуємо фінальний ТОП-10
+  btn.addEventListener('click', playRace);
 }
 
 function renderParticipantsChart(){
