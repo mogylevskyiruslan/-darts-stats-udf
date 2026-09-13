@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-13T21:22:14.704209+00:00",
+  "lastUpdated": "2026-09-13T21:32:20.006161+00:00",
   "tournamentsCount": 194
  },
  "tournaments": [
@@ -322223,6 +322223,15 @@
    "place": 3,
    "names": [
     "Федоришина Алла"
+   ]
+  },
+  {
+   "year": 2007,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Ледєньов Вадим"
    ]
   },
   {
