@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-13T20:56:25.965148+00:00",
+  "lastUpdated": "2026-09-13T21:22:14.704209+00:00",
   "tournamentsCount": 194
  },
  "tournaments": [
@@ -321841,6 +321841,121 @@
    ]
   },
   {
+   "year": 2014,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2014,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Квиклене Рената",
+    "Моісеєнко Віталіна",
+    "Редзюк Тетяна",
+    "Черноброва Олександра"
+   ]
+  },
+  {
+   "year": 2014,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Ємельянов Олександр"
+   ]
+  },
+  {
+   "year": 2014,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2014,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Невінчаний Едуард",
+    "Назаренко Олексій"
+   ]
+  },
+  {
+   "year": 2014,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Редзюк Тетяна",
+    "Черноброва Олександра"
+   ]
+  },
+  {
+   "year": 2013,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Усик Артем"
+   ]
+  },
+  {
+   "year": 2013,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Анісімова Світлана"
+   ]
+  },
+  {
+   "year": 2013,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Луков Олександр"
+   ]
+  },
+  {
+   "year": 2013,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Харченко Тетяна"
+   ]
+  },
+  {
+   "year": 2013,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Мамика Олександр",
+    "Ємельянов Олександр"
+   ]
+  },
+  {
+   "year": 2013,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Чумак Ганна",
+    "Ледєньова Наталія"
+   ]
+  },
+  {
    "year": 2012,
    "category": "501do",
    "gender": "men",
@@ -322016,6 +322131,24 @@
   },
   {
    "year": 2009,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Усик Артем"
+   ]
+  },
+  {
+   "year": 2009,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2009,
    "category": "команди",
    "gender": "men",
    "place": 2,
@@ -322090,6 +322223,33 @@
    "place": 3,
    "names": [
     "Федоришина Алла"
+   ]
+  },
+  {
+   "year": 2006,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Ледєньов Вадим"
+   ]
+  },
+  {
+   "year": 2005,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Ледєньов Вадим"
+   ]
+  },
+  {
+   "year": 2006,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Ледєньов Вадим"
    ]
   }
  ]
