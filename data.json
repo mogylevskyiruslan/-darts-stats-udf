@@ -1,7 +1,7 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-12T21:28:55.744153+00:00",
-  "tournamentsCount": 193
+  "lastUpdated": "2026-09-13T10:09:19.145785+00:00",
+  "tournamentsCount": 194
  },
  "tournaments": [
   {
@@ -8599,6 +8599,43 @@
     "silver": "Журавель Алла",
     "bronze": [
      "Спекторенко Катерина"
+    ]
+   },
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 82,
+   "men": 64,
+   "menAvg": null,
+   "women": 18,
+   "womenAvg": null,
+   "name": "ЧУ 2010 Команди",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "22.05.2010",
+   "city": "Черкаси",
+   "isUDL": false,
+   "chuCategory": "ЧУ Команди",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": {
+    "gold": "Мелашенко Владислав",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Десинський Максим"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Білодід Кристіна",
+    "silver": "Калаур Інна",
+    "bronze": [
+     "Моісеєнко Віталіна"
     ]
    },
    "nakkaMedals": null,
