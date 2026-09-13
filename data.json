@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-13T20:20:05.211419+00:00",
+  "lastUpdated": "2026-09-13T20:56:25.965148+00:00",
   "tournamentsCount": 194
  },
  "tournaments": [
@@ -319069,7 +319069,7 @@
    "text": "Перший турнір осіннього сезону дартс-клубу «Портер» виграв Овсієнко Євген. Під час групового раунду він зіграв гру проти Свиди О. з неймовірним середнім 102.48❗️, що є повторенням загальнонаціонального рекорду, який належить Мелашенко В.\nПризери 1-го осіннього рейтингового турніру ДК «Портер»:\n🥇Овсієнко Є.\n🥈Абчугський О.\n🥉Дзябура В.\n1️⃣8️⃣0️⃣х5️⃣ - Овсієнко Є.\n1️⃣8️⃣0️⃣х2️⃣ - Агневщиков Ю.\n1️⃣8️⃣0️⃣ - Буханцов Т., Зайцева І.\n☑️Чекаути 100+:\n1️⃣2️⃣6️⃣ - Абчугський О.\n1️⃣1️⃣6️⃣ - Дзябура В.\n1️⃣1️⃣",
    "date": "2026-09-12",
    "url": "https://t.me/fullbull/12676",
-   "photo": "https://cdn4.telesco.pe/file/CQ2AmoVjFIrCHNYh0NkrkU5dAPLf3YRA14GFnD26PonxntTt3aMAd0UYHSFs-285dG3_DlfD55wjlx9xFHgSWpoEwWrGHU5wpBJ5i28frlWXlfaVOTM1zty8trtAENbExSIcmD2dFDKwSF62aNl55jEymd6hLk8YccWgXIFP3rN6qsgliBLa8QnoUGfJoOzGAx0daNhTsGAFyVLzyqnkAOXp4ljxkmxOs_xtE4an9JJ8PAAHgwm19tU8VCicSdppsQPjw1IJJ47B2FzkTKb02Plr7sCbPXGuYJohlWqi_FZXdnLcKw-TLdt2y9KJ3wHKTl_aPPbQ5y7ZOg8w9trmTA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/HfBH7m5cwiqlt-M2-NsU5m0HOMtJzAtMd6K-qorCNRNISi_uTOq1wFPUFU7R0iNgRBhlee75-qHm0GUEMh2B_92oA1KtVP6X2sFEIu89DhNCNMFX4aQ07NDym3BbA02VOB1MrmWwY0PelqN-ANtBLupxMcW7town96BcZcS50S-7P-e1MOwsMY-fOebTpcRLLZ4H4TLhhPw2KB2fbZSqcwCcGBwqSYkDLcyoKbb8uizAnT9psYZEnYuSaWEGy8mdsqgvAlcZLvOb5basFIFQKP-QoNHR-qEDT_wh9Hwb9srFfCPH7fhKckl6sY6mf-n0d7R53qpOHaYjSchBacZR7w.jpg"
   },
   {
    "text": "ВФД запустила статистичний сайт:\n- історичні результати\n- статистику і рекорди\n- поточні показники\n- профіль гравця з вичерпною особистою статистикою\n- історію протистоянь\n- новини дартсу України\n- трансляції турнірів\n- і багато іншого.\n👀 \n🤝Подяка за величезну роботу Могилевскому Руслану, Кудрявцеву Євгену.",
@@ -319082,6 +319082,3015 @@
    "date": "2026-09-09",
    "url": "https://t.me/fullbull/12662",
    "photo": "https://cdn4.telesco.pe/file/qm3YZ8ii2iIz7GR6TZgc5aJw84TtWzk7teNYoO5iCQIlAIKCP33sN1ttoLvfsMxEuty5LklFFIlHpvr4R18CfG5DXK9IlOoIBzOiVcF5RHn4zBljMln6gftHSXZStj6o7knLumlLTgoweuRYGi5uYKBLmWrZtlPYPRM4i67qtXo2WZMLHMQHxArjvYPVr-beB8Lw9JQdMo37axDIaw9sjXTRK31HPLa9qXqOyJJ9LekhFWDWyPHavgpODzcBZBCXbvUCBXCeAdpZVkB7bTteuTTeUSH9YWXdrD82a-4DDLjBUdAv8Ljk7P2qFMM_JELn9B0p9PQI4ZJ0BAcbs-IPaQ.jpg"
+  }
+ ],
+ "championsRecords": [
+  {
+   "year": 2026,
+   "category": "мікст",
+   "gender": null,
+   "place": 1,
+   "names": [
+    "Могилевський Руслан",
+    "Лановенко Ксенія"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "команди",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Овсієнко Євген",
+    "Бабанін Дмитро",
+    "Абчугський Олександр",
+    "Ромашко Віталій"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "команди",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Гончаренко Інна",
+    "Лановенко Ксенія",
+    "Харченко Тетяна"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "пари",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Сташевський Валентин",
+    "Sol Deen"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "пари",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Харченко Тетяна",
+    "Гончаренко Інна"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "dido",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Ванда Євген"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "dido",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Харченко Тетяна"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "мікст",
+   "gender": null,
+   "place": 2,
+   "names": [
+    "Абчугський Олександр",
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "команди",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Омельченко Владислав",
+    "Солтис Микита",
+    "Рогов Віталій",
+    "Дідов Василь"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "команди",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Шклярук Юлія",
+    "Терещенко Любов",
+    "Шклярук Наталія"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "пари",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Овсієнко Євген",
+    "Абчугський Олександр"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "пари",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Терещенко Любов",
+    "Спекторенко Катерина"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "dido",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Цілуйко Владислав"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "dido",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Гончаренко Інна"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "мікст",
+   "gender": null,
+   "place": 3,
+   "names": [
+    "Кіфор Ярослав",
+    "Гончаренко Інна"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "команди",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Могилевський Руслан",
+    "Хімчак Сергій",
+    "Хоменко Андрій",
+    "Шапка Євген"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "команди",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Зайцева Інна",
+    "Діденко Оксана",
+    "Ананенко Альона"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "пари",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Гончаров Едуард",
+    "Агневщиков Юрій"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "пари",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Білоус Жанна",
+    "Ільясова Альбіна"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "dido",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Залевський Володимир"
+   ]
+  },
+  {
+   "year": 2026,
+   "category": "dido",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Лановенко Ксенія"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "мікст",
+   "gender": null,
+   "place": 1,
+   "names": [
+    "Кіфор Ярослав",
+    "Ільясова Альбіна"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "команди",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Микитин Ярослав",
+    "Білоус Іван",
+    "Григоренко Віктор",
+    "Гакман Степан"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "команди",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Пивошенко Олена",
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "пари",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Омельченко Владислав",
+    "Дідов Василь"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "пари",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Харченко Тетяна",
+    "Гончаренко Інна"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "dido",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "dido",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Харченко Тетяна"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "cricket",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Мамика Олександр"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "cricket",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Харченко Тетяна"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Могилевський Руслан"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Гончаренко Інна"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "мікст",
+   "gender": null,
+   "place": 2,
+   "names": [
+    "Залевський Володимир",
+    "Білоус Жанна"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "команди",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Омельченко Владислав",
+    "Рогов Віталій",
+    "Дідов Василь",
+    "Солтис Микита"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "команди",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Ільясова Альбіна",
+    "Білоус Жанна"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "пари",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Кіфор Ярослав",
+    "Гринів Олександр"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "пари",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Пивошенко Олена",
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "dido",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Десинський Максим"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "dido",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Терещенко Любов"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "cricket",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Рогов Віталій"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "cricket",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Терещенко Любов"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Абчугський Олександр"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Харченко Тетяна"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "мікст",
+   "gender": null,
+   "place": 3,
+   "names": [
+    "Солтис Микита",
+    "Солтис Ганна"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "команди",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Усик Сергій",
+    "Абчугський Олександр",
+    "Буханцов Тарас",
+    "Аверін Сергій"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "команди",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Харченко Тетяна",
+    "Гончаренко Інна"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "пари",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Рогов Віталій",
+    "Троценко Артем"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "пари",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Терещенко Любов",
+    "Чабанова Ганна"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "dido",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Могилевський Руслан"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "dido",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Гончаренко Інна"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "cricket",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Могилевський Руслан",
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "cricket",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Лановенко Ксенія"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Гринів Олександр"
+   ]
+  },
+  {
+   "year": 2025,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "мікст",
+   "gender": null,
+   "place": 1,
+   "names": [
+    "Чепурний Едуард",
+    "Харченко Тетяна"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "команди",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Микитин Ярослав",
+    "Залевський Володимир",
+    "Ледєньов Вадим",
+    "Мелашенко Владислав"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "команди",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Харченко Тетяна",
+    "Гончаренко Інна"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "пари",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Залевський Володимир",
+    "Мелашенко Владислав"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "пари",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Харченко Тетяна",
+    "Гончаренко Інна"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "dido",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Залевський Володимир"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "dido",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Харченко Тетяна"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "cricket",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Залевський Володимир"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "cricket",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Харченко Тетяна"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Залевський Володимир"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Харченко Тетяна"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "мікст",
+   "gender": null,
+   "place": 2,
+   "names": [
+    "Залевський Володимир",
+    "Білоус Жанна"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "команди",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Чепурний Едуард",
+    "Соколов Володимир",
+    "Подльський Святослав",
+    "Пальонний Ігор"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "команди",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Ільясова Альбіна",
+    "Терещенко Любов"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "пари",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Кисельов Дмитро",
+    "Усик Артем"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "пари",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Соколова Вікторія",
+    "Лановенко Ксенія"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "dido",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Кіфор Ярослав"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "dido",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Лановенко Ксенія"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "cricket",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Сидоренко Олександр"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "cricket",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Терещенко Любов"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Аверін Сергій"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Чабанова Ганна"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "мікст",
+   "gender": null,
+   "place": 3,
+   "names": [
+    "Могилевський Руслан",
+    "Лановенко Ксенія"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "команди",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Могилевський Руслан",
+    "Бутов Олександр",
+    "Пекарук Ілля",
+    "Василевський Володимир"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "команди",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Соколова Вікторія",
+    "Лановенко Ксенія"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "пари",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Сташевський Валентин",
+    "Sol Deen"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "пари",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Пішта Людмила",
+    "Білоус Жанна"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "dido",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Гоян Дмитро",
+    "Григоренко Віктор"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "dido",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Гончаренко Інна"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "cricket",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Лагутін Андрій"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "cricket",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Гончаренко Інна"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Омельченко Володимир"
+   ]
+  },
+  {
+   "year": 2024,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Терещенко Любов"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "мікст",
+   "gender": null,
+   "place": 1,
+   "names": [
+    "Омельченко Владислав",
+    "Терещенко Любов"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "команди",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Могилевський Руслан",
+    "Пекарук Ілля",
+    "Шапка Євген",
+    "Гетманцев Олександр"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "команди",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна",
+    "Соколова Вікторія"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "пари",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Залевський Володимир",
+    "Мелашенко Владислав"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "пари",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Ільясова Альбіна",
+    "Терещенко Любов"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "dido",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "dido",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Терещенко Любов"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "cricket",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "cricket",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Терещенко Любов"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "мікст",
+   "gender": null,
+   "place": 2,
+   "names": [
+    "Могилевський Руслан",
+    "Лановенко Ксенія"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "команди",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Микитин Ярослав",
+    "Мелашенко Владислав",
+    "Ледєньов Вадим",
+    "Залевський Володимир"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "команди",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Харченко Тетяна",
+    "Осадча Юлія"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "пари",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Троценко Артем",
+    "Лагутін Андрій"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "пари",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Пивошенко Олена",
+    "Мельтєва Ірина"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "dido",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Залевський Володимир"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "dido",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Лановенко Ксенія"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "cricket",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Аверін Сергій"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "cricket",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Терещенко Любов"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Залевський Володимир"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Шклярук Наталія"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "мікст",
+   "gender": null,
+   "place": 3,
+   "names": [
+    "Луков Олександр",
+    "Лукова Вікторія"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "команди",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Омельченко Владислав",
+    "Мамика Олександр",
+    "Баширов Ярослав",
+    "Десинський Максим"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "команди",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Пивошенко Олена",
+    "Білаш Вікторія"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "пари",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Сташевський Валентин",
+    "Sol Deen"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "пари",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Соколова Вікторія",
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "dido",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Мелашенко Владислав"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "dido",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Полтавець Світлана"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "cricket",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Могилевський Руслан"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "cricket",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Полтавець Світлана"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Троценко Артем"
+   ]
+  },
+  {
+   "year": 2023,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Соколова Вікторія"
+   ]
+  },
+  {
+   "year": 2022,
+   "category": "пари",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Омельченко Владислав",
+    "Баширов Ярослав"
+   ]
+  },
+  {
+   "year": 2022,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2022,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2022,
+   "category": "пари",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Залевський Володимир",
+    "Бейреш Ласло"
+   ]
+  },
+  {
+   "year": 2022,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Залевський Володимир"
+   ]
+  },
+  {
+   "year": 2022,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2022,
+   "category": "пари",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Могилевський Руслан",
+    "Пекарук Ілля"
+   ]
+  },
+  {
+   "year": 2022,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Пекарук Ілля"
+   ]
+  },
+  {
+   "year": 2022,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Соколова Вікторія"
+   ]
+  },
+  {
+   "year": 2021,
+   "category": "команди",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Усик Сергій",
+    "Усик Артем",
+    "Ледєньов Вадим",
+    "Морозов Сергій"
+   ]
+  },
+  {
+   "year": 2021,
+   "category": "команди",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна",
+    "Соколова Вікторія"
+   ]
+  },
+  {
+   "year": 2021,
+   "category": "команди",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Омельченко Владислав",
+    "Солтис Микита",
+    "Солтис Андрій",
+    "Кулик Віталій"
+   ]
+  },
+  {
+   "year": 2021,
+   "category": "команди",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Ледєньова Наталія",
+    "Лановенко Ксенія"
+   ]
+  },
+  {
+   "year": 2021,
+   "category": "команди",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Марченко Денис",
+    "Подольський Святослав",
+    "Чепурний Едуард",
+    "Мороз Артем"
+   ]
+  },
+  {
+   "year": 2021,
+   "category": "команди",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Мельтєва Ірина",
+    "Лях Свiтлана",
+    "Чабанова Ганна",
+    "Спекторенко Катерина"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "мікст",
+   "gender": null,
+   "place": 1,
+   "names": [
+    "Омельченко Владислав",
+    "Марфола Оксана"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "команди",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Мамика Олександр",
+    "Омельченко Владислав",
+    "Рогов Віталій",
+    "Солтис Андрій"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "команди",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Чумак Ганна",
+    "Грушовець Ольга"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "пари",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Омельченко Владислав",
+    "Мамика Олександр"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "пари",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна",
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "cricket",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Усик Артем"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "cricket",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Бушуй Олексій"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "мікст",
+   "gender": null,
+   "place": 2,
+   "names": [
+    "Усик Артем",
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "команди",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Усик Артем",
+    "Ледєньов Вадим",
+    "Некрістов Станіслав",
+    "Ромашко Віталій"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "команди",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Моісеєнко Віталіна",
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "пари",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Усик Артем",
+    "Ледєньов Вадим"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "пари",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Марфола Оксана",
+    "Харченко Тетяна"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "cricket",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "cricket",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Чумак Ганна"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "мікст",
+   "gender": null,
+   "place": 3,
+   "names": [
+    "Мамика Олександр",
+    "Харченко Тетяна"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "команди",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Бушуй Олексій",
+    "Гетманцев Олександр",
+    "Котляр Юрій",
+    "Лещенко Юрій"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "команди",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Харченко Тетяна",
+    "Соколова Вікторія"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "пари",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Тямолов Роман",
+    "Агневщіков Анатолій",
+    "Солтис Андрій",
+    "Рогов Віталій"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "пари",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Пивошенко Олена",
+    "Солтис Ганна",
+    "Чумак Ганна",
+    "Грушовець Ольга"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "cricket",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Мамика Олександр"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "cricket",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Марфола Оксана"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Мамика Олександр"
+   ]
+  },
+  {
+   "year": 2019,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Харченко Тетяна"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "мікст",
+   "gender": null,
+   "place": 1,
+   "names": [
+    "Усик Артем",
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "команди",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Бушуй Олексій",
+    "Гетманцев Олександр",
+    "Котляр Юрій",
+    "Ковальов Дмитро"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "команди",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Чумак Ганна",
+    "Грушовець Ольга"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "пари",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Усик Артем",
+    "Ледєньов Вадим"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "пари",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Редзюк Тетяна",
+    "Некрістова Наталія"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "dido",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Мамика Олександр"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "dido",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "cricket",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Усик Артем"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "cricket",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Усик Артем"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Чумак Ганна"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "мікст",
+   "gender": null,
+   "place": 2,
+   "names": [
+    "Ледєньов Вадим",
+    "Ільясова Альбіна"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "команди",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Мамика Олександр",
+    "Омельченко Владислав",
+    "Васюра Андрій",
+    "Невінчаний Едуард"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "команди",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Ледєньова Наталія",
+    "Ільясова Альбіна"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "пари",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Бушуй Олексій",
+    "Котляр Юрій"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "пари",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Моісеєнко Віталіна",
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "dido",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Залевський Володимир"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "dido",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Грушовець Ольга"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "cricket",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "cricket",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Павлюченко Марина"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "мікст",
+   "gender": null,
+   "place": 3,
+   "names": [
+    "Омельченко Владислав",
+    "Марфола Оксана"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "команди",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Усик Артем",
+    "Ледєньов Вадим",
+    "Григоренко Денис",
+    "Ромашко Віталій"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "команди",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Марфола Оксана",
+    "Борисова Марина"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "пари",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Омельченко Владислав",
+    "Мамика Олександр"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "пари",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Звягіна Анастасія",
+    "Ільясова Альбіна"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "dido",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Дідов Василь"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "dido",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Чумак Ганна"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "cricket",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Бушуй Олексій"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "cricket",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Грушовець Ольга"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Бушуй Олексій"
+   ]
+  },
+  {
+   "year": 2018,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Марфола Оксана"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "мікст",
+   "gender": null,
+   "place": 1,
+   "names": [
+    "Бушуй Олексій",
+    "Павлюченко Марина"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "команди",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Мамика Олександр",
+    "Омельченко Владислав",
+    "Васюра Андрій",
+    "Невінчаний Едуард"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "команди",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна",
+    "Анісімова Світлана"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "пари",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Сташевський Валентин",
+    "Sol Deen"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "пари",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна",
+    "Анісімова Світлана"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "dido",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Григоренко Денис"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "dido",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Чумак Ганна"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "cricket",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Усик Артем"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "cricket",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Усик Артем"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "мікст",
+   "gender": null,
+   "place": 2,
+   "names": [
+    "Кумовицький Павло",
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "команди",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Усик Артем",
+    "Ледєньов Вадим",
+    "Григоренко Денис",
+    "Ромашко Віталій"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "команди",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Чумак Ганна",
+    "Грушовець Ольга"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "пари",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Усик Артем",
+    "Ледєньов Вадим"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "пари",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Чумак Ганна",
+    "Грушовець Ольга"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "dido",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Чумак Дмитро"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "dido",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Камелькова Людмила"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "cricket",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Васюра Андрій"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "cricket",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Анісімова Світлана"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Невінчаний Едуард"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Чумак Ганна"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "мікст",
+   "gender": null,
+   "place": 3,
+   "names": [
+    "Мигалюк Родіон",
+    "Саїнчук Тетяна"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "команди",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Марченко Денис",
+    "Зольдін Фелікс",
+    "Зарайський Володимир",
+    "Пальонний Ігор"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "команди",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Ледєньова Наталія",
+    "Павлюченко Марина"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "пари",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Васюра Андрій",
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "пари",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Ледєньова Наталія",
+    "Павлюченко Марина"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "dido",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Лагутін Андрій"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "dido",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "cricket",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Мамика Олександр"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "cricket",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Чумак Ганна"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2017,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "мікст",
+   "gender": null,
+   "place": 1,
+   "names": [
+    "Усик Артем",
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "команди",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Усик Артем",
+    "Ледєньов Вадим",
+    "Григоренко Денис",
+    "Ромашко Віталій"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "команди",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Редзюк Тетяна",
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "пари",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Григоренко Денис",
+    "Усик Артем"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "пари",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Редзюк Тетяна",
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "cricket",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Бушуй Олексій"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "cricket",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Чумак Ганна"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Бушуй Олексій"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Анісімова Світлана"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "мікст",
+   "gender": null,
+   "place": 2,
+   "names": [
+    "Мамика Олександр",
+    "Чумак Ганна"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "команди",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Мамика Олександр",
+    "Омельченко Владислав",
+    "Васюра Андрій",
+    "Луков Олександр"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "команди",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Чумак Ганна",
+    "Грушовець Ольга"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "пари",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Бадира Олександр",
+    "Томчук Олег"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "пари",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Моісеєнко Віталіна",
+    "Анісімова Світлана"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "cricket",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Мамика Олександр"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "cricket",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Редзюк Тетяна"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Григоренко Денис"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Чумак Ганна"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "мікст",
+   "gender": null,
+   "place": 3,
+   "names": [
+    "Григоренко Денис",
+    "Редзюк Тетяна"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "команди",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Марченко Денис",
+    "Зольдін Фелікс",
+    "Зарайський Володимир",
+    "Анісімов Денис"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "команди",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Моісеєнко Віталіна",
+    "Анісімова Світлана"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "пари",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Васюра Андрій",
+    "Омельченко Владислав",
+    "Агневщиков Юрій",
+    "Буханцов Тарас"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "пари",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Чумак Ганна",
+    "Грушовець Ольга"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "cricket",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Григоренко Денис"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "cricket",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Васюра Андрій"
+   ]
+  },
+  {
+   "year": 2016,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Редзюк Тетяна"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "мікст",
+   "gender": null,
+   "place": 1,
+   "names": [
+    "Усик Артем",
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "команди",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Марченко Денис",
+    "Зольдін Фелікс",
+    "Зарайський Володимир",
+    "Бублик В'ячеслав"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "команди",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Харченко Тетяна",
+    "Соколова Вікторія"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "пари",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Усик Артем",
+    "Ледєньов Вадим"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "пари",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна",
+    "Марфола Оксана"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "cricket",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Мамика Олександр"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "cricket",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Пасічніченко Артем"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "мікст",
+   "gender": null,
+   "place": 2,
+   "names": [
+    "Мамика Олександр",
+    "Чумак Ганна"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "команди",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Шинкаренко Василь",
+    "Омельченко Владислав",
+    "Васюра Андрій",
+    "Луков Олександр"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "команди",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Моісеєнко Віталіна",
+    "Потан Лілія"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "пари",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Савенков Антон",
+    "Бутрій Володимир"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "пари",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Чумак Ганна",
+    "Анісімова Світлана"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "cricket",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "cricket",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Чумак Ганна"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Усик Артем"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Марфола Оксана"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "мікст",
+   "gender": null,
+   "place": 3,
+   "names": [
+    "Кумовицький Павло",
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "команди",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Шмідтке Анджей",
+    "Швець Андрій",
+    "Бадира Олександр",
+    "Волчук Руслан"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "команди",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Чумак Ганна",
+    "Анісімова Світлана"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "пари",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Алхімов Андрій",
+    "Мороз Ігор"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "пари",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Потан Лілія",
+    "Калаур Інна"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "cricket",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Усик Артем"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "cricket",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Грушовець Ольга"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2015,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Редзюк Тетяна"
+   ]
+  },
+  {
+   "year": 2012,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Усик Артем"
+   ]
+  },
+  {
+   "year": 2012,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Перетятько Тетяна"
+   ]
+  },
+  {
+   "year": 2012,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2012,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Новикова Зоя"
+   ]
+  },
+  {
+   "year": 2012,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Десинський"
+   ]
+  },
+  {
+   "year": 2012,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Лопухова Ганна"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Ледєньов Вадим"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Лопухова Ганна"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Мінченок Юрій"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Журавель Алла"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Спекторенко Катерина"
+   ]
+  },
+  {
+   "year": 2010,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Мелашенко Владислав"
+   ]
+  },
+  {
+   "year": 2010,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Білодід Крістіна"
+   ]
+  },
+  {
+   "year": 2010,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Мамика Олександр"
+   ]
+  },
+  {
+   "year": 2010,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Калаур Інна"
+   ]
+  },
+  {
+   "year": 2010,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Десинський Максим"
+   ]
+  },
+  {
+   "year": 2010,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2009,
+   "category": "команди",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Мелашенко Владислав",
+    "Чик Едуард",
+    "Любих Сергій",
+    "Острадчук Вадим"
+   ]
+  },
+  {
+   "year": 2009,
+   "category": "команди",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Ледєньов Вадим",
+    "Скарлат Дмитро",
+    "Квасков Павло",
+    "Ромашко Віталій"
+   ]
+  },
+  {
+   "year": 2009,
+   "category": "команди",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Омельченко Владислав",
+    "Десинський Максим",
+    "Дідов Василь",
+    "Кресников Юрій"
+   ]
+  },
+  {
+   "year": 2008,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Воронін Олександр"
+   ]
+  },
+  {
+   "year": 2008,
+   "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2008,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Чик Едуард"
+   ]
+  },
+  {
+   "year": 2008,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Павлюченко Марина"
+   ]
+  },
+  {
+   "year": 2008,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Кобзар Ігор"
+   ]
+  },
+  {
+   "year": 2008,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Федоришина Алла"
+   ]
   }
  ]
 }
