@@ -306,6 +306,11 @@
   .pp-stat-cell{background:var(--panel-2); padding:14px 16px;}
   .pp-stat-cell .num{font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--gold);}
   .pp-stat-cell .label{font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em; margin-top:4px;}
+  .pp-stat-cell-wide{grid-column:span 2;}
+  .pp-medal-row{display:flex; gap:28px; align-items:center;}
+  .pp-medal-item{display:flex; align-items:center; gap:8px;}
+  .pp-medal-icon{font-size:22px; line-height:1;}
+  .pp-medal-num{font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:700; color:var(--gold); line-height:1;}
 
   .pp-section-title{
     font-family:'Montserrat',sans-serif; font-weight:700; text-transform:uppercase;
@@ -2158,7 +2163,14 @@ function openPlayerProfile(name){
         <div class="pp-stat-cell"><div class="num">${totalFinishes}</div><div class="label">Закриттів 100+</div></div>
         <div class="pp-stat-cell"><div class="num">${bestCheckout || '—'}</div><div class="label">Найкраще закриття</div></div>
         <div class="pp-stat-cell"><div class="num">${bestLegDarts === Infinity ? '—' : bestLegDarts}</div><div class="label">Найкращий лег (дротиків)</div></div>
-        <div class="pp-stat-cell"><div class="num">🥇${medalCount[1]} 🥈${medalCount[2]} 🥉${medalCount[3]}</div><div class="label">Місця на турнірах</div></div>
+        <div class="pp-stat-cell pp-stat-cell-wide">
+          <div class="pp-medal-row">
+            <div class="pp-medal-item"><span class="pp-medal-icon">🥇</span><span class="pp-medal-num">${medalCount[1]}</span></div>
+            <div class="pp-medal-item"><span class="pp-medal-icon">🥈</span><span class="pp-medal-num">${medalCount[2]}</span></div>
+            <div class="pp-medal-item"><span class="pp-medal-icon">🥉</span><span class="pp-medal-num">${medalCount[3]}</span></div>
+          </div>
+          <div class="label">Місця на турнірах</div>
+        </div>
       </div>
 
       <div class="pp-section-title">Динаміка середнього по турнірах</div>
