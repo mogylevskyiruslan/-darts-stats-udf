@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-13T10:09:19.145785+00:00",
+  "lastUpdated": "2026-09-13T11:19:28.382572+00:00",
   "tournamentsCount": 194
  },
  "tournaments": [
@@ -8588,17 +8588,17 @@
     }
    },
    "medals": {
-    "gold": "Ледєньов Вадим",
-    "silver": "Мінченок Юрій",
+    "gold": "Мелашенко Владислав",
+    "silver": "Мамика Олександр",
     "bronze": [
-     "Омельченко Владислав"
+     "Десинський Максим"
     ]
    },
    "medalsWomen": {
-    "gold": "Лопухова Ганна",
-    "silver": "Журавель Алла",
+    "gold": "Білодід Крістіна",
+    "silver": "Калаур Інна",
     "bronze": [
-     "Спекторенко Катерина"
+     "Моісеєнко Віталіна"
     ]
    },
    "nakkaMedals": null,
@@ -8618,17 +8618,20 @@
    "isUDL": false,
    "chuCategory": "ЧУ Команди",
    "links": {
-    "men": null,
+    "men": {
+     "url": "https://docs.google.com/document/d/1G-5Zb3tqSVzztdYjIlHh5KRAMP5ATa2Fla5SxjlF160/edit?tab=t.0",
+     "type": "protocol_doc"
+    },
     "menAvg": null,
     "women": null,
     "womenAvg": null,
     "tournament": null
    },
    "medals": {
-    "gold": "Мелашенко Владислав",
-    "silver": "Мамика Олександр",
+    "gold": "Ужгород (Мелашенко Владислав, Чик Едуард, Любих Сергій, Острадчук Вадим)",
+    "silver": "Київ-1 (Ледєньов Вадим, Скарлат Дмитро, Квасков Павло, Ромашко Віталій)",
     "bronze": [
-     "Десинський Максим"
+     "СК Богатир (Омельченко Владислав, Десинський Максим, Рудковський Василь, Кресников Юрій)"
     ]
    },
    "medalsWomen": {
@@ -8665,14 +8668,18 @@
     }
    },
    "medals": {
-    "gold": "Усик Артем",
-    "silver": null,
-    "bronze": []
+    "gold": "Воронін Олександр",
+    "silver": "Чик Едуард",
+    "bronze": [
+     "Кобзар Ігор"
+    ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
-    "silver": null,
-    "bronze": []
+    "silver": "Павлюченко Марина",
+    "bronze": [
+     "Федоришина Алла"
+    ]
    },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
@@ -319093,18 +319100,6 @@
    "date": "2026-09-09",
    "url": "https://t.me/fullbull/12662",
    "photo": "https://cdn4.telesco.pe/file/A9akJXSopqh0FZIVWD7WEYmpq6NmlYP16wYZFuAHlqw9-jkGaoOKZ-c8wDbKylbh9B_eOTx6z25XglvSsL_vw8-Lh6VduQ1EKjGws4Hnb0yYVI1oNFAuUa5yScrKAwnLusSoQUvIUDaCcim0HBx8VgKmHRDUWT5YDPqX10FZfjF1YpgVOpWdpKlBvWvrpJmfP6ygJhxwKoKulinyelzf_DiBWpzHC42gK3CF4URGrDYID77PXOp8PWojYqPnq4UOOOfMOZfDl5dcwq95N-WCYcanaaAjxACDMVM70LsIR2RSZttMw-CY91KxjScp1XK2eyy3BOSG2tVRrnIzx2lXzA.jpg"
-  },
-  {
-   "text": "🏆У чоловіків кубковий етап в Одесі за Овсієнко Євгеном. Вже традиційний двобій зі Сташевським Валентином вийшов на користь киянина 5-4.\n🥇Овсієнко Є.\n🥈Сташевський В.\n🥉Мелашенко В.\n1️⃣8️⃣0️⃣х3️⃣ - Омельченко В.\n1️⃣8️⃣0️⃣х2️⃣ - Сташевський В.\n1️⃣8️⃣0️⃣ - Гакман С., Овсієнко Є., Мелашенко В.,\nАбчугський О., Солтис М., \n☑️Чекаути 100+:\n1️⃣4️⃣4️⃣ - Овсієнко Є.\n1️⃣4️⃣2️⃣ - Могилевський Р.\n1️⃣2️⃣6️⃣ - Мелашенко В.\n1️⃣1️⃣7️⃣ - Мелашенко В. \n1️⃣1️⃣6️⃣ - Сташевський В.\n1️⃣1️⃣5️⃣ - Омельченко В.\n1️⃣1️⃣0️⃣ -",
-   "date": "2026-09-06",
-   "url": "https://t.me/fullbull/12652",
-   "photo": "https://cdn4.telesco.pe/file/MtDN-sedSj_K7i7V-7YS4wryl0bUOlCn5MihEcjNTbsdS1ZQSW_xzIDQaFfu7qeXhBHI0g6pai9qI3_6cqFGOQPPZPZZsfQ-tjxnXjg2mZj4f8gjwqE32ttCsXELXrB_YCxCqjHm0lctJZMXn2kRR7HSAYSHHVGjXwBn5cEkyh1hKoIp2vtQJ2F2BAw_GBgp9siSVBcG_LhRsMhs312gvGpmORvHSj8R8cqI4LdT_JLiiZzPzjoFVf-EBGvut821F4HsD5rpsd-wZhqBz6tVvaklm8Fxie2lXz_K9tgvRBDXwjGS7pBwo7QKakHphX1xB7iHgxZ_gsJrnVkeX0lwwA.jpg"
-  },
-  {
-   "text": "🏆Переможниця ІV-етапу Кубку України в Одесі серед жінок - Харченко Тетяна.\n🥇Харченко Т.\n🥈Гончаренко І.\n🥉Шклярук Н.\n1️⃣8️⃣0️⃣ - Харченко Т.\n👀",
-   "date": "2026-09-06",
-   "url": "https://t.me/fullbull/12651",
-   "photo": "https://cdn4.telesco.pe/file/KeURCQdQQbXfpm-QLATzuZOq222teBJLKyuJuRIqfJvvapIpys0eT1jlJNm-xGHN247_Xi8rrHqNNiULznSX95vZTxqS0bka7VW-zTgx8_TgQzpvqt_M2WkXeBhaFhM0fZk2TQM5kgDWFEzL4YpXPAOyNRTmkVKsTUvyzLzPLGaV5zDaPp0elH2nFkdYHFy50o1UUjxc63aSnQd3yvTTK5yXu12ciM0GgLQMBSZRz6diigIqorgzueIt9I3UhSi5LUopDMhnmb6YoylgWIdpKQ-WmKrsbxh811uEMxw1lwelI2i0e4MylxEnGoobLfQ86EtSKBgJR0l2zPsLs_E6vA.jpg"
   }
  ]
 }
