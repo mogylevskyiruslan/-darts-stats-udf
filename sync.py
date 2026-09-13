@@ -19,6 +19,7 @@ import urllib.request
 from datetime import datetime, timezone
 
 TOURNAMENTS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTZxNlB-yHQDjWX3Y_n4GCUL_4sY5oLcLeW9rR_MI5zlm2p0YqZmHUUXw07bLw1YTiUg4Ar6bRbn_Dd/pub?output=csv&gid=0"
+CHAMPIONS_CSV_URL = "https://docs.google.com/spreadsheets/d/1QWz4s3O0hfLZ5ko8V8fn8Xuy59sa2zfglqyDixnFLNk/export?format=csv&gid=1583448563"
 PRIZES_MEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U550qzdDKkLxenpx2LUYMQ8Uccqf9ZdkyP7ruIqdoPt_tX-hQWKhQOnTGc6HG6jiPQmQEuA/pub?output=csv&gid=0"
 PRIZES_WOMEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U550qzdDKkLxenpx2LUYMQ8Uccqf9ZdkyP7ruIqdoPt_tX-hQWKhQOnTGc6HG6jiPQmQEuA/pub?output=csv&gid=109502045"
 RATINGS_SOURCES_PATH = "ratings_sources.json"
@@ -217,7 +218,73 @@ def parse_prizes(rows):
     return year_data, aggregate
 
 
-def build_leaderboard_from_podiums(year_data):
+def parse_champion_category_header(text):
+    """'ЧУ Команди Чоловіки' -> ('команди', 'men'); 'ЧУ мікст' -> ('мікст', None).
+    Написано гнучко (регексами), щоб нові категорії, додані в майбутньому в
+    таблицю, розпізнавались автоматично без зміни коду."""
+    t = text.strip()
+    gender = None
+    low = t.lower()
+    if "чоловіки" in low:
+        gender = "men"
+        t = re.sub(r"чоловіки", "", t, flags=re.IGNORECASE).strip()
+    elif "жінки" in low:
+        gender = "women"
+        t = re.sub(r"жінки", "", t, flags=re.IGNORECASE).strip()
+    t = re.sub(r"^чу\s*", "", t, flags=re.IGNORECASE).strip()
+    category_key = t.lower().replace(" ", "")
+    return category_key, gender
+
+
+def parse_champions_sheet(rows, name_index, canonical_names):
+    """Парсить таблицю 'Чемпіони України та призери' (окрема вкладка).
+    Формат: рядок-заголовок року (колонка A = рік, B.. = назви категорій),
+    далі 12 рядків — по 4 рядки на кожне з 3 місць (місце вказане в колонці A
+    лише на першому з 4 рядків; команди/пари використовують кілька рядків
+    для імен партнерів/гравців команди, одиночні категорії — лише перший).
+    Повертає плаский список записів для незалежного відображення на сайті —
+    НЕ змішується і не підсумовується з жодною іншою статистикою турнірів."""
+    records = []
+    i = 0
+    n = len(rows)
+    while i < n:
+        row = rows[i]
+        col_a = row[0].strip() if len(row) > 0 else ""
+        col_b = row[1].strip() if len(row) > 1 else ""
+
+        if re.match(r"^\d{4}$", col_a) and col_b:
+            year = int(col_a)
+            categories = {}  # col_idx -> (category_key, gender)
+            for col_idx in range(1, len(row)):
+                label = row[col_idx].strip() if col_idx < len(row) else ""
+                if label:
+                    categories[col_idx] = parse_champion_category_header(label)
+
+            # 12 рядків даних: по 4 на кожне з місць 1, 2, 3
+            block_start = i + 1
+            for place_offset in range(3):
+                place = place_offset + 1
+                group_start = block_start + place_offset * 4
+                group_rows = rows[group_start:group_start + 4]
+                for col_idx, (cat_key, gender) in categories.items():
+                    names = []
+                    for grow in group_rows:
+                        val = grow[col_idx].strip() if col_idx < len(grow) else ""
+                        if val:
+                            names.append(resolve_name(val, name_index, canonical_names))
+                    if names:
+                        records.append({
+                            "year": year, "category": cat_key, "gender": gender,
+                            "place": place, "names": names,
+                        })
+            i = block_start + 12
+            continue
+        i += 1
+
+    return records
+
+
+
     """Рахує медальний залік самостійно з даних подіумів (а не з таблиці,
     яку користувач вручну підбивав в Excel і де можливі помилки).
     Бронза рахується для КОЖНОГО імені в podium[2:] — тобто за 2013–2024,
@@ -2163,6 +2230,15 @@ def main():
     print(f"  Filled medals from prizes sheet: {filled_m} men, {filled_w} women "
           f"(переважно турніри до 2022 року, без Nakka)")
 
+    print("Fetching Champions of Ukraine registry (окрема вкладка, усі категорії ЧУ)...")
+    try:
+        champions_rows = fetch_csv(CHAMPIONS_CSV_URL)
+        champions_records = parse_champions_sheet(champions_rows, name_index, canonical_names)
+        print(f"  Parsed {len(champions_records)} champions records")
+    except Exception as e:
+        print(f"  WARNING: champions sheet fetch failed ({e}), skipping")
+        champions_records = []
+
     print("Fetching season ratings (Кубок України, all tabs)...")
     ratings = build_ratings(RATINGS_SOURCES_PATH, name_index, canonical_names)
     print(f"Parsed {len(ratings)} rating seasons")
@@ -2230,6 +2306,7 @@ def main():
         "currentRatingWomen": current_rating_women,
         "youtubeVideos": youtube_videos,
         "telegramNews": telegram_news,
+        "championsRecords": champions_records,
     }
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:

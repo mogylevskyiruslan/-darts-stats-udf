@@ -347,6 +347,15 @@
   .race-btn:hover{filter:brightness(1.1);}
   .race-btn:disabled{opacity:0.5; cursor:default;}
 
+  /* CHAMPIONS */
+  #champions-table.champ-highlight-501{border:2px solid var(--gold); border-radius:8px;}
+  #champions-table.champ-highlight-501 thead th{background:rgba(252,194,2,0.18);}
+  .champ-total{
+    display:flex; gap:24px; align-items:center; font-family:'JetBrains Mono',monospace;
+    font-size:20px; font-weight:800; color:var(--gold); margin-bottom:10px;
+  }
+  .champ-cat-table td, .champ-cat-table th{padding:8px 12px;}
+
   .pp-section-title{
     font-family:'Montserrat',sans-serif; font-weight:700; text-transform:uppercase;
     font-size:14px; letter-spacing:0.04em; color:var(--cream); margin:24px 0 12px;
@@ -578,6 +587,7 @@
   <a href="#top10-race">ТОП-10 гонка</a>
   <a href="#geography">Географія</a>
   <a href="#calendar-2026">Календар 2026</a>
+  <a href="#champions">Чемпіони ЧУ</a>
   <a href="#leaderboard">Призери</a>
   <a href="#current-rating">Поточний рейтинг</a>
   <a href="#ratings">Рейтинги сезону</a>
@@ -684,6 +694,28 @@
   <div class="map-wrap">
     <svg id="ukraine-map" viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg"></svg>
   </div>
+</section>
+
+<section id="champions">
+  <h2><span class="idx">02.9</span> Чемпіони України та призери</h2>
+  <p class="section-sub">Медальний залік Чемпіонатів України за всіма категоріями (мікст, команди, пари, DIDO, Cricket, 501DO). 501DO — головна категорія сезону.</p>
+  <div class="controls">
+    <input type="text" id="search-champions" placeholder="Пошук гравця…">
+    <div class="gender-toggle">
+      <button type="button" class="gender-btn active" data-gender="men">Чоловіки</button>
+      <button type="button" class="gender-btn" data-gender="women">Жінки</button>
+    </div>
+    <select id="filter-champions-category"><option value="">Усі категорії</option></select>
+  </div>
+  <div class="table-wrap">
+    <table id="champions-table">
+      <thead>
+        <tr><th>Гравець</th><th class="num">🥇</th><th class="num">🥈</th><th class="num">🥉</th><th class="num">Всього</th></tr>
+      </thead>
+      <tbody id="champions-body"></tbody>
+    </table>
+  </div>
+  <div class="show-more-wrap" id="champions-more"></div>
 </section>
 
 <section id="leaderboard">
@@ -997,6 +1029,7 @@
 let tournaments = [];
 let leaderboard = [];
 let leaderboardWomen = [];
+let championsRecords = [];
 
 function orgTag(org){
   const cls = org === 'ВФД' ? 'vfd' : (org === 'УДЛ' ? 'udl' : 'other');
@@ -1506,6 +1539,17 @@ document.querySelectorAll('#current-rating .gender-btn').forEach(btn=>{
 });
 document.getElementById('search-leaderboard').addEventListener('input', ()=>{ resetPagination('leaderboard'); renderLeaderboard(); });
 document.getElementById('filter-leaderboard-medal').addEventListener('change', ()=>{ resetPagination('leaderboard'); renderLeaderboard(); });
+document.getElementById('search-champions').addEventListener('input', ()=>{ resetPagination('champions'); renderChampions(); });
+document.getElementById('filter-champions-category').addEventListener('change', ()=>{ resetPagination('champions'); renderChampions(); });
+document.querySelectorAll('#champions .gender-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('#champions .gender-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    championsGender = btn.dataset.gender;
+    resetPagination('champions');
+    renderChampions();
+  });
+});
 document.getElementById('global-toggle-udl').addEventListener('change', ()=>{
   resetPagination('tournaments');
   renderTournaments();
@@ -1557,6 +1601,7 @@ async function loadData(){
     nakkaH2HStats = data.nakkaH2HStats || [];
     currentRatingMen = data.currentRatingMen || null;
     currentRatingWomen = data.currentRatingWomen || null;
+    championsRecords = data.championsRecords || [];
 
     try {
       const histRes = await fetch('./rating_history.json', {cache: 'no-store'});
@@ -1590,6 +1635,8 @@ async function loadData(){
     initH2HLookup();
     renderMasters();
     initTop10Race();
+    buildNameGenderMap();
+    renderChampions();
 
     // Якщо перейшли за посиланням "поділитись профілем" (?player=Ім'я) —
     // одразу відкриваємо потрібний профіль гравця.
@@ -2182,6 +2229,85 @@ function renderMasters(){
 }
 let mastersGender = 'all';
 
+let nameGenderMap = {};
+function buildNameGenderMap(){
+  nameGenderMap = {};
+  (leaderboard || []).forEach(p => { nameGenderMap[p.name] = 'men'; });
+  (leaderboardWomen || []).forEach(p => { nameGenderMap[p.name] = 'women'; });
+  (nakkaPlayerStats || []).forEach(r => { if(!nameGenderMap[r.name]) nameGenderMap[r.name] = r.gender; });
+}
+
+const CHAMP_CATEGORY_LABELS = {
+  'мікст': 'Мікст', 'команди': 'Команди', 'пари': 'Пари', 'dido': 'DIDO', 'cricket': 'Cricket', '501do': '501DO',
+};
+function champCategoryLabel(key){ return CHAMP_CATEGORY_LABELS[key] || (key.charAt(0).toUpperCase() + key.slice(1)); }
+
+let champCategoriesPopulated = false;
+function populateChampionsCategoryFilter(){
+  if(champCategoriesPopulated) return;
+  const sel = document.getElementById('filter-champions-category');
+  const cats = [...new Set((championsRecords || []).map(r => r.category))];
+  cats.sort((a,b) => (a === '501do' ? -1 : b === '501do' ? 1 : 0) || a.localeCompare(b));
+  cats.forEach(cat => {
+    const opt = document.createElement('option');
+    opt.value = cat;
+    opt.textContent = champCategoryLabel(cat) + (cat === '501do' ? ' ⭐' : '');
+    sel.appendChild(opt);
+  });
+  champCategoriesPopulated = true;
+}
+
+function aggregateChampions(genderFilter, categoryFilter){
+  const byPlayer = {};
+  (championsRecords || []).forEach(r => {
+    if(categoryFilter && r.category !== categoryFilter) return;
+    r.names.forEach(name => {
+      const g = r.gender || nameGenderMap[name] || null;
+      if(genderFilter && g !== genderFilter) return;
+      if(!byPlayer[name]) byPlayer[name] = { gold: 0, silver: 0, bronze: 0 };
+      if(r.place === 1) byPlayer[name].gold++;
+      else if(r.place === 2) byPlayer[name].silver++;
+      else if(r.place === 3) byPlayer[name].bronze++;
+    });
+  });
+  return byPlayer;
+}
+
+let championsGender = 'men';
+function renderChampions(){
+  populateChampionsCategoryFilter();
+  const q = (document.getElementById('search-champions').value || '').toLowerCase();
+  const categoryFilter = document.getElementById('filter-champions-category').value;
+  const byPlayer = aggregateChampions(championsGender, categoryFilter);
+
+  let rows = Object.entries(byPlayer).map(([name, m]) => ({
+    name, ...m, total: m.gold + m.silver + m.bronze,
+  }));
+  if(q) rows = rows.filter(r => r.name.toLowerCase().includes(q));
+  rows = rows.filter(r => r.total > 0);
+  rows.sort((a,b) => b.total - a.total || b.gold - a.gold || b.silver - a.silver);
+
+  document.getElementById('champions-table').classList.toggle('champ-highlight-501', categoryFilter === '501do');
+
+  const body = document.getElementById('champions-body');
+  if(rows.length === 0){
+    body.innerHTML = `<tr class="empty-row"><td colspan="5">Нічого не знайдено.</td></tr>`;
+    document.getElementById('champions-more').innerHTML = '';
+    return;
+  }
+  const { visible, total } = paginate('champions', rows);
+  body.innerHTML = visible.map(r => `
+    <tr>
+      <td class="player-name pp-clickable" onclick="openPlayerProfile('${r.name.replace(/'/g, "\\'")}')">${r.name}</td>
+      <td class="num mono">${r.gold || '—'}</td>
+      <td class="num mono">${r.silver || '—'}</td>
+      <td class="num mono">${r.bronze || '—'}</td>
+      <td class="num mono" style="color:var(--gold); font-weight:700;">${r.total}</td>
+    </tr>
+  `).join('');
+  renderShowMore('champions', 'champions-more', total, renderChampions);
+}
+
 function renderNews(){
   const wrap = document.getElementById('news-grid');
   if(!telegramNews.length){
@@ -2231,6 +2357,43 @@ function playerPhotoHtml(name){
       <div class="pp-photo-placeholder" style="display:none;">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
       </div>
+    </div>
+  `;
+}
+
+function playerChampionsHtml(name){
+  const records = (championsRecords || []).filter(r => r.names.includes(name));
+  if(records.length === 0) return '';
+
+  const total = { gold: 0, silver: 0, bronze: 0 };
+  const byCategory = {};
+  records.forEach(r => {
+    const key = r.category;
+    if(!byCategory[key]) byCategory[key] = { gold: 0, silver: 0, bronze: 0 };
+    if(r.place === 1){ total.gold++; byCategory[key].gold++; }
+    else if(r.place === 2){ total.silver++; byCategory[key].silver++; }
+    else if(r.place === 3){ total.bronze++; byCategory[key].bronze++; }
+  });
+
+  const catRows = Object.entries(byCategory)
+    .sort((a,b) => (a[0] === '501do' ? -1 : b[0] === '501do' ? 1 : 0))
+    .map(([cat, m]) => `
+      <tr class="${cat === '501do' ? 'row-chu-main' : ''}">
+        <td>${champCategoryLabel(cat)}${cat === '501do' ? ' ⭐' : ''}</td>
+        <td class="num mono">${m.gold || '—'}</td>
+        <td class="num mono">${m.silver || '—'}</td>
+        <td class="num mono">${m.bronze || '—'}</td>
+      </tr>
+    `).join('');
+
+  return `
+    <div class="pp-section-title">Медалі Чемпіонатів України</div>
+    <div class="champ-total">🥇${total.gold} 🥈${total.silver} 🥉${total.bronze}</div>
+    <div class="table-wrap">
+      <table class="champ-cat-table">
+        <thead><tr><th>Категорія</th><th class="num">🥇</th><th class="num">🥈</th><th class="num">🥉</th></tr></thead>
+        <tbody>${catRows}</tbody>
+      </table>
     </div>
   `;
 }
@@ -2317,6 +2480,8 @@ function openPlayerProfile(name){
           <div class="label">Місця на турнірах</div>
         </div>
       </div>
+
+      ${playerChampionsHtml(name)}
 
       <div class="pp-section-title">Динаміка середнього по турнірах</div>
       <div class="pp-chart-wrap">${avgChartSvg}</div>
