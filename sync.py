@@ -284,7 +284,7 @@ def parse_champions_sheet(rows, name_index, canonical_names):
     return records
 
 
-
+def build_leaderboard_from_podiums(year_data):
     """Рахує медальний залік самостійно з даних подіумів (а не з таблиці,
     яку користувач вручну підбивав в Excel і де можливі помилки).
     Бронза рахується для КОЖНОГО імені в podium[2:] — тобто за 2013–2024,
