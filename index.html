@@ -590,6 +590,7 @@
   <a href="#geography">Географія</a>
   <a href="#calendar-2026">Календар 2026</a>
   <a href="#champions">Чемпіони ЧУ</a>
+  <a href="#champions-race">Гонка лідерів ЧУ</a>
   <a href="#leaderboard">Призери</a>
   <a href="#current-rating">Поточний рейтинг</a>
   <a href="#ratings">Рейтинги сезону</a>
@@ -724,6 +725,18 @@
     </table>
   </div>
   <div class="show-more-wrap" id="champions-more"></div>
+</section>
+
+<section id="champions-race">
+  <h2><span class="idx">02.10</span> Історія лідерів за медалями ЧУ</h2>
+  <p class="section-sub">Накопичувальна анімація — як з роками мінялись лідери за загальною кількістю медалей Чемпіонатів України, за всіма категоріями разом.</p>
+  <div class="race-wrap">
+    <div class="race-date" id="champ-race-year">—</div>
+    <div class="race-bars" id="champ-race-bars"></div>
+    <div class="race-controls">
+      <button type="button" class="race-btn" id="champ-race-play-btn">▶ Відтворити</button>
+    </div>
+  </div>
 </section>
 
 <section id="leaderboard">
@@ -1654,6 +1667,7 @@ async function loadData(){
     initTop10Race();
     buildNameGenderMap();
     renderChampions();
+    initChampionsRace();
 
     // Якщо перейшли за посиланням "поділитись профілем" (?player=Ім'я) —
     // одразу відкриваємо потрібний профіль гравця.
@@ -1998,6 +2012,120 @@ function initTop10Race(){
   }
   renderRaceFrame(raceSnapshots.length - 1); // одразу показуємо фінальний ТОП-10
   btn.addEventListener('click', playRace);
+}
+
+function computeChampionsRaceTimeline(){
+  // Групуємо ВСІ записи за роком (полем year кожного запису, а не порядком
+  // у джерельній таблиці) — це важливо, бо таблиця доповнюватиметься і
+  // старими, і новими протоколами в довільному порядку.
+  const byYear = {};
+  (championsRecords || []).forEach(r => {
+    if(!byYear[r.year]) byYear[r.year] = [];
+    byYear[r.year].push(r);
+  });
+  const years = Object.keys(byYear).map(Number).sort((a,b) => a - b);
+
+  const cumulative = {};
+  const snapshots = [];
+  let lastKey = null;
+  years.forEach(year => {
+    byYear[year].forEach(r => {
+      r.names.forEach(name => {
+        if(!cumulative[name]) cumulative[name] = { gold: 0, silver: 0, bronze: 0 };
+        if(r.place === 1) cumulative[name].gold++;
+        else if(r.place === 2) cumulative[name].silver++;
+        else if(r.place === 3) cumulative[name].bronze++;
+      });
+    });
+    const top10 = Object.entries(cumulative)
+      .map(([name, m]) => ({ name, ...m, total: m.gold + m.silver + m.bronze }))
+      .filter(p => p.total > 0)
+      .sort((a,b) => b.total - a.total || b.gold - a.gold || b.silver - a.silver)
+      .slice(0, 10);
+    const key = top10.map(p => `${p.name}:${p.gold}:${p.silver}:${p.bronze}`).join('|');
+    if(key !== lastKey){
+      snapshots.push({ year, top10 });
+      lastKey = key;
+    }
+  });
+  return snapshots;
+}
+
+let champRaceSnapshots = [];
+let champRaceFrameIndex = 0;
+let champRacePlaying = false;
+
+function renderChampRaceFrame(idx){
+  const snap = champRaceSnapshots[idx];
+  if(!snap) return;
+  document.getElementById('champ-race-year').textContent = snap.year;
+  const maxVal = snap.top10[0] ? snap.top10[0].total : 1;
+  const container = document.getElementById('champ-race-bars');
+  const rowHeight = 40;
+  container.style.height = (snap.top10.length * rowHeight) + 'px';
+
+  snap.top10.forEach((item, rank) => {
+    const key = item.name;
+    let row = container.querySelector(`[data-key="${CSS.escape(key)}"]`);
+    if(!row){
+      row = document.createElement('div');
+      row.className = 'race-bar-row';
+      row.dataset.key = key;
+      row.style.top = (rank * rowHeight) + 'px';
+      row.innerHTML = `
+        <div class="race-bar-rank"></div>
+        <div class="race-bar-track"><div class="race-bar-fill"><span class="race-bar-label"></span></div></div>
+        <div class="race-bar-value"></div>
+      `;
+      container.appendChild(row);
+    }
+    requestAnimationFrame(() => { row.style.top = (rank * rowHeight) + 'px'; });
+    row.querySelector('.race-bar-rank').textContent = (rank + 1) + '.';
+    row.querySelector('.race-bar-fill').style.width = (item.total / maxVal * 100) + '%';
+    row.querySelector('.race-bar-label').textContent =
+      `${item.name} · 🥇${item.gold} 🥈${item.silver} 🥉${item.bronze}`;
+    row.querySelector('.race-bar-value').textContent = item.total;
+  });
+
+  const currentKeys = new Set(snap.top10.map(item => item.name));
+  container.querySelectorAll('.race-bar-row').forEach(row => {
+    if(!currentKeys.has(row.dataset.key)) row.remove();
+  });
+}
+
+function playChampRace(){
+  if(champRacePlaying || champRaceSnapshots.length === 0) return;
+  champRacePlaying = true;
+  champRaceFrameIndex = 0;
+  document.getElementById('champ-race-bars').innerHTML = '';
+  const btn = document.getElementById('champ-race-play-btn');
+  btn.disabled = true;
+  btn.textContent = '▶ Відтворюється…';
+
+  function step(){
+    renderChampRaceFrame(champRaceFrameIndex);
+    champRaceFrameIndex++;
+    if(champRaceFrameIndex < champRaceSnapshots.length){
+      setTimeout(step, 1000);
+    } else {
+      champRacePlaying = false;
+      btn.disabled = false;
+      btn.textContent = '↻ Відтворити ще раз';
+    }
+  }
+  step();
+}
+
+function initChampionsRace(){
+  champRaceSnapshots = computeChampionsRaceTimeline();
+  const btn = document.getElementById('champ-race-play-btn');
+  if(champRaceSnapshots.length === 0){
+    document.getElementById('champ-race-bars').innerHTML = '<div class="pp-chart-empty">Немає даних.</div>';
+    btn.disabled = true;
+    return;
+  }
+  renderChampRaceFrame(champRaceSnapshots.length - 1);
+  btn.addEventListener('click', playChampRace);
 }
 
 function renderParticipantsChart(){
