@@ -1,7 +1,7 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-14T10:55:35.364901+00:00",
-  "tournamentsCount": 194
+  "lastUpdated": "2026-09-14T13:17:11.373623+00:00",
+  "tournamentsCount": 196
  },
  "tournaments": [
   {
@@ -8440,9 +8440,9 @@
    "menAvg": null,
    "women": 3,
    "womenAvg": null,
-   "name": "Кубок Рудани",
+   "name": "Кубок України",
    "org": "ВФД",
-   "format": "501DO",
+   "format": "501DO / 2 етап",
    "date": "17.03.2013",
    "city": "Кривий Ріг",
    "isUDL": false,
@@ -8464,7 +8464,14 @@
      "Хімчак Сергій"
     ]
    },
-   "medalsWomen": null,
+   "medalsWomen": {
+    "gold": "Лопухова Анна",
+    "silver": "Чумак Анна",
+    "bronze": [
+     "Марфола Оксана",
+     "Новікова Зоя"
+    ]
+   },
    "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
@@ -8528,6 +8535,86 @@
     "womenAvg": null,
     "tournament": {
      "url": "https://docs.google.com/document/d/1YtCMG2329-nBm1FKQgsth94Zx-kE3Fg3iKdT3oIzQfs/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Мінченок Юрій",
+    "bronze": [
+     "Омельченко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Лопухова Ганна",
+    "silver": "Журавель Алла",
+    "bronze": [
+     "Спекторенко Катерина"
+    ]
+   },
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 47,
+   "men": 38,
+   "menAvg": null,
+   "women": 9,
+   "womenAvg": null,
+   "name": "ЧУ 2011 Cricket",
+   "org": "ВФД",
+   "format": "Cricket",
+   "date": "15.10.2011",
+   "city": "Харків",
+   "isUDL": false,
+   "chuCategory": "ЧУ Cricket",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1k7jzv8A2mcqVTyldUNydwV6oLlS-3QznaqOAbAroLu4/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Мінченок Юрій",
+    "bronze": [
+     "Омельченко Владислав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Лопухова Ганна",
+    "silver": "Журавель Алла",
+    "bronze": [
+     "Спекторенко Катерина"
+    ]
+   },
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 58,
+   "men": 44,
+   "menAvg": null,
+   "women": 14,
+   "womenAvg": null,
+   "name": "ЧУ 2011 Пари",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "03.09.2011",
+   "city": "Мелекіне",
+   "isUDL": false,
+   "chuCategory": "ЧУ Пари",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1Jl8MygN44UvXeRw-feW84UyWGtLThgOw4Ip6T8_2VVc/edit?tab=t.0",
      "type": "protocol_doc"
     }
    },
@@ -322010,6 +322097,44 @@
   },
   {
    "year": 2011,
+   "category": "пари",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Лец Дмитро",
+    "Євмєнєнков Максим"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "пари",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Луговська Людмила",
+    "Скакун Ірина"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "cricket",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Лец Дмитро"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "cricket",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Новікова Зоя"
+   ]
+  },
+  {
+   "year": 2011,
    "category": "501do",
    "gender": "men",
    "place": 1,
@@ -322024,6 +322149,44 @@
    "place": 1,
    "names": [
     "Лопухова Ганна"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "пари",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Шинкаренко Василь",
+    "Десинський Максим"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "пари",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Дзюбій Юлія",
+    "Тихобаєва Вікторія"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "cricket",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Невінчаний Едуард"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "cricket",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Качура Катерина"
    ]
   },
   {
@@ -322046,6 +322209,44 @@
   },
   {
    "year": 2011,
+   "category": "пари",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Варивода Володимир",
+    "Новак Едуард"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "пари",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Перетятько Тетяна",
+    "Гавриш Ольга"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "cricket",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Брежнєв Олександр"
+   ]
+  },
+  {
+   "year": 2011,
+   "category": "cricket",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Перетятько Тетяна"
+   ]
+  },
+  {
+   "year": 2011,
    "category": "501do",
    "gender": "men",
    "place": 3,
@@ -322060,6 +322261,18 @@
    "place": 3,
    "names": [
     "Спекторенко Катерина"
+   ]
+  },
+  {
+   "year": 2010,
+   "category": "команди",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Мелашенко Владислав",
+    "Чик Едуард",
+    "Любих Сергій",
+    "Острадчук Вадим"
    ]
   },
   {
@@ -322082,6 +322295,18 @@
   },
   {
    "year": 2010,
+   "category": "команди",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Ледєньов Вадим",
+    "Скарлат Дмитро",
+    "Квасков Павло",
+    "Ромашко Віталій"
+   ]
+  },
+  {
+   "year": 2010,
    "category": "501do",
    "gender": "men",
    "place": 2,
@@ -322096,6 +322321,18 @@
    "place": 2,
    "names": [
     "Калаур Інна"
+   ]
+  },
+  {
+   "year": 2010,
+   "category": "команди",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Омельченко Владислав",
+    "Десинський Максим",
+    "Дідов Василь",
+    "Кресников Юрій"
    ]
   },
   {
@@ -322118,18 +322355,6 @@
   },
   {
    "year": 2009,
-   "category": "команди",
-   "gender": "men",
-   "place": 1,
-   "names": [
-    "Мелашенко Владислав",
-    "Чик Едуард",
-    "Любих Сергій",
-    "Острадчук Вадим"
-   ]
-  },
-  {
-   "year": 2009,
    "category": "501do",
    "gender": "men",
    "place": 1,
@@ -322144,30 +322369,6 @@
    "place": 1,
    "names": [
     "Моісеєнко Віталіна"
-   ]
-  },
-  {
-   "year": 2009,
-   "category": "команди",
-   "gender": "men",
-   "place": 2,
-   "names": [
-    "Ледєньов Вадим",
-    "Скарлат Дмитро",
-    "Квасков Павло",
-    "Ромашко Віталій"
-   ]
-  },
-  {
-   "year": 2009,
-   "category": "команди",
-   "gender": "men",
-   "place": 3,
-   "names": [
-    "Омельченко Владислав",
-    "Десинський Максим",
-    "Дідов Василь",
-    "Кресников Юрій"
    ]
   },
   {
@@ -322252,7 +322453,7 @@
    ]
   },
   {
-   "year": 2006,
+   "year": 2004,
    "category": "501do",
    "gender": "men",
    "place": 1,
