@@ -322,7 +322,7 @@
   .race-bar-row{
     position:absolute; left:0; right:0; height:36px;
     display:flex; align-items:center; gap:10px;
-    transition:top 0.6s ease;
+    transition:top 1.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .race-bar-rank{
     width:22px; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--muted); flex-shrink:0; text-align:right;
@@ -331,7 +331,7 @@
   .race-bar-fill{
     position:absolute; left:0; top:0; height:100%; border-radius:4px;
     background:linear-gradient(90deg, var(--royal), var(--royal-light));
-    transition:width 0.6s ease;
+    transition:width 1.4s cubic-bezier(0.4, 0, 0.2, 1);
     display:flex; align-items:center; padding:0 10px; overflow:hidden; white-space:nowrap;
   }
   .race-bar-label{font-size:12.5px; color:var(--cream); font-weight:600; overflow:hidden; text-overflow:ellipsis;}
@@ -730,6 +730,12 @@
 <section id="champions-race">
   <h2><span class="idx">02.10</span> Історія лідерів за медалями ЧУ</h2>
   <p class="section-sub">Накопичувальна анімація — як з роками мінялись лідери за загальною кількістю медалей Чемпіонатів України, за всіма категоріями разом.</p>
+  <div class="controls">
+    <div class="gender-toggle">
+      <button type="button" class="gender-btn active" data-gender="men">Чоловіки</button>
+      <button type="button" class="gender-btn" data-gender="women">Жінки</button>
+    </div>
+  </div>
   <div class="race-wrap">
     <div class="race-date" id="champ-race-year">—</div>
     <div class="race-bars" id="champ-race-bars"></div>
@@ -1253,7 +1259,7 @@ let recordsGender = 'men';
 const paginationState = {};
 const PAGE_SIZE = 20;
 // Деякі таблиці показують менше рядків за замовчуванням (тут — 10 замість 20)
-const CUSTOM_PAGE_SIZE = { leaderboard: 10, ratings: 10 };
+const CUSTOM_PAGE_SIZE = { leaderboard: 10, ratings: 10, champions: 10 };
 const pageSizeFor = key => CUSTOM_PAGE_SIZE[key] || PAGE_SIZE;
 
 function paginate(key, allRows){
@@ -2014,7 +2020,7 @@ function initTop10Race(){
   btn.addEventListener('click', playRace);
 }
 
-function computeChampionsRaceTimeline(){
+function computeChampionsRaceTimeline(genderFilter){
   // Групуємо ВСІ записи за роком (полем year кожного запису, а не порядком
   // у джерельній таблиці) — це важливо, бо таблиця доповнюватиметься і
   // старими, і новими протоколами в довільному порядку.
@@ -2031,6 +2037,8 @@ function computeChampionsRaceTimeline(){
   years.forEach(year => {
     byYear[year].forEach(r => {
       r.names.forEach(name => {
+        const g = r.gender || nameGenderMap[name] || null;
+        if(genderFilter && g !== genderFilter) return;
         if(!cumulative[name]) cumulative[name] = { gold: 0, silver: 0, bronze: 0 };
         if(r.place === 1) cumulative[name].gold++;
         else if(r.place === 2) cumulative[name].silver++;
@@ -2054,6 +2062,7 @@ function computeChampionsRaceTimeline(){
 let champRaceSnapshots = [];
 let champRaceFrameIndex = 0;
 let champRacePlaying = false;
+let champRaceGender = 'men';
 
 function renderChampRaceFrame(idx){
   const snap = champRaceSnapshots[idx];
@@ -2106,7 +2115,7 @@ function playChampRace(){
     renderChampRaceFrame(champRaceFrameIndex);
     champRaceFrameIndex++;
     if(champRaceFrameIndex < champRaceSnapshots.length){
-      setTimeout(step, 1000);
+      setTimeout(step, 2200);
     } else {
       champRacePlaying = false;
       btn.disabled = false;
@@ -2116,16 +2125,32 @@ function playChampRace(){
   step();
 }
 
-function initChampionsRace(){
-  champRaceSnapshots = computeChampionsRaceTimeline();
+function renderChampRace(){
+  champRaceSnapshots = computeChampionsRaceTimeline(champRaceGender);
+  champRaceFrameIndex = 0;
   const btn = document.getElementById('champ-race-play-btn');
+  document.getElementById('champ-race-bars').innerHTML = '';
   if(champRaceSnapshots.length === 0){
     document.getElementById('champ-race-bars').innerHTML = '<div class="pp-chart-empty">Немає даних.</div>';
     btn.disabled = true;
     return;
   }
+  btn.disabled = false;
+  btn.textContent = '▶ Відтворити';
   renderChampRaceFrame(champRaceSnapshots.length - 1);
-  btn.addEventListener('click', playChampRace);
+}
+
+function initChampionsRace(){
+  renderChampRace();
+  document.getElementById('champ-race-play-btn').addEventListener('click', playChampRace);
+  document.querySelectorAll('#champions-race .gender-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('#champions-race .gender-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      champRaceGender = btn.dataset.gender;
+      renderChampRace();
+    });
+  });
 }
 
 function renderParticipantsChart(){
