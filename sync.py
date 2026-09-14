@@ -1676,6 +1676,26 @@ MANUAL_MEDAL_OVERRIDES = {
         "medals": {"gold": "Солтис Микита", "silver": "Мотуз Єгор", "bronze": ["Пекарук Ілля"]},
         "medalsWomen": None,
     },
+    ("15.09.2019", "KYIV MASTERS YOUNG"): {
+        "medals": {"gold": "Солтис Микита", "silver": "Пекарук Ілля", "bronze": ["Тямолов Ростислав"]},
+        "medalsWomen": None,
+    },
+    ("14.09.2019", "UKRAINE OPEN YOUNG"): {
+        "medals": {"gold": "Солтис Микита", "silver": "Пекарук Ілля", "bronze": ["Тямолов Ростислав"]},
+        "medalsWomen": None,
+    },
+    ("15.09.2019", "KYIV MASTERS"): {
+        "medals": {"gold": "Мамика Олександр", "silver": "Субаши Алпер",
+                    "bronze": ["Рогов Віталій", "Холліуелл Вейн"]},
+        "medalsWomen": {"gold": "Клочек Ксенія", "silver": "Моісеєнко Віталіна",
+                         "bronze": ["Чумак Ганна", "Анісімова Світлана"]},
+    },
+    ("14.09.2019", "UKRAINE OPEN"): {
+        "medals": {"gold": "Паскару Габріель", "silver": "Усик Артем",
+                    "bronze": ["Стейєр Себастьян", "Грєков Юрій"]},
+        "medalsWomen": {"gold": "Моісеєнко Віталіна", "silver": "Клочек Ксенія",
+                         "bronze": ["Чумак Ганна", "Солтис Ганна"]},
+    },
 }
 
 MANUAL_MEDAL_OVERRIDES_BY_DATE = {
@@ -1893,14 +1913,6 @@ MANUAL_MEDAL_OVERRIDES_BY_DATE = {
     "08.08.2020": {
         "medals": {"gold": "Борисова Марина/Бушуй Олексій", "silver": "Могилевський Руслан/Гетманцев Олександр",
                     "bronze": ["Захарова З./Усик Артем", "Мєльтєва Ірина/Усик Сергій"]},
-        "medalsWomen": None,
-    },
-    "15.09.2019": {
-        "medals": {"gold": "Солтис Микита", "silver": "Пекарук Ілля", "bronze": ["Тямолов Ростислав"]},
-        "medalsWomen": None,
-    },
-    "14.09.2019": {
-        "medals": {"gold": "Солтис Микита", "silver": "Пекарук Ілля", "bronze": ["Тямолов Ростислав"]},
         "medalsWomen": None,
     },
     "11.08.2019": {
