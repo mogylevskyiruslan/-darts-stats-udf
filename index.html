@@ -88,7 +88,7 @@
 
   /* PLAYER SEARCH (global, hero) */
   .player-search-section{
-    padding:0 24px 28px; background:transparent;
+    padding:0 24px 56px;
   }
   .player-search-wrap{
     max-width:640px; margin:0 auto; display:flex; align-items:center; gap:16px;
@@ -627,17 +627,6 @@
   <div class="stat-row" id="hero-stats"></div>
 </div>
 
-<section id="player-search" class="player-search-section">
-  <div class="player-search-wrap">
-    <div class="player-search-icon">🔍</div>
-    <div class="player-search-inner">
-      <div class="player-search-title">Знайти гравця</div>
-      <input type="text" id="global-player-search" placeholder="Введіть прізвище чи ім'я…" autocomplete="off">
-      <div class="h2h-suggest" id="global-player-suggest"></div>
-    </div>
-  </div>
-</section>
-
 <nav>
   <a href="#history">Історія</a>
   <a href="#tournaments">Турніри</a>
@@ -679,6 +668,17 @@
     <div class="tl-item"><div class="tl-year">2020</div><div class="tl-text">Пандемія COVID-19 зупинила турніри всередині країни, але відбулись перші онлайн-змагання за участю українських гравців.</div></div>
     <div class="tl-item"><div class="tl-year">2022</div><div class="tl-text">Попри повномасштабне вторгнення й воєнний стан, збірна виступила на Кубку Європи ВДФ. Владислав Омельченко здобув кваліфікацію на Чемпіонат світу PDC — перший українець на цій сцені.</div></div>
     <div class="tl-item"><div class="tl-year">2023 — нині</div><div class="tl-text">Омельченко та Ілля Пекарук вперше представили Україну на Кубку Світу PDC. Частину змагань під егідою ВФД відновлено в окремих регіонах — попри війну щороку визначаються чемпіони з різних дисциплін.</div></div>
+  </div>
+</section>
+
+<section id="player-search" class="player-search-section">
+  <div class="player-search-wrap">
+    <div class="player-search-icon">🔍</div>
+    <div class="player-search-inner">
+      <div class="player-search-title">Знайти гравця</div>
+      <input type="text" id="global-player-search" placeholder="Введіть прізвище чи ім'я…" autocomplete="off">
+      <div class="h2h-suggest" id="global-player-suggest"></div>
+    </div>
   </div>
 </section>
 
@@ -2473,7 +2473,8 @@ function buildAllPlayerNames(){
   (leaderboard || []).forEach(p => set.add(p.name));
   (leaderboardWomen || []).forEach(p => set.add(p.name));
   (championsRecords || []).forEach(r => r.names.forEach(n => set.add(n)));
-  (MASTERS_DATA || []).forEach(m => set.add(m.name));
+  // (Майстрів спорту навмисно НЕ додаємо — цей список для іншої мети,
+  // не для загального пошуку гравців статистики.)
   allPlayerNames = [...set].sort((a,b) => a.localeCompare(b, 'uk'));
 }
 
