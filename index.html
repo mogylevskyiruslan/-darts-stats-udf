@@ -86,6 +86,36 @@
   .stat-cell .num{font-family:'JetBrains Mono',monospace; font-size:28px; font-weight:700; color:var(--cream); line-height:1;}
   .stat-cell .label{font-size:12px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.06em;}
 
+  /* PLAYER SEARCH (global, hero) */
+  .player-search-section{
+    padding:0 24px 28px; background:transparent;
+  }
+  .player-search-wrap{
+    max-width:640px; margin:0 auto; display:flex; align-items:center; gap:16px;
+    background:linear-gradient(135deg, var(--panel-2), var(--panel));
+    border:2px solid var(--gold); border-radius:12px; padding:18px 24px;
+    box-shadow:0 8px 30px rgba(252,194,2,0.15);
+    position:relative;
+  }
+  .player-search-icon{font-size:28px; flex-shrink:0;}
+  .player-search-inner{flex:1; position:relative;}
+  .player-search-title{
+    font-family:'Oswald',sans-serif; font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:6px; font-weight:600;
+  }
+  #global-player-search{
+    width:100%; padding:10px 0; background:transparent; border:none; border-bottom:2px solid var(--line);
+    color:var(--cream); font-family:'Montserrat',sans-serif; font-size:18px; font-weight:600;
+  }
+  #global-player-search:focus{outline:none; border-bottom-color:var(--gold);}
+  #global-player-search::placeholder{color:var(--muted); font-weight:400;}
+  #global-player-suggest{
+    position:absolute; top:calc(100% + 6px); left:0; right:0; z-index:60;
+    background:var(--panel-2); border:1px solid var(--line); border-radius:8px;
+    max-height:280px; overflow-y:auto; display:none; box-shadow:0 10px 30px rgba(0,0,0,0.4);
+  }
+  #global-player-suggest.open{display:block;}
+
   /* NAV */
   nav{
     position:sticky; top:0; z-index:50;
@@ -449,7 +479,23 @@
     border-radius:8px; color:var(--cream); font-family:inherit; font-size:14px;
   }
   .h2h-search:focus{outline:none; border-color:var(--gold);}
-  .h2h-vs{font-family:'JetBrains Mono',monospace; font-weight:800; color:var(--gold); font-size:14px; flex-shrink:0;}
+  .h2h-vs{
+    font-family:'JetBrains Mono',monospace; font-weight:800; color:var(--gold); font-size:22px; flex-shrink:0;
+    background:rgba(252,194,2,0.12); border:2px solid var(--gold); border-radius:50%;
+    width:52px; height:52px; display:flex; align-items:center; justify-content:center;
+  }
+  .h2h-highlight-section{
+    background:linear-gradient(160deg, rgba(252,194,2,0.08), transparent 60%);
+    border:2px solid var(--gold); border-radius:14px; padding:36px 32px;
+    margin:0 auto 48px;
+  }
+  .h2h-highlight-section h2{font-size:30px;}
+  .h2h-picker-box{
+    background:var(--panel-2); border:1px solid var(--line); border-radius:10px;
+    padding:20px; margin-bottom:24px;
+  }
+  .h2h-picker-box .h2h-picker{margin-bottom:0; max-width:none;}
+  .h2h-search{padding:14px 16px; font-size:15px;}
   .h2h-suggest{
     position:absolute; top:calc(100% + 4px); left:0; right:0; z-index:20;
     background:var(--panel-2); border:1px solid var(--line); border-radius:8px;
@@ -580,6 +626,17 @@
   <p class="lede">Консолідований архів турнірів, рейтингів і рекордів Всеукраїнської Федерації Дартсу — зібраний з таблиць учасників, протоколів кубків та відкритих джерел.</p>
   <div class="stat-row" id="hero-stats"></div>
 </div>
+
+<section id="player-search" class="player-search-section">
+  <div class="player-search-wrap">
+    <div class="player-search-icon">🔍</div>
+    <div class="player-search-inner">
+      <div class="player-search-title">Знайти гравця</div>
+      <input type="text" id="global-player-search" placeholder="Введіть прізвище чи ім'я…" autocomplete="off">
+      <div class="h2h-suggest" id="global-player-suggest"></div>
+    </div>
+  </div>
+</section>
 
 <nav>
   <a href="#history">Історія</a>
@@ -878,18 +935,20 @@
   </div>
 </section>
 
-<section id="h2h-lookup">
-  <h2><span class="idx">04.2</span> Протистояння гравців</h2>
+<section id="h2h-lookup" class="h2h-highlight-section">
+  <h2><span class="idx">04.2</span> ⚔️ Протистояння гравців</h2>
   <p class="section-sub">Оберіть двох гравців, щоб побачити всю історію їхніх особистих зустрічей.</p>
-  <div class="h2h-picker">
-    <div class="h2h-picker-side">
-      <input type="text" id="h2h-search-1" class="h2h-search" placeholder="Гравець 1…" autocomplete="off">
-      <div class="h2h-suggest" id="h2h-suggest-1"></div>
-    </div>
-    <div class="h2h-vs">VS</div>
-    <div class="h2h-picker-side">
-      <input type="text" id="h2h-search-2" class="h2h-search" placeholder="Гравець 2…" autocomplete="off">
-      <div class="h2h-suggest" id="h2h-suggest-2"></div>
+  <div class="h2h-picker-box">
+    <div class="h2h-picker">
+      <div class="h2h-picker-side">
+        <input type="text" id="h2h-search-1" class="h2h-search" placeholder="Гравець 1…" autocomplete="off">
+        <div class="h2h-suggest" id="h2h-suggest-1"></div>
+      </div>
+      <div class="h2h-vs">VS</div>
+      <div class="h2h-picker-side">
+        <input type="text" id="h2h-search-2" class="h2h-search" placeholder="Гравець 2…" autocomplete="off">
+        <div class="h2h-suggest" id="h2h-suggest-2"></div>
+      </div>
     </div>
   </div>
   <div id="h2h-result"></div>
@@ -1674,6 +1733,8 @@ async function loadData(){
     buildNameGenderMap();
     renderChampions();
     initChampionsRace();
+    buildAllPlayerNames();
+    initGlobalPlayerSearch();
 
     // Якщо перейшли за посиланням "поділитись профілем" (?player=Ім'я) —
     // одразу відкриваємо потрібний профіль гравця.
@@ -2405,6 +2466,49 @@ function renderMasters(){
 let mastersGender = 'all';
 
 let nameGenderMap = {};
+let allPlayerNames = [];
+function buildAllPlayerNames(){
+  const set = new Set();
+  (nakkaPlayerStats || []).forEach(r => set.add(r.name));
+  (leaderboard || []).forEach(p => set.add(p.name));
+  (leaderboardWomen || []).forEach(p => set.add(p.name));
+  (championsRecords || []).forEach(r => r.names.forEach(n => set.add(n)));
+  (MASTERS_DATA || []).forEach(m => set.add(m.name));
+  allPlayerNames = [...set].sort((a,b) => a.localeCompare(b, 'uk'));
+}
+
+function initGlobalPlayerSearch(){
+  const input = document.getElementById('global-player-search');
+  const suggestBox = document.getElementById('global-player-suggest');
+
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    if(!q){ suggestBox.classList.remove('open'); return; }
+    const matches = allPlayerNames.filter(n => n.toLowerCase().includes(q)).slice(0, 15);
+    if(matches.length === 0){
+      suggestBox.innerHTML = `<div class="h2h-suggest-item" style="color:var(--muted); cursor:default;">Нічого не знайдено</div>`;
+      suggestBox.classList.add('open');
+      return;
+    }
+    suggestBox.innerHTML = matches.map(n => `<div class="h2h-suggest-item">${n}</div>`).join('');
+    suggestBox.classList.add('open');
+    suggestBox.querySelectorAll('.h2h-suggest-item').forEach((el, i) => {
+      el.addEventListener('click', () => {
+        suggestBox.classList.remove('open');
+        input.value = '';
+        openPlayerProfile(matches[i]);
+      });
+    });
+  });
+  input.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter'){
+      const first = suggestBox.querySelector('.h2h-suggest-item');
+      if(first) first.click();
+    }
+  });
+  input.addEventListener('blur', () => setTimeout(() => suggestBox.classList.remove('open'), 150));
+}
+
 function buildNameGenderMap(){
   nameGenderMap = {};
   (leaderboard || []).forEach(p => { nameGenderMap[p.name] = 'men'; });
