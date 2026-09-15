@@ -2473,6 +2473,14 @@ function buildAllPlayerNames(){
   (leaderboard || []).forEach(p => set.add(p.name));
   (leaderboardWomen || []).forEach(p => set.add(p.name));
   (championsRecords || []).forEach(r => r.names.forEach(n => set.add(n)));
+  // Архів рейтингів за сезонами (тут ховається чимало гравців зі старих
+  // років, яких немає в жодному іншому джерелі) — саме для них цю секцію
+  // пошуку й було задумано.
+  Object.values(ratingsData || {}).forEach(season => {
+    (season.rows || []).forEach(r => { if(r.name) set.add(r.name); });
+  });
+  if(currentRatingMen && currentRatingMen.rows) currentRatingMen.rows.forEach(r => { if(r.name) set.add(r.name); });
+  if(currentRatingWomen && currentRatingWomen.rows) currentRatingWomen.rows.forEach(r => { if(r.name) set.add(r.name); });
   // (Майстрів спорту навмисно НЕ додаємо — цей список для іншої мети,
   // не для загального пошуку гравців статистики.)
   allPlayerNames = [...set].sort((a,b) => a.localeCompare(b, 'uk'));
