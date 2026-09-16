@@ -1525,7 +1525,10 @@ def resolve_name(name, name_index, canonical_names=None, fuzzy_cutoff=0.88):
     тільки коли ім'я збігається ТОЧНО."""
     if not name:
         return name
-    candidate = name.strip()
+    # .strip() прибирає пробіли лише на краях. Деякі джерела (особливо
+    # старий архів рейтингів) інколи мають ПОДВІЙНІ пробіли всередині імені —
+    # без нормалізації такий рядок не співпаде з жодним аліасом точно.
+    candidate = re.sub(r"\s+", " ", name.strip())
 
     if candidate in MANUAL_NAME_ALIASES:
         return MANUAL_NAME_ALIASES[candidate]
@@ -1655,6 +1658,30 @@ def fetch_match_averages(tdid, cache):
 
     cache[tdid] = matches
     return matches
+
+
+def apply_manual_medal_overrides_final(tournaments):
+    """Застосовує ручні перевизначення призерів ОСТАННІМ кроком — вже ПІСЛЯ
+    enrich_with_nakka(). Це критично: enrich_with_nakka() записує в
+    nakkaMedals реальні (та часто короткі, без складу) дані прямо з Nakka,
+    і фронтенд віддає перевагу саме nakkaMedals над medals, коли обидва є.
+    Без цього фінального проходу ручні виправлення (напр. повний склад
+    команди) залишались би "невидимими" — технічно записаними в data.json,
+    але затуленими автоматичними даними Nakka."""
+    updated = 0
+    for t in tournaments:
+        override = MANUAL_MEDAL_OVERRIDES.get((t["date"], t["name"])) or MANUAL_MEDAL_OVERRIDES_BY_DATE.get(t["date"])
+        if not override:
+            continue
+        if "medals" in override:
+            t["medals"] = override["medals"]
+            t["nakkaMedals"] = override["medals"]
+        if "medalsWomen" in override:
+            t["medalsWomen"] = override["medalsWomen"]
+            t["nakkaMedalsWomen"] = override["medalsWomen"]
+        updated += 1
+    if updated:
+        print(f"  Фінально перевизначено призерів (включно з nakkaMedals) для {updated} турнірів")
 
 
 def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women=None, known_men=None):
@@ -2913,6 +2940,7 @@ def main():
     known_women = {p["name"] for p in women_aggregate}
     known_men = {p["name"] for p in men_aggregate}
     nakka_player_records, nakka_match_records, nakka_h2h_records = enrich_with_nakka(tournaments, name_index, canonical_names, known_women, known_men)
+    apply_manual_medal_overrides_final(tournaments)
     print(f"Collected {len(nakka_player_records)} player-tournament stat rows from Nakka")
 
     # Протоколи (Google Docs) для турнірів до Nakka НЕ вмикаємо автоматично:
