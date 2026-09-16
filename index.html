@@ -1121,6 +1121,7 @@ let tournaments = [];
 let leaderboard = [];
 let leaderboardWomen = [];
 let championsRecords = [];
+let curatedPlayerNames = [];
 
 function orgTag(org){
   const cls = org === 'ВФД' ? 'vfd' : (org === 'УДЛ' ? 'udl' : 'other');
@@ -1703,6 +1704,7 @@ async function loadData(){
     currentRatingMen = data.currentRatingMen || null;
     currentRatingWomen = data.currentRatingWomen || null;
     championsRecords = data.championsRecords || [];
+    curatedPlayerNames = data.curatedPlayerNames || [];
 
     try {
       const histRes = await fetch('./rating_history.json', {cache: 'no-store'});
@@ -2678,23 +2680,23 @@ let mastersGender = 'all';
 
 let nameGenderMap = {};
 let allPlayerNames = [];
+function isIndividualPlayerName(name){
+  if(!name) return false;
+  // Пари/дуети записані через "/" чи "\" в одному полі (типово зі старого
+  // архіву рейтингів парних турнірів) — це НЕ ім'я однієї людини.
+  if(name.includes('/') || name.includes('\\') || name.includes(',')) return false;
+  // Назви команд часто повністю великими літерами.
+  if(name.length > 3 && name.toUpperCase() === name && /[А-ЯA-Z]/.test(name)) return false;
+  return true;
+}
+
 function buildAllPlayerNames(){
-  const set = new Set();
-  (nakkaPlayerStats || []).forEach(r => set.add(r.name));
-  (leaderboard || []).forEach(p => set.add(p.name));
-  (leaderboardWomen || []).forEach(p => set.add(p.name));
-  (championsRecords || []).forEach(r => r.names.forEach(n => set.add(n)));
-  // Архів рейтингів за сезонами (тут ховається чимало гравців зі старих
-  // років, яких немає в жодному іншому джерелі) — саме для них цю секцію
-  // пошуку й було задумано.
-  Object.values(ratingsData || {}).forEach(season => {
-    (season.rows || []).forEach(r => { if(r.name) set.add(r.name); });
-  });
-  if(currentRatingMen && currentRatingMen.rows) currentRatingMen.rows.forEach(r => { if(r.name) set.add(r.name); });
-  if(currentRatingWomen && currentRatingWomen.rows) currentRatingWomen.rows.forEach(r => { if(r.name) set.add(r.name); });
-  // (Майстрів спорту навмисно НЕ додаємо — цей список для іншої мети,
-  // не для загального пошуку гравців статистики.)
-  allPlayerNames = [...set].sort((a,b) => a.localeCompare(b, 'uk'));
+  // ВАЖЛИВО: список "Знайти гравця" НЕ збирається динамічно з живих даних
+  // (Nakka, рейтинги тощо) — це спричиняло постійні дублікати та витік
+  // пар/команд у пошук. Єдине джерело — вручну перевірений і виправлений
+  // список з data.json (curatedPlayerNames), який оновлюється лише коли
+  // власник сайту надсилає новий перевірений Excel-файл.
+  allPlayerNames = (curatedPlayerNames || []).slice().sort((a,b) => a.localeCompare(b, 'uk'));
 }
 
 function initGlobalPlayerSearch(){
