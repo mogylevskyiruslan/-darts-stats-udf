@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-16T20:01:06.313764+00:00",
+  "lastUpdated": "2026-09-16T20:50:40.798763+00:00",
   "tournamentsCount": 200
  },
  "tournaments": [
@@ -4092,7 +4092,7 @@
     "silver": "Мамика Олександр",
     "bronze": [
      "Луков Олександр",
-     "Sol Deen"
+     "Фатех Дін"
     ]
    },
    "medalsWomen": {
@@ -4143,7 +4143,7 @@
     "silver": "Мамика Олександр",
     "bronze": [
      "Луков Олександр",
-     "Sol Deen"
+     "Фатех Дін"
     ]
    },
    "medalsWomen": {
@@ -4158,7 +4158,7 @@
     "gold": "Залевський Володимир",
     "silver": "Мамика Олександр",
     "bronze": [
-     "Sol Deen"
+     "Фатех Дін"
     ]
    },
    "nakkaMedalsWomen": {
@@ -4723,7 +4723,7 @@
     "gold": "Лузан Юлія",
     "silver": "Моісеєнко Віталіна",
     "bronze": [
-     "Букетова Ірина"
+     "Букетова Iрина"
     ]
    }
   },
@@ -5028,7 +5028,7 @@
     "silver": "Могилевський Руслан/Гетманцев Олександр",
     "bronze": [
      "Захарова З./Усик Артем",
-     "Мєльтєва Ірина/Усик Сергій"
+     "Мельтєва Ірина/Усик Сергій"
     ]
    },
    "medalsWomen": null,
@@ -5037,7 +5037,7 @@
     "silver": "Могилевський Руслан/Гетманцев Олександр",
     "bronze": [
      "Захарова З./Усик Артем",
-     "Мєльтєва Ірина/Усик Сергій"
+     "Мельтєва Ірина/Усик Сергій"
     ]
    },
    "nakkaMedalsWomen": null
@@ -6903,7 +6903,7 @@
     }
    },
    "medals": {
-    "gold": "Sol Deen",
+    "gold": "Фатех Дін",
     "silver": "Гетманцев Олександр",
     "bronze": [
      "Кисельов Дмитро"
@@ -6943,7 +6943,7 @@
     }
    },
    "medals": {
-    "gold": "Sol Deen",
+    "gold": "Фатех Дін",
     "silver": "Ковальов Дмитро",
     "bronze": [
      "Буханцов Тарас"
@@ -8302,16 +8302,14 @@
     "gold": "Ковальов Дмитро",
     "silver": "Гетманцев Олександр",
     "bronze": [
-     "Усик Артем",
-     "Мамика Олександр"
+     "Усик Артем"
     ]
    },
    "medalsWomen": {
     "gold": "Марфола Оксана",
     "silver": "Моісеєнко Віталіна",
     "bronze": [
-     "Чумак Ганна",
-     "Анісімова Світлана"
+     "Чумак Ганна"
     ]
    },
    "nakkaMedals": null,
@@ -8396,16 +8394,14 @@
     "gold": "Мамика Олександр",
     "silver": "Зольдін Фелікс",
     "bronze": [
-     "Омельченко Владислав",
-     "Васюра Андрій"
+     "Омельченко Владислав"
     ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Анісімова Світлана",
     "bronze": [
-     "Калаур Інна",
-     "Ледєньова Наталія"
+     "Калаур Інна"
     ]
    },
    "nakkaMedals": null,
@@ -8493,16 +8489,14 @@
     "gold": "Васюра Андрій",
     "silver": "Ковальов Дмитро",
     "bronze": [
-     "Мамика Олександр",
-     "Савенков Антон"
+     "Мамика Олександр"
     ]
    },
    "medalsWomen": {
     "gold": "Анісімова Світлана",
     "silver": "Ледєньова Наталія",
     "bronze": [
-     "Моісеєнко Віталіна",
-     "Харченко Тетяна"
+     "Моісеєнко Віталіна"
     ]
    },
    "nakkaMedals": null,
@@ -8538,16 +8532,14 @@
     "gold": "Усик Артем",
     "silver": "Мамика Олександр",
     "bronze": [
-     "Бадира Олександр",
-     "Ковальов Дмитро"
+     "Бадира Олександр"
     ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
     "silver": "Чумак Ганна",
     "bronze": [
-     "Грушовець Ольга",
-     "Черноброва Олександра"
+     "Грушовець Ольга"
     ]
    },
    "nakkaMedals": null,
@@ -8638,16 +8630,14 @@
     "gold": "Васюра Андрій",
     "silver": "Ковальов Дмитро",
     "bronze": [
-     "Мамика Олександр",
-     "Савенков Антон"
+     "Мамика Олександр"
     ]
    },
    "medalsWomen": {
     "gold": "Анісімова Світлана",
     "silver": "Ледєньова Наталія",
     "bronze": [
-     "Моісеєнко Віталіна",
-     "Харченко Тетяна"
+     "Моісеєнко Віталіна"
     ]
    },
    "nakkaMedals": null,
@@ -8683,16 +8673,14 @@
     "gold": "Усик Артем",
     "silver": "Омельченко Владислав",
     "bronze": [
-     "Мамика Олександр",
-     "Ковальов Дмитро"
+     "Мамика Олександр"
     ]
    },
    "medalsWomen": {
     "gold": "Чумак Ганна",
     "silver": "Анісімова Світлана",
     "bronze": [
-     "Некрістова Наталія",
-     "Черноброва Олександра"
+     "Некрістова Наталія"
     ]
    },
    "nakkaMedals": null,
@@ -8728,16 +8716,14 @@
     "gold": "Усик Артем",
     "silver": "Омельченко Владислав",
     "bronze": [
-     "Мамика Олександр",
-     "Ковальов Дмитро"
+     "Мамика Олександр"
     ]
    },
    "medalsWomen": {
     "gold": "Чумак Ганна",
     "silver": "Анісімова Світлана",
     "bronze": [
-     "Некрістова Наталія",
-     "Черноброва Олександра"
+     "Некрістова Наталія"
     ]
    },
    "nakkaMedals": null,
@@ -8770,8 +8756,7 @@
     "gold": "Усик Артем",
     "silver": "Костильов Євгеній",
     "bronze": [
-     "Титков Олег",
-     "Луков Олександр"
+     "Титков Олег"
     ]
    },
    "medalsWomen": {
@@ -8781,8 +8766,20 @@
      "Чумак Ганна"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Усик Артем",
+    "silver": "Костильов Євгеній",
+    "bronze": [
+     "Титков Олег"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Лопухова Ганна",
+    "silver": "Новікова Зоя",
+    "bronze": [
+     "Чумак Ганна"
+    ]
+   }
   },
   {
    "total": 52,
@@ -8808,23 +8805,33 @@
     }
    },
    "medals": {
-    "gold": "Усик Артем",
-    "silver": "Луков Олександр",
+    "gold": "Лец Дмитро",
+    "silver": "Мамика Олександр",
     "bronze": [
-     "Мамика Олександр",
-     "Ємельянов Олександр"
+     "Усик Артем"
     ]
    },
    "medalsWomen": {
-    "gold": "Анісімова Світлана",
-    "silver": "Харченко Тетяна",
+    "gold": "Чумак Ганна",
+    "silver": "Лопухова Ганна",
     "bronze": [
-     "Чумак Ганна",
-     "Ледєньова Наталія"
+     "Новікова Зоя"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Лец Дмитро",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Усик Артем"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Лопухова Ганна",
+    "bronze": [
+     "Новікова Зоя"
+    ]
+   }
   },
   {
    "total": 68,
@@ -8850,23 +8857,33 @@
     }
    },
    "medals": {
-    "gold": "Усик Артем",
-    "silver": "Луков Олександр",
+    "gold": "Лец Дмитро/Титков Олег",
+    "silver": "Єрєменко Василій/Гросов Олексій",
     "bronze": [
-     "Мамика Олександр",
-     "Ємельянов Олександр"
+     "Омельченко Владислав/Невінчаний Едуард"
     ]
    },
    "medalsWomen": {
-    "gold": "Анісімова Світлана",
-    "silver": "Харченко Тетяна",
+    "gold": "Ниценко Ольга/Леонова Єлізавета",
+    "silver": "Лопухова Ганна/Гладка Ірина",
     "bronze": [
-     "Чумак Ганна",
-     "Ледєньова Наталія"
+     "Шумілова Ірина/Чумак Ганна"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Лец Дмитро/Титков Олег",
+    "silver": "Єрєменко Василій/Гросов Олексій",
+    "bronze": [
+     "Омельченко Владислав/Невінчаний Едуард"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Ниценко Ольга/Леонова Єлізавета",
+    "silver": "Лопухова Ганна/Гладка Ірина",
+    "bronze": [
+     "Шумілова Ірина/Чумак Ганна"
+    ]
+   }
   },
   {
    "total": 67,
@@ -8895,8 +8912,7 @@
     "gold": "Костильов Євгеній",
     "silver": "Мамика Олександр",
     "bronze": [
-     "Гросов Олексій",
-     "Луков Олександр"
+     "Гросов Олексій"
     ]
    },
    "medalsWomen": {
@@ -8906,8 +8922,20 @@
      "Соловьова Юлія"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Костильов Євгеній",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Гросов Олексій"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Лопухова Ганна",
+    "silver": "Леонова Єлізавета",
+    "bronze": [
+     "Соловьова Юлія"
+    ]
+   }
   },
   {
    "total": 54,
@@ -9312,9 +9340,9 @@
    "name": "Мамика Олександр",
    "gold": 9,
    "silver": 10,
-   "bronze": 11,
+   "bronze": 10,
    "champUA": 0,
-   "total": 30,
+   "total": 29,
    "rank": 4
   },
   {
@@ -9339,9 +9367,9 @@
    "name": "Васюра Андрій",
    "gold": 2,
    "silver": 2,
-   "bronze": 5,
+   "bronze": 4,
    "champUA": 0,
-   "total": 9,
+   "total": 8,
    "rank": 7
   },
   {
@@ -9354,21 +9382,21 @@
    "rank": 8
   },
   {
-   "name": "Ковальов Дмитро",
-   "gold": 2,
-   "silver": 2,
-   "bronze": 2,
-   "champUA": 0,
-   "total": 6,
-   "rank": 9
-  },
-  {
    "name": "Григоренко Денис",
    "gold": 2,
    "silver": 2,
    "bronze": 1,
    "champUA": 0,
    "total": 5,
+   "rank": 9
+  },
+  {
+   "name": "Ковальов Дмитро",
+   "gold": 2,
+   "silver": 2,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 4,
    "rank": 10
   },
   {
@@ -9411,9 +9439,9 @@
    "name": "Ємельянов Олександр",
    "gold": 1,
    "silver": 1,
-   "bronze": 2,
+   "bronze": 1,
    "champUA": 0,
-   "total": 4,
+   "total": 3,
    "rank": 15
   },
   {
@@ -9543,7 +9571,7 @@
    "rank": 29
   },
   {
-   "name": "Луков Олександр",
+   "name": "Пекарук Ілля",
    "gold": 0,
    "silver": 2,
    "bronze": 5,
@@ -9552,12 +9580,12 @@
    "rank": 30
   },
   {
-   "name": "Пекарук Ілля",
+   "name": "Луков Олександр",
    "gold": 0,
    "silver": 2,
-   "bronze": 5,
+   "bronze": 4,
    "champUA": 0,
-   "total": 7,
+   "total": 6,
    "rank": 31
   },
   {
@@ -9939,7 +9967,7 @@
    "rank": 73
   },
   {
-   "name": "Назаренко Олексій",
+   "name": "Некрістов Станіслав",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -9948,7 +9976,7 @@
    "rank": 74
   },
   {
-   "name": "Некрістов Станіслав",
+   "name": "Озджан Мустафа",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -9957,7 +9985,7 @@
    "rank": 75
   },
   {
-   "name": "Озджан Мустафа",
+   "name": "Пальонний Ігор",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -9966,7 +9994,7 @@
    "rank": 76
   },
   {
-   "name": "Пальонний Ігор",
+   "name": "Рудковський Василь",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -9975,7 +10003,7 @@
    "rank": 77
   },
   {
-   "name": "Попович Андрій",
+   "name": "Сиром'ятников Олександр",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -9984,7 +10012,7 @@
    "rank": 78
   },
   {
-   "name": "Рудковський Василь",
+   "name": "Стейер Себастьян",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -9993,7 +10021,7 @@
    "rank": 79
   },
   {
-   "name": "Савенков Антон",
+   "name": "Тямолов Роман",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10002,7 +10030,7 @@
    "rank": 80
   },
   {
-   "name": "Сиром'ятников Олександр",
+   "name": "Холліуелл Вейн",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10011,7 +10039,7 @@
    "rank": 81
   },
   {
-   "name": "Стейер Себастьян",
+   "name": "Хімчак Сергій",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10020,40 +10048,13 @@
    "rank": 82
   },
   {
-   "name": "Тямолов Роман",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1,
-   "rank": 83
-  },
-  {
-   "name": "Холліуелл Вейн",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1,
-   "rank": 84
-  },
-  {
-   "name": "Хімчак Сергій",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1,
-   "rank": 85
-  },
-  {
    "name": "Царолунга Дмитро",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 86
+   "rank": 83
   }
  ],
  "leaderboardWomen": [
@@ -10070,9 +10071,9 @@
    "name": "Харченко Тетяна",
    "gold": 16,
    "silver": 2,
-   "bronze": 8,
+   "bronze": 7,
    "champUA": 1,
-   "total": 26,
+   "total": 25,
    "rank": 2
   },
   {
@@ -10097,9 +10098,9 @@
    "name": "Анісімова Світлана",
    "gold": 4,
    "silver": 6,
-   "bronze": 4,
+   "bronze": 3,
    "champUA": 2,
-   "total": 14,
+   "total": 13,
    "rank": 5
   },
   {
@@ -10115,9 +10116,9 @@
    "name": "Ледєньова Наталія",
    "gold": 3,
    "silver": 8,
-   "bronze": 9,
+   "bronze": 7,
    "champUA": 0,
-   "total": 20,
+   "total": 18,
    "rank": 7
   },
   {
@@ -10355,22 +10356,13 @@
    "rank": 33
   },
   {
-   "name": "Черноброва Олександра",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 4,
-   "champUA": 0,
-   "total": 4,
-   "rank": 34
-  },
-  {
    "name": "Соловьова Юлія",
    "gold": 0,
    "silver": 0,
    "bronze": 3,
    "champUA": 0,
    "total": 3,
-   "rank": 35
+   "rank": 34
   },
   {
    "name": "Солтис Ганна",
@@ -10379,7 +10371,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 36
+   "rank": 35
   },
   {
    "name": "Ігнатюк Наталія",
@@ -10388,7 +10380,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 37
+   "rank": 36
   },
   {
    "name": "Богданова Діна",
@@ -10397,7 +10389,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 38
+   "rank": 37
   },
   {
    "name": "Борисова Марина",
@@ -10406,7 +10398,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 39
+   "rank": 38
   },
   {
    "name": "Борисова Марія",
@@ -10415,7 +10407,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 40
+   "rank": 39
   },
   {
    "name": "Букетова Ірина",
@@ -10424,7 +10416,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 41
+   "rank": 40
   },
   {
    "name": "Гавриш Ольга",
@@ -10433,7 +10425,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 42
+   "rank": 41
   },
   {
    "name": "Дзюбій Юлія",
@@ -10442,7 +10434,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 43
+   "rank": 42
   },
   {
    "name": "Карнаух Валентина",
@@ -10451,7 +10443,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 44
+   "rank": 43
   },
   {
    "name": "Лях Світлана",
@@ -10460,7 +10452,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 45
+   "rank": 44
   },
   {
    "name": "Молдован Емілія",
@@ -10469,7 +10461,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 46
+   "rank": 45
   },
   {
    "name": "Некристова Наталя",
@@ -10478,7 +10470,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 47
+   "rank": 46
   },
   {
    "name": "Паламар Оксана",
@@ -10487,7 +10479,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 48
+   "rank": 47
   },
   {
    "name": "Полтавець Світлана",
@@ -10496,7 +10488,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 49
+   "rank": 48
   },
   {
    "name": "Спекторенко Катерина",
@@ -10505,7 +10497,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 50
+   "rank": 49
   },
   {
    "name": "Стребиж Татяна",
@@ -10514,7 +10506,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 51
+   "rank": 50
   },
   {
    "name": "Федоришина Алла",
@@ -10523,7 +10515,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 52
+   "rank": 51
   },
   {
    "name": "Федотова Ірина",
@@ -10532,10 +10524,19 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 53
+   "rank": 52
   },
   {
    "name": "Червинська Ніна",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 53
+  },
+  {
+   "name": "Черноброва Олександра",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11118,7 +11119,7 @@
     },
     {
      "rank": "41",
-     "name": "Кулик Віталій",
+     "name": "Кулік Віталій",
      "scores": [
       null,
       25.5,
@@ -11314,7 +11315,7 @@
     },
     {
      "rank": "55",
-     "name": "Sol Deen",
+     "name": "Фатех Дін",
      "scores": [
       null,
       54.25,
@@ -12576,7 +12577,7 @@
     },
     {
      "rank": "21",
-     "name": "Букетова Ірина",
+     "name": "Букетова Iрина",
      "scores": [
       37.5,
       null,
@@ -12646,7 +12647,7 @@
     },
     {
      "rank": "26",
-     "name": "Мєльтєва Ірина",
+     "name": "Мельтєва Ірина",
      "scores": [
       null,
       null,
@@ -13120,7 +13121,7 @@
     },
     {
      "rank": "30",
-     "name": "Sol Deen",
+     "name": "Фатех Дін",
      "scores": [
       null,
       null,
@@ -13300,7 +13301,7 @@
     },
     {
      "rank": "45",
-     "name": "Кулик Віталій",
+     "name": "Кулік Віталій",
      "scores": [
       17.0,
       null,
@@ -13924,7 +13925,7 @@
     },
     {
      "rank": "97",
-     "name": "Сєргєєв Андрій",
+     "name": "Сергеєв Андрій",
      "scores": [
       null,
       null,
@@ -14490,7 +14491,7 @@
     },
     {
      "rank": "15",
-     "name": "Букетова Ірина",
+     "name": "Букетова Iрина",
      "scores": [
       null,
       null,
@@ -14598,7 +14599,7 @@
     },
     {
      "rank": "24",
-     "name": "Мєльтєва Ірина",
+     "name": "Мельтєва Ірина",
      "scores": [
       null,
       null,
@@ -14658,7 +14659,7 @@
     },
     {
      "rank": "29",
-     "name": "Онищенко Тетяна",
+     "name": "Оніщенко Тетяна",
      "scores": [
       6.5,
       null,
@@ -15044,7 +15045,7 @@
     },
     {
      "rank": "18",
-     "name": "Sol Deen",
+     "name": "Фатех Дін",
      "scores": [
       null,
       null,
@@ -15352,7 +15353,7 @@
     },
     {
      "rank": "40",
-     "name": "Кулик Віталій",
+     "name": "Кулік Віталій",
      "scores": [
       1.0,
       1.0,
@@ -16346,7 +16347,7 @@
     },
     {
      "rank": "111",
-     "name": "Сєргєєв Андрій",
+     "name": "Сергеєв Андрій",
      "scores": [
       null,
       null,
@@ -16964,7 +16965,7 @@
     },
     {
      "rank": "22",
-     "name": "Мєльтєва Ірина",
+     "name": "Мельтєва Ірина",
      "scores": [
       null,
       null,
@@ -31898,7 +31899,7 @@
     },
     {
      "rank": "27",
-     "name": "Sol Deen",
+     "name": "Фатех Дін",
      "scores": [
       null,
       null,
@@ -34360,7 +34361,7 @@
     },
     {
      "rank": "28",
-     "name": "Мєльтєва Ірина",
+     "name": "Мельтєва Ірина",
      "scores": [
       6.5,
       null,
@@ -34450,7 +34451,7 @@
     },
     {
      "rank": "34",
-     "name": "Букетова Ірина",
+     "name": "Букетова Iрина",
      "scores": [
       null,
       null,
@@ -34540,7 +34541,7 @@
     },
     {
      "rank": "40",
-     "name": "Онищенко Тетяна",
+     "name": "Оніщенко Тетяна",
      "scores": [
       null,
       null,
@@ -34932,7 +34933,7 @@
     },
     {
      "rank": "15",
-     "name": "Sol Deen",
+     "name": "Фатех Дін",
      "scores": [
       59.0,
       null,
@@ -39210,7 +39211,7 @@
    "winMatch": 0
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "06.09.2026",
@@ -39594,7 +39595,7 @@
    "winMatch": 1
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "06.09.2026",
@@ -43898,7 +43899,7 @@
    "winMatch": 5
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "20.06.2026",
@@ -44922,7 +44923,7 @@
    "winMatch": 2
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "23.05.2026",
@@ -45098,7 +45099,7 @@
    "winMatch": 2
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "23.05.2026",
@@ -46458,7 +46459,7 @@
    "winMatch": 0
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "17.05.2026",
@@ -46618,7 +46619,7 @@
    "winMatch": 2
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "17.05.2026",
@@ -47370,7 +47371,7 @@
    "winMatch": 2
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "15.05.2026",
@@ -51530,7 +51531,7 @@
    "winMatch": 5
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "21.02.2026",
@@ -52154,7 +52155,7 @@
    "winMatch": 8
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "24.01.2026",
@@ -53178,7 +53179,7 @@
    "winMatch": 0
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "23.01.2026",
@@ -53674,7 +53675,7 @@
    "winMatch": 2
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "14.12.2025",
@@ -54234,7 +54235,7 @@
    "winMatch": 1
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "14.12.2025",
@@ -54554,7 +54555,7 @@
    "winMatch": 5
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "13.12.2025",
@@ -55226,7 +55227,7 @@
    "winMatch": 3
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "13.12.2025",
@@ -57434,7 +57435,7 @@
    "winMatch": 3
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "12.10.2025",
@@ -58874,7 +58875,7 @@
    "winMatch": 0
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "09.08.2025",
@@ -60074,7 +60075,7 @@
    "winMatch": 1
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "06.07.2025",
@@ -60906,7 +60907,7 @@
    "winMatch": 3
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "05.07.2025",
@@ -61610,7 +61611,7 @@
    "winMatch": 0
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "21.06.2025",
@@ -62698,7 +62699,7 @@
    "winMatch": 1
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "18.05.2025",
@@ -63322,7 +63323,7 @@
    "winMatch": 1
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "18.05.2025",
@@ -67322,7 +67323,7 @@
    "winMatch": 1
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "25.01.2025",
@@ -67370,7 +67371,7 @@
    "winMatch": 1
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "25.01.2025",
@@ -68474,7 +68475,7 @@
    "winMatch": 4
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "07.12.2024",
@@ -69066,7 +69067,7 @@
    "winMatch": 1
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
@@ -69866,7 +69867,7 @@
    "winMatch": 0
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
@@ -69898,7 +69899,7 @@
    "winMatch": 4
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
@@ -70234,7 +70235,7 @@
    "winMatch": 0
   },
   {
-   "name": "Попович Андрій",
+   "name": "Андрій Попович",
    "gender": "men",
    "isUDL": false,
    "date": "13.10.2024",
@@ -71082,7 +71083,7 @@
    "winMatch": 7
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "08.09.2024",
@@ -71802,7 +71803,7 @@
    "winMatch": 4
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "08.09.2024",
@@ -72314,7 +72315,7 @@
    "winMatch": 6
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
@@ -72746,7 +72747,7 @@
    "winMatch": 0
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
@@ -75098,7 +75099,7 @@
    "winMatch": 0
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
@@ -77930,7 +77931,7 @@
    "winMatch": 0
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "03.12.2023",
@@ -79834,7 +79835,7 @@
    "winMatch": 5
   },
   {
-   "name": "Чабанова Ганна",
+   "name": "Чабанова Анна",
    "gender": "women",
    "isUDL": false,
    "date": "12.11.2023",
@@ -80490,7 +80491,7 @@
    "winMatch": 4
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -80922,7 +80923,7 @@
    "winMatch": 3
   },
   {
-   "name": "Чабанова Ганна",
+   "name": "Чабанова Анна",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -80986,7 +80987,7 @@
    "winMatch": 2
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мєльтєва",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -84698,7 +84699,7 @@
    "winMatch": 2
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "21.05.2023",
@@ -84826,7 +84827,7 @@
    "winMatch": 5
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "21.05.2023",
@@ -86346,7 +86347,7 @@
    "winMatch": 0
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "26.03.2023",
@@ -87322,7 +87323,7 @@
    "winMatch": 0
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "25.03.2023",
@@ -89482,7 +89483,7 @@
    "winMatch": 2
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
@@ -89722,7 +89723,7 @@
    "winMatch": 0
   },
   {
-   "name": "Букетова Ірина",
+   "name": "Букетова Iрина",
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
@@ -89866,7 +89867,7 @@
    "winMatch": 0
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
@@ -90278,11 +90279,11 @@
    "date": "06.09.2026",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 42.54
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "06.09.2026",
@@ -90412,7 +90413,7 @@
    "avg": 51.06
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "06.09.2026",
@@ -90428,7 +90429,7 @@
    "date": "06.09.2026",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 42.94
   },
   {
@@ -90638,11 +90639,11 @@
    "date": "06.09.2026",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 60.4
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "06.09.2026",
@@ -90872,7 +90873,7 @@
    "avg": 44.07
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "06.09.2026",
@@ -90888,11 +90889,11 @@
    "date": "06.09.2026",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 50.67
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "06.09.2026",
@@ -90908,7 +90909,7 @@
    "date": "06.09.2026",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 44.1
   },
   {
@@ -91312,7 +91313,7 @@
    "avg": 63.0
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "06.09.2026",
@@ -91328,7 +91329,7 @@
    "date": "06.09.2026",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 54.53
   },
   {
@@ -91478,11 +91479,11 @@
    "date": "06.09.2026",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 38.54
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "06.09.2026",
@@ -91698,11 +91699,11 @@
    "date": "06.09.2026",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 49.26
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "06.09.2026",
@@ -91938,11 +91939,11 @@
    "date": "06.09.2026",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 63.51
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "06.09.2026",
@@ -91978,11 +91979,11 @@
    "date": "06.09.2026",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 71.57
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "06.09.2026",
@@ -103218,11 +103219,11 @@
    "date": "20.06.2026",
    "tournament": "UDL SILVER",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 72.75
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "20.06.2026",
@@ -103358,11 +103359,11 @@
    "date": "20.06.2026",
    "tournament": "UDL SILVER",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 63.99
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "20.06.2026",
@@ -103492,7 +103493,7 @@
    "avg": 63.27
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "20.06.2026",
@@ -103508,7 +103509,7 @@
    "date": "20.06.2026",
    "tournament": "UDL SILVER",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 42.7
   },
   {
@@ -103972,7 +103973,7 @@
    "avg": 44.45
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "20.06.2026",
@@ -103988,7 +103989,7 @@
    "date": "20.06.2026",
    "tournament": "UDL SILVER",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 50.65
   },
   {
@@ -104138,11 +104139,11 @@
    "date": "20.06.2026",
    "tournament": "UDL SILVER",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 59.49
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "20.06.2026",
@@ -104518,11 +104519,11 @@
    "date": "20.06.2026",
    "tournament": "UDL SILVER",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 66.9
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "20.06.2026",
@@ -104832,7 +104833,7 @@
    "avg": 42.58
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "20.06.2026",
@@ -104848,7 +104849,7 @@
    "date": "20.06.2026",
    "tournament": "UDL SILVER",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 56.73
   },
   {
@@ -106758,11 +106759,11 @@
    "date": "23.05.2026",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 60.12
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "23.05.2026",
@@ -106798,11 +106799,11 @@
    "date": "23.05.2026",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 60.02
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "23.05.2026",
@@ -107018,11 +107019,11 @@
    "date": "23.05.2026",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 60.12
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "23.05.2026",
@@ -107198,11 +107199,11 @@
    "date": "23.05.2026",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 50.66
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "23.05.2026",
@@ -107612,7 +107613,7 @@
    "avg": 34.22
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "23.05.2026",
@@ -107628,7 +107629,7 @@
    "date": "23.05.2026",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 48.7
   },
   {
@@ -107652,7 +107653,7 @@
    "avg": 59.33
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "23.05.2026",
@@ -107668,7 +107669,7 @@
    "date": "23.05.2026",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 47.24
   },
   {
@@ -108052,7 +108053,7 @@
    "avg": 56.36
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "23.05.2026",
@@ -108068,7 +108069,7 @@
    "date": "23.05.2026",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 49.64
   },
   {
@@ -108218,11 +108219,11 @@
    "date": "23.05.2026",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 51.74
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "23.05.2026",
@@ -109558,11 +109559,11 @@
    "date": "17.05.2026",
    "tournament": "UDL FEST CB&V SILVER",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 65.84
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "17.05.2026",
@@ -109718,11 +109719,11 @@
    "date": "17.05.2026",
    "tournament": "UDL FEST CB&V SILVER",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 51.1
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "17.05.2026",
@@ -109978,11 +109979,11 @@
    "date": "17.05.2026",
    "tournament": "UDL FEST CB&V SILVER",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 49.98
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "17.05.2026",
@@ -110172,7 +110173,7 @@
    "avg": 44.88
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "17.05.2026",
@@ -110188,7 +110189,7 @@
    "date": "17.05.2026",
    "tournament": "UDL FEST CB&V SILVER",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 52.43
   },
   {
@@ -110238,11 +110239,11 @@
    "date": "17.05.2026",
    "tournament": "UDL FEST CB&V SILVER",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 50.95
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "17.05.2026",
@@ -110498,11 +110499,11 @@
    "date": "17.05.2026",
    "tournament": "UDL FEST CB&V SILVER",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 39.47
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "17.05.2026",
@@ -110838,11 +110839,11 @@
    "date": "17.05.2026",
    "tournament": "UDL FEST CB&V SILVER",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 55.07
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "17.05.2026",
@@ -111032,7 +111033,7 @@
    "avg": 52.47
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "17.05.2026",
@@ -111048,7 +111049,7 @@
    "date": "17.05.2026",
    "tournament": "UDL FEST CB&V SILVER",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 42.63
   },
   {
@@ -111178,11 +111179,11 @@
    "date": "17.05.2026",
    "tournament": "UDL FEST CB&V SILVER",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 66.81
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "17.05.2026",
@@ -112552,7 +112553,7 @@
    "avg": 68.32
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "15.05.2026",
@@ -112568,7 +112569,7 @@
    "date": "15.05.2026",
    "tournament": "UDL FEST CB&V GOLD",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 68.32
   },
   {
@@ -112898,11 +112899,11 @@
    "date": "15.05.2026",
    "tournament": "UDL FEST CB&V GOLD",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 72.25
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "15.05.2026",
@@ -113032,7 +113033,7 @@
    "avg": 67.82
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "15.05.2026",
@@ -113048,7 +113049,7 @@
    "date": "15.05.2026",
    "tournament": "UDL FEST CB&V GOLD",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 44.22
   },
   {
@@ -113338,11 +113339,11 @@
    "date": "15.05.2026",
    "tournament": "UDL FEST CB&V GOLD",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 48.46
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "15.05.2026",
@@ -124498,11 +124499,11 @@
    "date": "21.02.2026",
    "tournament": "Кубок України",
    "city": "Львів",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 45.09
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "21.02.2026",
@@ -124658,11 +124659,11 @@
    "date": "21.02.2026",
    "tournament": "Кубок України",
    "city": "Львів",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 40.95
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "21.02.2026",
@@ -124858,11 +124859,11 @@
    "date": "21.02.2026",
    "tournament": "Кубок України",
    "city": "Львів",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 49.55
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "21.02.2026",
@@ -125058,11 +125059,11 @@
    "date": "21.02.2026",
    "tournament": "Кубок України",
    "city": "Львів",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 39.78
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "21.02.2026",
@@ -125252,7 +125253,7 @@
    "avg": 57.25
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "24.01.2026",
@@ -125268,7 +125269,7 @@
    "date": "24.01.2026",
    "tournament": "UDL SILVER",
    "city": "Славсько",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 60.58
   },
   {
@@ -125398,11 +125399,11 @@
    "date": "24.01.2026",
    "tournament": "UDL SILVER",
    "city": "Славсько",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 49.69
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "24.01.2026",
@@ -125718,11 +125719,11 @@
    "date": "24.01.2026",
    "tournament": "UDL SILVER",
    "city": "Славсько",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 56.58
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "24.01.2026",
@@ -126272,7 +126273,7 @@
    "avg": 39.55
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "24.01.2026",
@@ -126288,7 +126289,7 @@
    "date": "24.01.2026",
    "tournament": "UDL SILVER",
    "city": "Славсько",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 55.6
   },
   {
@@ -126892,7 +126893,7 @@
    "avg": 40.92
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "24.01.2026",
@@ -126908,7 +126909,7 @@
    "date": "24.01.2026",
    "tournament": "UDL SILVER",
    "city": "Славсько",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 39.22
   },
   {
@@ -127152,7 +127153,7 @@
    "avg": 43.02
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "24.01.2026",
@@ -127168,7 +127169,7 @@
    "date": "24.01.2026",
    "tournament": "UDL SILVER",
    "city": "Славсько",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 36.83
   },
   {
@@ -129058,11 +129059,11 @@
    "date": "14.12.2025",
    "tournament": "Кубок України",
    "city": "Вижниця",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 60.12
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "14.12.2025",
@@ -129618,11 +129619,11 @@
    "date": "14.12.2025",
    "tournament": "Кубок України",
    "city": "Вижниця",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 42.14
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "14.12.2025",
@@ -130058,11 +130059,11 @@
    "date": "14.12.2025",
    "tournament": "Кубок України",
    "city": "Вижниця",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 44.75
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "14.12.2025",
@@ -130318,11 +130319,11 @@
    "date": "14.12.2025",
    "tournament": "Кубок України",
    "city": "Вижниця",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 50.1
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "14.12.2025",
@@ -130458,11 +130459,11 @@
    "date": "14.12.2025",
    "tournament": "Кубок України",
    "city": "Вижниця",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 45.09
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "14.12.2025",
@@ -131892,7 +131893,7 @@
    "avg": 65.47
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "13.12.2025",
@@ -131908,7 +131909,7 @@
    "date": "13.12.2025",
    "tournament": "ЧУ 2025",
    "city": "Вижниця",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 36.36
   },
   {
@@ -132098,11 +132099,11 @@
    "date": "13.12.2025",
    "tournament": "ЧУ 2025",
    "city": "Вижниця",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 54.99
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "13.12.2025",
@@ -132518,11 +132519,11 @@
    "date": "13.12.2025",
    "tournament": "ЧУ 2025",
    "city": "Вижниця",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 59.33
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "13.12.2025",
@@ -133018,11 +133019,11 @@
    "date": "13.12.2025",
    "tournament": "ЧУ 2025",
    "city": "Вижниця",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 40.04
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "13.12.2025",
@@ -133178,11 +133179,11 @@
    "date": "13.12.2025",
    "tournament": "ЧУ 2025",
    "city": "Вижниця",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 42.3
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "13.12.2025",
@@ -133298,11 +133299,11 @@
    "date": "13.12.2025",
    "tournament": "ЧУ 2025",
    "city": "Вижниця",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 42.54
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "13.12.2025",
@@ -133458,11 +133459,11 @@
    "date": "13.12.2025",
    "tournament": "ЧУ 2025",
    "city": "Вижниця",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 47.46
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "13.12.2025",
@@ -137592,7 +137593,7 @@
    "avg": 55.25
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "12.10.2025",
@@ -137608,7 +137609,7 @@
    "date": "12.10.2025",
    "tournament": "Кубок України",
    "city": "Кривий Ріг",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 61.77
   },
   {
@@ -137698,11 +137699,11 @@
    "date": "12.10.2025",
    "tournament": "Кубок України",
    "city": "Кривий Ріг",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 54.06
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "12.10.2025",
@@ -137918,11 +137919,11 @@
    "date": "12.10.2025",
    "tournament": "Кубок України",
    "city": "Кривий Ріг",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 46.14
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "12.10.2025",
@@ -138232,7 +138233,7 @@
    "avg": 46.32
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "12.10.2025",
@@ -138248,7 +138249,7 @@
    "date": "12.10.2025",
    "tournament": "Кубок України",
    "city": "Кривий Ріг",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 48.46
   },
   {
@@ -142318,11 +142319,11 @@
    "date": "09.08.2025",
    "tournament": "UDL STAGE 5",
    "city": "Ужгород",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 55.72
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "09.08.2025",
@@ -142578,11 +142579,11 @@
    "date": "09.08.2025",
    "tournament": "UDL STAGE 5",
    "city": "Ужгород",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 49.45
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "09.08.2025",
@@ -142998,11 +142999,11 @@
    "date": "09.08.2025",
    "tournament": "UDL STAGE 5",
    "city": "Ужгород",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 55.67
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "09.08.2025",
@@ -143258,11 +143259,11 @@
    "date": "09.08.2025",
    "tournament": "UDL STAGE 5",
    "city": "Ужгород",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 46.95
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "09.08.2025",
@@ -144538,11 +144539,11 @@
    "date": "06.07.2025",
    "tournament": "ЧУ 2025 DIDO",
    "city": "Полтава",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 47.97
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "06.07.2025",
@@ -145152,7 +145153,7 @@
    "avg": 42.41
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "06.07.2025",
@@ -145168,7 +145169,7 @@
    "date": "06.07.2025",
    "tournament": "ЧУ 2025 DIDO",
    "city": "Полтава",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 48.76
   },
   {
@@ -145472,7 +145473,7 @@
    "avg": 45.93
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "06.07.2025",
@@ -145488,7 +145489,7 @@
    "date": "06.07.2025",
    "tournament": "ЧУ 2025 DIDO",
    "city": "Полтава",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 45.18
   },
   {
@@ -147118,11 +147119,11 @@
    "date": "05.07.2025",
    "tournament": "Кубок України",
    "city": "Полтава",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 55.16
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "05.07.2025",
@@ -147538,11 +147539,11 @@
    "date": "05.07.2025",
    "tournament": "Кубок України",
    "city": "Полтава",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 50.46
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "05.07.2025",
@@ -147812,7 +147813,7 @@
    "avg": 47.89
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "05.07.2025",
@@ -147828,7 +147829,7 @@
    "date": "05.07.2025",
    "tournament": "Кубок України",
    "city": "Полтава",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 54.83
   },
   {
@@ -148932,7 +148933,7 @@
    "avg": 59.61
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "21.06.2025",
@@ -148948,7 +148949,7 @@
    "date": "21.06.2025",
    "tournament": "UDL STAGE 4",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 69.58
   },
   {
@@ -149092,7 +149093,7 @@
    "avg": 58.14
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "21.06.2025",
@@ -149108,7 +149109,7 @@
    "date": "21.06.2025",
    "tournament": "UDL STAGE 4",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 67.12
   },
   {
@@ -149432,7 +149433,7 @@
    "avg": 39.29
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "21.06.2025",
@@ -149448,7 +149449,7 @@
    "date": "21.06.2025",
    "tournament": "UDL STAGE 4",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 47.65
   },
   {
@@ -150198,11 +150199,11 @@
    "date": "21.06.2025",
    "tournament": "UDL STAGE 4",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 59.42
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "21.06.2025",
@@ -151192,7 +151193,7 @@
    "avg": 65.23
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "18.05.2025",
@@ -151208,7 +151209,7 @@
    "date": "18.05.2025",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 59.91
   },
   {
@@ -151372,7 +151373,7 @@
    "avg": 51.2
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "18.05.2025",
@@ -151388,7 +151389,7 @@
    "date": "18.05.2025",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 43.26
   },
   {
@@ -151618,11 +151619,11 @@
    "date": "18.05.2025",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 52.21
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "18.05.2025",
@@ -151638,11 +151639,11 @@
    "date": "18.05.2025",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 52.23
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "18.05.2025",
@@ -151932,7 +151933,7 @@
    "avg": 45.09
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "18.05.2025",
@@ -151948,11 +151949,11 @@
    "date": "18.05.2025",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 52.02
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "18.05.2025",
@@ -151968,7 +151969,7 @@
    "date": "18.05.2025",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 60.86
   },
   {
@@ -152512,7 +152513,7 @@
    "avg": 55.12
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "18.05.2025",
@@ -152528,7 +152529,7 @@
    "date": "18.05.2025",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 46.14
   },
   {
@@ -152672,7 +152673,7 @@
    "avg": 57.24
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "18.05.2025",
@@ -152688,7 +152689,7 @@
    "date": "18.05.2025",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 41.12
   },
   {
@@ -153732,7 +153733,7 @@
    "avg": 60.22
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "18.05.2025",
@@ -153748,7 +153749,7 @@
    "date": "18.05.2025",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 38.74
   },
   {
@@ -163072,7 +163073,7 @@
    "avg": 55.66
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "25.01.2025",
@@ -163088,7 +163089,7 @@
    "date": "25.01.2025",
    "tournament": "UDL STAGE 1",
    "city": "Славсько",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 52.99
   },
   {
@@ -163412,7 +163413,7 @@
    "avg": 47.72
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "25.01.2025",
@@ -163428,7 +163429,7 @@
    "date": "25.01.2025",
    "tournament": "UDL STAGE 1",
    "city": "Славсько",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 49.61
   },
   {
@@ -163712,23 +163713,23 @@
    "avg": 55.49
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "25.01.2025",
    "tournament": "UDL STAGE 1",
    "city": "Славсько",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 61.91
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "25.01.2025",
    "tournament": "UDL STAGE 1",
    "city": "Славсько",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 47.92
   },
   {
@@ -164058,11 +164059,11 @@
    "date": "25.01.2025",
    "tournament": "UDL STAGE 1",
    "city": "Славсько",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 41.22
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "25.01.2025",
@@ -164212,7 +164213,7 @@
    "avg": 45.17
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "25.01.2025",
@@ -164228,7 +164229,7 @@
    "date": "25.01.2025",
    "tournament": "UDL STAGE 1",
    "city": "Славсько",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 53.26
   },
   {
@@ -164438,11 +164439,11 @@
    "date": "25.01.2025",
    "tournament": "UDL STAGE 1",
    "city": "Славсько",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 56.72
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "25.01.2025",
@@ -164532,7 +164533,7 @@
    "avg": 51.7
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "25.01.2025",
@@ -164548,7 +164549,7 @@
    "date": "25.01.2025",
    "tournament": "UDL STAGE 1",
    "city": "Славсько",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 48.09
   },
   {
@@ -164738,11 +164739,11 @@
    "date": "25.01.2025",
    "tournament": "UDL STAGE 1",
    "city": "Славсько",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 41.75
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "25.01.2025",
@@ -166138,11 +166139,11 @@
    "date": "07.12.2024",
    "tournament": "ЧУ 2024",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 46.48
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "07.12.2024",
@@ -166532,7 +166533,7 @@
    "avg": 51.78
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "07.12.2024",
@@ -166548,7 +166549,7 @@
    "date": "07.12.2024",
    "tournament": "ЧУ 2024",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 48.56
   },
   {
@@ -167732,7 +167733,7 @@
    "avg": 62.45
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "07.12.2024",
@@ -167748,7 +167749,7 @@
    "date": "07.12.2024",
    "tournament": "ЧУ 2024",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 63.51
   },
   {
@@ -168832,7 +168833,7 @@
    "avg": 74.52
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
@@ -168848,7 +168849,7 @@
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 64.98
   },
   {
@@ -168878,11 +168879,11 @@
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 65.52
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
@@ -169092,7 +169093,7 @@
    "avg": 39.61
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "06.12.2024",
@@ -169108,7 +169109,7 @@
    "date": "06.12.2024",
    "tournament": "UDL GRAND FINAL",
    "city": "Львів",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 60.98
   },
   {
@@ -169398,11 +169399,11 @@
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
    "city": "Чернівці",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 50.95
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
@@ -169978,11 +169979,11 @@
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
    "city": "Чернівці",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 43.81
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
@@ -170612,7 +170613,7 @@
    "avg": 51.95
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
@@ -170628,7 +170629,7 @@
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
    "city": "Чернівці",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 48.71
   },
   {
@@ -170878,11 +170879,11 @@
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
    "city": "Чернівці",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 54.16
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
@@ -170972,7 +170973,7 @@
    "avg": 41.8
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
@@ -170988,7 +170989,7 @@
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
    "city": "Чернівці",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 41.14
   },
   {
@@ -170998,11 +170999,11 @@
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
    "city": "Чернівці",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 55.67
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
@@ -171172,7 +171173,7 @@
    "avg": 39.86
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "10.11.2024",
@@ -171188,7 +171189,7 @@
    "date": "10.11.2024",
    "tournament": "UDL STAGE 6",
    "city": "Чернівці",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 45.92
   },
   {
@@ -171832,7 +171833,7 @@
    "avg": 40.74
   },
   {
-   "name": "Попович Андрій",
+   "name": "Андрій Попович",
    "gender": "men",
    "isUDL": false,
    "date": "13.10.2024",
@@ -171848,7 +171849,7 @@
    "date": "13.10.2024",
    "tournament": "Кубок України",
    "city": "Кривий Ріг",
-   "opponent": "Попович Андрій",
+   "opponent": "Андрій Попович",
    "avg": 49.01
   },
   {
@@ -172518,11 +172519,11 @@
    "date": "13.10.2024",
    "tournament": "Кубок України",
    "city": "Кривий Ріг",
-   "opponent": "Попович Андрій",
+   "opponent": "Андрій Попович",
    "avg": 54.99
   },
   {
-   "name": "Попович Андрій",
+   "name": "Андрій Попович",
    "gender": "men",
    "isUDL": false,
    "date": "13.10.2024",
@@ -172858,11 +172859,11 @@
    "date": "13.10.2024",
    "tournament": "Кубок України",
    "city": "Кривий Ріг",
-   "opponent": "Попович Андрій",
+   "opponent": "Андрій Попович",
    "avg": 47.62
   },
   {
-   "name": "Попович Андрій",
+   "name": "Андрій Попович",
    "gender": "men",
    "isUDL": false,
    "date": "13.10.2024",
@@ -173592,7 +173593,7 @@
    "avg": 64.75
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "08.09.2024",
@@ -173608,7 +173609,7 @@
    "date": "08.09.2024",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 71.91
   },
   {
@@ -173758,11 +173759,11 @@
    "date": "08.09.2024",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 63.62
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "08.09.2024",
@@ -173898,11 +173899,11 @@
    "date": "08.09.2024",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 88.41
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "08.09.2024",
@@ -174532,7 +174533,7 @@
    "avg": 35.98
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "08.09.2024",
@@ -174548,7 +174549,7 @@
    "date": "08.09.2024",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 61.35
   },
   {
@@ -175032,7 +175033,7 @@
    "avg": 59.51
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "08.09.2024",
@@ -175048,7 +175049,7 @@
    "date": "08.09.2024",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 43.18
   },
   {
@@ -175478,11 +175479,11 @@
    "date": "08.09.2024",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 49.03
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "08.09.2024",
@@ -175658,11 +175659,11 @@
    "date": "08.09.2024",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 43.1
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "08.09.2024",
@@ -175718,11 +175719,11 @@
    "date": "08.09.2024",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 43.94
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "08.09.2024",
@@ -175938,11 +175939,11 @@
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
    "city": "Київ",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 62.77
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
@@ -176572,7 +176573,7 @@
    "avg": 44.32
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
@@ -176588,7 +176589,7 @@
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
    "city": "Київ",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 35.8
   },
   {
@@ -176838,11 +176839,11 @@
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
    "city": "Київ",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 47.63
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
@@ -177158,11 +177159,11 @@
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
    "city": "Київ",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 49.19
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
@@ -177292,7 +177293,7 @@
    "avg": 45.43
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "11.08.2024",
@@ -177308,7 +177309,7 @@
    "date": "11.08.2024",
    "tournament": "UDL KYIV CUP",
    "city": "Київ",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 32.74
   },
   {
@@ -177518,11 +177519,11 @@
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
    "city": "Київ",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 62.9
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
@@ -177552,7 +177553,7 @@
    "avg": 57.58
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
@@ -177568,7 +177569,7 @@
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
    "city": "Київ",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 58.47
   },
   {
@@ -177678,11 +177679,11 @@
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
    "city": "Київ",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 56.0
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
@@ -178232,7 +178233,7 @@
    "avg": 62.67
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
@@ -178248,7 +178249,7 @@
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
    "city": "Київ",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 63.09
   },
   {
@@ -178518,11 +178519,11 @@
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
    "city": "Київ",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 68.02
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
@@ -178738,11 +178739,11 @@
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
    "city": "Київ",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 49.52
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
@@ -178912,7 +178913,7 @@
    "avg": 46.43
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "10.08.2024",
@@ -178928,7 +178929,7 @@
    "date": "10.08.2024",
    "tournament": "UDL STAGE 5",
    "city": "Київ",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 40.32
   },
   {
@@ -182332,7 +182333,7 @@
    "avg": 63.6
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
@@ -182348,7 +182349,7 @@
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 54.53
   },
   {
@@ -183298,11 +183299,11 @@
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 60.14
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
@@ -183478,11 +183479,11 @@
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 67.4
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
@@ -183632,7 +183633,7 @@
    "avg": 45.78
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": true,
    "date": "22.06.2024",
@@ -183648,7 +183649,7 @@
    "date": "22.06.2024",
    "tournament": "UDL STAGE 4",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 36.18
   },
   {
@@ -190652,7 +190653,7 @@
    "avg": 45.09
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "03.12.2023",
@@ -190668,7 +190669,7 @@
    "date": "03.12.2023",
    "tournament": "ЧУ 2023",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 37.97
   },
   {
@@ -191138,11 +191139,11 @@
    "date": "03.12.2023",
    "tournament": "ЧУ 2023",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 57.76
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "03.12.2023",
@@ -191558,11 +191559,11 @@
    "date": "03.12.2023",
    "tournament": "ЧУ 2023",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 53.05
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "03.12.2023",
@@ -192172,7 +192173,7 @@
    "avg": 40.81
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "03.12.2023",
@@ -192188,7 +192189,7 @@
    "date": "03.12.2023",
    "tournament": "ЧУ 2023",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 43.65
   },
   {
@@ -195398,11 +195399,11 @@
    "date": "12.11.2023",
    "tournament": "Кубок України",
    "city": "Кривий Ріг",
-   "opponent": "Чабанова Ганна",
+   "opponent": "Чабанова Анна",
    "avg": 39.21
   },
   {
-   "name": "Чабанова Ганна",
+   "name": "Чабанова Анна",
    "gender": "women",
    "isUDL": false,
    "date": "12.11.2023",
@@ -195438,11 +195439,11 @@
    "date": "12.11.2023",
    "tournament": "Кубок України",
    "city": "Кривий Ріг",
-   "opponent": "Чабанова Ганна",
+   "opponent": "Чабанова Анна",
    "avg": 55.67
   },
   {
-   "name": "Чабанова Ганна",
+   "name": "Чабанова Анна",
    "gender": "women",
    "isUDL": false,
    "date": "12.11.2023",
@@ -195532,7 +195533,7 @@
    "avg": 32.15
   },
   {
-   "name": "Чабанова Ганна",
+   "name": "Чабанова Анна",
    "gender": "women",
    "isUDL": false,
    "date": "12.11.2023",
@@ -195548,7 +195549,7 @@
    "date": "12.11.2023",
    "tournament": "Кубок України",
    "city": "Кривий Ріг",
-   "opponent": "Чабанова Ганна",
+   "opponent": "Чабанова Анна",
    "avg": 33.58
   },
   {
@@ -195778,11 +195779,11 @@
    "date": "10.09.2023",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 65.55
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -195992,7 +195993,7 @@
    "avg": 50.86
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -196008,7 +196009,7 @@
    "date": "10.09.2023",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 57.95
   },
   {
@@ -196258,11 +196259,11 @@
    "date": "10.09.2023",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 64.89
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -196592,7 +196593,7 @@
    "avg": 44.44
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -196608,7 +196609,7 @@
    "date": "10.09.2023",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 45.67
   },
   {
@@ -196952,7 +196953,7 @@
    "avg": 43.94
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "10.09.2023",
@@ -196968,7 +196969,7 @@
    "date": "10.09.2023",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 53.32
   },
   {
@@ -197552,7 +197553,7 @@
    "avg": 42.64
   },
   {
-   "name": "Чабанова Ганна",
+   "name": "Чабанова Анна",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -197568,7 +197569,7 @@
    "date": "10.09.2023",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Чабанова Ганна",
+   "opponent": "Чабанова Анна",
    "avg": 36.13
   },
   {
@@ -197578,11 +197579,11 @@
    "date": "10.09.2023",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мєльтєва",
    "avg": 45.55
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мєльтєва",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -197672,23 +197673,23 @@
    "avg": 39.92
   },
   {
-   "name": "Чабанова Ганна",
+   "name": "Чабанова Анна",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мєльтєва",
    "avg": 39.4
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мєльтєва",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Чабанова Ганна",
+   "opponent": "Чабанова Анна",
    "avg": 41.75
   },
   {
@@ -197798,11 +197799,11 @@
    "date": "10.09.2023",
    "tournament": "Кубок України",
    "city": "Одеса",
-   "opponent": "Чабанова Ганна",
+   "opponent": "Чабанова Анна",
    "avg": 54.33
   },
   {
-   "name": "Чабанова Ганна",
+   "name": "Чабанова Анна",
    "gender": "women",
    "isUDL": false,
    "date": "10.09.2023",
@@ -204772,7 +204773,7 @@
    "avg": 79.5
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "21.05.2023",
@@ -204788,7 +204789,7 @@
    "date": "21.05.2023",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 66.7
   },
   {
@@ -204918,11 +204919,11 @@
    "date": "21.05.2023",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 76.97
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "21.05.2023",
@@ -205132,7 +205133,7 @@
    "avg": 64.92
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "21.05.2023",
@@ -205148,7 +205149,7 @@
    "date": "21.05.2023",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 49.07
   },
   {
@@ -205292,7 +205293,7 @@
    "avg": 49.61
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "21.05.2023",
@@ -205308,7 +205309,7 @@
    "date": "21.05.2023",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 53.05
   },
   {
@@ -205458,11 +205459,11 @@
    "date": "21.05.2023",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 49.67
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "21.05.2023",
@@ -205512,7 +205513,7 @@
    "avg": 44.19
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "21.05.2023",
@@ -205528,7 +205529,7 @@
    "date": "21.05.2023",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 68.0
   },
   {
@@ -205838,11 +205839,11 @@
    "date": "21.05.2023",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 54.14
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "21.05.2023",
@@ -206578,11 +206579,11 @@
    "date": "21.05.2023",
    "tournament": "Кубок України",
    "city": "Черкаси",
-   "opponent": "Sol Deen",
+   "opponent": "Фатех Дін",
    "avg": 49.6
   },
   {
-   "name": "Sol Deen",
+   "name": "Фатех Дін",
    "gender": "men",
    "isUDL": false,
    "date": "21.05.2023",
@@ -208952,7 +208953,7 @@
    "avg": 46.96
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "26.03.2023",
@@ -208968,7 +208969,7 @@
    "date": "26.03.2023",
    "tournament": "Кубок України",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 51.24
   },
   {
@@ -209218,11 +209219,11 @@
    "date": "26.03.2023",
    "tournament": "Кубок України",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 51.43
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "26.03.2023",
@@ -210038,11 +210039,11 @@
    "date": "26.03.2023",
    "tournament": "Кубок України",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 60.93
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "26.03.2023",
@@ -210378,11 +210379,11 @@
    "date": "26.03.2023",
    "tournament": "Кубок України",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 45.55
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "26.03.2023",
@@ -211252,7 +211253,7 @@
    "avg": 38.14
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "25.03.2023",
@@ -211268,7 +211269,7 @@
    "date": "25.03.2023",
    "tournament": "Кубок України",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 47.27
   },
   {
@@ -211358,11 +211359,11 @@
    "date": "25.03.2023",
    "tournament": "Кубок України",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 31.38
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "25.03.2023",
@@ -211758,11 +211759,11 @@
    "date": "25.03.2023",
    "tournament": "Кубок України",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 46.55
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "25.03.2023",
@@ -212358,11 +212359,11 @@
    "date": "25.03.2023",
    "tournament": "Кубок України",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 43.48
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "25.03.2023",
@@ -212878,11 +212879,11 @@
    "date": "25.03.2023",
    "tournament": "Кубок України",
    "city": "Львів",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 41.37
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "25.03.2023",
@@ -217412,7 +217413,7 @@
    "avg": 43.63
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
@@ -217428,7 +217429,7 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 39.54
   },
   {
@@ -217672,7 +217673,7 @@
    "avg": 43.36
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
@@ -217688,7 +217689,7 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 46.21
   },
   {
@@ -218358,11 +218359,11 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 49.55
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
@@ -218818,11 +218819,11 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Кулик Віталій",
+   "opponent": "Кулік Віталій",
    "avg": 56.4
   },
   {
-   "name": "Кулик Віталій",
+   "name": "Кулік Віталій",
    "gender": "men",
    "isUDL": false,
    "date": "12.09.2021",
@@ -219418,11 +219419,11 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Букетова Ірина",
+   "opponent": "Букетова Iрина",
    "avg": 47.49
   },
   {
-   "name": "Букетова Ірина",
+   "name": "Букетова Iрина",
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
@@ -219478,11 +219479,11 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Букетова Ірина",
+   "opponent": "Букетова Iрина",
    "avg": 42.77
   },
   {
-   "name": "Букетова Ірина",
+   "name": "Букетова Iрина",
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
@@ -219552,7 +219553,7 @@
    "avg": 33.02
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
@@ -219568,7 +219569,7 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 42.73
   },
   {
@@ -219632,7 +219633,7 @@
    "avg": 30.26
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
@@ -219648,7 +219649,7 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 32.21
   },
   {
@@ -219672,7 +219673,7 @@
    "avg": 40.0
   },
   {
-   "name": "Букетова Ірина",
+   "name": "Букетова Iрина",
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
@@ -219688,7 +219689,7 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Букетова Ірина",
+   "opponent": "Букетова Iрина",
    "avg": 41.24
   },
   {
@@ -219852,7 +219853,7 @@
    "avg": 43.47
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
@@ -219868,7 +219869,7 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 37.17
   },
   {
@@ -219958,11 +219959,11 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Букетова Ірина",
+   "opponent": "Букетова Iрина",
    "avg": 39.9
   },
   {
-   "name": "Букетова Ірина",
+   "name": "Букетова Iрина",
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
@@ -220012,7 +220013,7 @@
    "avg": 41.37
   },
   {
-   "name": "Мєльтєва Ірина",
+   "name": "Мельтєва Ірина",
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
@@ -220028,7 +220029,7 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Мєльтєва Ірина",
+   "opponent": "Мельтєва Ірина",
    "avg": 27.24
   },
   {
@@ -220038,11 +220039,11 @@
    "date": "12.09.2021",
    "tournament": "Кубок Одеси",
    "city": "Одеса",
-   "opponent": "Букетова Ірина",
+   "opponent": "Букетова Iрина",
    "avg": 42.09
   },
   {
-   "name": "Букетова Ірина",
+   "name": "Букетова Iрина",
    "gender": "women",
    "isUDL": false,
    "date": "12.09.2021",
@@ -220351,7 +220352,7 @@
   {
    "name1": "Микитин Ярослав",
    "avg1": 42.54,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 39.39,
    "avgAvg": 40.97,
    "result": "3-0",
@@ -220454,7 +220455,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 41.86,
    "name2": "Писаревський Вiталiй",
    "avg2": 42.94,
@@ -220621,7 +220622,7 @@
   {
    "name1": "Солтис Микита",
    "avg1": 60.4,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 69.37,
    "avgAvg": 64.89,
    "result": "0-3",
@@ -220799,7 +220800,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 61.77,
    "name2": "Ананенко Сергій",
    "avg2": 50.67,
@@ -220814,7 +220815,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 43.06,
    "name2": "Царолунга Дмитро",
    "avg2": 44.1,
@@ -221129,7 +221130,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 51.03,
    "name2": "Рукавишников Микола",
    "avg2": 54.53,
@@ -221251,7 +221252,7 @@
   {
    "name1": "Чепурний Едуард",
    "avg1": 38.54,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 39.16,
    "avgAvg": 38.85,
    "result": "3-0",
@@ -221416,7 +221417,7 @@
   {
    "name1": "Братченко Вадим",
    "avg1": 49.26,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 54.33,
    "avgAvg": 51.8,
    "result": "0-3",
@@ -221596,7 +221597,7 @@
   {
    "name1": "Гончаров Едуард",
    "avg1": 63.51,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 46.77,
    "avgAvg": 55.14,
    "result": "3-0",
@@ -221626,7 +221627,7 @@
   {
    "name1": "Овсієнко Євген",
    "avg1": 71.57,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 61.6,
    "avgAvg": 66.58,
    "result": "3-0",
@@ -230056,7 +230057,7 @@
   {
    "name1": "Сташевський Валентин",
    "avg1": 72.75,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 69.26,
    "avgAvg": 71.0,
    "result": "4-2",
@@ -230161,7 +230162,7 @@
   {
    "name1": "Залевський Володимир",
    "avg1": 63.99,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 63.99,
    "avgAvg": 63.99,
    "result": "2-4",
@@ -230264,7 +230265,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 58.07,
    "name2": "Плакса Володимир",
    "avg2": 42.7,
@@ -230624,7 +230625,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 61.36,
    "name2": "Момот Сергій",
    "avg2": 50.65,
@@ -230746,7 +230747,7 @@
   {
    "name1": "Плакса Андрій",
    "avg1": 59.49,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 64.03,
    "avgAvg": 61.76,
    "result": "2-4",
@@ -231031,7 +231032,7 @@
   {
    "name1": "Овсієнко Євген",
    "avg1": 66.9,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 66.27,
    "avgAvg": 66.59,
    "result": "3-4",
@@ -231269,7 +231270,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 61.05,
    "name2": "Панченко Олексій",
    "avg2": 56.73,
@@ -232711,7 +232712,7 @@
   {
    "name1": "Омельченко Владислав",
    "avg1": 60.12,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 43.31,
    "avgAvg": 51.72,
    "result": "4-0",
@@ -232741,7 +232742,7 @@
   {
    "name1": "Шапка Євген",
    "avg1": 60.02,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 54.78,
    "avgAvg": 57.4,
    "result": "4-2",
@@ -232906,7 +232907,7 @@
   {
    "name1": "Троценко Артем",
    "avg1": 60.12,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 59.08,
    "avgAvg": 59.6,
    "result": "3-2",
@@ -233041,7 +233042,7 @@
   {
    "name1": "Абчугський Олександр",
    "avg1": 50.66,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 48.28,
    "avgAvg": 49.47,
    "result": "3-0",
@@ -233354,7 +233355,7 @@
    "city": "Черкаси"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 65.35,
    "name2": "Малюхович Євген",
    "avg2": 48.7,
@@ -233384,7 +233385,7 @@
    "city": "Черкаси"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 41.85,
    "name2": "Баширов Ярослав",
    "avg2": 47.24,
@@ -233684,7 +233685,7 @@
    "city": "Черкаси"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 50.81,
    "name2": "Луков Олександр",
    "avg2": 49.64,
@@ -233806,7 +233807,7 @@
   {
    "name1": "Рашоянц Ігор",
    "avg1": 51.74,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 53.8,
    "avgAvg": 52.77,
    "result": "3-2",
@@ -234811,7 +234812,7 @@
   {
    "name1": "Абчугський Олександр",
    "avg1": 65.84,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 62.7,
    "avgAvg": 64.27,
    "result": "4-1",
@@ -234931,7 +234932,7 @@
   {
    "name1": "Мокан Микола",
    "avg1": 51.1,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 66.07,
    "avgAvg": 58.58,
    "result": "0-4",
@@ -235126,7 +235127,7 @@
   {
    "name1": "Зубаль Василь",
    "avg1": 49.98,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 59.64,
    "avgAvg": 54.81,
    "result": "1-4",
@@ -235274,7 +235275,7 @@
    "city": "Львів"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 67.55,
    "name2": "Матвіїшин Михайло",
    "avg2": 52.43,
@@ -235321,7 +235322,7 @@
   {
    "name1": "Цілуйко Владислав",
    "avg1": 50.95,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 45.69,
    "avgAvg": 48.32,
    "result": "4-0",
@@ -235516,7 +235517,7 @@
   {
    "name1": "Данилюк Олександр",
    "avg1": 39.47,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 54.65,
    "avgAvg": 47.06,
    "result": "0-4",
@@ -235771,7 +235772,7 @@
   {
    "name1": "Залевський Володимир",
    "avg1": 55.07,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 53.97,
    "avgAvg": 54.52,
    "result": "4-3",
@@ -235919,7 +235920,7 @@
    "city": "Львів"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 63.96,
    "name2": "Кураш Богдан",
    "avg2": 42.63,
@@ -236026,7 +236027,7 @@
   {
    "name1": "Яненко Сергій",
    "avg1": 66.81,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 48.67,
    "avgAvg": 57.74,
    "result": "4-1",
@@ -237059,7 +237060,7 @@
    "city": "Львів"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 62.53,
    "name2": "Харченко Тетяна",
    "avg2": 68.32,
@@ -237316,7 +237317,7 @@
   {
    "name1": "Гринів Олександр",
    "avg1": 72.25,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 66.61,
    "avgAvg": 69.43,
    "result": "3-1",
@@ -237419,7 +237420,7 @@
    "city": "Львів"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 54.65,
    "name2": "Зубаль Василь",
    "avg2": 44.22,
@@ -237646,7 +237647,7 @@
   {
    "name1": "Залевський Володимир",
    "avg1": 48.46,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 75.15,
    "avgAvg": 61.81,
    "result": "0-3",
@@ -246016,7 +246017,7 @@
   {
    "name1": "Терещенко Любов",
    "avg1": 45.09,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мельтєва Ірина",
    "avg2": 40.15,
    "avgAvg": 42.62,
    "result": "3-0",
@@ -246136,7 +246137,7 @@
   {
    "name1": "Паламар Оксана",
    "avg1": 40.95,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мельтєва Ірина",
    "avg2": 39.66,
    "avgAvg": 40.3,
    "result": "3-2",
@@ -246286,7 +246287,7 @@
   {
    "name1": "Молдован Вероніка",
    "avg1": 49.55,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мельтєва Ірина",
    "avg2": 40.45,
    "avgAvg": 45.0,
    "result": "3-0",
@@ -246436,7 +246437,7 @@
   {
    "name1": "Зайцева Інна",
    "avg1": 39.78,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мельтєва Ірина",
    "avg2": 39.63,
    "avgAvg": 39.7,
    "result": "3-2",
@@ -246584,7 +246585,7 @@
    "city": "Славсько"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 57.22,
    "name2": "Цілуйко Владислав",
    "avg2": 60.58,
@@ -246691,7 +246692,7 @@
   {
    "name1": "Солтис Микита",
    "avg1": 49.69,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 53.09,
    "avgAvg": 51.39,
    "result": "2-4",
@@ -246931,7 +246932,7 @@
   {
    "name1": "Плакса Андрій",
    "avg1": 56.58,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 52.58,
    "avgAvg": 54.58,
    "result": "4-1",
@@ -247349,7 +247350,7 @@
    "city": "Славсько"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 55.59,
    "name2": "Усик Артем",
    "avg2": 55.6,
@@ -247814,7 +247815,7 @@
    "city": "Славсько"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 51.83,
    "name2": "Кордівський Арсен",
    "avg2": 39.22,
@@ -248009,7 +248010,7 @@
    "city": "Славсько"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 45.89,
    "name2": "Царолунга Дмитро",
    "avg2": 36.83,
@@ -249436,7 +249437,7 @@
   {
    "name1": "Гринів Олександр",
    "avg1": 60.12,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 44.38,
    "avgAvg": 52.25,
    "result": "3-0",
@@ -249856,7 +249857,7 @@
   {
    "name1": "Акользін Дмитро",
    "avg1": 42.14,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 37.47,
    "avgAvg": 39.8,
    "result": "3-0",
@@ -250186,7 +250187,7 @@
   {
    "name1": "Карнаух Валентина",
    "avg1": 44.75,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мельтєва Ірина",
    "avg2": 39.3,
    "avgAvg": 42.02,
    "result": "3-1",
@@ -250381,7 +250382,7 @@
   {
    "name1": "Лановенко Ксенія",
    "avg1": 50.1,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мельтєва Ірина",
    "avg2": 42.37,
    "avgAvg": 46.23,
    "result": "3-0",
@@ -250486,7 +250487,7 @@
   {
    "name1": "Пивошенко Олена",
    "avg1": 45.09,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мельтєва Ірина",
    "avg2": 39.41,
    "avgAvg": 42.25,
    "result": "3-0",
@@ -251564,7 +251565,7 @@
    "city": "Вижниця"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 34.63,
    "name2": "Арійчук Олександр",
    "avg2": 36.36,
@@ -251716,7 +251717,7 @@
   {
    "name1": "Яненко Сергій",
    "avg1": 54.99,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 43.62,
    "avgAvg": 49.3,
    "result": "3-0",
@@ -252031,7 +252032,7 @@
   {
    "name1": "Мелашенко Владислав",
    "avg1": 59.33,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 44.33,
    "avgAvg": 51.83,
    "result": "3-0",
@@ -252406,7 +252407,7 @@
   {
    "name1": "Білоус Жанна",
    "avg1": 40.04,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мельтєва Ірина",
    "avg2": 39.34,
    "avgAvg": 39.69,
    "result": "3-2",
@@ -252526,7 +252527,7 @@
   {
    "name1": "Спекторенко Катерина",
    "avg1": 42.3,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мельтєва Ірина",
    "avg2": 37.3,
    "avgAvg": 39.8,
    "result": "3-1",
@@ -252616,7 +252617,7 @@
   {
    "name1": "Гончаренко Інна",
    "avg1": 42.54,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мельтєва Ірина",
    "avg2": 36.91,
    "avgAvg": 39.72,
    "result": "3-0",
@@ -252736,7 +252737,7 @@
   {
    "name1": "Ледєньова Наталія",
    "avg1": 47.46,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мельтєва Ірина",
    "avg2": 45.77,
    "avgAvg": 46.62,
    "result": "3-0",
@@ -255839,7 +255840,7 @@
    "city": "Кривий Ріг"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 53.29,
    "name2": "Бабанін Дмитро",
    "avg2": 61.77,
@@ -255916,7 +255917,7 @@
   {
    "name1": "Кузьменко Роман",
    "avg1": 54.06,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 48.7,
    "avgAvg": 51.38,
    "result": "3-1",
@@ -256081,7 +256082,7 @@
   {
    "name1": "Акользін Дмитро",
    "avg1": 46.14,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 45.37,
    "avgAvg": 45.75,
    "result": "3-2",
@@ -256319,7 +256320,7 @@
    "city": "Кривий Ріг"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 49.08,
    "name2": "Барсуков Віталій",
    "avg2": 48.46,
@@ -259381,7 +259382,7 @@
   {
    "name1": "Чепурний Едуард",
    "avg1": 55.72,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 49.82,
    "avgAvg": 52.77,
    "result": "4-1",
@@ -259576,7 +259577,7 @@
   {
    "name1": "Чепак Василь",
    "avg1": 49.45,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 44.86,
    "avgAvg": 47.16,
    "result": "4-1",
@@ -259891,7 +259892,7 @@
   {
    "name1": "Гринів Олександр",
    "avg1": 55.67,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 47.63,
    "avgAvg": 51.65,
    "result": "4-0",
@@ -260086,7 +260087,7 @@
   {
    "name1": "Микитин Ярослав",
    "avg1": 46.95,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 46.05,
    "avgAvg": 46.5,
    "result": "4-3",
@@ -261046,7 +261047,7 @@
   {
    "name1": "Абчугський Олександр",
    "avg1": 47.97,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 42.03,
    "avgAvg": 45.0,
    "result": "3-0",
@@ -261509,7 +261510,7 @@
    "city": "Полтава"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 41.04,
    "name2": "Шильцин Юрій",
    "avg2": 48.76,
@@ -261749,7 +261750,7 @@
    "city": "Полтава"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 40.81,
    "name2": "Ананенко Сергій",
    "avg2": 45.18,
@@ -262981,7 +262982,7 @@
   {
    "name1": "Чепурний Едуард",
    "avg1": 55.16,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 48.03,
    "avgAvg": 51.59,
    "result": "4-0",
@@ -263296,7 +263297,7 @@
   {
    "name1": "Акользін Дмитро",
    "avg1": 50.46,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 49.24,
    "avgAvg": 49.85,
    "result": "3-2",
@@ -263504,7 +263505,7 @@
    "city": "Полтава"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 48.76,
    "name2": "Рашоянц Ігор",
    "avg2": 54.83,
@@ -264344,7 +264345,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 67.05,
    "name2": "Мелашенко Владислав",
    "avg2": 69.58,
@@ -264464,7 +264465,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 65.28,
    "name2": "Гакман Степан",
    "avg2": 67.12,
@@ -264719,7 +264720,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 58.94,
    "name2": "Кисельов Дмитро",
    "avg2": 47.65,
@@ -265291,7 +265292,7 @@
   {
    "name1": "Чепурний Едуард",
    "avg1": 59.42,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 60.35,
    "avgAvg": 59.89,
    "result": "1-4",
@@ -266039,7 +266040,7 @@
    "city": "Черкаси"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 62.04,
    "name2": "Гакман Степан",
    "avg2": 59.91,
@@ -266174,7 +266175,7 @@
    "city": "Черкаси"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 57.85,
    "name2": "Логоша Євген",
    "avg2": 43.26,
@@ -266356,7 +266357,7 @@
   {
    "name1": "Шапка Євген",
    "avg1": 52.21,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 49.95,
    "avgAvg": 51.08,
    "result": "3-1",
@@ -266371,7 +266372,7 @@
   {
    "name1": "Солтис Микита",
    "avg1": 52.23,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 54.99,
    "avgAvg": 53.61,
    "result": "0-3",
@@ -266594,7 +266595,7 @@
    "city": "Черкаси"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 45.29,
    "name2": "Назаренко Олександр",
    "avg2": 52.02,
@@ -266609,7 +266610,7 @@
    "city": "Черкаси"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 55.65,
    "name2": "Гавриленко Владислав",
    "avg2": 60.86,
@@ -267029,7 +267030,7 @@
    "city": "Черкаси"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 66.31,
    "name2": "Малюхович Євген",
    "avg2": 46.14,
@@ -267149,7 +267150,7 @@
    "city": "Черкаси"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 43.92,
    "name2": "Почапський Василь",
    "avg2": 41.12,
@@ -267944,7 +267945,7 @@
    "city": "Черкаси"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 39.52,
    "name2": "Усик Сергій",
    "avg2": 38.74,
@@ -274949,7 +274950,7 @@
    "city": "Славсько"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 53.41,
    "name2": "Плакса Андрій",
    "avg2": 52.99,
@@ -275204,7 +275205,7 @@
    "city": "Славсько"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 54.7,
    "name2": "Царолунга Дмитро",
    "avg2": 49.61,
@@ -275429,9 +275430,9 @@
    "city": "Славсько"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 61.91,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 47.92,
    "avgAvg": 54.91,
    "result": "4-1",
@@ -275686,7 +275687,7 @@
   {
    "name1": "Окуліцький Євген",
    "avg1": 41.22,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 40.16,
    "avgAvg": 40.69,
    "result": "4-3",
@@ -275804,7 +275805,7 @@
    "city": "Славсько"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 55.31,
    "name2": "Чепурний Едуард",
    "avg2": 53.26,
@@ -275971,7 +275972,7 @@
   {
    "name1": "Чепурний Едуард",
    "avg1": 56.72,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 47.0,
    "avgAvg": 51.86,
    "result": "4-0",
@@ -276044,7 +276045,7 @@
    "city": "Славсько"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 52.5,
    "name2": "Окуліцький Євген",
    "avg2": 48.09,
@@ -276196,7 +276197,7 @@
   {
    "name1": "Царолунга Дмитро",
    "avg1": 41.75,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 41.35,
    "avgAvg": 41.55,
    "result": "4-0",
@@ -277246,7 +277247,7 @@
   {
    "name1": "Гончаров Едуард",
    "avg1": 46.48,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 45.16,
    "avgAvg": 45.82,
    "result": "3-0",
@@ -277544,7 +277545,7 @@
    "city": "Львів"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 49.85,
    "name2": "Гринів Олександр",
    "avg2": 48.56,
@@ -278444,7 +278445,7 @@
    "city": "Львів"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 47.57,
    "name2": "Дідов Василь",
    "avg2": 63.51,
@@ -279269,7 +279270,7 @@
    "city": "Львів"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 61.15,
    "name2": "Кіфор Ярослав",
    "avg2": 64.98,
@@ -279301,7 +279302,7 @@
   {
    "name1": "Григоренко Віктор",
    "avg1": 65.52,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 68.32,
    "avgAvg": 66.92,
    "result": "5-6",
@@ -279464,7 +279465,7 @@
    "city": "Львів"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 59.87,
    "name2": "Яненко Сергій",
    "avg2": 60.98,
@@ -279691,7 +279692,7 @@
   {
    "name1": "Чорний Іван",
    "avg1": 50.95,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 45.67,
    "avgAvg": 48.31,
    "result": "4-0",
@@ -280126,7 +280127,7 @@
   {
    "name1": "Гринів Юрій",
    "avg1": 43.81,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 48.64,
    "avgAvg": 46.23,
    "result": "3-4",
@@ -280604,7 +280605,7 @@
    "city": "Чернівці"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 53.98,
    "name2": "Плакса Андрій",
    "avg2": 48.71,
@@ -280801,7 +280802,7 @@
   {
    "name1": "Аверін Сергій",
    "avg1": 54.16,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 49.97,
    "avgAvg": 52.06,
    "result": "4-0",
@@ -280874,7 +280875,7 @@
    "city": "Чернівці"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 48.45,
    "name2": "Любих Сергій",
    "avg2": 41.14,
@@ -280891,7 +280892,7 @@
   {
    "name1": "Плакса Андрій",
    "avg1": 55.67,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 48.14,
    "avgAvg": 51.91,
    "result": "4-0",
@@ -281024,7 +281025,7 @@
    "city": "Чернівці"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 53.2,
    "name2": "Гринів Юрій",
    "avg2": 45.92,
@@ -281519,7 +281520,7 @@
    "city": "Кривий Ріг"
   },
   {
-   "name1": "Попович Андрій",
+   "name1": "Андрій Попович",
    "avg1": 44.7,
    "name2": "Дрєєв Олександр",
    "avg2": 49.01,
@@ -282031,7 +282032,7 @@
   {
    "name1": "Омесь Ілля",
    "avg1": 54.99,
-   "name2": "Попович Андрій",
+   "name2": "Андрій Попович",
    "avg2": 51.19,
    "avgAvg": 53.09,
    "result": "3-0",
@@ -282286,7 +282287,7 @@
   {
    "name1": "Лагутін Андрій",
    "avg1": 47.62,
-   "name2": "Попович Андрій",
+   "name2": "Андрій Попович",
    "avg2": 54.99,
    "avgAvg": 51.3,
    "result": "0-3",
@@ -282839,7 +282840,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 60.87,
    "name2": "Усик Артем",
    "avg2": 71.91,
@@ -282961,7 +282962,7 @@
   {
    "name1": "Кіфор Ярослав",
    "avg1": 63.62,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 65.47,
    "avgAvg": 64.55,
    "result": "3-4",
@@ -283066,7 +283067,7 @@
   {
    "name1": "Залевський Володимир",
    "avg1": 88.41,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 66.59,
    "avgAvg": 77.5,
    "result": "3-0",
@@ -283544,7 +283545,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 63.38,
    "name2": "Телятник Максим",
    "avg2": 61.35,
@@ -283919,7 +283920,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 66.31,
    "name2": "Звягін Юрій",
    "avg2": 43.18,
@@ -284251,7 +284252,7 @@
   {
    "name1": "Ільясова Альбіна",
    "avg1": 49.03,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мельтєва Ірина",
    "avg2": 43.11,
    "avgAvg": 46.07,
    "result": "3-1",
@@ -284386,7 +284387,7 @@
   {
    "name1": "Шклярук Наталія",
    "avg1": 43.1,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мельтєва Ірина",
    "avg2": 43.47,
    "avgAvg": 43.28,
    "result": "1-3",
@@ -284431,7 +284432,7 @@
   {
    "name1": "Гончаренко Інна",
    "avg1": 43.94,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мельтєва Ірина",
    "avg2": 41.01,
    "avgAvg": 42.47,
    "result": "3-1",
@@ -284596,7 +284597,7 @@
   {
    "name1": "Григоренко Віктор",
    "avg1": 62.77,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 59.45,
    "avgAvg": 61.11,
    "result": "3-1",
@@ -285074,7 +285075,7 @@
    "city": "Київ"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 60.93,
    "name2": "Кумовицький Павло",
    "avg2": 35.8,
@@ -285271,7 +285272,7 @@
   {
    "name1": "Кіфор Ярослав",
    "avg1": 47.63,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 47.01,
    "avgAvg": 47.32,
    "result": "2-3",
@@ -285511,7 +285512,7 @@
   {
    "name1": "Микитин Ярослав",
    "avg1": 49.19,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 51.29,
    "avgAvg": 50.24,
    "result": "2-3",
@@ -285614,7 +285615,7 @@
    "city": "Київ"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 57.08,
    "name2": "Пішта Людмила",
    "avg2": 32.74,
@@ -285781,7 +285782,7 @@
   {
    "name1": "Залевський Володимир",
    "avg1": 62.9,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 57.69,
    "avgAvg": 60.3,
    "result": "5-1",
@@ -285809,7 +285810,7 @@
    "city": "Київ"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 65.35,
    "name2": "Микитин Ярослав",
    "avg2": 58.47,
@@ -285901,7 +285902,7 @@
   {
    "name1": "Ледєньов Вадим",
    "avg1": 56.0,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 65.6,
    "avgAvg": 60.8,
    "result": "1-4",
@@ -286319,7 +286320,7 @@
    "city": "Київ"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 61.85,
    "name2": "Гончаров Едуард",
    "avg2": 63.09,
@@ -286531,7 +286532,7 @@
   {
    "name1": "Григоренко Віктор",
    "avg1": 68.02,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 67.5,
    "avgAvg": 67.76,
    "result": "3-4",
@@ -286696,7 +286697,7 @@
   {
    "name1": "Павленко Сергій",
    "avg1": 49.52,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 57.72,
    "avgAvg": 53.62,
    "result": "1-4",
@@ -286829,7 +286830,7 @@
    "city": "Київ"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 63.96,
    "name2": "Пішта Людмила",
    "avg2": 40.32,
@@ -289394,7 +289395,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 56.76,
    "name2": "Кисельов Дмитро",
    "avg2": 54.53,
@@ -290116,7 +290117,7 @@
   {
    "name1": "Чепурний Едуард",
    "avg1": 60.14,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 59.45,
    "avgAvg": 59.8,
    "result": "3-4",
@@ -290251,7 +290252,7 @@
   {
    "name1": "Троценко Артем",
    "avg1": 67.4,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 66.05,
    "avgAvg": 66.72,
    "result": "2-4",
@@ -290369,7 +290370,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 53.68,
    "name2": "Селіхова Тетяна",
    "avg2": 36.18,
@@ -295634,7 +295635,7 @@
    "city": "Львів"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 39.21,
    "name2": "Кузовкін Сергій",
    "avg2": 37.97,
@@ -295996,7 +295997,7 @@
   {
    "name1": "Овелько Антон",
    "avg1": 57.76,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 47.5,
    "avgAvg": 52.63,
    "result": "3-1",
@@ -296311,7 +296312,7 @@
   {
    "name1": "Чепурний Едуард",
    "avg1": 53.05,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 48.17,
    "avgAvg": 50.61,
    "result": "3-0",
@@ -296774,7 +296775,7 @@
    "city": "Львів"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 47.15,
    "name2": "Іванщишин Орест",
    "avg2": 43.65,
@@ -299191,7 +299192,7 @@
   {
    "name1": "Шклярук Наталія",
    "avg1": 39.21,
-   "name2": "Чабанова Ганна",
+   "name2": "Чабанова Анна",
    "avg2": 39.7,
    "avgAvg": 39.45,
    "result": "3-0",
@@ -299221,7 +299222,7 @@
   {
    "name1": "Моісеєнко Віталіна",
    "avg1": 55.67,
-   "name2": "Чабанова Ганна",
+   "name2": "Чабанова Анна",
    "avg2": 46.0,
    "avgAvg": 50.84,
    "result": "3-0",
@@ -299294,7 +299295,7 @@
    "city": "Кривий Ріг"
   },
   {
-   "name1": "Чабанова Ганна",
+   "name1": "Чабанова Анна",
    "avg1": 40.62,
    "name2": "Спекторенко Катерина",
    "avg2": 33.58,
@@ -299476,7 +299477,7 @@
   {
    "name1": "Рогов Віталій",
    "avg1": 65.55,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 61.69,
    "avgAvg": 63.62,
    "result": "4-1",
@@ -299639,7 +299640,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 64.83,
    "name2": "Микитин Ярослав",
    "avg2": 57.95,
@@ -299836,7 +299837,7 @@
   {
    "name1": "Усик Артем",
    "avg1": 64.89,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 69.35,
    "avgAvg": 67.12,
    "result": "1-3",
@@ -300089,7 +300090,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 70.45,
    "name2": "Чепак Василь",
    "avg2": 45.67,
@@ -300359,7 +300360,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 58.63,
    "name2": "Кулик Віталій",
    "avg2": 53.32,
@@ -300809,7 +300810,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Чабанова Ганна",
+   "name1": "Чабанова Анна",
    "avg1": 34.96,
    "name2": "Ільясова Альбіна",
    "avg2": 36.13,
@@ -300826,7 +300827,7 @@
   {
    "name1": "Шклярук Наталія",
    "avg1": 45.55,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мєльтєва",
    "avg2": 37.97,
    "avgAvg": 41.76,
    "result": "3-0",
@@ -300899,9 +300900,9 @@
    "city": "Одеса"
   },
   {
-   "name1": "Чабанова Ганна",
+   "name1": "Чабанова Анна",
    "avg1": 39.4,
-   "name2": "Мєльтєва Ірина",
+   "name2": "Мєльтєва",
    "avg2": 41.75,
    "avgAvg": 40.58,
    "result": "0-3",
@@ -300991,7 +300992,7 @@
   {
    "name1": "Шклярук Наталія",
    "avg1": 54.33,
-   "name2": "Чабанова Ганна",
+   "name2": "Чабанова Анна",
    "avg2": 49.59,
    "avgAvg": 51.96,
    "result": "3-0",
@@ -306224,7 +306225,7 @@
    "city": "Черкаси"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 65.15,
    "name2": "Мамика Олександр",
    "avg2": 66.7,
@@ -306331,7 +306332,7 @@
   {
    "name1": "Омельченко Владислав",
    "avg1": 76.97,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 75.51,
    "avgAvg": 76.24,
    "result": "3-4",
@@ -306494,7 +306495,7 @@
    "city": "Черкаси"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 66.8,
    "name2": "Цебратенко Андрій",
    "avg2": 49.07,
@@ -306614,7 +306615,7 @@
    "city": "Черкаси"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 48.83,
    "name2": "Лагутін Андрій",
    "avg2": 53.05,
@@ -306736,7 +306737,7 @@
   {
    "name1": "Бабанін Дмитро",
    "avg1": 49.67,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 45.52,
    "avgAvg": 47.59,
    "result": "3-2",
@@ -306779,7 +306780,7 @@
    "city": "Черкаси"
   },
   {
-   "name1": "Sol Deen",
+   "name1": "Фатех Дін",
    "avg1": 70.66,
    "name2": "Лепень Олександр",
    "avg2": 68.0,
@@ -307021,7 +307022,7 @@
   {
    "name1": "Солтис Микита",
    "avg1": 54.14,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 56.8,
    "avgAvg": 55.47,
    "result": "1-3",
@@ -307576,7 +307577,7 @@
   {
    "name1": "Усик Артем",
    "avg1": 49.6,
-   "name2": "Sol Deen",
+   "name2": "Фатех Дін",
    "avg2": 47.19,
    "avgAvg": 48.39,
    "result": "2-3",
@@ -309359,7 +309360,7 @@
    "city": "Львів"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 48.48,
    "name2": "Сташевський Валентин",
    "avg2": 51.24,
@@ -309556,7 +309557,7 @@
   {
    "name1": "Носівець Сергій",
    "avg1": 51.43,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 48.08,
    "avgAvg": 49.75,
    "result": "3-2",
@@ -310171,7 +310172,7 @@
   {
    "name1": "Пекарук Ілля",
    "avg1": 60.93,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 44.2,
    "avgAvg": 52.56,
    "result": "3-0",
@@ -310426,7 +310427,7 @@
   {
    "name1": "Бабанін Дмитро",
    "avg1": 45.55,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 42.88,
    "avgAvg": 44.22,
    "result": "3-0",
@@ -311084,7 +311085,7 @@
    "city": "Львів"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 44.9,
    "name2": "Акользін Дмитро",
    "avg2": 47.27,
@@ -311161,7 +311162,7 @@
   {
    "name1": "Бублик В'ячеслав",
    "avg1": 31.38,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 44.64,
    "avgAvg": 38.01,
    "result": "0-3",
@@ -311461,7 +311462,7 @@
   {
    "name1": "Микитин Ярослав",
    "avg1": 46.55,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 47.0,
    "avgAvg": 46.77,
    "result": "3-1",
@@ -311911,7 +311912,7 @@
   {
    "name1": "Мороз Артем",
    "avg1": 43.48,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 44.22,
    "avgAvg": 43.85,
    "result": "3-1",
@@ -312301,7 +312302,7 @@
   {
    "name1": "Кондарюк Микола",
    "avg1": 41.37,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 39.67,
    "avgAvg": 40.52,
    "result": "3-0",
@@ -315704,7 +315705,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 39.9,
    "name2": "Мороз Артем",
    "avg2": 39.54,
@@ -315899,7 +315900,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Кулик Віталій",
+   "name1": "Кулік Віталій",
    "avg1": 48.29,
    "name2": "Арійчук Олександр",
    "avg2": 46.21,
@@ -316411,7 +316412,7 @@
   {
    "name1": "Бабанін Дмитро",
    "avg1": 49.55,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 49.21,
    "avgAvg": 49.38,
    "result": "3-0",
@@ -316756,7 +316757,7 @@
   {
    "name1": "Кисельов Дмитро",
    "avg1": 56.4,
-   "name2": "Кулик Віталій",
+   "name2": "Кулік Віталій",
    "avg2": 49.18,
    "avgAvg": 52.79,
    "result": "3-1",
@@ -317206,7 +317207,7 @@
   {
    "name1": "Моісеєнко Віталіна",
    "avg1": 47.49,
-   "name2": "Букетова Ірина",
+   "name2": "Букетова Iрина",
    "avg2": 41.85,
    "avgAvg": 44.67,
    "result": "4-1",
@@ -317251,7 +317252,7 @@
   {
    "name1": "Черевко Світлана",
    "avg1": 42.77,
-   "name2": "Букетова Ірина",
+   "name2": "Букетова Iрина",
    "avg2": 46.66,
    "avgAvg": 44.72,
    "result": "3-4",
@@ -317309,7 +317310,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Мєльтєва Ірина",
+   "name1": "Мельтєва Ірина",
    "avg1": 43.02,
    "name2": "Соколова Вікторія",
    "avg2": 42.73,
@@ -317369,7 +317370,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Мєльтєва Ірина",
+   "name1": "Мельтєва Ірина",
    "avg1": 35.2,
    "name2": "Черевко Світлана",
    "avg2": 32.21,
@@ -317399,7 +317400,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Букетова Ірина",
+   "name1": "Букетова Iрина",
    "avg1": 45.02,
    "name2": "Гончаренко Мар'яна",
    "avg2": 41.24,
@@ -317534,7 +317535,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Мєльтєва Ірина",
+   "name1": "Мельтєва Ірина",
    "avg1": 38.25,
    "name2": "Селіхова Тетяна",
    "avg2": 37.17,
@@ -317611,7 +317612,7 @@
   {
    "name1": "Спекторенко Катерина",
    "avg1": 39.9,
-   "name2": "Букетова Ірина",
+   "name2": "Букетова Iрина",
    "avg2": 42.29,
    "avgAvg": 41.09,
    "result": "2-3",
@@ -317654,7 +317655,7 @@
    "city": "Одеса"
   },
   {
-   "name1": "Мєльтєва Ірина",
+   "name1": "Мельтєва Ірина",
    "avg1": 27.66,
    "name2": "Миколюк Яна",
    "avg2": 27.24,
@@ -317671,7 +317672,7 @@
   {
    "name1": "Чумак Ганна",
    "avg1": 42.09,
-   "name2": "Букетова Ірина",
+   "name2": "Букетова Iрина",
    "avg2": 37.68,
    "avgAvg": 39.89,
    "result": "3-1",
@@ -318371,7 +318372,7 @@
    },
    {
     "rank": "47",
-    "name": "Sol Deen",
+    "name": "Фатех Дін",
     "scores": [
      null,
      null,
@@ -318413,7 +318414,7 @@
    },
    {
     "rank": "50",
-    "name": "Кулик Віталій",
+    "name": "Кулік Віталій",
     "scores": [
      5.5,
      15.5,
@@ -319798,7 +319799,7 @@
    },
    {
     "rank": "25",
-    "name": "Мєльтєва Ірина",
+    "name": "Мельтєва Ірина",
     "scores": [
      null,
      6.5,
@@ -320061,7 +320062,7 @@
    "place": 1,
    "names": [
     "Сташевський Валентин",
-    "Sol Deen"
+    "Фатех Дін"
    ]
   },
   {
@@ -320805,7 +320806,7 @@
    "place": 3,
    "names": [
     "Сташевський Валентин",
-    "Sol Deen"
+    "Фатех Дін"
    ]
   },
   {
@@ -321127,7 +321128,7 @@
    "place": 3,
    "names": [
     "Сташевський Валентин",
-    "Sol Deen"
+    "Фатех Дін"
    ]
   },
   {
@@ -321318,7 +321319,7 @@
     "Омельченко Владислав",
     "Солтис Микита",
     "Солтис Андрій",
-    "Кулик Віталій"
+    "Кулік Віталій"
    ]
   },
   {
@@ -321980,7 +321981,7 @@
    "place": 1,
    "names": [
     "Сташевський Валентин",
-    "Sol Deen"
+    "Фатех Дін"
    ]
   },
   {
@@ -323559,5 +323560,819 @@
     "Ледєньов Вадим"
    ]
   }
+ ],
+ "curatedPlayerNames": [
+  "Абчугський Олександр",
+  "Аванесов Артур",
+  "Аверін Сергій",
+  "Агневщиков Олег",
+  "Агневщиков Юрій",
+  "Агневщіков Анатолій",
+  "Адамко Тарас",
+  "Акользін Дмитро",
+  "Алексеєнко Олександр",
+  "Алхімов Андрій",
+  "Ананенко Альона",
+  "Ананенко Сергій",
+  "Андоськін Олександр",
+  "Андрощук Олександр",
+  "Андрєєв Антон",
+  "Антіпов Денис",
+  "Антіпов Іван",
+  "Анісімов Денис",
+  "Анісімов Іван",
+  "Анісімова Світлана",
+  "Аніщик Денис",
+  "Арійчук Наталія",
+  "Арійчук Олександр",
+  "Арійчук Святослав",
+  "Аспербаккен Кай",
+  "Афонін Генадій",
+  "Ахтирский Євген",
+  "Ашколуненко Михайло",
+  "Бабанін Дмитро",
+  "Багрянцев Іван",
+  "Бадира Олександр",
+  "Байдоха Анатолій",
+  "Балаж Людвик",
+  "Баранов Олександр",
+  "Барсуков Віталій",
+  "Баширов Ярослав",
+  "Баштаннік Дмитро",
+  "Бейреш Ласло",
+  "Белянін Андрій",
+  "Беляєв Сергій",
+  "Бендрик Олег",
+  "Березін Руслан",
+  "Береш Карол",
+  "Берніков Олексій",
+  "Бершак Єлизавета",
+  "Бистров Володимир",
+  "Богдан Віталій",
+  "Богданова Діна",
+  "Бойчук Людмила",
+  "Бондаренко Валерій",
+  "Бондарєв Євген",
+  "Борисенко Сергій",
+  "Борисова Марина",
+  "Боровик Олександр",
+  "Бородулін Дмитро",
+  "Бородуліна Ганна",
+  "Боцюн Костянтин",
+  "Боярчук Ірина",
+  "Боєв Віктор",
+  "Братченко Вадим",
+  "Брежнєв Олександр",
+  "Брежнєв Сергій",
+  "Бреус Неля",
+  "Бублик В'ячеслав",
+  "Бублик Лідія",
+  "Бугаєнко Олександр",
+  "Будик Борис",
+  "Будик Зоя",
+  "Букетова Iрина",
+  "Бульбах Вадим",
+  "Буравльов Костянтин",
+  "Бургелов Олег",
+  "Бустебакке Роар",
+  "Бутов Олександр",
+  "Бутрій Володимир",
+  "Буханцов Тарас",
+  "Бушуй Олексій",
+  "Бушуй Сергій",
+  "Бєлов Артем",
+  "Білаш Вікторія",
+  "Білодід Христина",
+  "Білоус Данило",
+  "Білоус Жанна",
+  "Білоус Іван",
+  "Бінат Ігор",
+  "Валуце Олексій",
+  "Ванда Євген",
+  "Варварук  Євген",
+  "Варивода Володимир",
+  "Варивода Сергій",
+  "Василевський Володимир",
+  "Васильков Владислав",
+  "Васюра Андрій",
+  "Ватт Денніс",
+  "Вахнюк Дмитро",
+  "Вацлавскі Лукаш",
+  "Ващенко Євген",
+  "Ващук Павло",
+  "Ведмідь Андрій",
+  "Веремєєв Богдан",
+  "Верхоляк Богдан",
+  "Верхоляк Любомир",
+  "Верхоляк Роман",
+  "Виговський Антон",
+  "Вильданов Игор",
+  "Висковатова Ганна",
+  "Витковський Анатолій",
+  "Вишневецький Олег",
+  "Вишневський Олег",
+  "Владика Юрій",
+  "Власенко Віталій",
+  "Волков Владислав",
+  "Воловод Ростислав",
+  "Волчук Руслан",
+  "Вонхольський Олександр",
+  "Воронюк Михайло",
+  "Воронін Олександр",
+  "Вінничук Микола",
+  "Вінцюк Тарас",
+  "Вісковатова Ганна",
+  "Гавриленко Владислав",
+  "Гавриленко Роман",
+  "Гавриш Ольга",
+  "Гайдукова Наталья",
+  "Гайсан Ангеліна",
+  "Гайсан Марʼяна",
+  "Гакман Степан",
+  "Галичанський Артур",
+  "Галичанський Тімур",
+  "Галуба Ярек",
+  "Ганечко Арина",
+  "Ганечко Марина",
+  "Гарапко Інна",
+  "Гарасимчук Игор",
+  "Генерал Андрій",
+  "Герасименко Юлія",
+  "Герман Олег",
+  "Гетманцев Олександр",
+  "Глаголева Тетяна",
+  "Гладка Ірина",
+  "Глущенко Віталій",
+  "Гниденко Валентин",
+  "Гнилосир Сергій",
+  "Гой Оксана",
+  "Гойколов Олександр",
+  "Головень Юрій",
+  "Гончаренко Мар'яна",
+  "Гончаренко Олександр",
+  "Гончаренко Інна",
+  "Гончаров Едуард",
+  "Гончарова Марина",
+  "Гордієнко Христина",
+  "Горняк Іштван",
+  "Городецький Ілля",
+  "Горяйнова Марія",
+  "Гоян Дмитро",
+  "Градовий Сергій",
+  "Гриб Олександр",
+  "Григоренко Андрій",
+  "Григоренко Віктор",
+  "Григоренко Денис",
+  "Григоренко Костянтин",
+  "Гринько Віталій",
+  "Гринів Олександр",
+  "Гринів Юрій",
+  "Грицай Іван",
+  "Гросов Олексій",
+  "Грушовець Ольга",
+  "Грєков Юрій",
+  "Губа Дмитро",
+  "Губіна Наталія",
+  "Гудзь Ліна",
+  "Гулякевич Олексей",
+  "Гурський Борис",
+  "Гутнік Анатолій",
+  "Данилюк Олександр",
+  "Дегтярьов Михайло",
+  "Денисьєв Олександр",
+  "Денисьєв Ілля",
+  "Денов Микола",
+  "Деркач Дмитро",
+  "Десинський Максим",
+  "Дещенко Юрій",
+  "Дзебань Дмитро",
+  "Дзюбій Юлія",
+  "Дмитров Дмитро",
+  "Добровольський Жолудь",
+  "Доган Ісмаіл",
+  "Долганенко Денис",
+  "Доманін Євген",
+  "Дорошенко Ігор",
+  "Дроздов Євген",
+  "Дрєєв Олександр",
+  "Діденко Оксана",
+  "Дідов Василь",
+  "Еріксон Хенінг",
+  "Жадан Олександр",
+  "Жигура Віталій",
+  "Жук Валерій",
+  "Жуковський Микола",
+  "Журавель Алла",
+  "Заборний Андрій",
+  "Заволокін Дмитро",
+  "Зайцева Інна",
+  "Закіров Марат",
+  "Залевський Володимир",
+  "Зарайський Володимир",
+  "Захарова Зоя",
+  "Зварич Віктор",
+  "Зволякевич Олена",
+  "Звягін Юрій",
+  "Звягіна Анастасія",
+  "Звєздін Євген",
+  "Зеленько Віталій",
+  "Зелюкіна Світлана",
+  "Зелінська Катерина",
+  "Зеркаль Сергій",
+  "Зиков Андрій",
+  "Зольдін Фелікс",
+  "Зольдіна Євгенія",
+  "Зотов Іван",
+  "Зотова Анна",
+  "Зубаль Василь",
+  "Зубков Юрій",
+  "Зуєв Олег",
+  "Зязюля Андрій",
+  "Кабанова Світлана",
+  "Казинський Олег",
+  "Калаур Інна",
+  "Каліберда Володимир",
+  "Калінін Роман",
+  "Калініченко Едуард",
+  "Калініченко Сергій",
+  "Камельков Євген",
+  "Камелькова Валерія",
+  "Камелькова Людмила",
+  "Каменицки Тибор",
+  "Кандяк Павло",
+  "Каньшин Олександр",
+  "Капран Анастасія",
+  "Капран Олександр",
+  "Кара Євген",
+  "Карабан Юрій",
+  "Караман Михайло",
+  "Карнаух Валентина",
+  "Каропкін Євген",
+  "Карпевич Олександр",
+  "Карпенко Юрій",
+  "Касапчук Анастасія",
+  "Касьянов Вадим",
+  "Катишев Олександр",
+  "Качура Катерина",
+  "Квасков Павло",
+  "Квиклене Рената",
+  "Келіберда Володимир",
+  "Кенес Василій",
+  "Кива Дмитро",
+  "Кива Ірина",
+  "Кисельов Дмитро",
+  "Клочек Ксенія",
+  "Клочко Володимир",
+  "Клочко Марина",
+  "Клюйков Роман",
+  "Князь Каріна",
+  "Кобзар Ігор",
+  "Коваленко Віктор",
+  "Коваль Анастасія",
+  "Коваль Олександр",
+  "Ковальов Андрій",
+  "Ковальов Дмитро",
+  "Ковач Золтан",
+  "Козирєв Олександр",
+  "Козловський Богдан",
+  "Козлюк Дмитро",
+  "Колесніков Юрій",
+  "Колодяжний Костянтин",
+  "Коломієць Андрій",
+  "Коломієць Ганна",
+  "Коломієць Олена",
+  "Кондарюк Микола",
+  "Коновалов Олег",
+  "Конопченко Віктор",
+  "Конопченко Данило",
+  "Корб'як Ігор",
+  "Кордівський Арсен",
+  "Король Василь",
+  "Корольова Еліна",
+  "Коропкін Євген",
+  "Коростельов Дмитро",
+  "Корпусов Андрій",
+  "Корчак Вікторія",
+  "Корчак Сергій",
+  "Косигіна Ольга",
+  "Косолапов Олег",
+  "Костильов Євгеній",
+  "Костів Валерія",
+  "Костів Оксана",
+  "Котенко Олег",
+  "Котляр Юрій",
+  "Котнюк Богдан",
+  "Котузяк Олег",
+  "Котулек Еркут",
+  "Крамський Кирило",
+  "Крамський Сергій",
+  "Краплін Игор",
+  "Кременецький Іван",
+  "Крестніков Юрій",
+  "Криницький Юрій",
+  "Крутій Володимир",
+  "Кубчинський Микола",
+  "Кудрявцев Руслан",
+  "Кудрявцев Євген",
+  "Кудінов Павло",
+  "Кузнєцов Павло",
+  "Кузнєцова Вікторія",
+  "Кузовкін Сергій",
+  "Кузьменко Роман",
+  "Кулаков Володимир",
+  "Кульбаченко Олег",
+  "Кулік Віталій",
+  "Кулінчик Дмитро",
+  "Кумовицький Павло",
+  "Кунченко Євген",
+  "Кураш Богдан",
+  "Кургузов Олег",
+  "Курочка Євген",
+  "Куча Валерій",
+  "Куча Леонід",
+  "Кучеренко Наталя",
+  "Кучмій Андрій",
+  "Кідиба Антон",
+  "Кільчицький Олександр",
+  "Кіфор Ярослав",
+  "Лабик Ілля",
+  "Лавренюк Сергій",
+  "Лавринчук Катерина",
+  "Лагутін Андрій",
+  "Ланда Володимир",
+  "Ландин Ілля",
+  "Лановенко Ксенія",
+  "Ларіна Тетяна",
+  "Ледєньов Вадим",
+  "Ледєньова Наталія",
+  "Лемещук Олександр",
+  "Леонова Єлізавета",
+  "Лепень Олександр",
+  "Лец Дмитро",
+  "Лещенко Юрій",
+  "Липчевский Артур",
+  "Лисаков Олексій",
+  "Лобода Валерій",
+  "Логоша Євген",
+  "Лопиш Норбер",
+  "Лопухова Ганна",
+  "Лосєва Марія",
+  "Луговська Людмила",
+  "Лужанков Дмитро",
+  "Лузан Юлія",
+  "Лук'янов Євген",
+  "Луков Олександр",
+  "Лукова Вікторія",
+  "Львов Роман",
+  "Льохарт Олег",
+  "Льянов Олег",
+  "Любих Сергій",
+  "Лясота Наталія",
+  "Лях Свiтлана",
+  "Лізенер Леон",
+  "Мажан Костянтин",
+  "Макагон Сергій",
+  "Макаєв Віктор",
+  "Малюхович Євген",
+  "Мамика Олександр",
+  "Марет Лійрі",
+  "Марига Руслан",
+  "Марков Сергій",
+  "Мартов Володимир",
+  "Марфола Оксана",
+  "Марченко Денис",
+  "Масловський Михайло",
+  "Маслянок Вікторія",
+  "Маслій Євген",
+  "Матвиєнков Дмитро",
+  "Матвіїшин Михайло",
+  "Матейчук Юрій",
+  "Матус Олег",
+  "Матюшенко Володимир",
+  "Матійцов Ростислав",
+  "Махневич Валерій",
+  "Мегера Олександра",
+  "Медведев Олександр",
+  "Медведєв Максим",
+  "Медведєв Олександр",
+  "Медведєв Єгор",
+  "Медвєдська Людмила",
+  "Мелах Костянтин",
+  "Мелашенко Владислав",
+  "Мельник Вікторія",
+  "Мельниченко Оксана",
+  "Мельтєва Ірина",
+  "Мигалюк Родіон",
+  "Микитин Ярослав",
+  "Миколюк Яна",
+  "Мильо Тарас",
+  "Миндра Євген",
+  "Митчик Тетяна",
+  "Могилевський Руслан",
+  "Мойсеєнков Дмитро",
+  "Мойсюк Віталій",
+  "Мокан Денис",
+  "Мокан Микола",
+  "Молдован Вероніка",
+  "Молдован Емілія",
+  "Молдован Сергій",
+  "Молодецкий Ростислав",
+  "Молчанов Михайло",
+  "Момот Сергій",
+  "Мороз Артем",
+  "Мороз Владислав",
+  "Мороз Сергій",
+  "Мороз Ігор",
+  "Морозов Андрій",
+  "Морозов Сергій",
+  "Мороко Максим",
+  "Мотуз Едуард",
+  "Мотуз Єгор",
+  "Моісеєнко Віталіна",
+  "Моісюк Віталій",
+  "Мустафаєв Ільмій",
+  "Мутило Максим",
+  "Мігалюк Родіон",
+  "Мінченок Юрій",
+  "Набільський Сергій",
+  "Навойчик Віталій",
+  "Навроцький Дмитро",
+  "Надводнюк Ганна",
+  "Назаренко Владислав",
+  "Назаренко Олександр",
+  "Назаренко Олексій",
+  "Назаренко Ольга",
+  "Науменко Віталій",
+  "Невінчаний Едуард",
+  "Некрістов Станіслав",
+  "Некрістова Наталія",
+  "Нестеренко Олена",
+  "Нечипуренко Артем",
+  "Ниценко Ольга",
+  "Новак Андрій",
+  "Новак Едуард",
+  "Новосад Богдан",
+  "Новікова Зоя",
+  "Носовський Дмитро",
+  "Носівець Сергій",
+  "Нужнова Тетяна",
+  "Нємцов Віталій",
+  "Ніколаєнко Євген",
+  "Ніколенко Ігор",
+  "Нікітіч Сергій",
+  "Ніщик Володимир",
+  "Ніщик Юліана",
+  "Овелько Антон",
+  "Овсієнко Євген",
+  "Овчаренко Антон",
+  "Овчаренко Сергій",
+  "Огурцов Дмитро",
+  "Озджан Мустафа",
+  "Окуліцький Євген",
+  "Олег Волощук",
+  "Олексенко Олександр",
+  "Олійник Надія",
+  "Омельченко Владислав",
+  "Омельченко Володимир",
+  "Омелянченко Олександр",
+  "Омесь Ілля",
+  "Онуфраш Іван",
+  "Оніщенко Тетяна",
+  "Опоченко Олег",
+  "Осадча Юлія",
+  "Острадчук Вадим",
+  "Остромецький Влад",
+  "Оттерлей Ендре",
+  "Павзюк Олег",
+  "Павленко Сергій",
+  "Павлов Олександр",
+  "Павлюк Анастасія",
+  "Павлюченко Марина",
+  "Пайзак Синтія",
+  "Пайзак Томаш",
+  "Паламар Оксана",
+  "Палахіна Альона",
+  "Пальонний Ігор",
+  "Панасюк Лілія",
+  "Панасюк Сергій",
+  "Панченко Олексій",
+  "Пасичніченко Артрем",
+  "Паскару Габріель",
+  "Пекарук Олексій",
+  "Пекарук Ілля",
+  "Пенчук Василь",
+  "Перес Володимир",
+  "Перетятько Тетяна",
+  "Пермякова Ольга",
+  "Петрик Наталія",
+  "Петрик Олександр",
+  "Петухов Валерій",
+  "Пивошенко Максим",
+  "Пивошенко Олена",
+  "Пирсіков Олександр",
+  "Писаревський Вiталiй",
+  "Плакса Андрій",
+  "Плакса Володимир",
+  "Пламада Денис",
+  "Плуталов Андрій",
+  "Поденко Олена",
+  "Подкопаєв Андрій",
+  "Подольський Святослав",
+  "Подольчук Антон",
+  "Покладок Олег",
+  "Полтавець Світлана",
+  "Полторацький Олександр",
+  "Полторацький Сергій",
+  "Полунін Максим",
+  "Поляков-Лагода Артур",
+  "Пометун Руслан",
+  "Пономаренко Денис",
+  "Понтус Андрій",
+  "Попков Андрій",
+  "Попов Юрій",
+  "Попова Наталія",
+  "Попович Андрій",
+  "Попович Карл",
+  "Потан Лілія",
+  "Почапський Василь",
+  "Почепко Сергій",
+  "Почкай Андрій",
+  "Почкай Маріанна",
+  "Приходько Сергій",
+  "Приходько Євген",
+  "Пєлєнов Сергій",
+  "Пістружак Дарія",
+  "Пішта Людмила",
+  "Пішта Іван",
+  "Радіонов Олександр",
+  "Радіонова Дарʼя",
+  "Разінков Олександр",
+  "Рашоянц Ігор",
+  "Редзюк Евгений",
+  "Редзюк Тетяна",
+  "Решат Нурі Аслан",
+  "Рижиков Сергій",
+  "Рихлюк Олександр",
+  "Ровенчук Влада",
+  "Ровенчук Володимир",
+  "Рогаля Марк",
+  "Рогов Віталій",
+  "Роговий Ігор",
+  "Роземберський Іосіф",
+  "Розловський Андрій",
+  "Романенко Кирило",
+  "Романов Олександр",
+  "Ромашко Віталій",
+  "Руденко Анна",
+  "Рукавишников Микола",
+  "Русанов Андрій",
+  "Рутенберг Дмитро",
+  "Сабунджуоглу Алі Енвер",
+  "Савенков Антон",
+  "Савчук Володимир",
+  "Сагайдачный Роман",
+  "Садохін Олег",
+  "Сальніков Павло",
+  "Самодій Петро",
+  "Сапронов Петро",
+  "Сарапін Олександр",
+  "Сарія Олександр",
+  "Сас Олег",
+  "Сафаров Олександр",
+  "Сахаров Сергій",
+  "Саїнчук Тетяна",
+  "Свирид Марія",
+  "Свіда Олексій",
+  "Свіда Юрій",
+  "Севостьянов Юрій",
+  "Секелі Пал",
+  "Селєзньов Олександр",
+  "Селіхова Тетяна",
+  "Семейко Віталій",
+  "Сень Микола",
+  "Сергеєв Андрій",
+  "Сергєєв Кирило",
+  "Сергєєв Олексій",
+  "Сидельникова Ганна",
+  "Сидоренко Дмитро",
+  "Сидоренко Олександр",
+  "Силюк Володимир",
+  "Сиром'ятников Олександр",
+  "Скакун Ірина",
+  "Скарлат Дмитро",
+  "Скарлат Олександр",
+  "Скиданчук Віктор",
+  "Скрипай Дмитро",
+  "Скуртов Дмитро",
+  "Скуртова Анастасія",
+  "Смик Володимир",
+  "Смищенко Артем",
+  "Смірнова Світлана",
+  "Снурніков Артем",
+  "Соколов Володимир",
+  "Соколов Роман",
+  "Соколова Вікторія",
+  "Соловйова Наталія",
+  "Соловьова Юлія",
+  "Солтис Андрій",
+  "Солтис Ганна",
+  "Солтис Микита",
+  "Сорокотяга Олег",
+  "Софлюк Юлія",
+  "Спекторенко Катерина",
+  "Старіков Володимир",
+  "Сташевський Валентин",
+  "Стебелько Ігор",
+  "Стейер Себастьян",
+  "Степаненко Віталій",
+  "Степанець Віталіна",
+  "Степанець Ольга",
+  "Стецишин Віталій",
+  "Стецюк Володимир",
+  "Стецюра Олена",
+  "Стомаченко Ксенія",
+  "Сторожук Дмитро",
+  "Стребиж Татяна",
+  "Стребиж Тетяна",
+  "Субаши Алпер",
+  "Сулім Роман",
+  "Суслова Євгенія",
+  "Сєлєзньов Олександр",
+  "Сіташ Габор",
+  "Тараненко Лілія",
+  "Тарасенко Андрій",
+  "Тарасюк Юрій",
+  "Теличко Антон",
+  "Телятник Максим",
+  "Терещенко Любов",
+  "Терновий Олександр",
+  "Тесленко Кирило",
+  "Тимонова Діана",
+  "Тимченко Михайло",
+  "Титков Олег",
+  "Тиханов Юрій",
+  "Тихобаєва Вікторія",
+  "Тихоненко Віктор",
+  "Тихонченко Віталій",
+  "Ткаченко Сергій",
+  "Ткачук Сергій",
+  "Товт Золтан",
+  "Томків Ірина",
+  "Томчук Олег",
+  "Топко Андрій",
+  "Топко Олександр",
+  "Топчу Владислав",
+  "Топчук Анатолій",
+  "Торський Тарас",
+  "Торський Євген",
+  "Точка Петро",
+  "Трофімов Дмитро",
+  "Троценко Артем",
+  "Трубецькой Петро",
+  "Тужикова Світлана",
+  "Тямолов Роман",
+  "Тямолов Ростислав",
+  "Тіщенко Богдан",
+  "Удовиченко Едуард",
+  "Улезко Анатолій",
+  "Усетс Терьєр",
+  "Усик Артем",
+  "Усик Сергій",
+  "Утембаєв Андрій",
+  "Фатех Дін",
+  "Федоришина Алла",
+  "Федотова Ірина",
+  "Федуна Віктор",
+  "Федуна Ігор",
+  "Ферар Крістіна",
+  "Ферар Максим",
+  "Фехтел Анатолій",
+  "Фирсиков Виктор",
+  "Форманюк Андрій",
+  "Франчук Андрій",
+  "Філіпець Дмитро",
+  "Фісяк Павло",
+  "Халеєв Костянтин",
+  "Харченко Тетяна",
+  "Ходяков Володимир",
+  "Ходєєв Микола",
+  "Холліуелл Вейн",
+  "Хоменко Андрій",
+  "Хоменко Владислав",
+  "Хоменко Володимир",
+  "Хоміч Володимир",
+  "Худяшов Станіслав",
+  "Хуренко Сергій",
+  "Хусаінов Сергій",
+  "Хімко Олександр",
+  "Хімчак Сергій",
+  "Царолунга Дмитро",
+  "Цебратенко Андрій",
+  "Цибух Антон",
+  "Циганков Павло",
+  "Цитович Андрій",
+  "Цілуйко Владислав",
+  "Чабанова Анна",
+  "Чайковський Руслан",
+  "Чебаненко Олексій",
+  "Чекановський Арсеній",
+  "Чепак Василь",
+  "Чепак Сергій",
+  "Чепель Ігор",
+  "Чепурний Едуард",
+  "Черватюк Ірина",
+  "Червинська Ніна",
+  "Червинська Ніні",
+  "Черевко Свiтлана",
+  "Чередниченко Сергій",
+  "Черкас Павло",
+  "Черкасов Костянтин",
+  "Черноброва Олександра",
+  "Черченко Михайло",
+  "Чижмадія Томаш",
+  "Чик Едуард",
+  "Чорба Золтан",
+  "Чорний Віталій",
+  "Чорний Іван",
+  "Чорняк Михай",
+  "Чубат Андрій",
+  "Чумак Ганна",
+  "Чумак Дмитро",
+  "Чіголя Артур",
+  "Чікало Костянтин",
+  "Шаблій Ігор",
+  "Шапка Євген",
+  "Швець Андрій",
+  "Шевченко Сергій",
+  "Шевчик Анастасія",
+  "Шевчук Дмитро",
+  "Шемет Наталія",
+  "Шепута Володимир",
+  "Шийка Артур",
+  "Шикирюк Євген",
+  "Шильцин Юрій",
+  "Шинкаренко Василь",
+  "Шипулін Олексей",
+  "Шипулін Сергій",
+  "Шипіцин Олег",
+  "Ширяєв Дмитро",
+  "Шклярук Наталія",
+  "Шклярук Юлія",
+  "Шкуров Артем",
+  "Шляхов Андрій",
+  "Шляхов Сергій",
+  "Шмідтке Анджей",
+  "Шпак Максим",
+  "Шпигун Володимир",
+  "Шпитко Вікторія",
+  "Штанько Василь",
+  "Штанько Катерина",
+  "Штувбейна Альона",
+  "Штурко Дмитро",
+  "Шум Олександр",
+  "Шумко Олександр",
+  "Шумілов Дмитро",
+  "Шумілова Ірина",
+  "Шуплєцов Станислав",
+  "Шуплєцова Зоя",
+  "Щолок Володимир",
+  "Юджель Сінан",
+  "Юкнаїт Альгіна",
+  "Юрченко Володимир",
+  "Юша Олексій",
+  "Ющик Сергій",
+  "Яворський Костянтин",
+  "Язган Котулек Меліке",
+  "Якименко Віталій",
+  "Якименко Дмитро",
+  "Якименко Катерина",
+  "Якімов Павло",
+  "Янгу Панайотіс",
+  "Яненко Сергій",
+  "Ясинський Владислав",
+  "Яскевич Олена",
+  "Яцюра Тетяна",
+  "Євмєнєнков Максим",
+  "Ємельянов Олександр",
+  "Єрашов Віталій",
+  "Єрашов Дмитро",
+  "Єрмаков Сергій",
+  "Єрол Умут",
+  "Єрчик Маргарита",
+  "Єрєменко Василій",
+  "Єськов Олег",
+  "Іванов Олександр",
+  "Іванов Сергій",
+  "Іванщишин Орест",
+  "Івасюк Віталій",
+  "Іващенко Ірина",
+  "Івлєв Олександр",
+  "Ігнатюк Наталія",
+  "Ізосімов Анатолій",
+  "Ільясова Альбіна",
+  "Іргізова Нелля",
+  "Іфтоде Мірела",
+  "Ішутін Ігор",
+  "Іщенко Сергій"
  ]
 }
