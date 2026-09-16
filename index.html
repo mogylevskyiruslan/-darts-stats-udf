@@ -2008,10 +2008,13 @@ function svgGrowthBarChart(years, total, added, lost, opts){
         <rect x="${(cx-bw/2).toFixed(1)}" y="${yTotalTop.toFixed(1)}" width="${bw}" height="${(yReturningTop-yTotalTop).toFixed(1)}" fill="#4ade80" rx="2">
           <title>${y}: ${added[i]} нових гравців</title>
         </rect>
+        ${(zeroY-yReturningTop) > 14 ? `<text x="${cx.toFixed(1)}" y="${((zeroY+yReturningTop)/2+4).toFixed(1)}" text-anchor="middle" font-size="11" font-weight="700" fill="#0c1230" font-family="JetBrains Mono, monospace">${returning}</text>` : ''}
+        ${(yReturningTop-yTotalTop) > 14 ? `<text x="${cx.toFixed(1)}" y="${((yReturningTop+yTotalTop)/2+4).toFixed(1)}" text-anchor="middle" font-size="11" font-weight="700" fill="#0c1230" font-family="JetBrains Mono, monospace">${added[i]}</text>` : ''}
         <text x="${cx.toFixed(1)}" y="${(yTotalTop-6).toFixed(1)}" text-anchor="middle" font-size="12" font-weight="700" fill="var(--gold)" font-family="JetBrains Mono, monospace">${total[i]}</text>
         ${lost[i] > 0 ? `<rect x="${(cx-bw/2).toFixed(1)}" y="${zeroY.toFixed(1)}" width="${bw}" height="${lostH.toFixed(1)}" fill="#f87171" rx="2" opacity="0.85">
           <title>${y}: ${lost[i]} перестали грати (порівняно з попереднім роком)</title>
-        </rect>` : ''}
+        </rect>
+        ${lostH > 14 ? `<text x="${cx.toFixed(1)}" y="${(zeroY+lostH/2+4).toFixed(1)}" text-anchor="middle" font-size="11" font-weight="700" fill="#0c1230" font-family="JetBrains Mono, monospace">${lost[i]}</text>` : `<text x="${cx.toFixed(1)}" y="${(zeroY+lostH+13).toFixed(1)}" text-anchor="middle" font-size="10.5" font-weight="700" fill="#f87171" font-family="JetBrains Mono, monospace">${lost[i]}</text>`}` : ''}
         <text x="${cx.toFixed(1)}" y="${(w > 0 ? zeroY + hLower + 20 : 0).toFixed(1)}" text-anchor="middle" font-size="11" fill="var(--muted)" font-family="JetBrains Mono, monospace">${y}</text>
       </g>`;
   }).join('');
