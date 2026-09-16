@@ -1137,14 +1137,15 @@ function renderLinkChips(links){
 function renderHeroStats(){
   const includeUDL = document.getElementById('global-toggle-udl').checked;
   const visible = tournaments.filter(t => includeUDL || !t.isUDL);
-  const uniquePlayers = new Set(
-    nakkaPlayerStats.filter(r => includeUDL || !r.isUDL).map(r => r.name)
-  );
+  // Повний список унікальних гравців з УСІХ джерел бази (Nakka, Призери
+  // Кубка, Чемпіони ЧУ, архів рейтингів за сезонами) — той самий список,
+  // що використовує глобальний пошук гравця.
+  const uniquePlayersCount = (allPlayerNames || []).length;
   const cities = new Set(visible.map(t=>t.city).filter(Boolean));
   const years = new Set(visible.map(t=>t.date.split('.').pop()).filter(Boolean));
   const stats = [
     {num: visible.length, label:'турнірів у базі'},
-    {num: uniquePlayers.size.toLocaleString('uk-UA'), label:'унікальних учасників'},
+    {num: uniquePlayersCount.toLocaleString('uk-UA'), label:'унікальних учасників'},
     {num: cities.size, label:'міст-господарів'},
     {num: years.size, label:'сезонів (' + Math.min(...years) + '–' + Math.max(...years) + ')'},
   ];
@@ -1155,7 +1156,7 @@ function renderHeroStats(){
   const countEl = document.getElementById('tournaments-count');
   const sumEl = document.getElementById('tournaments-participants');
   if(countEl) countEl.textContent = visible.length;
-  if(sumEl) sumEl.textContent = uniquePlayers.size.toLocaleString('uk-UA');
+  if(sumEl) sumEl.textContent = uniquePlayersCount.toLocaleString('uk-UA');
 }
 
 let sortKey = 'date', sortDir = -1;
@@ -1698,6 +1699,7 @@ async function loadData(){
       if(el) el.textContent = 'Оновлено: ' + label;
     }
 
+    buildAllPlayerNames();
     renderHeroStats();
     populateFilters();
     renderTournaments();
@@ -1717,7 +1719,6 @@ async function loadData(){
     buildNameGenderMap();
     renderChampions();
     initChampionsRace();
-    buildAllPlayerNames();
     initGlobalPlayerSearch();
 
     // Якщо перейшли за посиланням "поділитись профілем" (?player=Ім'я) —
