@@ -630,11 +630,11 @@
 <nav>
   <a href="#history">Історія</a>
   <a href="#tournaments">Турніри</a>
+  <a href="#calendar-2026">Календар 2026</a>
+  <a href="#geography">Географія</a>
   <a href="#growth">Динаміка</a>
   <a href="#participants-chart">Учасники по турнірах</a>
   <a href="#top10-race">ТОП-10 гонка</a>
-  <a href="#geography">Географія</a>
-  <a href="#calendar-2026">Календар 2026</a>
   <a href="#champions">Чемпіони ЧУ</a>
   <a href="#champions-race">Гонка лідерів ЧУ</a>
   <a href="#leaderboard">Призери</a>
@@ -643,9 +643,9 @@
   <a href="#records">Рекорди</a>
   <a href="#nakka-records">Рекорди статистики</a>
   <a href="#h2h-lookup">Протистояння</a>
+  <a href="#masters">Майстри спорту</a>
   <a href="#youtube">Трансляції</a>
   <a href="#news">Новини</a>
-  <a href="#masters">Майстри спорту</a>
   <a href="#architecture">Як це працює</a>
   <label class="udl-toggle global-udl-toggle">
     <input type="checkbox" id="global-toggle-udl">
@@ -670,7 +670,6 @@
     <div class="tl-item"><div class="tl-year">2023 — нині</div><div class="tl-text">Омельченко та Ілля Пекарук вперше представили Україну на Кубку Світу PDC. Частину змагань під егідою ВФД відновлено в окремих регіонах — попри війну щороку визначаються чемпіони з різних дисциплін.</div></div>
   </div>
 </section>
-
 <section id="player-search" class="player-search-section">
   <div class="player-search-wrap">
     <div class="player-search-icon">🔍</div>
@@ -681,7 +680,6 @@
     </div>
   </div>
 </section>
-
 <section id="tournaments">
   <h2><span class="idx">02</span> Турніри</h2>
   <p class="section-sub">Дані з таблиці «UA darts stat (учасники)» — <span id="tournaments-count">…</span> записів, <span id="tournaments-participants">…</span> унікальних учасників (за даними Nakka). Клікабельні джерела: Nakka (сітки/легі) або протоколи ВФД у Google Docs/Sheets. Пошук, сортування і фільтр за роком/організатором.</p>
@@ -723,19 +721,41 @@
   </div>
   <div class="show-more-wrap" id="tournaments-more"></div>
 </section>
-
+<section id="calendar-2026">
+  <h2><span class="idx">02.3</span> Календар змагань 2026</h2>
+  <p class="section-sub">Усі етапи Кубка України (ВФД) та ліги UDL за рік — одним поглядом.</p>
+  <div class="cal-grid">
+    <div class="cal-card"><div class="cal-month">Січень</div><span class="tag udl">UDL</span><div class="cal-dates">23–25</div><div class="cal-city">Славсько</div></div>
+    <div class="cal-card"><div class="cal-month">Лютий</div><span class="tag vfd">ВФД</span><div class="cal-dates">20–22</div><div class="cal-city">Львів</div></div>
+    <div class="cal-card"><div class="cal-month">Березень</div><span class="tag udl">UDL</span><div class="cal-dates">21–22</div><div class="cal-city">Луцьк</div></div>
+    <div class="cal-card"><div class="cal-month">Квітень</div><span class="tag udl">UDL</span><div class="cal-dates">24–26</div><div class="cal-city">Вижниця</div></div>
+    <div class="cal-card"><div class="cal-month">Травень</div><span class="tag vfd">ВФД</span><div class="cal-dates">22–24</div><div class="cal-city">Черкаси</div></div>
+    <div class="cal-card"><div class="cal-month">Червень</div><span class="tag udl">UDL</span><div class="cal-dates">20–21</div><div class="cal-city">Одеса</div></div>
+    <div class="cal-card"><div class="cal-month">Липень</div><span class="tag vfd">ВФД</span><div class="cal-dates">03–05</div><div class="cal-city">Полтава</div></div>
+    <div class="cal-card"><div class="cal-month">Серпень</div><span class="tag udl">UDL</span><div class="cal-dates">14–16</div><div class="cal-city">Ужгород</div></div>
+    <div class="cal-card"><div class="cal-month">Вересень</div><span class="tag vfd">ВФД</span><div class="cal-dates">04–06</div><div class="cal-city">Одеса</div></div>
+    <div class="cal-card"><div class="cal-month">Жовтень</div><span class="tag vfd">ВФД</span><div class="cal-dates">16–18</div><div class="cal-city">Черкаси</div></div>
+    <div class="cal-card"><div class="cal-month">Листопад</div><span class="tag udl">UDL</span><div class="cal-dates">14–15</div><div class="cal-city">Львів</div></div>
+    <div class="cal-card cal-final"><div class="cal-month">Грудень</div><span class="tag final">ФІНАЛ</span><div class="cal-dates">11–13</div><div class="cal-city">Київ</div></div>
+  </div>
+</section>
+<section id="geography">
+  <h2><span class="idx">02.2</span> Географія турнірів</h2>
+  <p class="section-sub">Міста, де приймали турніри Кубка України та Чемпіонати України. Розмір мітки — кількість турнірів у місті.</p>
+  <div class="map-wrap">
+    <svg id="ukraine-map" viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg"></svg>
+  </div>
+</section>
 <section id="growth">
   <h2><span class="idx">02.1</span> Зростання участі по роках</h2>
   <p class="section-sub">Унікальні учасники за рік: усього, нові (вперше зіграли) та неактивні (грали торік, не грають цього). ВФД, за даними Nakka.</p>
   <div class="pp-chart-wrap" id="growth-chart-wrap"></div>
 </section>
-
 <section id="participants-chart">
   <h2><span class="idx">02.15</span> Кількість учасників по турнірах</h2>
   <p class="section-sub">Сумарна кількість учасників (чоловіки + жінки) на кожному турнірі ВФД, у хронологічному порядку.</p>
   <div class="pp-chart-wrap" id="participants-chart-wrap"></div>
 </section>
-
 <section id="top10-race">
   <h2><span class="idx">02.16</span> ТОП-10 турнірів за кількістю учасників</h2>
   <p class="section-sub">Анімація формування рекордного списку — від першого турніру до сьогодні, серед усіх організаторів (ВФД + УДЛ/ЗУДЛ).</p>
@@ -747,15 +767,6 @@
     </div>
   </div>
 </section>
-
-<section id="geography">
-  <h2><span class="idx">02.2</span> Географія турнірів</h2>
-  <p class="section-sub">Міста, де приймали турніри Кубка України та Чемпіонати України. Розмір мітки — кількість турнірів у місті.</p>
-  <div class="map-wrap">
-    <svg id="ukraine-map" viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg"></svg>
-  </div>
-</section>
-
 <section id="champions">
   <h2><span class="idx">02.9</span> Чемпіони України та призери</h2>
   <p class="section-sub">Медальний залік Чемпіонатів України за всіма категоріями (мікст, команди, пари, DIDO, Cricket, 501DO). 501DO — головна категорія сезону.</p>
@@ -783,7 +794,6 @@
   </div>
   <div class="show-more-wrap" id="champions-more"></div>
 </section>
-
 <section id="champions-race">
   <h2><span class="idx">02.10</span> Історія лідерів за медалями ЧУ</h2>
   <p class="section-sub">Накопичувальна анімація — як з роками мінялись лідери за загальною кількістю медалей Чемпіонатів України, за всіма категоріями разом.</p>
@@ -801,7 +811,6 @@
     </div>
   </div>
 </section>
-
 <section id="leaderboard">
   <h2><span class="idx">03</span> Призери етапів Кубку України</h2>
   <p class="section-sub">Медальний залік за етапами Кубка України та перемогами на ЧУ — з таблиці «Призери етапів кубків ВФД».</p>
@@ -839,7 +848,6 @@
   </div>
   <div class="show-more-wrap" id="leaderboard-more"></div>
 </section>
-
 <section id="current-rating">
   <h2><span class="idx">03.05</span> Поточний рейтинг</h2>
   <p class="section-sub">Живий рейтинг поточного сезону — оновлюється щодня разом з таблицею гравців. Клікніть на гравця, щоб побачити динаміку його позиції.</p>
@@ -863,7 +871,6 @@
   </div>
   <div class="show-more-wrap" id="current-rating-more"></div>
 </section>
-
 <section id="ratings">
   <h2><span class="idx">03.1</span> Рейтинги за сезон</h2>
   <p class="section-sub">Особистий рейтинг гравців за сумою очок з усіх етапів Кубка України (з коефіцієнтом 1.0) та ЧУ (коефіцієнт 1.5) — усі сезони 2013–2025, чоловіки й жінки, з таблиці «Кубок України».</p>
@@ -884,7 +891,6 @@
   </div>
   <div class="show-more-wrap" id="ratings-more"></div>
 </section>
-
 <section id="records">
   <h2><span class="idx">04</span> Рекорди</h2>
   <p class="section-sub">Вибрані рекорди з довідника «Дартс рекорди України».</p>
@@ -903,7 +909,6 @@
     </div>
   </div>
 </section>
-
 <section id="nakka-records">
   <h2><span class="idx">04.1</span> Рекорди статистики (Nakka)</h2>
   <p class="section-sub">Реальна статистика з <span id="nakka-records-count">…</span> зіграних турнірів, підтягнута напряму з Nakka. Мінімум 3 матчі в турнірі для заліку в "середній за турнір".</p>
@@ -934,7 +939,6 @@
     </table>
   </div>
 </section>
-
 <section id="h2h-lookup" class="h2h-highlight-section">
   <h2><span class="idx">04.2</span> ⚔️ Протистояння гравців</h2>
   <p class="section-sub">Оберіть двох гравців, щоб побачити всю історію їхніх особистих зустрічей.</p>
@@ -953,52 +957,6 @@
   </div>
   <div id="h2h-result"></div>
 </section>
-
-<section id="youtube">
-  <h2><span class="idx">05.1</span> Трансляції</h2>
-  <p class="section-sub">Останні відео з YouTube-каналу Всеукраїнської Федерації Дартсу — клікніть, щоб подивитись прямо тут.</p>
-  <div class="youtube-grid" id="youtube-grid">
-    <div class="pp-chart-empty">Завантаження…</div>
-  </div>
-  <a class="youtube-card" href="https://www.youtube.com/@UkranianDartsFederation" target="_blank" rel="noopener">
-    <svg class="youtube-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" fill="#FF0000"/></svg>
-    <span>
-      <strong>Усі відео на каналі</strong>
-      <span class="youtube-sub">youtube.com/@UkranianDartsFederation — записи турнірів, огляди</span>
-    </span>
-  </a>
-</section>
-
-<section id="news">
-  <h2><span class="idx">05.2</span> Новини українського дартсу</h2>
-  <p class="news-partner-line">
-    <img class="news-partner-logo" src="data:image/png;base64,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" alt="Fullbull">
-    Новини від інформаційного партнера Всеукраїнської Федерації Дартсу — <a href="https://t.me/fullbull" target="_blank" rel="noopener">Fullbull</a>
-  </p>
-  <div class="news-grid" id="news-grid">
-    <div class="pp-chart-empty">Завантаження…</div>
-  </div>
-</section>
-
-<section id="calendar-2026">
-  <h2><span class="idx">02.3</span> Календар змагань 2026</h2>
-  <p class="section-sub">Усі етапи Кубка України (ВФД) та ліги UDL за рік — одним поглядом.</p>
-  <div class="cal-grid">
-    <div class="cal-card"><div class="cal-month">Січень</div><span class="tag udl">UDL</span><div class="cal-dates">23–25</div><div class="cal-city">Славсько</div></div>
-    <div class="cal-card"><div class="cal-month">Лютий</div><span class="tag vfd">ВФД</span><div class="cal-dates">20–22</div><div class="cal-city">Львів</div></div>
-    <div class="cal-card"><div class="cal-month">Березень</div><span class="tag udl">UDL</span><div class="cal-dates">21–22</div><div class="cal-city">Луцьк</div></div>
-    <div class="cal-card"><div class="cal-month">Квітень</div><span class="tag udl">UDL</span><div class="cal-dates">24–26</div><div class="cal-city">Вижниця</div></div>
-    <div class="cal-card"><div class="cal-month">Травень</div><span class="tag vfd">ВФД</span><div class="cal-dates">22–24</div><div class="cal-city">Черкаси</div></div>
-    <div class="cal-card"><div class="cal-month">Червень</div><span class="tag udl">UDL</span><div class="cal-dates">20–21</div><div class="cal-city">Одеса</div></div>
-    <div class="cal-card"><div class="cal-month">Липень</div><span class="tag vfd">ВФД</span><div class="cal-dates">03–05</div><div class="cal-city">Полтава</div></div>
-    <div class="cal-card"><div class="cal-month">Серпень</div><span class="tag udl">UDL</span><div class="cal-dates">14–16</div><div class="cal-city">Ужгород</div></div>
-    <div class="cal-card"><div class="cal-month">Вересень</div><span class="tag vfd">ВФД</span><div class="cal-dates">04–06</div><div class="cal-city">Одеса</div></div>
-    <div class="cal-card"><div class="cal-month">Жовтень</div><span class="tag vfd">ВФД</span><div class="cal-dates">16–18</div><div class="cal-city">Черкаси</div></div>
-    <div class="cal-card"><div class="cal-month">Листопад</div><span class="tag udl">UDL</span><div class="cal-dates">14–15</div><div class="cal-city">Львів</div></div>
-    <div class="cal-card cal-final"><div class="cal-month">Грудень</div><span class="tag final">ФІНАЛ</span><div class="cal-dates">11–13</div><div class="cal-city">Київ</div></div>
-  </div>
-</section>
-
 <section id="masters">
   <h2><span class="idx">05.3</span> Майстри спорту України з дартсу</h2>
   <p class="section-sub">Офіційний реєстр звань (Міністерство молоді та спорту України) — усі носії звання "Майстер спорту України" з дартсу.</p>
@@ -1022,7 +980,30 @@
   </div>
   <div class="show-more-wrap" id="masters-more"></div>
 </section>
-
+<section id="youtube">
+  <h2><span class="idx">05.1</span> Трансляції</h2>
+  <p class="section-sub">Останні відео з YouTube-каналу Всеукраїнської Федерації Дартсу — клікніть, щоб подивитись прямо тут.</p>
+  <div class="youtube-grid" id="youtube-grid">
+    <div class="pp-chart-empty">Завантаження…</div>
+  </div>
+  <a class="youtube-card" href="https://www.youtube.com/@UkranianDartsFederation" target="_blank" rel="noopener">
+    <svg class="youtube-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" fill="#FF0000"/></svg>
+    <span>
+      <strong>Усі відео на каналі</strong>
+      <span class="youtube-sub">youtube.com/@UkranianDartsFederation — записи турнірів, огляди</span>
+    </span>
+  </a>
+</section>
+<section id="news">
+  <h2><span class="idx">05.2</span> Новини українського дартсу</h2>
+  <p class="news-partner-line">
+    <img class="news-partner-logo" src="data:image/png;base64,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" alt="Fullbull">
+    Новини від інформаційного партнера Всеукраїнської Федерації Дартсу — <a href="https://t.me/fullbull" target="_blank" rel="noopener">Fullbull</a>
+  </p>
+  <div class="news-grid" id="news-grid">
+    <div class="pp-chart-empty">Завантаження…</div>
+  </div>
+</section>
 <section id="architecture">
   <h2><span class="idx">05</span> Як це працюватиме</h2>
   <p class="section-sub">Концепція автоматичного оновлення: дані підтягуються з першоджерел за розкладом, без ручного експорту.</p>
@@ -1316,7 +1297,7 @@ let recordsGender = 'men';
 
 // --- Узагальнена пагінація для довгих таблиць (турніри, рейтинг, історія) ---
 const paginationState = {};
-const PAGE_SIZE = 20;
+const PAGE_SIZE = 10;
 // Деякі таблиці показують менше рядків за замовчуванням (тут — 10 замість 20)
 const CUSTOM_PAGE_SIZE = { leaderboard: 10, ratings: 10, champions: 10 };
 const pageSizeFor = key => CUSTOM_PAGE_SIZE[key] || PAGE_SIZE;
