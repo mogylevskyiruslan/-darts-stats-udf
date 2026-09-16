@@ -395,6 +395,9 @@
   .pp-chart-wrap{background:var(--panel-2); border:1px solid var(--line); border-radius:6px; padding:16px; margin-bottom:8px;}
   .pp-chart-wrap svg{width:100%; height:auto; display:block;}
   .pp-chart-empty{color:var(--muted); font-size:13px; padding:20px; text-align:center;}
+  .growth-legend{display:flex; gap:22px; flex-wrap:wrap; margin-top:12px; justify-content:center;}
+  .growth-legend span{display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--muted);}
+  .growth-legend i{width:12px; height:12px; border-radius:3px; display:inline-block;}
 
   .pp-history-table{width:100%; border-collapse:collapse; font-size:13px;}
   .pp-history-table th{
@@ -748,7 +751,7 @@
 </section>
 <section id="growth">
   <h2><span class="idx">02.1</span> Зростання участі по роках</h2>
-  <p class="section-sub">Унікальні учасники за рік: усього, нові (вперше зіграли) та неактивні (грали торік, не грають цього). ВФД, за даними Nakka.</p>
+  <p class="section-sub">Унікальні учасники за рік: скільки продовжили грати з попередніх років, скільки прийшло вперше (стовпчик вгору), і скільки перестали грати порівняно з попереднім роком (стовпчик вниз). Джерела — архів рейтингів за сезонами та дані Nakka.</p>
   <div class="pp-chart-wrap" id="growth-chart-wrap"></div>
 </section>
 <section id="participants-chart">
@@ -1931,43 +1934,106 @@ function renderUkraineMap(){
   `;
 }
 
-function renderGrowthChart(){
+function computeYearlyParticipation(){
   const includeUDL = document.getElementById('global-toggle-udl').checked;
-  const rows = nakkaPlayerStats.filter(r => includeUDL || !r.isUDL);
   const byYear = {};
-  rows.forEach(r => {
+  const ensure = y => { if(!byYear[y]) byYear[y] = new Set(); return byYear[y]; };
+
+  // 1) Архів рейтингів за сезонами — найповніше джерело "хто грав того року"
+  //    для років, що передують Nakka (охоплює довше минуле).
+  Object.values(ratingsData || {}).forEach(season => {
+    const y = String(season.year);
+    const set = ensure(y);
+    (season.rows || []).forEach(r => { if(r.name) set.add(r.name); });
+  });
+
+  // 2) Nakka — для років, де архіву рейтингів ще нема (найновіші сезони),
+  //    і для точності в роках, де обидва джерела перетинаються.
+  nakkaPlayerStats.filter(r => includeUDL || !r.isUDL).forEach(r => {
     const y = r.date.split('.').pop();
-    if(!byYear[y]) byYear[y] = new Set();
-    byYear[y].add(r.name);
+    ensure(y).add(r.name);
   });
+
   const years = Object.keys(byYear).sort();
-
   const everSeen = new Set();
-  const totalPoints = [], newPoints = [], lostPoints = [];
-  let prevYearSet = null;
+  const total = [], added = [], lost = [];
+  let prevSet = null;
   years.forEach(y => {
-    const thisYearSet = byYear[y];
-    totalPoints.push({ x: y, y: thisYearSet.size });
-
+    const thisSet = byYear[y];
+    total.push(thisSet.size);
     let newCount = 0;
-    thisYearSet.forEach(name => { if(!everSeen.has(name)) newCount++; });
-    newPoints.push({ x: y, y: newCount });
-    thisYearSet.forEach(name => everSeen.add(name));
-
+    thisSet.forEach(n => { if(!everSeen.has(n)) newCount++; });
+    thisSet.forEach(n => everSeen.add(n));
+    added.push(newCount);
     let lostCount = 0;
-    if(prevYearSet){
-      prevYearSet.forEach(name => { if(!thisYearSet.has(name)) lostCount++; });
-    }
-    lostPoints.push({ x: y, y: prevYearSet ? lostCount : 0 });
-    prevYearSet = thisYearSet;
+    if(prevSet) prevSet.forEach(n => { if(!thisSet.has(n)) lostCount++; });
+    lost.push(prevSet ? lostCount : 0);
+    prevSet = thisSet;
   });
+  return { years, total, added, lost };
+}
 
+function svgGrowthBarChart(years, total, added, lost, opts){
+  opts = opts || {};
+  const w = opts.width || 900, hUpper = 220, hLower = 70, padL = 44, padR = 16, padTop = 16, padBottom = 34;
+  const innerW = w - padL - padR;
+  const n = years.length;
+  const bw = Math.min(46, innerW / n * 0.6);
+  const gap = innerW / n;
+  const maxTotal = Math.max(1, ...total);
+  const maxLost = Math.max(1, ...lost);
+  const zeroY = padTop + hUpper;
+  const xAt = i => padL + gap * i + gap / 2;
+  const yUp = v => zeroY - (v / maxTotal) * hUpper;
+  const yDown = v => zeroY + (v / maxLost) * hLower;
+
+  const gridLines = [0, 0.25, 0.5, 0.75, 1].map(f => {
+    const val = Math.round(maxTotal * f);
+    const y = yUp(val);
+    return `<line x1="${padL}" y1="${y.toFixed(1)}" x2="${w-padR}" y2="${y.toFixed(1)}" stroke="var(--line)" stroke-width="1"/>
+            <text x="${padL-8}" y="${(y+3).toFixed(1)}" text-anchor="end" font-size="10" fill="var(--muted)" font-family="JetBrains Mono, monospace">${val}</text>`;
+  }).join('');
+
+  const bars = years.map((y, i) => {
+    const cx = xAt(i);
+    const returning = Math.max(0, total[i] - added[i]);
+    const yReturningTop = yUp(returning);
+    const yTotalTop = yUp(total[i]);
+    const lostH = yDown(lost[i]) - zeroY;
+    return `
+      <g>
+        <rect x="${(cx-bw/2).toFixed(1)}" y="${yReturningTop.toFixed(1)}" width="${bw}" height="${(zeroY-yReturningTop).toFixed(1)}" fill="var(--royal-light)" rx="2">
+          <title>${y}: ${returning} гравців продовжили грати</title>
+        </rect>
+        <rect x="${(cx-bw/2).toFixed(1)}" y="${yTotalTop.toFixed(1)}" width="${bw}" height="${(yReturningTop-yTotalTop).toFixed(1)}" fill="#4ade80" rx="2">
+          <title>${y}: ${added[i]} нових гравців</title>
+        </rect>
+        <text x="${cx.toFixed(1)}" y="${(yTotalTop-6).toFixed(1)}" text-anchor="middle" font-size="12" font-weight="700" fill="var(--gold)" font-family="JetBrains Mono, monospace">${total[i]}</text>
+        ${lost[i] > 0 ? `<rect x="${(cx-bw/2).toFixed(1)}" y="${zeroY.toFixed(1)}" width="${bw}" height="${lostH.toFixed(1)}" fill="#f87171" rx="2" opacity="0.85">
+          <title>${y}: ${lost[i]} перестали грати (порівняно з попереднім роком)</title>
+        </rect>` : ''}
+        <text x="${cx.toFixed(1)}" y="${(w > 0 ? zeroY + hLower + 20 : 0).toFixed(1)}" text-anchor="middle" font-size="11" fill="var(--muted)" font-family="JetBrains Mono, monospace">${y}</text>
+      </g>`;
+  }).join('');
+
+  const totalH = padTop + hUpper + hLower + padBottom;
+  return `
+    <svg viewBox="0 0 ${w} ${totalH}" style="width:100%; height:auto; overflow:visible;">
+      ${gridLines}
+      <line x1="${padL}" y1="${zeroY}" x2="${w-padR}" y2="${zeroY}" stroke="var(--muted)" stroke-width="1.5"/>
+      ${bars}
+    </svg>
+    <div class="growth-legend">
+      <span><i style="background:var(--royal-light)"></i> Продовжили грати</span>
+      <span><i style="background:#4ade80"></i> Нові гравці</span>
+      <span><i style="background:#f87171"></i> Перестали грати (від попер. року)</span>
+    </div>`;
+}
+
+function renderGrowthChart(){
+  const { years, total, added, lost } = computeYearlyParticipation();
   document.getElementById('growth-chart-wrap').innerHTML = years.length
-    ? svgMultiLineChart([
-        { name: 'Всього', color: 'var(--gold)', points: totalPoints },
-        { name: 'Нові', color: '#4ade80', points: newPoints },
-        { name: 'Неактивні', color: '#f87171', points: lostPoints },
-      ], { height: 240 })
+    ? svgGrowthBarChart(years, total, added, lost, {})
     : '<div class="pp-chart-empty">Немає даних.</div>';
 }
 
