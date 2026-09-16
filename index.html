@@ -326,6 +326,12 @@
     transition:border-color .15s, color .15s;
   }
   .pp-share-btn:hover{border-color:var(--gold); color:var(--gold);}
+  .pp-udl-toggle{
+    display:inline-flex; align-items:center; gap:6px; margin-left:10px; margin-bottom:12px;
+    font-size:12.5px; color:var(--muted); font-family:'Inter',sans-serif; cursor:pointer; user-select:none;
+  }
+  .pp-udl-toggle input{cursor:pointer;}
+  .pp-udl-toggle:hover{color:var(--gold);}
   .pp-header .pp-sub{color:var(--muted); font-size:13px; margin-bottom:20px;}
 
   .pp-stat-row{
@@ -518,6 +524,20 @@
   .h2h-summary-player .avg{font-size:12px; color:var(--muted); margin-top:4px;}
   .h2h-summary-mid{font-family:'JetBrains Mono',monospace; color:var(--muted); font-size:13px; text-align:center;}
   .h2h-row-win{color:var(--gold); font-weight:700;}
+  .h2h-compare-toggle-wrap{margin-top:20px; text-align:center;}
+  #h2h-compare-box{
+    max-height:0; overflow:hidden; transition:max-height .3s ease;
+  }
+  #h2h-compare-box.open{max-height:600px; margin-top:18px;}
+  .h2h-compare{background:var(--panel); border:1px solid var(--gold); border-radius:10px; padding:20px;}
+  .h2h-compare-names{
+    display:flex; justify-content:space-between; font-weight:800; font-family:'Oswald',sans-serif;
+    text-transform:uppercase; letter-spacing:0.04em; color:var(--gold); margin-bottom:14px; font-size:14px;
+  }
+  .h2h-compare-table{width:100%; border-collapse:collapse;}
+  .h2h-compare-table td{padding:9px 10px; border-bottom:1px solid var(--line); font-size:13.5px;}
+  .h2h-compare-table td.num{width:80px;}
+  .h2h-compare-label{text-align:center; color:var(--muted);}
 
   /* Позначка "Чемпіонат України" в таблиці турнірів */
   .chu-badge{
@@ -2371,18 +2391,84 @@ function initH2HLookup(){
   });
 }
 
+function getPlayerQuickStats(name){
+  const includeUDL = document.getElementById('global-toggle-udl').checked;
+  const rows = nakkaPlayerStats.filter(r => r.name === name && (includeUDL || !r.isUDL));
+  const kubokEntry = (leaderboard || []).find(p => p.name === name) || (leaderboardWomen || []).find(p => p.name === name);
+  const champRecords = (championsRecords || []).filter(r => r.names.includes(name));
+  const champGold = champRecords.filter(r => r.place === 1).length;
+  return {
+    tournaments: rows.length,
+    bestAvg: rows.length ? Math.max(...rows.map(r=>r.avg||0)) : null,
+    total180: rows.reduce((s,r)=>s+(r.ton80||0), 0),
+    bestCheckout: rows.length ? Math.max(...rows.map(r=>r.highOut||0)) : 0,
+    gold: kubokEntry ? (kubokEntry.gold||0) : 0,
+    silver: kubokEntry ? (kubokEntry.silver||0) : 0,
+    bronze: kubokEntry ? (kubokEntry.bronze||0) : 0,
+    champGold,
+  };
+}
+
+function renderProfileComparison(p1, p2){
+  const s1 = getPlayerQuickStats(p1);
+  const s2 = getPlayerQuickStats(p2);
+  const rows = [
+    { label: 'Турнірів (Nakka)', v1: s1.tournaments, v2: s2.tournaments, higherBetter: true },
+    { label: 'Найкращий середній', v1: s1.bestAvg, v2: s2.bestAvg, higherBetter: true, fmt: v => v !== null ? v.toFixed(2) : '—' },
+    { label: '180-ки всього', v1: s1.total180, v2: s2.total180, higherBetter: true },
+    { label: 'Найкраще закриття', v1: s1.bestCheckout, v2: s2.bestCheckout, higherBetter: true, fmt: v => v || '—' },
+    { label: '🥇 Кубок України', v1: s1.gold, v2: s2.gold, higherBetter: true },
+    { label: '🥈 Кубок України', v1: s1.silver, v2: s2.silver, higherBetter: true },
+    { label: '🥉 Кубок України', v1: s1.bronze, v2: s2.bronze, higherBetter: true },
+    { label: '🥇 Чемпіонатів України', v1: s1.champGold, v2: s2.champGold, higherBetter: true },
+  ];
+  return `
+    <div class="h2h-compare">
+      <div class="h2h-compare-names"><span>${p1}</span><span>vs</span><span>${p2}</span></div>
+      <table class="h2h-compare-table">
+        <tbody>${rows.map(r => {
+          const fmt = r.fmt || (v => v ?? '—');
+          const win1 = r.v1 !== null && r.v2 !== null && r.v1 > r.v2;
+          const win2 = r.v1 !== null && r.v2 !== null && r.v2 > r.v1;
+          return `<tr>
+            <td class="num mono ${win1 ? 'h2h-row-win' : ''}">${fmt(r.v1)}</td>
+            <td class="h2h-compare-label">${r.label}</td>
+            <td class="num mono ${win2 ? 'h2h-row-win' : ''}">${fmt(r.v2)}</td>
+          </tr>`;
+        }).join('')}</tbody>
+      </table>
+    </div>`;
+}
+
+function toggleProfileComparison(){
+  const box = document.getElementById('h2h-compare-box');
+  const btn = document.getElementById('h2h-compare-btn');
+  const isOpen = box.classList.toggle('open');
+  btn.textContent = isOpen ? '▲ Сховати порівняння профілів' : '📊 Порівняти профілі гравців';
+  if(isOpen && !box.dataset.rendered){
+    box.innerHTML = renderProfileComparison(h2hSelected[1], h2hSelected[2]);
+    box.dataset.rendered = '1';
+  }
+}
+
 function renderH2HResult(){
   const wrap = document.getElementById('h2h-result');
   const p1 = h2hSelected[1], p2 = h2hSelected[2];
   if(!p1 || !p2){ wrap.innerHTML = ''; return; }
   if(p1 === p2){ wrap.innerHTML = '<div class="pp-chart-empty">Оберіть двох різних гравців.</div>'; return; }
 
+  const compareButtonHtml = `
+    <div class="h2h-compare-toggle-wrap">
+      <button type="button" class="race-btn" id="h2h-compare-btn" onclick="toggleProfileComparison()">📊 Порівняти профілі гравців</button>
+      <div id="h2h-compare-box"></div>
+    </div>`;
+
   const matches = nakkaH2HStats.filter(r =>
     (r.name1 === p1 && r.name2 === p2) || (r.name1 === p2 && r.name2 === p1)
   ).slice().sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date));
 
   if(matches.length === 0){
-    wrap.innerHTML = `<div class="pp-chart-empty">${p1} та ${p2} ще не зустрічались один з одним.</div>`;
+    wrap.innerHTML = `<div class="pp-chart-empty">${p1} та ${p2} ще не зустрічались один з одним.</div>` + compareButtonHtml;
     return;
   }
 
@@ -2434,7 +2520,7 @@ function renderH2HResult(){
         `).join('')}</tbody>
       </table>
     </div>
-  `;
+  ` + compareButtonHtml;
 }
 
 const MASTERS_DATA = [
@@ -2766,20 +2852,46 @@ function sharePlayerProfile(name, btnEl){
   });
 }
 
+function togglePlayerProfileUDL(name, checked){
+  const globalToggle = document.getElementById('global-toggle-udl');
+  globalToggle.checked = checked;
+  globalToggle.dispatchEvent(new Event('change'));
+  openPlayerProfile(name);
+}
+
 function openPlayerProfile(name){
   const includeUDL = document.getElementById('global-toggle-udl').checked;
   let rows = nakkaPlayerStats.filter(r => r.name === name && (includeUDL || !r.isUDL));
   rows = rows.slice().sort((a,b) => parseUaDate(a.date) - parseUaDate(b.date));
 
+  const udlToggleHtml = `
+    <label class="pp-udl-toggle">
+      <input type="checkbox" ${includeUDL ? 'checked' : ''} onchange="togglePlayerProfileUDL('${name.replace(/'/g, "\\'")}', this.checked)">
+      Враховувати УДЛ/ЗУДЛ
+    </label>`;
+
   // Медалі "Призери етапів Кубку України" — рахуються НЕЗАЛЕЖНО від наявності
-  // даних Nakka (охоплюють усі роки, включно з тими до Nakka).
-  const medalCount = {1:0,2:0,3:0};
+  // даних Nakka (охоплюють усі роки, включно з тими до Nakka). Завжди свої.
+  const kubokMedalCount = {1:0,2:0,3:0};
   const kubokEntry = (leaderboard || []).find(p => p.name === name) || (leaderboardWomen || []).find(p => p.name === name);
   if(kubokEntry){
-    medalCount[1] += kubokEntry.gold || 0;
-    medalCount[2] += kubokEntry.silver || 0;
-    medalCount[3] += kubokEntry.bronze || 0;
+    kubokMedalCount[1] = kubokEntry.gold || 0;
+    kubokMedalCount[2] = kubokEntry.silver || 0;
+    kubokMedalCount[3] = kubokEntry.bronze || 0;
   }
+  const hasKubokMedals = kubokMedalCount[1]+kubokMedalCount[2]+kubokMedalCount[3] > 0;
+  const kubokMedalWidgetHtml = hasKubokMedals ? `
+    <div class="pp-stat-cell pp-stat-cell-wide">
+      <div class="pp-medal-row">
+        <div class="pp-medal-item"><span class="pp-medal-icon">🥇</span><span class="pp-medal-num">${kubokMedalCount[1]}</span></div>
+        <div class="pp-medal-item"><span class="pp-medal-icon">🥈</span><span class="pp-medal-num">${kubokMedalCount[2]}</span></div>
+        <div class="pp-medal-item"><span class="pp-medal-icon">🥉</span><span class="pp-medal-num">${kubokMedalCount[3]}</span></div>
+      </div>
+      <div class="label">Місця на Етапах Кубку України</div>
+    </div>` : '';
+
+  // Медалі УДЛ/ЗУДЛ — окремо, показуються лише коли перемикач увімкнений.
+  const udlMedalCount = {1:0,2:0,3:0};
   if(includeUDL){
     tournaments.forEach(t => {
       if(!t.isUDL) return;
@@ -2787,30 +2899,30 @@ function openPlayerProfile(name){
       const mw = t.nakkaMedalsWomen || t.medalsWomen;
       [m, mw].forEach(medal => {
         if(!medal) return;
-        if(medal.gold === name) medalCount[1]++;
-        if(medal.silver === name) medalCount[2]++;
-        if((medal.bronze || []).includes(name)) medalCount[3]++;
+        if(medal.gold === name) udlMedalCount[1]++;
+        if(medal.silver === name) udlMedalCount[2]++;
+        if((medal.bronze || []).includes(name)) udlMedalCount[3]++;
       });
     });
   }
-  const medalLabel = 'Місця на Етапах Кубку України' + (includeUDL ? ' та УДЛ' : '');
-  const hasMedalData = kubokEntry || (medalCount[1]+medalCount[2]+medalCount[3] > 0);
-  const medalWidgetHtml = hasMedalData ? `
+  const hasUdlMedals = includeUDL && (udlMedalCount[1]+udlMedalCount[2]+udlMedalCount[3] > 0);
+  const udlMedalWidgetHtml = hasUdlMedals ? `
     <div class="pp-stat-cell pp-stat-cell-wide">
       <div class="pp-medal-row">
-        <div class="pp-medal-item"><span class="pp-medal-icon">🥇</span><span class="pp-medal-num">${medalCount[1]}</span></div>
-        <div class="pp-medal-item"><span class="pp-medal-icon">🥈</span><span class="pp-medal-num">${medalCount[2]}</span></div>
-        <div class="pp-medal-item"><span class="pp-medal-icon">🥉</span><span class="pp-medal-num">${medalCount[3]}</span></div>
+        <div class="pp-medal-item"><span class="pp-medal-icon">🥇</span><span class="pp-medal-num">${udlMedalCount[1]}</span></div>
+        <div class="pp-medal-item"><span class="pp-medal-icon">🥈</span><span class="pp-medal-num">${udlMedalCount[2]}</span></div>
+        <div class="pp-medal-item"><span class="pp-medal-icon">🥉</span><span class="pp-medal-num">${udlMedalCount[3]}</span></div>
       </div>
-      <div class="label">${medalLabel}</div>
+      <div class="label">Місця на турнірах УДЛ/ЗУДЛ</div>
     </div>` : '';
+  const medalWidgetHtml = kubokMedalWidgetHtml + udlMedalWidgetHtml;
   const champHtml = playerChampionsHtml(name);
 
   const content = document.getElementById('player-modal-content');
   if(rows.length === 0){
     const ratingCharts = renderPlayerCurrentRatingChart(name) + renderPlayerRatingChart(name);
     const extraHtml = (medalWidgetHtml ? `<div class="pp-stat-row">${medalWidgetHtml}</div>` : '') + champHtml;
-    content.innerHTML = `<div class="pp-header">${playerPhotoHtml(name)}<div><h2>${name}</h2>${shareButtonHtml(name)}</div></div>` +
+    content.innerHTML = `<div class="pp-header">${playerPhotoHtml(name)}<div><h2>${name}</h2>${shareButtonHtml(name)}${udlToggleHtml}</div></div>` +
       extraHtml + (ratingCharts || `<p class="pp-chart-empty">Немає даних Nakka для цього гравця (з поточними фільтрами).</p>`);
   } else {
     const gender = rows[0].gender === 'women' ? 'Жінки' : 'Чоловіки';
@@ -2839,6 +2951,7 @@ function openPlayerProfile(name){
         <div>
           <h2>${name}</h2>
           ${shareButtonHtml(name)}
+          ${udlToggleHtml}
           <div class="pp-sub">${gender} · дані Nakka з ${totalTournaments} турнір(ів), ${rows[0].date}–${rows[rows.length-1].date}</div>
         </div>
       </div>
