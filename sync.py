@@ -51,7 +51,13 @@ def parse_num(s):
     s = (s or "").strip()
     if s in ("", "-"):
         return None
-    s = s.replace(",", ".")
+    if "," in s and "." in s:
+        # Обидва символи присутні — кома це роздільник ТИСЯЧ (напр. "1,049.60"),
+        # а крапка — десятковий роздільник. Просто прибираємо коми.
+        s = s.replace(",", "")
+    else:
+        # Лише кома — це десятковий роздільник (європейський запис, напр. "49,60").
+        s = s.replace(",", ".")
     try:
         return float(s) if "." in s else int(s)
     except ValueError:
@@ -1384,6 +1390,20 @@ CURATED_PLAYER_NAMES = [
     "Ішутін Ігор",
     "Іщенко Сергій",
 ]
+
+
+def is_pair_or_team_name(name):
+    """Той самий евристичний фільтр, що й на фронтенді (isIndividualPlayerName):
+    пари/дуети (через "/" чи "\\") та назви команд (ВЕЛИКИМИ ЛІТЕРАМИ) — це
+    НЕ окремі гравці, тому їх не можна автоматично додавати до списку пошуку."""
+    if not name:
+        return True
+    if "/" in name or "\\" in name or "," in name:
+        return True
+    if len(name) > 3 and name.upper() == name and any(c.isalpha() for c in name):
+        return True
+    return False
+
 
 MANUAL_NAME_ALIASES = {
     "Sol Deen": "Фатех Дін",
@@ -3881,6 +3901,43 @@ def main():
     telegram_news = fetch_telegram_news(TELEGRAM_CHANNEL, canonical_names, ukr_cities, limit=6)
     print(f"  Got {len(telegram_news)} Ukraine-relevant posts")
 
+    print("Comparing live data against curated player list (auto-adding genuinely new players)...")
+    live_names = set()
+    for r in nakka_player_records:
+        live_names.add(r["name"])
+    for p in men_aggregate:
+        live_names.add(p["name"])
+    for p in women_aggregate:
+        live_names.add(p["name"])
+    for season in ratings.values():
+        for row in season.get("rows", []):
+            if row.get("name"):
+                live_names.add(row["name"])
+    for r in champions_records:
+        for n in r["names"]:
+            live_names.add(n)
+    if current_rating_men:
+        for row in current_rating_men["rows"]:
+            if row.get("name"):
+                live_names.add(row["name"])
+    if current_rating_women:
+        for row in current_rating_women["rows"]:
+            if row.get("name"):
+                live_names.add(row["name"])
+
+    curated_set = set(CURATED_PLAYER_NAMES)
+    genuinely_new = sorted(n for n in live_names if n and n not in curated_set and not is_pair_or_team_name(n))
+    final_player_names = sorted(curated_set | set(genuinely_new), key=str.lower)
+    if genuinely_new:
+        print(f"  Знайдено {len(genuinely_new)} нових гравців (яких немає у перевіреному списку):")
+        for n in genuinely_new[:30]:
+            print(f"    + {n}")
+        if len(genuinely_new) > 30:
+            print(f"    ...та ще {len(genuinely_new) - 30}")
+        print("  (Це не пройшло ручної перевірки — раз на якийсь час попросіть новий Excel-експорт для звірки.)")
+    else:
+        print("  Нових гравців не знайдено — перевірений список і далі актуальний.")
+
     data = {
         "meta": {
             "lastUpdated": datetime.now(timezone.utc).isoformat(),
@@ -3898,7 +3955,7 @@ def main():
         "youtubeVideos": youtube_videos,
         "telegramNews": telegram_news,
         "championsRecords": champions_records,
-        "curatedPlayerNames": CURATED_PLAYER_NAMES,
+        "curatedPlayerNames": final_player_names,
     }
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
