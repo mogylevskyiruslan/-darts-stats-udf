@@ -2384,9 +2384,10 @@ let h2hAllNames = [];
 let h2hSelected = { 1: null, 2: null };
 
 function initH2HLookup(){
-  const names = new Set();
-  nakkaH2HStats.forEach(r => { names.add(r.name1); names.add(r.name2); });
-  h2hAllNames = [...names].sort((a,b) => a.localeCompare(b, 'uk'));
+  // Той самий перевірений список, що й для "Знайти гравця" — а не лише
+  // імена з реально зіграних матчів Nakka (це вилучало багатьох гравців,
+  // особливо старших років, з можливості порівняння профілів).
+  h2hAllNames = (curatedPlayerNames || []).slice().sort((a,b) => a.localeCompare(b, 'uk'));
 
   [1, 2].forEach(side => {
     const input = document.getElementById(`h2h-search-${side}`);
