@@ -313,6 +313,12 @@
 
   .pp-header{display:flex; align-items:flex-start; gap:16px;}
   .pp-header h2{font-size:26px; margin:0 0 4px;}
+  .master-badge{
+    display:inline-flex; align-items:center; gap:5px; margin-left:10px; margin-bottom:4px;
+    padding:3px 9px; background:rgba(252,194,2,0.14); border:1px solid var(--gold); border-radius:20px;
+    color:var(--gold); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.03em;
+    vertical-align:middle;
+  }
   .pp-photo-wrap{flex-shrink:0; width:76px; height:76px;}
   .pp-photo{width:76px; height:76px; border-radius:50%; object-fit:cover; object-position:50% 20%; border:2px solid var(--gold); display:block;}
   .pp-photo-placeholder{
@@ -1203,6 +1209,20 @@ let leaderboard = [];
 let leaderboardWomen = [];
 let championsRecords = [];
 let playerBios = {};
+let mastersLookup = {};
+function buildMastersLookup(){
+  mastersLookup = {};
+  (MASTERS_DATA || []).forEach(m => {
+    // Порівнюємо лише "Прізвище Ім'я" (перші 2 слова), ігноруючи по батькові.
+    const parts = m.name.trim().split(/\s+/);
+    if(parts.length < 2) return;
+    const key = parts[0] + ' ' + parts[1];
+    if(!mastersLookup[key]) mastersLookup[key] = m;
+  });
+}
+function isMasterOfSport(name){
+  return !!mastersLookup[name];
+}
 let curatedPlayerNames = [];
 
 function orgTag(org){
@@ -1823,6 +1843,7 @@ async function loadData(){
     renderMasters();
     initTop10Race();
     buildNameGenderMap();
+    buildMastersLookup();
     renderChampions();
     initChampionsRace();
     initGlobalPlayerSearch();
@@ -2553,7 +2574,7 @@ function renderPlayerSideCard(name, stats){
       <div class="pcard-head">
         ${playerPhotoHtml(name)}
         <div>
-          <div class="pcard-name">${name}${bio && bio.nickname ? ` <span class="pcard-nick">«${bio.nickname}»</span>` : ''}</div>
+          <div class="pcard-name">${name}${isMasterOfSport(name) ? ' <span title="Майстер спорту України">🎖️</span>' : ''}${bio && bio.nickname ? ` <span class="pcard-nick">«${bio.nickname}»</span>` : ''}</div>
           <div class="pcard-sub">${subParts.join(' · ')}</div>
         </div>
       </div>
@@ -3161,7 +3182,7 @@ function openPlayerProfile(name){
   if(rows.length === 0){
     const ratingCharts = renderPlayerCurrentRatingChart(name) + renderPlayerRatingChart(name);
     const extraHtml = (medalWidgetHtml ? `<div class="pp-stat-row">${medalWidgetHtml}</div>` : '') + bioHtml + champHtml;
-    content.innerHTML = `<div class="pp-header">${playerPhotoHtml(name)}<div><h2>${name}</h2>${shareButtonHtml(name)}${udlToggleHtml}</div></div>` +
+    content.innerHTML = `<div class="pp-header">${playerPhotoHtml(name)}<div><h2>${name}${isMasterOfSport(name) ? '<span class="master-badge">🎖️ Майстер спорту</span>' : ''}</h2>${shareButtonHtml(name)}${udlToggleHtml}</div></div>` +
       extraHtml + (ratingCharts || `<p class="pp-chart-empty">Немає даних Nakka для цього гравця (з поточними фільтрами).</p>`);
   } else {
     const gender = rows[0].gender === 'women' ? 'Жінки' : 'Чоловіки';
@@ -3193,7 +3214,7 @@ function openPlayerProfile(name){
       <div class="pp-header">
         ${playerPhotoHtml(name)}
         <div>
-          <h2>${name}</h2>
+          <h2>${name}${isMasterOfSport(name) ? '<span class="master-badge">🎖️ Майстер спорту</span>' : ''}</h2>
           ${shareButtonHtml(name)}
           ${udlToggleHtml}
           <div class="pp-sub">${gender} · дані Nakka з ${totalTournaments} турнір(ів), ${rows[0].date}–${rows[rows.length-1].date}</div>
