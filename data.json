@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-18T10:30:23.237242+00:00",
+  "lastUpdated": "2026-09-18T11:52:40.926916+00:00",
   "tournamentsCount": 209
  },
  "tournaments": [
@@ -9081,23 +9081,33 @@
     }
    },
    "medals": {
-    "gold": "Береш Карол",
-    "silver": "Стецишин Віталій",
+    "gold": "Лец Дмитро",
+    "silver": "Бургелов Олег",
     "bronze": [
-     "Горняк Іштван",
-     "Баранов Олександр"
+     "Усик Артем"
     ]
    },
    "medalsWomen": {
-    "gold": "Чумак Ганна",
-    "silver": "Лопухова Ганна",
+    "gold": "Лопухова Ганна",
+    "silver": "Чумак Ганна",
     "bronze": [
-     "Стребиж Тетяна",
-     "Черноброва Олександра"
+     "Бородуліна Ганна"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Лец Дмитро",
+    "silver": "Бургелов Олег",
+    "bronze": [
+     "Усик Артем"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Лопухова Ганна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Бородуліна Ганна"
+    ]
+   }
   },
   {
    "total": 58,
@@ -9468,10 +9478,34 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "medals": {
+    "gold": "Орєшкін Олександр",
+    "silver": "Костильов Євгеній",
+    "bronze": [
+     "Лец Дмитро"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Білодід Христина",
+    "silver": "Пунцуле Аніта",
+    "bronze": [
+     "Стрільченя Христина"
+    ]
+   },
+   "nakkaMedals": {
+    "gold": "Орєшкін Олександр",
+    "silver": "Костильов Євгеній",
+    "bronze": [
+     "Лец Дмитро"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Білодід Христина",
+    "silver": "Пунцуле Аніта",
+    "bronze": [
+     "Стрільченя Христина"
+    ]
+   }
   },
   {
    "total": 64,
@@ -324000,6 +324034,15 @@
    "startYear": "2024",
    "dartsWeight": "22"
   },
+  "Бульбах Вадим": {
+   "nickname": "BULBAKH",
+   "birthDate": "14.08.1973",
+   "region": "Івано-Франківськ",
+   "startYear": "2024",
+   "dartsManufacturer": "mission",
+   "dartsModel": "cam crabtree",
+   "dartsWeight": "21"
+  },
   "Заборний Андрій": {
    "nickname": "CAPT",
    "birthDate": "26.06.1980",
@@ -324015,7 +324058,7 @@
    "region": "обл. Миколаївська, м. Південноукраїнськ",
    "startYear": "2021",
    "dartsManufacturer": "Target",
-   "dartsModel": "EXO",
+   "dartsModel": "EXO 03",
    "dartsWeight": "23"
   },
   "Гринів Юрій": {
@@ -324088,6 +324131,15 @@
    "dartsModel": "Fusion",
    "dartsWeight": "24"
   },
+  "Яненко Сергій": {
+   "nickname": "Paladin",
+   "birthDate": "01.03.1985",
+   "region": "Чернівці",
+   "startYear": "грудень 2008",
+   "dartsManufacturer": "Target",
+   "dartsModel": "Gabriel Clemens",
+   "dartsWeight": "21"
+  },
   "Арійчук Наталія": {
    "nickname": "President",
    "birthDate": "28.07.1989",
@@ -324121,6 +324173,15 @@
    "dartsManufacturer": "Red Dragon",
    "dartsModel": "Hellfire",
    "dartsWeight": "24"
+  },
+  "Микитин Ярослав": {
+   "nickname": "UncleKA",
+   "birthDate": "25.10.1983",
+   "region": "Львівська обл., Львів",
+   "startYear": "2021",
+   "dartsManufacturer": "Unicorn",
+   "dartsModel": "Garry Anderson Phase 4",
+   "dartsWeight": "23"
   },
   "Арійчук Олександр": {
    "nickname": "WinAlex",
@@ -324165,15 +324226,6 @@
    "birthDate": "25.08.1988",
    "region": "Одеська область,м.Роздільна",
    "startYear": "2025"
-  },
-  "Яненко Сергій": {
-   "nickname": "Paladin",
-   "birthDate": "01.03.1985",
-   "region": "Чернівці",
-   "startYear": "грудень 2008",
-   "dartsManufacturer": "Target",
-   "dartsModel": "Gabriel Clemens",
-   "dartsWeight": "21"
   }
  },
  "curatedPlayerNames": [
