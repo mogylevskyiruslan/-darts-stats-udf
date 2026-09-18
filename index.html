@@ -2500,8 +2500,16 @@ function getPlayerQuickStats(name){
   const totalMatchesPlayed = rows.reduce((s,r)=>s+(r.match||0), 0);
   const currentEntry = (currentRatingMen && currentRatingMen.rows.find(r=>r.name===name))
     || (currentRatingWomen && currentRatingWomen.rows.find(r=>r.name===name));
+  // Середній за останні 50 зіграних матчів — окремих даних по легах немає,
+  // тож рахуємо по найдетальнішому джерелу, що є (nakkaMatchStats, по 1
+  // запису на матч), сортуючи від найновіших.
+  const recentMatches = myMatches.slice().sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date)).slice(0, 50);
+  const avgLast50 = recentMatches.length
+    ? Math.round((recentMatches.reduce((s,r)=>s+r.avg, 0) / recentMatches.length) * 100) / 100
+    : null;
   return {
     tournaments: rows.length,
+    avgLast50, avgLast50Count: recentMatches.length,
     bestAvg: rows.length ? Math.max(...rows.map(r=>r.avg||0)) : null,
     bestMatchAvg: myMatches.length ? Math.max(...myMatches.map(r=>r.avg)) : null,
     total180: rows.reduce((s,r)=>s+(r.ton80||0), 0),
@@ -2551,7 +2559,7 @@ function renderPlayerSideCard(name, stats){
       </div>
       ${bioLineHtml}
       <div class="pcard-stats">
-        <div class="pcard-stat"><div class="pcard-stat-num">${stats.bestAvg !== null ? stats.bestAvg.toFixed(2) : '—'}</div><div class="pcard-stat-label">Найкращий середній</div></div>
+        <div class="pcard-stat"><div class="pcard-stat-num">${stats.avgLast50 !== null ? stats.avgLast50.toFixed(2) : '—'}</div><div class="pcard-stat-label">Серед. за 50 матчів</div></div>
         <div class="pcard-stat"><div class="pcard-stat-num">${stats.total180}</div><div class="pcard-stat-label">180-ки всього</div></div>
         <div class="pcard-stat"><div class="pcard-stat-num">${stats.bestCheckout || '—'}</div><div class="pcard-stat-label">Найкраще закриття</div></div>
         <div class="pcard-stat"><div class="pcard-stat-num">${stats.winRate !== null ? stats.winRate + '%' : '—'}</div><div class="pcard-stat-label">% виграних матчів</div></div>
@@ -2570,6 +2578,7 @@ function renderProfileComparison(p1, p2){
   const includeUDL = document.getElementById('global-toggle-udl').checked;
 
   const rows = [
+    { label: `Середній за останні ${Math.max(s1.avgLast50Count, s2.avgLast50Count)||50} матчів`, v1: s1.avgLast50, v2: s2.avgLast50, fmt: v => v !== null ? v.toFixed(2) : '—' },
     { label: 'Поточне місце в рейтингу', v1: s1.currentRank, v2: s2.currentRank, fmt: v => v ?? '—', lowerBetter: true },
     { label: 'Турнірів (Nakka)', v1: s1.tournaments, v2: s2.tournaments },
     { label: '% виграних матчів', v1: s1.winRate, v2: s2.winRate, fmt: v => v !== null ? v+'%' : '—' },
@@ -3165,6 +3174,11 @@ function openPlayerProfile(name){
     const includeUDLmatch = includeUDL;
     const myMatches = nakkaMatchStats.filter(r => r.name === name && (includeUDLmatch || !r.isUDL));
     const bestMatchAvg = myMatches.length ? Math.max(...myMatches.map(r=>r.avg)) : null;
+    const recentMatches = myMatches.slice().sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date)).slice(0, 50);
+    const avgLast50 = recentMatches.length
+      ? Math.round((recentMatches.reduce((s,r)=>s+r.avg, 0) / recentMatches.length) * 100) / 100
+      : null;
+    const avgLast50Label = 'Середній за останні ' + (recentMatches.length || 50) + ' матчів';
 
     const avgChartPoints = rows.map(r => ({ x: r.date.slice(3), y: r.avg }));
     const avgChartSvg = svgLineChart(avgChartPoints, {});
@@ -3187,6 +3201,7 @@ function openPlayerProfile(name){
       </div>
 
       <div class="pp-stat-row">
+        <div class="pp-stat-cell"><div class="num">${avgLast50 !== null ? avgLast50.toFixed(2) : '—'}</div><div class="label">${avgLast50Label}</div></div>
         <div class="pp-stat-cell"><div class="num">${bestAvg.toFixed(2)}</div><div class="label">Найкращий середній</div></div>
         <div class="pp-stat-cell"><div class="num">${bestMatchAvg !== null ? bestMatchAvg.toFixed(2) : '—'}</div><div class="label">Найкращий середній матчу</div></div>
         <div class="pp-stat-cell"><div class="num">${total180}</div><div class="label">180-ки всього</div></div>
