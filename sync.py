@@ -311,17 +311,19 @@ def parse_bio_sheet(rows, name_index, canonical_names):
         if cell(2):
             bio["nickname"] = cell(2)
         if cell(3):
-            bio["birthDate"] = cell(3)
+            bio["profession"] = cell(3)
         if cell(4):
-            bio["region"] = cell(4)
+            bio["birthDate"] = cell(4)
         if cell(5):
-            bio["startYear"] = cell(5)
+            bio["region"] = cell(5)
         if cell(6):
-            bio["dartsManufacturer"] = cell(6)
+            bio["startYear"] = cell(6)
         if cell(7):
-            bio["dartsModel"] = cell(7)
+            bio["dartsManufacturer"] = cell(7)
         if cell(8):
-            bio["dartsWeight"] = cell(8)
+            bio["dartsModel"] = cell(8)
+        if cell(9):
+            bio["dartsWeight"] = cell(9)
 
         if bio:
             bios[name] = bio

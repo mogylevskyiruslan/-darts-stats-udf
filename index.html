@@ -2564,6 +2564,7 @@ function renderPlayerSideCard(name, stats){
   if(age !== null) subParts.push(age + ' р.');
   if(bio && bio.region) subParts.push(bio.region);
   const bioLineParts = [];
+  if(bio && bio.profession) bioLineParts.push(bio.profession);
   if(bio && bio.startYear) bioLineParts.push('У дартсі з ' + bio.startYear);
   if(bio && (bio.dartsManufacturer || bio.dartsModel)){
     bioLineParts.push('Дротики: ' + [bio.dartsManufacturer, bio.dartsModel].filter(Boolean).join(' '));
@@ -3031,6 +3032,7 @@ function playerBioHtml(name){
   const age = calcAge(bio.birthDate);
   const rows = [];
   if(bio.nickname) rows.push(['Нікнейм', bio.nickname]);
+  if(bio.profession) rows.push(['Професія', bio.profession]);
   if(bio.birthDate) rows.push(['Дата народження', bio.birthDate + (age !== null ? ` (${age} р.)` : '')]);
   if(bio.region) rows.push(['Регіон / місто', bio.region]);
   if(bio.startYear) rows.push(['Грає в дартс з', bio.startYear + ' року']);
