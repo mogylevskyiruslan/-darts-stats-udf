@@ -540,6 +540,11 @@
   .pcard-head{display:flex; align-items:center; gap:14px; margin-bottom:16px;}
   .pcard-name{font-family:'Oswald',sans-serif; font-weight:700; font-size:16px; text-transform:uppercase; letter-spacing:0.02em;}
   .pcard-sub{color:var(--muted); font-size:12px; margin-top:2px;}
+  .pcard-nick{color:var(--gold); font-weight:400; font-size:13px;}
+  .pcard-bio-line{
+    font-size:11.5px; color:var(--muted); background:var(--panel); border-radius:5px;
+    padding:6px 10px; margin-bottom:14px;
+  }
   .pcard-stats{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px;}
   .pcard-stat{background:var(--panel); border-radius:6px; padding:10px 12px;}
   .pcard-stat-num{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:18px; color:var(--gold);}
@@ -1197,6 +1202,7 @@ let tournaments = [];
 let leaderboard = [];
 let leaderboardWomen = [];
 let championsRecords = [];
+let playerBios = {};
 let curatedPlayerNames = [];
 
 function orgTag(org){
@@ -1780,6 +1786,7 @@ async function loadData(){
     currentRatingMen = data.currentRatingMen || null;
     currentRatingWomen = data.currentRatingWomen || null;
     championsRecords = data.championsRecords || [];
+    playerBios = data.playerBios || {};
     curatedPlayerNames = data.curatedPlayerNames || [];
 
     try {
@@ -2521,15 +2528,28 @@ function renderPlayerSideCard(name, stats){
     if(row) return row.gender === 'women' ? 'Жінки' : 'Чоловіки';
     return nameGenderMap[name] === 'women' ? 'Жінки' : 'Чоловіки';
   })();
+  const bio = playerBios[name];
+  const age = bio ? calcAge(bio.birthDate) : null;
+  const subParts = [genderLabel];
+  if(stats.currentRank) subParts.push('рейтинг #' + stats.currentRank);
+  if(age !== null) subParts.push(age + ' р.');
+  if(bio && bio.region) subParts.push(bio.region);
+  const bioLineParts = [];
+  if(bio && bio.startYear) bioLineParts.push('У дартсі з ' + bio.startYear);
+  if(bio && (bio.dartsManufacturer || bio.dartsModel)){
+    bioLineParts.push('Дротики: ' + [bio.dartsManufacturer, bio.dartsModel].filter(Boolean).join(' '));
+  }
+  const bioLineHtml = bioLineParts.length ? `<div class="pcard-bio-line">${bioLineParts.join(' · ')}</div>` : '';
   return `
     <div class="pcard">
       <div class="pcard-head">
         ${playerPhotoHtml(name)}
         <div>
-          <div class="pcard-name">${name}</div>
-          <div class="pcard-sub">${genderLabel}${stats.currentRank ? ' · рейтинг #' + stats.currentRank : ''}</div>
+          <div class="pcard-name">${name}${bio && bio.nickname ? ` <span class="pcard-nick">«${bio.nickname}»</span>` : ''}</div>
+          <div class="pcard-sub">${subParts.join(' · ')}</div>
         </div>
       </div>
+      ${bioLineHtml}
       <div class="pcard-stats">
         <div class="pcard-stat"><div class="pcard-stat-num">${stats.bestAvg !== null ? stats.bestAvg.toFixed(2) : '—'}</div><div class="pcard-stat-label">Найкращий середній</div></div>
         <div class="pcard-stat"><div class="pcard-stat-num">${stats.total180}</div><div class="pcard-stat-label">180-ки всього</div></div>
@@ -2960,6 +2980,47 @@ function playerPhotoHtml(name){
   `;
 }
 
+function calcAge(birthDateStr){
+  // Очікує ДД.ММ.РРРР
+  const m = /^(\d{1,2})\.(\d{1,2})\.(\d{4})$/.exec((birthDateStr || '').trim());
+  if(!m) return null;
+  const [, d, mo, y] = m;
+  const birth = new Date(+y, +mo - 1, +d);
+  if(isNaN(birth.getTime())) return null;
+  const now = new Date();
+  let age = now.getFullYear() - birth.getFullYear();
+  const beforeBirthday = (now.getMonth() < birth.getMonth()) ||
+    (now.getMonth() === birth.getMonth() && now.getDate() < birth.getDate());
+  if(beforeBirthday) age--;
+  return age;
+}
+
+function playerBioHtml(name){
+  const bio = playerBios[name];
+  if(!bio) return '';
+  const age = calcAge(bio.birthDate);
+  const rows = [];
+  if(bio.nickname) rows.push(['Нікнейм', bio.nickname]);
+  if(bio.birthDate) rows.push(['Дата народження', bio.birthDate + (age !== null ? ` (${age} р.)` : '')]);
+  if(bio.region) rows.push(['Регіон / місто', bio.region]);
+  if(bio.startYear) rows.push(['Грає в дартс з', bio.startYear + ' року']);
+  if(bio.dartsManufacturer || bio.dartsModel){
+    rows.push(['Дротики', [bio.dartsManufacturer, bio.dartsModel].filter(Boolean).join(' · ')]);
+  }
+  if(bio.dartsWeight) rows.push(['Вага дротиків', bio.dartsWeight + ' г']);
+  if(rows.length === 0) return '';
+  return `
+    <div class="pp-section-title">БІО гравця</div>
+    <div class="table-wrap">
+      <table class="champ-cat-table">
+        <tbody>${rows.map(([label, val]) => `
+          <tr><td style="color:var(--muted); width:40%;">${label}</td><td>${val}</td></tr>
+        `).join('')}</tbody>
+      </table>
+    </div>
+  `;
+}
+
 function playerChampionsHtml(name){
   const records = (championsRecords || []).filter(r => r.names.includes(name));
   if(records.length === 0) return '';
@@ -3085,11 +3146,12 @@ function openPlayerProfile(name){
     </div>` : '';
   const medalWidgetHtml = kubokMedalWidgetHtml + udlMedalWidgetHtml;
   const champHtml = playerChampionsHtml(name);
+  const bioHtml = playerBioHtml(name);
 
   const content = document.getElementById('player-modal-content');
   if(rows.length === 0){
     const ratingCharts = renderPlayerCurrentRatingChart(name) + renderPlayerRatingChart(name);
-    const extraHtml = (medalWidgetHtml ? `<div class="pp-stat-row">${medalWidgetHtml}</div>` : '') + champHtml;
+    const extraHtml = (medalWidgetHtml ? `<div class="pp-stat-row">${medalWidgetHtml}</div>` : '') + bioHtml + champHtml;
     content.innerHTML = `<div class="pp-header">${playerPhotoHtml(name)}<div><h2>${name}</h2>${shareButtonHtml(name)}${udlToggleHtml}</div></div>` +
       extraHtml + (ratingCharts || `<p class="pp-chart-empty">Немає даних Nakka для цього гравця (з поточними фільтрами).</p>`);
   } else {
@@ -3134,6 +3196,7 @@ function openPlayerProfile(name){
         ${medalWidgetHtml}
       </div>
 
+      ${bioHtml}
       ${champHtml}
 
       <div class="pp-section-title">Динаміка середнього по турнірах</div>

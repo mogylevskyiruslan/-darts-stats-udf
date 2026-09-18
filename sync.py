@@ -20,6 +20,7 @@ from datetime import datetime, timezone
 
 TOURNAMENTS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTZxNlB-yHQDjWX3Y_n4GCUL_4sY5oLcLeW9rR_MI5zlm2p0YqZmHUUXw07bLw1YTiUg4Ar6bRbn_Dd/pub?output=csv&gid=0"
 CHAMPIONS_CSV_URL = "https://docs.google.com/spreadsheets/d/1QWz4s3O0hfLZ5ko8V8fn8Xuy59sa2zfglqyDixnFLNk/export?format=csv&gid=1583448563"
+BIO_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSSKkG1BP7xihgTkLgBg6Xju_iUDyNeG65Zn20v8hR6g8WS8m2Rf-DhUHgZueHZVD3FKhmjhJ1OpnsN/pub?output=csv"
 PRIZES_MEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U550qzdDKkLxenpx2LUYMQ8Uccqf9ZdkyP7ruIqdoPt_tX-hQWKhQOnTGc6HG6jiPQmQEuA/pub?output=csv&gid=0"
 PRIZES_WOMEN_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5IoUV8U550qzdDKkLxenpx2LUYMQ8Uccqf9ZdkyP7ruIqdoPt_tX-hQWKhQOnTGc6HG6jiPQmQEuA/pub?output=csv&gid=109502045"
 RATINGS_SOURCES_PATH = "ratings_sources.json"
@@ -288,6 +289,44 @@ def parse_champions_sheet(rows, name_index, canonical_names):
         i += 1
 
     return records
+
+
+def parse_bio_sheet(rows, name_index, canonical_names):
+    """Парсить таблицю 'BIO Гравців' (окрема вкладка, наповнюється самими
+    гравцями). Формат: рядок 0 — груповий заголовок ('Дроти' над трьома
+    колонками), рядок 1 — реальні заголовки колонок, рядок 2 — рядок
+    фільтра (порожній), дані з рядка 3. Повертає {ім'я: {...біо-поля...}},
+    включаючи лише НЕПОРОЖНІ поля для кожного гравця."""
+    bios = {}
+    for row in rows[3:]:
+        if len(row) < 2 or not row[1].strip():
+            continue
+        raw_name = row[1].strip()
+        name = resolve_name(raw_name, name_index, canonical_names)
+
+        def cell(idx):
+            return row[idx].strip() if idx < len(row) else ""
+
+        bio = {}
+        if cell(2):
+            bio["nickname"] = cell(2)
+        if cell(3):
+            bio["birthDate"] = cell(3)
+        if cell(4):
+            bio["region"] = cell(4)
+        if cell(5):
+            bio["startYear"] = cell(5)
+        if cell(6):
+            bio["dartsManufacturer"] = cell(6)
+        if cell(7):
+            bio["dartsModel"] = cell(7)
+        if cell(8):
+            bio["dartsWeight"] = cell(8)
+
+        if bio:
+            bios[name] = bio
+
+    return bios
 
 
 def build_leaderboard_from_podiums(year_data):
@@ -3849,6 +3888,15 @@ def main():
         print(f"  WARNING: champions sheet fetch failed ({e}), skipping")
         champions_records = []
 
+    print("Fetching player bios (заповнюється самими гравцями)...")
+    try:
+        bio_rows = fetch_csv(BIO_CSV_URL)
+        player_bios = parse_bio_sheet(bio_rows, name_index, canonical_names)
+        print(f"  Parsed bios for {len(player_bios)} players")
+    except Exception as e:
+        print(f"  WARNING: bio sheet fetch failed ({e}), skipping")
+        player_bios = {}
+
     print("Fetching season ratings (Кубок України, all tabs)...")
     ratings = build_ratings(RATINGS_SOURCES_PATH, name_index, canonical_names)
     print(f"Parsed {len(ratings)} rating seasons")
@@ -3955,6 +4003,7 @@ def main():
         "youtubeVideos": youtube_videos,
         "telegramNews": telegram_news,
         "championsRecords": champions_records,
+        "playerBios": player_bios,
         "curatedPlayerNames": final_player_names,
     }
 
