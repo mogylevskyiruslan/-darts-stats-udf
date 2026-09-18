@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-18T12:07:13.738159+00:00",
+  "lastUpdated": "2026-09-18T18:08:44.458772+00:00",
   "tournamentsCount": 209
  },
  "tournaments": [
@@ -324031,7 +324031,7 @@
    "nickname": "Bitsukha",
    "birthDate": "04.10.1992",
    "region": "Полтава",
-   "startYear": "2024",
+   "startYear": "2025",
    "dartsWeight": "22"
   },
   "Бульбах Вадим": {
@@ -324081,6 +324081,7 @@
   },
   "Могилевський Руслан": {
    "nickname": "Grave",
+   "profession": "Project Manager",
    "birthDate": "31.05.1990",
    "region": "Харків",
    "startYear": "2018",
@@ -324116,11 +324117,12 @@
   },
   "Лановенко Ксенія": {
    "nickname": "Koch",
+   "profession": "HR",
    "birthDate": "07.05.1992",
    "region": "Харків",
    "startYear": "2020",
    "dartsManufacturer": "Red Dragon",
-   "dartsWeight": "29"
+   "dartsWeight": "26"
   },
   "Гончаров Едуард": {
    "nickname": "Krait",
@@ -324149,6 +324151,9 @@
    "dartsModel": "Supergrip",
    "dartsWeight": "21"
   },
+  "Фатех Дін": {
+   "nickname": "Soul"
+  },
   "Скрипай Дмитро": {
    "nickname": "Stradivari",
    "birthDate": "06.05.1994",
@@ -324164,6 +324169,14 @@
    "dartsManufacturer": "Target",
    "dartsModel": "Steven Bunting",
    "dartsWeight": "17"
+  },
+  "Терещенко Любов": {
+   "nickname": "TERA",
+   "birthDate": "31.07.1958",
+   "region": "Кривий Ріг, Дніпропетровська область",
+   "startYear": "2021",
+   "dartsManufacturer": "Кастом",
+   "dartsWeight": "23"
   },
   "Гринів Олександр": {
    "nickname": "The Master",
@@ -324199,6 +324212,13 @@
    "dartsManufacturer": "Unicorn",
    "dartsModel": "Phil Taylor Phase 5",
    "dartsWeight": "24"
+  },
+  "Чайковський Руслан": {
+   "birthDate": "03.07.1962",
+   "region": "м.Полтава",
+   "startYear": "2022",
+   "dartsManufacturer": "TARGET",
+   "dartsWeight": "23"
   },
   "Агневщиков Олег": {
    "birthDate": "04.06.1980",
