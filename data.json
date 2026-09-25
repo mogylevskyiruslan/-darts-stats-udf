@@ -1,7 +1,7 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-24T10:26:44.463678+00:00",
-  "tournamentsCount": 210
+  "lastUpdated": "2026-09-25T10:09:51.962549+00:00",
+  "tournamentsCount": 212
  },
  "tournaments": [
   {
@@ -9609,6 +9609,46 @@
    }
   },
   {
+   "total": 53,
+   "men": 40,
+   "menAvg": null,
+   "women": 13,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 2 етап",
+   "date": "08.08.2010",
+   "city": "Луцьк",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/12dIT5v07jmoeFtIewDsoW4DT7ZcldSgxOkIKQhgSCLk/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Чік Едуард",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Толкачов В'ячеслав"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Білодід Христина",
+    "silver": "Перетятько Тетяна",
+    "bronze": [
+     "Ткачук Вікторія"
+    ]
+   },
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
    "total": 62,
    "men": 47,
    "menAvg": null,
@@ -9680,6 +9720,46 @@
      "СК Богатир (Мамика Олександр, Дихтяр Вадим, Шинкаренко Василь, Варивода Володимир)"
     ]
    },
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": null,
+   "men": null,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "ЧУ 2009",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "31.01.2010",
+   "city": "Черкаси",
+   "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/111nPU3UUSM5s1Xusba0DqubdQQs5ce85FOIcySw_xq4/edit?tab=t.0#heading=h.tqidzsot908v",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Мелашенко Владислав",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Десинський Максим"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Білодід Христина",
+    "silver": "Калаур Інна",
+    "bronze": [
+     "Моісеєнко Віталіна"
+    ]
+   },
+   "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
   {
@@ -9766,10 +9846,10 @@
   {
    "name": "Мамика Олександр",
    "gold": 9,
-   "silver": 10,
+   "silver": 11,
    "bronze": 10,
    "champUA": 0,
-   "total": 29,
+   "total": 30,
    "rank": 4
   },
   {
@@ -9784,10 +9864,10 @@
   {
    "name": "Ледєньов Вадим",
    "gold": 5,
-   "silver": 2,
+   "silver": 3,
    "bronze": 2,
    "champUA": 5,
-   "total": 9,
+   "total": 10,
    "rank": 6
   },
   {
@@ -9845,13 +9925,22 @@
    "rank": 12
   },
   {
+   "name": "Чік Едуард",
+   "gold": 2,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 3,
+   "rank": 13
+  },
+  {
    "name": "Фатех Дін",
    "gold": 2,
    "silver": 0,
    "bronze": 1,
    "champUA": 0,
    "total": 3,
-   "rank": 13
+   "rank": 14
   },
   {
    "name": "Вацлавскі Лукаш",
@@ -9860,7 +9949,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 2,
-   "rank": 14
+   "rank": 15
   },
   {
    "name": "Понтус Андрій",
@@ -9869,7 +9958,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 3,
-   "rank": 15
+   "rank": 16
   },
   {
    "name": "Ємельянов Олександр",
@@ -9878,7 +9967,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 3,
-   "rank": 16
+   "rank": 17
   },
   {
    "name": "Костильов Євгеній",
@@ -9887,7 +9976,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 3,
-   "rank": 17
+   "rank": 18
   },
   {
    "name": "Новак Едуард",
@@ -9896,15 +9985,6 @@
    "bronze": 1,
    "champUA": 0,
    "total": 3,
-   "rank": 18
-  },
-  {
-   "name": "Чік Едуард",
-   "gold": 1,
-   "silver": 1,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 2,
    "rank": 19
   },
   {
@@ -10043,16 +10123,16 @@
    "rank": 34
   },
   {
-   "name": "Гетманцев Олександр",
+   "name": "Невінчаний Едуард",
    "gold": 0,
    "silver": 2,
-   "bronze": 1,
+   "bronze": 2,
    "champUA": 0,
-   "total": 3,
+   "total": 4,
    "rank": 35
   },
   {
-   "name": "Невінчаний Едуард",
+   "name": "Гетманцев Олександр",
    "gold": 0,
    "silver": 2,
    "bronze": 1,
@@ -10466,7 +10546,7 @@
    "rank": 81
   },
   {
-   "name": "Тямолов Роман",
+   "name": "Толкачов В'ячеслав",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10475,7 +10555,7 @@
    "rank": 82
   },
   {
-   "name": "Холліуелл Вейн",
+   "name": "Тямолов Роман",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10484,7 +10564,7 @@
    "rank": 83
   },
   {
-   "name": "Хімчак Сергій",
+   "name": "Холліуелл Вейн",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10493,13 +10573,22 @@
    "rank": 84
   },
   {
-   "name": "Царолунга Дмитро",
+   "name": "Хімчак Сергій",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
    "champUA": 0,
    "total": 1,
    "rank": 85
+  },
+  {
+   "name": "Царолунга Дмитро",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 86
   }
  ],
  "leaderboardWomen": [
@@ -10594,13 +10683,22 @@
    "rank": 10
   },
   {
+   "name": "Білодід Христина",
+   "gold": 2,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 1,
+   "total": 3,
+   "rank": 11
+  },
+  {
    "name": "Гончаренко Інна",
    "gold": 1,
    "silver": 6,
    "bronze": 6,
    "champUA": 1,
    "total": 13,
-   "rank": 11
+   "rank": 12
   },
   {
    "name": "Шклярук Наталія",
@@ -10609,7 +10707,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 5,
-   "rank": 12
+   "rank": 13
   },
   {
    "name": "Камелькова Людмила",
@@ -10618,7 +10716,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 4,
-   "rank": 13
+   "rank": 14
   },
   {
    "name": "Калаур Інна",
@@ -10627,7 +10725,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 3,
-   "rank": 14
+   "rank": 15
   },
   {
    "name": "Новікова Зоя",
@@ -10636,16 +10734,16 @@
    "bronze": 1,
    "champUA": 0,
    "total": 3,
-   "rank": 15
+   "rank": 16
   },
   {
-   "name": "Білодід Христина",
+   "name": "Перетятько Тетяна",
    "gold": 1,
    "silver": 1,
-   "bronze": 0,
+   "bronze": 1,
    "champUA": 1,
-   "total": 2,
-   "rank": 16
+   "total": 3,
+   "rank": 17
   },
   {
    "name": "Пивошенко Олена",
@@ -10654,7 +10752,7 @@
    "bronze": 3,
    "champUA": 0,
    "total": 4,
-   "rank": 17
+   "rank": 18
   },
   {
    "name": "Ільясова Альбіна",
@@ -10663,7 +10761,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 2,
-   "rank": 18
+   "rank": 19
   },
   {
    "name": "Марет Лійрі",
@@ -10671,15 +10769,6 @@
    "silver": 0,
    "bronze": 1,
    "champUA": 0,
-   "total": 2,
-   "rank": 19
-  },
-  {
-   "name": "Перетятько Тетяна",
-   "gold": 1,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 1,
    "total": 2,
    "rank": 20
   },
@@ -10747,7 +10836,7 @@
    "rank": 27
   },
   {
-   "name": "Чабанова Ганна",
+   "name": "Новикова Зоя",
    "gold": 0,
    "silver": 2,
    "bronze": 0,
@@ -10756,16 +10845,16 @@
    "rank": 28
   },
   {
-   "name": "Лановенко Ксенія",
+   "name": "Чабанова Ганна",
    "gold": 0,
-   "silver": 1,
-   "bronze": 4,
+   "silver": 2,
+   "bronze": 0,
    "champUA": 0,
-   "total": 5,
+   "total": 2,
    "rank": 29
   },
   {
-   "name": "Соколова Вікторія",
+   "name": "Лановенко Ксенія",
    "gold": 0,
    "silver": 1,
    "bronze": 4,
@@ -10774,16 +10863,16 @@
    "rank": 30
   },
   {
-   "name": "Дзюбій Юлія",
+   "name": "Соколова Вікторія",
    "gold": 0,
    "silver": 1,
-   "bronze": 1,
+   "bronze": 4,
    "champUA": 0,
-   "total": 2,
+   "total": 5,
    "rank": 31
   },
   {
-   "name": "Зайцева Інна",
+   "name": "Дзюбій Юлія",
    "gold": 0,
    "silver": 1,
    "bronze": 1,
@@ -10792,16 +10881,16 @@
    "rank": 32
   },
   {
-   "name": "Журавель Алла",
+   "name": "Зайцева Інна",
    "gold": 0,
    "silver": 1,
-   "bronze": 0,
+   "bronze": 1,
    "champUA": 0,
-   "total": 1,
+   "total": 2,
    "rank": 33
   },
   {
-   "name": "Новикова Зоя",
+   "name": "Журавель Алла",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -10846,7 +10935,7 @@
    "rank": 38
   },
   {
-   "name": "Стребиж Тетяна",
+   "name": "Спекторенко Катерина",
    "gold": 0,
    "silver": 0,
    "bronze": 2,
@@ -10855,16 +10944,16 @@
    "rank": 39
   },
   {
-   "name": "Ігнатюк Наталія",
+   "name": "Стребиж Тетяна",
    "gold": 0,
    "silver": 0,
-   "bronze": 1,
+   "bronze": 2,
    "champUA": 0,
-   "total": 1,
+   "total": 2,
    "rank": 40
   },
   {
-   "name": "Богданова Діна",
+   "name": "Ігнатюк Наталія",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10873,7 +10962,7 @@
    "rank": 41
   },
   {
-   "name": "Борисова Марина",
+   "name": "Богданова Діна",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10882,7 +10971,7 @@
    "rank": 42
   },
   {
-   "name": "Борисова Марія",
+   "name": "Борисова Марина",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10891,7 +10980,7 @@
    "rank": 43
   },
   {
-   "name": "Букетова Ірина",
+   "name": "Борисова Марія",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10900,7 +10989,7 @@
    "rank": 44
   },
   {
-   "name": "Білецька Олена",
+   "name": "Букетова Ірина",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10909,7 +10998,7 @@
    "rank": 45
   },
   {
-   "name": "Гавриш Ольга",
+   "name": "Білецька Олена",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10918,7 +11007,7 @@
    "rank": 46
   },
   {
-   "name": "Гордієнко Христина",
+   "name": "Гавриш Ольга",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10927,7 +11016,7 @@
    "rank": 47
   },
   {
-   "name": "Карнаух Валентина",
+   "name": "Гордієнко Христина",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10936,7 +11025,7 @@
    "rank": 48
   },
   {
-   "name": "Лях Світлана",
+   "name": "Карнаух Валентина",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10945,7 +11034,7 @@
    "rank": 49
   },
   {
-   "name": "Молдован Емілія",
+   "name": "Лях Світлана",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10954,7 +11043,7 @@
    "rank": 50
   },
   {
-   "name": "Некристова Наталя",
+   "name": "Молдован Емілія",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10963,7 +11052,7 @@
    "rank": 51
   },
   {
-   "name": "Паламар Оксана",
+   "name": "Некристова Наталя",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10972,7 +11061,7 @@
    "rank": 52
   },
   {
-   "name": "Полтавець Світлана",
+   "name": "Паламар Оксана",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10981,7 +11070,7 @@
    "rank": 53
   },
   {
-   "name": "Спекторенко Катерина",
+   "name": "Полтавець Світлана",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10990,7 +11079,7 @@
    "rank": 54
   },
   {
-   "name": "Федоришина Алла",
+   "name": "Ткачук Вікторія",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -10999,7 +11088,7 @@
    "rank": 55
   },
   {
-   "name": "Федотова Ірина",
+   "name": "Федоришина Алла",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11008,7 +11097,7 @@
    "rank": 56
   },
   {
-   "name": "Червинська Ніна",
+   "name": "Федотова Ірина",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11017,13 +11106,22 @@
    "rank": 57
   },
   {
-   "name": "Черноброва Олександра",
+   "name": "Червинська Ніна",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
    "champUA": 0,
    "total": 1,
    "rank": 58
+  },
+  {
+   "name": "Черноброва Олександра",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 59
   }
  ],
  "ratings": {
@@ -320487,37 +320585,37 @@
    "text": "🏆Переможець передостаннього турніру сезону FullBull Series 2026/24- Буханцов Тарас! \n🥇Буханцов Т.\n🥈Бабанін Д.\n🥉Агневщиков Ю.\n1️⃣8️⃣0️⃣ - Агневщиков Ю.\n👀",
    "date": "2026-09-23",
    "url": "https://t.me/fullbull/12732",
-   "photo": "https://cdn4.telesco.pe/file/bTkqMzO4gS2m9Algcs4-TxPSxLVYsTVKGhAEjFJseaHl725r1HPV2t1hoDIjqCkZrBF_TQMV4bl8xSvOgVBS9dNfTHzzMr0fQh8__zo3bfrh39lSaW4V5lNdFOJKFPOOqKC_9h1GEDDqetGenpFQz-PcrTj8b9yLekKoW76CK-tvsUlnXbJLLbAqwoXEsHl4Uc00SfBc40WdFw-Rf-_LLm7u0e1Am9wxLOPsKw2BrtMDfS5B9-1FY9pbcj6_Cm3smhKafAxrckNgdEq8zTJCYQh8-kjOAv4Cop0BYjmiQJuXHuKd5i4MvWXqm8n8S1pZODrftWDfeDNFqqf8zYqfIA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/aniCTiMs6rXO5nl1PO1rLMJwOGyxFitoBrrPCSiBJJ7x6nWYtYc4_7CCBF8nVCbv_Krbr4wyD3m5B4JUHAmvx10Df52eMCTJLbs6Pv5xS2-NQdqCTN7zMKPaTNj2OW8X_0oOjWP87eRI_Y3qF12Otc16s4qOk_J_RCK_4tVetro6CHAD-EmMurOUb08cUgNYiUYevPhFSO8UN64ui0wEZ1L2K-vGuzG4v4YGYd9c086y4_-h6y9Juuvfuspq-bCYbXdrz7V4FpXCT9fAXah2pd1WU011jJyjPIHllDbmL7BWGYyaH0sD-IAjyFHTKqRFYYW0zEkvjeSlKZe1iRk21w.jpg"
   },
   {
    "text": "🏆 Кіфор Ярослав — переможець 3-го етапу львівської Lemberg Darts League-2026!\nЯрослав провів турнір без поразок — 6 перемог у 6 матчах, показавши найкращий турнірний середній набір — 63.35.\n🥇 Кіфор Я.\n🥈 Ранстайл Я.\n🥉 Зубаль В.\n🎯 Найкращий середній на матч: 71.57 — Кіфор Я.\n1️⃣8️⃣0️⃣ - Кіфор Я., Ранстайл Я., Корб’як І., Зубаль М. \n💯 Чекаути 100+:\n1️⃣4️⃣8️⃣ — Кіфор Я.\n1️⃣0️⃣5️⃣ — Микитин Я.\n👀 \n📊Рейтинг львівської ліги Lemberg після трьох етапів 👉",
    "date": "2026-09-22",
    "url": "https://t.me/fullbull/12726",
-   "photo": "https://cdn4.telesco.pe/file/AGiRmoLSWNrz17qpnzPp6y0eyRnpNBtg2FgPdGBctoABS9FYHgl29JtPwCc-8ws2PvuHWU2-niAEHWu7sNbGEekM2gkSUEzqZbbHRwvJpbpDJkODZMQLE3zqTvvs6iVw3f5RHmsL9Dd2bVGTdMqyzK3bWDcRrZ2SCh960LEDw0WyvVxuI459ed1JFcDE8EYg0vvRKZhxoOnWJWFbIWYtIe2w9X4eJPbOqhIe6lT7lKE4PlaplIu8FDWaLtx59VzaHNcp1yZQqQZBDuuUSZJmDRfmOQmd7O-xoN4BGmdQdOef-xnSvYvtpvA-vv7KdQxQRHSY9BO-rYcKwQl3l0G13A.jpg"
+   "photo": "https://cdn4.telesco.pe/file/foVsIBVhHaYpHmexe40VC58xqeZfIIgPRAISMXi56QeYu1yKbC9aBQ0pSoTd6Yd3rFq_i6fcGpEQzwCBx2ClIGqcnYF_ZxK35qngbq3Gh6UmevveQ19i8zsLAT_uRZRIOKZjRsP1mMjJnTJ9LqVvFpHlIihXFt78OAbrUhRaQczIoEILU2oAF7swfZF-FNtW_H-P7jI9vrwS-d8bKwCLCAtSCPN9jpYQpfL6cB9IjNfkP1pt1qw7FAxeeXDImucU4R2_MQiYctbYG37QBU8FzFRgzzrhaZRBFmcsI-9N-QbXmtvHRA0lwwNbSVnOCMdlZfeSaXShvrX-Rwtbzf12Eg.jpg"
   },
   {
    "text": "🏆 Гончаров Едуард — переможець рейтингового турніру КФД - O’Brien’s Tour Kyiv 2026/36, який відбувся у понеділок, 21 вересня.\n🥇 Гончаров Е.\n🥈 Бабанін Д.\n🥉 Агневщиков Ю.\n🎯 Найкращий середній на матч: 74.33 - Гончаров Е.\n🚨Під час турніру Едуард також оформив FullBull — три дротики поспіль у Bullseye!\n💯 Чекаути 100+:\n1️⃣5️⃣5️⃣ - Бабанін Д.\n1️⃣2️⃣0️⃣ - Бабанін Д. \n1️⃣1️⃣6️⃣ - Полтавець С.",
    "date": "2026-09-21",
    "url": "https://t.me/fullbull/12724",
-   "photo": "https://cdn4.telesco.pe/file/sTShAX_ttb9f1ErfQkf00K4wrFHRvtajfyu_2RbpKa1vqhd-7_tidhGMHSjYHUC-L2vNkwMlpdGbZRoc-BqcEXTLOLsR9m_lXDM9pWaj0QF6H_poKidJ3TPC9hGR3mqw8ApOe8Pw9jPEYnZ-t7OQ8y4GdiqhhEw7yYa41ru7bkJb9TPogpFco9meVVeFceS4JOl_AR1zqAzsbBVJie1lYm1l0Ivltodfc2FjpmxvyicikshiGtK2uJi1TtR5eOzjzhIu4QVID-QmqHYL9KyZvrWJYFbGlVwDcKZU0iQXkFrgrORjF17ZvqFzUv87-QP7IKtLEkhr0Bdn44vtcrraIw.jpg"
+   "photo": "https://cdn4.telesco.pe/file/sZd_fSrBt7hRGoJh84uBODq49jUuWg8rBRy-M7RBKnT93CVMEghfnA56h0ZyMxI33a4xbsRPSo_-M8pXCeQqXo1HB9FpiXN2f9AyuAT1B6KK6MQtBmHFbsrnEciUn-90kZt9OOPgZJx38AOttVtNrbbeG8CnkOkfMzla66Ibe2u_KzVGp8-EKoq9Xfv7VROgwToUEIA6uE-y66PABoN-_G2ZJoueAA2_5C1QWwKrSZ0B4HwOyaFiMQXYUKs1kiqxZBCqAxATTilRs7VJXuTJ_lGOjtUhkC0MmM5GIbkOlVoE4Vt-im-Jpcxrq6M4p64wzX_eXiUU8dbvQvPNVLyevw.jpg"
   },
   {
    "text": "🏆 Овсієнко Євген — переможець рейтингового турніру Портер Осінь 2026/2! Змагання відбулись у суботу, 19-го вересня.\nУ фіналі Овсієнко Євген переміг Аверіна Сергія 5:1.\nЄвген провів турнір без поразок — 7 перемог у 7 матчах, показав найкращий середній набір турніру — 72.60.\n🥇 Овсієнко Є.\n🥈 Аверін С.\n🥉 Гомелюк О.\n🎯 Найкращий середній на матч: 77.74 — Овсієнко Є.\n1️⃣8️⃣0️⃣х2️⃣ - Бабанін Д.\n1️⃣8️⃣0️⃣ - Солтис М.\n💯 Чекаути 100+:\n1️⃣1️⃣9️⃣ - Гомелюк О.\n👀 \n⚠️Осінній рейтинг дартс-клубу «Портер» має осо",
    "date": "2026-09-21",
    "url": "https://t.me/fullbull/12722",
-   "photo": "https://cdn4.telesco.pe/file/lahBdYGBmorlcJ1vvUOQpxkKo7gGzkC5erDpzKfVhq455dSNbdrWVIojFnupnuyk8r7JULshJBeYiDToFY8ICTJAAweYOU52b4UGXYL5z8i_mKzt_QBrymx4oIJfTr7yVmUniXXhzllwrUvxIn_dPhOsxdQvU1p5L3PSrc_agCGIFWY5aUT5MAecL8EMt2JbQyH2mr0Pr8nYQobegIWckyRcADdJL-xbjl1Q8AzLxsyzVjcQg37ZO_Mb6MyBOPDi9aegDr_RJDHTYdN67pEUuC9mOASDHmq9hUWs_KhX-E-usPVvWNXct7uUtbullkkEilDl4Utq14t2_LSMdoGF6A.jpg"
+   "photo": "https://cdn4.telesco.pe/file/b1G-UX_zDzhrjlWBhN2vWay-9oaQCyRp56QRR0RyrFnOrGy1KVbIt0EqrYNLbMC3PrH6YBW8njzNHaFNZR0U088pZr3b5xkioNFZq0B9IchmmJHwXB0u2mgA8CxHAjFOzdVki0xCROEMt6lA4twXikV7MkrRxYgH4W9-nUvAdXdyXZ-uHiVh4vuT2vc3X43gnn_FR-C0wadQENgu9gcfW-AILx4Ug_FAtDtOCJv3F4qHb-837MVjeEqO0XItRfjDP6D2SkUtjDY6vVHwM40lah7zFAYi12ydMZnioZirpfjLqkZSLP0dgv2W-veUBwpIqGTWfp-8k3fUBoQRzd_4Rg.jpg"
   },
   {
    "text": "З 20.00 за київським часом стартує фінальний раунд World Series of Darts Finals.",
    "date": "2026-09-20",
    "url": "https://t.me/fullbull/12716",
-   "photo": "https://cdn4.telesco.pe/file/r7JDHTAJx8RafP9NFU-lOAid5ZLCHW33Xy-ngwTnhi2x0Qb1lYx6UkARdgbJLsc9JjGBcGhdL_DzhO9ypJPotOy0R5Nh5IKuDmkoTfIXLq_Jqfd1ALYDJeXsLCo-3Hy7f8OaEdhhDCYEVx2hpzdxtFVus8cL17hxKkejPSTnDe5LS_rcPvpF_8BYeKG6IRjipPJzavtfgPZUvtBUPFIHW9lbwHtttLGVowivVvM31x9RFYuinrQXwXVmkD--DCJHuVNGY8m2y4WCPf8p4l3zqTIERl4ef6t11gyirBIOlLkS6eN_kXiP8m2mXoCjaItAOU9d-FXx_TsWU9ZaHiwREw.jpg"
+   "photo": "https://cdn4.telesco.pe/file/iTR0BvfQ1921-5Bq-tiLdjIB5kRPodCZ4svNOr5RHaaQwRRveBZQYdC1KECLxXR84WX6Id2WGos12Nsr7HBHYlsv86nthJkZUVXLtNDtEBtSzXDMzmpUgfFFTSps8s9hxon-BQs2qLblBxWpQDNCcohlDaOTTy-q99uBxETwKh97z3G-WiCZLcAJmsztU1popzwrYXpIidocP-ykZxkhU0eG7Ma0-y71WpDYpoZa1UirdEcdB1attBlMRV_yNSfjJHfdRvSMkby4Y5DVljZcLTyIDgDZAVGpg7I6xiar0sFgQH4cbTr1wrS0iLBHI5yWQ-xnNXehFmcPt6ksUN1fIA.jpg"
   },
   {
    "text": "🏆 Могилевський Руслан — переможець Cherkasy Ranking Event 8!\nУ фіналі рейтингового турніру Могилевський Руслан переміг Чепурного Едуарда — 5:3.\nРуслан провів турнір без поразок - 6 перемог із 6 матчів, показав найкращий середній на матч турніру - 73.92.\n🥇 Могилевський Р.\n🥈 Чепурний Е.\n🥉 Харченко Т.\n1️⃣8️⃣0️⃣ — Могилевський Р.\n💯 Чекаути 100+:\n1️⃣2️⃣3️⃣ — Могилевський Р.\n1️⃣1️⃣5️⃣ — Гончаренко В.\n👀",
    "date": "2026-09-20",
    "url": "https://t.me/fullbull/12713",
-   "photo": "https://cdn4.telesco.pe/file/GaXtb-z_9gUK_v3aysNtPW6voHivtMfCa7d7pdW4oe5jo-xr6jZn5zy_j8XZ9tAyPvBBOvmUM1_wqmw7fCKF_z5EmYzPi66Q6BzRkERuQX8F3yI8A4XG6bWCpU2Q3NGO3IQiixEB3ZcZdW0KVZvuqsVTurbQHf1Ze2j1yAYwiDGX_HmAE3hZkq9PR6Pi-ugeqflbd9iVEEQNiGXINu8jygeQjqqYew7_EEaP_fE3-8i8ys7ujqK1uu0p0ouNvwtEMxkymUe1RwFZxYCVTaU443NURHjzevdvX8Ga-iM3qGTehJOO-EnxRyms3rWsEbgLjSb-ksvW_Wcoiw-jdnaAvA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/h8aPQUnB3o2NQkBozUhXWwyfXpQN_5A4uy5nn3hyfa8xxsBM8LRnY0Wb6NzJvSIvMpCo8q0LD06kIfwuWToL5hykPbEkg6L7rpWmwf_JU_r8SzRnJVm64IOf4xARMLgGXwh3vBl8WCQvxdGEfXv3jhio9_KFNKBHgC74AMA0c54TEpsrfKEpE4F1W9gIDEbby6LsvxkNrOfGXyqHRT8UEeyc821agjltC28OrqYbaBlBMU4SJ7SSLRv04gT5Dak4ixiK7Xa16ibIAw0v39wxUMcrEUvsNsOY8ET2dqBiz6iIElZ4Pkl10EADdCyM52GGD7uRhHz7-oJJgsy2sarlCw.jpg"
   }
  ],
  "championsRecords": [
@@ -323970,6 +324068,42 @@
    ]
   },
   {
+   "year": 2009,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Ледєньов Вадим"
+   ]
+  },
+  {
+   "year": 2009,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Новікова Зоя"
+   ]
+  },
+  {
+   "year": 2009,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Невінчаний Едуард"
+   ]
+  },
+  {
+   "year": 2009,
+   "category": "501do",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Спекторенко Катерина"
+   ]
+  },
+  {
    "year": 2008,
    "category": "501do",
    "gender": "men",
@@ -324483,6 +324617,18 @@
   },
   "Коломієць Олена": {
    "dartsWeight": "24"
+  },
+  "Карнаух Валентина": {
+   "birthDate": "13.12.1987",
+   "region": "Кривий Ріг,  Дніпропетровська область",
+   "startYear": "2024"
+  },
+  "Іванов Сергій": {
+   "profession": "Директор Центру ФК і спорту",
+   "birthDate": "19.02.1071",
+   "region": "місто Мала Виска Кіровоградської області",
+   "startYear": "2026",
+   "dartsWeight": "26"
   }
  },
  "curatedPlayerNames": [
@@ -325168,8 +325314,10 @@
   "Тихоненко Віктор",
   "Тихонченко Віталій",
   "Ткаченко Сергій",
+  "Ткачук Вікторія",
   "Ткачук Сергій",
   "Товт Золтан",
+  "Толкачов В'ячеслав",
   "Томків Ірина",
   "Томчук Олег",
   "Топко Андрій",
