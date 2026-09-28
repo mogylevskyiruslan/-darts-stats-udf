@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-09-27T10:30:42.495357+00:00",
+  "lastUpdated": "2026-09-28T11:38:22.733733+00:00",
   "tournamentsCount": 212
  },
  "tournaments": [
@@ -18119,7 +18119,7 @@
       null,
       20.25
      ],
-     "total": 212
+     "total": 212.0
     },
     {
      "rank": "23",
@@ -18233,7 +18233,7 @@
       null,
       null
      ],
-     "total": 191
+     "total": 191.0
     },
     {
      "rank": "29",
@@ -18537,7 +18537,7 @@
       null,
       38.25
      ],
-     "total": 159
+     "total": 159.0
     },
     {
      "rank": "45",
@@ -18822,7 +18822,7 @@
       null,
       81.4
      ],
-     "total": 107
+     "total": 107.0
     },
     {
      "rank": "60",
@@ -19050,7 +19050,7 @@
       null,
       1.5
      ],
-     "total": 79
+     "total": 79.0
     },
     {
      "rank": "72",
@@ -19924,7 +19924,7 @@
       null,
       null
      ],
-     "total": 22
+     "total": 22.0
     },
     {
      "rank": "118",
@@ -20019,7 +20019,7 @@
       null,
       null
      ],
-     "total": 17
+     "total": 17.0
     },
     {
      "rank": "123",
@@ -20095,7 +20095,7 @@
       null,
       null
      ],
-     "total": 14
+     "total": 14.0
     },
     {
      "rank": "127",
@@ -20152,7 +20152,7 @@
       null,
       1.5
      ],
-     "total": 12
+     "total": 12.0
     },
     {
      "rank": "130",
@@ -20479,25 +20479,6 @@
     },
     {
      "rank": "147",
-     "name": "Саїнчук Тетяна",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      3.5,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 3.5
-    },
-    {
-     "rank": "148",
      "name": "Грушовець Ольга",
      "scores": [
       null,
@@ -20510,6 +20491,25 @@
       null,
       null,
       3.5,
+      null,
+      null
+     ],
+     "total": 3.5
+    },
+    {
+     "rank": "148",
+     "name": "Саїнчук Тетяна",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      3.5,
+      null,
+      null,
+      null,
+      null,
       null,
       null
      ],
@@ -20532,7 +20532,7 @@
       null,
       null
      ],
-     "total": 3
+     "total": 3.0
     },
     {
      "rank": "150",
@@ -20570,7 +20570,7 @@
       null,
       null
      ],
-     "total": 2
+     "total": 2.0
     },
     {
      "rank": "152",
@@ -20589,7 +20589,7 @@
       null,
       null
      ],
-     "total": 2
+     "total": 2.0
     },
     {
      "rank": "153",
@@ -20608,7 +20608,7 @@
       null,
       null
      ],
-     "total": 2
+     "total": 2.0
     },
     {
      "rank": "154",
@@ -20836,7 +20836,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "166",
@@ -20855,7 +20855,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "167",
@@ -20874,7 +20874,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "168",
@@ -20893,7 +20893,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "169",
@@ -20912,7 +20912,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "170",
@@ -20931,7 +20931,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "171",
@@ -20950,7 +20950,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "172",
@@ -20969,7 +20969,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "173",
@@ -21028,7 +21028,7 @@
       50,
       135
      ],
-     "total": 788
+     "total": 788.0
     },
     {
      "rank": "2",
@@ -21085,7 +21085,7 @@
       null,
       120
      ],
-     "total": 367
+     "total": 367.0
     },
     {
      "rank": "5",
@@ -21104,7 +21104,7 @@
       null,
       37.5
      ],
-     "total": 292
+     "total": 292.0
     },
     {
      "rank": "6",
@@ -21123,7 +21123,7 @@
       null,
       82.5
      ],
-     "total": 248
+     "total": 248.0
     },
     {
      "rank": "7",
@@ -21142,7 +21142,7 @@
       null,
       37.5
      ],
-     "total": 222
+     "total": 222.0
     },
     {
      "rank": "8",
@@ -21218,7 +21218,7 @@
       27.5,
       37.5
      ],
-     "total": 81
+     "total": 81.0
     },
     {
      "rank": "12",
@@ -21275,7 +21275,7 @@
       20,
       7
      ],
-     "total": 52
+     "total": 52.0
     },
     {
      "rank": "15",
@@ -21294,7 +21294,7 @@
       null,
       null
      ],
-     "total": 40
+     "total": 40.0
     },
     {
      "rank": "16",
@@ -21389,7 +21389,7 @@
       null,
       null
      ],
-     "total": 30
+     "total": 30.0
     },
     {
      "rank": "21",
@@ -21408,7 +21408,7 @@
       null,
       null
      ],
-     "total": 23
+     "total": 23.0
     },
     {
      "rank": "22",
@@ -21427,7 +21427,7 @@
       null,
       null
      ],
-     "total": 23
+     "total": 23.0
     },
     {
      "rank": "23",
@@ -21446,7 +21446,7 @@
       null,
       null
      ],
-     "total": 20
+     "total": 20.0
     },
     {
      "rank": "24",
@@ -21503,7 +21503,7 @@
       null,
       null
      ],
-     "total": 14
+     "total": 14.0
     },
     {
      "rank": "27",
@@ -21522,7 +21522,7 @@
       null,
       7
      ],
-     "total": 14
+     "total": 14.0
     },
     {
      "rank": "28",
@@ -21541,7 +21541,7 @@
       null,
       7
      ],
-     "total": 8
+     "total": 8.0
     },
     {
      "rank": "29",
@@ -21560,7 +21560,7 @@
       null,
       null
      ],
-     "total": 7
+     "total": 7.0
     },
     {
      "rank": "30",
@@ -21579,7 +21579,7 @@
       null,
       7
      ],
-     "total": 7
+     "total": 7.0
     },
     {
      "rank": "31",
@@ -21598,7 +21598,7 @@
       null,
       7
      ],
-     "total": 7
+     "total": 7.0
     },
     {
      "rank": "32",
@@ -21617,7 +21617,7 @@
       null,
       7
      ],
-     "total": 7
+     "total": 7.0
     },
     {
      "rank": "33",
@@ -21636,7 +21636,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     }
    ],
    "label": "Жінки 2017",
@@ -21666,7 +21666,7 @@
       null,
       126
      ],
-     "total": 635
+     "total": 635.0
     },
     {
      "rank": "2",
@@ -21974,7 +21974,7 @@
       null,
       81.4
      ],
-     "total": 213
+     "total": 213.0
     },
     {
      "rank": "24",
@@ -22926,7 +22926,7 @@
       null,
       1.5
      ],
-     "total": 36
+     "total": 36.0
     },
     {
      "rank": "92",
@@ -23094,7 +23094,7 @@
       21.5,
       1.5
      ],
-     "total": 23
+     "total": 23.0
     },
     {
      "rank": "104",
@@ -23122,7 +23122,7 @@
       null,
       null
      ],
-     "total": 17
+     "total": 17.0
     },
     {
      "rank": "106",
@@ -23136,7 +23136,7 @@
       null,
       null
      ],
-     "total": 17
+     "total": 17.0
     },
     {
      "rank": "107",
@@ -23150,7 +23150,7 @@
       null,
       null
      ],
-     "total": 17
+     "total": 17.0
     },
     {
      "rank": "108",
@@ -23164,7 +23164,7 @@
       null,
       null
      ],
-     "total": 17
+     "total": 17.0
     },
     {
      "rank": "109",
@@ -23374,7 +23374,7 @@
       null,
       1.5
      ],
-     "total": 7
+     "total": 7.0
     },
     {
      "rank": "124",
@@ -23836,7 +23836,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "157",
@@ -23850,7 +23850,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "158",
@@ -23864,7 +23864,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "159",
@@ -23878,7 +23878,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "160",
@@ -23892,7 +23892,7 @@
       1,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "161",
@@ -23906,7 +23906,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "162",
@@ -23920,7 +23920,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     }
    ],
    "label": "Чоловіки 2016",
@@ -23964,7 +23964,7 @@
       75,
       132
      ],
-     "total": 427
+     "total": 427.0
     },
     {
      "rank": "3",
@@ -23992,7 +23992,7 @@
       7,
       150
      ],
-     "total": 334
+     "total": 334.0
     },
     {
      "rank": "5",
@@ -24006,7 +24006,7 @@
       40,
       99
      ],
-     "total": 209
+     "total": 209.0
     },
     {
      "rank": "6",
@@ -24188,11 +24188,11 @@
       null,
       null
      ],
-     "total": 15
+     "total": 15.0
     },
     {
      "rank": "19",
-     "name": "Бублик В'ячеслав",
+     "name": "Бублик Лідія",
      "scores": [
       null,
       null,
@@ -24202,7 +24202,7 @@
       null,
       null
      ],
-     "total": 14
+     "total": 14.0
     },
     {
      "rank": "20",
@@ -24258,7 +24258,7 @@
       7,
       null
      ],
-     "total": 7
+     "total": 7.0
     },
     {
      "rank": "24",
@@ -24272,7 +24272,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "25",
@@ -24286,7 +24286,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "26",
@@ -24300,7 +24300,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "27",
@@ -24314,7 +24314,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     }
    ],
    "label": "Жінки 2016",
@@ -24326,7 +24326,7 @@
     "КР-2015",
     "Черкаси-2015",
     "Кубок Волині 2015",
-    "КР-2015 (етап)",
+    "КР-2015",
     "Харків-2015",
     "ФІНАЛ-2015"
    ],
@@ -24368,7 +24368,7 @@
       100,
       99.75
      ],
-     "total": 487
+     "total": 487.0
     },
     {
      "rank": "4",
@@ -24394,7 +24394,7 @@
       25,
       81.4
      ],
-     "total": 369
+     "total": 369.0
     },
     {
      "rank": "6",
@@ -24563,7 +24563,7 @@
       25,
       150
      ],
-     "total": 175
+     "total": 175.0
     },
     {
      "rank": "19",
@@ -24693,7 +24693,7 @@
       null,
       56.25
      ],
-     "total": 113
+     "total": 113.0
     },
     {
      "rank": "29",
@@ -24732,7 +24732,7 @@
       null,
       null
      ],
-     "total": 92
+     "total": 92.0
     },
     {
      "rank": "32",
@@ -24927,7 +24927,7 @@
       null,
       14.25
      ],
-     "total": 67
+     "total": 67.0
     },
     {
      "rank": "47",
@@ -25278,7 +25278,7 @@
       null,
       1.5
      ],
-     "total": 28
+     "total": 28.0
     },
     {
      "rank": "74",
@@ -25330,7 +25330,7 @@
       25,
       null
      ],
-     "total": 25
+     "total": 25.0
     },
     {
      "rank": "78",
@@ -25343,7 +25343,7 @@
       25,
       null
      ],
-     "total": 25
+     "total": 25.0
     },
     {
      "rank": "79",
@@ -25356,7 +25356,7 @@
       null,
       null
      ],
-     "total": 23
+     "total": 23.0
     },
     {
      "rank": "80",
@@ -25421,7 +25421,7 @@
       null,
       null
      ],
-     "total": 17
+     "total": 17.0
     },
     {
      "rank": "85",
@@ -25538,7 +25538,7 @@
       null,
       1.5
      ],
-     "total": 11
+     "total": 11.0
     },
     {
      "rank": "94",
@@ -25551,7 +25551,7 @@
       null,
       1.5
      ],
-     "total": 11
+     "total": 11.0
     },
     {
      "rank": "95",
@@ -25564,7 +25564,7 @@
       null,
       1.5
      ],
-     "total": 11
+     "total": 11.0
     },
     {
      "rank": "96",
@@ -25655,7 +25655,7 @@
       null,
       1.5
      ],
-     "total": 7
+     "total": 7.0
     },
     {
      "rank": "103",
@@ -25668,7 +25668,7 @@
       null,
       1.5
      ],
-     "total": 7
+     "total": 7.0
     },
     {
      "rank": "104",
@@ -25811,7 +25811,7 @@
       null,
       null
      ],
-     "total": 2
+     "total": 2.0
     },
     {
      "rank": "115",
@@ -25980,7 +25980,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "128",
@@ -25993,7 +25993,7 @@
       1,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "129",
@@ -26006,7 +26006,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "130",
@@ -26019,7 +26019,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "131",
@@ -26032,7 +26032,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "132",
@@ -26045,7 +26045,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "133",
@@ -26058,7 +26058,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "134",
@@ -26071,7 +26071,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "135",
@@ -26084,7 +26084,7 @@
       1,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "136",
@@ -26097,7 +26097,7 @@
       1,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "137",
@@ -26110,7 +26110,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "138",
@@ -26123,7 +26123,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "139",
@@ -26136,7 +26136,7 @@
       1,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "140",
@@ -26149,7 +26149,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "141",
@@ -26162,7 +26162,7 @@
       1,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "142",
@@ -26175,7 +26175,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "143",
@@ -26188,7 +26188,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "144",
@@ -26201,7 +26201,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "145",
@@ -26214,7 +26214,7 @@
       1,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "146",
@@ -26227,7 +26227,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "147",
@@ -26240,7 +26240,7 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "148",
@@ -26253,7 +26253,7 @@
       1,
       null
      ],
-     "total": 1
+     "total": 1.0
     }
    ],
    "label": "Чоловіки 2015",
@@ -26265,7 +26265,7 @@
     "КР-2015",
     "Черкаси-2015",
     "Кубок Волині 2015",
-    "КР-2015 (етап)",
+    "КР-2015",
     "Харків-2015",
     "ФІНАЛ-2015"
    ],
@@ -26281,7 +26281,7 @@
       37.5,
       150
      ],
-     "total": 315
+     "total": 315.0
     },
     {
      "rank": "2",
@@ -26307,7 +26307,7 @@
       50,
       126
      ],
-     "total": 185
+     "total": 185.0
     },
     {
      "rank": "4",
@@ -26359,7 +26359,7 @@
       null,
       105
      ],
-     "total": 105
+     "total": 105.0
     },
     {
      "rank": "8",
@@ -26385,7 +26385,7 @@
       null,
       87
      ],
-     "total": 87
+     "total": 87.0
     },
     {
      "rank": "10",
@@ -26398,11 +26398,11 @@
       14,
       1.5
      ],
-     "total": 43
+     "total": 43.0
     },
     {
      "rank": "11",
-     "name": "Калаур Інна",
+     "name": "Калаур Инна",
      "scores": [
       null,
       null,
@@ -26424,7 +26424,7 @@
       null,
       null
      ],
-     "total": 20
+     "total": 20.0
     },
     {
      "rank": "13",
@@ -26476,7 +26476,7 @@
       null,
       null
      ],
-     "total": 14
+     "total": 14.0
     },
     {
      "rank": "17",
@@ -26489,7 +26489,7 @@
       null,
       null
      ],
-     "total": 9
+     "total": 9.0
     }
    ],
    "label": "Жінки 2015",
@@ -26533,7 +26533,7 @@
       34.5,
       150
      ],
-     "total": 511
+     "total": 511.0
     },
     {
      "rank": "3",
@@ -26575,7 +26575,7 @@
       91,
       99.75
      ],
-     "total": 367
+     "total": 367.0
     },
     {
      "rank": "6",
@@ -26603,7 +26603,7 @@
       59,
       99.75
      ],
-     "total": 278
+     "total": 278.0
     },
     {
      "rank": "8",
@@ -26659,7 +26659,7 @@
       59,
       81.4
      ],
-     "total": 226
+     "total": 226.0
     },
     {
      "rank": "12",
@@ -26785,7 +26785,7 @@
       null,
       138
      ],
-     "total": 138
+     "total": 138.0
     },
     {
      "rank": "21",
@@ -26827,7 +26827,7 @@
       null,
       38.25
      ],
-     "total": 130
+     "total": 130.0
     },
     {
      "rank": "24",
@@ -26869,7 +26869,7 @@
       17,
       81.4
      ],
-     "total": 124
+     "total": 124.0
     },
     {
      "rank": "27",
@@ -26883,7 +26883,7 @@
       null,
       117
      ],
-     "total": 117
+     "total": 117.0
     },
     {
      "rank": "28",
@@ -26897,7 +26897,7 @@
       5.5,
       68.25
      ],
-     "total": 117
+     "total": 117.0
     },
     {
      "rank": "29",
@@ -27107,7 +27107,7 @@
       34.5,
       null
      ],
-     "total": 80
+     "total": 80.0
     },
     {
      "rank": "44",
@@ -27247,7 +27247,7 @@
       null,
       null
      ],
-     "total": 59
+     "total": 59.0
     },
     {
      "rank": "54",
@@ -27261,24 +27261,10 @@
       null,
       null
      ],
-     "total": 59
+     "total": 59.0
     },
     {
      "rank": "55",
-     "name": "Олексенко Олександр",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      56.25
-     ],
-     "total": 56.25
-    },
-    {
-     "rank": "56",
      "name": "Анісімов Денис",
      "scores": [
       17,
@@ -27292,13 +27278,27 @@
      "total": 56.25
     },
     {
-     "rank": "57",
-     "name": "Мороко Максим",
+     "rank": "56",
+     "name": "Олексенко Олександр",
      "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      56.25
+     ],
+     "total": 56.25
+    },
+    {
+     "rank": "57",
+     "name": "Бадира Олександр",
+     "scores": [
+      null,
+      null,
+      null,
       17,
-      null,
-      null,
-      null,
       null,
       null,
       38.25
@@ -27307,12 +27307,12 @@
     },
     {
      "rank": "58",
-     "name": "Бадира Олександр",
+     "name": "Мороко Максим",
      "scores": [
-      null,
-      null,
-      null,
       17,
+      null,
+      null,
+      null,
       null,
       null,
       38.25
@@ -27331,7 +27331,7 @@
       null,
       1.5
      ],
-     "total": 53
+     "total": 53.0
     },
     {
      "rank": "60",
@@ -27527,7 +27527,7 @@
       null,
       null
      ],
-     "total": 34
+     "total": 34.0
     },
     {
      "rank": "74",
@@ -27625,7 +27625,7 @@
       null,
       1.5
      ],
-     "total": 25
+     "total": 25.0
     },
     {
      "rank": "81",
@@ -27709,94 +27709,10 @@
       17,
       null
      ],
-     "total": 18
+     "total": 18.0
     },
     {
      "rank": "87",
-     "name": "Вахнюк Дмитро",
-     "scores": [
-      17,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 17
-    },
-    {
-     "rank": "88",
-     "name": "Любих Сергій",
-     "scores": [
-      17,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 17
-    },
-    {
-     "rank": "89",
-     "name": "Мажан Костянтин",
-     "scores": [
-      17,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 17
-    },
-    {
-     "rank": "90",
-     "name": "Плуталов Андрій",
-     "scores": [
-      17,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 17
-    },
-    {
-     "rank": "91",
-     "name": "Бородулін Дмитро",
-     "scores": [
-      null,
-      null,
-      null,
-      17,
-      null,
-      null,
-      null
-     ],
-     "total": 17
-    },
-    {
-     "rank": "92",
-     "name": "Козлюк Дмитро",
-     "scores": [
-      null,
-      null,
-      null,
-      17,
-      null,
-      null,
-      null
-     ],
-     "total": 17
-    },
-    {
-     "rank": "93",
      "name": "Анісімова Світлана",
      "scores": [
       null,
@@ -27807,7 +27723,91 @@
       17,
       null
      ],
-     "total": 17
+     "total": 17.0
+    },
+    {
+     "rank": "88",
+     "name": "Бородулін Дмитро",
+     "scores": [
+      null,
+      null,
+      null,
+      17,
+      null,
+      null,
+      null
+     ],
+     "total": 17.0
+    },
+    {
+     "rank": "89",
+     "name": "Вахнюк Дмитро",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 17.0
+    },
+    {
+     "rank": "90",
+     "name": "Козлюк Дмитро",
+     "scores": [
+      null,
+      null,
+      null,
+      17,
+      null,
+      null,
+      null
+     ],
+     "total": 17.0
+    },
+    {
+     "rank": "91",
+     "name": "Любих Сергій",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 17.0
+    },
+    {
+     "rank": "92",
+     "name": "Мажан Костянтин",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 17.0
+    },
+    {
+     "rank": "93",
+     "name": "Плуталов Андрій",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 17.0
     },
     {
      "rank": "94",
@@ -27849,7 +27849,7 @@
       null,
       null
      ],
-     "total": 15
+     "total": 15.0
     },
     {
      "rank": "97",
@@ -28003,7 +28003,7 @@
       null,
       1.5
      ],
-     "total": 8
+     "total": 8.0
     },
     {
      "rank": "108",
@@ -28031,38 +28031,10 @@
       null,
       1.5
      ],
-     "total": 7
+     "total": 7.0
     },
     {
      "rank": "110",
-     "name": "Буравльов Костянтин",
-     "scores": [
-      5.5,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 5.5
-    },
-    {
-     "rank": "111",
-     "name": "Денисьєв Олександр",
-     "scores": [
-      5.5,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 5.5
-    },
-    {
-     "rank": "112",
      "name": "Андрощук Олександр",
      "scores": [
       null,
@@ -28076,13 +28048,41 @@
      "total": 5.5
     },
     {
-     "rank": "113",
+     "rank": "111",
      "name": "Ахтирский Євген",
      "scores": [
       null,
       null,
       null,
       5.5,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "112",
+     "name": "Буравльов Костянтин",
+     "scores": [
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "113",
+     "name": "Денисьєв Олександр",
+     "scores": [
+      5.5,
+      null,
+      null,
+      null,
       null,
       null,
       null
@@ -28217,104 +28217,6 @@
     },
     {
      "rank": "123",
-     "name": "Ландин Ілля",
-     "scores": [
-      null,
-      1,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "124",
-     "name": "Потан Лілія",
-     "scores": [
-      null,
-      1,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "125",
-     "name": "Федотова Ірина",
-     "scores": [
-      null,
-      1,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "126",
-     "name": "Зотов Іван",
-     "scores": [
-      null,
-      null,
-      null,
-      1,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "127",
-     "name": "Ледєньова Наталія",
-     "scores": [
-      null,
-      null,
-      null,
-      1,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "128",
-     "name": "Навроцький Дмитро",
-     "scores": [
-      null,
-      null,
-      null,
-      1,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "129",
-     "name": "Федуна Ігор",
-     "scores": [
-      null,
-      null,
-      null,
-      1,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "130",
      "name": "Вильданов Игор",
      "scores": [
       null,
@@ -28325,10 +28227,80 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
-     "rank": "131",
+     "rank": "124",
+     "name": "Зотов Іван",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "125",
+     "name": "Ландин Ілля",
+     "scores": [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "126",
+     "name": "Ледєньова Наталія",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "127",
+     "name": "Навроцький Дмитро",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "128",
+     "name": "Потан Лілія",
+     "scores": [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "129",
      "name": "Сорокотяга Олег",
      "scores": [
       null,
@@ -28339,7 +28311,35 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
+    },
+    {
+     "rank": "130",
+     "name": "Федотова Ірина",
+     "scores": [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "131",
+     "name": "Федуна Ігор",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
     }
    ],
    "label": "Чоловіки 2014",
@@ -28356,7 +28356,7 @@
     "Кубок Волыни 2013",
     "Мелекино 2013",
     "Харьков 2013",
-    "ФИНАЛ 2014"
+    "ФИНАЛ 2013"
    ],
    "rows": [
     {
@@ -28421,7 +28421,7 @@
       100,
       150
      ],
-     "total": 350
+     "total": 350.0
     },
     {
      "rank": "5",
@@ -28517,7 +28517,7 @@
       92,
       null
      ],
-     "total": 274
+     "total": 274.0
     },
     {
      "rank": "11",
@@ -29061,7 +29061,7 @@
       9.5,
       null
      ],
-     "total": 97
+     "total": 97.0
     },
     {
      "rank": "45",
@@ -29157,7 +29157,7 @@
       63.5,
       null
      ],
-     "total": 85
+     "total": 85.0
     },
     {
      "rank": "51",
@@ -29253,7 +29253,7 @@
       null,
       null
      ],
-     "total": 75
+     "total": 75.0
     },
     {
      "rank": "57",
@@ -29273,22 +29273,6 @@
     },
     {
      "rank": "58",
-     "name": "Шуплєцов Станислав",
-     "scores": [
-      17,
-      43.25,
-      null,
-      1,
-      null,
-      null,
-      null,
-      9.5,
-      null
-     ],
-     "total": 70.75
-    },
-    {
-     "rank": "59",
      "name": "Чорний Іван",
      "scores": [
       null,
@@ -29300,6 +29284,22 @@
       1,
       null,
       56.25
+     ],
+     "total": 70.75
+    },
+    {
+     "rank": "59",
+     "name": "Шуплєцов Станислав",
+     "scores": [
+      17,
+      43.25,
+      null,
+      1,
+      null,
+      null,
+      null,
+      9.5,
+      null
      ],
      "total": 70.75
     },
@@ -29333,7 +29333,7 @@
       null,
       null
      ],
-     "total": 66
+     "total": 66.0
     },
     {
      "rank": "62",
@@ -29413,7 +29413,7 @@
       null,
       null
      ],
-     "total": 59
+     "total": 59.0
     },
     {
      "rank": "67",
@@ -29445,7 +29445,7 @@
       null,
       null
      ],
-     "total": 57
+     "total": 57.0
     },
     {
      "rank": "69",
@@ -29529,7 +29529,7 @@
     },
     {
      "rank": "74",
-     "name": "Матвиєнков Дмитро",
+     "name": "Брежнєв Сергій",
      "scores": [
       null,
       43.25,
@@ -29545,7 +29545,7 @@
     },
     {
      "rank": "75",
-     "name": "Брежнєв Сергій",
+     "name": "Матвиєнков Дмитро",
      "scores": [
       null,
       43.25,
@@ -29625,22 +29625,6 @@
     },
     {
      "rank": "80",
-     "name": "Вильданов Игор",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      38.25
-     ],
-     "total": 38.25
-    },
-    {
-     "rank": "81",
      "name": "Афонін Генадій",
      "scores": [
       null,
@@ -29656,23 +29640,23 @@
      "total": 38.25
     },
     {
-     "rank": "82",
-     "name": "Пайзак Томаш",
+     "rank": "81",
+     "name": "Вильданов Игор",
      "scores": [
       null,
       null,
-      35.6,
       null,
       null,
       null,
       null,
       null,
-      null
+      null,
+      38.25
      ],
-     "total": 35.6
+     "total": 38.25
     },
     {
-     "rank": "83",
+     "rank": "82",
      "name": "Каменицки Тибор",
      "scores": [
       null,
@@ -29688,7 +29672,7 @@
      "total": 35.6
     },
     {
-     "rank": "84",
+     "rank": "83",
      "name": "Кенес Василій",
      "scores": [
       null,
@@ -29704,8 +29688,24 @@
      "total": 35.6
     },
     {
+     "rank": "84",
+     "name": "Колесніков Юрій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      35.6,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 35.6
+    },
+    {
      "rank": "85",
-     "name": "Хімко Олександр",
+     "name": "Пайзак Томаш",
      "scores": [
       null,
       null,
@@ -29721,13 +29721,13 @@
     },
     {
      "rank": "86",
-     "name": "Колесніков Юрій",
+     "name": "Хімко Олександр",
      "scores": [
       null,
       null,
-      null,
-      null,
       35.6,
+      null,
+      null,
       null,
       null,
       null,
@@ -29897,22 +29897,6 @@
     },
     {
      "rank": "97",
-     "name": "Шевченко Сергій",
-     "scores": [
-      null,
-      25.6,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 25.6
-    },
-    {
-     "rank": "98",
      "name": "Коновалов Олег",
      "scores": [
       null,
@@ -29928,7 +29912,7 @@
      "total": 25.6
     },
     {
-     "rank": "99",
+     "rank": "98",
      "name": "Назаренко Владислав",
      "scores": [
       null,
@@ -29944,7 +29928,7 @@
      "total": 25.6
     },
     {
-     "rank": "100",
+     "rank": "99",
      "name": "Снурніков Артем",
      "scores": [
       null,
@@ -29955,6 +29939,22 @@
       null,
       null,
       25.6,
+      null
+     ],
+     "total": 25.6
+    },
+    {
+     "rank": "100",
+     "name": "Шевченко Сергій",
+     "scores": [
+      null,
+      25.6,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
       null
      ],
      "total": 25.6
@@ -30085,7 +30085,7 @@
       null,
       null
      ],
-     "total": 19
+     "total": 19.0
     },
     {
      "rank": "109",
@@ -30117,26 +30117,10 @@
       null,
       null
      ],
-     "total": 17
+     "total": 17.0
     },
     {
      "rank": "111",
-     "name": "Русанов Андрій",
-     "scores": [
-      17,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 17
-    },
-    {
-     "rank": "112",
      "name": "Логоша Євген",
      "scores": [
       null,
@@ -30149,7 +30133,23 @@
       null,
       null
      ],
-     "total": 17
+     "total": 17.0
+    },
+    {
+     "rank": "112",
+     "name": "Русанов Андрій",
+     "scores": [
+      17,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 17.0
     },
     {
      "rank": "113",
@@ -30165,7 +30165,7 @@
       null,
       null
      ],
-     "total": 17
+     "total": 17.0
     },
     {
      "rank": "114",
@@ -30181,11 +30181,11 @@
       null,
       null
      ],
-     "total": 17
+     "total": 17.0
     },
     {
      "rank": "115",
-     "name": "Молчанов Михайло",
+     "name": "Афонін Генадій",
      "scores": [
       null,
       null,
@@ -30201,7 +30201,7 @@
     },
     {
      "rank": "116",
-     "name": "Якименко Дмитро",
+     "name": "Бутов Олександр",
      "scores": [
       null,
       null,
@@ -30217,7 +30217,7 @@
     },
     {
      "rank": "117",
-     "name": "Афонін Генадій",
+     "name": "Веремєєв Богдан",
      "scores": [
       null,
       null,
@@ -30249,7 +30249,7 @@
     },
     {
      "rank": "119",
-     "name": "Тесленко Кирило",
+     "name": "Молчанов Михайло",
      "scores": [
       null,
       null,
@@ -30265,38 +30265,6 @@
     },
     {
      "rank": "120",
-     "name": "Веремєєв Богдан",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      14.25
-     ],
-     "total": 14.25
-    },
-    {
-     "rank": "121",
-     "name": "Торський Тарас",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      14.25
-     ],
-     "total": 14.25
-    },
-    {
-     "rank": "122",
      "name": "Полунін Максим",
      "scores": [
       null,
@@ -30312,8 +30280,40 @@
      "total": 14.25
     },
     {
+     "rank": "121",
+     "name": "Тесленко Кирило",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
+     "rank": "122",
+     "name": "Торський Тарас",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      14.25
+     ],
+     "total": 14.25
+    },
+    {
      "rank": "123",
-     "name": "Бутов Олександр",
+     "name": "Якименко Дмитро",
      "scores": [
       null,
       null,
@@ -30409,70 +30409,6 @@
     },
     {
      "rank": "129",
-     "name": "Дорошенко Ігор",
-     "scores": [
-      null,
-      null,
-      11.25,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 11.25
-    },
-    {
-     "rank": "130",
-     "name": "Носівець Сергій",
-     "scores": [
-      null,
-      null,
-      11.25,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 11.25
-    },
-    {
-     "rank": "131",
-     "name": "Чик Едуард",
-     "scores": [
-      null,
-      null,
-      11.25,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 11.25
-    },
-    {
-     "rank": "132",
-     "name": "Чорняк Михай",
-     "scores": [
-      null,
-      null,
-      11.25,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 11.25
-    },
-    {
-     "rank": "133",
      "name": "Гойколов Олександр",
      "scores": [
       null,
@@ -30488,7 +30424,39 @@
      "total": 11.25
     },
     {
-     "rank": "134",
+     "rank": "130",
+     "name": "Дорошенко Ігор",
+     "scores": [
+      null,
+      null,
+      11.25,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.25
+    },
+    {
+     "rank": "131",
+     "name": "Носівець Сергій",
+     "scores": [
+      null,
+      null,
+      11.25,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.25
+    },
+    {
+     "rank": "132",
      "name": "Топко Андрій",
      "scores": [
       null,
@@ -30504,7 +30472,7 @@
      "total": 11.25
     },
     {
-     "rank": "135",
+     "rank": "133",
      "name": "Харченко Тетяна",
      "scores": [
       null,
@@ -30512,6 +30480,38 @@
       null,
       null,
       11.25,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.25
+    },
+    {
+     "rank": "134",
+     "name": "Чик Едуард",
+     "scores": [
+      null,
+      null,
+      11.25,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 11.25
+    },
+    {
+     "rank": "135",
+     "name": "Чорняк Михай",
+     "scores": [
+      null,
+      null,
+      11.25,
+      null,
+      null,
       null,
       null,
       null,
@@ -30553,70 +30553,6 @@
     },
     {
      "rank": "138",
-     "name": "Конопченко Данило",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      9.5,
-      null,
-      null
-     ],
-     "total": 9.5
-    },
-    {
-     "rank": "139",
-     "name": "Липчевский Артур",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      9.5,
-      null,
-      null
-     ],
-     "total": 9.5
-    },
-    {
-     "rank": "140",
-     "name": "Попович Карл",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      9.5,
-      null,
-      null
-     ],
-     "total": 9.5
-    },
-    {
-     "rank": "141",
-     "name": "Дідов Василь",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      9.5,
-      null,
-      null
-     ],
-     "total": 9.5
-    },
-    {
-     "rank": "142",
      "name": "Власенко Віталій",
      "scores": [
       null,
@@ -30632,7 +30568,7 @@
      "total": 9.5
     },
     {
-     "rank": "143",
+     "rank": "139",
      "name": "Єськов Олег",
      "scores": [
       null,
@@ -30648,7 +30584,7 @@
      "total": 9.5
     },
     {
-     "rank": "144",
+     "rank": "140",
      "name": "Козирєв Олександр",
      "scores": [
       null,
@@ -30664,7 +30600,39 @@
      "total": 9.5
     },
     {
-     "rank": "145",
+     "rank": "141",
+     "name": "Конопченко Данило",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "142",
+     "name": "Липчевский Артур",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "143",
      "name": "Пасичніченко Артрем",
      "scores": [
       null,
@@ -30675,6 +30643,38 @@
       null,
       null,
       9.5,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "144",
+     "name": "Попович Карл",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null,
+      null
+     ],
+     "total": 9.5
+    },
+    {
+     "rank": "145",
+     "name": "Дідов Василь",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9.5,
+      null,
       null
      ],
      "total": 9.5
@@ -30713,70 +30713,6 @@
     },
     {
      "rank": "148",
-     "name": "Бондаренко Валерій",
-     "scores": [
-      null,
-      5.5,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 5.5
-    },
-    {
-     "rank": "149",
-     "name": "Ландин Ілля",
-     "scores": [
-      null,
-      5.5,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 5.5
-    },
-    {
-     "rank": "150",
-     "name": "Романенко Кирило",
-     "scores": [
-      null,
-      5.5,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 5.5
-    },
-    {
-     "rank": "151",
-     "name": "Тимченко Михайло",
-     "scores": [
-      null,
-      5.5,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 5.5
-    },
-    {
-     "rank": "152",
      "name": "Андрощук Олександр",
      "scores": [
       null,
@@ -30792,7 +30728,23 @@
      "total": 5.5
     },
     {
-     "rank": "153",
+     "rank": "149",
+     "name": "Бондаренко Валерій",
+     "scores": [
+      null,
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "150",
      "name": "Бородулін Дмитро",
      "scores": [
       null,
@@ -30808,7 +30760,23 @@
      "total": 5.5
     },
     {
-     "rank": "154",
+     "rank": "151",
+     "name": "Ландин Ілля",
+     "scores": [
+      null,
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "152",
      "name": "Новосад Богдан",
      "scores": [
       null,
@@ -30824,7 +30792,23 @@
      "total": 5.5
     },
     {
-     "rank": "155",
+     "rank": "153",
+     "name": "Романенко Кирило",
+     "scores": [
+      null,
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "154",
      "name": "Старіков Володимир",
      "scores": [
       null,
@@ -30833,6 +30817,22 @@
       null,
       null,
       5.5,
+      null,
+      null,
+      null
+     ],
+     "total": 5.5
+    },
+    {
+     "rank": "155",
+     "name": "Тимченко Михайло",
+     "scores": [
+      null,
+      5.5,
+      null,
+      null,
+      null,
+      null,
       null,
       null,
       null
@@ -30857,8 +30857,9 @@
     },
     {
      "rank": "157",
-     "name": "Худяшов Станіслав",
+     "name": "Гниденко Валентин",
      "scores": [
+      1.5,
       null,
       null,
       null,
@@ -30866,15 +30867,15 @@
       null,
       null,
       null,
-      null,
-      1.5
+      null
      ],
      "total": 1.5
     },
     {
      "rank": "158",
-     "name": "Скарлат Олександр",
+     "name": "Городецький Ілля",
      "scores": [
+      1.5,
       null,
       null,
       null,
@@ -30882,8 +30883,7 @@
       null,
       null,
       null,
-      null,
-      1.5
+      null
      ],
      "total": 1.5
     },
@@ -30905,22 +30905,6 @@
     },
     {
      "rank": "160",
-     "name": "Шипіцин Олег",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      1.5
-     ],
-     "total": 1.5
-    },
-    {
-     "rank": "161",
      "name": "Махневич Валерій",
      "scores": [
       null,
@@ -30936,55 +30920,7 @@
      "total": 1.5
     },
     {
-     "rank": "162",
-     "name": "Городецький Ілля",
-     "scores": [
-      1.5,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 1.5
-    },
-    {
-     "rank": "163",
-     "name": "Гниденко Валентин",
-     "scores": [
-      1.5,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 1.5
-    },
-    {
-     "rank": "164",
-     "name": "Павлов Олександр",
-     "scores": [
-      1.5,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 1.5
-    },
-    {
-     "rank": "165",
+     "rank": "161",
      "name": "Мороз Сергій",
      "scores": [
       1.5,
@@ -31000,7 +30936,7 @@
      "total": 1.5
     },
     {
-     "rank": "166",
+     "rank": "162",
      "name": "Набільський Сергій",
      "scores": [
       1.5,
@@ -31016,39 +30952,71 @@
      "total": 1.5
     },
     {
+     "rank": "163",
+     "name": "Павлов Олександр",
+     "scores": [
+      1.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "164",
+     "name": "Скарлат Олександр",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "165",
+     "name": "Худяшов Станіслав",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
+     "rank": "166",
+     "name": "Шипіцин Олег",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5
+     ],
+     "total": 1.5
+    },
+    {
      "rank": "167",
-     "name": "Кургузов Олег",
-     "scores": [
-      null,
-      1,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "168",
-     "name": "Чумак Ганна",
-     "scores": [
-      null,
-      1,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "169",
      "name": "Агневщіков Анатолій",
      "scores": [
       1,
@@ -31061,10 +31029,10 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
-     "rank": "170",
+     "rank": "168",
      "name": "Агневщиков Олег",
      "scores": [
       1,
@@ -31077,58 +31045,26 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
-     "rank": "171",
-     "name": "Плуталов Андрій",
+     "rank": "169",
+     "name": "Витковський Анатолій",
      "scores": [
-      1,
       null,
       null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "172",
-     "name": "Попов Юрій",
-     "scores": [
-      1,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "173",
-     "name": "Котенко Олег",
-     "scores": [
       null,
       null,
       null,
       1,
       null,
       null,
-      null,
-      null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
-     "rank": "174",
+     "rank": "170",
      "name": "Виговський Антон",
      "scores": [
       null,
@@ -31141,10 +31077,10 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
-     "rank": "175",
+     "rank": "171",
      "name": "Дзебань Дмитро",
      "scores": [
       null,
@@ -31157,7 +31093,71 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
+    },
+    {
+     "rank": "172",
+     "name": "Клюйков Роман",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "173",
+     "name": "Конопченко Віктор",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "174",
+     "name": "Котенко Олег",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "175",
+     "name": "Кургузов Олег",
+     "scores": [
+      null,
+      1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
     },
     {
      "rank": "176",
@@ -31173,122 +31173,10 @@
       null,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
      "rank": "177",
-     "name": "Луговська Людмила",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      1,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "178",
-     "name": "Моісеєнко Віталіна",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      1,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "179",
-     "name": "Спекторенко Катерина",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      1,
-      null,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "180",
-     "name": "Витковський Анатолій",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      1,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "181",
-     "name": "Ткачук Сергій",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      1,
-      null,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "182",
-     "name": "Клюйков Роман",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      1,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "183",
-     "name": "Конопченко Віктор",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      1,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "184",
      "name": "Лещенко Юрій",
      "scores": [
       null,
@@ -31301,10 +31189,26 @@
       1,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
-     "rank": "185",
+     "rank": "178",
+     "name": "Луговська Людмила",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "179",
      "name": "Маслій Євген",
      "scores": [
       null,
@@ -31317,10 +31221,26 @@
       1,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
-     "rank": "186",
+     "rank": "180",
+     "name": "Моісеєнко Віталіна",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "181",
      "name": "Носовський Дмитро",
      "scores": [
       null,
@@ -31333,10 +31253,74 @@
       1,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
-     "rank": "187",
+     "rank": "182",
+     "name": "Плуталов Андрій",
+     "scores": [
+      1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "183",
+     "name": "Попов Юрій",
+     "scores": [
+      1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "184",
+     "name": "Спекторенко Катерина",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "185",
+     "name": "Ткачук Сергій",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "186",
      "name": "Топко Олександр",
      "scores": [
       null,
@@ -31349,10 +31333,10 @@
       1,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
-     "rank": "188",
+     "rank": "187",
      "name": "Ходєєв Микола",
      "scores": [
       null,
@@ -31365,15 +31349,15 @@
       1,
       null
      ],
-     "total": 1
+     "total": 1.0
     },
     {
-     "rank": "189",
-     "name": "Чижмадія Томаш",
+     "rank": "188",
+     "name": "Чумак Ганна",
      "scores": [
       null,
+      1,
       null,
-      0.75,
       null,
       null,
       null,
@@ -31381,10 +31365,10 @@
       null,
       null
      ],
-     "total": 0.75
+     "total": 1.0
     },
     {
-     "rank": "190",
+     "rank": "189",
      "name": "Анісімов Іван",
      "scores": [
       null,
@@ -31400,7 +31384,7 @@
      "total": 0.75
     },
     {
-     "rank": "191",
+     "rank": "190",
      "name": "Бистров Володимир",
      "scores": [
       null,
@@ -31416,7 +31400,7 @@
      "total": 0.75
     },
     {
-     "rank": "192",
+     "rank": "191",
      "name": "Лопиш Норбер",
      "scores": [
       null,
@@ -31432,7 +31416,7 @@
      "total": 0.75
     },
     {
-     "rank": "193",
+     "rank": "192",
      "name": "Мелашенко Владислав",
      "scores": [
       null,
@@ -31448,7 +31432,7 @@
      "total": 0.75
     },
     {
-     "rank": "194",
+     "rank": "193",
      "name": "Роземберський Іосіф",
      "scores": [
       null,
@@ -31464,7 +31448,7 @@
      "total": 0.75
     },
     {
-     "rank": "195",
+     "rank": "194",
      "name": "Товт Золтан",
      "scores": [
       null,
@@ -31480,8 +31464,24 @@
      "total": 0.75
     },
     {
-     "rank": "196",
+     "rank": "195",
      "name": "Трубецькой Петро",
+     "scores": [
+      null,
+      null,
+      0.75,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "total": 0.75
+    },
+    {
+     "rank": "196",
+     "name": "Чижмадія Томаш",
      "scores": [
       null,
       null,
@@ -31547,7 +31547,7 @@
       75,
       null
      ],
-     "total": 270
+     "total": 270.0
     },
     {
      "rank": "4",
@@ -31560,7 +31560,7 @@
       23,
       35.25
      ],
-     "total": 232
+     "total": 232.0
     },
     {
      "rank": "5",
@@ -31586,7 +31586,7 @@
       null,
       150
      ],
-     "total": 150
+     "total": 150.0
     },
     {
      "rank": "7",
@@ -31599,7 +31599,7 @@
       null,
       null
      ],
-     "total": 150
+     "total": 150.0
     },
     {
      "rank": "8",
@@ -31638,7 +31638,7 @@
       null,
       null
      ],
-     "total": 132
+     "total": 132.0
     },
     {
      "rank": "11",
@@ -31651,7 +31651,7 @@
       null,
       null
      ],
-     "total": 125
+     "total": 125.0
     },
     {
      "rank": "12",
@@ -31677,7 +31677,7 @@
       null,
       null
      ],
-     "total": 84
+     "total": 84.0
     },
     {
      "rank": "14",
@@ -31729,7 +31729,7 @@
       null,
       null
      ],
-     "total": 62
+     "total": 62.0
     },
     {
      "rank": "18",
@@ -31755,7 +31755,7 @@
       40,
       null
      ],
-     "total": 53
+     "total": 53.0
     },
     {
      "rank": "20",
@@ -31768,7 +31768,7 @@
       null,
       35.25
      ],
-     "total": 45
+     "total": 45.0
     },
     {
      "rank": "21",
@@ -31781,7 +31781,7 @@
       null,
       null
      ],
-     "total": 40
+     "total": 40.0
     },
     {
      "rank": "22",
@@ -31859,7 +31859,7 @@
       null,
       null
      ],
-     "total": 23
+     "total": 23.0
     },
     {
      "rank": "28",
@@ -31872,7 +31872,7 @@
       null,
       null
      ],
-     "total": 23
+     "total": 23.0
     },
     {
      "rank": "29",
@@ -31911,7 +31911,7 @@
       null,
       null
      ],
-     "total": 13
+     "total": 13.0
     },
     {
      "rank": "32",
@@ -31924,7 +31924,7 @@
       null,
       null
      ],
-     "total": 13
+     "total": 13.0
     },
     {
      "rank": "33",
@@ -31941,6 +31941,19 @@
     },
     {
      "rank": "34",
+     "name": "Боярчук Ірина",
+     "scores": [
+      null,
+      null,
+      9.75,
+      null,
+      null,
+      null
+     ],
+     "total": 9.75
+    },
+    {
+     "rank": "35",
      "name": "Спекторенко Катерина",
      "scores": [
       null,
@@ -31953,25 +31966,12 @@
      "total": 9.75
     },
     {
-     "rank": "35",
+     "rank": "36",
      "name": "Якименко Катерина",
      "scores": [
       null,
       null,
       null,
-      null,
-      null,
-      null
-     ],
-     "total": 9.75
-    },
-    {
-     "rank": "36",
-     "name": "Боярчук Ірина",
-     "scores": [
-      null,
-      null,
-      9.75,
       null,
       null,
       null
@@ -31989,7 +31989,7 @@
       7,
       null
      ],
-     "total": 8
+     "total": 8.0
     },
     {
      "rank": "38",
@@ -32002,23 +32002,10 @@
       null,
       null
      ],
-     "total": 7
+     "total": 7.0
     },
     {
      "rank": "39",
-     "name": "Яскевич Олена",
-     "scores": [
-      null,
-      null,
-      7,
-      null,
-      null,
-      null
-     ],
-     "total": 7
-    },
-    {
-     "rank": "40",
      "name": "Суслова Євгенія",
      "scores": [
       null,
@@ -32028,7 +32015,20 @@
       null,
       null
      ],
-     "total": 7
+     "total": 7.0
+    },
+    {
+     "rank": "40",
+     "name": "Яскевич Олена",
+     "scores": [
+      null,
+      null,
+      7,
+      null,
+      null,
+      null
+     ],
+     "total": 7.0
     },
     {
      "rank": "41",
@@ -32045,19 +32045,6 @@
     },
     {
      "rank": "42",
-     "name": "Потан Лілія",
-     "scores": [
-      null,
-      null,
-      null,
-      1,
-      null,
-      null
-     ],
-     "total": 1
-    },
-    {
-     "rank": "43",
      "name": "Косигіна Ольга",
      "scores": [
       null,
@@ -32067,7 +32054,20 @@
       1,
       null
      ],
-     "total": 1
+     "total": 1.0
+    },
+    {
+     "rank": "43",
+     "name": "Потан Лілія",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null
+     ],
+     "total": 1.0
     }
    ],
    "label": "Жінки 2013",
@@ -320585,37 +320585,31 @@
    "text": "🏆Переможець передостаннього турніру сезону FullBull Series 2026/24- Буханцов Тарас! \n🥇Буханцов Т.\n🥈Бабанін Д.\n🥉Агневщиков Ю.\n1️⃣8️⃣0️⃣ - Агневщиков Ю.\n👀",
    "date": "2026-09-23",
    "url": "https://t.me/fullbull/12732",
-   "photo": "https://cdn4.telesco.pe/file/AxE_-QWIlSKwkGX9iIF7n4BgcPtOiuPtIWOPLdm8RPXCj2z7nYnexEQXcpEDpTtTPwaExK2Hp16CwrSIAIS6w4R9w9Y4PbF_vfscyLwpbWb-bG-dTIKGEeFFrnvc3oxGppf46ptrH1P0FOk2X9EN2AqSqWnHjBmouwVCgvRtb1CEEFax9WdnUOhhtXMH8TW6vGfRD5zTkgA_cj5Wmx6m6oaMKNeK8g9GLvG3A5maRp5wl6bQ7hrxRBAw0BMY5lIA1AQx854zQMzjb_WlMiZ8gt49IOEzoFseeesYrAYoWvS-KeSHqp9RJQrjK7PDmRIN-J9ss5KycrKKtn7wWGexYA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/eY7jEt9bt_7G0sD7L531cxDIqSdrLyo6JajfyayjmZ-WYEDw2duIzq5zL6SOYvMH4VXQRfNuyZjzvOXFn_7pHxXRlq5gE8p23YPwagfXEUpNsVKa-eLY1pGRLxhlwZHk-WTXtqUP5XmJfuRFjasCzo8B3CbDXbeSw8Y-2yYmHbpaUd6doQEL3-WtQTR4tIjmcmAjLxc7SoEv7nG0JvOpDxXBR6WYaF9i5lRC0JyPaQZUN8Tfe9aWHgMxDAdCg_nDfYyNr3ckJGJhFyFE1OfsUmouKSD-jC3igWHqmnucYjoAub9U_hvRVp4qlwhaGh9X-oBvpOzApNVEYQqFpQgjtg.jpg"
   },
   {
    "text": "🏆 Кіфор Ярослав — переможець 3-го етапу львівської Lemberg Darts League-2026!\nЯрослав провів турнір без поразок — 6 перемог у 6 матчах, показавши найкращий турнірний середній набір — 63.35.\n🥇 Кіфор Я.\n🥈 Ранстайл Я.\n🥉 Зубаль В.\n🎯 Найкращий середній на матч: 71.57 — Кіфор Я.\n1️⃣8️⃣0️⃣ - Кіфор Я., Ранстайл Я., Корб’як І., Зубаль М. \n💯 Чекаути 100+:\n1️⃣4️⃣8️⃣ — Кіфор Я.\n1️⃣0️⃣5️⃣ — Микитин Я.\n👀 \n📊Рейтинг львівської ліги Lemberg після трьох етапів 👉",
    "date": "2026-09-22",
    "url": "https://t.me/fullbull/12726",
-   "photo": "https://cdn4.telesco.pe/file/RRGrTXqrQobI_D-SOaxfatJTEdGG2jgcBhqVtfAtT0Dyt7NsZYMA-tuACP7gcxRS4Hv_CERGZhkkTaLWzLJOGtMyx_2vwRLLVzWQWkit0SDvWON6Yvcj4o24QB0G3_ZLNRl-KG8YYMKctw9uBwuuUcpkhCQaR_WwHcUNyE8yJHP1J16SX8dw9m46vVpRQdGyDx8SO1gdEUDdH7N36-JacpAks0Xw78nHI2JnJlF5jRQ79HBb_oda-_aXtM4EmruQdAIZd_wDuYIW10clMKv87yRPGi-KD4SHYmCU4ykFQcBapneC_YiHV1BNCWYHOuu_sUh3BVL33T6QyLVKlyHMqg.jpg"
+   "photo": "https://cdn4.telesco.pe/file/i9RS10HEQ2qONEVPIblUwxwVEkgjVgd0tVxly-IXk8vrBD7A50jG7VGiAHZz7j_zS8EEFrdLerPV7T6wQDZo_4U9q_Cdq1JMNCJ8LynhNPXXxLUfzGbUYYNHctBow8EES8NoGaqMy7NlSKAvRfOKu5dzau118PRMi_bZsVRTKJOUOOMMSgnvisvXBioeK_zkGznqiKzt44lGFnPeuuiSJhqFvJBg1S3clHxMrIg-ljkfzHDU-ZwEDnW7ky3YnO3U9hZzXfw8CxHVPZODR7EcJlhrrf9dKJDezTry6zdEodMcnpm2NntVZ_l3L6Ut-R3bz4_Ts8m8l_1NUUBbIXiQFQ.jpg"
   },
   {
    "text": "🏆 Гончаров Едуард — переможець рейтингового турніру КФД - O’Brien’s Tour Kyiv 2026/36, який відбувся у понеділок, 21 вересня.\n🥇 Гончаров Е.\n🥈 Бабанін Д.\n🥉 Агневщиков Ю.\n🎯 Найкращий середній на матч: 74.33 - Гончаров Е.\n🚨Під час турніру Едуард також оформив FullBull — три дротики поспіль у Bullseye!\n💯 Чекаути 100+:\n1️⃣5️⃣5️⃣ - Бабанін Д.\n1️⃣2️⃣0️⃣ - Бабанін Д. \n1️⃣1️⃣6️⃣ - Полтавець С.",
    "date": "2026-09-21",
    "url": "https://t.me/fullbull/12724",
-   "photo": "https://cdn4.telesco.pe/file/ffuYrF7DEkrSooFJX83YZ8eXN1b-6n6Rjr8wQB43MEGUE2IlPqOATJy9pE6dwGl9HRnh9odX-d-t_KwUy-oQKfAGZcpjKo1pp9nW2mTLYf0yASe8mFnqXZJz9YqUa0whFb0EtD6v8s69q8kBWJSQecTMlggEpp4u-_E0uL9DVJADYZneCgSxmmM_gLWG8VD-Ng4ow4D97jLKAlEV2iLX_D25LNpZIHMyiP4DMJ-FI-9ds45IHnJDMb73FgfPW6oYBIOlU0xIg__y8zMqUN6kFdK6xWzxfrYBordMEgJv1scnZJXD2TXHQnbXPlHEBRC9mK9MI4W4Fnl4BiHkRfzSRg.jpg"
+   "photo": "https://cdn4.telesco.pe/file/nYQQD9quC44z_H7VtXgdOoHKCIFTINsQ0s58byhb6ZrXwYvDWNUhCJ5aDNvoUW3RrE6_01JsnT5Z2qYoHZGiNsMTpIh2LYG0KR_jgTIiOXY21cFq95Edg_fFcGCVdQ1N5EdNeyNf5Hu-EwBO-twFVC74iOFZoE6CAAk5PhRtvVEtc1xQU5_6dq49rWdIRfQk7BplHPSfl3dcFNfPLDDRxwfQEBFsdurlIi9NhaH-fOgMvwZdrcSC90z-D4N-YHoHEpCfTM3Lo67mGsj0iU5XOMiUYxgV9cYSi7RVEoJpnspWjQ8XgInfGab4XJttUaaMFXOTdZI7d_TwIivEOeKYwQ.jpg"
   },
   {
    "text": "🏆 Овсієнко Євген — переможець рейтингового турніру Портер Осінь 2026/2! Змагання відбулись у суботу, 19-го вересня.\nУ фіналі Овсієнко Євген переміг Аверіна Сергія 5:1.\nЄвген провів турнір без поразок — 7 перемог у 7 матчах, показав найкращий середній набір турніру — 72.60.\n🥇 Овсієнко Є.\n🥈 Аверін С.\n🥉 Гомелюк О.\n🎯 Найкращий середній на матч: 77.74 — Овсієнко Є.\n1️⃣8️⃣0️⃣х2️⃣ - Бабанін Д.\n1️⃣8️⃣0️⃣ - Солтис М.\n💯 Чекаути 100+:\n1️⃣1️⃣9️⃣ - Гомелюк О.\n👀 \n⚠️Осінній рейтинг дартс-клубу «Портер» має осо",
    "date": "2026-09-21",
    "url": "https://t.me/fullbull/12722",
-   "photo": "https://cdn4.telesco.pe/file/g5dCosPeYc5NcuBs7HmAFNPz7AOPD8F90waM0w2phKGqKgqUBCRkWKDbTik5_vFU1uuYUApn6PEUiU8WVGS8RsrLAVGEbcL0VdhCAvLDNXVkmwEZOTUaGEPgkrYxT7vwLNk-me8HMyg-81uorTUULwS3eGjj3s8vys7ZfKZhyDkIBHw6vvHpSqdBQYy3nz-kTgctYAUg1-ljPUCl0a9dZs9KKscuLtZDENafi00nws6Qtf8XdSiegQL1SJbKDFLeXDXN4Z7zKBNPJSwykzWGpCfWAIBB3KVng0-26N61msda5q9WRh1U4qeoiyp9gJQizu-JTP52jzRPNENZMg71Mw.jpg"
+   "photo": "https://cdn4.telesco.pe/file/l_I2vNgLVZPX6Tjdu2LT7rop4a6LyzNR16IMDnYfPaOEG5SJ8iNM_44j0c-W4MokdQSn6I2Onm_-cmWzAKsJQTePNEb0o3PuwyWBAj3kQrLKFuJgJh12fmkt5JobCzLNk2c8p53s7DnIUqJpuuP9ZmO01SK_VuTwiZnkX0aFRD-6lgBPbVTfxJnmxP1XgrjUuKQXxxMyCTapaH0csztGuffZ3kS3q2IrKysOnNw_RCZWsNNzfZlpxQ5wJHOZOWeR4_dCYFBBIf8Bzx2fYmpoMNBalqzZMRHq4DiqkIsxVzYeDNPsh2XWYyRrBx2FSXWWrcILC2uSMP81rNLVHaWUDg.jpg"
   },
   {
    "text": "З 20.00 за київським часом стартує фінальний раунд World Series of Darts Finals.",
    "date": "2026-09-20",
    "url": "https://t.me/fullbull/12716",
-   "photo": "https://cdn4.telesco.pe/file/vzQM6bUupx8jWqbvbtMt1cv5I7xqvZOt_V9IQ98hY9PcAHtbZ1avIf3a67yJKE1dD5AapdzEdv95bvRQSFajD-dUCgGRbgdDOKyo9ZnhIoXbrOn_GdTe8mZeRz2ZktW8iZyG6_wKR4SRxF52XTF_KSlRqU3YsllQK34s7IXwej-e9k8hsGDjAK2c2Jp9ii_ir14FvEJPmzM1_oqv4Xuio7Vi7Ao-K_dQKhgtdrnjjPoNthyuCgsPg-s8wcVLQot3tttx3XDCzZ_7iLMXUZS_d0ChKKGnJK4LzjJCftN5ZDaaN6PBRHRt3booOJ5ro0lXll2PvFFbHNWM-7Wg8lT-bQ.jpg"
-  },
-  {
-   "text": "🏆 Могилевський Руслан — переможець Cherkasy Ranking Event 8!\nУ фіналі рейтингового турніру Могилевський Руслан переміг Чепурного Едуарда — 5:3.\nРуслан провів турнір без поразок - 6 перемог із 6 матчів, показав найкращий середній на матч турніру - 73.92.\n🥇 Могилевський Р.\n🥈 Чепурний Е.\n🥉 Харченко Т.\n1️⃣8️⃣0️⃣ — Могилевський Р.\n💯 Чекаути 100+:\n1️⃣2️⃣3️⃣ — Могилевський Р.\n1️⃣1️⃣5️⃣ — Гончаренко В.\n👀",
-   "date": "2026-09-20",
-   "url": "https://t.me/fullbull/12713",
-   "photo": "https://cdn4.telesco.pe/file/iPKiASNlc46kknA6W-xW_iyihTjkyRmJF2HwvKt-_3Nn-mtNIppVLkmCAHN7MTAdfVBZ_dJOEuLlNCJpL13dgnAZhzTg7YWpQnF0zX5CLags7iD3FEWxYcn2vbJt-_5jOfaCeH-mIBo8RZ0q3rQBer6D7HjDW5zjGlP6_4M9xGMOIk4Q4w3riij9c4Ubibmz_Yitgj_EtE4dBVlgy3GmwkirAGN-OH6va87_y1Jmrt7PGy9rcC8zc3HiB67jPpoglPMfmtu1JL-lNSGUKq2hEnfY8in7vZVniWpl4e-Wo6A9YJA6V7rquCNF16GnxUI8FGXIXDmfVV88zQoQu948Ng.jpg"
+   "photo": "https://cdn4.telesco.pe/file/KpJpUbORItBk0HK0waPTYjH2gY0a4zr01ONTg-YzVhmCgcfxxvHEgCmm6gqER7Ya1Gu1DDKd0nXejmQxdeGZo7S1JY76zG3UcvOfcR3MgTDnAYSqfmtOFkUktWI35Xf8_jZlYGguaqFo-OvfTaq970Zq1nUut7Us0Ylf5WJyij1AsWJb705ar2oTDgoWri7kNpJYGjNK1wG85OLDmgFxp3Uu8z-oi_Ew89EWvjab7YOavpc_w5D-nWX9kWI0YHjrudLtZLaHVyKIFnCEruErf5wd1b1SBK5Wb86ZeJIr_cUevPWF8gTd_Kpti8BGPqmrmDQ_IHQBVMkH5jVUTwkSSA.jpg"
   }
  ],
  "championsRecords": [
@@ -324388,7 +324382,7 @@
    "profession": "Заст. Голови Правління",
    "birthDate": "27.10.1972",
    "region": "Маріуполь (Донецька область)",
-   "startYear": "2004",
+   "startYear": "2018",
    "dartsManufacturer": "Harrows",
    "dartsModel": "Genesis Style A",
    "dartsWeight": "23"
@@ -324632,6 +324626,14 @@
    "dartsManufacturer": "Harrows",
    "dartsModel": "Red Horizon",
    "dartsWeight": "24"
+  },
+  "Топчу Владислав": {
+   "nickname": "Top Man",
+   "profession": "парамедик",
+   "birthDate": "08.03.1984",
+   "region": "Чернігівська область, Козелець",
+   "startYear": "квітень 2023",
+   "dartsWeight": "23"
   },
   "Іванов Сергій": {
    "profession": "Директор Центру ФК і спорту",
@@ -324885,6 +324887,7 @@
   "Зязюля Андрій",
   "Кабанова Світлана",
   "Казинський Олег",
+  "Калаур Инна",
   "Калаур Інна",
   "Каліберда Володимир",
   "Калінін Роман",
