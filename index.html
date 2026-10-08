@@ -1603,8 +1603,8 @@ const I18N = (function(){
       if(m) return fill(PATTERNS[i][1], m.slice(1));
     }
     if(c.indexOf(' · ') > 0) return c.split(' · ').map(translateCore).join(' · ');
-    let s = c;
-    if(overrideRe) s = s.replace(overrideRe, m => OVERRIDES.get(m));
+    let s = c.replace(/([а-яіїєґ])([А-ЯІЇЄҐ])/g, '$1/$2'); // «ОмельченкоГакман» (склеєні імена пар з Nakka)
+    if(overrideRe) s = s.replace(overrideRe, (m, pre, name) => pre + OVERRIDES.get(name));
     for(let i = 0; i < SUBS.length; i++) s = s.replace(SUBS[i][0], SUBS[i][1]);
     return translateTokens(s);
   }
@@ -1620,9 +1620,19 @@ const I18N = (function(){
     trCache.clear();
     if(obj && typeof obj === 'object'){
       Object.keys(obj).forEach(k => { if(typeof obj[k] === 'string' && obj[k]) OVERRIDES.set(k, obj[k]); });
+      // Прізвище окремо (напр. «Могилевський/Пекарук» у парах): беремо з виправлення «Прізвище Ім'я»,
+      // якщо воно відрізняється від автотранслітерації.
+      Object.keys(obj).forEach(k => {
+        const cw = k.trim().split(/\s+/), ew = String(obj[k]).trim().split(/\s+/);
+        if(cw.length === 2 && ew.length === 2 && cw[0].length > 3 && !OVERRIDES.has(cw[0]) && translitWord(cw[0]) !== ew[0]){
+          OVERRIDES.set(cw[0], ew[0]);
+        }
+      });
     }
     const keys = Array.from(OVERRIDES.keys()).filter(k => k.length > 3).sort((a,b) => b.length - a.length);
-    overrideRe = keys.length ? new RegExp(keys.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|'), 'g') : null;
+    overrideRe = keys.length
+      ? new RegExp('(^|[^\\u0400-\\u04FF])(' + keys.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')(?![\\u0400-\\u04FF])', 'g')
+      : null;
     if(lang === 'en') retranslateAll();
   }
 
