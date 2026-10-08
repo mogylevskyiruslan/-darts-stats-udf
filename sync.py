@@ -428,6 +428,40 @@ def is_mostly_numeric(values):
     return numeric / len(non_empty) >= 0.6
 
 
+# ---------- Нормалізація підписів колонок рейтингу (русизми → українська) ----------
+RATING_COLUMN_WORD_FIXES = {
+    "Донбасса": "Донбасу", "Донбаса": "Донбасу",
+    "Руданы": "Рудани",
+    "Черкассы": "Черкаси",
+    "Волыни": "Волині",
+    "Киев": "Київ", "Київа": "Києва",
+    "ФИНАЛ": "ФІНАЛ", "Финал": "Фінал", "финал": "фінал",
+    "Славянск": "Слов'янськ",
+    "Мелекино": "Мелекіне",
+    "Харьков": "Харків",
+    "Хрустальный": "Кришталевий",
+    "Этап": "Етап", "этап": "етап",
+}
+
+
+def normalize_rating_column(label):
+    """Виправляє російські написання в підписах колонок (Финал → Фінал, Донбасс → Донбас)
+    і змішані латиниця/кирилиця в римських цифрах («IІІ етап» → «ІІІ етап»)."""
+    if not label:
+        return label
+
+    def fix_word(m):
+        w = m.group(0)
+        return RATING_COLUMN_WORD_FIXES.get(w, w)
+
+    out = re.sub(r"[A-Za-zА-Яа-яІіЇїЄєҐґЁёЫыЭэЪъ'’]+", fix_word, label)
+    # римські цифри перед «етап»: якщо в префіксі немає латинської V/X — робимо всі І кириличними
+    m = re.match(r"^([IІ]+)( етап.*)$", out)
+    if m:
+        out = "І" * len(m.group(1)) + m.group(2)
+    return out
+
+
 def parse_ratings_sheet(rows):
     """Розбирає одну вкладку рейтингу. Повертає {"columns": [...], "rows": [...]}
     або None, якщо структура не розпізнана (наприклад, порожня вкладка)."""
@@ -450,6 +484,7 @@ def parse_ratings_sheet(rows):
         if not is_mostly_numeric(col_values):
             continue
         label = header[c].split("\n")[0].strip() if header[c].strip() else f"Колонка {c}"
+        label = normalize_rating_column(label)
         is_total = bool(re.search(r"рейтинг|сума", header[c], re.IGNORECASE))
         if is_total and total_col is None:
             total_col = c

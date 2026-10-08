@@ -436,6 +436,22 @@
   /* MAP */
   .map-wrap{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:16px; max-width:640px; margin:0 auto;}
   .map-wrap svg{width:100%; height:auto; display:block;}
+  .map-city-marker{cursor:pointer; outline:none;}
+  .map-city-marker.selected .map-city-dot{fill:#fff; stroke:var(--gold); stroke-width:2.5;}
+  .map-city-marker:focus-visible .map-city-dot{stroke:#fff; stroke-width:2.5;}
+  .map-city-panel{margin-top:14px; border-top:1px solid var(--line); padding-top:12px;}
+  .map-city-hint{color:var(--muted); font-size:13px; text-align:center; margin:0;}
+  .map-city-head{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px;}
+  .map-city-head h3{margin:0; font-size:16px;}
+  .map-city-close{background:transparent; border:1px solid var(--line); color:var(--muted); border-radius:4px; padding:4px 10px; cursor:pointer; font:inherit; font-size:12px;}
+  .map-city-close:hover{color:var(--cream); border-color:var(--gold);}
+  .map-tour-list{list-style:none; margin:0; padding:0; max-height:340px; overflow-y:auto;}
+  .map-tour-list li{display:grid; grid-template-columns:92px minmax(0,1fr) auto 44px; gap:10px; align-items:baseline; padding:8px 0; border-bottom:1px solid var(--line); font-size:13px;}
+  .map-tour-list li:last-child{border-bottom:none;}
+  .mt-date{font-family:'JetBrains Mono',monospace; color:var(--muted); font-size:12px;}
+  .mt-name{min-width:0; overflow-wrap:anywhere;}
+  .mt-fmt{display:block; color:var(--muted); font-size:12px;}
+  .mt-total{font-family:'JetBrains Mono',monospace; text-align:right;}
   .map-city-dot{fill:var(--gold); stroke:var(--bg); stroke-width:1.5; cursor:pointer; transition:r .12s;}
   .map-city-dot:hover{fill:#fff;}
   .map-city-label{font-family:'Inter',sans-serif; font-size:9px; fill:var(--cream); pointer-events:none;}
@@ -627,6 +643,8 @@
     }
     nav a{padding:12px 10px; font-size:12px;}
     .global-udl-toggle{margin-left:8px; flex-shrink:0;}
+    .map-tour-list li{grid-template-columns:78px minmax(0,1fr) 38px;}
+    .map-tour-list li .tag{display:none;}
     .lang-toggle{order:-1; margin-left:0; margin-right:8px; flex-shrink:0;}
     .lang-toggle + .global-udl-toggle{margin-left:8px;}
 
@@ -870,6 +888,7 @@
   <p class="section-sub">Міста, де приймали турніри Кубка України та Чемпіонати України. Розмір мітки — кількість турнірів у місті.</p>
   <div class="map-wrap">
     <svg id="ukraine-map" viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg"></svg>
+    <div class="map-city-panel" id="map-city-panel" aria-live="polite"></div>
   </div>
 </section>
 <section id="growth">
@@ -1469,6 +1488,7 @@ const I18N = (function(){
 
   const UI = {
     'Всеукраїнська Федерація Дартсу — Статистика':'Ukrainian Darts Federation — Statistics',
+    'Натисніть на місто на мапі, щоб побачити турніри, які там проходили.':'Click a city on the map to see the tournaments held there.',
     'Протокол':'Protocol','Результати':'Results','Джерело':'Source','Призери':'Medalists',
     'Нічого не знайдено. Спробуйте інший запит.':'Nothing found. Try another query.',
     'Нічого не знайдено.':'Nothing found.','Нічого не знайдено':'Nothing found',
@@ -1513,12 +1533,12 @@ const I18N = (function(){
   const SUBS = [   // впорядковані підстановки (до пословного перекладу)
     [/Чемпіонатів України/g,'Ukrainian Championships'],[/Чемпіонати України/g,'Ukrainian Championships'],[/Чемпіонат України/g,'Ukrainian Championship'],
     [/Кубок України/g,'Ukrainian Cup'],[/Кубку України/g,'Ukrainian Cup'],[/Кубка України/g,'Ukrainian Cup'],
+    [/Кубок Донбасу/g,'Donbas Cup'],[/Кубок Рудани/g,'Rudany Cup'],[/Кубок Києва/g,'Kyiv Cup'],[/Кришталевий дротик/g,'Crystal Dart'],
     [/Кубок Харкова/g,'Kharkiv Cup'],[/Кубок Одеси/g,'Odesa Cup'],[/Кубок Черкас/g,'Cherkasy Cup'],
     [/Кубок Волині/g,'Volyn Cup'],[/Кубок Волыни/g,'Volyn Cup'],[/Кубок Донбасса/g,'Donbas Cup'],[/Кубок Донбаса/g,'Donbas Cup'],[/Кубок Руданы/g,'Rudana Cup'],
     [/серед чоловіків/g,'among men'],[/серед жінок/g,'among women'],[/серед дорослих/g,'among adults'],[/Національний турнір/g,'National tournament'],
     [/УДЛ\/ЗУДЛ/g,'UDL/WUDL'],[/ЗУДЛ/g,'WUDL'],[/УДЛ/g,'UDL'],[/ВФД/g,'UDF'],
     [/(^|[^Ѐ-ӿ])ЧУ(?![Ѐ-ӿ])/g,'$1UA Ch.'],[/(^|[^Ѐ-ӿ])КУ(?![Ѐ-ӿ])/g,'$1UA Cup'],
-    [/(^|[^Ѐ-ӿ])КР(?![Ѐ-ӿ])/g,'$1UA Cup'],
     [/(\d{4}) р\./g,'$1'],
   ];
 
@@ -1557,6 +1577,9 @@ const I18N = (function(){
     [/^Найкращі закриття \(топ (\d+)\)$/, 'Best checkouts (top {1})'],
     [/^(.+) — статистика ВФД$/, '{1} — UDF statistics'],
     [/^(\d+) матч(?:ів|і|)$/, '{1} matches'],
+    [/^(.+) \/ (\d+) етап$/, '{1} / stage {2}'],
+    [/^(.+) — 1 турнір$/, '{1} — 1 tournament'],
+    [/^(.+) — (\d+) (?:турніри|турнірів)$/, '{1} — {2} tournaments'],
   ];
 
   Object.keys(HTML_MAP).forEach(k => EXACT.set(k, HTML_MAP[k]));
@@ -2628,6 +2651,8 @@ function svgLineChart(points, opts){
   </svg>`;
 }
 
+let mapSelectedCity = null;
+
 function renderUkraineMap(){
   const includeUDL = document.getElementById('global-toggle-udl').checked;
   const rows = tournaments.filter(t => includeUDL || !t.isUDL);
@@ -2642,7 +2667,7 @@ function renderUkraineMap(){
     if(count === 0) return '';
     const r = 6 + (count / maxCount) * 14;
     return `
-      <g class="map-city-marker">
+      <g class="map-city-marker${mapSelectedCity === name ? ' selected' : ''}" data-city="${name}" tabindex="0" role="button" aria-label="${name}: ${count}">
         <circle class="map-city-dot" cx="${x}" cy="${y}" r="${r.toFixed(1)}"><title>${name}: ${count} турнір(ів)</title></circle>
         <text class="map-city-count" x="${x}" y="${y+3}">${count}</text>
         <text class="map-city-label" x="${x}" y="${y - r - 4}" text-anchor="middle">${name}</text>
@@ -2658,7 +2683,75 @@ function renderUkraineMap(){
     <path d="${UKRAINE_MAP_PATH}" fill="var(--royal)" stroke="var(--gold)" stroke-width="1.2" fill-rule="evenodd" opacity="0.85"/>
     ${markers}
   `;
+  if(mapSelectedCity && !cityCounts[mapSelectedCity]) mapSelectedCity = null;
+  renderMapCityPanel();
 }
+
+function ukPlural(n, one, few, many){
+  const m10 = n % 10, m100 = n % 100;
+  if(m10 === 1 && m100 !== 11) return one;
+  if(m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+  return many;
+}
+
+// Список турнірів міста — під мапою, після кліку на мітку.
+function renderMapCityPanel(){
+  const panel = document.getElementById('map-city-panel');
+  if(!panel) return;
+  if(!mapSelectedCity){
+    panel.innerHTML = '<p class="map-city-hint">Натисніть на місто на мапі, щоб побачити турніри, які там проходили.</p>';
+    return;
+  }
+  const includeUDL = document.getElementById('global-toggle-udl').checked;
+  const rows = tournaments
+    .filter(t => t.city === mapSelectedCity && (includeUDL || !t.isUDL))
+    .slice()
+    .sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date));
+  const n = rows.length;
+  const items = rows.map(t => {
+    const org = t.org || '';
+    const cls = org === 'ВФД' ? 'vfd' : (org === 'УДЛ/ЗУДЛ' ? 'udl' : 'other');
+    return `<li>
+      <span class="mt-date">${t.date}</span>
+      <span class="mt-name">${t.name}${t.format ? `<span class="mt-fmt">${t.format}</span>` : ''}</span>
+      <span class="tag ${cls}">${org}</span>
+      <span class="mt-total" title="Всього">${t.total ?? '—'}</span>
+    </li>`;
+  }).join('');
+  panel.innerHTML = `
+    <div class="map-city-head">
+      <h3>${mapSelectedCity} — ${n} ${ukPlural(n, 'турнір', 'турніри', 'турнірів')}</h3>
+      <button type="button" class="map-city-close" id="map-city-close">Закрити</button>
+    </div>
+    <ul class="map-tour-list">${items}</ul>`;
+}
+
+function selectMapCity(name){
+  mapSelectedCity = (mapSelectedCity === name) ? null : name;
+  document.querySelectorAll('#ukraine-map .map-city-marker').forEach(g => {
+    g.classList.toggle('selected', g.getAttribute('data-city') === mapSelectedCity);
+  });
+  renderMapCityPanel();
+  const closeBtn = document.getElementById('map-city-close');
+  if(!mapSelectedCity && closeBtn) closeBtn.blur();
+}
+
+(function initMapCityClicks(){
+  const svg = document.getElementById('ukraine-map');
+  if(!svg) return;
+  svg.addEventListener('click', e => {
+    const g = e.target.closest && e.target.closest('.map-city-marker');
+    if(g) selectMapCity(g.getAttribute('data-city'));
+  });
+  svg.addEventListener('keydown', e => {
+    if(e.key !== 'Enter' && e.key !== ' ') return;
+    const g = e.target.closest && e.target.closest('.map-city-marker');
+    if(g){ e.preventDefault(); selectMapCity(g.getAttribute('data-city')); }
+  });
+  document.getElementById('map-city-panel').addEventListener('click', e => {
+    if(e.target && e.target.id === 'map-city-close'){ mapSelectedCity = null; selectMapCity(null); }
+  });
+})();
 
 function computeYearlyParticipation(){
   const includeUDL = document.getElementById('global-toggle-udl').checked;
