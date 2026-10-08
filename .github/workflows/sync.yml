@@ -36,10 +36,10 @@ jobs:
         run: |
           git config user.name "vfd-darts-bot"
           git config user.email "actions@github.com"
-          # комітимо ТІЛЬКИ ці два файли — нічого іншого бот не змінює
-          git add data.json rating_history.json
+          # комітимо лише дані: data.json, папку data/ і rating_history.json
+          git add data.json data rating_history.json
           if git diff --quiet --cached; then
-            echo "No changes in data.json / rating_history.json"
+            echo "No changes in data"
           else
             git commit -m "Автооновлення статистики $(date -u +'%Y-%m-%d %H:%M UTC')"
             git push
