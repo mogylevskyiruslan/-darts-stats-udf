@@ -41,6 +41,14 @@ EXCLUDED_STATS_TDIDS = {
 
 OUTPUT_PATH = "data.json"
 
+# Англійські варіанти імен (де автотранслітерація КМУ-2010 не влучила).
+# Ключ — ім'я гравця в базі (як в curatedPlayerNames), значення — англійське написання.
+# Усі інші імена сайт транслітерує автоматично. Приклад:
+#   "Могилевський Руслан": "Mogylevskyi Ruslan",
+NAME_EN_OVERRIDES = {
+    "Могилевський Руслан": "Mogylevskyi Ruslan",
+}
+
 
 def fetch_csv(url):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (vfd-darts-sync)"})
@@ -4108,6 +4116,7 @@ def main():
         "championsRecords": champions_records,
         "playerBios": player_bios,
         "curatedPlayerNames": final_player_names,
+        "nameEn": NAME_EN_OVERRIDES,
     }
 
     data = sanitize_deep(data)

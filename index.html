@@ -171,6 +171,16 @@
   .udl-toggle input{width:16px; height:16px; accent-color:var(--gold); cursor:pointer;}
   .udl-toggle:hover{color:var(--cream); border-color:var(--gold);}
 
+  .lang-toggle{
+    display:flex; align-items:center; gap:0; margin-left:auto; align-self:center; padding:0; cursor:pointer;
+    border:1px solid var(--line); border-radius:4px; background:transparent; overflow:hidden;
+    font-family:'Inter',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.04em;
+  }
+  .lang-toggle span{padding:6px 10px; color:var(--muted); transition:background .15s,color .15s;}
+  .lang-toggle span.on{background:var(--gold); color:#14161a;}
+  .lang-toggle:hover{border-color:var(--gold);}
+  .lang-toggle:focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+  .lang-toggle + .global-udl-toggle{margin-left:8px;}
   .gender-toggle{display:flex; border:1px solid var(--line); border-radius:4px; overflow:hidden;}
   .gender-btn{
     padding:10px 18px; background:var(--panel); color:var(--muted); border:none;
@@ -617,6 +627,8 @@
     }
     nav a{padding:12px 10px; font-size:12px;}
     .global-udl-toggle{margin-left:8px; flex-shrink:0;}
+    .lang-toggle{order:-1; margin-left:0; margin-right:8px; flex-shrink:0;}
+    .lang-toggle + .global-udl-toggle{margin-left:8px;}
 
     /* Загальні керуючі рядки (пошук + фільтри) — на весь екран, одна колонка */
     .controls{flex-direction:column; align-items:stretch; gap:8px;}
@@ -760,6 +772,7 @@
   <a href="#youtube">Трансляції</a>
   <a href="#news">Новини</a>
   <a href="#architecture">Як це працює</a>
+  <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Language"><span data-lang="uk">UA</span><span data-lang="en">EN</span></button>
   <label class="udl-toggle global-udl-toggle">
     <input type="checkbox" id="global-toggle-udl">
     УДЛ/ЗУДЛ
@@ -1233,6 +1246,517 @@ function sanitizeDeep(x){
   }
   return x;
 }
+
+// ================== i18n: українська ⇄ English ==================
+// Українська версія — це оригінальний текст сторінки без змін. Англійська накладається
+// шаром поверх DOM: словник фраз + шаблони + транслітерація (КМУ 2010) для імен і міст.
+const I18N = (function(){
+  'use strict';
+  const LS_KEY = 'udf_lang';
+  const CYR = /[Ѐ-ӿ]/;
+  const TOKEN = /[Ѐ-ӿ][Ѐ-ӿ'’ʼ`\-]*/g;
+
+  // ---------- Транслітерація (постанова КМУ № 55, 2010) ----------
+  const MAP = {'а':'a','б':'b','в':'v','г':'h','ґ':'g','д':'d','е':'e','є':'ie','ж':'zh','з':'z','и':'y','і':'i','ї':'i','й':'i',
+    'к':'k','л':'l','м':'m','н':'n','о':'o','п':'p','р':'r','с':'s','т':'t','у':'u','ф':'f','х':'kh','ц':'ts','ч':'ch','ш':'sh',
+    'щ':'shch','ь':'','ю':'iu','я':'ia','ъ':'','ы':'y','э':'e','ё':'io',"'":'','’':'','ʼ':'','`':''};
+  const START = {'є':'ye','ї':'yi','й':'y','ю':'yu','я':'ya','ё':'yo'};
+  function translitWord(w){
+    const lw = w.toLowerCase();
+    let out = '';
+    for(let i = 0; i < lw.length; i++){
+      const ch = lw[i];
+      const atStart = (i === 0) || lw[i-1] === '-';
+      if(ch === 'з' && lw[i+1] === 'г'){ out += 'zgh'; i++; continue; }
+      if(atStart && START[ch] !== undefined){ out += START[ch]; continue; }
+      out += (MAP[ch] !== undefined) ? MAP[ch] : ch;
+    }
+    if(!out) return out;
+    if(w.length > 1 && w === w.toUpperCase() && w !== w.toLowerCase()) return out.toUpperCase();
+    const f = w[0];
+    if(f !== f.toLowerCase()) return out[0].toUpperCase() + out.slice(1);
+    return out;
+  }
+  const HOMOGLYPH = {'С':'C','В':'B','А':'A','Е':'E','К':'K','Н':'H','М':'M','О':'O','Р':'P','Т':'T','Х':'X','І':'I'};
+
+  // ---------- Словники ----------
+  const EXACT = new Map();   // точний збіг (після нормалізації пробілів)
+  const EXACT_LC = new Map();
+  const OVERRIDES = new Map(); // імена/міста з виправленнями (з data.json: nameEn)
+  let overrideRe = null;
+
+  const HTML_MAP = {
+"ВФД · Архів статистики": "UDF · Statistics archive",
+"Історія та статистика": "History and statistics of",
+"українського дартсу": "Ukrainian darts",
+"Консолідований архів турнірів, рейтингів і рекордів Всеукраїнської Федерації Дартсу — зібраний з таблиць учасників, протоколів кубків та відкритих джерел.": "A consolidated archive of tournaments, ratings and records of the Ukrainian Darts Federation, compiled from participant tables, cup protocols and open sources.",
+"Історія": "History",
+"Турніри": "Tournaments",
+"Календар 2026": "2026 Calendar",
+"Географія": "Geography",
+"Динаміка": "Trends",
+"Учасники по турнірах": "Participants by tournament",
+"ТОП-10 гонка": "TOP-10 race",
+"Чемпіони ЧУ": "UA champions",
+"Гонка лідерів ЧУ": "UA Championship leaders race",
+"Призери": "Medalists",
+"Поточний рейтинг": "Current rating",
+"Рейтинги сезону": "Season ratings",
+"Рекорди": "Records",
+"Рекорди статистики": "Stats records",
+"Протистояння": "Head-to-head",
+"Майстри спорту": "Masters of Sport",
+"Трансляції": "Streams",
+"Новини": "News",
+"Як це працює": "How it works",
+"УДЛ/ЗУДЛ": "UDL/WUDL",
+"Коротка хронологія становлення дартсу як виду спорту в Україні (за матеріалами ВФД та Вікіпедії).": "A short timeline of how darts developed as a sport in Ukraine (based on UDF materials and Wikipedia).",
+"На Донецькому металургійному заводі відкрито одну з перших в Україні секцій гри в дартс. Незабаром у Донецьку запрацював дартс-клуб": "One of the first darts sections in Ukraine opened at the Donetsk Metallurgical Plant. Soon after, the darts club",
+"«Терикон»": "“Terykon”",
+"— перше відоме клубне місце класичного дартсу в країні.": "— the first known classic darts venue in the country — started in Donetsk.",
+"У Черкасах створено дартс-клуб класичного дартсу, який того ж року провів перший місцевий чемпіонат.": "A classic darts club was founded in Cherkasy and held its first local championship the same year.",
+"В Ужгороді, у барі": "In Uzhhorod, at the bar",
+"«Кактус»": "“Kaktus”",
+", з'явився перший апарат для електронного дартсу — початок руху в західній Україні; наприкінці року в клубі «Армагедон» пройшов перший турнір з електронного дартсу.": ", the first electronic darts machine appeared — the start of the movement in western Ukraine; at the end of the year the first electronic darts tournament was held at the “Armageddon” club.",
+"У Черкасах відбувся перший": "The first",
+"Кубок Черкас": "Cherkasy Cup",
+"— довгий час головне змагання року в місті.": "took place in Cherkasy — for a long time the main event of the year in the city.",
+"У Черкасах пройшов перший великий всеукраїнський турнір —": "The first major all-Ukrainian tournament was held in Cherkasy —",
+"Черкаський дартс-фестиваль": "Cherkasy Darts Festival",
+", що об'єднав гравців класичного й електронного дартсу зі сходу та заходу країни.": ", which brought together classic and electronic darts players from the east and west of the country.",
+"У січні вперше проведено Чемпіонат України за підсумками 2004 року та визначено першого Чемпіона України. Ним став Вадим Ледєньов (Київ).": "In January, the first Ukrainian Championship was held for 2004 and the first Ukrainian champion was determined: Vadym Ledienov (Kyiv).",
+"Юридично зареєстровано": "Officially registered",
+"Всеукраїнську Федерацію Дартсу (ВФД)": "the Ukrainian Darts Federation (UDF)",
+". Першим президентом став Сергій Морозов (з 2019 року — Станіслав Некрістов).": ". Serhii Morozov became its first president (Stanislav Nekristov from 2019).",
+"В Україні вперше проведено турніри під егідою World Darts Federation — Ukraine Open та Kyiv Masters.": "For the first time in Ukraine, tournaments were held under the World Darts Federation — Ukraine Open and Kyiv Masters.",
+"Пандемія COVID-19 зупинила турніри всередині країни, але відбулись перші онлайн-змагання за участю українських гравців.": "The COVID-19 pandemic stopped tournaments inside the country, but the first online competitions with Ukrainian players took place.",
+"Попри повномасштабне вторгнення й воєнний стан, збірна виступила на Кубку Європи ВДФ. Владислав Омельченко здобув кваліфікацію на Чемпіонат світу PDC — перший українець на цій сцені.": "Despite the full-scale invasion and martial law, the national team competed at the WDF Europe Cup. Vladyslav Omelchenko qualified for the PDC World Championship — the first Ukrainian on that stage.",
+"2023 — нині": "2023 — present",
+"Омельченко та Ілля Пекарук вперше представили Україну на Кубку Світу PDC. Частину змагань під егідою ВФД відновлено в окремих регіонах — попри війну щороку визначаються чемпіони з різних дисциплін.": "Omelchenko and Illia Pekaruk represented Ukraine at the PDC World Cup for the first time. Some UDF-run events have resumed in individual regions — despite the war, champions in various disciplines are determined every year.",
+"Знайти гравця": "Find a player",
+"Дані з таблиці «UA darts stat (учасники)» —": "Data from the “UA darts stat (participants)” table —",
+"записів,": "records,",
+"унікальних учасників (за даними Nakka). Клікабельні джерела: Nakka (сітки/легі) або протоколи ВФД у Google Docs/Sheets. Пошук, сортування і фільтр за роком/організатором.": "unique participants (per Nakka data). Clickable sources: Nakka (brackets/legs) or UDF protocols in Google Docs/Sheets. Search, sorting and filter by year/organizer.",
+"Усі роки": "All years",
+"Усі організатори": "All organizers",
+"Усі турніри": "All tournaments",
+"Тільки ЧУ (усі види)": "UA Championships only (all types)",
+"ЧУ · 501DO": "UA Champ. · 501DO",
+"ЧУ · Пари": "UA Champ. · Pairs",
+"ЧУ · Команди": "UA Champ. · Teams",
+"ЧУ · Мікст": "UA Champ. · Mixed",
+"ЧУ · Cricket": "UA Champ. · Cricket",
+"ЧУ · 501DIDO": "UA Champ. · 501DIDO",
+"Дата": "Date",
+"Турнір": "Tournament",
+"Орг.": "Org.",
+"Формат": "Format",
+"Місто": "City",
+"Всього": "Total",
+"Чол.": "Men",
+"Жін.": "Women",
+"Avg Ч.": "Avg M",
+"Avg Ж.": "Avg W",
+"Призери 🥇🥈🥉": "Medalists 🥇🥈🥉",
+"Джерела": "Sources",
+"Календар змагань 2026": "2026 competition calendar",
+"Усі етапи Кубка України (ВФД) та ліги UDL за рік — одним поглядом.": "All Ukrainian Cup stages (UDF) and UDL league events for the year — at a glance.",
+"Січень": "January",
+"Славсько": "Slavsko",
+"Лютий": "February",
+"ВФД": "UDF",
+"Львів": "Lviv",
+"Березень": "March",
+"Луцьк": "Lutsk",
+"Квітень": "April",
+"Вижниця": "Vyzhnytsia",
+"Травень": "May",
+"Черкаси": "Cherkasy",
+"Червень": "June",
+"Одеса": "Odesa",
+"Липень": "July",
+"Полтава": "Poltava",
+"Серпень": "August",
+"Ужгород": "Uzhhorod",
+"Вересень": "September",
+"Жовтень": "October",
+"Листопад": "November",
+"Грудень": "December",
+"ФІНАЛ": "FINAL",
+"Київ": "Kyiv",
+"Географія турнірів": "Tournament geography",
+"Міста, де приймали турніри Кубка України та Чемпіонати України. Розмір мітки — кількість турнірів у місті.": "Cities that hosted Ukrainian Cup tournaments and Ukrainian Championships. Marker size shows the number of tournaments in the city.",
+"Зростання участі по роках": "Participation growth by year",
+"Унікальні учасники за рік: скільки продовжили грати з попередніх років, скільки прийшло вперше (стовпчик вгору), і скільки перестали грати порівняно з попереднім роком (стовпчик вниз). Джерела — архів рейтингів за сезонами та дані Nakka.": "Unique participants per year: how many kept playing from previous years, how many came for the first time (bar up), and how many stopped playing compared with the previous year (bar down). Sources — season rating archive and Nakka data.",
+"Кількість учасників по турнірах": "Participants per tournament",
+"Сумарна кількість учасників (чоловіки + жінки) на кожному турнірі ВФД, у хронологічному порядку.": "Total number of participants (men + women) at each UDF tournament, in chronological order.",
+"ТОП-10 турнірів за кількістю учасників": "TOP-10 tournaments by participants",
+"Анімація формування рекордного списку — від першого турніру до сьогодні, серед усіх організаторів (ВФД + УДЛ/ЗУДЛ).": "An animation of how the record list was formed — from the first tournament to today, across all organizers (UDF + UDL/WUDL).",
+"▶ Відтворити": "▶ Play",
+"Чемпіони України та призери": "Ukrainian champions and medalists",
+"Медальний залік Чемпіонатів України за всіма категоріями (мікст, команди, пари, DIDO, Cricket, 501DO). 501DO — головна категорія сезону.": "Ukrainian Championship medal table across all categories (mixed, teams, pairs, DIDO, Cricket, 501DO). 501DO is the main category of the season.",
+"Чоловіки": "Men",
+"Жінки": "Women",
+"Усі категорії": "All categories",
+"Гравець": "Player",
+"Історія лідерів за медалями ЧУ": "History of leaders by UA Championship medals",
+"Накопичувальна анімація — як з роками мінялись лідери за загальною кількістю медалей Чемпіонатів України, за всіма категоріями разом.": "A cumulative animation of how the leaders by total Ukrainian Championship medals changed over the years, across all categories combined.",
+"Призери етапів Кубку України": "Ukrainian Cup stage medalists",
+"Медальний залік за етапами Кубка України та перемогами на ЧУ — з таблиці «Призери етапів кубків ВФД».": "Medal table by Ukrainian Cup stage and Ukrainian Championship wins — from the “Medalists of UDF cup stages” table.",
+"Усі гравці": "All players",
+"Тільки із золотом": "Gold only",
+"Тільки із сріблом": "Silver only",
+"Тільки із бронзою": "Bronze only",
+"Тільки чемпіони ЧУ": "UA champions only",
+"Мінімум 5 медалей": "At least 5 medals",
+"Мінімум 10 медалей": "At least 10 medals",
+"Титули ЧУ": "UA titles",
+"Всього медалей": "Total medals",
+"Живий рейтинг поточного сезону — оновлюється щодня разом з таблицею гравців. Клікніть на гравця, щоб побачити динаміку його позиції.": "Live rating of the current season — updated daily along with the player table. Click a player to see how their position changed.",
+"Місце": "Rank",
+"Рейтинги за сезон": "Season ratings",
+"Особистий рейтинг гравців за сумою очок з усіх етапів Кубка України (з коефіцієнтом 1.0) та ЧУ (коефіцієнт 1.5) — усі сезони 2013–2025, чоловіки й жінки, з таблиці «Кубок України».": "Personal player rating based on the sum of points from all Ukrainian Cup stages (coefficient 1.0) and the Ukrainian Championship (coefficient 1.5) — all seasons 2013–2025, men and women, from the “Ukrainian Cup” table.",
+"Вибрані рекорди з довідника «Дартс рекорди України».": "Selected records from the “Darts records of Ukraine” reference.",
+"Найкращий середній набір за гру серед жінок — Тетяна Харченко (Черкаси), рейтинговий турнір міста, 19 квітня 2025 р.": "The highest average per game among women — Tetiana Kharchenko (Cherkasy), city ranking tournament, 19 April 2025.",
+"12 років": "12 years",
+"Наймолодший призер міжнародних змагань від України — Олександр Гринів (Шептицький), бронза на WDF Winmau Vilnius Open, травень 2025 р.": "The youngest Ukrainian medalist at international events — Oleksandr Hryniv (Sheptytskyi), bronze at the WDF Winmau Vilnius Open, May 2025.",
+"Рік, з якого ведеться систематична фіксація рекордів — завдяки поширенню онлайн-застосунків для підрахунку результатів.": "The year from which records have been systematically kept — thanks to the spread of online apps for score tracking.",
+"Рекорди статистики (Nakka)": "Statistics records (Nakka)",
+"Реальна статистика з": "Real statistics from",
+"зіграних турнірів, підтягнута напряму з Nakka. Мінімум 3 матчі в турнірі для заліку в \"середній за турнір\".": "played tournaments, pulled directly from Nakka. A minimum of 3 matches in a tournament counts toward the “tournament average”.",
+"Середній за турнір": "Tournament average",
+"Середній за матч": "Match average",
+"H2H з найкращим AVG": "H2H with best AVG",
+"180-ки за турнір": "180s per tournament",
+"180-ки за кар'єру": "180s in career",
+"Checkout 100+ (кар'єра)": "Checkout 100+ (career)",
+"Найкращий лег": "Best leg",
+"⚔️ Протистояння гравців": "⚔️ Player head-to-head",
+"Оберіть двох гравців, щоб побачити всю історію їхніх особистих зустрічей.": "Choose two players to see the full history of their personal meetings.",
+"Майстри спорту України з дартсу": "Masters of Sport of Ukraine in darts",
+"Офіційний реєстр звань (Міністерство молоді та спорту України) — усі носії звання \"Майстер спорту України\" з дартсу.": "The official register of titles (Ministry of Youth and Sports of Ukraine) — all holders of the “Master of Sport of Ukraine” title in darts.",
+"Усі": "All",
+"Присвоєно": "Awarded",
+"ПІБ": "Full name",
+"Регіон": "Region",
+"Тренер": "Coach",
+"Досягнення": "Achievement",
+"Останні відео з YouTube-каналу Всеукраїнської Федерації Дартсу — клікніть, щоб подивитись прямо тут.": "Latest videos from the YouTube channel of the Ukrainian Darts Federation — click to watch right here.",
+"Завантаження…": "Loading…",
+"Усі відео на каналі": "All videos on the channel",
+"youtube.com/@UkranianDartsFederation — записи турнірів, огляди": "youtube.com/@UkranianDartsFederation — tournament recordings, reviews",
+"Новини українського дартсу": "Ukrainian darts news",
+"Новини від інформаційного партнера Всеукраїнської Федерації Дартсу —": "News from the information partner of the Ukrainian Darts Federation —",
+"Як це працюватиме": "How it will work",
+"Концепція автоматичного оновлення: дані підтягуються з першоджерел за розкладом, без ручного експорту.": "The concept of automatic updates: data is pulled from primary sources on a schedule, without manual export.",
+"Google Таблиці (учасники, призери), сторінки турнірів Nakka, статті Вікіпедії.": "Google Sheets (participants, medalists), Nakka tournament pages, Wikipedia articles.",
+"Синхронізація": "Synchronization",
+"Щоденний скрипт (GitHub Actions) читає опубліковані CSV обох таблиць і сам зіставляє турніри з призерами.": "A daily script (GitHub Actions) reads the published CSVs of both tables and matches tournaments with medalists on its own.",
+"Публікація": "Publishing",
+"Сайт (як цей) автоматично перезбирається і публікується — безкоштовно, для всіх користувачів інтернету.": "The site (like this one) is rebuilt and published automatically — free, for all internet users.",
+"Всеукраїнська Федерація Дартсу — консолідована статистика.": "Ukrainian Darts Federation — consolidated statistics.",
+"Дані: Google Sheets · Nakka · Wikipedia": "Data: Google Sheets · Nakka · Wikipedia"
+};
+  const ATTR_MAP = {
+"Введіть прізвище чи ім'я…": "Enter last name or first name…",
+"Пошук за назвою турніру або містом…": "Search by tournament name or city…",
+"Пошук гравця…": "Search player…",
+"Гравець 1…": "Player 1…",
+"Гравець 2…": "Player 2…",
+"Пошук за ім'ям…": "Search by name…",
+"Закрити": "Close"
+};
+
+  const UI = {
+    'Всеукраїнська Федерація Дартсу — Статистика':'Ukrainian Darts Federation — Statistics',
+    'Протокол':'Protocol','Результати':'Results','Джерело':'Source','Призери':'Medalists',
+    'Нічого не знайдено. Спробуйте інший запит.':'Nothing found. Try another query.',
+    'Нічого не знайдено.':'Nothing found.','Нічого не знайдено':'Nothing found',
+    'Немає даних.':'No data.','Немає даних':'No data','Немає даних для цього сезону.':'No data for this season.',
+    'Не вдалося завантажити дані. Спробуйте оновити сторінку.':'Failed to load data. Try refreshing the page.',
+    'турнірів у базі':'tournaments in the database','унікальних учасників':'unique participants','міст-господарів':'host cities',
+    'Матч':'Match','Середній обох':'Combined average','Гравець':'Player','Середній':'Average','180-ки':'180s','180-ки (сума)':'180s (total)',
+    'Закриттів 100+':'100+ checkouts','Закриттів 100+ (сума)':'100+ checkouts (total)','Найкращий лег (дротиків)':'Best leg (darts)',
+    'за весь період':'all time','Де':'Where','Місце':'Rank','Рейтинг':'Rating','Ч':'M','Ж':'W','Чоловіки':'Men','Жінки':'Women',
+    'Чоловік':'Male','Жінка':'Female','Мікст':'Mixed','Команди':'Teams','Пари':'Pairs',
+    'Середній за турнір':'Tournament average','Середній за матч':'Match average',
+    '▶ Відтворюється…':'▶ Playing…','↻ Відтворити ще раз':'↻ Play again','▶ Відтворити':'▶ Play',
+    'Учасники (ВФД)':'Participants (UDF)','УДЛ/ЗУДЛ (всього)':'UDL/WUDL (total)',
+    'Продовжили грати':'Kept playing','Нові гравці':'New players','Перестали грати (від попер. року)':'Stopped playing (vs. previous year)',
+    'Динаміка місця за сезонами (Кубок України)':'Rank history by season (Ukrainian Cup)','Динаміка зміни рейтингу':'Rating change over time',
+    'Серед. за 50 матчів':'Avg. over 50 matches','180-ки всього':'Total 180s','Найкраще закриття':'Best checkout','% виграних матчів':'Match win rate',
+    'Кубок України':'Ukrainian Cup','Чемпіонати України':'Ukrainian Championships','Майстер спорту України':'Master of Sport of Ukraine','Майстер спорту':'Master of Sport',
+    'Відкрити повний профіль →':'Open full profile →',
+    'Поточне місце в рейтингу':'Current ranking position','Турнірів (Nakka)':'Tournaments (Nakka)','Найкращий середній':'Best average',
+    'Найкращий середній матчу':'Best match average','🥇 Кубок України':'🥇 Ukrainian Cup','🥈 Кубок України':'🥈 Ukrainian Cup','🥉 Кубок України':'🥉 Ukrainian Cup',
+    '🥇 Чемпіонатів України':'🥇 Ukrainian Championships','🥈 Чемпіонатів України':'🥈 Ukrainian Championships','🥉 Чемпіонатів України':'🥉 Ukrainian Championships',
+    '🥇 УДЛ/ЗУДЛ':'🥇 UDL/WUDL','🥈 УДЛ/ЗУДЛ':'🥈 UDL/WUDL','🥉 УДЛ/ЗУДЛ':'🥉 UDL/WUDL',
+    'Динаміка середнього — накладення':'Average over time — overlay','Детальне порівняння':'Detailed comparison',
+    'Оберіть двох різних гравців.':'Choose two different players.','Завантажуємо дані матчів…':'Loading match data…',
+    'усього':'in total','Дата':'Date','Турнір':'Tournament','Етап':'Stage','Стадія сітки':'Bracket round','Рахунок':'Score',
+    'Нові':'New','Новин поки немає.':'No news yet.','Читати в Telegram →':'Read on Telegram →','Відео поки не завантажені.':'Videos are not loaded yet.',
+    'Нікнейм':'Nickname','Професія':'Profession','Дата народження':'Date of birth','Регіон / місто':'Region / city','Грає в дартс з':'Playing darts since',
+    'Дротики':'Darts','Вага дротиків':'Dart weight','БІО гравця':'Player bio','Медалі Чемпіонатів України':'Ukrainian Championship medals',
+    'Категорія':'Category','Поділитись':'Share','Посилання скопійовано!':'Link copied!','Враховувати УДЛ/ЗУДЛ':'Include UDL/WUDL',
+    'Місця на Етапах Кубку України':'Placings at Ukrainian Cup stages','Місця на турнірах УДЛ/ЗУДЛ':'Placings at UDL/WUDL tournaments',
+    'Немає даних Nakka для цього гравця (з поточними фільтрами).':'No Nakka data for this player (with the current filters).',
+    'Динаміка середнього по турнірах':'Average by tournament','Закриття':'Checkout','Найкращі закриття':'Best checkouts','Історія виступів':'Performance history',
+    'Місто':'City','180':'180','Тільки УДЛ/ЗУДЛ':'UDL/WUDL only',
+    'Поділитись профілем':'Share profile','Закрити':'Close','Відтворюється…':'Playing…',
+    'Менеджер':'Manager','Пенсіонер':'Retiree','парамедик':'Paramedic','економіст':'Economist','Тренер-викладач з шахів':'Chess coach-instructor','бариста':'Barista','Директор':'Director','Докер-механізатор':'Dock mechanic operator','Рибак':'Fisherman','Залізничні перевезення':'Railway transport','Інвестиційний аналітик':'Investment analyst','Заст. Голови Правління':'Deputy Chairman of the Board','авторозбірка, СТО':'Auto dismantling, car service','Механік':'Mechanic',"Оператор в'язального обладнання":'Knitting equipment operator','бухгалтер':'Accountant','Керівник механіка':'Head of mechanics','фінансовий менеджер':'Financial manager','Мрійник':'Dreamer','Священик Реформатська церква':'Priest, Reformed Church','ст. науковий співробітник':'Senior researcher','бізнесмен':'Businessman','Директор Центру ФК і спорту':'Director of the Physical Culture and Sports Center','начальник відділу культури':'Head of the culture department','Юрист':'Lawyer','ЗСУ':'Armed Forces of Ukraine','Заступник голови':'Deputy chairman','Кастом':'Custom','🎖️ Майстер спорту':'🎖️ Master of Sport',
+    // Підписи полів у профілі/картках
+    'Рейтинг гравців':'Player ratings','Всього':'Total','Золото':'Gold','Срібло':'Silver','Бронза':'Bronze',
+    // Інформаційні назви типів
+    'Топ':'Top','вересня':'September'
+  };
+
+  const SUBS = [   // впорядковані підстановки (до пословного перекладу)
+    [/Чемпіонатів України/g,'Ukrainian Championships'],[/Чемпіонати України/g,'Ukrainian Championships'],[/Чемпіонат України/g,'Ukrainian Championship'],
+    [/Кубок України/g,'Ukrainian Cup'],[/Кубку України/g,'Ukrainian Cup'],[/Кубка України/g,'Ukrainian Cup'],
+    [/Кубок Харкова/g,'Kharkiv Cup'],[/Кубок Одеси/g,'Odesa Cup'],[/Кубок Черкас/g,'Cherkasy Cup'],
+    [/Кубок Волині/g,'Volyn Cup'],[/Кубок Волыни/g,'Volyn Cup'],[/Кубок Донбасса/g,'Donbas Cup'],[/Кубок Донбаса/g,'Donbas Cup'],[/Кубок Руданы/g,'Rudana Cup'],
+    [/серед чоловіків/g,'among men'],[/серед жінок/g,'among women'],[/серед дорослих/g,'among adults'],[/Національний турнір/g,'National tournament'],
+    [/УДЛ\/ЗУДЛ/g,'UDL/WUDL'],[/ЗУДЛ/g,'WUDL'],[/УДЛ/g,'UDL'],[/ВФД/g,'UDF'],
+    [/(^|[^Ѐ-ӿ])ЧУ(?![Ѐ-ӿ])/g,'$1UA Ch.'],[/(^|[^Ѐ-ӿ])КУ(?![Ѐ-ӿ])/g,'$1UA Cup'],
+    [/(^|[^Ѐ-ӿ])КР(?![Ѐ-ӿ])/g,'$1UA Cup'],
+    [/(\d{4}) р\./g,'$1'],
+  ];
+
+  const WORDS = {
+    'етап':'stage','чоловіки':'men','жінки':'women','особистий':'individual','залік':'standings','дисципліна':'discipline','сітка':'bracket',
+    'пари':'pairs','команди':'teams','мікст':'mixed','фінал':'final','півфінал':'semifinal','полуфинал':'semifinal','матч':'match','за':'for','місце':'place',
+    'топ':'top','тє':'rd','кубок':'cup','кубку':'cup','кубка':'cup','області':'Oblast','область':'Oblast','обл':'obl.','місто':'city','м':'city',
+    'січень':'January','лютий':'February','березень':'March','квітень':'April','травень':'May','червень':'June','липень':'July','серпень':'August','вересень':'September','жовтень':'October','листопад':'November','грудень':'December','року':'','січня':'January','лютого':'February','березня':'March','квітня':'April','травня':'May','червня':'June','липня':'July','серпня':'August',
+    'вересня':'September','жовтня':'October','листопада':'November','грудня':'December',
+    'україни':'Ukraine','української':'Ukrainian','пенсіонер':'retiree','менеджер':'manager','директор':'director','бізнесмен':'businessman',
+    'кастом':'custom','та':'and','з':'with','на':'on','дротик':'dart','ст':'senior','заст':'deputy'
+  };
+
+  const CITY_FIX = {'Славсько':'Slavske','Київа':'Kyiv','Киев':'Kyiv','Харьков':'Kharkiv','Черкассы':'Cherkasy','Славянск':'Sloviansk','Мелекино':'Melekine'};
+
+  const PATTERNS = [
+    [/^Показати ще (\d+) \((\d+) з (\d+)\)$/, 'Show {1} more ({2} of {3})'],
+    [/^сезонів \((.+)\)$/, 'seasons ({1})'],
+    [/^Оновлено: (.+)$/, 'Updated: {1}'],
+    [/^(.+): (\d+) турнір\(ів\)$/, '{1}: {2} tournament(s)'],
+    [/^(.+): (\d+) гравців продовжили грати$/, '{1}: {2} players kept playing'],
+    [/^(.+): (\d+) нових гравців$/, '{1}: {2} new players'],
+    [/^(.+): (\d+) перестали грати \(порівняно з попереднім роком\)$/, '{1}: {2} stopped playing (vs. the previous year)'],
+    [/^Середній за останні (\d+) матчів$/, 'Average over the last {1} matches'],
+    [/^рейтинг #(\d+)$/, 'rating #{1}'],
+    [/^(.*) \((\d+) р\.\)$/, '{1} ({2} y.o.)'],
+    [/^(\d+) р\.$/, '{1} y.o.'],
+    [/^У дартсі з (\d+)$/, 'Playing darts since {1}'],
+    [/^Дротики: (.+)$/, 'Darts: {1}'],
+    [/^(\d{4}) року$/, '{1}'],
+    [/^(\d+(?:[.,]\d+)?) г$/, '{1} g'],
+    [/^(.+) та (.+) ще не зустрічались один з одним\.$/, '{1} and {2} have not met yet.'],
+    [/^(\d+) зустріч\(ей\)$/, '{1} meeting(s)'],
+    [/^перемог · середній AVG (.+)$/, 'wins · average AVG {1}'],
+    [/^(.+) · дані Nakka з (\d+) турнір\(ів\), (.+)$/, '{1} · Nakka data from {2} tournament(s), {3}'],
+    [/^Найкращі закриття \(топ (\d+)\)$/, 'Best checkouts (top {1})'],
+    [/^(.+) — статистика ВФД$/, '{1} — UDF statistics'],
+    [/^(\d+) матч(?:ів|і|)$/, '{1} matches'],
+  ];
+
+  Object.keys(HTML_MAP).forEach(k => EXACT.set(k, HTML_MAP[k]));
+  Object.keys(UI).forEach(k => EXACT.set(k, UI[k]));
+  EXACT.forEach((v,k) => EXACT_LC.set(k.toLowerCase(), v));
+  const ATTR = new Map(Object.entries(ATTR_MAP));
+
+  function applyCase(src, out){
+    if(!out) return out;
+    if(src.length > 1 && src === src.toUpperCase() && src !== src.toLowerCase()) return out.toUpperCase();
+    const f = src[0];
+    if(f !== f.toLowerCase()) return out[0].toUpperCase() + out.slice(1);
+    return out;
+  }
+  const trCache = new Map();
+  const misses = new Map();
+  let curSrc = '';
+
+  function translateTokens(s){
+    return s.replace(TOKEN, tok => {
+      const key = tok.toLowerCase().replace(/[’ʼ`]/g, "'");
+      if(CITY_FIX[tok]) return CITY_FIX[tok];
+      if(Object.prototype.hasOwnProperty.call(WORDS, key)) return applyCase(tok, WORDS[key]);
+      if(tok.length === 1 && HOMOGLYPH[tok]) return HOMOGLYPH[tok];
+      const t = translitWord(tok);
+      if(tok.length > 3 && tok[0] === tok[0].toLowerCase() && tok !== tok.toUpperCase()) if(!misses.has(tok)) misses.set(tok, curSrc);
+      return t;
+    });
+  }
+
+  function fill(tpl, groups){
+    return tpl.replace(/\{(\d)\}/g, (_, i) => translateCore(groups[i-1] || ''));
+  }
+
+  function translateCore(c){
+    if(!CYR.test(c)) return c;
+    curSrc = c;
+    if(OVERRIDES.has(c)) return OVERRIDES.get(c);
+    if(EXACT.has(c)) return EXACT.get(c);
+    const lc = c.toLowerCase();
+    if(EXACT_LC.has(lc)) return applyCase(c, EXACT_LC.get(lc));
+    for(let i = 0; i < PATTERNS.length; i++){
+      const m = c.match(PATTERNS[i][0]);
+      if(m) return fill(PATTERNS[i][1], m.slice(1));
+    }
+    if(c.indexOf(' · ') > 0) return c.split(' · ').map(translateCore).join(' · ');
+    let s = c;
+    if(overrideRe) s = s.replace(overrideRe, m => OVERRIDES.get(m));
+    for(let i = 0; i < SUBS.length; i++) s = s.replace(SUBS[i][0], SUBS[i][1]);
+    return translateTokens(s);
+  }
+
+  function translateText(s){
+    if(typeof s !== 'string' || !CYR.test(s)) return s;
+    const m = s.match(/^(\s*)([\s\S]*?)(\s*)$/);
+    return m[1] + translateCore(m[2].replace(/\s+/g, ' ')) + m[3];
+  }
+
+  function setOverrides(obj){
+    OVERRIDES.clear();
+    trCache.clear();
+    if(obj && typeof obj === 'object'){
+      Object.keys(obj).forEach(k => { if(typeof obj[k] === 'string' && obj[k]) OVERRIDES.set(k, obj[k]); });
+    }
+    const keys = Array.from(OVERRIDES.keys()).filter(k => k.length > 3).sort((a,b) => b.length - a.length);
+    overrideRe = keys.length ? new RegExp(keys.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|'), 'g') : null;
+    if(lang === 'en') retranslateAll();
+  }
+
+  // ---------- DOM-рушій ----------
+  let lang = 'uk';
+  const textRec = new WeakMap();
+  const attrRec = new WeakMap();
+  const ATTRS = ['title','placeholder','aria-label','alt'];
+  let observer = null;
+  let docTitleOrig = null;
+
+  function skipNode(n){
+    const p = n.parentNode;
+    if(!p || p.nodeType !== 1) return true;
+    const tag = p.nodeName;
+    if(tag === 'SCRIPT' || tag === 'STYLE' || tag === 'TEXTAREA' || tag === 'NOSCRIPT') return true;
+    return !!(p.closest && p.closest('[data-i18n-skip], .news-card, .yt-title'));
+  }
+  function trTextNode(n){
+    const v = n.nodeValue;
+    const rec = textRec.get(n);
+    if(rec && rec.t === v) return;
+    if(!CYR.test(v)){ if(rec) textRec.delete(n); return; }
+    if(skipNode(n)) return;
+    const t = translateText(v);
+    if(t !== v){ textRec.set(n, {o: v, t}); n.nodeValue = t; }
+  }
+  function trAttr(el, a){
+    const v = el.getAttribute(a);
+    if(v == null) return;
+    let rec = attrRec.get(el); if(!rec){ rec = {}; attrRec.set(el, rec); }
+    if(rec[a] && rec[a].t === v) return;
+    if(!CYR.test(v)) return;
+    if(el.closest && el.closest('[data-i18n-skip], .news-card')) return;
+    const t = ATTR.get(v.trim()) || translateText(v);
+    if(t !== v){ rec[a] = {o: v, t}; el.setAttribute(a, t); }
+  }
+  function walk(root){
+    if(!root) return;
+    if(root.nodeType === 3){ trTextNode(root); return; }
+    if(root.nodeType !== 1 && root.nodeType !== 11) return;
+    const tw = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let n; const nodes = [];
+    while((n = tw.nextNode())) nodes.push(n);
+    nodes.forEach(trTextNode);
+    const els = root.nodeType === 1 ? [root].concat(Array.from(root.querySelectorAll('[title],[placeholder],[aria-label],[alt]'))) : Array.from(root.querySelectorAll('[title],[placeholder],[aria-label],[alt]'));
+    els.forEach(el => ATTRS.forEach(a => { if(el.hasAttribute && el.hasAttribute(a)) trAttr(el, a); }));
+  }
+  function restoreAll(){
+    const tw = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    let n; const nodes = [];
+    while((n = tw.nextNode())) nodes.push(n);
+    nodes.forEach(n => { const r = textRec.get(n); if(r && n.nodeValue === r.t){ n.nodeValue = r.o; } textRec.delete(n); });
+    document.body.querySelectorAll('[title],[placeholder],[aria-label],[alt]').forEach(el => {
+      const rec = attrRec.get(el); if(!rec) return;
+      Object.keys(rec).forEach(a => { if(el.getAttribute(a) === rec[a].t) el.setAttribute(a, rec[a].o); });
+      attrRec.delete(el);
+    });
+    if(docTitleOrig) document.title = docTitleOrig;
+  }
+  function retranslateAll(){
+    if(!document.body) return;
+    // повторний прохід: спочатку повертаємо оригінал, потім перекладаємо з новими виправленнями
+    restoreAll();
+    translateTitle();
+    walk(document.body);
+  }
+  function translateTitle(){
+    if(docTitleOrig === null) docTitleOrig = document.title;
+    document.title = EXACT.get(docTitleOrig.trim()) || translateText(docTitleOrig);
+  }
+  function startObserver(){
+    if(observer) return;
+    observer = new MutationObserver(muts => {
+      if(lang !== 'en') return;
+      for(const m of muts){
+        if(m.type === 'childList'){ m.addedNodes.forEach(walk); }
+        else if(m.type === 'characterData'){ trTextNode(m.target); }
+        else if(m.type === 'attributes'){ trAttr(m.target, m.attributeName); }
+      }
+    });
+    observer.observe(document.body, {childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ATTRS});
+  }
+
+  function updateToggle(){
+    document.querySelectorAll('.lang-toggle [data-lang]').forEach(el => {
+      el.classList.toggle('on', el.getAttribute('data-lang') === lang);
+    });
+    const b = document.getElementById('lang-toggle');
+    if(b) b.setAttribute('aria-label', lang === 'en' ? 'Language: English. Switch to Ukrainian' : 'Мова: українська. Перемкнути на англійську');
+  }
+  function setLang(next, persist){
+    if(next !== 'uk' && next !== 'en') next = 'uk';
+    const changed = next !== lang;
+    lang = next;
+    document.documentElement.setAttribute('lang', lang);
+    if(persist !== false){ try{ localStorage.setItem(LS_KEY, lang); }catch(e){} }
+    if(lang === 'en'){ startObserver(); translateTitle(); walk(document.body); }
+    else if(changed || docTitleOrig !== null){ restoreAll(); }
+    updateToggle();
+    if(changed){ try{ document.dispatchEvent(new CustomEvent('langchange', {detail: lang})); }catch(e){} }
+  }
+  function detect(){
+    try{
+      const q = new URLSearchParams(location.search).get('lang');
+      if(q === 'en' || q === 'uk') return q;
+    }catch(e){}
+    try{ const s = localStorage.getItem(LS_KEY); if(s === 'en' || s === 'uk') return s; }catch(e){}
+    const nl = ((navigator.languages && navigator.languages[0]) || navigator.language || 'uk').toLowerCase();
+    return /^(uk|ru|be)/.test(nl) ? 'uk' : 'en';
+  }
+  function init(){
+    const btn = document.getElementById('lang-toggle');
+    if(btn) btn.addEventListener('click', () => setLang(lang === 'en' ? 'uk' : 'en'));
+    setLang(detect(), false);
+  }
+
+  // ---------- Допоміжне для пошуку: збіг і по кирилиці, і по латиниці ----------
+  function latin(s){
+    let v = trCache.get(s);
+    if(v === undefined){ v = translateText(s).toLowerCase(); trCache.set(s, v); }
+    return v;
+  }
+  function matches(str, q){
+    if(!q) return true;
+    const s = String(str == null ? '' : str);
+    return s.toLowerCase().includes(q) || latin(s).includes(q);
+  }
+
+  return { init, setLang, lang: () => lang, tr: translateText, translit: translitWord, setOverrides, matches, misses };
+})();
+
+I18N.init();
+
 function safeUrl(u){
   return (typeof u === 'string' && /^https?:\/\//i.test(u)) ? u : '';
 }
@@ -1301,7 +1825,7 @@ function renderHeroStats(){
   const years = new Set(visible.map(t=>t.date.split('.').pop()).filter(Boolean));
   const stats = [
     {num: visible.length, label:'турнірів у базі'},
-    {num: uniquePlayersCount.toLocaleString('uk-UA'), label:'унікальних учасників'},
+    {num: uniquePlayersCount.toLocaleString(I18N.lang() === 'en' ? 'en-GB' : 'uk-UA'), label:'унікальних учасників'},
     {num: cities.size, label:'міст-господарів'},
     {num: years.size, label:'сезонів (' + Math.min(...years) + '–' + Math.max(...years) + ')'},
   ];
@@ -1312,7 +1836,7 @@ function renderHeroStats(){
   const countEl = document.getElementById('tournaments-count');
   const sumEl = document.getElementById('tournaments-participants');
   if(countEl) countEl.textContent = visible.length;
-  if(sumEl) sumEl.textContent = uniquePlayersCount.toLocaleString('uk-UA');
+  if(sumEl) sumEl.textContent = uniquePlayersCount.toLocaleString(I18N.lang() === 'en' ? 'en-GB' : 'uk-UA');
 }
 
 let sortKey = 'date', sortDir = -1;
@@ -1355,7 +1879,7 @@ function renderTournaments(){
 
   let rows = tournaments.filter(t=>{
     if(!includeUDL && t.isUDL) return false;
-    const matchesQ = !q || t.name.toLowerCase().includes(q) || t.city.toLowerCase().includes(q);
+    const matchesQ = !q || I18N.matches(t.name, q) || I18N.matches(t.city, q);
     const matchesYear = !yearFilter || t.date.endsWith(yearFilter);
     const matchesOrg = !orgFilter || t.org === orgFilter;
     const chuCat = (t.chuCategory || '').trim().toLowerCase().replace(/\s+/g, '');
@@ -1411,7 +1935,7 @@ function renderLeaderboard(){
   const q = (document.getElementById('search-leaderboard').value || '').toLowerCase();
   const medalFilter = document.getElementById('filter-leaderboard-medal').value;
   const source = leaderboardGender === 'women' ? leaderboardWomen : leaderboard;
-  let rows = source.filter(p => !q || p.name.toLowerCase().includes(q));
+  let rows = source.filter(p => !q || I18N.matches(p.name, q));
   if(medalFilter === 'gold') rows = rows.filter(p => p.gold > 0);
   else if(medalFilter === 'silver') rows = rows.filter(p => p.silver > 0);
   else if(medalFilter === 'bronze') rows = rows.filter(p => p.bronze > 0);
@@ -1656,7 +2180,7 @@ function renderCurrentRating(){
     document.getElementById('current-rating-more').innerHTML = '';
     return;
   }
-  const rows = season.rows.filter(p => !q || p.name.toLowerCase().includes(q));
+  const rows = season.rows.filter(p => !q || I18N.matches(p.name, q));
   if(rows.length === 0){
     body.innerHTML = `<tr class="empty-row"><td colspan="10">Нічого не знайдено.</td></tr>`;
     document.getElementById('current-rating-more').innerHTML = '';
@@ -1697,7 +2221,7 @@ function renderRatings(){
     document.getElementById('ratings-more').innerHTML = '';
     return;
   }
-  const rows = seasonData.rows.filter(p => !q || p.name.toLowerCase().includes(q));
+  const rows = seasonData.rows.filter(p => !q || I18N.matches(p.name, q));
   if(rows.length === 0){
     body.innerHTML = `<tr class="empty-row"><td colspan="10">Нічого не знайдено.</td></tr>`;
     document.getElementById('ratings-more').innerHTML = '';
@@ -1869,6 +2393,7 @@ async function loadData(){
     championsRecords = data.championsRecords || [];
     playerBios = data.playerBios || {};
     curatedPlayerNames = data.curatedPlayerNames || [];
+    I18N.setOverrides(data.nameEn || {});
 
     try {
       const histRes = await fetch('./rating_history.json', {cache: 'no-cache'});
@@ -1881,7 +2406,7 @@ async function loadData(){
 
     if(data.meta && data.meta.lastUpdated){
       const d = new Date(data.meta.lastUpdated);
-      const label = d.toLocaleString('uk-UA', {day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'});
+      const label = d.toLocaleString(I18N.lang() === 'en' ? 'en-GB' : 'uk-UA', {day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'});
       const el = document.getElementById('last-updated');
       if(el) el.textContent = 'Оновлено: ' + label;
     }
@@ -2545,13 +3070,13 @@ function initH2HLookup(){
       h2hSelected[side] = null;
       const q = input.value.trim().toLowerCase();
       if(!q){ suggestBox.classList.remove('open'); renderH2HResult(); return; }
-      const matches = h2hAllNames.filter(n => n.toLowerCase().includes(q)).slice(0, 12);
+      const matches = h2hAllNames.filter(n => I18N.matches(n, q)).slice(0, 12);
       if(matches.length === 0){ suggestBox.classList.remove('open'); return; }
       suggestBox.innerHTML = matches.map(n => `<div class="h2h-suggest-item">${n}</div>`).join('');
       suggestBox.classList.add('open');
       suggestBox.querySelectorAll('.h2h-suggest-item').forEach((el, i) => {
         el.addEventListener('click', () => {
-          input.value = matches[i];
+          input.value = I18N.lang() === 'en' ? I18N.tr(matches[i]) : matches[i];
           h2hSelected[side] = matches[i];
           suggestBox.classList.remove('open');
           renderH2HResult();
@@ -2865,7 +3390,7 @@ const MASTERS_DATA = [
 function renderMasters(){
   const q = (document.getElementById('search-masters').value || '').toLowerCase();
   let rows = MASTERS_DATA.slice().sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date));
-  if(q) rows = rows.filter(r => r.name.toLowerCase().includes(q));
+  if(q) rows = rows.filter(r => I18N.matches(r.name, q));
   if(mastersGender !== 'all') rows = rows.filter(r => r.gender === mastersGender);
 
   const body = document.getElementById('masters-body');
@@ -2916,7 +3441,7 @@ function initGlobalPlayerSearch(){
   input.addEventListener('input', () => {
     const q = input.value.trim().toLowerCase();
     if(!q){ suggestBox.classList.remove('open'); return; }
-    const matches = allPlayerNames.filter(n => n.toLowerCase().includes(q)).slice(0, 15);
+    const matches = allPlayerNames.filter(n => I18N.matches(n, q)).slice(0, 15);
     if(matches.length === 0){
       suggestBox.innerHTML = `<div class="h2h-suggest-item" style="color:var(--muted); cursor:default;">Нічого не знайдено</div>`;
       suggestBox.classList.add('open');
@@ -2995,7 +3520,7 @@ function renderChampions(){
   let rows = Object.entries(byPlayer).map(([name, m]) => ({
     name, ...m, total: m.gold + m.silver + m.bronze,
   }));
-  if(q) rows = rows.filter(r => r.name.toLowerCase().includes(q));
+  if(q) rows = rows.filter(r => I18N.matches(r.name, q));
   rows = rows.filter(r => r.total > 0);
   rows.sort((a,b) => {
     let av = a[champSortKey], bv = b[champSortKey];
