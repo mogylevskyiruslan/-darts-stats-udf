@@ -3829,6 +3829,53 @@ def append_rating_snapshot(history, gender, snapshot_rows):
     ]
 
 
+# ---------- БЕЗПЕКА: санітизація та перевірка даних перед записом ----------
+_BAD_CHARS = re.compile(r'[<>\\\x00-\x08\x0b\x0c\x0e-\x1f]')
+_BAD_SCHEME = re.compile(r'^\s*(javascript|data|vbscript):', re.I)
+MAX_STR_LEN = 2000
+
+
+def sanitize_deep(x):
+    """Прибирає з усіх рядків розмітку/керівні символи, небезпечні URL-схеми, обрізає довжину."""
+    if isinstance(x, str):
+        if _BAD_SCHEME.match(x):
+            return ""
+        return _BAD_CHARS.sub("", x)[:MAX_STR_LEN]
+    if isinstance(x, list):
+        return [sanitize_deep(i) for i in x]
+    if isinstance(x, dict):
+        return {sanitize_deep(k): sanitize_deep(v) for k, v in x.items()
+                if k not in ("__proto__", "constructor", "prototype")}
+    return x
+
+
+def sanity_check_or_abort(new_data, old_path):
+    """Не даємо перезаписати data.json, якщо нові дані різко «просіли»
+    (збій джерела, порожня/зіпсована таблиця, зловмисне очищення)."""
+    import os
+    import sys
+    if not os.path.exists(old_path):
+        return
+    try:
+        with open(old_path, encoding="utf-8") as f:
+            old = json.load(f)
+    except Exception:
+        return
+    problems = []
+    for key, min_ratio in (("tournaments", 0.9), ("curatedPlayerNames", 0.9),
+                           ("leaderboard", 0.9), ("championsRecords", 0.8)):
+        o, n = len(old.get(key) or []), len(new_data.get(key) or [])
+        if o >= 10 and n < o * min_ratio:
+            problems.append(f"{key}: було {o}, стало {n}")
+    if problems:
+        print("!!! ПЕРЕВІРКА НЕ ПРОЙДЕНА — data.json НЕ перезаписано:")
+        for p in problems:
+            print("   -", p)
+        print("    Якщо зменшення навмисне — запустіть з SYNC_FORCE=1.")
+        if os.environ.get("SYNC_FORCE") != "1":
+            sys.exit(1)
+
+
 def main():
     print("Fetching tournaments CSV...")
     t_rows = fetch_csv(TOURNAMENTS_CSV_URL)
@@ -4016,6 +4063,9 @@ def main():
         "playerBios": player_bios,
         "curatedPlayerNames": final_player_names,
     }
+
+    data = sanitize_deep(data)
+    sanity_check_or_abort(data, OUTPUT_PATH)
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
