@@ -6,15 +6,23 @@ on:
     - cron: '0 5 * * *'
   workflow_dispatch: {}   # дозволяє запустити вручну кнопкою "Run workflow"
 
+# Мінімальні права: лише запис у репозиторій (для коміту data.json)
 permissions:
   contents: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -28,6 +36,7 @@ jobs:
         run: |
           git config user.name "vfd-darts-bot"
           git config user.email "actions@github.com"
+          # комітимо ТІЛЬКИ ці два файли — нічого іншого бот не змінює
           git add data.json rating_history.json
           if git diff --quiet --cached; then
             echo "No changes in data.json / rating_history.json"
