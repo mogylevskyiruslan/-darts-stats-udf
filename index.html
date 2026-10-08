@@ -1058,7 +1058,8 @@
   <p class="section-sub">Реальна статистика з <span id="nakka-records-count">…</span> зіграних турнірів, підтягнута напряму з Nakka. Мінімум 3 матчі в турнірі для заліку в "середній за турнір".</p>
   <div class="controls">
     <div class="records-tabs" id="records-tabs">
-      <button type="button" class="records-tab active" data-cat="avgTournament">Середній за турнір</button>
+      <button type="button" class="records-tab active" data-cat="avgLast50">Середній за 50 матчів</button>
+      <button type="button" class="records-tab" data-cat="avgTournament">Середній за турнір</button>
       <button type="button" class="records-tab" data-cat="avgMatch">Середній за матч</button>
       <button type="button" class="records-tab" data-cat="h2hMatch">H2H з найкращим AVG</button>
       <button type="button" class="records-tab" data-cat="ton80Tournament">180-ки за турнір</button>
@@ -1280,187 +1281,8 @@ const I18N = (function(){
   const OVERRIDES = new Map(); // імена/міста з виправленнями (з data.json: nameEn)
   let overrideRe = null;
 
-  const HTML_MAP = {
-"ВФД · Архів статистики": "UDF · Statistics archive",
-"Історія та статистика": "History and statistics of",
-"українського дартсу": "Ukrainian darts",
-"Консолідований архів турнірів, рейтингів і рекордів Всеукраїнської Федерації Дартсу — зібраний з таблиць учасників, протоколів кубків та відкритих джерел.": "A consolidated archive of tournaments, ratings and records of the Ukrainian Darts Federation, compiled from participant tables, cup protocols and open sources.",
-"Історія": "History",
-"Турніри": "Tournaments",
-"Календар 2026": "2026 Calendar",
-"Географія": "Geography",
-"Динаміка": "Trends",
-"Учасники по турнірах": "Participants by tournament",
-"ТОП-10 гонка": "TOP-10 race",
-"Чемпіони ЧУ": "UA champions",
-"Гонка лідерів ЧУ": "UA Championship leaders race",
-"Призери": "Medalists",
-"Поточний рейтинг": "Current rating",
-"Рейтинги сезону": "Season ratings",
-"Рекорди": "Records",
-"Рекорди статистики": "Stats records",
-"Протистояння": "Head-to-head",
-"Майстри спорту": "Masters of Sport",
-"Трансляції": "Streams",
-"Новини": "News",
-"Як це працює": "How it works",
-"УДЛ/ЗУДЛ": "UDL/WUDL",
-"Коротка хронологія становлення дартсу як виду спорту в Україні (за матеріалами ВФД та Вікіпедії).": "A short timeline of how darts developed as a sport in Ukraine (based on UDF materials and Wikipedia).",
-"На Донецькому металургійному заводі відкрито одну з перших в Україні секцій гри в дартс. Незабаром у Донецьку запрацював дартс-клуб": "One of the first darts sections in Ukraine opened at the Donetsk Metallurgical Plant. Soon after, the darts club",
-"«Терикон»": "“Terykon”",
-"— перше відоме клубне місце класичного дартсу в країні.": "— the first known classic darts venue in the country — started in Donetsk.",
-"У Черкасах створено дартс-клуб класичного дартсу, який того ж року провів перший місцевий чемпіонат.": "A classic darts club was founded in Cherkasy and held its first local championship the same year.",
-"В Ужгороді, у барі": "In Uzhhorod, at the bar",
-"«Кактус»": "“Kaktus”",
-", з'явився перший апарат для електронного дартсу — початок руху в західній Україні; наприкінці року в клубі «Армагедон» пройшов перший турнір з електронного дартсу.": ", the first electronic darts machine appeared — the start of the movement in western Ukraine; at the end of the year the first electronic darts tournament was held at the “Armageddon” club.",
-"У Черкасах відбувся перший": "The first",
-"Кубок Черкас": "Cherkasy Cup",
-"— довгий час головне змагання року в місті.": "took place in Cherkasy — for a long time the main event of the year in the city.",
-"У Черкасах пройшов перший великий всеукраїнський турнір —": "The first major all-Ukrainian tournament was held in Cherkasy —",
-"Черкаський дартс-фестиваль": "Cherkasy Darts Festival",
-", що об'єднав гравців класичного й електронного дартсу зі сходу та заходу країни.": ", which brought together classic and electronic darts players from the east and west of the country.",
-"У січні вперше проведено Чемпіонат України за підсумками 2004 року та визначено першого Чемпіона України. Ним став Вадим Ледєньов (Київ).": "In January, the first Ukrainian Championship was held for 2004 and the first Ukrainian champion was determined: Vadym Ledienov (Kyiv).",
-"Юридично зареєстровано": "Officially registered",
-"Всеукраїнську Федерацію Дартсу (ВФД)": "the Ukrainian Darts Federation (UDF)",
-". Першим президентом став Сергій Морозов (з 2019 року — Станіслав Некрістов).": ". Serhii Morozov became its first president (Stanislav Nekristov from 2019).",
-"В Україні вперше проведено турніри під егідою World Darts Federation — Ukraine Open та Kyiv Masters.": "For the first time in Ukraine, tournaments were held under the World Darts Federation — Ukraine Open and Kyiv Masters.",
-"Пандемія COVID-19 зупинила турніри всередині країни, але відбулись перші онлайн-змагання за участю українських гравців.": "The COVID-19 pandemic stopped tournaments inside the country, but the first online competitions with Ukrainian players took place.",
-"Попри повномасштабне вторгнення й воєнний стан, збірна виступила на Кубку Європи ВДФ. Владислав Омельченко здобув кваліфікацію на Чемпіонат світу PDC — перший українець на цій сцені.": "Despite the full-scale invasion and martial law, the national team competed at the WDF Europe Cup. Vladyslav Omelchenko qualified for the PDC World Championship — the first Ukrainian on that stage.",
-"2023 — нині": "2023 — present",
-"Омельченко та Ілля Пекарук вперше представили Україну на Кубку Світу PDC. Частину змагань під егідою ВФД відновлено в окремих регіонах — попри війну щороку визначаються чемпіони з різних дисциплін.": "Omelchenko and Illia Pekaruk represented Ukraine at the PDC World Cup for the first time. Some UDF-run events have resumed in individual regions — despite the war, champions in various disciplines are determined every year.",
-"Знайти гравця": "Find a player",
-"Дані з таблиці «UA darts stat (учасники)» —": "Data from the “UA darts stat (participants)” table —",
-"записів,": "records,",
-"унікальних учасників (за даними Nakka). Клікабельні джерела: Nakka (сітки/легі) або протоколи ВФД у Google Docs/Sheets. Пошук, сортування і фільтр за роком/організатором.": "unique participants (per Nakka data). Clickable sources: Nakka (brackets/legs) or UDF protocols in Google Docs/Sheets. Search, sorting and filter by year/organizer.",
-"Усі роки": "All years",
-"Усі організатори": "All organizers",
-"Усі турніри": "All tournaments",
-"Тільки ЧУ (усі види)": "UA Championships only (all types)",
-"ЧУ · 501DO": "UA Champ. · 501DO",
-"ЧУ · Пари": "UA Champ. · Pairs",
-"ЧУ · Команди": "UA Champ. · Teams",
-"ЧУ · Мікст": "UA Champ. · Mixed",
-"ЧУ · Cricket": "UA Champ. · Cricket",
-"ЧУ · 501DIDO": "UA Champ. · 501DIDO",
-"Дата": "Date",
-"Турнір": "Tournament",
-"Орг.": "Org.",
-"Формат": "Format",
-"Місто": "City",
-"Всього": "Total",
-"Чол.": "Men",
-"Жін.": "Women",
-"Avg Ч.": "Avg M",
-"Avg Ж.": "Avg W",
-"Призери 🥇🥈🥉": "Medalists 🥇🥈🥉",
-"Джерела": "Sources",
-"Календар змагань 2026": "2026 competition calendar",
-"Усі етапи Кубка України (ВФД) та ліги UDL за рік — одним поглядом.": "All Ukrainian Cup stages (UDF) and UDL league events for the year — at a glance.",
-"Січень": "January",
-"Славсько": "Slavsko",
-"Лютий": "February",
-"ВФД": "UDF",
-"Львів": "Lviv",
-"Березень": "March",
-"Луцьк": "Lutsk",
-"Квітень": "April",
-"Вижниця": "Vyzhnytsia",
-"Травень": "May",
-"Черкаси": "Cherkasy",
-"Червень": "June",
-"Одеса": "Odesa",
-"Липень": "July",
-"Полтава": "Poltava",
-"Серпень": "August",
-"Ужгород": "Uzhhorod",
-"Вересень": "September",
-"Жовтень": "October",
-"Листопад": "November",
-"Грудень": "December",
-"ФІНАЛ": "FINAL",
-"Київ": "Kyiv",
-"Географія турнірів": "Tournament geography",
-"Міста, де приймали турніри Кубка України та Чемпіонати України. Розмір мітки — кількість турнірів у місті.": "Cities that hosted Ukrainian Cup tournaments and Ukrainian Championships. Marker size shows the number of tournaments in the city.",
-"Зростання участі по роках": "Participation growth by year",
-"Унікальні учасники за рік: скільки продовжили грати з попередніх років, скільки прийшло вперше (стовпчик вгору), і скільки перестали грати порівняно з попереднім роком (стовпчик вниз). Джерела — архів рейтингів за сезонами та дані Nakka.": "Unique participants per year: how many kept playing from previous years, how many came for the first time (bar up), and how many stopped playing compared with the previous year (bar down). Sources — season rating archive and Nakka data.",
-"Кількість учасників по турнірах": "Participants per tournament",
-"Сумарна кількість учасників (чоловіки + жінки) на кожному турнірі ВФД, у хронологічному порядку.": "Total number of participants (men + women) at each UDF tournament, in chronological order.",
-"ТОП-10 турнірів за кількістю учасників": "TOP-10 tournaments by participants",
-"Анімація формування рекордного списку — від першого турніру до сьогодні, серед усіх організаторів (ВФД + УДЛ/ЗУДЛ).": "An animation of how the record list was formed — from the first tournament to today, across all organizers (UDF + UDL/WUDL).",
-"▶ Відтворити": "▶ Play",
-"Чемпіони України та призери": "Ukrainian champions and medalists",
-"Медальний залік Чемпіонатів України за всіма категоріями (мікст, команди, пари, DIDO, Cricket, 501DO). 501DO — головна категорія сезону.": "Ukrainian Championship medal table across all categories (mixed, teams, pairs, DIDO, Cricket, 501DO). 501DO is the main category of the season.",
-"Чоловіки": "Men",
-"Жінки": "Women",
-"Усі категорії": "All categories",
-"Гравець": "Player",
-"Історія лідерів за медалями ЧУ": "History of leaders by UA Championship medals",
-"Накопичувальна анімація — як з роками мінялись лідери за загальною кількістю медалей Чемпіонатів України, за всіма категоріями разом.": "A cumulative animation of how the leaders by total Ukrainian Championship medals changed over the years, across all categories combined.",
-"Призери етапів Кубку України": "Ukrainian Cup stage medalists",
-"Медальний залік за етапами Кубка України та перемогами на ЧУ — з таблиці «Призери етапів кубків ВФД».": "Medal table by Ukrainian Cup stage and Ukrainian Championship wins — from the “Medalists of UDF cup stages” table.",
-"Усі гравці": "All players",
-"Тільки із золотом": "Gold only",
-"Тільки із сріблом": "Silver only",
-"Тільки із бронзою": "Bronze only",
-"Тільки чемпіони ЧУ": "UA champions only",
-"Мінімум 5 медалей": "At least 5 medals",
-"Мінімум 10 медалей": "At least 10 medals",
-"Титули ЧУ": "UA titles",
-"Всього медалей": "Total medals",
-"Живий рейтинг поточного сезону — оновлюється щодня разом з таблицею гравців. Клікніть на гравця, щоб побачити динаміку його позиції.": "Live rating of the current season — updated daily along with the player table. Click a player to see how their position changed.",
-"Місце": "Rank",
-"Рейтинги за сезон": "Season ratings",
-"Особистий рейтинг гравців за сумою очок з усіх етапів Кубка України (з коефіцієнтом 1.0) та ЧУ (коефіцієнт 1.5) — усі сезони 2013–2025, чоловіки й жінки, з таблиці «Кубок України».": "Personal player rating based on the sum of points from all Ukrainian Cup stages (coefficient 1.0) and the Ukrainian Championship (coefficient 1.5) — all seasons 2013–2025, men and women, from the “Ukrainian Cup” table.",
-"Вибрані рекорди з довідника «Дартс рекорди України».": "Selected records from the “Darts records of Ukraine” reference.",
-"Найкращий середній набір за гру серед жінок — Тетяна Харченко (Черкаси), рейтинговий турнір міста, 19 квітня 2025 р.": "The highest average per game among women — Tetiana Kharchenko (Cherkasy), city ranking tournament, 19 April 2025.",
-"12 років": "12 years",
-"Наймолодший призер міжнародних змагань від України — Олександр Гринів (Шептицький), бронза на WDF Winmau Vilnius Open, травень 2025 р.": "The youngest Ukrainian medalist at international events — Oleksandr Hryniv (Sheptytskyi), bronze at the WDF Winmau Vilnius Open, May 2025.",
-"Рік, з якого ведеться систематична фіксація рекордів — завдяки поширенню онлайн-застосунків для підрахунку результатів.": "The year from which records have been systematically kept — thanks to the spread of online apps for score tracking.",
-"Рекорди статистики (Nakka)": "Statistics records (Nakka)",
-"Реальна статистика з": "Real statistics from",
-"зіграних турнірів, підтягнута напряму з Nakka. Мінімум 3 матчі в турнірі для заліку в \"середній за турнір\".": "played tournaments, pulled directly from Nakka. A minimum of 3 matches in a tournament counts toward the “tournament average”.",
-"Середній за турнір": "Tournament average",
-"Середній за матч": "Match average",
-"H2H з найкращим AVG": "H2H with best AVG",
-"180-ки за турнір": "180s per tournament",
-"180-ки за кар'єру": "180s in career",
-"Checkout 100+ (кар'єра)": "Checkout 100+ (career)",
-"Найкращий лег": "Best leg",
-"⚔️ Протистояння гравців": "⚔️ Player head-to-head",
-"Оберіть двох гравців, щоб побачити всю історію їхніх особистих зустрічей.": "Choose two players to see the full history of their personal meetings.",
-"Майстри спорту України з дартсу": "Masters of Sport of Ukraine in darts",
-"Офіційний реєстр звань (Міністерство молоді та спорту України) — усі носії звання \"Майстер спорту України\" з дартсу.": "The official register of titles (Ministry of Youth and Sports of Ukraine) — all holders of the “Master of Sport of Ukraine” title in darts.",
-"Усі": "All",
-"Присвоєно": "Awarded",
-"ПІБ": "Full name",
-"Регіон": "Region",
-"Тренер": "Coach",
-"Досягнення": "Achievement",
-"Останні відео з YouTube-каналу Всеукраїнської Федерації Дартсу — клікніть, щоб подивитись прямо тут.": "Latest videos from the YouTube channel of the Ukrainian Darts Federation — click to watch right here.",
-"Завантаження…": "Loading…",
-"Усі відео на каналі": "All videos on the channel",
-"youtube.com/@UkranianDartsFederation — записи турнірів, огляди": "youtube.com/@UkranianDartsFederation — tournament recordings, reviews",
-"Новини українського дартсу": "Ukrainian darts news",
-"Новини від інформаційного партнера Всеукраїнської Федерації Дартсу —": "News from the information partner of the Ukrainian Darts Federation —",
-"Як це працюватиме": "How it will work",
-"Концепція автоматичного оновлення: дані підтягуються з першоджерел за розкладом, без ручного експорту.": "The concept of automatic updates: data is pulled from primary sources on a schedule, without manual export.",
-"Google Таблиці (учасники, призери), сторінки турнірів Nakka, статті Вікіпедії.": "Google Sheets (participants, medalists), Nakka tournament pages, Wikipedia articles.",
-"Синхронізація": "Synchronization",
-"Щоденний скрипт (GitHub Actions) читає опубліковані CSV обох таблиць і сам зіставляє турніри з призерами.": "A daily script (GitHub Actions) reads the published CSVs of both tables and matches tournaments with medalists on its own.",
-"Публікація": "Publishing",
-"Сайт (як цей) автоматично перезбирається і публікується — безкоштовно, для всіх користувачів інтернету.": "The site (like this one) is rebuilt and published automatically — free, for all internet users.",
-"Всеукраїнська Федерація Дартсу — консолідована статистика.": "Ukrainian Darts Federation — consolidated statistics.",
-"Дані: Google Sheets · Nakka · Wikipedia": "Data: Google Sheets · Nakka · Wikipedia"
-};
-  const ATTR_MAP = {
-"Введіть прізвище чи ім'я…": "Enter last name or first name…",
-"Пошук за назвою турніру або містом…": "Search by tournament name or city…",
-"Пошук гравця…": "Search player…",
-"Гравець 1…": "Player 1…",
-"Гравець 2…": "Player 2…",
-"Пошук за ім'ям…": "Search by name…",
-"Закрити": "Close"
-};
+  const HTML_MAP = {"ВФД · Архів статистики": "UDF · Statistics archive", "Історія та статистика": "History and statistics of", "українського дартсу": "Ukrainian darts", "Консолідований архів турнірів, рейтингів і рекордів Всеукраїнської Федерації Дартсу — зібраний з таблиць учасників, протоколів кубків та відкритих джерел.": "A consolidated archive of tournaments, ratings and records of the Ukrainian Darts Federation, compiled from participant tables, cup protocols and open sources.", "Історія": "History", "Турніри": "Tournaments", "Календар 2026": "2026 Calendar", "Географія": "Geography", "Динаміка": "Trends", "Учасники по турнірах": "Participants by tournament", "ТОП-10 гонка": "TOP-10 race", "Чемпіони ЧУ": "UA champions", "Гонка лідерів ЧУ": "UA Championship leaders race", "Призери": "Medalists", "Поточний рейтинг": "Current rating", "Рейтинги сезону": "Season ratings", "Рекорди": "Records", "Рекорди статистики": "Stats records", "Протистояння": "Head-to-head", "Майстри спорту": "Masters of Sport", "Трансляції": "Streams", "Новини": "News", "Як це працює": "How it works", "УДЛ/ЗУДЛ": "UDL/WUDL", "Коротка хронологія становлення дартсу як виду спорту в Україні (за матеріалами ВФД та Вікіпедії).": "A short timeline of how darts developed as a sport in Ukraine (based on UDF materials and Wikipedia).", "На Донецькому металургійному заводі відкрито одну з перших в Україні секцій гри в дартс. Незабаром у Донецьку запрацював дартс-клуб": "One of the first darts sections in Ukraine opened at the Donetsk Metallurgical Plant. Soon after, the darts club", "«Терикон»": "“Terykon”", "— перше відоме клубне місце класичного дартсу в країні.": "— the first known classic darts venue in the country — started in Donetsk.", "У Черкасах створено дартс-клуб класичного дартсу, який того ж року провів перший місцевий чемпіонат.": "A classic darts club was founded in Cherkasy and held its first local championship the same year.", "В Ужгороді, у барі": "In Uzhhorod, at the bar", "«Кактус»": "“Kaktus”", ", з'явився перший апарат для електронного дартсу — початок руху в західній Україні; наприкінці року в клубі «Армагедон» пройшов перший турнір з електронного дартсу.": ", the first electronic darts machine appeared — the start of the movement in western Ukraine; at the end of the year the first electronic darts tournament was held at the “Armageddon” club.", "У Черкасах відбувся перший": "The first", "Кубок Черкас": "Cherkasy Cup", "— довгий час головне змагання року в місті.": "took place in Cherkasy — for a long time the main event of the year in the city.", "У Черкасах пройшов перший великий всеукраїнський турнір —": "The first major all-Ukrainian tournament was held in Cherkasy —", "Черкаський дартс-фестиваль": "Cherkasy Darts Festival", ", що об'єднав гравців класичного й електронного дартсу зі сходу та заходу країни.": ", which brought together classic and electronic darts players from the east and west of the country.", "У січні вперше проведено Чемпіонат України за підсумками 2004 року та визначено першого Чемпіона України. Ним став Вадим Ледєньов (Київ).": "In January, the first Ukrainian Championship was held for 2004 and the first Ukrainian champion was determined: Vadym Ledienov (Kyiv).", "Юридично зареєстровано": "Officially registered", "Всеукраїнську Федерацію Дартсу (ВФД)": "the Ukrainian Darts Federation (UDF)", ". Першим президентом став Сергій Морозов (з 2019 року — Станіслав Некрістов).": ". Serhii Morozov became its first president (Stanislav Nekristov from 2019).", "В Україні вперше проведено турніри під егідою World Darts Federation — Ukraine Open та Kyiv Masters.": "For the first time in Ukraine, tournaments were held under the World Darts Federation — Ukraine Open and Kyiv Masters.", "Пандемія COVID-19 зупинила турніри всередині країни, але відбулись перші онлайн-змагання за участю українських гравців.": "The COVID-19 pandemic stopped tournaments inside the country, but the first online competitions with Ukrainian players took place.", "Попри повномасштабне вторгнення й воєнний стан, збірна виступила на Кубку Європи ВДФ. Владислав Омельченко здобув кваліфікацію на Чемпіонат світу PDC — перший українець на цій сцені.": "Despite the full-scale invasion and martial law, the national team competed at the WDF Europe Cup. Vladyslav Omelchenko qualified for the PDC World Championship — the first Ukrainian on that stage.", "2023 — нині": "2023 — present", "Омельченко та Ілля Пекарук вперше представили Україну на Кубку Світу PDC. Частину змагань під егідою ВФД відновлено в окремих регіонах — попри війну щороку визначаються чемпіони з різних дисциплін.": "Omelchenko and Illia Pekaruk represented Ukraine at the PDC World Cup for the first time. Some UDF-run events have resumed in individual regions — despite the war, champions in various disciplines are determined every year.", "Знайти гравця": "Find a player", "Дані з таблиці «UA darts stat (учасники)» —": "Data from the “UA darts stat (participants)” table —", "записів,": "records,", "унікальних учасників (за даними Nakka). Клікабельні джерела: Nakka (сітки/легі) або протоколи ВФД у Google Docs/Sheets. Пошук, сортування і фільтр за роком/організатором.": "unique participants (per Nakka data). Clickable sources: Nakka (brackets/legs) or UDF protocols in Google Docs/Sheets. Search, sorting and filter by year/organizer.", "Усі роки": "All years", "Усі організатори": "All organizers", "Усі турніри": "All tournaments", "Тільки ЧУ (усі види)": "UA Championships only (all types)", "ЧУ · 501DO": "UA Champ. · 501DO", "ЧУ · Пари": "UA Champ. · Pairs", "ЧУ · Команди": "UA Champ. · Teams", "ЧУ · Мікст": "UA Champ. · Mixed", "ЧУ · Cricket": "UA Champ. · Cricket", "ЧУ · 501DIDO": "UA Champ. · 501DIDO", "Дата": "Date", "Турнір": "Tournament", "Орг.": "Org.", "Формат": "Format", "Місто": "City", "Всього": "Total", "Чол.": "Men", "Жін.": "Women", "Avg Ч.": "Avg M", "Avg Ж.": "Avg W", "Призери 🥇🥈🥉": "Medalists 🥇🥈🥉", "Джерела": "Sources", "Календар змагань 2026": "2026 competition calendar", "Усі етапи Кубка України (ВФД) та ліги UDL за рік — одним поглядом.": "All Ukrainian Cup stages (UDF) and UDL league events for the year — at a glance.", "Січень": "January", "Славсько": "Slavsko", "Лютий": "February", "ВФД": "UDF", "Львів": "Lviv", "Березень": "March", "Луцьк": "Lutsk", "Квітень": "April", "Вижниця": "Vyzhnytsia", "Травень": "May", "Черкаси": "Cherkasy", "Червень": "June", "Одеса": "Odesa", "Липень": "July", "Полтава": "Poltava", "Серпень": "August", "Ужгород": "Uzhhorod", "Вересень": "September", "Жовтень": "October", "Листопад": "November", "Грудень": "December", "ФІНАЛ": "FINAL", "Київ": "Kyiv", "Географія турнірів": "Tournament geography", "Міста, де приймали турніри Кубка України та Чемпіонати України. Розмір мітки — кількість турнірів у місті.": "Cities that hosted Ukrainian Cup tournaments and Ukrainian Championships. Marker size shows the number of tournaments in the city.", "Зростання участі по роках": "Participation growth by year", "Унікальні учасники за рік: скільки продовжили грати з попередніх років, скільки прийшло вперше (стовпчик вгору), і скільки перестали грати порівняно з попереднім роком (стовпчик вниз). Джерела — архів рейтингів за сезонами та дані Nakka.": "Unique participants per year: how many kept playing from previous years, how many came for the first time (bar up), and how many stopped playing compared with the previous year (bar down). Sources — season rating archive and Nakka data.", "Кількість учасників по турнірах": "Participants per tournament", "Сумарна кількість учасників (чоловіки + жінки) на кожному турнірі ВФД, у хронологічному порядку.": "Total number of participants (men + women) at each UDF tournament, in chronological order.", "ТОП-10 турнірів за кількістю учасників": "TOP-10 tournaments by participants", "Анімація формування рекордного списку — від першого турніру до сьогодні, серед усіх організаторів (ВФД + УДЛ/ЗУДЛ).": "An animation of how the record list was formed — from the first tournament to today, across all organizers (UDF + UDL/WUDL).", "▶ Відтворити": "▶ Play", "Чемпіони України та призери": "Ukrainian champions and medalists", "Медальний залік Чемпіонатів України за всіма категоріями (мікст, команди, пари, DIDO, Cricket, 501DO). 501DO — головна категорія сезону.": "Ukrainian Championship medal table across all categories (mixed, teams, pairs, DIDO, Cricket, 501DO). 501DO is the main category of the season.", "Чоловіки": "Men", "Жінки": "Women", "Усі категорії": "All categories", "Гравець": "Player", "Історія лідерів за медалями ЧУ": "History of leaders by UA Championship medals", "Накопичувальна анімація — як з роками мінялись лідери за загальною кількістю медалей Чемпіонатів України, за всіма категоріями разом.": "A cumulative animation of how the leaders by total Ukrainian Championship medals changed over the years, across all categories combined.", "Призери етапів Кубку України": "Ukrainian Cup stage medalists", "Медальний залік за етапами Кубка України та перемогами на ЧУ — з таблиці «Призери етапів кубків ВФД».": "Medal table by Ukrainian Cup stage and Ukrainian Championship wins — from the “Medalists of UDF cup stages” table.", "Усі гравці": "All players", "Тільки із золотом": "Gold only", "Тільки із сріблом": "Silver only", "Тільки із бронзою": "Bronze only", "Тільки чемпіони ЧУ": "UA champions only", "Мінімум 5 медалей": "At least 5 medals", "Мінімум 10 медалей": "At least 10 medals", "Титули ЧУ": "UA titles", "Всього медалей": "Total medals", "Живий рейтинг поточного сезону — оновлюється щодня разом з таблицею гравців. Клікніть на гравця, щоб побачити динаміку його позиції.": "Live rating of the current season — updated daily along with the player table. Click a player to see how their position changed.", "Місце": "Rank", "Рейтинги за сезон": "Season ratings", "Особистий рейтинг гравців за сумою очок з усіх етапів Кубка України (з коефіцієнтом 1.0) та ЧУ (коефіцієнт 1.5) — усі сезони 2013–2025, чоловіки й жінки, з таблиці «Кубок України».": "Personal player rating based on the sum of points from all Ukrainian Cup stages (coefficient 1.0) and the Ukrainian Championship (coefficient 1.5) — all seasons 2013–2025, men and women, from the “Ukrainian Cup” table.", "Вибрані рекорди з довідника «Дартс рекорди України».": "Selected records from the “Darts records of Ukraine” reference.", "Найкращий середній набір за гру серед жінок — Тетяна Харченко (Черкаси), рейтинговий турнір міста, 19 квітня 2025 р.": "The highest average per game among women — Tetiana Kharchenko (Cherkasy), city ranking tournament, 19 April 2025.", "12 років": "12 years", "Наймолодший призер міжнародних змагань від України — Олександр Гринів (Шептицький), бронза на WDF Winmau Vilnius Open, травень 2025 р.": "The youngest Ukrainian medalist at international events — Oleksandr Hryniv (Sheptytskyi), bronze at the WDF Winmau Vilnius Open, May 2025.", "Рік, з якого ведеться систематична фіксація рекордів — завдяки поширенню онлайн-застосунків для підрахунку результатів.": "The year from which records have been systematically kept — thanks to the spread of online apps for score tracking.", "Рекорди статистики (Nakka)": "Statistics records (Nakka)", "Реальна статистика з": "Real statistics from", "зіграних турнірів, підтягнута напряму з Nakka. Мінімум 3 матчі в турнірі для заліку в \"середній за турнір\".": "played tournaments, pulled directly from Nakka. A minimum of 3 matches in a tournament counts toward the “tournament average”.", "Середній за турнір": "Tournament average", "Середній за матч": "Match average", "H2H з найкращим AVG": "H2H with best AVG", "180-ки за турнір": "180s per tournament", "180-ки за кар'єру": "180s in career", "Checkout 100+ (кар'єра)": "Checkout 100+ (career)", "Найкращий лег": "Best leg", "⚔️ Протистояння гравців": "⚔️ Player head-to-head", "Оберіть двох гравців, щоб побачити всю історію їхніх особистих зустрічей.": "Choose two players to see the full history of their personal meetings.", "Майстри спорту України з дартсу": "Masters of Sport of Ukraine in darts", "Офіційний реєстр звань (Міністерство молоді та спорту України) — усі носії звання \"Майстер спорту України\" з дартсу.": "The official register of titles (Ministry of Youth and Sports of Ukraine) — all holders of the “Master of Sport of Ukraine” title in darts.", "Усі": "All", "Присвоєно": "Awarded", "ПІБ": "Full name", "Регіон": "Region", "Тренер": "Coach", "Досягнення": "Achievement", "Останні відео з YouTube-каналу Всеукраїнської Федерації Дартсу — клікніть, щоб подивитись прямо тут.": "Latest videos from the YouTube channel of the Ukrainian Darts Federation — click to watch right here.", "Завантаження…": "Loading…", "Усі відео на каналі": "All videos on the channel", "youtube.com/@UkranianDartsFederation — записи турнірів, огляди": "youtube.com/@UkranianDartsFederation — tournament recordings, reviews", "Новини українського дартсу": "Ukrainian darts news", "Новини від інформаційного партнера Всеукраїнської Федерації Дартсу —": "News from the information partner of the Ukrainian Darts Federation —", "Як це працюватиме": "How it will work", "Концепція автоматичного оновлення: дані підтягуються з першоджерел за розкладом, без ручного експорту.": "The concept of automatic updates: data is pulled from primary sources on a schedule, without manual export.", "Google Таблиці (учасники, призери), сторінки турнірів Nakka, статті Вікіпедії.": "Google Sheets (participants, medalists), Nakka tournament pages, Wikipedia articles.", "Синхронізація": "Synchronization", "Щоденний скрипт (GitHub Actions) читає опубліковані CSV обох таблиць і сам зіставляє турніри з призерами.": "A daily script (GitHub Actions) reads the published CSVs of both tables and matches tournaments with medalists on its own.", "Публікація": "Publishing", "Сайт (як цей) автоматично перезбирається і публікується — безкоштовно, для всіх користувачів інтернету.": "The site (like this one) is rebuilt and published automatically — free, for all internet users.", "Всеукраїнська Федерація Дартсу — консолідована статистика.": "Ukrainian Darts Federation — consolidated statistics.", "Дані: Google Sheets · Nakka · Wikipedia": "Data: Google Sheets · Nakka · Wikipedia"};
+  const ATTR_MAP = {"Введіть прізвище чи ім'я…": "Enter last name or first name…", "Пошук за назвою турніру або містом…": "Search by tournament name or city…", "Пошук гравця…": "Search player…", "Гравець 1…": "Player 1…", "Гравець 2…": "Player 2…", "Пошук за ім'ям…": "Search by name…", "Закрити": "Close"};
 
   const UI = {
     'Всеукраїнська Федерація Дартсу — Статистика':'Ukrainian Darts Federation — Statistics',
@@ -1475,7 +1297,7 @@ const I18N = (function(){
     'Закриттів 100+':'100+ checkouts','Закриттів 100+ (сума)':'100+ checkouts (total)','Найкращий лег (дротиків)':'Best leg (darts)',
     'за весь період':'all time','Де':'Where','Місце':'Rank','Рейтинг':'Rating','Ч':'M','Ж':'W','Чоловіки':'Men','Жінки':'Women',
     'Чоловік':'Male','Жінка':'Female','Мікст':'Mixed','Команди':'Teams','Пари':'Pairs',
-    'Середній за турнір':'Tournament average','Середній за матч':'Match average',
+    'Середній за 50 матчів':'Average over 50 matches','Середній (50 матчів)':'Average (50 matches)','Завантаження даних матчів…':'Loading match data…','Середній за турнір':'Tournament average','Середній за матч':'Match average',
     '▶ Відтворюється…':'▶ Playing…','↻ Відтворити ще раз':'↻ Play again','▶ Відтворити':'▶ Play',
     'Учасники (ВФД)':'Participants (UDF)','УДЛ/ЗУДЛ (всього)':'UDL/WUDL (total)',
     'Продовжили грати':'Kept playing','Нові гравці':'New players','Перестали грати (від попер. року)':'Stopped playing (vs. previous year)',
@@ -1539,6 +1361,7 @@ const I18N = (function(){
     [/^(.+): (\d+) нових гравців$/, '{1}: {2} new players'],
     [/^(.+): (\d+) перестали грати \(порівняно з попереднім роком\)$/, '{1}: {2} stopped playing (vs. the previous year)'],
     [/^Середній за останні (\d+) матчів$/, 'Average over the last {1} matches'],
+    [/^(\d+) матчів · (.+)$/, '{1} matches · {2}'],
     [/^рейтинг #(\d+)$/, 'rating #{1}'],
     [/^(.*) \((\d+) р\.\)$/, '{1} ({2} y.o.)'],
     [/^(\d+) р\.$/, '{1} y.o.'],
@@ -1763,7 +1586,6 @@ const I18N = (function(){
 
   return { init, setLang, lang: () => lang, tr: translateText, translit: translitWord, setOverrides, matches, misses };
 })();
-
 I18N.init();
 
 function safeUrl(u){
@@ -1985,7 +1807,7 @@ let currentRatingGender = 'men';
 let youtubeVideos = [];
 let telegramNews = [];
 let ratingsData = {};
-let recordsCategory = 'avgTournament';
+let recordsCategory = 'avgLast50';
 let recordsGender = 'men';
 
 // --- Узагальнена пагінація для довгих таблиць (турніри, рейтинг, історія) ---
@@ -2023,7 +1845,25 @@ function renderShowMore(key, wrapId, total, rerenderFn){
   });
 }
 
+const RECORD_MIN_MATCHES_LAST50 = 50;
 const RECORD_CATEGORIES = {
+  avgLast50: {
+    title: 'Гравець', valueLabel: 'Середній (50 матчів)', source: 'match',
+    compute(rows){
+      const by = {};
+      rows.forEach(r => { (by[r.name] = by[r.name] || []).push(r); });
+      return Object.entries(by)
+        .map(([name, ms]) => {
+          const last = ms.slice().sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date)).slice(0, 50);
+          const avg = last.reduce((s,r) => s + r.avg, 0) / last.length;
+          return { name, n: last.length, avg, from: last[last.length-1].date, to: last[0].date };
+        })
+        .filter(x => x.n >= RECORD_MIN_MATCHES_LAST50)
+        .sort((a,b) => b.avg - a.avg)
+        .slice(0, 10)
+        .map(x => ({ name: x.name, value: x.avg.toFixed(2), context: `${x.n} матчів · ${x.from} – ${x.to}` }));
+    }
+  },
   h2hMatch: {
     title: 'Матч', valueLabel: 'Середній обох', source: 'h2h', isH2H: true,
     compute(rows){
@@ -2122,6 +1962,7 @@ function renderNakkaRecords(){
   if(countEl) countEl.textContent = new Set(nakkaPlayerStats.filter(r => includeUDL || !r.isUDL).map(r => r.tournament + r.date)).size;
 
   const results = cat.compute(rows);
+  const needHeavy = cat.source === 'match' || cat.source === 'h2h';
 
   document.getElementById('records-head-row').innerHTML = `
     <th class="num">#</th>
@@ -2132,7 +1973,7 @@ function renderNakkaRecords(){
 
   const body = document.getElementById('records-body');
   if(results.length === 0){
-    body.innerHTML = `<tr class="empty-row"><td colspan="4">Немає даних.</td></tr>`;
+    body.innerHTML = `<tr class="empty-row"><td colspan="4">${needHeavy && !heavyLoaded ? 'Завантаження даних матчів…' : 'Немає даних.'}</td></tr>`;
     return;
   }
   body.innerHTML = results.map((r, i) => `
