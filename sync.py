@@ -13,6 +13,7 @@
 import csv
 import io
 import json
+import os
 import re
 import time
 import urllib.request
@@ -3849,10 +3850,44 @@ def sanitize_deep(x):
     return x
 
 
+# ---------- Розбиття даних на файли ----------
+# data.json            — «ядро» (малий, вантажиться першим)
+# data/nakka_matches.json, data/nakka_h2h.json — важкі набори, сайт підвантажує у фоні.
+# Кожен запис — окремий рядок, тому зміни в git компактні й читабельні.
+SHARD_DIR = "data"
+HEAVY_SHARDS = {
+    "nakkaMatchStats": "nakka_matches.json",
+    "nakkaH2HStats": "nakka_h2h.json",
+}
+
+
+def write_list_one_per_line(path, rows):
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("[\n")
+        f.write(",\n".join(json.dumps(r, ensure_ascii=False, separators=(",", ":")) for r in rows))
+        f.write("\n]\n")
+
+
+def write_split_output(data, core_path):
+    import os
+    base = os.path.dirname(core_path) or "."
+    shard_dir = os.path.join(base, SHARD_DIR)
+    os.makedirs(shard_dir, exist_ok=True)
+    core = dict(data)
+    parts = {}
+    for key, fname in HEAVY_SHARDS.items():
+        rows = core.pop(key, []) or []
+        write_list_one_per_line(os.path.join(shard_dir, fname), rows)
+        parts[key] = {"file": f"{SHARD_DIR}/{fname}", "count": len(rows)}
+    core["meta"] = dict(core.get("meta", {}), parts=parts)
+    with open(core_path, "w", encoding="utf-8") as f:
+        json.dump(core, f, ensure_ascii=False, indent=1)
+    print(f"Wrote {core_path} + {len(parts)} файлів у {shard_dir}/")
+
+
 def sanity_check_or_abort(new_data, old_path):
     """Не даємо перезаписати data.json, якщо нові дані різко «просіли»
     (збій джерела, порожня/зіпсована таблиця, зловмисне очищення)."""
-    import os
     import sys
     if not os.path.exists(old_path):
         return
@@ -3861,9 +3896,20 @@ def sanity_check_or_abort(new_data, old_path):
             old = json.load(f)
     except Exception:
         return
+    # Важкі набори тепер лежать в окремих файлах data/*.json
+    for key, fname in HEAVY_SHARDS.items():
+        if key not in old:
+            try:
+                with open(os.path.join(os.path.dirname(old_path) or ".", SHARD_DIR, fname),
+                          encoding="utf-8") as f:
+                    old[key] = json.load(f)
+            except Exception:
+                pass
     problems = []
     for key, min_ratio in (("tournaments", 0.9), ("curatedPlayerNames", 0.9),
-                           ("leaderboard", 0.9), ("championsRecords", 0.8)):
+                           ("leaderboard", 0.9), ("championsRecords", 0.8),
+                           ("nakkaPlayerStats", 0.9), ("nakkaMatchStats", 0.9),
+                           ("nakkaH2HStats", 0.9)):
         o, n = len(old.get(key) or []), len(new_data.get(key) or [])
         if o >= 10 and n < o * min_ratio:
             problems.append(f"{key}: було {o}, стало {n}")
@@ -4067,9 +4113,7 @@ def main():
     data = sanitize_deep(data)
     sanity_check_or_abort(data, OUTPUT_PATH)
 
-    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=1)
-    print(f"Wrote {OUTPUT_PATH}")
+    write_split_output(data, OUTPUT_PATH)
 
 
 if __name__ == "__main__":

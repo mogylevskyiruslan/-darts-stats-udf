@@ -1823,9 +1823,37 @@ document.querySelectorAll('#nakka-records .gender-btn').forEach(btn=>{
   });
 });
 
+// ---------- Важкі набори даних (матчі, H2H) вантажаться у фоні ----------
+// Ядро data.json малеє й показує сайт одразу; data/nakka_*.json підтягуються паралельно.
+let heavyLoaded = false;
+let heavyPromise = null;
+
+function startHeavyLoad(data){
+  const parts = (data.meta && data.meta.parts) || null;
+  if(!parts){ heavyLoaded = true; heavyPromise = Promise.resolve(); return heavyPromise; }
+  const load = async (key, setter) => {
+    const info = parts[key];
+    if(!info || typeof info.file !== 'string' || !/^data\/[\w.-]+\.json$/.test(info.file)) return;
+    try{
+      const r = await fetch('./' + info.file, {cache: 'no-cache'});
+      if(!r.ok) throw new Error('HTTP ' + r.status);
+      setter(sanitizeDeep(await r.json()));
+    }catch(e){ console.warn('Не вдалося завантажити ' + info.file, e); }
+  };
+  heavyPromise = Promise.all([
+    load('nakkaMatchStats', v => { nakkaMatchStats = Array.isArray(v) ? v : []; }),
+    load('nakkaH2HStats',  v => { nakkaH2HStats  = Array.isArray(v) ? v : []; }),
+  ]).then(() => {
+    heavyLoaded = true;
+    try{ renderNakkaRecords(); }catch(e){ console.warn(e); }
+    try{ renderH2HResult(); }catch(e){ console.warn(e); }
+  });
+  return heavyPromise;
+}
+
 async function loadData(){
   try{
-    const res = await fetch('./data.json', {cache: 'no-store'});
+    const res = await fetch('./data.json', {cache: 'no-cache'});
     if(!res.ok) throw new Error('HTTP ' + res.status);
     const data = sanitizeDeep(await res.json());
     tournaments = data.tournaments || [];
@@ -1833,6 +1861,7 @@ async function loadData(){
     leaderboardWomen = data.leaderboardWomen || [];
     ratingsData = data.ratings || {};
     nakkaPlayerStats = data.nakkaPlayerStats || [];
+    // Старий формат (все в одному файлі) підтримуємо; новий — важкі набори підвантажуються у фоні.
     nakkaMatchStats = data.nakkaMatchStats || [];
     nakkaH2HStats = data.nakkaH2HStats || [];
     currentRatingMen = data.currentRatingMen || null;
@@ -1842,7 +1871,7 @@ async function loadData(){
     curatedPlayerNames = data.curatedPlayerNames || [];
 
     try {
-      const histRes = await fetch('./rating_history.json', {cache: 'no-store'});
+      const histRes = await fetch('./rating_history.json', {cache: 'no-cache'});
       if(histRes.ok) ratingHistory = sanitizeDeep(await histRes.json());
     } catch(e) {
       console.warn('rating_history.json недоступний', e);
@@ -1879,6 +1908,8 @@ async function loadData(){
     renderChampions();
     initChampionsRace();
     initGlobalPlayerSearch();
+
+    startHeavyLoad(data);
 
     // Якщо перейшли за посиланням "поділитись профілем" (?player=Ім'я) —
     // одразу відкриваємо потрібний профіль гравця.
@@ -2711,6 +2742,10 @@ function renderH2HResult(){
   const p1 = h2hSelected[1], p2 = h2hSelected[2];
   if(!p1 || !p2){ wrap.innerHTML = ''; return; }
   if(p1 === p2){ wrap.innerHTML = '<div class="pp-chart-empty">Оберіть двох різних гравців.</div>'; return; }
+  if(!heavyLoaded){
+    wrap.innerHTML = '<div class="pp-chart-empty">Завантажуємо дані матчів…</div>';
+    return; // після завантаження startHeavyLoad сам викличе renderH2HResult
+  }
 
   const compareButtonHtml = `<div id="h2h-compare-box">${renderProfileComparison(p1, p2)}</div>`;
 
@@ -3153,6 +3188,10 @@ function togglePlayerProfileUDL(name, checked){
 }
 
 function openPlayerProfile(name){
+  if(!heavyLoaded && heavyPromise){
+    heavyPromise.then(() => openPlayerProfile(name));
+    return;
+  }
   const includeUDL = document.getElementById('global-toggle-udl').checked;
   let rows = nakkaPlayerStats.filter(r => r.name === name && (includeUDL || !r.isUDL));
   rows = rows.slice().sort((a,b) => parseUaDate(a.date) - parseUaDate(b.date));
