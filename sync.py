@@ -2838,6 +2838,20 @@ def _matched_stage_tournaments(tournaments):
     return {k: v[0] for k, v in by.items() if len(v) == 1}
 
 
+def apply_udl_medals_from_nakka(tournaments):
+    """УДЛ/ЗУДЛ: призери ТІЛЬКИ з Nakka. Жодних підстановок з таблиці Кубка
+    чи протоколів (раніше жіночі призери без Nakka-сітки тягнулись з
+    однойменного етапу Кубка України). Немає в Nakka — немає призерів."""
+    n = 0
+    for t in tournaments:
+        if not t.get("isUDL"):
+            continue
+        t["medals"] = t.get("nakkaMedals")
+        t["medalsWomen"] = t.get("nakkaMedalsWomen")
+        n += 1
+    return n
+
+
 def apply_sheet_corrections(tournaments, men_year_data, women_year_data, name_index, canonical_names):
     """Звіряє призерів з таблицею за РОКОМ + НОМЕРОМ ЕТАПУ. Збіг (з точністю до
     написання) — лишаємо як є; розбіжність — береться таблиця. Повертає лог."""
@@ -2911,8 +2925,15 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                         return tdid
             return None
 
-        men_tdid = link_tdid("men", "menAvg")
-        women_tdid = link_tdid("women", "womenAvg")
+        if t.get("isUDL"):
+            # В УДЛ GOLD посилання "men" веде на кваліфікацію Golden Arrow
+            # (Top 8, без півфіналів/фіналу), а справжня сітка турніру — у
+            # "menAvg". Тому для УДЛ спершу беремо "...Avg".
+            men_tdid = link_tdid("menAvg", "men")
+            women_tdid = link_tdid("womenAvg", "women")
+        else:
+            men_tdid = link_tdid("men", "menAvg")
+            women_tdid = link_tdid("women", "womenAvg")
         other_tdid = None
         if not men_tdid and not women_tdid:
             other_tdid = link_tdid("tournament")
@@ -2939,7 +2960,7 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
             # півфіналісти). Лише для особистих турнірів — у командних/парних
             # "гравець" у Nakka це команда, там лишаються rank + ручні правки.
             _fn = (t.get("format", "") + " " + t.get("name", "")).lower()
-            if tdid not in EXCLUDED_STATS_TDIDS and "команди" not in _fn and "пари" not in _fn and "мікст" not in _fn:
+            if tdid not in EXCLUDED_STATS_TDIDS and not any(w in _fn for w in ("команди", "пари", "мікст", "pairs", "team", "mixed", "doubles")):
                 _pod = podium_from_matches(fetch_match_averages(tdid, match_cache), name_index, canonical_names,
                                            allow_semi_bronze=bool(t.get("isUDL")))
                 if _pod:
@@ -3199,6 +3220,13 @@ def fetch_protocol_podium(url):
 
 
 MANUAL_MEDAL_OVERRIDES = {
+    # УДЛ 15.05.2026: у посиланні "men" стоїть кваліфікація Golden Arrow, а не
+    # сітка турніру — призерів звірено вручну зі скріншотом сітки Nakka.
+    ("15.05.2026", "UDL FEST CB&V GOLD"): {
+        "medals": {"gold": "Гринів Олександр", "silver": "Мелашенко Владислав",
+                   "bronze": ["Омельченко Владислав", "Сташевський Валентин"]},
+        "medalsWomen": None,
+    },
     ("12.09.2021", "Кубок Одеси"): {
         "medals": {"gold": "Бушуй Олексій", "silver": "Омельченко Владислав",
                    "bronze": ["Усик Артем", "Рогов Віталій"]},
@@ -3926,7 +3954,9 @@ def fill_medals_from_prizes_sheet(tournaments, men_year_data, women_year_data, n
         except (ValueError, IndexError):
             continue
         key = stage_key(t)
-        if not key:
+        if not key or t.get("isUDL"):
+            # УДЛ немає в таблиці «Призери етапів кубків»: його «3 етап»
+            # раніше хибно підтягував призерів 3-го етапу Кубка України.
             continue
 
         men_entry = men_year_data.get(year, {}).get(key)
@@ -3953,8 +3983,8 @@ def fill_protocol_medals(tournaments):
     filled = 0
     cache = {}
     for t in tournaments:
-        if t.get("nakkaMedals"):
-            continue  # вже є призери з Nakka — не чіпаємо
+        if t.get("nakkaMedals") or t.get("isUDL"):
+            continue  # вже є призери з Nakka (а УДЛ — лише з Nakka) — не чіпаємо
 
         protocol_url = None
         for key in ("tournament", "men", "menAvg", "women", "womenAvg"):
@@ -4306,6 +4336,7 @@ def main():
     known_women = {p["name"] for p in women_aggregate}
     known_men = {p["name"] for p in men_aggregate}
     nakka_player_records, nakka_match_records, nakka_h2h_records = enrich_with_nakka(tournaments, name_index, canonical_names, known_women, known_men)
+    print(f"  УДЛ: призери лише з Nakka ({apply_udl_medals_from_nakka(tournaments)} турнірів)")
     sheet_changes, sheet_unknown = apply_sheet_corrections(
         tournaments, men_year_data, women_year_data, name_index, canonical_names)
     print(f"  Таблиця призерів скоригувала {len(sheet_changes)} медальних заліків")
