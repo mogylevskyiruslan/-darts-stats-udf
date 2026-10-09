@@ -37,7 +37,7 @@ jobs:
           git config user.name "vfd-darts-bot"
           git config user.email "actions@github.com"
           # комітимо лише дані: data.json, папку data/ і rating_history.json
-          git add data.json data rating_history.json
+          git add data.json data rating_history.json medals_audit.json
           if git diff --quiet --cached; then
             echo "No changes in data"
           else
