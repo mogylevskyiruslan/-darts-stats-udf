@@ -1,15 +1,15 @@
 {
  "meta": {
-  "lastUpdated": "2026-10-09T10:59:51.375632+00:00",
+  "lastUpdated": "2026-10-09T11:21:00.427439+00:00",
   "tournamentsCount": 212,
   "parts": {
    "nakkaMatchStats": {
     "file": "data/nakka_matches.json",
-    "count": 13016
+    "count": 12790
    },
    "nakkaH2HStats": {
     "file": "data/nakka_h2h.json",
-    "count": 6508
+    "count": 6395
    }
   }
  },
@@ -138,8 +138,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "STRONG",
+    "silver": "Bull Raiders",
+    "bronze": [
+     "Kyiv Bulls"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "3-ko",
+    "silver": "Золоте тріо",
+    "bronze": [
+     "Сила єдності"
+    ]
+   },
    "nakkaMedals": {
     "gold": "STRONG",
     "silver": "Bull Raiders",
@@ -181,8 +193,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Овсієнко Євген",
+    "silver": "Сташевський Валентин",
+    "bronze": [
+     "Гакман Степан",
+     "Гончаров Едуард"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Молдован Вероніка",
+    "silver": "Зайцева Інна",
+    "bronze": [
+     "Ігнатюк Наталія",
+     "Ніщик Юліана"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Овсієнко Євген",
     "silver": "Сташевський Валентин",
@@ -227,24 +253,20 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Овсієнко Євген",
-    "silver": "Сташевський Валентин",
+    "gold": "Сташевський Валентин",
+    "silver": "Овсієнко Євген",
     "bronze": [
-     "Мелашенко Владислав"
+     "Гакман Степан",
+     "Омельченко Владислав"
     ]
    },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Гончаренко Інна",
-    "bronze": [
-     "Шклярук Наталія"
-    ]
-   },
+   "medalsWomen": null,
    "nakkaMedals": {
-    "gold": "Гакман Степан",
-    "silver": "Почкай Андрій",
+    "gold": "Сташевський Валентин",
+    "silver": "Овсієнко Євген",
     "bronze": [
-     "Льохарт Олег"
+     "Гакман Степан",
+     "Омельченко Владислав"
     ]
    },
    "nakkaMedalsWomen": null
@@ -373,8 +395,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "ОмельченкоГакман",
+    "silver": "СташевськийМогилевський",
+    "bronze": [
+     "МелашенкоЗалевський"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "БілоусІльясова",
+    "silver": "ШклярукТерещенко",
+    "bronze": [
+     "КарнаухСпекторенко"
+    ]
+   },
    "nakkaMedals": {
     "gold": "ОмельченкоГакман",
     "silver": "СташевськийМогилевський",
@@ -416,8 +450,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Сташевський Валентин",
+    "bronze": [
+     "Гакман Степан",
+     "Овсієнко Євген"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Карнаух Валентина",
+    "silver": "Білоус Жанна",
+    "bronze": [
+     "Ільясова Альбіна",
+     "Терещенко Любов"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Сташевський Валентин",
@@ -572,17 +620,19 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Овсієнко Євген",
-    "silver": "Сташевський Валентин",
+    "gold": "Омельченко Владислав",
+    "silver": "Мелашенко Владислав",
     "bronze": [
-     "Мелашенко Владислав"
+     "Гакман Степан",
+     "Сташевський Валентин"
     ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
-    "silver": "Гончаренко Інна",
+    "silver": "Лановенко Ксенія",
     "bronze": [
-     "Шклярук Наталія"
+     "Карнаух Валентина",
+     "Молдован Вероніка"
     ]
    },
    "nakkaMedals": {
@@ -628,22 +678,32 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Цілуйко Владислав, Яненко Сергій",
+    "silver": "Могилевський Руслан, Сташевський Валентин",
+    "bronze": [
+     "Мелашенко Владислав, Павленко Сергій"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Гончаренко Інна, Харченко Тетяна",
+    "silver": "Ігнатюк Наталія, Молдован Вероніка",
+    "bronze": [
+     "Ільясова Альбіна, Білоус Жанна"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Цілуйко Владислав, Яненко Сергій",
     "silver": "Могилевський Руслан, Сташевський Валентин",
     "bronze": [
-     "Мелашенко Владислав, Павленко Сергій",
-     "Омельченко Владислав, Гакман Степан"
+     "Мелашенко Владислав, Павленко Сергій"
     ]
    },
    "nakkaMedalsWomen": {
     "gold": "Гончаренко Інна, Харченко Тетяна",
     "silver": "Ігнатюк Наталія, Молдован Вероніка",
     "bronze": [
-     "Ільясова Альбіна, Білоус Жанна",
-     "Лановенко Ксенія, Паламар Оксана"
+     "Ільясова Альбіна, Білоус Жанна"
     ]
    }
   },
@@ -674,24 +734,20 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Бендрик Олег",
+    "gold": "Гринів Олександр",
+    "silver": "Мелашенко Владислав",
     "bronze": [
-     "Могилевський Руслан"
+     "Омельченко Владислав",
+     "Сташевський Валентин"
     ]
    },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Гончаренко Інна",
-    "bronze": [
-     "Лановенко Ксенія"
-    ]
-   },
+   "medalsWomen": null,
    "nakkaMedals": {
-    "gold": "Могилевський Руслан",
-    "silver": "Абчугський Олександр",
+    "gold": "Гринів Олександр",
+    "silver": "Мелашенко Владислав",
     "bronze": [
-     "Гакман Степан"
+     "Омельченко Владислав",
+     "Сташевський Валентин"
     ]
    },
    "nakkaMedalsWomen": null
@@ -722,8 +778,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Овсієнко Євген",
+    "bronze": [
+     "Гакман Степан",
+     "Сташевський Валентин"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Молдован Вероніка",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Ігнатюк Наталія",
+     "Карнаух Валентина"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Овсієнко Євген",
@@ -768,17 +838,19 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Бендрик Олег",
+    "gold": "Мелашенко Владислав",
+    "silver": "Абчугський Олександр",
     "bronze": [
-     "Могилевський Руслан"
+     "Почкай Андрій",
+     "Сташевський Валентин"
     ]
    },
    "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Гончаренко Інна",
+    "gold": "Молдован Вероніка",
+    "silver": "Ігнатюк Наталія",
     "bronze": [
-     "Лановенко Ксенія"
+     "Гончаренко Інна",
+     "Карнаух Валентина"
     ]
    },
    "nakkaMedals": {
@@ -825,24 +897,18 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Могилевський Руслан",
+    "gold": "Сташевський Валентин",
+    "silver": "Овсієнко Євген",
     "bronze": [
-     "Сташевський Валентин"
+     "Почкай Андрій"
     ]
    },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Чабанова Анна",
-    "bronze": [
-     "Гончаренко Інна"
-    ]
-   },
+   "medalsWomen": null,
    "nakkaMedals": {
-    "gold": "Залевський Володимир",
-    "silver": "Головень Юрій",
+    "gold": "Сташевський Валентин",
+    "silver": "Овсієнко Євген",
     "bronze": [
-     "Абчугський Олександр"
+     "Почкай Андрій"
     ]
    },
    "nakkaMedalsWomen": null
@@ -873,21 +939,31 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав/Гакман Степан",
+    "silver": "Овсієнко Євген/Абчугський Олександр",
+    "bronze": [
+     "Гончаров Едуард/Солтис Микита"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна/Гончаренко Інна",
+    "silver": "Діденко Оксана/Ананенко Альона",
+    "bronze": [
+     "Лановенко Ксенія/Терещенко Любов"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав/Гакман Степан",
     "silver": "Овсієнко Євген/Абчугський Олександр",
     "bronze": [
-     "Гончаров Едуард/Солтис Микита",
-     "Мелашенко Влад/Павленко Сергій"
+     "Гончаров Едуард/Солтис Микита"
     ]
    },
    "nakkaMedalsWomen": {
     "gold": "Харченко Тетяна/Гончаренко Інна",
     "silver": "Діденко Оксана/Ананенко Альона",
     "bronze": [
-     "Білоус Жанна/Ільясова Альбіна",
      "Лановенко Ксенія/Терещенко Любов"
     ]
    }
@@ -919,17 +995,19 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Омельченко Владислав",
+    "gold": "Сташевський Валентин",
     "silver": "Могилевський Руслан",
     "bronze": [
-     "Сташевський Валентин"
+     "Гринів Олександр",
+     "Овсієнко Євген"
     ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
-    "silver": "Чабанова Анна",
+    "silver": "Терещенко Любов",
     "bronze": [
-     "Гончаренко Інна"
+     "Ігнатюк Наталія",
+     "Зайцева Інна"
     ]
    },
    "nakkaMedals": {
@@ -1061,14 +1139,19 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "Солтис Микита/Коломієць Андрій",
+    "silver": "Білоус Іван/Мокан Микола",
+    "bronze": [
+     "Льохарт Олег/Терещенко Любов"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Солтис Микита/Коломієць Андрій",
     "silver": "Білоус Іван/Мокан Микола",
     "bronze": [
-     "Льохарт Олег/Терещенко Любов",
-     "Могилевський Руслан/Селіхова Тетяна"
+     "Льохарт Олег/Терещенко Любов"
     ]
    },
    "nakkaMedalsWomen": null
@@ -1100,17 +1183,19 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Могилевський Руслан",
+    "gold": "Сташевський Валентин",
+    "silver": "Овсієнко Євген",
     "bronze": [
-     "Гринів Олександр"
+     "Гакман Степан",
+     "Могилевський Руслан"
     ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
-    "silver": "Гончаренко Інна",
+    "silver": "Ігнатюк Наталія",
     "bronze": [
-     "Ігнатюк Наталія"
+     "Діденко Оксана",
+     "Карнаух Валентина"
     ]
    },
    "nakkaMedals": {
@@ -1157,24 +1242,18 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Могилевський Руслан",
+    "gold": "Мелашенко Владислав",
+    "silver": "Гринів Олександр",
     "bronze": [
-     "Гринів Олександр"
+     "Павленко Сергій"
     ]
    },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Гончаренко Інна",
-    "bronze": [
-     "Ігнатюк Наталія"
-    ]
-   },
+   "medalsWomen": null,
    "nakkaMedals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Окуліцький Євген",
+    "gold": "Мелашенко Владислав",
+    "silver": "Гринів Олександр",
     "bronze": [
-     "Абчугський Олександр"
+     "Павленко Сергій"
     ]
    },
    "nakkaMedalsWomen": null
@@ -1303,8 +1382,21 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Могилевський Руслан",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Гончаров Едуард",
+     "Григоренко Віктор"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Лановенко Ксенія",
+    "bronze": [
+     "Білоус Жанна"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Могилевський Руслан",
     "silver": "Омельченко Владислав",
@@ -1348,17 +1440,19 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Могилевський Руслан",
+    "gold": "Омельченко Владислав",
     "silver": "Мелашенко Владислав",
     "bronze": [
-     "Козловський Богдан"
+     "Гончаров Едуард",
+     "Овсієнко Євген"
     ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
-    "silver": "Терещенко Любов",
+    "silver": "Гончаренко Інна",
     "bronze": [
-     "Лановенко Ксенія"
+     "Ледєньова Наталія",
+     "Терещенко Любов"
     ]
    },
    "nakkaMedals": {
@@ -1410,8 +1504,20 @@
      "type": "protocol_doc"
     }
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "UBK - United Bukovina & Kryvbas",
+    "silver": "Габелі",
+    "bronze": [
+     "Вовки"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "No doubt",
+    "silver": "Снайперки",
+    "bronze": [
+     "TRI ARKANA"
+    ]
+   },
    "nakkaMedals": {
     "gold": "UBK - United Bukovina & Kryvbas",
     "silver": "Габелі",
@@ -1677,8 +1783,20 @@
     "womenAvg": null,
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Мелашенко Владислав",
+    "bronze": [
+     "Гринів Олександр"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко Тетяна",
+    "silver": "Гончаренко Інна",
+    "bronze": [
+     "Терещенко Любов"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Мелашенко Владислав",
@@ -1721,16 +1839,18 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Мамика Олександр",
-    "silver": "Омельченко Владислав",
+    "gold": "Омельченко Владислав",
+    "silver": "Мелашенко Владислав",
     "bronze": [
+     "Гоян Дмитро",
      "Могилевський Руслан"
     ]
    },
    "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Зайцева Інна",
+    "gold": "Ледєньова Наталія",
+    "silver": "Терещенко Любов",
     "bronze": [
+     "Ільясова Альбіна",
      "Гончаренко Інна"
     ]
    },
@@ -1887,8 +2007,20 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Усик АртемСташевський Валентин",
+    "silver": "Могилевський РусланПекарук Ілля",
+    "bronze": [
+     "Омельченко ВладиславГакман Степан"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко ТетянаГончаренко Інна",
+    "silver": "Шклярук НаталіяТерещенко Любов",
+    "bronze": [
+     "Ільясова АльбінаЛановенко Ксенія"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Усик АртемСташевський Валентин",
     "silver": "Могилевський РусланПекарук Ілля",
@@ -1900,8 +2032,7 @@
     "gold": "Харченко ТетянаГончаренко Інна",
     "silver": "Шклярук НаталіяТерещенко Любов",
     "bronze": [
-     "Ільясова АльбінаЛановенко Ксенія",
-     "Паламар ОксанаЛедєньова Наталія"
+     "Ільясова АльбінаЛановенко Ксенія"
     ]
    }
   },
@@ -1933,16 +2064,18 @@
    },
    "medals": {
     "gold": "Омельченко Владислав",
-    "silver": "Кіфор Ярослав",
+    "silver": "Залевський Володимир",
     "bronze": [
-     "Могилевський Руслан"
+     "Мелашенко Владислав",
+     "Пекарук Ілля"
     ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
-    "silver": "Гончаренко Інна",
+    "silver": "Терещенко Любов",
     "bronze": [
-     "Карнаух Валентина"
+     "Білоус Жанна",
+     "Пішта Людмила"
     ]
    },
    "nakkaMedals": {
@@ -2101,8 +2234,22 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Мелашенко Владислав",
+     "Троценко Артем"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Молдован Вероніка",
+    "silver": "Спекторенко Катерина",
+    "bronze": [
+     "Білоус Жанна",
+     "Ніщик Юліана"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Залевський Володимир",
@@ -2148,16 +2295,18 @@
    },
    "medals": {
     "gold": "Омельченко Владислав",
-    "silver": "Лагутін Андрій",
+    "silver": "Залевський Володимир",
     "bronze": [
-     "Гончаров Едуард"
+     "Гринів Олександр",
+     "Мелашенко Владислав"
     ]
    },
    "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Гончаренко Інна",
+    "gold": "Паламар Оксана",
+    "silver": "Ільясова Альбіна",
     "bronze": [
-     "Зайцева Інна"
+     "Білоус Жанна",
+     "Гончаренко Інна"
     ]
    },
    "nakkaMedals": {
@@ -2203,13 +2352,24 @@
     },
     "tournament": null
    },
-   "medals": null,
-   "medalsWomen": null,
+   "medals": {
+    "gold": "Омельченко/Григоренко",
+    "silver": "Залевський/Білоус",
+    "bronze": [
+     "Могилевський/Пекарук"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Харченко/Гончаренко",
+    "silver": "Білоус/Пішта",
+    "bronze": [
+     "Шклярук/Терещенко"
+    ]
+   },
    "nakkaMedals": {
     "gold": "Омельченко/Григоренко",
     "silver": "Залевський/Білоус",
     "bronze": [
-     "Гоян/Яненко",
      "Могилевський/Пекарук"
     ]
    },
@@ -2217,7 +2377,6 @@
     "gold": "Харченко/Гончаренко",
     "silver": "Білоус/Пішта",
     "bronze": [
-     "Ільясова/Лановенко",
      "Шклярук/Терещенко"
     ]
    }
@@ -2250,16 +2409,18 @@
    },
    "medals": {
     "gold": "Омельченко Владислав",
-    "silver": "Пекарук Ілля",
+    "silver": "Григоренко Віктор",
     "bronze": [
-     "Мелашенко Владислав"
+     "Залевський Володимир",
+     "Рудковський Василь"
     ]
    },
    "medalsWomen": {
     "gold": "Харченко Тетяна",
-    "silver": "Терещенко Любов",
+    "silver": "Білоус Жанна",
     "bronze": [
-     "Ледєньова Наталія"
+     "Гончаренко Інна",
+     "Терещенко Любов"
     ]
    },
    "nakkaMedals": {
@@ -2397,13 +2558,18 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "Залевський/Зубаль",
+    "silver": "Пішта.І/Панченко",
+    "bronze": [
+     "Пекарук/Сидоренко"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Залевський/Зубаль",
     "silver": "Пішта.І/Панченко",
     "bronze": [
-     "Могилевський/Солтис",
      "Пекарук/Сидоренко"
     ]
    },
@@ -2436,17 +2602,19 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Мелашенко Владислав",
-    "silver": "Кіфор Ярослав",
+    "gold": "Залевський Володимир",
+    "silver": "Чепурний Едуард",
     "bronze": [
-     "Омельченко Владислав"
+     "Сидоренко Олександр",
+     "Стецишин Віталій"
     ]
    },
    "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Білоус Жанна",
+    "gold": "Гончаренко Інна",
+    "silver": "Ільясова Альбіна",
     "bronze": [
-     "Гончаренко Інна"
+     "Лановенко Ксенія",
+     "Спекторенко Катерина"
     ]
    },
    "nakkaMedals": {
@@ -2584,7 +2752,14 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "Мелашенко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Кіфор Ярослав",
+     "Омельченко Владислав"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Мелашенко Владислав",
@@ -2619,7 +2794,14 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Григоренко Віктор",
+     "Мелашенко Владислав"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
@@ -2657,13 +2839,18 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "UBK",
+    "silver": "PDC",
+    "bronze": [
+     "ODESA SHARKS"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "UBK",
     "silver": "PDC",
     "bronze": [
-     "BANDERSHTAT",
      "ODESA SHARKS"
     ]
    },
@@ -2920,7 +3107,14 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Григоренко Віктор",
+    "bronze": [
+     "Кіфор Ярослав",
+     "Мелашенко Владислав"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Залевський Володимир",
@@ -2955,7 +3149,14 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "Мелашенко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Григоренко Віктор",
+     "Фатех Дін"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Мелашенко Владислав",
@@ -3111,14 +3312,19 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "Залевський/Мелашенко",
+    "silver": "Усик/Кисельов",
+    "bronze": [
+     "Сташевський/SОL"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Залевський/Мелашенко",
     "silver": "Усик/Кисельов",
     "bronze": [
-     "Сташевський/SОL",
-     "Троценко/Лагутін"
+     "Сташевський/SОL"
     ]
    },
    "nakkaMedalsWomen": null
@@ -3147,21 +3353,14 @@
     }
    },
    "medals": {
-    "gold": "Гончаров Едуард",
-    "silver": "Омесь Ілля",
+    "gold": "Сташевський Валентин",
+    "silver": "Кисельов Дмитро",
     "bronze": [
-     "Залевський Володимир",
-     "Абчугський Олександр"
+     "Троценко Артем",
+     "Фатех Дін"
     ]
    },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Терещенко Любов",
-    "bronze": [
-     "Гончаренко Інна",
-     "Ільясова Альбіна"
-    ]
-   },
+   "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Сташевський Валентин",
     "silver": "Кисельов Дмитро",
@@ -3312,7 +3511,13 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Мелашенко Владислав"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Залевський Володимир",
@@ -3350,21 +3555,13 @@
     }
    },
    "medals": {
-    "gold": "Залевський Володимир",
-    "silver": "Усик Артем",
+    "gold": "giC2",
+    "silver": "jDwW",
     "bronze": [
-     "Мелашенко Владислав",
-     "Сташевський Валентин"
+     "Wzox"
     ]
    },
-   "medalsWomen": {
-    "gold": "Ільясова Альбіна",
-    "silver": "Гончаренко Інна",
-    "bronze": [
-     "Харченко Тетяна",
-     "Ледєньова Наталія"
-    ]
-   },
+   "medalsWomen": null,
    "nakkaMedals": {
     "gold": "giC2",
     "silver": "jDwW",
@@ -3397,13 +3594,18 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "Залевський/Чепак",
+    "silver": "Аверін/Лагутін",
+    "bronze": [
+     "Чорний/Корпусов"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Залевський/Чепак",
     "silver": "Аверін/Лагутін",
     "bronze": [
-     "Омельченко/Троценко",
      "Чорний/Корпусов"
     ]
    },
@@ -3433,21 +3635,14 @@
     }
    },
    "medals": {
-    "gold": "Григоренко Віктор",
-    "silver": "Залевський Володимир",
+    "gold": "Залевський Володимир",
+    "silver": "Омельченко Владислав",
     "bronze": [
-     "Мелашенко Владислав",
-     "Гоян Дмитро"
+     "Григоренко Віктор",
+     "Кіфор Ярослав"
     ]
    },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Білоус Жанна",
-    "bronze": [
-     "Гончаренко Інна",
-     "Молдован Емілія"
-    ]
-   },
+   "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Залевський Володимир",
     "silver": "Омельченко Владислав",
@@ -3481,7 +3676,13 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "Залевський / Мелашенко",
+    "silver": "Пламада / Григоренко",
+    "bronze": [
+     "Аверін / Лагутін"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Залевський / Мелашенко",
@@ -3516,21 +3717,14 @@
     }
    },
    "medals": {
-    "gold": "Рогов Віталій",
+    "gold": "Омельченко Владислав",
     "silver": "Залевський Володимир",
     "bronze": [
-     "Троценко Артем",
+     "Аверін Сергій",
      "Могилевський Руслан"
     ]
    },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Терещенко Любов",
-    "bronze": [
-     "Пивошенко Олена",
-     "Соколова Вікторія"
-    ]
-   },
+   "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Залевський Володимир",
@@ -3665,7 +3859,13 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "Залевський Володимир",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Усик Артем"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Залевський Володимир",
@@ -3929,7 +4129,13 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "Залевський Володимир/Моісеєнко Віталіна",
+    "silver": "Козловський Богдан/Пекарук Ілля",
+    "bronze": [
+     "Микитин Ярослав/Кіфор Ярослав"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Залевський Володимир/Моісеєнко Віталіна",
@@ -3967,18 +4173,10 @@
     "gold": "Залевський Володимир",
     "silver": "Омельченко Владислав",
     "bronze": [
-     "Пекарук Ілля",
-     "Мелашенко Владислав"
+     "Лагутін Андрій"
     ]
    },
-   "medalsWomen": {
-    "gold": "Шклярук Наталія",
-    "silver": "Лановенко Ксенія",
-    "bronze": [
-     "Полтавець Світлана",
-     "Паламар Оксана"
-    ]
-   },
+   "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Залевський Володимир",
     "silver": "Омельченко Владислав",
@@ -4129,7 +4327,13 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
+    "bronze": [
+     "Козловський Богдан"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
@@ -4164,21 +4368,13 @@
     }
    },
    "medals": {
-    "gold": "Залевський Володимир",
-    "silver": "Мамика Олександр",
+    "gold": "Омельченко Владислав",
+    "silver": "Залевський Володимир",
     "bronze": [
-     "Луков Олександр",
-     "Фатех Дін"
+     "Козловський Богдан"
     ]
    },
-   "medalsWomen": {
-    "gold": "Харченко Тетяна",
-    "silver": "Терещенко Любов",
-    "bronze": [
-     "Моісеєнко Віталіна",
-     "Пивошенко Олена"
-    ]
-   },
+   "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Залевський Володимир",
@@ -4331,7 +4527,13 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "DreamTeam",
+    "silver": "Буковина",
+    "bronze": [
+     "PDC (Porter Darts Club)"
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "DreamTeam",
@@ -4366,21 +4568,13 @@
     }
    },
    "medals": {
-    "gold": "Залевський Володимир",
-    "silver": "Омельченко Владислав",
+    "gold": "Омельченко Владислав",
+    "silver": "Троценко Артем",
     "bronze": [
-     "Пекарук Ілля",
-     "Усик Артем"
+     "Залевський Володимир"
     ]
    },
-   "medalsWomen": {
-    "gold": "Моісеєнко Віталіна",
-    "silver": "Терещенко Любов",
-    "bronze": [
-     "Лановенко Ксенія",
-     "Шклярук Наталія"
-    ]
-   },
+   "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Троценко Артем",
@@ -4531,7 +4725,13 @@
      "type": "nakka"
     }
    },
-   "medals": null,
+   "medals": {
+    "gold": "Залевський/Мелашенко",
+    "silver": "Омельченко Баширов",
+    "bronze": [
+     "Усик А./Усик С."
+    ]
+   },
    "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Залевський/Мелашенко",
@@ -4566,21 +4766,13 @@
     }
    },
    "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Пекарук Ілля",
+    "gold": "Усик Артем",
+    "silver": "Баширов Ярослав",
     "bronze": [
-     "Залевський Володимир",
-     "Аверін Сергій"
+     "Омельченко Владислав"
     ]
    },
-   "medalsWomen": {
-    "gold": "Моісеєнко Віталіна",
-    "silver": "Терещенко Любов",
-    "bronze": [
-     "Лановенко Ксенія",
-     "Соколова Вікторія"
-    ]
-   },
+   "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Усик Артем",
     "silver": "Баширов Ярослав",
@@ -42284,452 +42476,20 @@
    "winMatch": 4
   },
   {
-   "name": "Головень Юрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 52.68,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 88,
-   "bestLeg": 19,
-   "rank": 17,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Павленко Сергій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 50.62,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 57,
-   "bestLeg": 23,
-   "rank": 9,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Омельченко Владислав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 68.46,
-   "ton80": 0,
-   "highOutCount": 1,
-   "highOut": 136,
-   "bestLeg": 14,
-   "rank": 17,
-   "match": 4,
-   "winMatch": 3
-  },
-  {
-   "name": "Гакман Степан",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 62.62,
-   "ton80": 4,
-   "highOutCount": 0,
-   "highOut": 95,
-   "bestLeg": 16,
-   "rank": 5,
-   "match": 5,
-   "winMatch": 4
-  },
-  {
-   "name": "Абчугський Олександр",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 58.37,
-   "ton80": 0,
-   "highOutCount": 1,
-   "highOut": 100,
-   "bestLeg": 16,
-   "rank": 5,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Топчу Владислав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 41.48,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 4,
-   "bestLeg": 30,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Цілуйко Владислав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 56.1,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 90,
-   "bestLeg": 17,
-   "rank": 9,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Цебратенко Андрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 42.43,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 20,
-   "bestLeg": 31,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Яненко Сергій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 62.22,
-   "ton80": 3,
-   "highOutCount": 0,
-   "highOut": 47,
-   "bestLeg": 16,
-   "rank": 9,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Іванов Сергій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 52.49,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 58,
-   "bestLeg": 24,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Могилевський Руслан",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 66.8,
-   "ton80": 1,
-   "highOutCount": 2,
-   "highOut": 117,
-   "bestLeg": 14,
-   "rank": 9,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Васильков Владислав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 45.34,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 4,
-   "bestLeg": 32,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
    "name": "Гринів Олександр",
    "gender": "men",
    "isUDL": true,
    "date": "14.08.2026",
    "tournament": "UDL FEST 2 CB&V GOLD",
    "city": "Львів",
-   "avg": 57.42,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 60,
-   "bestLeg": 17,
-   "rank": 17,
-   "match": 3,
-   "winMatch": 2
-  },
-  {
-   "name": "Бабанін Дмитро",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 48.87,
+   "avg": 62.16,
    "ton80": 0,
    "highOutCount": 0,
-   "highOut": 56,
-   "bestLeg": 21,
-   "rank": 5,
-   "match": 3,
-   "winMatch": 3
-  },
-  {
-   "name": "Почкай Андрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 63.21,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 92,
-   "bestLeg": 17,
-   "rank": 5,
-   "match": 5,
-   "winMatch": 4
-  },
-  {
-   "name": "Баранов Олександр",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 48.78,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 0,
-   "bestLeg": 0,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Воронюк Михайло",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 53.35,
-   "ton80": 3,
-   "highOutCount": 0,
-   "highOut": 94,
-   "bestLeg": 18,
-   "rank": 9,
-   "match": 5,
-   "winMatch": 3
-  },
-  {
-   "name": "Мокан Микола",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 47.62,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 0,
-   "bestLeg": 0,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Чепак Василь",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 51.31,
-   "ton80": 0,
-   "highOutCount": 1,
-   "highOut": 119,
+   "highOut": 63,
    "bestLeg": 22,
-   "rank": 17,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Льохарт Олег",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 51.53,
-   "ton80": 2,
-   "highOutCount": 0,
-   "highOut": 69,
-   "bestLeg": 21,
    "rank": 5,
-   "match": 5,
-   "winMatch": 3
-  },
-  {
-   "name": "Солтис Микита",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 58.29,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 40,
-   "bestLeg": 17,
-   "rank": 17,
-   "match": 2,
+   "match": 1,
    "winMatch": 0
-  },
-  {
-   "name": "Ванда Євген",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 62.65,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 62,
-   "bestLeg": 15,
-   "rank": 9,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Окуліцький Євген",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 59.94,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 50,
-   "bestLeg": 16,
-   "rank": 17,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Кіфор Ярослав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 54.19,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 50,
-   "bestLeg": 21,
-   "rank": 9,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Лагутін Андрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 53.15,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 40,
-   "bestLeg": 19,
-   "rank": 9,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Смик Володимир",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 49.96,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 32,
-   "bestLeg": 22,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Мелашенко Владислав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 66.69,
-   "ton80": 2,
-   "highOutCount": 0,
-   "highOut": 92,
-   "bestLeg": 13,
-   "rank": 5,
-   "match": 3,
-   "winMatch": 3
-  },
-  {
-   "name": "Гавриленко Роман",
-   "gender": "men",
-   "isUDL": true,
-   "date": "14.08.2026",
-   "tournament": "UDL FEST 2 CB&V GOLD",
-   "city": "Львів",
-   "avg": 53.33,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 42,
-   "bestLeg": 23,
-   "rank": 17,
-   "match": 3,
-   "winMatch": 1
   },
   {
    "name": "Овсієнко Євген",
@@ -42738,30 +42498,94 @@
    "date": "14.08.2026",
    "tournament": "UDL FEST 2 CB&V GOLD",
    "city": "Львів",
-   "avg": 63.72,
-   "ton80": 2,
+   "avg": 67.06,
+   "ton80": 1,
    "highOutCount": 0,
-   "highOut": 58,
-   "bestLeg": 14,
-   "rank": 5,
+   "highOut": 52,
+   "bestLeg": 16,
+   "rank": 2,
    "match": 3,
-   "winMatch": 3
+   "winMatch": 2
   },
   {
-   "name": "Залевський Володимир",
+   "name": "Гакман Степан",
    "gender": "men",
    "isUDL": true,
    "date": "14.08.2026",
    "tournament": "UDL FEST 2 CB&V GOLD",
    "city": "Львів",
-   "avg": 66.0,
-   "ton80": 1,
+   "avg": 63.75,
+   "ton80": 0,
    "highOutCount": 0,
-   "highOut": 92,
-   "bestLeg": 17,
-   "rank": 17,
-   "match": 4,
-   "winMatch": 2
+   "highOut": 81,
+   "bestLeg": 19,
+   "rank": 3,
+   "match": 2,
+   "winMatch": 1
+  },
+  {
+   "name": "Бабанін Дмитро",
+   "gender": "men",
+   "isUDL": true,
+   "date": "14.08.2026",
+   "tournament": "UDL FEST 2 CB&V GOLD",
+   "city": "Львів",
+   "avg": 52.08,
+   "ton80": 0,
+   "highOutCount": 0,
+   "highOut": 40,
+   "bestLeg": 27,
+   "rank": 5,
+   "match": 1,
+   "winMatch": 0
+  },
+  {
+   "name": "Омельченко Владислав",
+   "gender": "men",
+   "isUDL": true,
+   "date": "14.08.2026",
+   "tournament": "UDL FEST 2 CB&V GOLD",
+   "city": "Львів",
+   "avg": 71.97,
+   "ton80": 4,
+   "highOutCount": 1,
+   "highOut": 136,
+   "bestLeg": 12,
+   "rank": 3,
+   "match": 2,
+   "winMatch": 1
+  },
+  {
+   "name": "Мелашенко Владислав",
+   "gender": "men",
+   "isUDL": true,
+   "date": "14.08.2026",
+   "tournament": "UDL FEST 2 CB&V GOLD",
+   "city": "Львів",
+   "avg": 75.92,
+   "ton80": 2,
+   "highOutCount": 0,
+   "highOut": 61,
+   "bestLeg": 11,
+   "rank": 5,
+   "match": 1,
+   "winMatch": 0
+  },
+  {
+   "name": "Почкай Андрій",
+   "gender": "men",
+   "isUDL": true,
+   "date": "14.08.2026",
+   "tournament": "UDL FEST 2 CB&V GOLD",
+   "city": "Львів",
+   "avg": 65.83,
+   "ton80": 0,
+   "highOutCount": 0,
+   "highOut": 44,
+   "bestLeg": 19,
+   "rank": 5,
+   "match": 1,
+   "winMatch": 0
   },
   {
    "name": "Сташевський Валентин",
@@ -42770,14 +42594,14 @@
    "date": "14.08.2026",
    "tournament": "UDL FEST 2 CB&V GOLD",
    "city": "Львів",
-   "avg": 68.54,
-   "ton80": 0,
-   "highOutCount": 1,
-   "highOut": 104,
-   "bestLeg": 17,
-   "rank": 5,
-   "match": 2,
-   "winMatch": 2
+   "avg": 69.83,
+   "ton80": 3,
+   "highOutCount": 0,
+   "highOut": 96,
+   "bestLeg": 16,
+   "rank": 1,
+   "match": 3,
+   "winMatch": 3
   },
   {
    "name": "Тарасюк Юрій",
@@ -47692,227 +47516,19 @@
    "winMatch": 4
   },
   {
-   "name": "Харченко Тетяна",
-   "gender": "women",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 59.7,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 40,
-   "bestLeg": 19,
-   "rank": 17,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
    "name": "Абчугський Олександр",
    "gender": "men",
    "isUDL": true,
    "date": "15.05.2026",
    "tournament": "UDL FEST CB&V GOLD",
    "city": "Львів",
-   "avg": 63.34,
-   "ton80": 3,
-   "highOutCount": 2,
-   "highOut": 129,
-   "bestLeg": 13,
-   "rank": 5,
-   "match": 5,
-   "winMatch": 4
-  },
-  {
-   "name": "Цебратенко Андрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 44.81,
+   "avg": 66.28,
    "ton80": 0,
    "highOutCount": 0,
-   "highOut": 40,
-   "bestLeg": 28,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Зубаль Василь",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 50.76,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 96,
-   "bestLeg": 20,
-   "rank": 9,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Дідов Василь",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 62.04,
-   "ton80": 0,
-   "highOutCount": 1,
-   "highOut": 110,
-   "bestLeg": 18,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Кіфор Ярослав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 60.51,
-   "ton80": 2,
-   "highOutCount": 0,
-   "highOut": 83,
-   "bestLeg": 18,
-   "rank": 9,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Ігнатюк Наталія",
-   "gender": "women",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 50.8,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 95,
+   "highOut": 48,
    "bestLeg": 19,
-   "rank": 9,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Фехтел Анатолій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 40.31,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 20,
-   "bestLeg": 28,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Гакман Степан",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 62.61,
-   "ton80": 3,
-   "highOutCount": 1,
-   "highOut": 103,
-   "bestLeg": 17,
-   "rank": 17,
-   "match": 4,
-   "winMatch": 3
-  },
-  {
-   "name": "Молдован Вероніка",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 56.4,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 90,
-   "bestLeg": 20,
    "rank": 5,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Павленко Сергій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 52.17,
-   "ton80": 0,
-   "highOutCount": 2,
-   "highOut": 113,
-   "bestLeg": 17,
-   "rank": 17,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Яненко Сергій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 57.33,
-   "ton80": 2,
-   "highOutCount": 3,
-   "highOut": 157,
-   "bestLeg": 18,
-   "rank": 5,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Омельченко Владислав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 68.96,
-   "ton80": 2,
-   "highOutCount": 0,
-   "highOut": 97,
-   "bestLeg": 13,
-   "rank": 5,
-   "match": 3,
-   "winMatch": 3
-  },
-  {
-   "name": "Владика Юрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 45.71,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 32,
-   "bestLeg": 33,
-   "rank": 17,
-   "match": 2,
+   "match": 1,
    "winMatch": 0
   },
   {
@@ -47922,30 +47538,78 @@
    "date": "15.05.2026",
    "tournament": "UDL FEST CB&V GOLD",
    "city": "Львів",
-   "avg": 68.95,
+   "avg": 75.56,
    "ton80": 1,
    "highOutCount": 1,
    "highOut": 100,
    "bestLeg": 16,
-   "rank": 5,
-   "match": 3,
-   "winMatch": 3
+   "rank": 3,
+   "match": 2,
+   "winMatch": 1
   },
   {
-   "name": "Бабанін Дмитро",
+   "name": "Омельченко Владислав",
    "gender": "men",
    "isUDL": true,
    "date": "15.05.2026",
    "tournament": "UDL FEST CB&V GOLD",
    "city": "Львів",
-   "avg": 54.86,
+   "avg": 69.85,
+   "ton80": 0,
+   "highOutCount": 1,
+   "highOut": 113,
+   "bestLeg": 17,
+   "rank": 3,
+   "match": 2,
+   "winMatch": 1
+  },
+  {
+   "name": "Гакман Степан",
+   "gender": "men",
+   "isUDL": true,
+   "date": "15.05.2026",
+   "tournament": "UDL FEST CB&V GOLD",
+   "city": "Львів",
+   "avg": 63.38,
+   "ton80": 1,
+   "highOutCount": 0,
+   "highOut": 85,
+   "bestLeg": 16,
+   "rank": 5,
+   "match": 1,
+   "winMatch": 0
+  },
+  {
+   "name": "Мелашенко Владислав",
+   "gender": "men",
+   "isUDL": true,
+   "date": "15.05.2026",
+   "tournament": "UDL FEST CB&V GOLD",
+   "city": "Львів",
+   "avg": 70.3,
+   "ton80": 3,
+   "highOutCount": 0,
+   "highOut": 88,
+   "bestLeg": 14,
+   "rank": 2,
+   "match": 3,
+   "winMatch": 2
+  },
+  {
+   "name": "Могилевський Руслан",
+   "gender": "men",
+   "isUDL": true,
+   "date": "15.05.2026",
+   "tournament": "UDL FEST CB&V GOLD",
+   "city": "Львів",
+   "avg": 68.57,
    "ton80": 0,
    "highOutCount": 0,
-   "highOut": 57,
-   "bestLeg": 19,
-   "rank": 17,
-   "match": 3,
-   "winMatch": 1
+   "highOut": 78,
+   "bestLeg": 17,
+   "rank": 5,
+   "match": 1,
+   "winMatch": 0
   },
   {
    "name": "Гринів Олександр",
@@ -47954,12 +47618,12 @@
    "date": "15.05.2026",
    "tournament": "UDL FEST CB&V GOLD",
    "city": "Львів",
-   "avg": 65.38,
-   "ton80": 0,
+   "avg": 67.3,
+   "ton80": 2,
    "highOutCount": 2,
-   "highOut": 100,
-   "bestLeg": 15,
-   "rank": 5,
+   "highOut": 118,
+   "bestLeg": 17,
+   "rank": 1,
    "match": 3,
    "winMatch": 3
   },
@@ -47970,222 +47634,14 @@
    "date": "15.05.2026",
    "tournament": "UDL FEST CB&V GOLD",
    "city": "Львів",
-   "avg": 59.45,
-   "ton80": 2,
-   "highOutCount": 1,
-   "highOut": 104,
-   "bestLeg": 17,
-   "rank": 17,
-   "match": 4,
-   "winMatch": 3
-  },
-  {
-   "name": "Корпусов Андрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 46.94,
+   "avg": 56.12,
    "ton80": 0,
    "highOutCount": 0,
-   "highOut": 40,
-   "bestLeg": 30,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Воронюк Михайло",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 52.3,
-   "ton80": 1,
-   "highOutCount": 1,
-   "highOut": 107,
-   "bestLeg": 21,
-   "rank": 9,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Залевський Володимир",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 60.78,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 93,
-   "bestLeg": 17,
-   "rank": 17,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Фатех Дін",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 60.04,
-   "ton80": 2,
-   "highOutCount": 1,
-   "highOut": 108,
-   "bestLeg": 15,
+   "highOut": 60,
+   "bestLeg": 20,
    "rank": 5,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Мойсеєнков Дмитро",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 44.72,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 57,
-   "bestLeg": 29,
-   "rank": 17,
-   "match": 2,
+   "match": 1,
    "winMatch": 0
-  },
-  {
-   "name": "Білоус Данило",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 46.58,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 48,
-   "bestLeg": 26,
-   "rank": 9,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Нечипуренко Артем",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 61.5,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 95,
-   "bestLeg": 17,
-   "rank": 9,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Цілуйко Владислав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 63.74,
-   "ton80": 0,
-   "highOutCount": 1,
-   "highOut": 120,
-   "bestLeg": 16,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Солтис Микита",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 57.25,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 40,
-   "bestLeg": 19,
-   "rank": 17,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Мелашенко Владислав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 69.26,
-   "ton80": 6,
-   "highOutCount": 0,
-   "highOut": 93,
-   "bestLeg": 15,
-   "rank": 5,
-   "match": 3,
-   "winMatch": 3
-  },
-  {
-   "name": "Чепурний Едуард",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 55.06,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 80,
-   "bestLeg": 17,
-   "rank": 9,
-   "match": 5,
-   "winMatch": 3
-  },
-  {
-   "name": "Чепак Василь",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 43.8,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 48,
-   "bestLeg": 22,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Могилевський Руслан",
-   "gender": "men",
-   "isUDL": true,
-   "date": "15.05.2026",
-   "tournament": "UDL FEST CB&V GOLD",
-   "city": "Львів",
-   "avg": 67.24,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 76,
-   "bestLeg": 17,
-   "rank": 9,
-   "match": 5,
-   "winMatch": 4
   },
   {
    "name": "Мойсеєнков Дмитро",
@@ -49868,292 +49324,20 @@
    "winMatch": 2
   },
   {
-   "name": "Баранов Олександр",
+   "name": "Сташевський Валентин",
    "gender": "men",
    "isUDL": true,
    "date": "24.04.2026",
    "tournament": "UDL GOLD",
    "city": "Вижниця",
-   "avg": 48.2,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 82,
-   "bestLeg": 22,
-   "rank": 17,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Чепак Василь",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 47.64,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 63,
-   "bestLeg": 23,
-   "rank": 9,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Яненко Сергій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 56.04,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 86,
-   "bestLeg": 19,
-   "rank": 9,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Окуліцький Євген",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 47.53,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 45,
-   "bestLeg": 25,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Кучмій Андрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 42.64,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 73,
-   "bestLeg": 27,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Цілуйко Владислав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 55.23,
-   "ton80": 0,
-   "highOutCount": 2,
-   "highOut": 140,
-   "bestLeg": 21,
-   "rank": 9,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Зубаль Василь",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 45.0,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 40,
-   "bestLeg": 23,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Топчу Владислав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 44.62,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 60,
-   "bestLeg": 19,
-   "rank": 9,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Сторожук Дмитро",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 39.16,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 32,
-   "bestLeg": 26,
-   "rank": 9,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Білоус Жанна",
-   "gender": "women",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 38.0,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 57,
-   "bestLeg": 30,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Мойсеєнков Дмитро",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 44.89,
-   "ton80": 0,
-   "highOutCount": 1,
-   "highOut": 106,
-   "bestLeg": 28,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Микитин Ярослав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 52.16,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 60,
-   "bestLeg": 20,
-   "rank": 9,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Головень Юрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 60.49,
-   "ton80": 1,
-   "highOutCount": 1,
-   "highOut": 102,
-   "bestLeg": 18,
-   "rank": 17,
-   "match": 4,
-   "winMatch": 3
-  },
-  {
-   "name": "Овсієнко Євген",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 66.39,
-   "ton80": 0,
-   "highOutCount": 2,
-   "highOut": 116,
-   "bestLeg": 15,
-   "rank": 5,
+   "avg": 76.25,
+   "ton80": 6,
+   "highOutCount": 4,
+   "highOut": 153,
+   "bestLeg": 14,
+   "rank": 1,
    "match": 3,
    "winMatch": 3
-  },
-  {
-   "name": "Момот Сергій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 45.33,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 64,
-   "bestLeg": 25,
-   "rank": 9,
-   "match": 5,
-   "winMatch": 3
-  },
-  {
-   "name": "Корпусов Андрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 45.72,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 86,
-   "bestLeg": 27,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Білоус Іван",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 48.9,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 32,
-   "bestLeg": 26,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Залевський Володимир",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 57.06,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 72,
-   "bestLeg": 16,
-   "rank": 5,
-   "match": 5,
-   "winMatch": 4
   },
   {
    "name": "Абчугський Олександр",
@@ -50162,14 +49346,46 @@
    "date": "24.04.2026",
    "tournament": "UDL GOLD",
    "city": "Вижниця",
-   "avg": 60.4,
-   "ton80": 2,
+   "avg": 63.27,
+   "ton80": 0,
    "highOutCount": 0,
-   "highOut": 74,
-   "bestLeg": 17,
+   "highOut": 65,
+   "bestLeg": 27,
    "rank": 5,
-   "match": 4,
-   "winMatch": 3
+   "match": 1,
+   "winMatch": 0
+  },
+  {
+   "name": "Головень Юрій",
+   "gender": "men",
+   "isUDL": true,
+   "date": "24.04.2026",
+   "tournament": "UDL GOLD",
+   "city": "Вижниця",
+   "avg": 58.43,
+   "ton80": 0,
+   "highOutCount": 0,
+   "highOut": 58,
+   "bestLeg": 21,
+   "rank": 5,
+   "match": 1,
+   "winMatch": 0
+  },
+  {
+   "name": "Овсієнко Євген",
+   "gender": "men",
+   "isUDL": true,
+   "date": "24.04.2026",
+   "tournament": "UDL GOLD",
+   "city": "Вижниця",
+   "avg": 68.72,
+   "ton80": 0,
+   "highOutCount": 0,
+   "highOut": 64,
+   "bestLeg": 14,
+   "rank": 2,
+   "match": 3,
+   "winMatch": 2
   },
   {
    "name": "Омельченко Владислав",
@@ -50178,30 +49394,30 @@
    "date": "24.04.2026",
    "tournament": "UDL GOLD",
    "city": "Вижниця",
-   "avg": 71.35,
+   "avg": 77.27,
    "ton80": 0,
    "highOutCount": 0,
-   "highOut": 75,
+   "highOut": 97,
    "bestLeg": 14,
-   "rank": 5,
+   "rank": 3,
    "match": 2,
-   "winMatch": 2
+   "winMatch": 1
   },
   {
-   "name": "Почкай Андрій",
+   "name": "Залевський Володимир",
    "gender": "men",
    "isUDL": true,
    "date": "24.04.2026",
    "tournament": "UDL GOLD",
    "city": "Вижниця",
-   "avg": 58.15,
+   "avg": 63.96,
    "ton80": 0,
    "highOutCount": 0,
-   "highOut": 90,
-   "bestLeg": 17,
+   "highOut": 4,
+   "bestLeg": 27,
    "rank": 5,
-   "match": 4,
-   "winMatch": 3
+   "match": 1,
+   "winMatch": 0
   },
   {
    "name": "Мелашенко Владислав",
@@ -50210,62 +49426,30 @@
    "date": "24.04.2026",
    "tournament": "UDL GOLD",
    "city": "Вижниця",
-   "avg": 62.49,
-   "ton80": 2,
-   "highOutCount": 0,
-   "highOut": 76,
-   "bestLeg": 15,
-   "rank": 5,
-   "match": 2,
-   "winMatch": 2
-  },
-  {
-   "name": "Сташевський Валентин",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 69.65,
+   "avg": 55.92,
    "ton80": 1,
    "highOutCount": 0,
-   "highOut": 86,
-   "bestLeg": 15,
+   "highOut": 0,
+   "bestLeg": 0,
    "rank": 5,
-   "match": 2,
-   "winMatch": 2
-  },
-  {
-   "name": "Павленко Сергій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "24.04.2026",
-   "tournament": "UDL GOLD",
-   "city": "Вижниця",
-   "avg": 49.55,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 40,
-   "bestLeg": 22,
-   "rank": 9,
-   "match": 2,
+   "match": 1,
    "winMatch": 0
   },
   {
-   "name": "Гакман Степан",
+   "name": "Почкай Андрій",
    "gender": "men",
    "isUDL": true,
    "date": "24.04.2026",
    "tournament": "UDL GOLD",
    "city": "Вижниця",
-   "avg": 63.31,
-   "ton80": 0,
+   "avg": 62.53,
+   "ton80": 3,
    "highOutCount": 0,
-   "highOut": 48,
-   "bestLeg": 17,
-   "rank": 5,
-   "match": 4,
-   "winMatch": 2
+   "highOut": 70,
+   "bestLeg": 20,
+   "rank": 3,
+   "match": 2,
+   "winMatch": 1
   },
   {
    "name": "Сташевський Валентин",
@@ -53452,148 +52636,20 @@
    "winMatch": 1
   },
   {
-   "name": "Окуліцький Євген",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 50.1,
-   "ton80": 0,
-   "highOutCount": 1,
-   "highOut": 145,
-   "bestLeg": 19,
-   "rank": 5,
-   "match": 5,
-   "winMatch": 3
-  },
-  {
-   "name": "Бабанін Дмитро",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 46.77,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 50,
-   "bestLeg": 26,
-   "rank": 33,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Гончаренко Інна",
+   "name": "Харченко Тетяна",
    "gender": "women",
    "isUDL": true,
    "date": "23.01.2026",
    "tournament": "UDL GOLD",
    "city": "Славсько",
-   "avg": 51.43,
+   "avg": 53.62,
    "ton80": 0,
    "highOutCount": 0,
-   "highOut": 36,
-   "bestLeg": 22,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Почкай Андрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 57.76,
-   "ton80": 0,
-   "highOutCount": 1,
-   "highOut": 115,
-   "bestLeg": 19,
-   "rank": 9,
-   "match": 5,
-   "winMatch": 3
-  },
-  {
-   "name": "Головень Юрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 43.34,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 50,
-   "bestLeg": 26,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Абчугський Олександр",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 58.49,
-   "ton80": 1,
-   "highOutCount": 1,
-   "highOut": 156,
-   "bestLeg": 18,
+   "highOut": 10,
+   "bestLeg": 28,
    "rank": 5,
-   "match": 5,
-   "winMatch": 3
-  },
-  {
-   "name": "Ігнатюк Наталія",
-   "gender": "women",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 46.72,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 80,
-   "bestLeg": 27,
-   "rank": 17,
-   "match": 2,
+   "match": 1,
    "winMatch": 0
-  },
-  {
-   "name": "Овсієнко Євген",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 65.0,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 84,
-   "bestLeg": 15,
-   "rank": 9,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Могилевський Руслан",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 68.66,
-   "ton80": 1,
-   "highOutCount": 1,
-   "highOut": 100,
-   "bestLeg": 15,
-   "rank": 17,
-   "match": 4,
-   "winMatch": 3
   },
   {
    "name": "Сташевський Валентин",
@@ -53602,62 +52658,14 @@
    "date": "23.01.2026",
    "tournament": "UDL GOLD",
    "city": "Славсько",
-   "avg": 70.89,
-   "ton80": 4,
-   "highOutCount": 0,
-   "highOut": 88,
-   "bestLeg": 16,
-   "rank": 5,
-   "match": 3,
-   "winMatch": 3
-  },
-  {
-   "name": "Пенчук Василь",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 46.38,
+   "avg": 66.08,
    "ton80": 0,
    "highOutCount": 0,
-   "highOut": 64,
+   "highOut": 76,
    "bestLeg": 19,
-   "rank": 9,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Цебратенко Андрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 39.51,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 14,
-   "bestLeg": 37,
-   "rank": 17,
+   "rank": 3,
    "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Харченко Тетяна",
-   "gender": "women",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 57.5,
-   "ton80": 0,
-   "highOutCount": 1,
-   "highOut": 103,
-   "bestLeg": 19,
-   "rank": 17,
-   "match": 4,
-   "winMatch": 3
+   "winMatch": 1
   },
   {
    "name": "Омельченко Владислав",
@@ -53666,62 +52674,30 @@
    "date": "23.01.2026",
    "tournament": "UDL GOLD",
    "city": "Славсько",
-   "avg": 70.77,
-   "ton80": 2,
-   "highOutCount": 3,
-   "highOut": 122,
-   "bestLeg": 15,
-   "rank": 5,
-   "match": 6,
-   "winMatch": 5
-  },
-  {
-   "name": "Солтис Микита",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 51.75,
+   "avg": 75.63,
    "ton80": 0,
-   "highOutCount": 1,
-   "highOut": 143,
-   "bestLeg": 21,
-   "rank": 17,
+   "highOutCount": 0,
+   "highOut": 62,
+   "bestLeg": 17,
+   "rank": 5,
+   "match": 1,
+   "winMatch": 0
+  },
+  {
+   "name": "Мелашенко Владислав",
+   "gender": "men",
+   "isUDL": true,
+   "date": "23.01.2026",
+   "tournament": "UDL GOLD",
+   "city": "Славсько",
+   "avg": 74.49,
+   "ton80": 5,
+   "highOutCount": 0,
+   "highOut": 91,
+   "bestLeg": 1,
+   "rank": 1,
    "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Цілуйко Владислав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 61.42,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 80,
-   "bestLeg": 19,
-   "rank": 9,
-   "match": 4,
-   "winMatch": 2
-  },
-  {
-   "name": "Корпусов Андрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 48.12,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 83,
-   "bestLeg": 18,
-   "rank": 17,
-   "match": 4,
-   "winMatch": 2
+   "winMatch": 3
   },
   {
    "name": "Гринів Олександр",
@@ -53730,109 +52706,29 @@
    "date": "23.01.2026",
    "tournament": "UDL GOLD",
    "city": "Славсько",
-   "avg": 63.76,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 98,
-   "bestLeg": 18,
-   "rank": 5,
+   "avg": 70.06,
+   "ton80": 4,
+   "highOutCount": 1,
+   "highOut": 104,
+   "bestLeg": 14,
+   "rank": 2,
    "match": 3,
-   "winMatch": 3
+   "winMatch": 2
   },
   {
-   "name": "Топчу Владислав",
+   "name": "Могилевський Руслан",
    "gender": "men",
    "isUDL": true,
    "date": "23.01.2026",
    "tournament": "UDL GOLD",
    "city": "Славсько",
-   "avg": 37.17,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 62,
-   "bestLeg": 24,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Білоус Жанна",
-   "gender": "women",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 39.36,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 70,
-   "bestLeg": 30,
-   "rank": 9,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Логоша Євген",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 48.35,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 86,
-   "bestLeg": 19,
-   "rank": 17,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Усик Артем",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 53.45,
+   "avg": 75.83,
    "ton80": 2,
    "highOutCount": 0,
-   "highOut": 80,
-   "bestLeg": 20,
-   "rank": 17,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Микитин Ярослав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 51.52,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 80,
-   "bestLeg": 19,
-   "rank": 9,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Лагутін Андрій",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 52.44,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 60,
-   "bestLeg": 23,
-   "rank": 17,
-   "match": 2,
+   "highOut": 52,
+   "bestLeg": 13,
+   "rank": 5,
+   "match": 1,
    "winMatch": 0
   },
   {
@@ -53842,78 +52738,14 @@
    "date": "23.01.2026",
    "tournament": "UDL GOLD",
    "city": "Славсько",
-   "avg": 53.02,
-   "ton80": 1,
-   "highOutCount": 0,
-   "highOut": 88,
-   "bestLeg": 19,
-   "rank": 5,
-   "match": 3,
-   "winMatch": 3
-  },
-  {
-   "name": "Гакман Степан",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 65.18,
-   "ton80": 2,
-   "highOutCount": 4,
-   "highOut": 141,
-   "bestLeg": 16,
-   "rank": 5,
-   "match": 5,
-   "winMatch": 3
-  },
-  {
-   "name": "Чепурний Едуард",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 58.66,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 58,
-   "bestLeg": 16,
-   "rank": 17,
-   "match": 2,
-   "winMatch": 0
-  },
-  {
-   "name": "Білоус Іван",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 47.05,
+   "avg": 52.84,
    "ton80": 0,
    "highOutCount": 0,
    "highOut": 68,
-   "bestLeg": 21,
-   "rank": 17,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Мелашенко Владислав",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 70.58,
-   "ton80": 6,
-   "highOutCount": 1,
-   "highOut": 100,
-   "bestLeg": 13,
+   "bestLeg": 24,
    "rank": 5,
-   "match": 3,
-   "winMatch": 3
+   "match": 1,
+   "winMatch": 0
   },
   {
    "name": "Павленко Сергій",
@@ -53922,62 +52754,14 @@
    "date": "23.01.2026",
    "tournament": "UDL GOLD",
    "city": "Славсько",
-   "avg": 49.4,
-   "ton80": 0,
-   "highOutCount": 1,
-   "highOut": 104,
-   "bestLeg": 19,
-   "rank": 17,
-   "match": 4,
-   "winMatch": 3
-  },
-  {
-   "name": "Сапронов Петро",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 42.24,
+   "avg": 55.29,
    "ton80": 0,
    "highOutCount": 0,
-   "highOut": 52,
-   "bestLeg": 23,
-   "rank": 9,
-   "match": 3,
-   "winMatch": 1
-  },
-  {
-   "name": "Залевський Володимир",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 57.05,
-   "ton80": 1,
-   "highOutCount": 1,
-   "highOut": 120,
-   "bestLeg": 19,
-   "rank": 9,
-   "match": 5,
-   "winMatch": 3
-  },
-  {
-   "name": "Чепак Василь",
-   "gender": "men",
-   "isUDL": true,
-   "date": "23.01.2026",
-   "tournament": "UDL GOLD",
-   "city": "Славсько",
-   "avg": 47.1,
-   "ton80": 0,
-   "highOutCount": 0,
-   "highOut": 0,
-   "bestLeg": 0,
-   "rank": 17,
+   "highOut": 99,
+   "bestLeg": 21,
+   "rank": 3,
    "match": 2,
-   "winMatch": 0
+   "winMatch": 1
   },
   {
    "name": "Логоша Євген",
