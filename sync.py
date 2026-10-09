@@ -1156,7 +1156,7 @@ CURATED_PLAYER_NAMES = [
     "Панасюк Лілія",
     "Панасюк Сергій",
     "Панченко Олексій",
-    "Пасичніченко Артрем",
+    "Пасічніченко Артем",
     "Паскару Габріель",
     "Пекарук Олексій",
     "Пекарук Ілля",
@@ -1474,6 +1474,11 @@ CURATED_PLAYER_NAMES = [
     "Іфтоде Мірела",
     "Ішутін Ігор",
     "Іщенко Сергій",
+    "Білецька Олена",
+    "Ліра Світлана",
+    "Толкачов В'ячеслав",
+    "Устименко Вікторія",
+    "Ткачук Вікторія",
 ]
 
 
@@ -1702,8 +1707,9 @@ MANUAL_NAME_ALIASES = {
     "Пайзак Синтия": "Пайзак Синтія",
     "Палённый Игорь": "Пальонний Ігор",
     "Панченко Алексей": "Панченко Олексій",
-    "Пасичниченко Артём": "Пасичніченко Артрем",
-    "Пасічніченко Артем": "Пасичніченко Артрем",
+    "Пасичниченко Артём": "Пасічніченко Артем",
+    "Пасичніченко Артрем": "Пасічніченко Артем",
+    "Пасічніченко Артем": "Пасічніченко Артем",
     "Пекарук Алексій": "Пекарук Олексій",
     "Перес Владимир": "Перес Володимир",
     "Перетятько Татьяна": "Перетятько Тетяна",
@@ -2591,6 +2597,96 @@ def split_medals_by_gender(nakka_data, name_index, canonical_names, known_women,
     return to_medal(podium_men), to_medal(podium_women)
 
 
+_RE_THIRD = re.compile(r"3rd\s*place|3\s*-?\s*(?:тє|те|е|й|rd)?\s*місц|за\s*3|третє|third|bronze", re.I)
+_RE_SEMI = re.compile(r"semi|півфінал", re.I)
+_RE_FINAL = re.compile(r"(?:^|[\s.\-])(?:final|фінал)\s*$", re.I)
+
+
+def classify_round_title(title):
+    """'third' / 'semi' / 'final' / None за назвою раунду з Nakka (match.title)."""
+    t = (title or "").strip()
+    if _RE_THIRD.search(t):
+        return "third"
+    if _RE_SEMI.search(t):
+        return "semi"
+    if _RE_FINAL.search(t):
+        return "final"
+    return None
+
+
+def podium_from_matches(matches, name_index, canonical_names, allow_semi_bronze=False):
+    """Призери за ФАКТИЧНИМИ матчами сітки (а не за полем rank у статистиці,
+    яке завжди дає лише ОДНУ бронзу). Правило ВФД:
+      * був матч за 3 місце -> одна бронза (його переможець);
+      * не було (напр. УДЛ) -> бронза в ОБОХ півфіналістів (хто програв півфінал).
+    Золото/срібло — переможець/програвший єдиного фіналу.
+    Повертає {'gold','silver','bronze':[...]} лише з того, що надійно
+    визначено; None, якщо фіналу в сітці немає або він не один."""
+    sides_by_kind = {"third": [], "semi": [], "final": []}
+    for m in matches or []:
+        kind = classify_round_title(m.get("title"))
+        if not kind:
+            continue
+        sd = m.get("statsData") or []
+        if len(sd) != 2:
+            continue
+        sides = []
+        for s in sd:
+            nm = (s.get("name") or "").strip()
+            if not nm:
+                sides = []
+                break
+            sets, legs = s.get("winSets") or 0, s.get("winLegs") or 0
+            sides.append((resolve_name(nm, name_index, canonical_names), sets, legs))
+        if len(sides) != 2:
+            continue
+        a, b = sides
+        if (a[1], a[2]) == (b[1], b[2]):
+            continue  # нічия/обрив — переможця не визначити
+        winner, loser = (a[0], b[0]) if (a[1], a[2]) > (b[1], b[2]) else (b[0], a[0])
+        sides_by_kind[kind].append((winner, loser))
+    if len(sides_by_kind["final"]) != 1:
+        return None
+    res = {"gold": sides_by_kind["final"][0][0], "silver": sides_by_kind["final"][0][1], "bronze": []}
+    if sides_by_kind["third"]:
+        if len(sides_by_kind["third"]) == 1:
+            res["bronze"] = [sides_by_kind["third"][0][0]]
+    elif allow_semi_bronze and len(sides_by_kind["semi"]) == 2:
+        # Лише там, де точно відомо, що матчу за 3 місце не буває (УДЛ).
+        # В інших турнірах відсутність матчу в Nakka НЕ доводить, що його не
+        # грали (напр. Кубок 12.07.2026) — там рішення за таблицею призерів.
+        res["bronze"] = sorted({l for _, l in sides_by_kind["semi"]})
+    return res
+
+
+def refine_medals_with_matches(t, medals_men, medals_women, podium, known_women, known_men, default_gender):
+    """Накладає подіум із матчів на medals (за статтю кожного призера)."""
+    def gender_of(name):
+        if name in known_women:
+            return "women"
+        if name in known_men:
+            return "men"
+        return default_gender
+    targets = {"men": medals_men, "women": medals_women}
+    for role in ("gold", "silver"):
+        nm = podium.get(role)
+        g = gender_of(nm)
+        if targets[g] is None:
+            targets[g] = {"gold": None, "silver": None, "bronze": []}
+        targets[g][role] = nm
+    if podium["bronze"]:
+        by_g = {"men": [], "women": []}
+        for nm in podium["bronze"]:
+            by_g[gender_of(nm)].append(nm)
+        for g, lst in by_g.items():
+            if lst:
+                if targets[g] is None:
+                    targets[g] = {"gold": None, "silver": None, "bronze": []}
+                targets[g]["bronze"] = lst
+    return targets["men"], targets["women"]
+
+
+
 def fetch_match_averages(tdid, cache):
     """Тягне список матчів турніру (match/list вже включає statsData за
     замовчуванням — окремий запит на кожен матч не потрібен) і рахує
@@ -2641,6 +2737,151 @@ def apply_manual_medal_overrides_final(tournaments):
         updated += 1
     if updated:
         print(f"  Фінально перевизначено призерів (включно з nakkaMedals) для {updated} турнірів")
+
+
+# ---------------------------------------------------------------------------
+# Клінінг призерів: таблиця «Призери етапів кубків ВФД» як коригувальне
+# джерело + перерахунок медального заліку з уже очищених призерів.
+# Пріоритет: ручні правки > Nakka > таблиця (коригує там, де Nakka
+# не знає/помиляється, напр. кількість бронз). Нових гравців НЕ створюємо:
+# всі імена зводяться до CURATED_PLAYER_NAMES.
+# ---------------------------------------------------------------------------
+_CUP_FAMILY = {"Кубок України", "UKRAINE OPEN", "KYIV MASTERS"}
+_UA_FOLD = str.maketrans({"є": "е", "і": "и", "ї": "и", "й": "и", "ы": "и", "ґ": "г", "ё": "е", "ь": "", "ъ": ""})
+
+
+def _name_key(n):
+    k = re.sub(r"[^а-яіїєґё]", "", (n or "").lower()).translate(_UA_FOLD)
+    return re.sub(r"(.)\1+", r"\1", k)
+
+
+_CURATED_BY_KEY = None
+
+
+def to_curated_name(name, name_index, canonical_names, unknown=None):
+    """Зводить ім'я до написання з CURATED_PLAYER_NAMES (точний збіг після
+    нормалізації є/і/и/й та подвоєних літер; нечітко — лише прізвище і лише
+    коли ім'я збігається точно). Якщо немає в базі — повертає як є й
+    записує в unknown (нового гравця не створюємо мовчки)."""
+    global _CURATED_BY_KEY
+    if not name:
+        return name
+    if _CURATED_BY_KEY is None:
+        _CURATED_BY_KEY = {}
+        for c in CURATED_PLAYER_NAMES:
+            _CURATED_BY_KEY.setdefault(_name_key(c), c)
+    n = resolve_name(name, name_index, canonical_names)
+
+    def _clean(x):
+        # у перевіреному списку трапляються латинські і/i-двійники — на сайті
+        # показуємо кириличне написання
+        return x.translate(LATIN_TO_CYRILLIC_HOMOGLYPHS) if re.search(r"[а-яіїєґА-ЯІЇЄҐ]", x) else x
+
+    if n in set(CURATED_PLAYER_NAMES):
+        return _clean(n)
+    k = _name_key(n)
+    if k in _CURATED_BY_KEY:
+        return _clean(_CURATED_BY_KEY[k])
+    parts = n.split()
+    if len(parts) == 2:
+        import difflib
+        fk = _name_key(parts[1])
+        cands = [c for c in CURATED_PLAYER_NAMES
+                 if len(c.split()) == 2 and _name_key(c.split()[1]) == fk
+                 and difflib.SequenceMatcher(None, _name_key(parts[0]), _name_key(c.split()[0])).ratio() >= 0.85]
+        if len(cands) == 1:
+            return _clean(cands[0])
+        sk = _name_key(parts[0])
+        cands = [c for c in CURATED_PLAYER_NAMES
+                 if len(c.split()) == 2 and _name_key(c.split()[0]) == sk
+                 and difflib.SequenceMatcher(None, fk, _name_key(c.split()[1])).ratio() >= 0.8]
+        if len(cands) == 1:
+            return _clean(cands[0])
+    if unknown is not None:
+        unknown.add(n)
+    return n
+
+
+def _eligible_stage_key(t):
+    if t.get("isUDL"):
+        return None
+    name = t.get("name", "").strip()
+    if re.match(r"^ЧУ \d{4}$", name):
+        return "ЧУ"
+    if name in _CUP_FAMILY and t.get("format", "").strip().upper().startswith("501DO"):
+        m = re.search(r"(\d+)\s*етап", t.get("format", ""), re.IGNORECASE)
+        return m.group(1) if m else None
+    return None
+
+
+def _medal_sig(m):
+    if not m:
+        return None
+    return (_name_key(m.get("gold")), _name_key(m.get("silver")),
+            tuple(sorted(_name_key(b) for b in (m.get("bronze") or []))))
+
+
+def _matched_stage_tournaments(tournaments):
+    """{(year, key): tournament} лише для однозначних зіставлень."""
+    from collections import defaultdict
+    by = defaultdict(list)
+    for t in tournaments:
+        key = _eligible_stage_key(t)
+        if not key:
+            continue
+        try:
+            # ЧУ рахується за роком У НАЗВІ (ЧУ 2008 відбувся 31.01.2009)
+            year = int(t["name"].strip()[-4:]) if key == "ЧУ" else int(t["date"].split(".")[-1])
+        except (ValueError, IndexError):
+            continue
+        by[(year, key)].append(t)
+    return {k: v[0] for k, v in by.items() if len(v) == 1}
+
+
+def apply_sheet_corrections(tournaments, men_year_data, women_year_data, name_index, canonical_names):
+    """Звіряє призерів з таблицею за РОКОМ + НОМЕРОМ ЕТАПУ. Збіг (з точністю до
+    написання) — лишаємо як є; розбіжність — береться таблиця. Повертає лог."""
+    unknown, changes = set(), []
+    matched = _matched_stage_tournaments(tournaments)
+    for (year, key), t in sorted(matched.items(), key=lambda kv: (kv[0][0], str(kv[0][1]))):
+        for gender, ydata, mk, nk in (("men", men_year_data, "medals", "nakkaMedals"),
+                                      ("women", women_year_data, "medalsWomen", "nakkaMedalsWomen")):
+            entry = (ydata or {}).get(year, {}).get(key)
+            if not entry:
+                continue
+            pod = [to_curated_name(n, name_index, canonical_names, unknown) if n else None for n in entry["podium"]]
+            if not pod or not pod[0]:
+                continue
+            sheet_m = {"gold": pod[0], "silver": pod[1] if len(pod) > 1 else None,
+                       "bronze": [n for n in pod[2:] if n]}
+            cur = t.get(nk) or t.get(mk)
+            if cur and _medal_sig(cur) == _medal_sig(sheet_m):
+                continue
+            changes.append({"date": t["date"], "tournament": t["name"], "format": t.get("format", ""),
+                            "gender": gender, "before": cur, "after": sheet_m})
+            t[mk] = sheet_m
+            t[nk] = {"gold": sheet_m["gold"], "silver": sheet_m["silver"], "bronze": list(sheet_m["bronze"])}
+    return changes, sorted(unknown)
+
+
+def rebuild_leaderboard_from_final(year_data, tournaments, gender, name_index, canonical_names, unknown=None):
+    """Медальний залік з ОЧИЩЕНИХ призерів: для етапів, які однозначно
+    зіставились з турніром на сайті, беремо підсумкових призерів турніру
+    (з урахуванням ручних правок); решту (старі роки без турнірів на сайті)
+    лишаємо за таблицею. Усі імена зводимо до CURATED_PLAYER_NAMES."""
+    import copy
+    yd = copy.deepcopy(year_data)
+    matched = _matched_stage_tournaments(tournaments)
+    mk, nk = ("medals", "nakkaMedals") if gender == "men" else ("medalsWomen", "nakkaMedalsWomen")
+    for (year, key), t in matched.items():
+        m = t.get(nk) or t.get(mk)
+        if m and m.get("gold") and year in yd and key in yd[year]:
+            yd[year][key]["podium"] = [m["gold"], m.get("silver")] + list(m.get("bronze") or [])
+    for stages in yd.values():
+        for entry in stages.values():
+            entry["podium"] = [to_curated_name(n, name_index, canonical_names, unknown) if n else None
+                               for n in entry["podium"]]
+    return build_leaderboard_from_podiums(yd)
 
 
 def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women=None, known_men=None):
@@ -2694,6 +2935,23 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
             medals_men, medals_women = split_medals_by_gender(
                 data, name_index, canonical_names, known_women, known_men, default_gender
             )
+            # Уточнення за реальною сіткою (матч за 3 місце / обидва
+            # півфіналісти). Лише для особистих турнірів — у командних/парних
+            # "гравець" у Nakka це команда, там лишаються rank + ручні правки.
+            _fn = (t.get("format", "") + " " + t.get("name", "")).lower()
+            if tdid not in EXCLUDED_STATS_TDIDS and "команди" not in _fn and "пари" not in _fn and "мікст" not in _fn:
+                _pod = podium_from_matches(fetch_match_averages(tdid, match_cache), name_index, canonical_names,
+                                           allow_semi_bronze=bool(t.get("isUDL")))
+                if _pod:
+                    medals_men, medals_women = refine_medals_with_matches(
+                        t, medals_men if (medals_men and not t["nakkaMedals"]) else None,
+                        medals_women if (medals_women and not t["nakkaMedalsWomen"]) else None,
+                        _pod, known_women, known_men, default_gender)
+                    # лишаємо лише ту стать, якої стосується саме цей tdid
+                    if default_gender == "men":
+                        medals_women = None
+                    elif default_gender == "women":
+                        medals_men = None
             if medals_men and not t["nakkaMedals"]:
                 t["nakkaMedals"] = medals_men
             if medals_women and not t["nakkaMedalsWomen"]:
@@ -2941,6 +3199,20 @@ def fetch_protocol_podium(url):
 
 
 MANUAL_MEDAL_OVERRIDES = {
+    ("12.09.2021", "Кубок Одеси"): {
+        "medals": {"gold": "Бушуй Олексій", "silver": "Омельченко Владислав",
+                   "bronze": ["Усик Артем", "Рогов Віталій"]},
+    },
+    # Юніорські турніри в один день з основними: правку прив'язано ТОЧНО до
+    # назви (раніше вона за датою перебивала й основний турнір).
+    ("12.08.2018", "KYIV MASTERS YOUNG"): {
+        "medals": {"gold": "Пекарук Ілля", "silver": "Торський Андрій", "bronze": ["Камельков Валерій"]},
+        "medalsWomen": None,
+    },
+    ("11.08.2018", "UKRAINE OPEN YOUNG"): {
+        "medals": {"gold": "Клочек Ксенія", "silver": "Пекарук Ілля", "bronze": ["Торський Андрій"]},
+        "medalsWomen": None,
+    },
     # Ключ: (дата, назва турніру) — точні перевизначення за протоколом, коли
     # автоматичне зіставлення рік+етап дало неправильний результат (напр.
     # у той рік було кілька "ЧУ"-подій і зіставилась не та).
@@ -3470,29 +3742,12 @@ MANUAL_MEDAL_OVERRIDES_BY_DATE = {
         },
         "medalsWomen": None,
     },
-    "12.08.2018": {
-        "medals": {
-            "gold": "Пекарук Ілля",
-            "silver": "Торський Андрій",
-            "bronze": ["Камельков Валерій"],
-        },
-        "medalsWomen": None,
-    },
-    "11.08.2018": {
-        "medals": {
-            "gold": "Клочек Ксенія",
-            "silver": "Пекарук Ілля",
-            "bronze": ["Торський Андрій"],
-        },
-        "medalsWomen": None,
-    },
     "17.03.2013": {
         "medals": {
             "gold": "Омельченко Владислав",
             "silver": "Невінчаний Едуард",
             "bronze": ["Хімчак Сергій"],
         },
-        "medalsWomen": None,
     },
     "03.12.2022": {
         "medals": {
@@ -4051,7 +4306,21 @@ def main():
     known_women = {p["name"] for p in women_aggregate}
     known_men = {p["name"] for p in men_aggregate}
     nakka_player_records, nakka_match_records, nakka_h2h_records = enrich_with_nakka(tournaments, name_index, canonical_names, known_women, known_men)
+    sheet_changes, sheet_unknown = apply_sheet_corrections(
+        tournaments, men_year_data, women_year_data, name_index, canonical_names)
+    print(f"  Таблиця призерів скоригувала {len(sheet_changes)} медальних заліків")
     apply_manual_medal_overrides_final(tournaments)
+    unknown_names = set(sheet_unknown)
+    men_aggregate = rebuild_leaderboard_from_final(men_year_data, tournaments, "men", name_index, canonical_names, unknown_names)
+    women_aggregate = rebuild_leaderboard_from_final(women_year_data, tournaments, "women", name_index, canonical_names, unknown_names)
+    print(f"  Медальний залік перераховано з очищених призерів: {len(men_aggregate)} чол., {len(women_aggregate)} жін.")
+    if unknown_names:
+        print(f"  УВАГА: імен немає в CURATED_PLAYER_NAMES (перевірте написання): {sorted(unknown_names)}")
+    try:
+        with open("medals_audit.json", "w", encoding="utf-8") as f:
+            json.dump({"sheetCorrections": sheet_changes, "unknownNames": sorted(unknown_names)}, f, ensure_ascii=False, indent=1)
+    except OSError:
+        pass
     print(f"Collected {len(nakka_player_records)} player-tournament stat rows from Nakka")
 
     # Протоколи (Google Docs) для турнірів до Nakka НЕ вмикаємо автоматично:
