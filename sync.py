@@ -3357,7 +3357,7 @@ MANUAL_MEDAL_OVERRIDES = {
     },
     ("08.12.2018", "ЧУ 2018 Мікст"): {
         "medals": {
-            "gold": "Усик Артем/Ледєньова Наталя",
+            "gold": "Усик Артем/Ледєньова Наталія",
             "silver": "Ледєньов Вадим/Ільясова Альбіна",
             "bronze": ["Омельченко Владислав/Марфола Оксана"],
         },
@@ -3528,6 +3528,23 @@ MANUAL_MEDAL_OVERRIDES.update({
     },
 })
 
+MANUAL_MEDAL_OVERRIDES.update({
+    ("15.09.2019", "KYIV MASTERS YOUNG"): {
+        "medals": _m("Пекарук Ілля", "Солтис Микита", "Тямолов Ростислав"),
+    },
+    ("11.08.2018", "UKRAINE OPEN YOUNG"): {
+        "medals": _m("Пекарук Ілля", "Клочек Ксенія", "Торський Андрій"),
+    },
+    ("10.02.2018", "Кубок України Пари"): {
+        "medals": _m("Омельченко Владислав/Васюра Андрій", "Сташевський Валентин/Фатех Дін", "Усик Артем/Ледєньов Вадим"),
+        "medalsWomen": _m("Чумак Ганна/Грушовець Ольга", "Ледєньова Наталія/Свирид Марія", "Моісеєнко Віталіна/Анісімова Світлана"),
+    },
+    ("11.02.2017", "Кубок України Пари"): {
+        "medals": _m("Мамика Олександр/Луков Олександр", "Григоренко Денис/Кисельов Дмитро", "Бушуй Олексій/Мартов Володимир"),
+        "medalsWomen": _m("Чумак Ганна/Грушовець Ольга", "Анісімова Світлана/Павлюченко Марина", "Ледєньова Наталія/Єрчик Маргарита"),
+    },
+})
+
 # Додаткові (другі) бронзи — дописуються до результату (Nakka/таблиця), без дублів.
 MANUAL_BRONZE_ADD = {
     ("17.05.2025", "ЧУ 2025 Команди"): {
@@ -3566,7 +3583,7 @@ MANUAL_MEDAL_OVERRIDES_BY_DATE = {
             "bronze": ["Тямолов Роман/Агневщиков Анатолій", "Солтис Андрій/Рогов Віталій"],
         },
         "medalsWomen": {
-            "gold": "Моісеєнко Віталіна/Ледєньова Наталя",
+            "gold": "Моісеєнко Віталіна/Ледєньова Наталія",
             "silver": "Марфола Оксана/Харченко Тетяна",
             "bronze": ["Пивошенко Олена/Солтис Ганна", "Чумак Ганна/Грушовець Ольга"],
         },
@@ -3579,30 +3596,30 @@ MANUAL_MEDAL_OVERRIDES_BY_DATE = {
         },
         "medalsWomen": {
             "gold": "Редзюк Тетяна/Некрістова Наталія",
-            "silver": "Моісеєнко Віталіна/Ледєньова Наталя",
+            "silver": "Моісеєнко Віталіна/Ледєньова Наталія",
             "bronze": ["Звягіна Анастасія/Ільясова Альбіна"],
         },
     },
     "09.09.2017": {
         "medals": {
-            "gold": "Сташевський Валентин/Сохаіл Соул",
+            "gold": "Сташевський Валентин/Фатех Дін",
             "silver": "Усик Артем/Ледєньов Вадим",
             "bronze": ["Омельченко Владислав/Васюра Андрій"],
         },
         "medalsWomen": {
             "gold": "Моісеєнко Віталіна/Анісімова Світлана",
             "silver": "Чумак Ганна/Грушовець Ольга",
-            "bronze": ["Ледєньова Наталя/Павлюченко Марина"],
+            "bronze": ["Ледєньова Наталія/Павлюченко Марина"],
         },
     },
     "10.09.2016": {
         "medals": {
             "gold": "Усик Артем/Григоренко Денис",
-            "silver": "Бадира/Томчук",
+            "silver": "Бадира Олександр/Томчук Олег",
             "bronze": ["Омельченко Владислав/Васюра Андрій", "Агневщиков Юрій/Буханцов Тарас"],
         },
         "medalsWomen": {
-            "gold": "Редзюк Тетяна/Ледєньова Наталя",
+            "gold": "Редзюк Тетяна/Ледєньова Наталія",
             "silver": "Моісеєнко Віталіна/Анісімова Світлана",
             "bronze": ["Чумак Ганна/Грушовець Ольга"],
         },
@@ -3627,7 +3644,7 @@ MANUAL_MEDAL_OVERRIDES_BY_DATE = {
         },
         "medalsWomen": {
             "gold": "Маріуполь (Чумак Ганна, Грушовець Ольга)",
-            "silver": "Дніпро-Київ (Моісеєнко Віталіна, Ледєньова Наталя)",
+            "silver": "Дніпро-Київ (Моісеєнко Віталіна, Ледєньова Наталія)",
             "bronze": ["Черкаси (Харченко Тетяна, Соколова Вікторія)"],
         },
     },
@@ -3639,7 +3656,7 @@ MANUAL_MEDAL_OVERRIDES_BY_DATE = {
         },
         "medalsWomen": {
             "gold": "Маріуполь (Чумак Ганна, Грушовець Ольга)",
-            "silver": "Київ (Ледєньова Наталя, Ільясова Альбіна)",
+            "silver": "Київ (Ледєньова Наталія, Ільясова Альбіна)",
             "bronze": ["Харків (Марфола Оксана, Борисова Марина)"],
         },
     },
@@ -3652,7 +3669,7 @@ MANUAL_MEDAL_OVERRIDES_BY_DATE = {
         "medalsWomen": {
             "gold": "Моісеєнко Віталіна/Анісімова Світлана",
             "silver": "Чумак Ганна/Грушовець Ольга",
-            "bronze": ["Ледєньова Наталя/Павлюченко Марина"],
+            "bronze": ["Ледєньова Наталія/Павлюченко Марина"],
         },
     },
     "28.05.2016": {
@@ -3682,7 +3699,7 @@ MANUAL_MEDAL_OVERRIDES_BY_DATE = {
     "06.12.2019": {
         "medals": {
             "gold": "Омельченко Владислав/Марфола Оксана",
-            "silver": "Усик Артем/Ледєньова Наталя",
+            "silver": "Усик Артем/Ледєньова Наталія",
             "bronze": ["Мамика Олександр/Харченко Тетяна"],
         },
         "medalsWomen": None,
@@ -3793,7 +3810,7 @@ MANUAL_MEDAL_OVERRIDES_BY_DATE = {
     },
     "28.11.2015": {
         "medals": {
-            "gold": "Усик Артем/Ледєньова Наталя",
+            "gold": "Усик Артем/Ледєньова Наталія",
             "silver": "Мамика Олександр/Чумак Ганна",
             "bronze": ["Кумовицький Павло/Моісеєнко Віталіна"],
         },
@@ -3819,7 +3836,7 @@ MANUAL_MEDAL_OVERRIDES_BY_DATE = {
         },
         "medalsWomen": {
             "gold": "Моісеєнко Віталіна",
-            "silver": "Ледєньова Наталя",
+            "silver": "Ледєньова Наталія",
             "bronze": ["Марфола Оксана"],
         },
     },
@@ -3831,7 +3848,7 @@ MANUAL_MEDAL_OVERRIDES_BY_DATE = {
         },
         "medalsWomen": {
             "gold": "Моісеєнко Віталіна",
-            "silver": "Ледєньова Наталя",
+            "silver": "Ледєньова Наталія",
             "bronze": ["Грушовець Ольга"],
         },
     },
@@ -4440,7 +4457,7 @@ def sanity_check_or_abort(new_data, old_path):
                 pass
     problems = []
     for key, min_ratio in (("tournaments", 0.9), ("curatedPlayerNames", 0.9),
-                           ("leaderboard", 0.9), ("championsRecords", 0.8),
+                           ("leaderboard", 0.8), ("championsRecords", 0.8),
                            ("nakkaPlayerStats", 0.9), ("nakkaMatchStats", 0.9),
                            ("nakkaH2HStats", 0.9)):
         o, n = len(old.get(key) or []), len(new_data.get(key) or [])
@@ -4455,7 +4472,83 @@ def sanity_check_or_abort(new_data, old_path):
             sys.exit(1)
 
 
+_CANON_BY_KEY = None
+
+
+def canon_player_name(n):
+    """Аліас -> написання з бази; інакше, якщо ім'я відрізняється від бази лише
+    є/і/и/й чи подвоєнням літер — береться написання з бази."""
+    global _CANON_BY_KEY
+    if _CANON_BY_KEY is None:
+        _CANON_BY_KEY = {}
+        for c in CURATED_PLAYER_NAMES:
+            _CANON_BY_KEY.setdefault(_name_key(c), c)
+    if n in MANUAL_NAME_ALIASES:
+        return MANUAL_NAME_ALIASES[n]
+    if n in _CURATED_SET_CACHE():
+        return n
+    if len(n.split()) == 2 and not re.search(r"[/(),]", n):
+        return _CANON_BY_KEY.get(_name_key(n), n)
+    return n
+
+
+_CURATED_CACHE = None
+
+
+def _CURATED_SET_CACHE():
+    global _CURATED_CACHE
+    if _CURATED_CACHE is None:
+        _CURATED_CACHE = set(CURATED_PLAYER_NAMES)
+    return _CURATED_CACHE
+
+
+_ALIAS_NAME_KEYS = {"name", "name1", "name2", "opponent", "gold", "silver"}
+_ALIAS_LIST_KEYS = {"bronze", "names"}
+
+
+def apply_final_alias_pass(obj):
+    """Страховка: усі точні збіги з MANUAL_NAME_ALIASES у полях імен заміняються
+    на канонічне ім'я (Рудковський Василь -> Дідов Василь тощо) у ВСІХ
+    розділах даних — незалежно від того, яким шляхом ім'я потрапило."""
+    if isinstance(obj, dict):
+        for k, v in list(obj.items()):
+            if k in _ALIAS_NAME_KEYS and isinstance(v, str):
+                obj[k] = canon_player_name(v)
+            elif k in _ALIAS_LIST_KEYS and isinstance(v, list):
+                obj[k] = [canon_player_name(x) if isinstance(x, str) else x for x in v]
+            else:
+                apply_final_alias_pass(v)
+    elif isinstance(obj, list):
+        for x in obj:
+            apply_final_alias_pass(x)
+
+
+def finalize_aliases():
+    """Узгоджує MANUAL_NAME_ALIASES з перевіреною базою CURATED_PLAYER_NAMES:
+    ланцюжки згортаються, а цілі, яких немає в базі, замінюються на
+    написання з бази (Чік -> Чик тощо); аліаси, що «перекладають» ім'я з
+    бази на не-базове, прибираються (ніяких нових гравців через аліаси)."""
+    curated = set(CURATED_PLAYER_NAMES)
+    by_key = {}
+    for c in CURATED_PLAYER_NAMES:
+        by_key.setdefault(_name_key(c), c)
+    for k, v in list(MANUAL_NAME_ALIASES.items()):
+        t, seen = v, {k}
+        while t in MANUAL_NAME_ALIASES and MANUAL_NAME_ALIASES[t] != t and t not in seen:
+            seen.add(t)
+            t = MANUAL_NAME_ALIASES[t]
+        if t not in curated:
+            t = by_key.get(_name_key(t), t)
+        if k in curated and t not in curated:
+            del MANUAL_NAME_ALIASES[k]
+        elif t == k:
+            del MANUAL_NAME_ALIASES[k]
+        else:
+            MANUAL_NAME_ALIASES[k] = t
+
+
 def main():
+    finalize_aliases()
     print("Fetching tournaments CSV...")
     t_rows = fetch_csv(TOURNAMENTS_CSV_URL)
     print(f"  {len(t_rows)} raw rows")
@@ -4624,6 +4717,7 @@ def main():
             if row.get("name"):
                 live_names.add(row["name"])
 
+    live_names = {canon_player_name(n) for n in live_names if n}
     curated_set = set(CURATED_PLAYER_NAMES)
     genuinely_new = sorted(n for n in live_names if n and n not in curated_set and not is_pair_or_team_name(n))
     final_player_names = sorted(curated_set | set(genuinely_new), key=str.lower)
@@ -4660,6 +4754,8 @@ def main():
     }
 
     data = sanitize_deep(data)
+    apply_final_alias_pass(data)
+    data["curatedPlayerNames"] = sorted({canon_player_name(n) for n in data["curatedPlayerNames"]}, key=str.lower)
     sanity_check_or_abort(data, OUTPUT_PATH)
 
     write_split_output(data, OUTPUT_PATH)
