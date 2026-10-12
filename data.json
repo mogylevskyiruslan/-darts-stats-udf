@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-10-12T12:58:39.071107+00:00",
+  "lastUpdated": "2026-10-12T13:52:47.356825+00:00",
   "tournamentsCount": 212,
   "parts": {
    "nakkaMatchStats": {
@@ -8323,21 +8323,33 @@
     }
    },
    "medals": {
-    "gold": "Васюра Андрій",
-    "silver": "Марченко Денис",
+    "gold": "Григоренко Денис",
+    "silver": "Бушуй Олексій",
     "bronze": [
-     "Шинкаренко Василь"
+     "Васюра Андрій"
     ]
    },
    "medalsWomen": {
     "gold": "Редзюк Тетяна",
-    "silver": "Чумак Ганна",
+    "silver": "Моісеєнко Віталіна",
     "bronze": [
-     "Моісеєнко Віталіна"
+     "Чумак Ганна"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Григоренко Денис",
+    "silver": "Бушуй Олексій",
+    "bronze": [
+     "Васюра Андрій"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Редзюк Тетяна",
+    "silver": "Моісеєнко Віталіна",
+    "bronze": [
+     "Чумак Ганна"
+    ]
+   }
   },
   {
    "total": 57,
@@ -8404,20 +8416,32 @@
    },
    "medals": {
     "gold": "Усик Артем",
-    "silver": "Омельченко Владислав",
+    "silver": "Григоренко Денис",
     "bronze": [
-     "Васюра Андрій"
+     "Ледєньов Вадим"
     ]
    },
    "medalsWomen": {
-    "gold": "Моісеєнко Віталіна",
-    "silver": "Анісімова Світлана",
+    "gold": "Редзюк Тетяна",
+    "silver": "Моісеєнко Віталіна",
     "bronze": [
      "Чумак Ганна"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Усик Артем",
+    "silver": "Григоренко Денис",
+    "bronze": [
+     "Ледєньов Вадим"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Редзюк Тетяна",
+    "silver": "Моісеєнко Віталіна",
+    "bronze": [
+     "Чумак Ганна"
+    ]
+   }
   },
   {
    "total": 86,
@@ -8575,21 +8599,33 @@
     }
    },
    "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Васюра Андрій",
+    "gold": "Шинкаренко Василь",
+    "silver": "Невінчаний Едуард",
     "bronze": [
-     "Шинкаренко Василь"
+     "Омельченко Владислав"
     ]
    },
    "medalsWomen": {
     "gold": "Моісеєнко Віталіна",
-    "silver": "Чумак Ганна",
+    "silver": "Ледєньова Наталія",
     "bronze": [
-     "Ледєньова Наталія"
+     "Анісімова Світлана"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Шинкаренко Василь",
+    "silver": "Невінчаний Едуард",
+    "bronze": [
+     "Омельченко Владислав"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Ледєньова Наталія",
+    "bronze": [
+     "Анісімова Світлана"
+    ]
+   }
   },
   {
    "total": 101,
@@ -8894,21 +8930,33 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Васюра Андрій",
-    "silver": "Ковальов Дмитро",
+    "gold": "Усик Артем",
+    "silver": "Мамика Олександр",
     "bronze": [
-     "Мамика Олександр"
+     "Омельченко Владислав"
     ]
    },
    "medalsWomen": {
-    "gold": "Анісімова Світлана",
-    "silver": "Ледєньова Наталія",
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
     "bronze": [
-     "Моісеєнко Віталіна"
+     "Грушовець Ольга"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Усик Артем",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Омельченко Владислав"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Грушовець Ольга"
+    ]
+   }
   },
   {
    "total": 47,
@@ -8980,31 +9028,31 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Черкаси-2 (Марченко, Зольдін, Зарайський, Бублик)",
-    "silver": "Кривий Ріг-1 (Омельченко, Шинкаренко, Васюра, Луков)",
+    "gold": "Черкаси-2 (Марченко Денис, Зольдін Фелікс, Зарайський Володимир, Бублик В'ячеслав)",
+    "silver": "Кривий Ріг-1 (Омельченко Владислав, Шинкаренко Василь, Васюра Андрій, Луков Олександр)",
     "bronze": [
-     "Волинь (Шмідке, Швець, Бадира, Волчук)"
+     "Волинь (Шмідтке Анджей, Швець Андрій, Бадира Олександр, Волчук Руслан)"
     ]
    },
    "medalsWomen": {
-    "gold": "Черкаси-1 (Соколова, Харченко)",
-    "silver": "Дніпропетровськ (Моісеєнко, Потан)",
+    "gold": "Черкаси-1 (Соколова Вікторія, Харченко Тетяна)",
+    "silver": "Дніпропетровськ (Моісеєнко Віталіна, Потан Лілія)",
     "bronze": [
-     "Маріуполь (Чумак, Анісімова)"
+     "Маріуполь (Чумак Ганна, Анісімова Світлана)"
     ]
    },
    "nakkaMedals": {
-    "gold": "Черкаси-2 (Марченко, Зольдін, Зарайський, Бублик)",
-    "silver": "Кривий Ріг-1 (Омельченко, Шинкаренко, Васюра, Луков)",
+    "gold": "Черкаси-2 (Марченко Денис, Зольдін Фелікс, Зарайський Володимир, Бублик В'ячеслав)",
+    "silver": "Кривий Ріг-1 (Омельченко Владислав, Шинкаренко Василь, Васюра Андрій, Луков Олександр)",
     "bronze": [
-     "Волинь (Шмідке, Швець, Бадира, Волчук)"
+     "Волинь (Шмідтке Анджей, Швець Андрій, Бадира Олександр, Волчук Руслан)"
     ]
    },
    "nakkaMedalsWomen": {
-    "gold": "Черкаси-1 (Соколова, Харченко)",
-    "silver": "Дніпропетровськ (Моісеєнко, Потан)",
+    "gold": "Черкаси-1 (Соколова Вікторія, Харченко Тетяна)",
+    "silver": "Дніпропетровськ (Моісеєнко Віталіна, Потан Лілія)",
     "bronze": [
-     "Маріуполь (Чумак, Анісімова)"
+     "Маріуполь (Чумак Ганна, Анісімова Світлана)"
     ]
    }
   },
@@ -9122,20 +9170,32 @@
    },
    "medals": {
     "gold": "Усик Артем",
-    "silver": "Омельченко Владислав",
+    "silver": "Васюра Андрій",
     "bronze": [
      "Мамика Олександр"
     ]
    },
    "medalsWomen": {
     "gold": "Чумак Ганна",
-    "silver": "Анісімова Світлана",
+    "silver": "Черноброва Олександра",
     "bronze": [
-     "Некрістова Наталія"
+     "Анісімова Світлана"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Усик Артем",
+    "silver": "Васюра Андрій",
+    "bronze": [
+     "Мамика Олександр"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": "Черноброва Олександра",
+    "bronze": [
+     "Анісімова Світлана"
+    ]
+   }
   },
   {
    "total": 80,
@@ -9156,7 +9216,7 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1eBwx3LUH3PRsml7duEk5jhnu_tHRufeTT71BLopBSZo/edit?tab=t.0",
+     "url": "https://docs.google.com/document/d/1J7ZeuGGV4XP-mPQbxqiycHpSWf3sWNJVqxoYV71dg90/edit?tab=t.0#heading=h.ppht0y7h0vsz",
      "type": "protocol_doc"
     }
    },
@@ -9196,7 +9256,7 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1nVWqNZ7T0HBPt9J2MRY7LRI1dkQCdFrNHmf7ymEgrfk/edit?tab=t.0",
+     "url": "https://docs.google.com/document/d/1nQMBBiC7LBg5ovRdjgAlTXwJq2usyVTxJOMPtLor0GA/edit?tab=t.0#heading=h.44zurfyl48dg",
      "type": "protocol_doc"
     }
    },
@@ -9236,7 +9296,7 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1QAIdwmWHggr9Ekjo7Hk9B0yG9Dz8nnWynoYea47SJk4/edit?tab=t.0",
+     "url": "https://docs.google.com/document/d/1nA1685TE4D8UgFEFrFE7avnva0vo-TAVJvh-4a4OnCU/edit?tab=t.0",
      "type": "protocol_doc"
     }
    },
@@ -9276,7 +9336,7 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1sl3MEWQMWViPVg6t7L3ujnInIyVvTxJo_ytAE_tlbLQ/edit?tab=t.0#heading=h.iyt8r6fs062f",
+     "url": "https://docs.google.com/document/d/1eBwx3LUH3PRsml7duEk5jhnu_tHRufeTT71BLopBSZo/edit?tab=t.0",
      "type": "protocol_doc"
     }
    },
@@ -9328,7 +9388,7 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1ZNpFeYido9E0XOWMKxtAlPsnZhtklp3uAbFq16Jib38/edit?tab=t.0#heading=h.obslp2kpgqtf",
+     "url": "https://docs.google.com/document/d/1nVWqNZ7T0HBPt9J2MRY7LRI1dkQCdFrNHmf7ymEgrfk/edit?tab=t.0",
      "type": "protocol_doc"
     }
    },
@@ -9380,7 +9440,7 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1AGjRcOjOE8b61RlJpXnjJ-SPbiINcm47O6aorurXBZI/edit?tab=t.0#heading=h.jhrb1eqw66g2",
+     "url": "https://docs.google.com/document/d/1QAIdwmWHggr9Ekjo7Hk9B0yG9Dz8nnWynoYea47SJk4/edit?tab=t.0",
      "type": "protocol_doc"
     }
    },
@@ -9432,7 +9492,7 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1K33JAK_zRif7gsUUAdBHnrk68aean6v-O205xelMQAg/edit?tab=t.0",
+     "url": "https://docs.google.com/document/d/1sl3MEWQMWViPVg6t7L3ujnInIyVvTxJo_ytAE_tlbLQ/edit?tab=t.0#heading=h.iyt8r6fs062f",
      "type": "protocol_doc"
     }
    },
@@ -9484,7 +9544,7 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1MGoi2lt6-YZkBq5ctwTn2-bN0EPBqT02JSo6mlXqtRY/edit?tab=t.0#heading=h.kveo2du17pqh",
+     "url": "https://docs.google.com/document/d/1ZNpFeYido9E0XOWMKxtAlPsnZhtklp3uAbFq16Jib38/edit?tab=t.0#heading=h.obslp2kpgqtf",
      "type": "protocol_doc"
     }
    },
@@ -9536,7 +9596,7 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1nQMBBiC7LBg5ovRdjgAlTXwJq2usyVTxJOMPtLor0GA/edit?tab=t.0#heading=h.44zurfyl48dg",
+     "url": "https://docs.google.com/document/d/1AGjRcOjOE8b61RlJpXnjJ-SPbiINcm47O6aorurXBZI/edit?tab=t.0#heading=h.jhrb1eqw66g2",
      "type": "protocol_doc"
     }
    },
@@ -9576,7 +9636,7 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1J7ZeuGGV4XP-mPQbxqiycHpSWf3sWNJVqxoYV71dg90/edit?tab=t.0#heading=h.ppht0y7h0vsz",
+     "url": "https://docs.google.com/document/d/1K33JAK_zRif7gsUUAdBHnrk68aean6v-O205xelMQAg/edit?tab=t.0",
      "type": "protocol_doc"
     }
    },
@@ -9623,7 +9683,7 @@
     "women": null,
     "womenAvg": null,
     "tournament": {
-     "url": "https://docs.google.com/document/d/1nA1685TE4D8UgFEFrFE7avnva0vo-TAVJvh-4a4OnCU/edit?tab=t.0",
+     "url": "https://docs.google.com/document/d/1MGoi2lt6-YZkBq5ctwTn2-bN0EPBqT02JSo6mlXqtRY/edit?tab=t.0#heading=h.kveo2du17pqh",
      "type": "protocol_doc"
     }
    },
@@ -39738,7 +39798,7 @@
     },
     {
      "rank": "24",
-     "name": "Манькова Наталія",
+     "name": "Некрістова Наталія",
      "scores": [
       null,
       1.0,
@@ -91631,7 +91691,7 @@
    "text": "У п’ятницю, 9-го жовтня, стартував швейцарський етап євротуру PDC: Swiss Darts Trophy. \nТрадиційно турнір складається з двох сесій - денної та вечірньої, які стартують 14.00 та 20.00 за київським часом відповідно",
    "date": "2026-10-09",
    "url": "https://t.me/fullbull/12808",
-   "photo": "https://cdn4.telesco.pe/file/kCUA6jYYY1PNzlUEdoJ1j7Y1jib8kKUu1lmZhn768ajpvHDM1MCa5MHXdNRIvbtd9N663ieL8q02mLxQUrdKVobGBqOJmYVJZ69uAPeb0dBNBjJWRJxMSV4QCFaPxPcsILjjjwTCGcmwQjGAXhYRCLJVfa7LNMN1BIbivhxKUuLEN3wbu5N8VDjGl8CXI2w8KntL3FtFhoT6ois1wlgBLkLgTv6Hl0_W_zTOqLWN5iYIel1QFb-q25XkwDgXFxBO1_Tij2oiuznG6GgIsIZixUSQ-37udsM0eNgxIhR-GQ-c59sWIu-UTe3HSmRD8guGrk0MOXi8YmHY1SI8ANQ5IQ.jpg"
+   "photo": "https://cdn4.telesco.pe/file/NXQZpfO6Smmv79PNUwCxtECx09qGYgRaGPO2Mm71HsVehLdjpz69rnoJ4rRoqHKym7ply2a83-MOBmwNPsJeDEoKuz_9t4SQ6WYpReqGvVIdduhvm5bFFD6pHWOfrh4gcWs2kepJrwkMytWU__dpXOCf33Hl9H8a_lPbf7mSG2gUG2mleSS1-S7tnZrGeMYul653-isiiFI3Q0W8De9vVPnsMuS9WrtIxac_pJCMAnQ5bKOK-QEZ0dv-ctdKI6ZNki6FkJ5D64XCSdj_e4uP6dW20bwnBy3X4keZwtHZuetP9zhL8eikOLUR7ULvz8UtWQyBrNuQ4rZqM0SCpnHNTg.jpg"
   }
  ],
  "championsRecords": [
@@ -96091,7 +96151,6 @@
   "Макаєв Віктор",
   "Малюхович Євген",
   "Мамика Олександр",
-  "Манькова Наталія",
   "Марет Лійрі",
   "Марига Руслан",
   "Марков Сергій",
