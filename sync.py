@@ -135,6 +135,30 @@ def parse_tournaments(rows):
     return tournaments
 
 
+# Посилання на протоколи, які не підтягнулись з таблиці "UA darts stat".
+# Ключ: (дата, назва) -> {слот: url}. Підставляється лише якщо слот порожній.
+MANUAL_LINK_ADDS = {
+    ("15.11.2025", "UDL LVIV CUP"): {
+        "women": "https://docs.google.com/document/d/1nXgkNxaXmqZpoXtnouDaPmeKAlytTvcI7F5zcqETFRw/edit?tab=t.0#heading=h.xwcm0395wsjh",
+    },
+}
+
+
+def apply_manual_links(tournaments):
+    n = 0
+    for t in tournaments:
+        add = MANUAL_LINK_ADDS.get((t.get("date"), t.get("name")))
+        if not add:
+            continue
+        links = t.setdefault("links", {})
+        for slot, url in add.items():
+            if not links.get(slot):
+                links[slot] = {"url": url, "type": classify_link(url)}
+                n += 1
+    if n:
+        print(f"  Додано {n} посилань на протоколи (ручні джерела)")
+
+
 # ---------------------------------------------------------------------------
 # 2) "Призери етапів кубків ВФД"
 #    Рядок 1 (індекс 0): глобальні підписи колонок B..M = "1".."11","ЧУ"
@@ -4601,6 +4625,7 @@ def main():
         print(f"  WARNING: could not fetch women's sheet ({e}); continuing without it")
 
     tournaments = parse_tournaments(t_rows)
+    apply_manual_links(tournaments)
     print(f"Parsed {len(tournaments)} tournaments")
 
     men_year_data, _sheet_men_aggregate = parse_prizes(men_rows)
