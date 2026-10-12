@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-10-12T13:52:47.356825+00:00",
+  "lastUpdated": "2026-10-12T14:52:39.921063+00:00",
   "tournamentsCount": 212,
   "parts": {
    "nakkaMatchStats": {
@@ -9647,14 +9647,7 @@
      "Хімчак Сергій"
     ]
    },
-   "medalsWomen": {
-    "gold": "Лопухова Ганна",
-    "silver": "Чумак Ганна",
-    "bronze": [
-     "Марфола Оксана",
-     "Новікова Зоя"
-    ]
-   },
+   "medalsWomen": null,
    "nakkaMedals": {
     "gold": "Омельченко Владислав",
     "silver": "Невінчаний Едуард",
@@ -10965,10 +10958,10 @@
   {
    "name": "Чумак Ганна",
    "gold": 9,
-   "silver": 18,
+   "silver": 17,
    "bronze": 12,
    "champUA": 1,
-   "total": 39,
+   "total": 38,
    "rank": 3
   },
   {
@@ -10981,21 +10974,21 @@
    "rank": 4
   },
   {
-   "name": "Лопухова Ганна",
-   "gold": 4,
-   "silver": 1,
-   "bronze": 1,
-   "champUA": 1,
-   "total": 6,
-   "rank": 5
-  },
-  {
    "name": "Ледєньова Наталія",
    "gold": 3,
    "silver": 8,
    "bronze": 6,
    "champUA": 0,
    "total": 17,
+   "rank": 5
+  },
+  {
+   "name": "Лопухова Ганна",
+   "gold": 3,
+   "silver": 1,
+   "bronze": 1,
+   "champUA": 1,
+   "total": 5,
    "rank": 6
   },
   {
@@ -11020,9 +11013,9 @@
    "name": "Марфола Оксана",
    "gold": 2,
    "silver": 1,
-   "bronze": 5,
+   "bronze": 4,
    "champUA": 0,
-   "total": 8,
+   "total": 7,
    "rank": 9
   },
   {
@@ -11056,9 +11049,9 @@
    "name": "Новікова Зоя",
    "gold": 1,
    "silver": 3,
-   "bronze": 1,
+   "bronze": 0,
    "champUA": 0,
-   "total": 5,
+   "total": 4,
    "rank": 13
   },
   {
@@ -32221,19 +32214,6 @@
     },
     {
      "rank": "34",
-     "name": "Боярчук Ірина",
-     "scores": [
-      null,
-      null,
-      9.75,
-      null,
-      null,
-      null
-     ],
-     "total": 9.75
-    },
-    {
-     "rank": "35",
      "name": "Спекторенко Катерина",
      "scores": [
       null,
@@ -32246,12 +32226,25 @@
      "total": 9.75
     },
     {
-     "rank": "36",
+     "rank": "35",
      "name": "Якименко Катерина",
      "scores": [
       null,
       null,
       null,
+      null,
+      null,
+      null
+     ],
+     "total": 9.75
+    },
+    {
+     "rank": "36",
+     "name": "Боярчук Ірина",
+     "scores": [
+      null,
+      null,
+      9.75,
       null,
       null,
       null
@@ -32325,19 +32318,6 @@
     },
     {
      "rank": "42",
-     "name": "Косигіна Ольга",
-     "scores": [
-      null,
-      null,
-      null,
-      null,
-      1,
-      null
-     ],
-     "total": 1.0
-    },
-    {
-     "rank": "43",
      "name": "Потан Лілія",
      "scores": [
       null,
@@ -32345,6 +32325,19 @@
       null,
       1,
       null,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "43",
+     "name": "Косигіна Ольга",
+     "scores": [
+      null,
+      null,
+      null,
+      null,
+      1,
       null
      ],
      "total": 1.0
@@ -91679,13 +91672,13 @@
    "text": "Крикет турнір київського дартсу-клубу «Портер», який відбувся у суботу, 10-го жовтня, виграв Овсієнко Євген!\n🥇Овсієнко Є.\n🥈Солтис М.\n🥉Аверін С.\n👀",
    "date": "2026-10-11",
    "url": "https://t.me/fullbull/12823",
-   "photo": "https://cdn4.telesco.pe/file/RV2obSGgRXx7W9yw2RsIwOK7Ui9WmVq5kftWXNfW9GJjo_a7Jq-_SlrnF1hDDw_HFrRyJkAaodbb3a13L54NOgph4WdWoK5PBuBRsfAdw1kC6Zy2h5oOsI3yLvbD7vhsHOkI5I946AJ94V3NY6TW4BSlGGxK8zQ9NQKbrnSnPnSRQo3odNlQMROR4x4ii4vfJjNUINSHr2iTTNQskFSYpcAPy2ywnfBR5gtCRWXyZfBDfxJYgjHQXJDw2CEJ2tvcMw1z4h8MYBVAYEQ9spDcwa6pj352om6KVX3XejzHHHMzhzahX4YpsZ1suUY4HVPTJRpKurXvKP1h911U5Utbcw.jpg"
+   "photo": "https://cdn4.telesco.pe/file/oy2mbY4BNsNgxkuslr52qbwkigh12ByX0IqyjsOi3BNzXwmBG9nuDioc5ivDcJV1x_q0nQ5Wuq-Tv7e3y-QYoiMsgHdgOXx842Tf-jm3go3QNRaCP5HKLnd7NXAOyDzXK2BFKEM6u4UzexVR4giOd-t1x0FMqXEVyOqdA1MCBJ4NTYiJpf4_zQXrVYBgDoCEkN_sR7APXpXlQfTM_fQNArTQRR70gySqDvPQYLzLGork-KHTYJvxY8ewbsTOOTaY9o3s-woe_4Gvyr1Ow2ZvBpJU9abEZVGG3c4KM8wUoilLPcdV53KIy8-JYJj9WdH0jCC-SqvorjN6jnlDDLKl4g.jpg"
   },
   {
    "text": "Полтавська обласна дартс ліга завершила свій п'ятий етап. Кращим гравцем 5-го етапу став: ЦІЛУЙКО ВЛАДИСЛАВ \nТОП-8 на ГРАНД-ФІНАЛ \n1. Поляков-Лагода Артур \n2️⃣0️⃣6️⃣балів\n2. Назаренко Олександр \n2️⃣0️⃣4️⃣бали\n3. Коломієць Андрій \n1️⃣9️⃣1️⃣бал\n4. Чайковський Руслан \n1️⃣8️⃣8️⃣балів\n5. Цілуйко Владислав \n1️⃣8️⃣3️⃣бали\n6. Шильцин Юрій \n1️⃣7️⃣9️⃣балів\n7. Десинський Максим \n1️⃣7️⃣6️⃣балів\n8. Рашоянц Ігор\n1️⃣7️⃣6️⃣балів",
    "date": "2026-10-11",
    "url": "https://t.me/fullbull/12821",
-   "photo": "https://cdn4.telesco.pe/file/uKqnyv0-Xdiyd0naU7nJwqjin9zHMWQ-qOM1MuQSKWSmskUiptBXGiIoiSvRozXg57b9y_aSm4F9sFsXshssDlIfYiSP5TsqFfFdV5I5-UOF9zED3E1y4q4NGsq6UveDHFy4Rl4VPaIVQQjkns8757uBhTTP06kIdtuFPvi6yFikZuaHbmlhyIUcAPEL58VN9o8U3PiLKPHJJXH7C2i3jdfO5Fpwmu5r_P5QcIyf7nG9gWFQHDsjBiO_-HFQnwsX8V_OC8GLOJq_sDrlBcqA0gFQslaeSFlzZW86tqdzYoGWWFrX-dPf_vEzBoIKRqD7mVFV9quAs6c85XsYh9fzXA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/kgT3pe-tWL9t_N51VBTRNaNK8Ji4yohLFL5QzaiEaCo2trRf3l1DU6UpSwfEVn-i-l9x9_fFte7BaHG1shsUQCHCJX79bDE-wqKzsyyN1Uk6C8mNbmwG2x8mfOH9ZVmCRfGWXIkTxBv-U2gwTR6QttoJcEVMrhvT_mHOieWvse0thpojHGogK2AYzYrbmS-kI2yDywNW55CmPetpqVl5gtaHsmh_8Fc3324x_Xw4QVYoDbPKcjv76kYqQbPw7XhLZz51z4JkRhPxSQ6n1rHBCiro1Z4daxwBzSNIBzIC1_IosmEntOry4K_9jX12F_kp8OO3oISTrIMOS2jkbpN6AA.jpg"
   },
   {
    "text": "У п’ятницю, 9-го жовтня, стартував швейцарський етап євротуру PDC: Swiss Darts Trophy. \nТрадиційно турнір складається з двох сесій - денної та вечірньої, які стартують 14.00 та 20.00 за київським часом відповідно",
