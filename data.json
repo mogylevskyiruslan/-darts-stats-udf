@@ -1,7 +1,7 @@
 {
  "meta": {
-  "lastUpdated": "2026-10-16T09:39:43.283774+00:00",
-  "tournamentsCount": 212,
+  "lastUpdated": "2026-10-17T09:09:43.998159+00:00",
+  "tournamentsCount": 214,
   "parts": {
    "nakkaMatchStats": {
     "file": "data/nakka_matches.json",
@@ -14,6 +14,56 @@
   }
  },
  "tournaments": [
+  {
+   "total": null,
+   "men": null,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 5 етап",
+   "date": "18.10.2026",
+   "city": "Черкаси",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 56,
+   "men": 37,
+   "menAvg": null,
+   "women": 19,
+   "womenAvg": null,
+   "name": "ЧУ 2026 Cricket",
+   "org": "ВФД",
+   "format": "Cricket",
+   "date": "17.10.2026",
+   "city": "Черкаси",
+   "isUDL": false,
+   "chuCategory": "ЧУ Cricket",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
   {
    "total": 68,
    "men": 44,
@@ -1620,7 +1670,7 @@
    "menAvg": null,
    "women": 11,
    "womenAvg": null,
-   "name": "ЧУ 2024 Cricket",
+   "name": "ЧУ 2025 Cricket",
    "org": "ВФД",
    "format": "Cricket",
    "date": "11.10.2025",
@@ -91663,6 +91713,12 @@
  ],
  "telegramNews": [
   {
+   "text": "17-го жовтня, у Черкасах проходить Чемпіонат України з дартсу (дисципліна Крикет).\nТурнірна сітка:\n🙋‍♀️Жінки ЧУ Крикет: \n🙋‍♂️Чоловіки ЧУ Крикет:",
+   "date": "2026-10-17",
+   "url": "https://t.me/fullbull/12847",
+   "photo": "https://cdn4.telesco.pe/file/Kg2d31Sb91ocYZDv3LYQeSyHABZHuMp7Jn2kM0GVAMMU4RU8G_OlDNZJXw_6GA0gZXdpIycCADcYI_3ix02-QFy_POwCMP6CVIV_csT1zGADjIABkWGpBQJzLtx37DcTvW6lQXtSco-LvWgZoSMKnxmoYE9WAMvk1igQShSMS-lXcigoh_o-kFbPZp1paAxoNTzcWfJkmgxezlAiPZw-R4xlnLQxPFR0YH7qkicLlVLhDnupkDzuJ8EaNgzJX5pN9Xvij7Gjxshyc5djKROJuxqUKjifyDCim3JY2oEUyOsalcPAooRbUgmrLTdaQ9TXDJxGrZVMgfAb6Azcse938A.jpg"
+  },
+  {
    "text": "🏆 Чемпіонат Черкас з крикету виграв Могилевський Руслан.\n🥇Могилевський Р. \n🥈Чепурний Е.\n🥉Соколов В.\n👀",
    "date": "2026-10-11",
    "url": "https://t.me/fullbull/12824",
@@ -91672,13 +91728,13 @@
    "text": "Крикет турнір київського дартсу-клубу «Портер», який відбувся у суботу, 10-го жовтня, виграв Овсієнко Євген!\n🥇Овсієнко Є.\n🥈Солтис М.\n🥉Аверін С.\n👀",
    "date": "2026-10-11",
    "url": "https://t.me/fullbull/12823",
-   "photo": "https://cdn4.telesco.pe/file/pPOOc2axicaG-7fuv8AZPhg6dBLJVvYM4fPL7YdjwHf7otMSQJtlLB1d72vLb4_x8quQXfnRDjsCc-yqMGSfv6QoF8krbDlYRbTB5yYyYY4DOy66yDOeDWcdG3c3BIydmgTE06Cw4j8Ck93mOAX6NwPsYHKa_tnhRb8PP9cqiQy_hkcaWFsGAiRDi_ME3A-AR9F_uOPdoCcan446mmDB6ii0rfAZB4jY42YBSdDSF5nZs-KEIHvyJ8rKXWI5IlWRNCUNwWn6CzvZ4DTW7pdMM30wN3hKWVL2dKG-6tuZBXzUO2FvNrB6_Uh_23qrKfyzUt_DM-hcwqXQifDHX4-n0Q.jpg"
+   "photo": "https://cdn4.telesco.pe/file/TXNcd7g-2sbqtR19WG0rJg8O8Yol9VznXDCKpynInPEmSiEMUHCE4obQumxF-UtfSwHBOKqZEXo0wyxhb64_Ao5RDE56yAwFOwoVusBeemEoDHrGTAjY2JNMYvh_LrCXos54pyYjsPCuK-3TYvqXoyo7Z_KKoyFng6ePcLOYyKhRzZ_f9Dd0rAK7ttICHvo_-oyw4lPlFSfn8O1mhCt9NBTdpkbSZTRmsXwTTZSQ9mT1UHyena4fbQHkchfG5gL11gWZ8AuM0hjjs-XLOqIFi4Hug8iy2fKRgn6luW7BzKbHmkd55H6cPKlyTJCVcd7KP_FLpojNXM_OI9pro2om2A.jpg"
   },
   {
    "text": "Полтавська обласна дартс ліга завершила свій п'ятий етап. Кращим гравцем 5-го етапу став: ЦІЛУЙКО ВЛАДИСЛАВ \nТОП-8 на ГРАНД-ФІНАЛ \n1. Поляков-Лагода Артур \n2️⃣0️⃣6️⃣балів\n2. Назаренко Олександр \n2️⃣0️⃣4️⃣бали\n3. Коломієць Андрій \n1️⃣9️⃣1️⃣бал\n4. Чайковський Руслан \n1️⃣8️⃣8️⃣балів\n5. Цілуйко Владислав \n1️⃣8️⃣3️⃣бали\n6. Шильцин Юрій \n1️⃣7️⃣9️⃣балів\n7. Десинський Максим \n1️⃣7️⃣6️⃣балів\n8. Рашоянц Ігор\n1️⃣7️⃣6️⃣балів",
    "date": "2026-10-11",
    "url": "https://t.me/fullbull/12821",
-   "photo": "https://cdn4.telesco.pe/file/mjFSI36SIiOeIm-kcwr3rM2FJvtSxYTZUpPzlLm5yz8j96PuVFL9jg0lXOIu2b1lJkbd18SLG1Z1yRmDDpZ-j55eakX5U-mN0aXseufhDYl8UiJ_jEibprgnOhQEniksDSIt_3vmTad9VAg_9xXOJTs1zHayJlx7lY0UrAR3qmeAJsEjrsKpmJuys-v14whmUX3JviQZAhpJdVF5MmQK1bEHCpGLsvX32snH5vcN7ILA-zo-OhZ0adRScqVEFb7NX9YCHpvQDchG-OudOVZk3PPp43smEaUjaUbg9Lr9mUHczIfx9F3wNHiO2aidGCyUAlEXL1wPUnh-J1JlK4KuqQ.jpg"
+   "photo": "https://cdn4.telesco.pe/file/iIQx0L6Cc_bIUZb217RCRpylUfvefGIItlGTBRf2rx5Wl51-E85KOHe77wl7WGVuSx0Jhsu47mjLqHxnylyYGj1jXRizFHLZljY34CYzktLYBa766w81ZDd9KRv2n_1Ht1g2h--B2Tg4Btyj9qL2TcAV87lUIQYPHCklgQE1XN_EQui9qhh8joFzWIZ6ekPndu1EkJqARfe9OwxAeKDDLMcfe6I986d_kN7WqJYnPRj1lE0HCQcu3RY0-jTSdxLKuaDiwGDj_ttiRuvsidNy4KfxgTsmSOq3kkId4Jqa1To2v1AmqiowBGFD1iqmaQ5Tx7clObemkHMgqvgbKNFbZw.jpg"
   }
  ],
  "championsRecords": [
@@ -95268,11 +95324,13 @@
    "dartsWeight": "24"
   },
   "Топчу Владислав": {
-   "nickname": "Топчик",
+   "nickname": "Top Man",
    "profession": "парамедик",
    "birthDate": "08.03.1984",
    "region": "Чернігівська область, Козелець",
    "startYear": "квітень 2023",
+   "dartsManufacturer": "Target",
+   "dartsModel": "Gidro -2",
    "dartsWeight": "23"
   },
   "Баранов Олександр": {
