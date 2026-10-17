@@ -3080,6 +3080,32 @@ function cricketMeetingsHtml(p1, p2){
     </table></div>`;
 }
 
+function playerHistoryTableHtml(name, rows){
+  const includeUDL = document.getElementById('global-toggle-udl').checked;
+  const cricket = (nakkaCricket.players || []).filter(r => r.name === name && (includeUDL || !r.isUDL));
+  const all = rows.map(r => ({ date: r.date, tournament: r.tournament, city: r.city, avg: r.avg.toFixed(2),
+      ton80: r.ton80, hi: r.highOutCount, rank: r.rank }))
+    .concat(cricket.map(r => ({ date: r.date, tournament: r.tournament, city: r.city, avg: 'MPR ' + r.mpr.toFixed(2),
+      ton80: 0, hi: 0, rank: r.rank })));
+  if(!all.length) return '';
+  all.sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date));
+  return `<table class="pp-history-table">
+        <thead><tr><th>Дата</th><th>Турнір</th><th>Місто</th><th class="num">Середній</th><th class="num">180</th><th class="num">100+</th><th class="num">Місце</th></tr></thead>
+        <tbody>${all.map(r => `
+          <tr>
+            <td class="mono">${r.date}</td>
+            <td>${r.tournament}</td>
+            <td>${r.city || '—'}</td>
+            <td class="num mono">${r.avg}</td>
+            <td class="num mono">${r.ton80 || '—'}</td>
+            <td class="num mono">${r.hi || '—'}</td>
+            <td class="num pp-rank-badge ${r.rank>=1 && r.rank<=3 ? 'medal' : ''}">${r.rank > 0 ? r.rank : '—'}</td>
+          </tr>
+        `).join('')}</tbody>
+      </table>
+`;
+}
+
 function getPlayerQuickStats(name){
   const includeUDL = document.getElementById('global-toggle-udl').checked;
   const rows = nakkaPlayerStats.filter(r => r.name === name && (includeUDL || !r.isUDL));
@@ -3777,9 +3803,10 @@ function openPlayerProfile(name){
   if(rows.length === 0){
     const ratingCharts = renderPlayerCurrentRatingChart(name) + renderPlayerRatingChart(name);
     const _crHtml = cricketStatCellsHtml(name);
+    const _histHtml = _crHtml ? `<div class="pp-section-title">Історія виступів</div>` + playerHistoryTableHtml(name, []) : '';
     const extraHtml = ((medalWidgetHtml || _crHtml) ? `<div class="pp-stat-row">${_crHtml}${medalWidgetHtml}</div>` : '') + bioHtml + champHtml;
     content.innerHTML = `<div class="pp-header">${playerPhotoHtml(name)}<div><h2>${name}${isMasterOfSport(name) ? '<span class="master-badge">🎖️ Майстер спорту</span>' : ''}</h2>${shareButtonHtml(name)}${udlToggleHtml}</div></div>` +
-      extraHtml + (ratingCharts || (_crHtml ? '' : `<p class="pp-chart-empty">Немає даних Nakka для цього гравця (з поточними фільтрами).</p>`));
+      extraHtml + _histHtml + (ratingCharts || (_crHtml ? '' : `<p class="pp-chart-empty">Немає даних Nakka для цього гравця (з поточними фільтрами).</p>`));
   } else {
     const gender = rows[0].gender === 'women' ? 'Жінки' : 'Чоловіки';
     const totalTournaments = rows.length;
@@ -3847,20 +3874,7 @@ function openPlayerProfile(name){
       ` : ''}
 
       <div class="pp-section-title">Історія виступів</div>
-      <table class="pp-history-table">
-        <thead><tr><th>Дата</th><th>Турнір</th><th>Місто</th><th class="num">Середній</th><th class="num">180</th><th class="num">100+</th><th class="num">Місце</th></tr></thead>
-        <tbody>${rows.slice().reverse().map(r => `
-          <tr>
-            <td class="mono">${r.date}</td>
-            <td>${r.tournament}</td>
-            <td>${r.city || '—'}</td>
-            <td class="num mono">${r.avg.toFixed(2)}</td>
-            <td class="num mono">${r.ton80 || '—'}</td>
-            <td class="num mono">${r.highOutCount || '—'}</td>
-            <td class="num pp-rank-badge ${r.rank>=1 && r.rank<=3 ? 'medal' : ''}">${r.rank > 0 ? r.rank : '—'}</td>
-          </tr>
-        `).join('')}</tbody>
-      </table>
+      ${playerHistoryTableHtml(name, rows)}
     `;
   }
 
