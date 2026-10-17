@@ -2995,6 +2995,83 @@ def rebuild_leaderboard_from_final(year_data, tournaments, gender, name_index, c
     return build_leaderboard_from_podiums(yd)
 
 
+# ---------------------------------------------------------------------------
+# Cricket (Nakka): окрема статистика MPR (Marks Per Round = мітки за раунд,
+# 1 раунд = 3 дротики). Nakka віддає cMarks/cDarts на гравця за турнір та
+# allMarks/allDarts на сторону в матчі. 501-середні для таких турнірів
+# порожні (score=0), тому вони НЕ мають потрапляти в звичайну статистику.
+# ---------------------------------------------------------------------------
+CRICKET = {"players": [], "matches": [], "h2h": []}
+
+
+def mpr_value(marks, darts):
+    if not darts or darts <= 0:
+        return None
+    return round((marks or 0) / darts * 3, 2)
+
+
+def is_cricket_stats(stats):
+    return any((s or {}).get("cMarks") for s in (stats or {}).values())
+
+
+def collect_cricket(t, tdid, data, name_index, canonical_names, known_women, known_men, default_gender, match_cache):
+    def gender_of(name):
+        if name in known_women:
+            return "women"
+        if name in known_men:
+            return "men"
+        return default_gender
+
+    for tpid, stat in data["stats"].items():
+        mpr = mpr_value(stat.get("cMarks"), stat.get("cDarts"))
+        if mpr is None:
+            continue
+        name = resolve_name(data["entries"].get(tpid, tpid), name_index, canonical_names)
+        if name in EXCLUDED_FROM_STATS_NAMES:
+            continue
+        CRICKET["players"].append({
+            "name": name, "gender": gender_of(name), "isUDL": t["isUDL"],
+            "date": t["date"], "tournament": t["name"], "city": t["city"],
+            "mpr": mpr, "marks": stat.get("cMarks") or 0, "darts": stat.get("cDarts") or 0,
+            "match": stat.get("match", 0), "winMatch": stat.get("winMatch", 0),
+            "rank": stat.get("rank", 0),
+        })
+
+    for m in fetch_match_averages(tdid, match_cache):
+        sd = m.get("statsData") or []
+        if len(sd) != 2:
+            continue
+        sides = []
+        for side in sd:
+            mp = mpr_value(side.get("allMarks"), side.get("allDarts"))
+            name = resolve_name(side.get("name") or "", name_index, canonical_names)
+            if mp is None or name in EXCLUDED_FROM_STATS_NAMES:
+                sides = []
+                break
+            sides.append({"name": name, "mpr": mp, "legs": side.get("winLegs") or 0,
+                          "sets": side.get("winSets") or 0, "gender": gender_of(name)})
+        if len(sides) != 2:
+            continue
+        a, b = sides
+        sa, sb = (a["sets"], b["sets"]) if (a["sets"] or b["sets"]) else (a["legs"], b["legs"])
+        if max(sa, sb) < 2:
+            continue  # обрив/незавершений матч
+        result = f"{sa}-{sb}"
+        rnd = (m.get("title") or "").strip()
+        for i, sd_ in enumerate(sides):
+            CRICKET["matches"].append({
+                "name": sd_["name"], "gender": sd_["gender"], "isUDL": t["isUDL"],
+                "date": t["date"], "tournament": t["name"], "city": t["city"],
+                "opponent": sides[1 - i]["name"], "mpr": sd_["mpr"], "result": result, "round": rnd,
+            })
+        CRICKET["h2h"].append({
+            "name1": a["name"], "mpr1": a["mpr"], "name2": b["name"], "mpr2": b["mpr"],
+            "result": result, "gender": a["gender"], "isUDL": t["isUDL"],
+            "date": t["date"], "tournament": t["name"], "format": t.get("format", ""),
+            "round": rnd, "city": t["city"],
+        })
+
+
 def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women=None, known_men=None):
     """Проходить по всіх турнірах, тягне Nakka tdid з посилань, і додає
     t['nakkaMedals'] / t['nakkaMedalsWomen'] (надійні призери напряму з API)
@@ -3009,6 +3086,8 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
     fetched = 0
     known_women = known_women or set()
     known_men = known_men or set()
+    for _k in CRICKET:
+        CRICKET[_k] = []
 
     for t in tournaments:
         links = t.get("links", {})
@@ -3089,6 +3168,11 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
             format_and_name = (t.get("format", "") + " " + t.get("name", "")).lower()
             is_excluded_format = "команди" in format_and_name or "пари" in format_and_name
             if is_excluded_format:
+                continue
+
+            if is_cricket_stats(data["stats"]):
+                collect_cricket(t, tdid, data, name_index, canonical_names, known_women, known_men,
+                                default_gender, match_cache)
                 continue
 
             for tpid, stat in data["stats"].items():
@@ -4615,52 +4699,6 @@ def finalize_aliases():
             MANUAL_NAME_ALIASES[k] = t
 
 
-def probe_cricket_nakka(tournaments, limit=3):
-    """Діагностика: зберігає сирі відповіді Nakka API по Cricket-турнірах
-    (cricket_probe.json), щоб побачити, в яких полях лежить MPR."""
-    out = []
-    for t in tournaments:
-        if "cricket" not in (t.get("format") or "").lower() and "крикет" not in (t.get("name") or "").lower():
-            continue
-        for slot in ("men", "women", "menAvg", "womenAvg", "tournament"):
-            link = (t.get("links") or {}).get(slot)
-            tdid = extract_tdid(link["url"]) if link else None
-            if not tdid:
-                continue
-            item = {"date": t["date"], "name": t["name"], "format": t.get("format"), "slot": slot, "tdid": tdid}
-            try:
-                st = fetch_json(f"{NAKKA_API_BASE}/tournament/stats?tdid={tdid}&kind=stats_list")
-                stats = st.get("stats", {})
-                keys = list(stats.items())[:3] if isinstance(stats, dict) else stats[:3]
-                item["stats_sample"] = keys
-                ml = fetch_json(f"{NAKKA_API_BASE}/match/list?tdid={tdid}&endMatch=1&count=3&skip=0")
-                item["match_sample"] = (ml.get("list") or [])[:2]
-            except Exception as e:
-                item["error"] = str(e)
-            out.append(item)
-            break
-        if len(out) >= limit:
-            break
-    for label, tdid in (("ЧУ Cricket чоловіки", "t_QUxC_3439"), ("ЧУ Cricket жінки", "t_esZW_3241")):
-        item = {"label": label, "tdid": tdid}
-        try:
-            item["tournament_get"] = fetch_json(f"{NAKKA_API_BASE}/tournament/get?tdid={tdid}&entry=1")
-            st = fetch_json(f"{NAKKA_API_BASE}/tournament/stats?tdid={tdid}&kind=stats_list")
-            stats = st.get("stats", {})
-            item["stats_sample"] = list(stats.items())[:3] if isinstance(stats, dict) else stats[:3]
-            ml = fetch_json(f"{NAKKA_API_BASE}/match/list?tdid={tdid}&endMatch=1&count=100&skip=0")
-            lst = ml.get("list") or []
-            item["match_count"] = len(lst)
-            item["match_sample"] = lst[:2]
-            item["final_matches"] = lst[-4:]
-        except Exception as e:
-            item["error"] = str(e)
-        out.append(item)
-    with open("cricket_probe.json", "w", encoding="utf-8") as f:
-        json.dump(out, f, ensure_ascii=False, indent=1)
-    print(f"  Cricket probe: {len(out)} турнірів → cricket_probe.json")
-
-
 def main():
     finalize_aliases()
     print("Fetching tournaments CSV...")
@@ -4749,10 +4787,6 @@ def main():
     known_women = {p["name"] for p in women_aggregate}
     known_men = {p["name"] for p in men_aggregate}
     nakka_player_records, nakka_match_records, nakka_h2h_records = enrich_with_nakka(tournaments, name_index, canonical_names, known_women, known_men)
-    try:
-        probe_cricket_nakka(tournaments)
-    except Exception as e:
-        print(f"  Cricket probe failed: {e}")
     print(f"  УДЛ: призери лише з Nakka ({apply_udl_medals_from_nakka(tournaments)} турнірів)")
     sheet_changes, sheet_unknown = apply_sheet_corrections(
         tournaments, men_year_data, women_year_data, name_index, canonical_names)
@@ -4862,6 +4896,7 @@ def main():
         "nakkaPlayerStats": nakka_player_records,
         "nakkaMatchStats": nakka_match_records,
         "nakkaH2HStats": nakka_h2h_records,
+        "nakkaCricket": {k: list(v) for k, v in CRICKET.items()},
         "currentRatingMen": current_rating_men,
         "currentRatingWomen": current_rating_women,
         "youtubeVideos": youtube_videos,
