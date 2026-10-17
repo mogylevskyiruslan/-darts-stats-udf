@@ -4615,6 +4615,52 @@ def finalize_aliases():
             MANUAL_NAME_ALIASES[k] = t
 
 
+def probe_cricket_nakka(tournaments, limit=3):
+    """Діагностика: зберігає сирі відповіді Nakka API по Cricket-турнірах
+    (cricket_probe.json), щоб побачити, в яких полях лежить MPR."""
+    out = []
+    for t in tournaments:
+        if "cricket" not in (t.get("format") or "").lower() and "крикет" not in (t.get("name") or "").lower():
+            continue
+        for slot in ("men", "women", "menAvg", "womenAvg", "tournament"):
+            link = (t.get("links") or {}).get(slot)
+            tdid = extract_tdid(link["url"]) if link else None
+            if not tdid:
+                continue
+            item = {"date": t["date"], "name": t["name"], "format": t.get("format"), "slot": slot, "tdid": tdid}
+            try:
+                st = fetch_json(f"{NAKKA_API_BASE}/tournament/stats?tdid={tdid}&kind=stats_list")
+                stats = st.get("stats", {})
+                keys = list(stats.items())[:3] if isinstance(stats, dict) else stats[:3]
+                item["stats_sample"] = keys
+                ml = fetch_json(f"{NAKKA_API_BASE}/match/list?tdid={tdid}&endMatch=1&count=3&skip=0")
+                item["match_sample"] = (ml.get("list") or [])[:2]
+            except Exception as e:
+                item["error"] = str(e)
+            out.append(item)
+            break
+        if len(out) >= limit:
+            break
+    for label, tdid in (("ЧУ Cricket чоловіки", "t_QUxC_3439"), ("ЧУ Cricket жінки", "t_esZW_3241")):
+        item = {"label": label, "tdid": tdid}
+        try:
+            item["tournament_get"] = fetch_json(f"{NAKKA_API_BASE}/tournament/get?tdid={tdid}&entry=1")
+            st = fetch_json(f"{NAKKA_API_BASE}/tournament/stats?tdid={tdid}&kind=stats_list")
+            stats = st.get("stats", {})
+            item["stats_sample"] = list(stats.items())[:3] if isinstance(stats, dict) else stats[:3]
+            ml = fetch_json(f"{NAKKA_API_BASE}/match/list?tdid={tdid}&endMatch=1&count=100&skip=0")
+            lst = ml.get("list") or []
+            item["match_count"] = len(lst)
+            item["match_sample"] = lst[:2]
+            item["final_matches"] = lst[-4:]
+        except Exception as e:
+            item["error"] = str(e)
+        out.append(item)
+    with open("cricket_probe.json", "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, indent=1)
+    print(f"  Cricket probe: {len(out)} турнірів → cricket_probe.json")
+
+
 def main():
     finalize_aliases()
     print("Fetching tournaments CSV...")
@@ -4703,6 +4749,10 @@ def main():
     known_women = {p["name"] for p in women_aggregate}
     known_men = {p["name"] for p in men_aggregate}
     nakka_player_records, nakka_match_records, nakka_h2h_records = enrich_with_nakka(tournaments, name_index, canonical_names, known_women, known_men)
+    try:
+        probe_cricket_nakka(tournaments)
+    except Exception as e:
+        print(f"  Cricket probe failed: {e}")
     print(f"  УДЛ: призери лише з Nakka ({apply_udl_medals_from_nakka(tournaments)} турнірів)")
     sheet_changes, sheet_unknown = apply_sheet_corrections(
         tournaments, men_year_data, women_year_data, name_index, canonical_names)
