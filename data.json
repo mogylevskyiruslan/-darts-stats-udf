@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-10-17T19:30:25.723691+00:00",
+  "lastUpdated": "2026-10-18T09:29:31.288232+00:00",
   "tournamentsCount": 214,
   "parts": {
    "nakkaMatchStats": {
@@ -96897,6 +96897,12 @@
  },
  "youtubeVideos": [
   {
+   "id": "ELyjsC8Y3aE",
+   "title": "V етап Кубку України з Дартсу 2026",
+   "published": "2026-10-17",
+   "thumbnail": "https://i2.ytimg.com/vi/ELyjsC8Y3aE/hqdefault.jpg"
+  },
+  {
    "id": "jfDZdKuT7SM",
    "title": "ВФД КУ Чоловіки (особистий залік) Одеса 2026",
    "published": "2026-09-06",
@@ -96907,15 +96913,15 @@
    "title": "ВФД КУ Чоловіки (особистий залік) Одеса 2026 ч.2",
    "published": "2026-09-06",
    "thumbnail": "https://i4.ytimg.com/vi/cx4nj0_8dqE/hqdefault.jpg"
-  },
-  {
-   "id": "MT_BImyYQkM",
-   "title": "ВФД ЧУ Чоловіки (пари) Одеса 2026 ч.2",
-   "published": "2026-09-06",
-   "thumbnail": "https://i2.ytimg.com/vi/MT_BImyYQkM/hqdefault.jpg"
   }
  ],
  "telegramNews": [
+  {
+   "text": "У неділю 18 жовтня, в Черкасах проходить 5 етап Кубку України 2026 з дартсу.\n🙋‍♀️Жінки: \n🙋‍♂️Чоловіки:",
+   "date": "2026-10-18",
+   "url": "https://t.me/fullbull/12858",
+   "photo": "https://cdn4.telesco.pe/file/pi7egElFKPw0Q8DiisaCvRWYGTxtCEH6e5ZAJVfrU7J70zA9ChodjsEpgn9Wn8BQXT58xT1epJZXYL86I_xnRPdsldAhlwxGLvbNFNyCQ4cVLzy-JtvfdjHg7McadiDeN1My7M8DA16oSXQ9LjhmViDBPr_MtVEbNSUAlkofIj95SGkuPF4k2ekW-6pEESYNZAATyqVeCM78SxP4ivFHPP-SSVNcFeysRTCWGagHQxvmSFmRCX1HTQTfjMx_7eHtD92YCGO6LIE2eOTP-PvRL9HbmxGF8teJS7nYeOFPe7pSxCo8W_yjYjSoZ26YpWCTDkzlMB5zR2iebpvvZuce0A.jpg"
+  },
   {
    "text": "🏆 ХАРЧЕНКО ТЕТЯНА — переможниця жіночого Чемпіонату України з крикету, який відбувся у Черкасах у суботу, 17 жовтня.\n🥇 Тетяна Харченко\n🥈 Інна Гончаренко\n🥉 Любов Терещенко\n👀",
    "date": "2026-10-17",
@@ -96926,7 +96932,7 @@
    "text": "17-го жовтня, у Черкасах проходить Чемпіонат України з дартсу (дисципліна Крикет).\nТурнірна сітка:\n🙋‍♀️Жінки ЧУ Крикет: \n🙋‍♂️Чоловіки ЧУ Крикет:",
    "date": "2026-10-17",
    "url": "https://t.me/fullbull/12847",
-   "photo": "https://cdn4.telesco.pe/file/Kg2d31Sb91ocYZDv3LYQeSyHABZHuMp7Jn2kM0GVAMMU4RU8G_OlDNZJXw_6GA0gZXdpIycCADcYI_3ix02-QFy_POwCMP6CVIV_csT1zGADjIABkWGpBQJzLtx37DcTvW6lQXtSco-LvWgZoSMKnxmoYE9WAMvk1igQShSMS-lXcigoh_o-kFbPZp1paAxoNTzcWfJkmgxezlAiPZw-R4xlnLQxPFR0YH7qkicLlVLhDnupkDzuJ8EaNgzJX5pN9Xvij7Gjxshyc5djKROJuxqUKjifyDCim3JY2oEUyOsalcPAooRbUgmrLTdaQ9TXDJxGrZVMgfAb6Azcse938A.jpg"
+   "photo": "https://cdn4.telesco.pe/file/nhTqw60XJPS8quZPfFrK5lloVZsNJYT0Poj9DplxWZBZSibk0Fp2dzccIqaGey6T7Amh8IKE8ioANlAj-rh0ItD_gFGbLVgXZux4rf5rY9tU-3CR65VT81cYAgv2SKxoMmDZDlbqgfpZa5oucU_V_njIwy7ipLCLJd3cvlx7FHc1Syj7BiGmCky6W-7ZD7exNB7eI8C8VMYvmo3joUY8tcRjnr9UC6oB4ma0bEgDw7Apligw1r6nT3k7gLGjr5T5H0u1q-hfZMayL7GUbC-mNs22iXdGp8QCxRpsi3_3uyRBo0MdBzNv5N9bbVThMzjmSbdNo_2G81tv-6Dp1-aWow.jpg"
   }
  ],
  "championsRecords": [
