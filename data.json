@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-10-21T09:58:30.843755+00:00",
+  "lastUpdated": "2026-10-21T13:44:03.602481+00:00",
   "tournamentsCount": 225,
   "parts": {
    "nakkaMatchStats": {
@@ -9399,21 +9399,29 @@
     }
    },
    "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Ємельянов Олександр",
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
     "bronze": [
      "Невінчаний Едуард"
     ]
    },
    "medalsWomen": {
-    "gold": "Квиклене Рената",
-    "silver": "Моісеєнко Віталіна",
+    "gold": "Чумак Ганна",
+    "silver": null,
+    "bronze": []
+   },
+   "nakkaMedals": {
+    "gold": "Усик Артем",
+    "silver": "Омельченко Владислав",
     "bronze": [
-     "Редзюк Тетяна"
+     "Невінчаний Едуард"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedalsWomen": {
+    "gold": "Чумак Ганна",
+    "silver": null,
+    "bronze": []
+   }
   },
   {
    "total": 38,
@@ -9446,7 +9454,13 @@
     ]
    },
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Мамика Олександр",
+    "silver": "Луков Олександр",
+    "bronze": [
+     "Усик Артем"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -9473,21 +9487,33 @@
     }
    },
    "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Ємельянов Олександр",
+    "gold": "Усик Артем/Ледєньов Вадим",
+    "silver": "Невінчаний Едуард/Омельченко Владислав",
     "bronze": [
-     "Невінчаний Едуард"
+     "Коваль Олександр/Луков Олександр"
     ]
    },
    "medalsWomen": {
-    "gold": "Квиклене Рената",
-    "silver": "Моісеєнко Віталіна",
+    "gold": "Моісеєнко Віталіна/Федотова Ірина",
+    "silver": "Білодід Христина/Квиклене Рената",
     "bronze": [
-     "Редзюк Тетяна"
+     "Редзюк Тетяна/Ледєньова Наталія"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Усик Артем/Ледєньов Вадим",
+    "silver": "Невінчаний Едуард/Омельченко Владислав",
+    "bronze": [
+     "Коваль Олександр/Луков Олександр"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Моісеєнко Віталіна/Федотова Ірина",
+    "silver": "Білодід Христина/Квиклене Рената",
+    "bronze": [
+     "Редзюк Тетяна/Ледєньова Наталія"
+    ]
+   }
   },
   {
    "total": 55,
@@ -9526,8 +9552,20 @@
      "Федотова Ірина"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Невінчаний Едуард",
+    "silver": "Ледєньов Вадим",
+    "bronze": [
+     "Усик Артем"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Редзюк Тетяна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Федотова Ірина"
+    ]
+   }
   },
   {
    "total": 29,
@@ -9553,14 +9591,20 @@
     }
    },
    "medals": {
-    "gold": "Усик Артем",
-    "silver": "Деркач Дмитро",
+    "gold": "Омельченко Владислав",
+    "silver": "Мамика Олександр",
     "bronze": [
-     "Мамика Олександр"
+     "Шинкаренко Василь"
     ]
    },
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Шинкаренко Василь"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -9594,7 +9638,13 @@
     ]
    },
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Усик Артем",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Шинкаренко Василь"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -9628,7 +9678,13 @@
     ]
    },
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Усик Артем",
+    "silver": "Деркач Дмитро",
+    "bronze": [
+     "Мамика Олександр"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -9655,14 +9711,20 @@
     }
    },
    "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Мамика Олександр",
+    "gold": "Мамика Олександр",
+    "silver": "Десинський Максим",
     "bronze": [
      "Усик Артем"
     ]
    },
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Мамика Олександр",
+    "silver": "Десинський Максим",
+    "bronze": [
+     "Усик Артем"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -9696,7 +9758,13 @@
     ]
    },
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Усик Артем"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -9723,11 +9791,12 @@
     }
    },
    "medals": {
-    "gold": "Клочко Володимир",
-    "silver": "Новак Едуард",
+    "gold": "Гетманцев Олександр",
+    "silver": null,
     "bronze": [
-     "Невінчаний Едуард"
-    ]
+     "Анісімов Денис"
+    ],
+    "gold2": "Гросов Олексій"
    },
    "medalsWomen": {
     "gold": "Лопухова Ганна",
@@ -9736,8 +9805,21 @@
      "Анісімова Світлана"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Гетманцев Олександр",
+    "silver": null,
+    "bronze": [
+     "Анісімов Денис"
+    ],
+    "gold2": "Гросов Олексій"
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Лопухова Ганна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Анісімова Світлана"
+    ]
+   }
   },
   {
    "total": 46,
@@ -9763,7 +9845,7 @@
     }
    },
    "medals": {
-    "gold": "Клочко Володимир",
+    "gold": "Клочков Володимир",
     "silver": "Новак Едуард",
     "bronze": [
      "Невінчаний Едуард"
@@ -9776,8 +9858,20 @@
      "Анісімова Світлана"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Клочков Володимир",
+    "silver": "Новак Едуард",
+    "bronze": [
+     "Невінчаний Едуард"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Лопухова Ганна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Анісімова Світлана"
+    ]
+   }
   },
   {
    "total": 81,
@@ -11015,7 +11109,7 @@
    "rank": 25
   },
   {
-   "name": "Клочко Володимир",
+   "name": "Клочков Володимир",
    "gold": 1,
    "silver": 0,
    "bronze": 0,
@@ -26002,7 +26096,7 @@
     },
     {
      "rank": "67",
-     "name": "Клочко Володимир",
+     "name": "Клочков Володимир",
      "scores": [
       null,
       null,
@@ -27656,7 +27750,7 @@
     },
     {
      "rank": "25",
-     "name": "Клочко Володимир",
+     "name": "Клочков Володимир",
      "scores": [
       100,
       25.6,
@@ -30212,7 +30306,7 @@
     },
     {
      "rank": "66",
-     "name": "Клочко Володимир",
+     "name": "Клочков Володимир",
      "scores": [
       59,
       null,
@@ -101983,16 +102077,6 @@
    "dartsModel": "Eric Bristow R1 Black",
    "dartsWeight": "24"
   },
-  "Топчу Владислав": {
-   "nickname": "Top Man",
-   "profession": "парамедик",
-   "birthDate": "08.03.1984",
-   "region": "Чернігівська область, Козелець",
-   "startYear": "квітень 2023",
-   "dartsManufacturer": "Target",
-   "dartsModel": "Gidro -2",
-   "dartsWeight": "23"
-  },
   "Баранов Олександр": {
    "nickname": "Alex",
    "profession": "економіст",
@@ -102309,6 +102393,14 @@
    "dartsModel": "Hydro 03",
    "dartsWeight": "24"
   },
+  "Лях Свiтлана": {
+   "nickname": "SPARK",
+   "birthDate": "01.03.1971",
+   "region": "Київ",
+   "startYear": "2019",
+   "dartsManufacturer": "Mission",
+   "dartsWeight": "23"
+  },
   "Скрипай Дмитро": {
    "nickname": "Stradivari",
    "profession": "Менеджер",
@@ -102343,6 +102435,16 @@
    "dartsManufacturer": "Red Dragon",
    "dartsModel": "Hellfire",
    "dartsWeight": "24"
+  },
+  "Топчу Владислав": {
+   "nickname": "Top Man",
+   "profession": "парамедик",
+   "birthDate": "08.03.1984",
+   "region": "Чернігівська область, Козелець",
+   "startYear": "квітень 2023",
+   "dartsManufacturer": "Target",
+   "dartsModel": "Gidro -2",
+   "dartsWeight": "23"
   },
   "Микитин Ярослав": {
    "nickname": "UncleKA",
@@ -102424,6 +102526,7 @@
    "region": "Київ"
   },
   "Шапка Євген": {
+   "nickname": "SHEV",
    "birthDate": "09.11.1984",
    "region": "Харків",
    "startYear": "2008",
@@ -102462,13 +102565,15 @@
   "Коломієць Олена": {
    "dartsWeight": "24"
   },
-  "Лях Свiтлана": {
-   "nickname": "SPARK",
-   "birthDate": "01.03.1971",
-   "region": "Київ",
-   "startYear": "2019",
-   "dartsManufacturer": "Mission",
-   "dartsWeight": "23"
+  "Цілуйко Владислав": {
+   "nickname": "KissMan",
+   "profession": "Водій",
+   "birthDate": "18.04.1993",
+   "region": "Полтава",
+   "startYear": "2023",
+   "dartsManufacturer": "Harrows",
+   "dartsModel": "NX90",
+   "dartsWeight": "22"
   }
  },
  "curatedPlayerNames": [
@@ -102741,8 +102846,8 @@
   "Кива Ірина",
   "Кисельов Дмитро",
   "Клочек Ксенія",
-  "Клочко Володимир",
   "Клочко Марина",
+  "Клочков Володимир",
   "Клюйков Роман",
   "Князь Каріна",
   "Кобзар Ігор",
