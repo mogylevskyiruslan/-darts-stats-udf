@@ -17,7 +17,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 90
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -30,7 +30,7 @@ jobs:
           python-version: '3.11'
 
       - name: Run sync script
-        run: python sync.py
+        run: python -u sync.py
 
       - name: Commit and push data.json if changed
         run: |
