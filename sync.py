@@ -385,6 +385,9 @@ def build_leaderboard_from_podiums(year_data):
             for name in podium[2:]:
                 if name:
                     totals[name]["bronze"] += 1
+            for name in entry.get("extraGold") or []:     # друге перше місце (спільне золото)
+                if name:
+                    totals[name]["gold"] += 1
 
     rows = []
     for name, t in totals.items():
@@ -946,7 +949,7 @@ CURATED_PLAYER_NAMES = [
     "Кива Ірина",
     "Кисельов Дмитро",
     "Клочек Ксенія",
-    "Клочко Володимир",
+    "Клочков Володимир",
     "Клочко Марина",
     "Клюйков Роман",
     "Князь Каріна",
@@ -1655,7 +1658,7 @@ MANUAL_NAME_ALIASES = {
     "Квасков Павел": "Квасков Павло",
     "Кенес Василий": "Кенес Василій",
     "Киселёв Дмитрий": "Кисельов Дмитро",
-    "Клочков Владимир": "Клочко Володимир",
+    "Клочков Владимир": "Клочков Володимир",
     "Кобзарь Игорь": "Кобзар Ігор",
     "Ковалев Дмитрий": "Ковальов Дмитро",
     "Коваль Александр": "Коваль Олександр",
@@ -1885,6 +1888,7 @@ MANUAL_NAME_ALIASES = {
     "Акользин Дмитро": "Акользін Дмитро",
     "Акользин": "Акользін Дмитро",
     "Чик Едуард": "Чік Едуард",
+    "Клочко Володимир": "Клочков Володимир",
     "Чабанова Ганна": "Чабанова Анна",
     "Анна Чабанова": "Чабанова Анна",
     "Ганна Чабанова": "Чабанова Анна",
@@ -2772,8 +2776,11 @@ def normalize_medal_names(text):
 def normalize_medal(med):
     if not med:
         return med
-    return {"gold": normalize_medal_names(med.get("gold")), "silver": normalize_medal_names(med.get("silver")),
-            "bronze": [normalize_medal_names(b) for b in (med.get("bronze") or [])]}
+    res = {"gold": normalize_medal_names(med.get("gold")), "silver": normalize_medal_names(med.get("silver")),
+           "bronze": [normalize_medal_names(b) for b in (med.get("bronze") or [])]}
+    if med.get("gold2"):
+        res["gold2"] = normalize_medal_names(med.get("gold2"))
+    return res
 
 
 def manual_override_for(t):
@@ -2827,8 +2834,10 @@ def apply_manual_medal_overrides_final(tournaments):
                 if n not in bronze:
                     bronze.append(n)
             new = {"gold": cur.get("gold"), "silver": cur.get("silver"), "bronze": bronze}
+            if cur.get("gold2"):
+                new["gold2"] = cur["gold2"]
             t[mk] = new
-            t[nk] = {"gold": new["gold"], "silver": new["silver"], "bronze": list(bronze)}
+            t[nk] = dict(new, bronze=list(bronze))
             added += 1
     if added:
         print(f"  Додано другі бронзи (ручні правки) для {added} заліків")
@@ -2988,10 +2997,15 @@ def rebuild_leaderboard_from_final(year_data, tournaments, gender, name_index, c
         m = t.get(nk) or t.get(mk)
         if m and m.get("gold") and year in yd and key in yd[year]:
             yd[year][key]["podium"] = [m["gold"], m.get("silver")] + list(m.get("bronze") or [])
+            if m.get("gold2"):
+                yd[year][key]["extraGold"] = [m["gold2"]]
     for stages in yd.values():
         for entry in stages.values():
             entry["podium"] = [to_curated_name(n, name_index, canonical_names, unknown) if n else None
                                for n in entry["podium"]]
+            if entry.get("extraGold"):
+                entry["extraGold"] = [to_curated_name(n, name_index, canonical_names, unknown) if n else None
+                                      for n in entry["extraGold"]]
     return build_leaderboard_from_podiums(yd)
 
 
@@ -3530,8 +3544,12 @@ MANUAL_MEDAL_OVERRIDES = {
 
 # Правки від 11.10.2026 (ручна звірка власника сайту) — найвище джерело.
 # Ключ: (дата, назва турніру). Склад команд — у дужках, пари — через "/".
-def _m(g, s, *b):
-    return {"gold": g, "silver": s, "bronze": list(b)}
+def _m(g, s, *b, gold2=None):
+    """gold2 - друге перше місце (коли двоє поділили золото; тоді s=None)."""
+    m = {"gold": g, "silver": s, "bronze": list(b)}
+    if gold2:
+        m["gold2"] = gold2
+    return m
 
 MANUAL_MEDAL_OVERRIDES.update({
     ("16.08.2026", "UDL FEST 2 CB&V CUP"): {
@@ -3693,6 +3711,56 @@ MANUAL_MEDAL_OVERRIDES.update({
     ("14.03.2015", "Кубок України"): {
         "medals": _m("Усик Артем", "Васюра Андрій", "Мамика Олександр"),
         "medalsWomen": _m("Чумак Ганна", "Черноброва Олександра", "Анісімова Світлана"),
+    },
+})
+
+# Правки від 21.10.2026 (сезон 2014)
+MANUAL_MEDAL_OVERRIDES.update({
+    ("01.02.2014", "Кубок України"): {
+        "medals": _m("Клочков Володимир", "Новак Едуард", "Невінчаний Едуард"),
+        "medalsWomen": _m("Лопухова Ганна", "Чумак Ганна", "Анісімова Світлана"),
+    },
+    ("02.02.2014", "Кубок України"): {     # Cricket, 1 етап: ДВА перших місця, срібла немає
+        "medals": _m("Гетманцев Олександр", None, "Анісімов Денис", gold2="Гросов Олексій"),
+        "medalsWomen": _m("Лопухова Ганна", "Чумак Ганна", "Анісімова Світлана"),
+    },
+    ("16.03.2014", "Кубок України"): {     # Cricket, 2 етап
+        "medals": _m("Мамика Олександр", "Десинський Максим", "Усик Артем"),
+        "medalsWomen": None,
+    },
+    ("15.03.2014", "Кубок України"): {
+        "medals": _m("Омельченко Владислав", "Мамика Олександр", "Усик Артем"),
+        "medalsWomen": None,
+    },
+    ("01.06.2014", "Кубок України"): {
+        "medals": _m("Усик Артем", "Деркач Дмитро", "Мамика Олександр"),
+        "medalsWomen": None,
+    },
+    ("10.08.2014", "Кубок України"): {     # Cricket, 3 етап
+        "medals": _m("Омельченко Владислав", "Мамика Олександр", "Шинкаренко Василь"),
+        "medalsWomen": None,
+    },
+    ("09.08.2014", "Кубок України"): {
+        "medals": _m("Усик Артем", "Мамика Олександр", "Шинкаренко Василь"),
+        "medalsWomen": None,
+    },
+    ("06.09.2014", "Кубок України"): {
+        "medals": _m("Невінчаний Едуард", "Ледєньов Вадим", "Усик Артем"),
+        "medalsWomen": _m("Редзюк Тетяна", "Чумак Ганна", "Федотова Ірина"),
+    },
+    ("07.09.2014", "ЧУ 2014 Пари"): {
+        "medals": _m("Усик Артем/Ледєньов Вадим", "Невінчаний Едуард/Омельченко Владислав",
+                     "Коваль Олександр/Луков Олександр"),
+        "medalsWomen": _m("Моісеєнко Віталіна/Федотова Ірина", "Білодід Христина/Квиклене Рената",
+                          "Редзюк Тетяна/Ледєньова Наталія"),
+    },
+    ("11.10.2014", "Кубок України"): {
+        "medals": _m("Мамика Олександр", "Луков Олександр", "Усик Артем"),
+        "medalsWomen": None,
+    },
+    ("12.10.2014", "ЧУ 2014 Cricket"): {
+        "medals": _m("Усик Артем", "Омельченко Владислав", "Невінчаний Едуард"),
+        "medalsWomen": _m("Чумак Ганна", None),     # поки відома лише переможниця; решту додати згодом
     },
 })
 

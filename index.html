@@ -1684,6 +1684,7 @@ function renderMedalCell(medals, medalsWomen){
     if(!m) return '';
     const rows = [];
     if(m.gold) rows.push(`<div class="m-row"><span class="m-icon">🥇</span>${m.gold}</div>`);
+    if(m.gold2) rows.push(`<div class="m-row"><span class="m-icon">🥇</span>${m.gold2}</div>`);
     if(m.silver) rows.push(`<div class="m-row"><span class="m-icon">🥈</span>${m.silver}</div>`);
     (m.bronze || []).forEach(name => rows.push(`<div class="m-row"><span class="m-icon">🥉</span>${name}</div>`));
     if(!rows.length) return '';
@@ -1693,8 +1694,8 @@ function renderMedalCell(medals, medalsWomen){
   if(!parts.length) return '<span class="m-empty">—</span>';
 
   const winnerBits = [];
-  if(medals && medals.gold) winnerBits.push('🥇 ' + medals.gold);
-  if(medalsWomen && medalsWomen.gold) winnerBits.push('🥇 ' + medalsWomen.gold);
+  if(medals && medals.gold) winnerBits.push('🥇 ' + medals.gold + (medals.gold2 ? ' / ' + medals.gold2 : ''));
+  if(medalsWomen && medalsWomen.gold) winnerBits.push('🥇 ' + medalsWomen.gold + (medalsWomen.gold2 ? ' / ' + medalsWomen.gold2 : ''));
   const summary = winnerBits.join(' · ') || 'Призери';
 
   return `<details class="medal-details">
