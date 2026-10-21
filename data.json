@@ -1,7 +1,7 @@
 {
  "meta": {
-  "lastUpdated": "2026-10-20T09:58:19.269130+00:00",
-  "tournamentsCount": 219,
+  "lastUpdated": "2026-10-21T09:58:30.843755+00:00",
+  "tournamentsCount": 225,
   "parts": {
    "nakkaMatchStats": {
     "file": "data/nakka_matches.json",
@@ -9376,6 +9376,228 @@
    "nakkaMedalsWomen": null
   },
   {
+   "total": null,
+   "men": 33,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "ЧУ 2014 Cricket",
+   "org": "ВФД",
+   "format": "Cricket",
+   "date": "12.10.2014",
+   "city": "Кривий Ріг",
+   "isUDL": false,
+   "chuCategory": "ЧУ Criket",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1SVE1kN6S36QAcS4F9Lvhw3t5MMSbCnAH1WUdW1Iq16c/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Ємельянов Олександр",
+    "bronze": [
+     "Невінчаний Едуард"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Квиклене Рената",
+    "silver": "Моісеєнко Віталіна",
+    "bronze": [
+     "Редзюк Тетяна"
+    ]
+   },
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 38,
+   "men": 35,
+   "menAvg": null,
+   "women": 3,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 6 етап",
+   "date": "11.10.2014",
+   "city": "Кривий Ріг",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1q26K26WN_OCYFCE8uHNruoqlohCymWp2R12IkvlfXY4/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Мамика Олександр",
+    "silver": "Луков Олександр",
+    "bronze": [
+     "Усик Артем"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 58,
+   "men": 46,
+   "menAvg": null,
+   "women": 12,
+   "womenAvg": null,
+   "name": "ЧУ 2014 Пари",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "07.09.2014",
+   "city": "Київ",
+   "isUDL": false,
+   "chuCategory": "ЧУ Пари",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1YxWC-zXB7isSmQSkFeVujvyxIdPamtijoZhM4Hx1fqc/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Ємельянов Олександр",
+    "bronze": [
+     "Невінчаний Едуард"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Квиклене Рената",
+    "silver": "Моісеєнко Віталіна",
+    "bronze": [
+     "Редзюк Тетяна"
+    ]
+   },
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 55,
+   "men": 43,
+   "menAvg": null,
+   "women": 12,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 5 етап",
+   "date": "06.09.2014",
+   "city": "Київ",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1MRSYfTBUOcLgPaABCK2AzqXUrGPErnAtEmmdlTZV4Mo/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Невінчаний Едуард",
+    "silver": "Ледєньов Вадим",
+    "bronze": [
+     "Усик Артем"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Редзюк Тетяна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Федотова Ірина"
+    ]
+   },
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 29,
+   "men": 26,
+   "menAvg": null,
+   "women": 3,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "Cricket / 3 етап",
+   "date": "10.08.2014",
+   "city": "Луцьк",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/14-LM9DqO4BjHl_s-rcdH04frs4m30QvXp5nMn4xAPy4/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Деркач Дмитро",
+    "bronze": [
+     "Мамика Олександр"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 36,
+   "men": 33,
+   "menAvg": null,
+   "women": 3,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 4 етап",
+   "date": "09.08.2014",
+   "city": "Луцьк",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1FULNElSmnxaMLsLoEoAqaM8NUmXDv2KX7a-Oor33j2w/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Усик Артем",
+    "silver": "Мамика Олександр",
+    "bronze": [
+     "Шинкаренко Василь"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
    "total": 35,
    "men": 35,
    "menAvg": null,
@@ -10568,21 +10790,21 @@
  ],
  "leaderboard": [
   {
+   "name": "Усик Артем",
+   "gold": 20,
+   "silver": 12,
+   "bronze": 10,
+   "champUA": 5,
+   "total": 42,
+   "rank": 1
+  },
+  {
    "name": "Омельченко Владислав",
    "gold": 19,
    "silver": 15,
    "bronze": 10,
    "champUA": 3,
    "total": 44,
-   "rank": 1
-  },
-  {
-   "name": "Усик Артем",
-   "gold": 19,
-   "silver": 12,
-   "bronze": 8,
-   "champUA": 5,
-   "total": 39,
    "rank": 2
   },
   {
@@ -10596,11 +10818,11 @@
   },
   {
    "name": "Мамика Олександр",
-   "gold": 8,
-   "silver": 10,
+   "gold": 9,
+   "silver": 11,
    "bronze": 9,
    "champUA": 0,
-   "total": 27,
+   "total": 29,
    "rank": 4
   },
   {
@@ -10615,10 +10837,10 @@
   {
    "name": "Ледєньов Вадим",
    "gold": 5,
-   "silver": 1,
+   "silver": 2,
    "bronze": 2,
    "champUA": 5,
-   "total": 8,
+   "total": 9,
    "rank": 6
   },
   {
@@ -10712,13 +10934,22 @@
    "rank": 16
   },
   {
+   "name": "Невінчаний Едуард",
+   "gold": 1,
+   "silver": 2,
+   "bronze": 3,
+   "champUA": 0,
+   "total": 6,
+   "rank": 17
+  },
+  {
    "name": "Понтус Андрій",
    "gold": 1,
    "silver": 2,
    "bronze": 0,
    "champUA": 0,
    "total": 3,
-   "rank": 17
+   "rank": 18
   },
   {
    "name": "Костильов Євгеній",
@@ -10727,7 +10958,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 2,
-   "rank": 18
+   "rank": 19
   },
   {
    "name": "Лагутін Андрій",
@@ -10736,7 +10967,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 2,
-   "rank": 19
+   "rank": 20
   },
   {
    "name": "Новак Едуард",
@@ -10745,7 +10976,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 2,
-   "rank": 20
+   "rank": 21
   },
   {
    "name": "Рогов Віталій",
@@ -10754,7 +10985,7 @@
    "bronze": 3,
    "champUA": 0,
    "total": 4,
-   "rank": 21
+   "rank": 22
   },
   {
    "name": "Гончаров Едуард",
@@ -10763,7 +10994,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 3,
-   "rank": 22
+   "rank": 23
   },
   {
    "name": "Воронін Олександр",
@@ -10772,7 +11003,7 @@
    "bronze": 0,
    "champUA": 1,
    "total": 1,
-   "rank": 23
+   "rank": 24
   },
   {
    "name": "Григоренко Віктор",
@@ -10781,7 +11012,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 24
+   "rank": 25
   },
   {
    "name": "Клочко Володимир",
@@ -10790,7 +11021,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 25
+   "rank": 26
   },
   {
    "name": "Паскару Габріель",
@@ -10799,7 +11030,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 26
+   "rank": 27
   },
   {
    "name": "Пасічніченко Артем",
@@ -10808,7 +11039,7 @@
    "bronze": 0,
    "champUA": 1,
    "total": 1,
-   "rank": 27
+   "rank": 28
   },
   {
    "name": "Пекарук Ілля",
@@ -10817,7 +11048,7 @@
    "bronze": 5,
    "champUA": 0,
    "total": 7,
-   "rank": 28
+   "rank": 29
   },
   {
    "name": "Сташевський Валентин",
@@ -10826,16 +11057,16 @@
    "bronze": 4,
    "champUA": 0,
    "total": 6,
-   "rank": 29
+   "rank": 30
   },
   {
-   "name": "Невінчаний Едуард",
+   "name": "Луков Олександр",
    "gold": 0,
    "silver": 2,
-   "bronze": 3,
+   "bronze": 2,
    "champUA": 0,
-   "total": 5,
-   "rank": 30
+   "total": 4,
+   "rank": 31
   },
   {
    "name": "Гетманцев Олександр",
@@ -10844,7 +11075,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 2,
-   "rank": 31
+   "rank": 32
   },
   {
    "name": "Кіфор Ярослав",
@@ -10853,19 +11084,10 @@
    "bronze": 0,
    "champUA": 0,
    "total": 2,
-   "rank": 32
-  },
-  {
-   "name": "Десинський Максим",
-   "gold": 0,
-   "silver": 1,
-   "bronze": 2,
-   "champUA": 0,
-   "total": 3,
    "rank": 33
   },
   {
-   "name": "Луков Олександр",
+   "name": "Десинський Максим",
    "gold": 0,
    "silver": 1,
    "bronze": 2,
@@ -11003,9 +11225,9 @@
    "name": "Шинкаренко Василь",
    "gold": 0,
    "silver": 0,
-   "bronze": 3,
+   "bronze": 4,
    "champUA": 0,
-   "total": 3,
+   "total": 4,
    "rank": 49
   },
   {
@@ -11265,10 +11487,10 @@
   {
    "name": "Чумак Ганна",
    "gold": 9,
-   "silver": 18,
+   "silver": 19,
    "bronze": 12,
    "champUA": 1,
-   "total": 39,
+   "total": 40,
    "rank": 3
   },
   {
@@ -11290,21 +11512,21 @@
    "rank": 5
   },
   {
+   "name": "Редзюк Тетяна",
+   "gold": 4,
+   "silver": 0,
+   "bronze": 5,
+   "champUA": 0,
+   "total": 9,
+   "rank": 6
+  },
+  {
    "name": "Ледєньова Наталія",
    "gold": 3,
    "silver": 8,
    "bronze": 6,
    "champUA": 0,
    "total": 17,
-   "rank": 6
-  },
-  {
-   "name": "Редзюк Тетяна",
-   "gold": 3,
-   "silver": 0,
-   "bronze": 5,
-   "champUA": 0,
-   "total": 8,
    "rank": 7
   },
   {
@@ -11702,6 +11924,15 @@
    "champUA": 0,
    "total": 1,
    "rank": 51
+  },
+  {
+   "name": "Федотова Ірина",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 52
   }
  ],
  "ratings": {
@@ -98027,31 +98258,31 @@
    "text": "🏆 ТЕТЯНА ХАРЧЕНКО — ПЕРЕМОЖНИЦЯ V ЕТАПУ КУБКУ УКРАЇНИ 2026 З ДАРТСУ!\n18 жовтня у Черкасах відбувся V етап Кубку України 2026 серед жінок.\n🥇 Тетяна Харченко\n🥈 Ксенія Лановенко\n🥉 Наталія Шклярук\n☑️Чекаути 100+:\n1️⃣1️⃣7️⃣ — Інна Гончаренко\n👀",
    "date": "2026-10-18",
    "url": "https://t.me/fullbull/12862",
-   "photo": "https://cdn4.telesco.pe/file/vKNUSZDGuzS5nDViHAwipRpSCVWCvXni-QLUCw4wUvNNGq-EO_2ZCB0akuzSL7uSH4ALZaqWuLVt_0Qm8wxB_yh4XT0IeV5cgY5eGpmkJqip0AkApyEIChfN6ftApwobiDTwlipeooZbxyYlJt2CUIxUnJvAwb1YGlSXg965gWVTro6qJK6w7kTRKI9lwecF3D_CgkQgY7MyFLxIl-W5AxbJOLKP--AdQp-Tvhi87g1oZDz-UctY8ckmOdpkRxIemu4PI_SNrhOVghONjZKRGXj4x23CF-QjmdtecQqN1iG4IebvU32n3yr9Zo8Fg0JLfofSLxEFAkohi-434tPCBg.jpg"
+   "photo": "https://cdn4.telesco.pe/file/NkHM0_MRa96TFQ3CT0_k0-7UVvwZUvkRN6zzeEQyYHxWlmWm_sLMP9ogll6TuG1klkwSUO1hH_Uboa5mvbLdh38PW9y8MHibWfeMzZkr1vxrvqI_IGYfxrlvlbIagpg7mRL0s9YpVm8JW9qPBKJFuH0JIISg1Rt5YAMALBDOfQNRUO51gwaQXp3WYZLk2usiFaRvnlHWx-qtSZPpCg4x8-4R3sA9t1fSvveixL7FUwEHqvTNybCrdZEz-ZpheYvToYLCXzj_0vty9w2AWs85R79HIzlLCR94WGs8MTqey_pKWzoLNayRO_3Jl-B2hfesCLlK5bEkmKaoqT3OWI6TwQ.jpg"
   },
   {
    "text": "🏆 ЄВГЕН ОВСІЄНКО — переможець V етапу Кубку України 2026 з дартсу, який відбувся у Черкасах, у неділю, 18 жовтня. \n🥇 Євген Овсієнко\n🥈 Руслан Могилевський\n🥉 Степан Гакман\n1️⃣8️⃣0️⃣×6️⃣— Євген Овсієнко\n1️⃣8️⃣0️⃣×2️⃣ — Едуард Гончаров, Степан Гакман, Дін Фатех, Олександр Абчугський\n1️⃣8️⃣0️⃣ — Віталій Рогов, Ігор Рашоянц, Юрій Агневщиков, Володимир Смик\n🎯 Чекаути 100+\n1️⃣4️⃣8️⃣ — Євген Ванда\n1️⃣3️⃣7️⃣ — Євген Овсієнко\n1️⃣1️⃣3️⃣ — Сергій Аверін\n1️⃣0️⃣8️⃣ — Дін Фатех, Ігор Рашоянц, Євген Овсієнко\n1️⃣",
    "date": "2026-10-18",
    "url": "https://t.me/fullbull/12861",
-   "photo": "https://cdn4.telesco.pe/file/jZviX2rWmNbZ3tk3CkvqR0tah6UpenIywElgwAu4wjaFK5vYa1w9_Jg-kjmLtxAMmpUuI3-3JOrZT1Yl1uQGeRtyo1GuaCSfCdCpRw9NhKkj6uusLzjpREXHnIyQ1FvEb599RziNVNslQ3095rJRcIh6TFIHPh3_Q8aauWSzeoxiUgfz6jX9x-JHalH5sECczIBR_Jvtk1VHHRDuK83oIGWARiYCt-k2I31EXn0295gQmRhFxCneITFoVjMZ-m107-dxJTXt81crkLlTXOmUU9t_tT5xhLCvGxwfWaeDX1IldbQNgbXH_PUqqMzWp7fuYNh1ley1s2AZTdiC93OeVA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/qX2OZ7SWRGuSyVERjmbnt_m6hpdsq464bYrx9lH5qcT4oceppiDGG6y5mm9NFyD3JgTN946UtSYn3EWX9tsE-hn_q5-7Wg4kAHMsF5kDzuyrvs0oxHMgtNiw8oNXgBrT9RhwOhryKhENcAXvVguBhOklL8GEugF7ESy_1vMb7BqJyfE2mj2YrmPelBjIXmYc9xtF-MJydgg-iHLRZRXlhWEX6rMyMnkGQuHH5r7KfBksGNUIVHf0dna402S00pH1lTNapujJaZIxb8XsvVYhMh5k_-SJtc85DbVyCSqmYfX5z9-bFY0t6y8LGTYZ8SP9VKfPPpMS3BADOF4LvCARVQ.jpg"
   },
   {
    "text": "У неділю 18 жовтня, в Черкасах проходить 5 етап Кубку України 2026 з дартсу.\n🙋‍♀️Жінки: \n🙋‍♂️Чоловіки:",
    "date": "2026-10-18",
    "url": "https://t.me/fullbull/12858",
-   "photo": "https://cdn4.telesco.pe/file/FoPkK7UdREbw2lIwQquzYyN_4_AbwXSZwFpW4DV3_6L7CesE6I_EXK_FKFied2l1Lv-Te96uBknCmZvaFV6cgsOEWsMbDds7FUh72gP6PyvKilCeCjcOELBUBlUFeqgg3mYJFKd2AOOhD11LoErdLdJVp1tuPF1Jc2nzXW79IpNdTw8a_0icCRNyCDCBklZkIZbwEluF8PSYpMC4EykYToCvxZJbpp938yEaoVyjvyNPqicihMVLEtflnZ0JC7VsQhYPPpWB2i2l27n17zaltIDGyb0JXorXTymm9qHfBIpICGY7lrKOqs0SSVWC56O_Z5BCOBUA0dEGoY2s4XEPrA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/TIMPTA2pt5iv4weM0Rr36DccOFZGmEFRdnw6YkYbn8W3ztzh9flhhOVGzZQzhL9u4g4YuQE3oHwRKvwPodWesuTGdplk_zjpCjqRWBI3SuLWxfW_HzpU_g7vm-eQKK4sdam7hEUEjgf6TD1CwTpO4Re03WBkSO8cB13X66CPeRoLwx06dFIAmG2VQH272_O_gatQehMlxtc4Yjp1Y2t00yL2FBkGXzqyWKAmZXCYH_R70KaxE4AuhBRemMsDD8GgIPQNtyde3y31QeMyzK3O6ewNJge7YmLCviaP5IzET_tml0sUHV_YJVNfZ3mm-aVt0D8ZR-rVzcVLJOMor743Ug.jpg"
   },
   {
    "text": "🏆 ХАРЧЕНКО ТЕТЯНА — переможниця жіночого Чемпіонату України з крикету, який відбувся у Черкасах у суботу, 17 жовтня.\n🥇 Тетяна Харченко\n🥈 Інна Гончаренко\n🥉 Любов Терещенко\n👀",
    "date": "2026-10-17",
    "url": "https://t.me/fullbull/12852",
-   "photo": "https://cdn4.telesco.pe/file/ZqpyQ578aA5NQPrlnbWkPnTd9KxBXEJVzCX4gaJM-CnVRw-z-5vTAHgljPA3AffCSKdr3ocXkpuuF_Iy_hZNMpwEPPDOCJeBLIlB-Jsd0JSwrduCiXGZDenY1M8ocu_d0sYiR6UfqcINMWM0LdfaTnvIGUyBohZJJMekglH-ofLe_G8YwCHcUSIlI3M35596TZeCLeXQgNg4Ibaq5YFHrxvB8XFXGOiXDuThv3KPgEuqVeNL1drP6TcNeJkbGyHjTT3SG8YjCaiapwu-rfq-r39jjvt7dAEXtNH7-EA7Yc5HqcjWdAgFmJnnx2mw6Nhf-28cFcHoQSQAu87TYX2_bA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/Ivr6HgTKk5H4EVBnzzvi45laDhU_YxyjqLCN7KYgcF1nj7AO_IWcYdaQ8t7JYPb5lzA9OaCuENBlrPlDI9l9OTQtepZPleh0GAuTnmdTxZoIWd6e6amA8GHjr5EZQ0BG73IG6qZehT-hBbTi8KdtoIQsqrI6fiKtyblYyngvFvoRuGomEEy8WJaOTuQ1zuPQOFnjqxtA1ZqpdZJ0v1m_R10z3rh1lOj9vMKj8IukttNL8G-cG26eMxL9SUKP3KrthcShjA9kFxD5NwyC_b0IgAovnA2JWchsERczzIoITTbAJzXyB59B2BQ4e-29UVpl1lRDdQKTVM0iXzfZrFMyog.jpg"
   },
   {
    "text": "17-го жовтня, у Черкасах проходить Чемпіонат України з дартсу (дисципліна Крикет).\nТурнірна сітка:\n🙋‍♀️Жінки ЧУ Крикет: \n🙋‍♂️Чоловіки ЧУ Крикет:",
    "date": "2026-10-17",
    "url": "https://t.me/fullbull/12847",
-   "photo": "https://cdn4.telesco.pe/file/A00eqnl5Nkj_vgEucRBGbivMvL5Jj4c-P5vFj9rItz6N30rtmvyuE-vXltwEpYHoWAYP8_OOidKNpYi-Mh4JS8kL85HVftZx5YWb4hx8gl80XUBh6aZsC1hnjM2KoBVBophR5VFWPgIqeOTf4awqAYS1YdShm9WGfwVzVA5bN5enLKDsE4JvYKsVtxE0trLgDLYc0UDpim6uHQayRB2VpmABw9JMf23la3Fw6hAbmUxMSRm-adHFBhpPdfQCsA8vCfugwfkEnAEeDwtorWidyz_RUwGjRs3GYszg1sJxwWA4SnKuQyZpOySzWWmPnw0VIOUU008n8VY6DNgij6yvsQ.jpg"
+   "photo": "https://cdn4.telesco.pe/file/RbU6l7j3AMkSjQHgW0wFsX4rBlEHS5e_dgWRIGubP7GGDbsGur8BFeu6LMofRw_VcVHmkPJQTcublKxkczornhTCgzu_V9qczIucmW2EkU2lkhUzzs6oZiNMHcuvNlLq5f2-oSW97GLN5ZiL5u0v3sXe1XJuQWH4yLAAyMedL8cb6Q540gvZ5kzOlwZoQqURLqog6EigYDsUxtACoE61dpMBDq7efXhgixQAhSjwQmSkv9oeGKU-6srlMaTgxG-ky-oMfAlh-jpDpUq_EKlxBrjxoKj5Gym8B85I7fmAUIsXiqP4Jo3CEE0t8rPbkony9u9lLs-RI11_N_JGihbDOA.jpg"
   }
  ],
  "championsRecords": [
@@ -100955,6 +101186,35 @@
   },
   {
    "year": 2014,
+   "category": "пари",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Невінчаний Едуард",
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2014,
+   "category": "пари",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Білодід Христина",
+    "Квиклене Рената"
+   ]
+  },
+  {
+   "year": 2014,
+   "category": "cricket",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Омельченко Владислав"
+   ]
+  },
+  {
+   "year": 2014,
    "category": "501do",
    "gender": "men",
    "place": 2,
@@ -100979,6 +101239,35 @@
    "names": [
     "Гросов Олексій",
     "Лопухова Ганна"
+   ]
+  },
+  {
+   "year": 2014,
+   "category": "пари",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Коваль Олександр",
+    "Луков Олександр"
+   ]
+  },
+  {
+   "year": 2014,
+   "category": "пари",
+   "gender": "women",
+   "place": 3,
+   "names": [
+    "Редзюк Тетяна",
+    "Ледєньова Наталія"
+   ]
+  },
+  {
+   "year": 2014,
+   "category": "cricket",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Невінчаний Едуард"
    ]
   },
   {
