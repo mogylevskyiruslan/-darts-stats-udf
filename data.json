@@ -1,7 +1,7 @@
 {
  "meta": {
-  "lastUpdated": "2026-10-21T13:44:03.602481+00:00",
-  "tournamentsCount": 225,
+  "lastUpdated": "2026-10-22T09:58:31.180455+00:00",
+  "tournamentsCount": 230,
   "parts": {
    "nakkaMatchStats": {
     "file": "data/nakka_matches.json",
@@ -10214,6 +10214,96 @@
    "nakkaMedalsWomen": null
   },
   {
+   "total": null,
+   "men": null,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "Cricket / 2 етап",
+   "date": "04.05.2013",
+   "city": "Слов'янськ",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Невінчаний Едуард",
+    "bronze": [
+     "Хімчак Сергій"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": null,
+   "men": null,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 4 етап",
+   "date": "03.05.2013",
+   "city": "Слов'янськ",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": null
+   },
+   "medals": null,
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 24,
+   "men": 24,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 3 етап",
+   "date": "21.04.2013",
+   "city": "Ужгород",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/128N_0Nv96yYeTND-kKuf7VuFr0rvJPdem-e7fkgbYFI/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Береш Карол",
+    "silver": "Стецишин Віталій",
+    "bronze": [
+     "Горняк Іштван"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
    "total": 54,
    "men": 51,
    "menAvg": null,
@@ -10251,6 +10341,86 @@
      "Хімчак Сергій"
     ]
    },
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 43,
+   "men": 37,
+   "menAvg": null,
+   "women": 6,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "Cricket / 1 етап",
+   "date": "03.02.2013",
+   "city": "Донецьк",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1H-wpkanaJ9OFGeSQK6EVVR2xWqf37xAmFbAxrSMl5nQ/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Медведєв Олександр",
+    "silver": "Єрєменко Василій",
+    "bronze": [
+     "Костильов Євгеній"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Лопухова Ганна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Соловьова Юлія"
+    ]
+   },
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 56,
+   "men": 48,
+   "menAvg": null,
+   "women": 8,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 1 етап",
+   "date": "02.02.2013",
+   "city": "Донецьк",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1LLfof0goSCCIdDVic0gx8S7crRcjiHVBnAPUJeARmI0/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Медведєв Олександр",
+    "silver": "Єрєменко Василій",
+    "bronze": [
+     "Костильов Євгеній"
+    ]
+   },
+   "medalsWomen": {
+    "gold": "Лопухова Ганна",
+    "silver": "Чумак Ганна",
+    "bronze": [
+     "Соловьова Юлія"
+    ]
+   },
+   "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
   {
@@ -11049,9 +11219,9 @@
    "name": "Костильов Євгеній",
    "gold": 1,
    "silver": 1,
-   "bronze": 0,
+   "bronze": 1,
    "champUA": 0,
-   "total": 2,
+   "total": 3,
    "rank": 19
   },
   {
@@ -11091,13 +11261,22 @@
    "rank": 23
   },
   {
+   "name": "Береш Карол",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 24
+  },
+  {
    "name": "Воронін Олександр",
    "gold": 1,
    "silver": 0,
    "bronze": 0,
    "champUA": 1,
    "total": 1,
-   "rank": 24
+   "rank": 25
   },
   {
    "name": "Григоренко Віктор",
@@ -11106,7 +11285,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 25
+   "rank": 26
   },
   {
    "name": "Клочков Володимир",
@@ -11115,7 +11294,16 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 26
+   "rank": 27
+  },
+  {
+   "name": "Медведєв Олександр",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 28
   },
   {
    "name": "Паскару Габріель",
@@ -11124,7 +11312,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 27
+   "rank": 29
   },
   {
    "name": "Пасічніченко Артем",
@@ -11133,7 +11321,7 @@
    "bronze": 0,
    "champUA": 1,
    "total": 1,
-   "rank": 28
+   "rank": 30
   },
   {
    "name": "Пекарук Ілля",
@@ -11142,7 +11330,7 @@
    "bronze": 5,
    "champUA": 0,
    "total": 7,
-   "rank": 29
+   "rank": 31
   },
   {
    "name": "Сташевський Валентин",
@@ -11151,7 +11339,7 @@
    "bronze": 4,
    "champUA": 0,
    "total": 6,
-   "rank": 30
+   "rank": 32
   },
   {
    "name": "Луков Олександр",
@@ -11160,7 +11348,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 4,
-   "rank": 31
+   "rank": 33
   },
   {
    "name": "Гетманцев Олександр",
@@ -11169,7 +11357,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 2,
-   "rank": 32
+   "rank": 34
   },
   {
    "name": "Кіфор Ярослав",
@@ -11178,7 +11366,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 2,
-   "rank": 33
+   "rank": 35
   },
   {
    "name": "Десинський Максим",
@@ -11187,7 +11375,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 3,
-   "rank": 34
+   "rank": 36
   },
   {
    "name": "Ємельянов Олександр",
@@ -11196,7 +11384,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 2,
-   "rank": 35
+   "rank": 37
   },
   {
    "name": "Абчугський Олександр",
@@ -11205,7 +11393,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 2,
-   "rank": 36
+   "rank": 38
   },
   {
    "name": "Аверін Сергій",
@@ -11214,7 +11402,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 2,
-   "rank": 37
+   "rank": 39
   },
   {
    "name": "Буханцов Тарас",
@@ -11223,7 +11411,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 2,
-   "rank": 38
+   "rank": 40
   },
   {
    "name": "Кобзар Ігор",
@@ -11232,7 +11420,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 2,
-   "rank": 39
+   "rank": 41
   },
   {
    "name": "Євмєнєнков Максим",
@@ -11241,28 +11429,10 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 40
-  },
-  {
-   "name": "Бендрик Олег",
-   "gold": 0,
-   "silver": 1,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 1,
-   "rank": 41
-  },
-  {
-   "name": "Деркач Дмитро",
-   "gold": 0,
-   "silver": 1,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 1,
    "rank": 42
   },
   {
-   "name": "Зольдін Фелікс",
+   "name": "Єрєменко Василій",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -11271,7 +11441,7 @@
    "rank": 43
   },
   {
-   "name": "Марченко Денис",
+   "name": "Бендрик Олег",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -11280,7 +11450,7 @@
    "rank": 44
   },
   {
-   "name": "Мінченок Юрій",
+   "name": "Деркач Дмитро",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -11289,7 +11459,7 @@
    "rank": 45
   },
   {
-   "name": "Омесь Ілля",
+   "name": "Зольдін Фелікс",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -11298,7 +11468,7 @@
    "rank": 46
   },
   {
-   "name": "Скарлат Дмитро",
+   "name": "Марченко Денис",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -11307,7 +11477,7 @@
    "rank": 47
   },
   {
-   "name": "Субаши Алпер",
+   "name": "Мінченок Юрій",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -11316,13 +11486,49 @@
    "rank": 48
   },
   {
+   "name": "Омесь Ілля",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 49
+  },
+  {
+   "name": "Скарлат Дмитро",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 50
+  },
+  {
+   "name": "Стецишин Віталій",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 51
+  },
+  {
+   "name": "Субаши Алпер",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 52
+  },
+  {
    "name": "Шинкаренко Василь",
    "gold": 0,
    "silver": 0,
    "bronze": 4,
    "champUA": 0,
    "total": 4,
-   "rank": 49
+   "rank": 53
   },
   {
    "name": "Гринів Олександр",
@@ -11331,7 +11537,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 50
+   "rank": 54
   },
   {
    "name": "Кисельов Дмитро",
@@ -11340,7 +11546,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 51
+   "rank": 55
   },
   {
    "name": "Марков Сергій",
@@ -11349,7 +11555,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 52
+   "rank": 56
   },
   {
    "name": "Пономаренко Денис",
@@ -11358,7 +11564,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 53
+   "rank": 57
   },
   {
    "name": "Солтис Андрій",
@@ -11367,7 +11573,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 54
+   "rank": 58
   },
   {
    "name": "Троценко Артем",
@@ -11376,7 +11582,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 55
+   "rank": 59
   },
   {
    "name": "Анісімов Денис",
@@ -11385,7 +11591,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 56
+   "rank": 60
   },
   {
    "name": "Бадира Олександр",
@@ -11394,7 +11600,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 57
+   "rank": 61
   },
   {
    "name": "Гакман Степан",
@@ -11403,46 +11609,10 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 58
-  },
-  {
-   "name": "Гоян Дмитро",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1,
-   "rank": 59
-  },
-  {
-   "name": "Гросов Олексій",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1,
-   "rank": 60
-  },
-  {
-   "name": "Грєков Юрій",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1,
-   "rank": 61
-  },
-  {
-   "name": "Дідов Василь",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 1,
-   "champUA": 0,
-   "total": 1,
    "rank": 62
   },
   {
-   "name": "Козловський Богдан",
+   "name": "Горняк Іштван",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11451,7 +11621,7 @@
    "rank": 63
   },
   {
-   "name": "Коломієць Андрій",
+   "name": "Гоян Дмитро",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11460,7 +11630,7 @@
    "rank": 64
   },
   {
-   "name": "Некрістов Станіслав",
+   "name": "Гросов Олексій",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11469,7 +11639,7 @@
    "rank": 65
   },
   {
-   "name": "Озджан Мустафа",
+   "name": "Грєков Юрій",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11478,7 +11648,7 @@
    "rank": 66
   },
   {
-   "name": "Пальонний Ігор",
+   "name": "Дідов Василь",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11487,7 +11657,7 @@
    "rank": 67
   },
   {
-   "name": "Сиром'ятников Олександр",
+   "name": "Козловський Богдан",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11496,7 +11666,7 @@
    "rank": 68
   },
   {
-   "name": "Стейер Себастьян",
+   "name": "Коломієць Андрій",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11505,7 +11675,7 @@
    "rank": 69
   },
   {
-   "name": "Титков Олег",
+   "name": "Некрістов Станіслав",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11514,7 +11684,7 @@
    "rank": 70
   },
   {
-   "name": "Толкачов В'ячеслав",
+   "name": "Озджан Мустафа",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11523,7 +11693,7 @@
    "rank": 71
   },
   {
-   "name": "Тямолов Роман",
+   "name": "Пальонний Ігор",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11532,7 +11702,7 @@
    "rank": 72
   },
   {
-   "name": "Холліуелл Вейн",
+   "name": "Сиром'ятников Олександр",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11541,7 +11711,7 @@
    "rank": 73
   },
   {
-   "name": "Хімчак Сергій",
+   "name": "Стейер Себастьян",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11550,13 +11720,58 @@
    "rank": 74
   },
   {
-   "name": "Царолунга Дмитро",
+   "name": "Титков Олег",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
    "champUA": 0,
    "total": 1,
    "rank": 75
+  },
+  {
+   "name": "Толкачов В'ячеслав",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 76
+  },
+  {
+   "name": "Тямолов Роман",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 77
+  },
+  {
+   "name": "Холліуелл Вейн",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 78
+  },
+  {
+   "name": "Хімчак Сергій",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 79
+  },
+  {
+   "name": "Царолунга Дмитро",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 80
   }
  ],
  "leaderboardWomen": [
@@ -11581,11 +11796,20 @@
   {
    "name": "Чумак Ганна",
    "gold": 9,
-   "silver": 19,
+   "silver": 20,
    "bronze": 12,
    "champUA": 1,
-   "total": 40,
+   "total": 41,
    "rank": 3
+  },
+  {
+   "name": "Лопухова Ганна",
+   "gold": 5,
+   "silver": 1,
+   "bronze": 1,
+   "champUA": 1,
+   "total": 7,
+   "rank": 4
   },
   {
    "name": "Анісімова Світлана",
@@ -11594,15 +11818,6 @@
    "bronze": 3,
    "champUA": 2,
    "total": 13,
-   "rank": 4
-  },
-  {
-   "name": "Лопухова Ганна",
-   "gold": 4,
-   "silver": 1,
-   "bronze": 1,
-   "champUA": 1,
-   "total": 6,
    "rank": 5
   },
   {
@@ -11876,7 +12091,7 @@
    "rank": 35
   },
   {
-   "name": "Солтис Ганна",
+   "name": "Соловьова Юлія",
    "gold": 0,
    "silver": 0,
    "bronze": 2,
@@ -11885,7 +12100,7 @@
    "rank": 36
   },
   {
-   "name": "Спекторенко Катерина",
+   "name": "Солтис Ганна",
    "gold": 0,
    "silver": 0,
    "bronze": 2,
@@ -11894,16 +12109,16 @@
    "rank": 37
   },
   {
-   "name": "Ігнатюк Наталія",
+   "name": "Спекторенко Катерина",
    "gold": 0,
    "silver": 0,
-   "bronze": 1,
+   "bronze": 2,
    "champUA": 0,
-   "total": 1,
+   "total": 2,
    "rank": 38
   },
   {
-   "name": "Букетова Iрина",
+   "name": "Ігнатюк Наталія",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11912,7 +12127,7 @@
    "rank": 39
   },
   {
-   "name": "Білецька Олена",
+   "name": "Букетова Iрина",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11921,7 +12136,7 @@
    "rank": 40
   },
   {
-   "name": "Гордієнко Христина",
+   "name": "Білецька Олена",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11930,7 +12145,7 @@
    "rank": 41
   },
   {
-   "name": "Карнаух Валентина",
+   "name": "Гордієнко Христина",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11939,7 +12154,7 @@
    "rank": 42
   },
   {
-   "name": "Лях Свiтлана",
+   "name": "Карнаух Валентина",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11948,7 +12163,7 @@
    "rank": 43
   },
   {
-   "name": "Молдован Емілія",
+   "name": "Лях Свiтлана",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11957,7 +12172,7 @@
    "rank": 44
   },
   {
-   "name": "Некрістова Наталія",
+   "name": "Молдован Емілія",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11966,7 +12181,7 @@
    "rank": 45
   },
   {
-   "name": "Паламар Оксана",
+   "name": "Некрістова Наталія",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11975,7 +12190,7 @@
    "rank": 46
   },
   {
-   "name": "Полтавець Світлана",
+   "name": "Паламар Оксана",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -11984,7 +12199,7 @@
    "rank": 47
   },
   {
-   "name": "Соловьова Юлія",
+   "name": "Полтавець Світлана",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -98352,31 +98567,25 @@
    "text": "🏆 ТЕТЯНА ХАРЧЕНКО — ПЕРЕМОЖНИЦЯ V ЕТАПУ КУБКУ УКРАЇНИ 2026 З ДАРТСУ!\n18 жовтня у Черкасах відбувся V етап Кубку України 2026 серед жінок.\n🥇 Тетяна Харченко\n🥈 Ксенія Лановенко\n🥉 Наталія Шклярук\n☑️Чекаути 100+:\n1️⃣1️⃣7️⃣ — Інна Гончаренко\n👀",
    "date": "2026-10-18",
    "url": "https://t.me/fullbull/12862",
-   "photo": "https://cdn4.telesco.pe/file/NkHM0_MRa96TFQ3CT0_k0-7UVvwZUvkRN6zzeEQyYHxWlmWm_sLMP9ogll6TuG1klkwSUO1hH_Uboa5mvbLdh38PW9y8MHibWfeMzZkr1vxrvqI_IGYfxrlvlbIagpg7mRL0s9YpVm8JW9qPBKJFuH0JIISg1Rt5YAMALBDOfQNRUO51gwaQXp3WYZLk2usiFaRvnlHWx-qtSZPpCg4x8-4R3sA9t1fSvveixL7FUwEHqvTNybCrdZEz-ZpheYvToYLCXzj_0vty9w2AWs85R79HIzlLCR94WGs8MTqey_pKWzoLNayRO_3Jl-B2hfesCLlK5bEkmKaoqT3OWI6TwQ.jpg"
+   "photo": "https://cdn4.telesco.pe/file/s2QTde-eDQ6Z02CtAOt1wOXEBwimilZmqKkMEiVDFgYtuH5mm1M-jw1FXwF3-m6Z42Gt1SkpMWe9KSvubQ6nSiAZlgjqdiqPnVdt8obzLVD9QNJOoPSxLxJg9b8oQWafJtk2euArqeTjO8vdxD4ldZPjimLJ6Xd214SPlqotqA26f4K2QGs1PkEHau-_X9-n43dtIe_9T1Vk_sTBSM8SU0rl2Yulrop5XBQV6oaQ0rB6vnNDB9-aH7JxroDwxBzMO9cIyOfcs9MqskteV63_xjABGwlbTkGvSMzbr9zY3WoRFfp6BWPiGDSmKK_z5cAXk39xOpbND64ww_HLzvGdHw.jpg"
   },
   {
    "text": "🏆 ЄВГЕН ОВСІЄНКО — переможець V етапу Кубку України 2026 з дартсу, який відбувся у Черкасах, у неділю, 18 жовтня. \n🥇 Євген Овсієнко\n🥈 Руслан Могилевський\n🥉 Степан Гакман\n1️⃣8️⃣0️⃣×6️⃣— Євген Овсієнко\n1️⃣8️⃣0️⃣×2️⃣ — Едуард Гончаров, Степан Гакман, Дін Фатех, Олександр Абчугський\n1️⃣8️⃣0️⃣ — Віталій Рогов, Ігор Рашоянц, Юрій Агневщиков, Володимир Смик\n🎯 Чекаути 100+\n1️⃣4️⃣8️⃣ — Євген Ванда\n1️⃣3️⃣7️⃣ — Євген Овсієнко\n1️⃣1️⃣3️⃣ — Сергій Аверін\n1️⃣0️⃣8️⃣ — Дін Фатех, Ігор Рашоянц, Євген Овсієнко\n1️⃣",
    "date": "2026-10-18",
    "url": "https://t.me/fullbull/12861",
-   "photo": "https://cdn4.telesco.pe/file/qX2OZ7SWRGuSyVERjmbnt_m6hpdsq464bYrx9lH5qcT4oceppiDGG6y5mm9NFyD3JgTN946UtSYn3EWX9tsE-hn_q5-7Wg4kAHMsF5kDzuyrvs0oxHMgtNiw8oNXgBrT9RhwOhryKhENcAXvVguBhOklL8GEugF7ESy_1vMb7BqJyfE2mj2YrmPelBjIXmYc9xtF-MJydgg-iHLRZRXlhWEX6rMyMnkGQuHH5r7KfBksGNUIVHf0dna402S00pH1lTNapujJaZIxb8XsvVYhMh5k_-SJtc85DbVyCSqmYfX5z9-bFY0t6y8LGTYZ8SP9VKfPPpMS3BADOF4LvCARVQ.jpg"
+   "photo": "https://cdn4.telesco.pe/file/pMdJfyKfKUulp_rpZmAyr2hc3HJGa62a7WhuKtF0CvtMux7ZRWJtllqI73gkBb6uZTZXlk3HIicFVDM9m5ajIpodkM3rb8nhJ59gOhKskDWcrw7vIrgBGgVGYHh_nskxffhqk-F4_l69AeUjCh07fo4UuGvPKDaiDOiu1iIpWldGtMR4DK25nwHeS46psrRb3UCFjltECtH-OfrXxZsLNaseGpdwVux7o4IpR8IsXLNgwrCNdmBqEPw3LIyK7RCgGd8BOjdwgj4LScQ1Pngu9ca5YUEDbggFcF8OJppIj4Iw0igq4qloxSmXxfGHIS6rWsyTHGLRrWNpsLBHsCb8TA.jpg"
   },
   {
    "text": "У неділю 18 жовтня, в Черкасах проходить 5 етап Кубку України 2026 з дартсу.\n🙋‍♀️Жінки: \n🙋‍♂️Чоловіки:",
    "date": "2026-10-18",
    "url": "https://t.me/fullbull/12858",
-   "photo": "https://cdn4.telesco.pe/file/TIMPTA2pt5iv4weM0Rr36DccOFZGmEFRdnw6YkYbn8W3ztzh9flhhOVGzZQzhL9u4g4YuQE3oHwRKvwPodWesuTGdplk_zjpCjqRWBI3SuLWxfW_HzpU_g7vm-eQKK4sdam7hEUEjgf6TD1CwTpO4Re03WBkSO8cB13X66CPeRoLwx06dFIAmG2VQH272_O_gatQehMlxtc4Yjp1Y2t00yL2FBkGXzqyWKAmZXCYH_R70KaxE4AuhBRemMsDD8GgIPQNtyde3y31QeMyzK3O6ewNJge7YmLCviaP5IzET_tml0sUHV_YJVNfZ3mm-aVt0D8ZR-rVzcVLJOMor743Ug.jpg"
+   "photo": "https://cdn4.telesco.pe/file/Pxact5nsEGcxRJSWyyFTEBEb3xX1jX6jLHS7yGLr51hlw4nwSnxra0Gh6L1dr_9ly8m1N8Y8PQ5OL39P44qCsn3hYCjOSTnHowJXO8kYyu_JKu4AFtHJBQfl7MoGJjWBOd15x18YO4V69J2Ygeg0O-kF9ZlstOtU7toFgQOxkgo6mYEOxPvfHjViDGqnHRjol-PS07HMSg2pX212pTdQTSA-K8Sd0I0bypXF-2DercOmW47qzc0SpdU8n7Gz6A42fROTAnSi0deRVWuofjS5f_awwl15D95YaYU8guW2V2w1Zo0hXoMnvwLhlOc_9zUCm-v-d-RniAbbFh7R5nqe9w.jpg"
   },
   {
    "text": "🏆 ХАРЧЕНКО ТЕТЯНА — переможниця жіночого Чемпіонату України з крикету, який відбувся у Черкасах у суботу, 17 жовтня.\n🥇 Тетяна Харченко\n🥈 Інна Гончаренко\n🥉 Любов Терещенко\n👀",
    "date": "2026-10-17",
    "url": "https://t.me/fullbull/12852",
-   "photo": "https://cdn4.telesco.pe/file/Ivr6HgTKk5H4EVBnzzvi45laDhU_YxyjqLCN7KYgcF1nj7AO_IWcYdaQ8t7JYPb5lzA9OaCuENBlrPlDI9l9OTQtepZPleh0GAuTnmdTxZoIWd6e6amA8GHjr5EZQ0BG73IG6qZehT-hBbTi8KdtoIQsqrI6fiKtyblYyngvFvoRuGomEEy8WJaOTuQ1zuPQOFnjqxtA1ZqpdZJ0v1m_R10z3rh1lOj9vMKj8IukttNL8G-cG26eMxL9SUKP3KrthcShjA9kFxD5NwyC_b0IgAovnA2JWchsERczzIoITTbAJzXyB59B2BQ4e-29UVpl1lRDdQKTVM0iXzfZrFMyog.jpg"
-  },
-  {
-   "text": "17-го жовтня, у Черкасах проходить Чемпіонат України з дартсу (дисципліна Крикет).\nТурнірна сітка:\n🙋‍♀️Жінки ЧУ Крикет: \n🙋‍♂️Чоловіки ЧУ Крикет:",
-   "date": "2026-10-17",
-   "url": "https://t.me/fullbull/12847",
-   "photo": "https://cdn4.telesco.pe/file/RbU6l7j3AMkSjQHgW0wFsX4rBlEHS5e_dgWRIGubP7GGDbsGur8BFeu6LMofRw_VcVHmkPJQTcublKxkczornhTCgzu_V9qczIucmW2EkU2lkhUzzs6oZiNMHcuvNlLq5f2-oSW97GLN5ZiL5u0v3sXe1XJuQWH4yLAAyMedL8cb6Q540gvZ5kzOlwZoQqURLqog6EigYDsUxtACoE61dpMBDq7efXhgixQAhSjwQmSkv9oeGKU-6srlMaTgxG-ky-oMfAlh-jpDpUq_EKlxBrjxoKj5Gym8B85I7fmAUIsXiqP4Jo3CEE0t8rPbkony9u9lLs-RI11_N_JGihbDOA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/As7q4enGqdEr00veMLhYzqyO8Gz8cvQZc6KpdnE0Evjo9tjWP-_S7ddfCy3D7sG-4aZjFsPtYRK2lCf9UdZ8BLD-Y8ot5tCT9Eo67HB-a5EmPkhHRiX3gYkO2qEENj_43jnAmMkJIvPrzHpd7rlPYDl2-V2jak9PsdDnMqn1B8P4oxLWdnwdWfcaHU2lNWIWzH_x_lO4UvvPkq7QAwOf4ekuRMLxpNyjqAAqWaVNCpwYa_PNF20ZHzXoRj0x4ugCeEfEOsrXFDUKFnLqchZQnzna29Lt2_s5O3rZlRUnW8WxEN1gOZkmtIco-a6X8O9I2JSFA1VT9U2sbGRe0TMZnw.jpg"
   }
  ],
  "championsRecords": [
@@ -101275,7 +101484,7 @@
    "place": 2,
    "names": [
     "Усик Артем",
-    "Черноброва Олександра"
+    "Чорноброва Олександра"
    ]
   },
   {
@@ -102068,50 +102277,90 @@
   }
  ],
  "playerBios": {
-  "Кудрявцев Руслан": {
-   "nickname": "КРИМ",
-   "birthDate": "08.01.1983",
-   "region": "Харків",
-   "startYear": "2018",
-   "dartsManufacturer": "Legend Darts",
-   "dartsModel": "Eric Bristow R1 Black",
-   "dartsWeight": "24"
+  "Шклярук Наталія": {
+   "nickname": "Natalka",
+   "profession": "машиніст конвеєра",
+   "birthDate": "15.05.1977",
+   "region": "Дніпропетровський,Кривий Ріг",
+   "startYear": "Вересень 2018",
+   "dartsWeight": "23"
   },
-  "Баранов Олександр": {
-   "nickname": "Alex",
-   "profession": "економіст",
-   "birthDate": "08.02.1961",
-   "region": "Закарпаття.,Мукачево",
-   "startYear": "1999"
+  "Кучеренко Наталя": {
+   "profession": "начальник відділу культури",
+   "birthDate": "06.04.1976",
+   "region": "м. Роздільна Одеська область",
+   "startYear": "2024 рік",
+   "dartsWeight": "23 г"
   },
-  "Аверін Сергій": {
-   "nickname": "AVERS",
-   "profession": "Тренер-викладач  з шахів",
-   "birthDate": "03.10.1972",
-   "region": "м.Мелітополь Запорізька область",
-   "startYear": "2019",
-   "dartsManufacturer": "Winmau",
-   "dartsModel": "Andy Fordham Special Edition",
-   "dartsWeight": "24"
-  },
-  "Агневщиков Юрій": {
-   "nickname": "AYURA",
-   "profession": "бариста",
-   "birthDate": "29.03.1979",
-   "region": "Авдіївка (Донецька область)",
-   "startYear": "2005",
+  "Топчу Владислав": {
+   "nickname": "Top Man",
+   "profession": "парамедик",
+   "birthDate": "08.03.1984",
+   "region": "Чернігівська область, Козелець",
+   "startYear": "квітень 2023",
    "dartsManufacturer": "Target",
-   "dartsModel": "Phil Taylor",
+   "dartsModel": "Gidro -2",
    "dartsWeight": "23"
   },
-  "Гринів Юрій": {
-   "nickname": "Batya",
-   "birthDate": "02.01.1983",
-   "region": "Шептицький",
-   "startYear": "2022",
-   "dartsManufacturer": "KOTO",
-   "dartsModel": "9-dart",
+  "Ларіна Тетяна": {
+   "profession": "Менеджер",
+   "birthDate": "Lara",
+   "region": "Дніпро/Маріуполь (Донецька область)",
+   "startYear": "2026",
+   "dartsManufacturer": "Unknown",
+   "dartsModel": "Unknown",
    "dartsWeight": "23"
+  },
+  "Ганечко Арина": {
+   "nickname": "yammao",
+   "birthDate": "04.01.2011",
+   "region": "Авдіївка, Донецька область",
+   "startYear": "2026",
+   "dartsManufacturer": "Red Dragon",
+   "dartsModel": "Rebels",
+   "dartsWeight": "23"
+  },
+  "Іванов Сергій": {
+   "profession": "Директор Центру ФК і спорту",
+   "birthDate": "19.02.1971",
+   "region": "місто Мала Виска Кіровоградської області",
+   "startYear": "2026",
+   "dartsWeight": "26"
+  },
+  "Діденко Оксана": {
+   "nickname": "Bitsukha",
+   "birthDate": "04.10.1992",
+   "region": "Полтава",
+   "startYear": "2025",
+   "dartsWeight": "22"
+  },
+  "Медведєв Єгор": {
+   "nickname": "JagerMeister",
+   "birthDate": "06.10.2011",
+   "region": "Донецьк",
+   "startYear": "2025",
+   "dartsManufacturer": "Harrows",
+   "dartsModel": "Infinity",
+   "dartsWeight": "21"
+  },
+  "Хоменко Андрій": {
+   "nickname": "Pat",
+   "profession": "Software Developer",
+   "birthDate": "17.05.1991",
+   "region": "Харків",
+   "startYear": "2025"
+  },
+  "Радіонова Дарʼя": {
+   "profession": "Юрист",
+   "birthDate": "05.08.1979",
+   "region": "Місто Роздільна, Одеська область",
+   "startYear": "2025",
+   "dartsWeight": "23"
+  },
+  "Штувбейна Альона": {
+   "birthDate": "25.08.1988",
+   "region": "Одеська область,м.Роздільна",
+   "startYear": "2025"
   },
   "Бендрик Олег": {
    "nickname": "BeniBek",
@@ -102122,17 +102371,6 @@
    "dartsModel": "Stephen Bunting 95K",
    "dartsWeight": "24"
   },
-  "Діденко Оксана": {
-   "nickname": "Bitsukha",
-   "birthDate": "04.10.1992",
-   "region": "Полтава",
-   "startYear": "2025",
-   "dartsWeight": "22"
-  },
-  "Мартов Володимир": {
-   "nickname": "Blazer Punk",
-   "profession": "Project Manager"
-  },
   "Бульбах Вадим": {
    "nickname": "BULBAKH",
    "birthDate": "14.08.1973",
@@ -102141,45 +102379,6 @@
    "dartsManufacturer": "mission",
    "dartsModel": "Cam Crabtree",
    "dartsWeight": "21"
-  },
-  "Заборний Андрій": {
-   "nickname": "CAPT",
-   "profession": "Директор",
-   "birthDate": "26.06.1980",
-   "region": "Одеса",
-   "startYear": "2006",
-   "dartsManufacturer": "Target",
-   "dartsModel": "Keith Deller",
-   "dartsWeight": "21"
-  },
-  "Телятник Максим": {
-   "nickname": "Diehard",
-   "birthDate": "15.11.1985",
-   "region": "обл. Миколаївська, м. Південноукраїнськ",
-   "startYear": "2021",
-   "dartsManufacturer": "Target",
-   "dartsModel": "EXO 03",
-   "dartsWeight": "23"
-  },
-  "Кондарюк Микола": {
-   "nickname": "DOCKER",
-   "profession": "Докер-механізатор",
-   "birthDate": "15/01/1981",
-   "region": "Одеса, Одеська область",
-   "startYear": "2014",
-   "dartsManufacturer": "unicorn",
-   "dartsModel": "Gary Anderson, phase 6",
-   "dartsWeight": "24"
-  },
-  "Овелько Антон": {
-   "nickname": "Fisherman",
-   "profession": "Рибак",
-   "birthDate": "30.09.1986",
-   "region": "м. Чернівці",
-   "startYear": "2019",
-   "dartsManufacturer": "Harrows",
-   "dartsModel": "Red Horizon",
-   "dartsWeight": "24"
   },
   "Зайцева Інна": {
    "nickname": "Fly",
@@ -102191,91 +102390,6 @@
    "dartsModel": "Control parallel",
    "dartsWeight": "22"
   },
-  "Медведєв Максим": {
-   "nickname": "Goopik",
-   "profession": "Залізничні перевезення",
-   "birthDate": "11.09.1978",
-   "region": "Донецьк",
-   "startYear": "2009",
-   "dartsManufacturer": "Harrows",
-   "dartsModel": "Wolfram",
-   "dartsWeight": "23"
-  },
-  "Могилевський Руслан": {
-   "nickname": "Grave",
-   "profession": "Project Manager",
-   "birthDate": "31.05.1990",
-   "region": "Харків",
-   "startYear": "2018",
-   "dartsManufacturer": "Winmau",
-   "dartsModel": "Aspria",
-   "dartsWeight": "26"
-  },
-  "Васильков Владислав": {
-   "nickname": "Guffi",
-   "birthDate": "05.06.1995",
-   "region": "Авдіївка (Донецька область)",
-   "startYear": "2009",
-   "dartsManufacturer": "Winmau",
-   "dartsWeight": "24"
-  },
-  "Медведєв Єгор": {
-   "nickname": "JagerMeister",
-   "birthDate": "06.10.2011",
-   "region": "Донецьк",
-   "startYear": "2025",
-   "dartsManufacturer": "Harrows",
-   "dartsModel": "Infinity",
-   "dartsWeight": "21"
-  },
-  "Кудрявцев Євген": {
-   "nickname": "Jonnykvn",
-   "birthDate": "29.07.1979",
-   "region": "Харків",
-   "startYear": "2012",
-   "dartsManufacturer": "Mission",
-   "dartsModel": "KURO M2 Black",
-   "dartsWeight": "23"
-  },
-  "Лановенко Ксенія": {
-   "nickname": "Koch",
-   "profession": "HR",
-   "birthDate": "07.05.1992",
-   "region": "Харків",
-   "startYear": "2020",
-   "dartsManufacturer": "Red Dragon",
-   "dartsWeight": "26"
-  },
-  "Гончаров Едуард": {
-   "nickname": "Krait",
-   "profession": "Інвестиційний аналітик",
-   "birthDate": "25.02.1996",
-   "region": "Авдіївка (Донецька область)",
-   "startYear": "2010",
-   "dartsManufacturer": "Red Dragon",
-   "dartsModel": "Fusion",
-   "dartsWeight": "24"
-  },
-  "Ларіна Тетяна": {
-   "nickname": "Lara",
-   "profession": "Менеджер",
-   "birthDate": "17.11.1975",
-   "region": "Дніпро/Маріуполь (Донецька область)",
-   "startYear": "2026",
-   "dartsManufacturer": "Unknown",
-   "dartsModel": "Unknown",
-   "dartsWeight": "23"
-  },
-  "Акользін Дмитро": {
-   "nickname": "Marakdi",
-   "profession": "Заст. Голови Правління",
-   "birthDate": "27.10.1972",
-   "region": "Маріуполь (Донецька область)",
-   "startYear": "2018",
-   "dartsManufacturer": "Harrows",
-   "dartsModel": "Genesis Style A",
-   "dartsWeight": "23"
-  },
   "Абчугський Олександр": {
    "nickname": "Markovych",
    "profession": "Пенсіонер",
@@ -102286,53 +102400,19 @@
    "dartsModel": "Bunting 95K",
    "dartsWeight": "18"
   },
-  "Коломієць Андрій": {
-   "nickname": "Mor1oK",
-   "profession": "авторозбірка, СТО",
-   "birthDate": "03.10.1984",
-   "region": "Полтава",
-   "startYear": "2022",
-   "dartsManufacturer": "Winmau",
-   "dartsModel": "Sniper",
-   "dartsWeight": "23"
-  },
-  "Пивошенко Максим": {
-   "nickname": "MORO",
-   "profession": "Механік",
-   "birthDate": "24.05.1977",
-   "region": "Авдіївка(Донецька область)",
-   "startYear": "2014",
-   "dartsManufacturer": "Harrows Darts",
-   "dartsModel": "Harrows Wolfram 97%",
-   "dartsWeight": "23"
-  },
-  "Харченко Тетяна": {
-   "nickname": "Mouse",
-   "profession": "Оператор в'язального обладнання",
-   "birthDate": "20.07.1981",
-   "region": "Черкаси",
-   "startYear": "2011",
-   "dartsManufacturer": "Mission",
-   "dartsModel": "celestial",
-   "dartsWeight": "25"
-  },
-  "Паламар Оксана": {
-   "nickname": "Mystery",
-   "profession": "бухгалтер",
-   "birthDate": "15.10.1978",
-   "region": "Тернопіль",
-   "startYear": "2022",
-   "dartsWeight": "23"
-  },
-  "Пивошенко Олена": {
-   "nickname": "OGONYOK",
-   "profession": "Керівник механіка",
-   "birthDate": "04.01.1977",
-   "region": "Донецька область/ м.Авдіївка",
-   "startYear": "2017",
+  "Арійчук Святослав": {
+   "nickname": "SviatJunior",
+   "birthDate": "02.01.2016",
+   "region": "Чернівці",
+   "startYear": "2024",
    "dartsManufacturer": "Target",
-   "dartsModel": "Hydro 02",
-   "dartsWeight": "23"
+   "dartsModel": "Steven Bunting",
+   "dartsWeight": "17"
+  },
+  "Карнаух Валентина": {
+   "birthDate": "13.12.1987",
+   "region": "Кривий Ріг,  Дніпропетровська область",
+   "startYear": "2024"
   },
   "Гончаренко Інна": {
    "nickname": "Oopsie",
@@ -102344,15 +102424,84 @@
    "dartsModel": "Fallon3 Fallon Sherrock Model",
    "dartsWeight": "24"
   },
-  "Яненко Сергій": {
-   "nickname": "Paladin",
-   "profession": "Мрійник",
-   "birthDate": "01.03.1985",
-   "region": "Чернівці",
-   "startYear": "2008",
+  "Скрипай Дмитро": {
+   "nickname": "Stradivari",
+   "profession": "Менеджер",
+   "birthDate": "06.05.1994",
+   "region": "Полтава",
+   "startYear": "2023",
+   "dartsWeight": "24"
+  },
+  "Шильцин Юрій": {
+   "nickname": "Murkutun",
+   "profession": "Водій",
+   "birthDate": "13.02.1986",
+   "region": "м. Полтава",
+   "startYear": "2023",
+   "dartsWeight": "25"
+  },
+  "Цілуйко Владислав": {
+   "nickname": "KissMan",
+   "profession": "Водій",
+   "birthDate": "18.04.1993",
+   "region": "Полтава",
+   "startYear": "2023",
+   "dartsManufacturer": "Harrows",
+   "dartsModel": "NX90",
+   "dartsWeight": "22"
+  },
+  "Гринів Юрій": {
+   "nickname": "Batya",
+   "birthDate": "02.01.1983",
+   "region": "Шептицький",
+   "startYear": "2022",
+   "dartsManufacturer": "KOTO",
+   "dartsModel": "9-dart",
+   "dartsWeight": "23"
+  },
+  "Коломієць Андрій": {
+   "nickname": "Mor1oK",
+   "profession": "авторозбірка, СТО",
+   "birthDate": "03.10.1984",
+   "region": "Полтава",
+   "startYear": "2022",
+   "dartsManufacturer": "Winmau",
+   "dartsModel": "Sniper",
+   "dartsWeight": "23"
+  },
+  "Паламар Оксана": {
+   "nickname": "Mystery",
+   "profession": "бухгалтер",
+   "birthDate": "15.10.1978",
+   "region": "Тернопіль",
+   "startYear": "2022",
+   "dartsWeight": "23"
+  },
+  "Гринів Олександр": {
+   "nickname": "The Rocket",
+   "birthDate": "31.05.2012",
+   "region": "Шептицький",
+   "startYear": "2022",
+   "dartsManufacturer": "Red Dragon",
+   "dartsModel": "Hellfire",
+   "dartsWeight": "24"
+  },
+  "Чайковський Руслан": {
+   "profession": "пенсіонер",
+   "birthDate": "03.07.1962",
+   "region": "м.Полтава",
+   "startYear": "2022",
+   "dartsManufacturer": "TARGET",
+   "dartsWeight": "23"
+  },
+  "Телятник Максим": {
+   "nickname": "Diehard",
+   "birthDate": "15.11.1985",
+   "region": "обл. Миколаївська, м. Південноукраїнськ",
+   "startYear": "2021",
    "dartsManufacturer": "Target",
-   "dartsModel": "Gabriel Clemens",
-   "dartsWeight": "21"
+   "dartsModel": "EXO 03",
+   "dartsWeight": "23"
   },
   "Бейреш Ласло": {
    "nickname": "Pastor",
@@ -102364,24 +102513,53 @@
    "dartsModel": "RVB Reymond von Barneveld 90% t",
    "dartsWeight": "22"
   },
-  "Хоменко Андрій": {
-   "nickname": "Pat",
-   "profession": "Software Developer",
-   "birthDate": "17.05.1991",
+  "Терещенко Любов": {
+   "nickname": "TERA",
+   "profession": "Пенсіонер",
+   "birthDate": "31.07.1958",
+   "region": "Кривий Ріг, Дніпропетровська область",
+   "startYear": "2021",
+   "dartsManufacturer": "Кастом",
+   "dartsWeight": "23"
+  },
+  "Микитин Ярослав": {
+   "nickname": "UncleKA",
+   "profession": "бізнесмен",
+   "birthDate": "25.10.1983",
+   "region": "Львівська обл., Львів",
+   "startYear": "2021",
+   "dartsManufacturer": "Unicorn",
+   "dartsModel": "Garry Anderson Phase 4",
+   "dartsWeight": "23"
+  },
+  "Лановенко Ксенія": {
+   "nickname": "Koch",
+   "profession": "HR",
+   "birthDate": "07.05.1992",
    "region": "Харків",
-   "startYear": "2025"
+   "startYear": "2020",
+   "dartsManufacturer": "Red Dragon",
+   "dartsWeight": "26"
   },
-  "Арійчук Наталія": {
-   "nickname": "President",
-   "birthDate": "28.07.1989",
-   "region": "Чернівці",
-   "startYear": "2015",
+  "Аверін Сергій": {
+   "nickname": "AVERS",
+   "profession": "Тренер-викладач  з шахів",
+   "birthDate": "03.10.1972",
+   "region": "м.Мелітополь Запорізька область",
+   "startYear": "2019",
+   "dartsManufacturer": "Winmau",
+   "dartsModel": "Andy Fordham Special Edition",
+   "dartsWeight": "24"
+  },
+  "Овелько Антон": {
+   "nickname": "Fisherman",
+   "profession": "Рибак",
+   "birthDate": "30.09.1986",
+   "region": "м. Чернівці",
+   "startYear": "2019",
    "dartsManufacturer": "Harrows",
-   "dartsModel": "Supergrip",
-   "dartsWeight": "21"
-  },
-  "Фатех Дін": {
-   "nickname": "Soul"
+   "dartsModel": "Red Horizon",
+   "dartsWeight": "24"
   },
   "Ганечко Марина": {
    "nickname": "SOVA",
@@ -102401,59 +102579,72 @@
    "dartsManufacturer": "Mission",
    "dartsWeight": "23"
   },
-  "Скрипай Дмитро": {
-   "nickname": "Stradivari",
-   "profession": "Менеджер",
-   "birthDate": "06.05.1994",
-   "region": "Полтава",
-   "startYear": "2023",
+  "Кудрявцев Руслан": {
+   "nickname": "КРИМ",
+   "birthDate": "08.01.1983",
+   "region": "Харків",
+   "startYear": "2018",
+   "dartsManufacturer": "Legend Darts",
+   "dartsModel": "Eric Bristow R1 Black",
    "dartsWeight": "24"
   },
-  "Арійчук Святослав": {
-   "nickname": "SviatJunior",
-   "birthDate": "02.01.2016",
+  "Могилевський Руслан": {
+   "nickname": "Grave",
+   "profession": "Project Manager",
+   "birthDate": "31.05.1990",
+   "region": "Харків",
+   "startYear": "2018",
+   "dartsManufacturer": "Winmau",
+   "dartsModel": "Aspria",
+   "dartsWeight": "26"
+  },
+  "Акользін Дмитро": {
+   "nickname": "Marakdi",
+   "profession": "Заст. Голови Правління",
+   "birthDate": "27.10.1972",
+   "region": "Маріуполь (Донецька область)",
+   "startYear": "2018",
+   "dartsManufacturer": "Harrows",
+   "dartsModel": "Genesis Style A",
+   "dartsWeight": "23"
+  },
+  "Пивошенко Олена": {
+   "nickname": "OGONYOK",
+   "profession": "Керівник механіка",
+   "birthDate": "04.01.1977",
+   "region": "Донецька область/ м.Авдіївка",
+   "startYear": "2017",
+   "dartsManufacturer": "Target",
+   "dartsModel": "Hydro 02",
+   "dartsWeight": "23"
+  },
+  "Арійчук Наталія": {
+   "nickname": "President",
+   "birthDate": "28.07.1989",
    "region": "Чернівці",
-   "startYear": "2024",
-   "dartsManufacturer": "Target",
-   "dartsModel": "Steven Bunting",
-   "dartsWeight": "17"
+   "startYear": "2015",
+   "dartsManufacturer": "Harrows",
+   "dartsModel": "Supergrip",
+   "dartsWeight": "21"
   },
-  "Терещенко Любов": {
-   "nickname": "TERA",
-   "profession": "Пенсіонер",
-   "birthDate": "31.07.1958",
-   "region": "Кривий Ріг, Дніпропетровська область",
-   "startYear": "2021",
-   "dartsManufacturer": "Кастом",
-   "dartsWeight": "23"
-  },
-  "Гринів Олександр": {
-   "nickname": "The Rocket",
-   "birthDate": "31.05.2012",
-   "region": "Шептицький",
-   "startYear": "2022",
-   "dartsManufacturer": "Red Dragon",
-   "dartsModel": "Hellfire",
+  "Кондарюк Микола": {
+   "nickname": "DOCKER",
+   "profession": "Докер-механізатор",
+   "birthDate": "15/01/1981",
+   "region": "Одеса, Одеська область",
+   "startYear": "2014",
+   "dartsManufacturer": "unicorn",
+   "dartsModel": "Gary Anderson, phase 6",
    "dartsWeight": "24"
   },
-  "Топчу Владислав": {
-   "nickname": "Top Man",
-   "profession": "парамедик",
-   "birthDate": "08.03.1984",
-   "region": "Чернігівська область, Козелець",
-   "startYear": "квітень 2023",
-   "dartsManufacturer": "Target",
-   "dartsModel": "Gidro -2",
-   "dartsWeight": "23"
-  },
-  "Микитин Ярослав": {
-   "nickname": "UncleKA",
-   "profession": "бізнесмен",
-   "birthDate": "25.10.1983",
-   "region": "Львівська обл., Львів",
-   "startYear": "2021",
-   "dartsManufacturer": "Unicorn",
-   "dartsModel": "Garry Anderson Phase 4",
+  "Пивошенко Максим": {
+   "nickname": "MORO",
+   "profession": "Механік",
+   "birthDate": "24.05.1977",
+   "region": "Авдіївка(Донецька область)",
+   "startYear": "2014",
+   "dartsManufacturer": "Harrows Darts",
+   "dartsModel": "Harrows Wolfram 97%",
    "dartsWeight": "23"
   },
   "Арійчук Олександр": {
@@ -102465,65 +102656,70 @@
    "dartsModel": "Kevin Munch",
    "dartsWeight": "21"
   },
-  "Ганечко Арина": {
-   "nickname": "yammao",
-   "birthDate": "04.01.2011",
-   "region": "Авдіївка, Донецька область",
-   "startYear": "2026",
-   "dartsManufacturer": "Red Dragon",
-   "dartsModel": "Rebels",
+  "Соколова Вікторія": {
+   "nickname": "Tori",
+   "birthDate": "08.02.1984",
+   "region": "Черкаська область, м  Черкаси",
+   "startYear": "2013",
+   "dartsManufacturer": "Harrows",
    "dartsWeight": "23"
   },
-  "Агневщіков Анатолій": {
-   "profession": "пенсіонер",
-   "birthDate": "22.03.1961",
+  "Кудрявцев Євген": {
+   "nickname": "Jonnykvn",
+   "birthDate": "29.07.1979",
+   "region": "Харків",
+   "startYear": "2012",
+   "dartsManufacturer": "Mission",
+   "dartsModel": "KURO M2 Black",
+   "dartsWeight": "23"
+  },
+  "Харченко Тетяна": {
+   "nickname": "Mouse",
+   "profession": "Оператор в'язального обладнання",
+   "birthDate": "20.07.1981",
+   "region": "Черкаси",
+   "startYear": "2011",
+   "dartsManufacturer": "Mission",
+   "dartsModel": "celestial",
+   "dartsWeight": "25"
+  },
+  "Гончаров Едуард": {
+   "nickname": "Krait",
+   "profession": "Інвестиційний аналітик",
+   "birthDate": "25.02.1996",
    "region": "Авдіївка (Донецька область)",
-   "startYear": "2005",
-   "dartsManufacturer": "Unicorn",
-   "dartsModel": "Phil Taylor Phase 5",
+   "startYear": "2010",
+   "dartsManufacturer": "Red Dragon",
+   "dartsModel": "Fusion",
    "dartsWeight": "24"
   },
-  "Чайковський Руслан": {
-   "profession": "пенсіонер",
-   "birthDate": "03.07.1962",
-   "region": "м.Полтава",
-   "startYear": "2022",
-   "dartsManufacturer": "TARGET",
-   "dartsWeight": "23"
-  },
-  "Іванов Сергій": {
-   "profession": "Директор Центру ФК і спорту",
-   "birthDate": "19.02.1971",
-   "region": "місто Мала Виска Кіровоградської області",
-   "startYear": "2026",
-   "dartsWeight": "26"
-  },
-  "Кучеренко Наталя": {
-   "profession": "начальник відділу культури",
-   "birthDate": "06.04.1976",
-   "region": "м. Роздільна Одеська область",
-   "startYear": "2024 рік",
-   "dartsWeight": "23 г"
-  },
-  "Радіонова Дарʼя": {
-   "profession": "Юрист",
-   "birthDate": "05.08.1979",
-   "region": "Місто Роздільна, Одеська область",
-   "startYear": "2025",
-   "dartsWeight": "23"
-  },
-  "Агневщиков Олег": {
-   "profession": "ЗСУ",
-   "birthDate": "04.06.1980",
-   "region": "Авдіївка (Донецька область)",
-   "startYear": "2005",
+  "Медведєв Максим": {
+   "nickname": "Goopik",
+   "profession": "Залізничні перевезення",
+   "birthDate": "11.09.1978",
+   "region": "Донецьк",
+   "startYear": "2009",
    "dartsManufacturer": "Harrows",
-   "dartsModel": "PowerPoint",
-   "dartsWeight": "21"
+   "dartsModel": "Wolfram",
+   "dartsWeight": "23"
   },
-  "Морозов Сергій": {
-   "birthDate": "14.06.1984",
-   "region": "Київ"
+  "Васильков Владислав": {
+   "nickname": "Guffi",
+   "birthDate": "05.06.1995",
+   "region": "Авдіївка (Донецька область)",
+   "startYear": "2009",
+   "dartsManufacturer": "Winmau",
+   "dartsWeight": "24"
+  },
+  "Яненко Сергій": {
+   "nickname": "Paladin",
+   "profession": "Мрійник",
+   "birthDate": "01.03.1985",
+   "region": "Чернівці",
+   "startYear": "2008",
+   "dartsManufacturer": "Target",
+   "dartsModel": "Gabriel Clemens",
+   "dartsWeight": "21"
   },
   "Шапка Євген": {
    "nickname": "SHEV",
@@ -102543,37 +102739,67 @@
    "dartsModel": "Wolfram",
    "dartsWeight": "23"
   },
-  "Шильцин Юрій": {
-   "birthDate": "13.02.1986",
-   "region": "Полтавський, Полтава",
-   "startYear": "2022",
-   "dartsWeight": "25"
+  "Заборний Андрій": {
+   "nickname": "CAPT",
+   "profession": "Директор",
+   "birthDate": "26.06.1980",
+   "region": "Одеса",
+   "startYear": "2006",
+   "dartsManufacturer": "Target",
+   "dartsModel": "Keith Deller",
+   "dartsWeight": "21"
   },
-  "Карнаух Валентина": {
-   "birthDate": "13.12.1987",
-   "region": "Кривий Ріг,  Дніпропетровська область",
-   "startYear": "2024"
+  "Агневщиков Юрій": {
+   "nickname": "AYURA",
+   "profession": "бариста",
+   "birthDate": "29.03.1979",
+   "region": "Авдіївка (Донецька область)",
+   "startYear": "2005",
+   "dartsManufacturer": "Target",
+   "dartsModel": "Phil Taylor",
+   "dartsWeight": "23"
   },
-  "Штувбейна Альона": {
-   "birthDate": "25.08.1988",
-   "region": "Одеська область,м.Роздільна",
-   "startYear": "2025"
+  "Агневщіков Анатолій": {
+   "profession": "пенсіонер",
+   "birthDate": "22.03.1961",
+   "region": "Авдіївка (Донецька область)",
+   "startYear": "2005",
+   "dartsManufacturer": "Unicorn",
+   "dartsModel": "Phil Taylor Phase 5",
+   "dartsWeight": "24"
+  },
+  "Агневщиков Олег": {
+   "profession": "ЗСУ",
+   "birthDate": "04.06.1980",
+   "region": "Авдіївка (Донецька область)",
+   "startYear": "2005",
+   "dartsManufacturer": "Harrows",
+   "dartsModel": "PowerPoint",
+   "dartsWeight": "21"
+  },
+  "Баранов Олександр": {
+   "nickname": "Alex",
+   "profession": "економіст",
+   "birthDate": "08.02.1961",
+   "region": "Закарпаття.,Мукачево",
+   "startYear": "1999"
+  },
+  "Мартов Володимир": {
+   "nickname": "Blazer Punk",
+   "profession": "Project Manager"
+  },
+  "Фатех Дін": {
+   "nickname": "Soul"
+  },
+  "Морозов Сергій": {
+   "birthDate": "14.06.1984",
+   "region": "Київ"
   },
   "Аванесов Артур": {
    "dartsWeight": "24"
   },
   "Коломієць Олена": {
    "dartsWeight": "24"
-  },
-  "Цілуйко Владислав": {
-   "nickname": "KissMan",
-   "profession": "Водій",
-   "birthDate": "18.04.1993",
-   "region": "Полтава",
-   "startYear": "2023",
-   "dartsManufacturer": "Harrows",
-   "dartsModel": "NX90",
-   "dartsWeight": "22"
   }
  },
  "curatedPlayerNames": [
