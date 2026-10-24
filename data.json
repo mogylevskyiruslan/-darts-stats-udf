@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-10-23T09:52:31.322338+00:00",
+  "lastUpdated": "2026-10-24T09:26:56.571790+00:00",
   "tournamentsCount": 231,
   "parts": {
    "nakkaMatchStats": {
@@ -33131,6 +33131,19 @@
     },
     {
      "rank": "34",
+     "name": "Боярчук Ірина",
+     "scores": [
+      null,
+      null,
+      9.75,
+      null,
+      null,
+      null
+     ],
+     "total": 9.75
+    },
+    {
+     "rank": "35",
      "name": "Спекторенко Катерина",
      "scores": [
       null,
@@ -33143,25 +33156,12 @@
      "total": 9.75
     },
     {
-     "rank": "35",
+     "rank": "36",
      "name": "Якименко Катерина",
      "scores": [
       null,
       null,
       null,
-      null,
-      null,
-      null
-     ],
-     "total": 9.75
-    },
-    {
-     "rank": "36",
-     "name": "Боярчук Ірина",
-     "scores": [
-      null,
-      null,
-      9.75,
       null,
       null,
       null
@@ -33235,19 +33235,6 @@
     },
     {
      "rank": "42",
-     "name": "Потан Лілія",
-     "scores": [
-      null,
-      null,
-      null,
-      1,
-      null,
-      null
-     ],
-     "total": 1.0
-    },
-    {
-     "rank": "43",
      "name": "Косигіна Ольга",
      "scores": [
       null,
@@ -33255,6 +33242,19 @@
       null,
       null,
       1,
+      null
+     ],
+     "total": 1.0
+    },
+    {
+     "rank": "43",
+     "name": "Потан Лілія",
+     "scores": [
+      null,
+      null,
+      null,
+      1,
+      null,
       null
      ],
      "total": 1.0
@@ -98634,28 +98634,28 @@
  ],
  "telegramNews": [
   {
+   "text": "14–15 ЛИСТОПАДА відбудуться змагання УДЛ в Ужгороді.\n📋 ПОЛОЖЕННЯ:\n14.11:\n🎯 Дисципліна: 501 Double Out (501 DO)\n👤 Особистий залік серед чоловіків та жінок.\n15.11\n🏆 КУБОК ІМЕНІ Е. ЧІКА\n🎯 Дисципліна: American Cricket (з набором очок)\n👤 Особистий залік серед чоловіків та жінок.\n📝 Реєстраційні форми:\n👨 Чоловіки:\n👩 Жінки:\n📌 15 листопада | Кубок ім. Е. Чіка\n👨 Чоловіки:\n👩 Жінки:\nБільше інформації 👉 фейсбук УДЛ",
+   "date": "2026-10-23",
+   "url": "https://t.me/fullbull/12885",
+   "photo": "https://cdn4.telesco.pe/file/OTHQMShIILEiJsyevPL6m5JCWpzosUbCPJG6Oy8XOVBqB3252TYLWYXvkv86EYcMPcqJ1OdEHQrykNctsLWAjc6JAHT7gfliNCqp51bINhjRx7auIRU8YfDQC9LxYiPQ-7cTgksPb2SLKijxmhvhuMAk5Ew9hBDREoIykGlVUJuyuqw98uEcNCcc6VLSsQcWy6wlxzvZ-Si7h2UeLH1qRVZzJ72wsslLYBZW7IuYnu_CLYyGq_qOflnDeD7cn877ZFCdrRxR9BGTgGXNINArUeWnAmfO2NiD8EywDszp9qOpuEvpM3ZSnZyUCKURit_PxFg94U9nwAu_ZpkHM29_qg.jpg"
+  },
+  {
    "text": "🏆 ТЕТЯНА ХАРЧЕНКО — ПЕРЕМОЖНИЦЯ V ЕТАПУ КУБКУ УКРАЇНИ 2026 З ДАРТСУ!\n18 жовтня у Черкасах відбувся V етап Кубку України 2026 серед жінок.\n🥇 Тетяна Харченко\n🥈 Ксенія Лановенко\n🥉 Наталія Шклярук\n☑️Чекаути 100+:\n1️⃣1️⃣7️⃣ — Інна Гончаренко\n👀",
    "date": "2026-10-18",
    "url": "https://t.me/fullbull/12862",
-   "photo": "https://cdn4.telesco.pe/file/q95aVF8gDTmzZpojdlg1OvbeGjy2PEEqEiErqMiLutb0B8dNEw2-HWd-_L2LEjFFUgkHZmyOpDdhvwiq-uYL6BBAV_ZPYrA3_nHrv6NJ0yR1UwN8cDhFTK6GcdJ2JHQaDt7FBQbn2lD0nsVsS9g17VzAZ1xukVQ6l4vYLMwNd67QJ8gbeTv7q1MfOm4VKde7qFnFtvw_H6jH3r5pjzJvbuJioekbTdYfl2abzrzUy1-4BfeqafH5gxjzQKtaU2P4kSJHj_s7suT8qD_P7rJ53MK6Wyi8ZDtxZIFGiRJnb7DtADatjR5dOgeLdZNPTouFiiqfOMMNDPlLiZ5eaG6B9Q.jpg"
+   "photo": "https://cdn4.telesco.pe/file/s-9bw5mKCyR1lEXjxMOkzkqJ-SzZxO0szVAkU4IbxjgEnq-VjktBiMwUKCP2JkpkcdB02SaBv_IRKQOQ7CJ0tj8tAQsX-c946zXMsUMtqMaJ-GKRxRpn9QVn9HNC4UvE895Yb-uI69AZWK1aHOZy_Ma_hd-kY0HgQu0h3nxpaUK1DWvlOl-8HcfJwvXGdW40rOs94safOaVNpq-ZPCwdlOa9oFQi1Fc1s4waQgCBgiS0ca1jxfY9Y674Xj-JR2ZtHQQz88XPIuob0fQrLdKEMV1_ZyzSKlIFmfmZL3RbuQL0xUTfpLs8hn2OZOwoRpngjLfIfOWSboY5EMUxM0OrCQ.jpg"
   },
   {
    "text": "🏆 ЄВГЕН ОВСІЄНКО — переможець V етапу Кубку України 2026 з дартсу, який відбувся у Черкасах, у неділю, 18 жовтня. \n🥇 Євген Овсієнко\n🥈 Руслан Могилевський\n🥉 Степан Гакман\n1️⃣8️⃣0️⃣×6️⃣— Євген Овсієнко\n1️⃣8️⃣0️⃣×2️⃣ — Едуард Гончаров, Степан Гакман, Дін Фатех, Олександр Абчугський\n1️⃣8️⃣0️⃣ — Віталій Рогов, Ігор Рашоянц, Юрій Агневщиков, Володимир Смик\n🎯 Чекаути 100+\n1️⃣4️⃣8️⃣ — Євген Ванда\n1️⃣3️⃣7️⃣ — Євген Овсієнко\n1️⃣1️⃣3️⃣ — Сергій Аверін\n1️⃣0️⃣8️⃣ — Дін Фатех, Ігор Рашоянц, Євген Овсієнко\n1️⃣",
    "date": "2026-10-18",
    "url": "https://t.me/fullbull/12861",
-   "photo": "https://cdn4.telesco.pe/file/eFszBf7iE1gbqFd7mZWNzLMqhrriDIaanUCcU-D3RSJvuR418mtEBO3SkgHlSUAvJL-FQ8OOcX1b91lgdytYjaLzra0CoxwTqJE8a2Y7n-j2giu9iRUg2LInPbvUG_1FgJG6pgXqH2flHI6ccwvRPm2nYa3sD7tcNqpD_Z3aO6K5TBXPoZPVMfqnOcn54ALbZcCJr6Nz2upQR8g8XJd0rwdA3NDRzYoZsJArwj63JXYTBKmN3AkwKl4YKwnlsijTjzh3r72xru2RB7lVWZ41A9GNzNFOXGeLxZMWGeWM9cOWFnQdsoDuR8TUDjoJSirICjbkJwSTv2xcKxx3C1xndg.jpg"
+   "photo": "https://cdn4.telesco.pe/file/GkF8kpLzjbU2fg6TJuPT4WrKucec1N9b7Sh2OpBKMbBYqS1a3NPaTT9BoqX2dlKwYJqbvVdKP5sJAjFfq1e-SpnGHqeDhHllgQ6woXdlR3Go1e9hs9yhpK6_KNq6EA1G5wTD7oNl19Ntmgwhb4GP8w5r3lXXfVvj6z53lX-5RMRrUNn5dL7UavMiAWDPO6d3NWa7qyjyNl5By2HaJw1dUrNtBRciGuC9QALmImY4RE5ZV7CzWHIeavM0ujCmj-RH5gBYH5iZkovgC88oaCdzygXANA-e6D4bPhvImY3nie6uKQe1AmkNQmQ_GATXwtDk0yyDjs5KKZyp15LqEG86Fg.jpg"
   },
   {
    "text": "У неділю 18 жовтня, в Черкасах проходить 5 етап Кубку України 2026 з дартсу.\n🙋‍♀️Жінки: \n🙋‍♂️Чоловіки:",
    "date": "2026-10-18",
    "url": "https://t.me/fullbull/12858",
-   "photo": "https://cdn4.telesco.pe/file/qLuseXC6jHM31Y-qSC_yKzi_iqwlyj-sEVn5w-XQ7bYTnk5UMcBi8nNlzK_YpgCoFXkf5hpkjFt6EugmTUbSY6X8qVVQ0A3uDyq8cxU8NhmJ8Jd0eXc-S46vC-FYIkwosAUNp4zOoN-rSRjyefgw0S8lPPeXF_8kwllbI2qO8ij2B5WAeDrkUUzp4dRHoWkVkskxZsLivkZURpX1B5yORKCnEaMPfFPRmXuZ8JARYn0ZgS-kU4H0prJW1g4achrdwo94bBo1Wn8Owmb1N60scY-6YIiqpNVT17ZLePFxnjgCDXAgvVyDO1JkMLwoXndhR-CKz74NhEOnM2jyeImOWg.jpg"
-  },
-  {
-   "text": "🏆 ХАРЧЕНКО ТЕТЯНА — переможниця жіночого Чемпіонату України з крикету, який відбувся у Черкасах у суботу, 17 жовтня.\n🥇 Тетяна Харченко\n🥈 Інна Гончаренко\n🥉 Любов Терещенко\n👀",
-   "date": "2026-10-17",
-   "url": "https://t.me/fullbull/12852",
-   "photo": "https://cdn4.telesco.pe/file/qQPMI3EaNQuQqmtRSkvymfGB43wZwb1PVyqwBRTThxACbcB-FfLlWZjCfD_nVsR1cGhAvqnrW1S2gwMUMWu_OPn2nkAaokFZfhpucXtVWM96tu8nVh2iA5ZbTBH8aL5IpAXsJYUhijd--fIOvj0pgd0Wg6E9OSFPpDVLS-9xZ3z1bGXSpjKt4jpM_6ZEZGS7Iu8Kfe3bvQxKMvkcnrEdzNAMkkcSHIUa2MTx2grNgq3MepGk_YHQBKlY1DGNr3c9rwBVtAbbt8YMai4Z7Q38wHpJbOKHTjwBBuhT96NW-jtPDEKPp0YpO3ipz94x5zPiycrqVTpP9dmzBIZ_c5uebA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/bKQa73up5gbYXDA8LJeN8YEaVKunPhsrNSXTpyJbTl5iVOAXch58KoLVxfcVLdCmNzvvYUvKpRZ-mEsQCQn1C5FOEftRDayfGM4G0SOrDzEi3wfN8lOo6emf-kLh_d5c2gZi_uJLputXRncZE1kfAYDzoe6PABk5jU4azOQGDRfufMrCKkfAwaGzY006O-wVg16hgbMBOmKCpGr4zVyZOlYnuU8XrbototryjjvOi4DBYYdCjt_QG6kzQqmoMdehfaaS_izu9PvUPjsDT7Xs7V3lEFiUdP7tEZTdQMxkl_dS93iDz9rbrB_uYSdazbRhYnR0qGuFtZJh9UZy1-Gysg.jpg"
   }
  ],
  "championsRecords": [
