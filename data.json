@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-10-27T18:35:17.238394+00:00",
+  "lastUpdated": "2026-10-27T18:58:15.537767+00:00",
   "tournamentsCount": 243,
   "parts": {
    "nakkaMatchStats": {
@@ -11298,8 +11298,18 @@
      "Білодід Христина"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Шнір Ганнес",
+    "silver": "Береш Карол",
+    "bronze": []
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Шауер Жасмін",
+    "silver": "Габєліч Ясміна",
+    "bronze": [
+     "Білодід Христина"
+    ]
+   }
   },
   {
    "total": 65,
@@ -11385,7 +11395,14 @@
     ]
    },
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Сиром'ятников Олександр",
+    "bronze": [
+     "Єрєменко Василій",
+     "Мамика Олександр"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -11533,7 +11550,13 @@
     ]
    },
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Соколов Роман",
+    "silver": "Марабуоглу Мурат",
+    "bronze": [
+     "Верхоляк Богдан"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
