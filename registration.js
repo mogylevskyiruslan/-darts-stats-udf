@@ -94,6 +94,19 @@
     }).sort(function (a, b) { return a.localeCompare(b, 'uk'); });
   }
 
+
+  // ---------------------------------------------------------------- рейтинг (поточний, 2026)
+  function ratingMap(gender) {
+    var out = {};
+    function take(r) { if (r && r.rows) r.rows.forEach(function (x) { if (x && x.name && typeof x.total === 'number') out[x.name] = x.total; }); }
+    try {
+      if (gender !== 'women' && typeof currentRatingMen !== 'undefined') take(currentRatingMen);
+      if (gender !== 'men' && typeof currentRatingWomen !== 'undefined') take(currentRatingWomen);
+    } catch (e) { }
+    return out;
+  }
+  function fmtRating(v) { return (typeof v === 'number') ? (Math.round(v * 10) / 10).toString().replace('.', ',') : '—'; }
+
   // ---------------------------------------------------------------- API
   function apiGet(tid) {
     if (!REG_API_URL) return Promise.reject(new Error('no-api'));
@@ -120,7 +133,7 @@
     '.reg-table th{color:var(--muted);font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.06em;background:rgba(255,255,255,.03)}' +
     '.reg-table tr:last-child td{border-bottom:0}.reg-table td.n{color:var(--muted);font-family:"JetBrains Mono",monospace;width:44px}' +
     '.reg-table tr.reg-marked td{background:rgba(252,194,2,.16)}.reg-table tr.reg-marked td.nm{color:var(--gold);font-weight:600}' +
-    '.reg-pill{display:inline-block;border-radius:20px;padding:2px 10px;font-size:12px;border:1px solid var(--line)}' +
+    '.reg-table td.rt{font-family:"JetBrains Mono",monospace;color:var(--gold)}.reg-pill{display:inline-block;border-radius:20px;padding:2px 10px;font-size:12px;border:1px solid var(--line)}' +
     '.reg-pill.y{border-color:#3fbf7f;color:#7be0ae}.reg-pill.w{border-color:var(--gold);color:var(--gold)}.reg-pill.n{color:var(--muted)}' +
     '.reg-note{color:var(--muted);font-size:13px;margin:10px 2px}' +
     '.reg-empty{padding:26px;text-align:center;color:var(--muted)}' +
@@ -155,10 +168,10 @@
     var sec = el('section', { id: 'registration', 'data-i18n-skip': '' });
     sec.innerHTML =
       '<h2><span class="idx">★</span> Реєстрація на турнір <span class="reg-badge" id="reg-badge">тест</span></h2>' +
-      '<p class="section-sub">Оберіть себе зі списку, вкажіть регіон, населений пункт і телефон. Телефон бачить лише організатор.</p>' +
+      '<p class="section-sub">Оберіть себе зі списку, вкажіть регіон, населений пункт і телефон. Список упорядковано за поточним рейтингом. Телефон бачить лише організатор.</p>' +
       '<div class="reg-card"><div><h3 id="reg-title"></h3><div class="reg-meta" id="reg-meta"></div></div>' +
       '<button type="button" class="reg-btn" id="reg-open">Зареєструватись</button></div>' +
-      '<div class="reg-table-wrap"><table class="reg-table"><thead><tr><th>№</th><th>Гравець</th><th>Регіон</th><th>Населений пункт</th><th>Тур-карта</th></tr></thead><tbody id="reg-body"></tbody></table></div>' +
+      '<div class="reg-table-wrap"><table class="reg-table"><thead><tr><th>№</th><th>Гравець</th><th>Рейтинг</th><th>Регіон</th><th>Населений пункт</th><th>Тур-карта</th></tr></thead><tbody id="reg-body"></tbody></table></div>' +
       '<div class="reg-note" id="reg-note"></div>';
     var anchor = $('#history');
     if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(sec, anchor); else document.body.appendChild(sec);
@@ -174,14 +187,24 @@
   function renderTable() {
     var body = $('#reg-body'); if (!body) return;
     var note = $('#reg-note');
-    if (!REG_API_URL) { body.innerHTML = '<tr><td colspan="5" class="reg-empty">Реєстрацію ще не підключено (немає адреси Apps Script).</td></tr>'; note.textContent = ''; return; }
-    if (!state.loaded) { body.innerHTML = '<tr><td colspan="5" class="reg-empty">Завантаження…</td></tr>'; return; }
-    if (!state.rows.length) { body.innerHTML = '<tr><td colspan="5" class="reg-empty">Поки ніхто не зареєструвався.</td></tr>'; note.textContent = ''; return; }
-    body.innerHTML = state.rows.map(function (r, i) {
+    if (!REG_API_URL) { body.innerHTML = '<tr><td colspan="6" class="reg-empty">Реєстрацію ще не підключено (немає адреси Apps Script).</td></tr>'; note.textContent = ''; return; }
+    if (!state.loaded) { body.innerHTML = '<tr><td colspan="6" class="reg-empty">Завантаження…</td></tr>'; return; }
+    if (!state.rows.length) { body.innerHTML = '<tr><td colspan="6" class="reg-empty">Поки ніхто не зареєструвався.</td></tr>'; note.textContent = ''; return; }
+    var rm = ratingMap(cur.gender);
+    var rows = state.rows.map(function (r, i) {
+      var live = rm[r.name];
+      return { r: r, i: i, rt: (typeof live === 'number') ? live : (typeof r.rating === 'number' ? r.rating : null) };
+    }).sort(function (a, b) {
+      if (a.rt === null && b.rt === null) return a.i - b.i;
+      if (a.rt === null) return 1; if (b.rt === null) return -1;
+      return (b.rt - a.rt) || (a.i - b.i);
+    });
+    body.innerHTML = rows.map(function (o, k) {
+      var r = o.r;
       var cls = r.card === 'Маю' ? 'y' : (r.card === 'Не маю' ? 'n' : 'w');
       var txt = r.card === 'Маю' ? 'Є' : (r.card === 'Не маю' ? 'Немає' : 'Оформлює');
-      return '<tr class="' + (r.marked ? 'reg-marked' : '') + '"><td class="n">' + (i + 1) + '</td><td class="nm">' + (r.marked ? '★ ' : '') + esc(r.name) +
-        '</td><td>' + esc(r.region) + '</td><td>' + esc(r.city) + '</td><td><span class="reg-pill ' + cls + '">' + txt + '</span></td></tr>';
+      return '<tr class="' + (r.marked ? 'reg-marked' : '') + '"><td class="n">' + (k + 1) + '</td><td class="nm">' + (r.marked ? '★ ' : '') + esc(r.name) +
+        '</td><td class="rt">' + fmtRating(o.rt) + '</td><td>' + esc(r.region) + '</td><td>' + esc(r.city) + '</td><td><span class="reg-pill ' + cls + '">' + txt + '</span></td></tr>';
     }).join('');
     var marked = state.rows.filter(function (r) { return r.marked; }).length;
     note.textContent = 'Зареєстровано: ' + state.rows.length + (marked ? ' · виділені жовтим — відмічені організатором: ' + marked : '');
@@ -191,7 +214,7 @@
     if (!REG_API_URL) { renderTable(); return; }
     apiGet(cur.id).then(function (d) {
       if (d && d.ok) { state.rows = d.rows || []; state.loaded = true; renderTable(); }
-    }).catch(function () { if (!state.loaded) { $('#reg-body').innerHTML = '<tr><td colspan="5" class="reg-empty">Не вдалося завантажити список. Спробуйте пізніше.</td></tr>'; } });
+    }).catch(function () { if (!state.loaded) { $('#reg-body').innerHTML = '<tr><td colspan="6" class="reg-empty">Не вдалося завантажити список. Спробуйте пізніше.</td></tr>'; } });
   }
 
   function toast(msg) {
@@ -364,7 +387,7 @@
     if (dup) { status.className = 'reg-status err'; status.textContent = 'Цей гравець уже є у списку реєстрації.'; return; }
     if (!REG_API_URL) { status.className = 'reg-status err'; status.textContent = 'Реєстрацію ще не підключено: не вказано адресу Apps Script.'; return; }
     var btn = $('#reg-submit', overlay); btn.disabled = true; status.className = 'reg-status'; status.textContent = 'Надсилаю…';
-    apiPost({ t: cur.id, name: name, isNew: !!form.isNew, region: region, city: city, phone: phone, card: cardEl.value,
+    apiPost({ t: cur.id, name: name, rating: (typeof ratingMap(cur.gender)[name] === 'number') ? ratingMap(cur.gender)[name] : null, isNew: !!form.isNew, region: region, city: city, phone: phone, card: cardEl.value,
       consent: true, hp: $('#website', overlay).value, ms: Date.now() - openedAt })
       .then(function (d) {
         if (d && d.ok) {
