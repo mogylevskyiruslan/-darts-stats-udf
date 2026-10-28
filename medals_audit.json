@@ -1,6 +1,24 @@
 {
  "sheetCorrections": [
   {
+   "date": "27.01.2008",
+   "tournament": "ЧУ 2007",
+   "format": "501DO",
+   "gender": "men",
+   "before": {
+    "gold": "Воронін Олександр",
+    "silver": "Чік Едуард",
+    "bronze": [
+     "Кобзар Ігор"
+    ]
+   },
+   "after": {
+    "gold": "Ледєньов Вадим",
+    "silver": null,
+    "bronze": []
+   }
+  },
+  {
    "date": "31.01.2010",
    "tournament": "ЧУ 2009",
    "format": "501DO",
