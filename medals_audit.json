@@ -1,6 +1,24 @@
 {
  "sheetCorrections": [
   {
+   "date": "29.01.2006",
+   "tournament": "ЧУ 2005",
+   "format": "501DO",
+   "gender": "men",
+   "before": {
+    "gold": "Ледєньов Вадим",
+    "silver": null,
+    "bronze": []
+   },
+   "after": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Плясуля Станіслав",
+    "bronze": [
+     "Кобзар Ігор"
+    ]
+   }
+  },
+  {
    "date": "27.01.2008",
    "tournament": "ЧУ 2007",
    "format": "501DO",
@@ -502,6 +520,7 @@
  ],
  "unknownNames": [
   "Молнар Неллі",
+  "Плясуля Станіслав",
   "Пугіна Єлизавета"
  ]
 }

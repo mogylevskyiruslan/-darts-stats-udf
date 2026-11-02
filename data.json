@@ -1,7 +1,7 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-01T11:49:00.746673+00:00",
-  "tournamentsCount": 254,
+  "lastUpdated": "2026-11-02T13:21:55.056849+00:00",
+  "tournamentsCount": 255,
   "parts": {
    "nakkaMatchStats": {
     "file": "data/nakka_matches.json",
@@ -12113,6 +12113,46 @@
     "bronze": []
    },
    "nakkaMedalsWomen": null
+  },
+  {
+   "total": null,
+   "men": null,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "ЧУ 2005",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "29.01.2006",
+   "city": "Київ",
+   "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/12jQsWpCeli3wezloPaHCgzANauL1lC68t2E8_mPsdUc/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Плясуля Станіслав",
+    "bronze": [
+     "Кобзар Ігор"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Плясуля Станіслав",
+    "bronze": [
+     "Кобзар Ігор"
+    ]
+   },
+   "nakkaMedalsWomen": null
   }
  ],
  "leaderboard": [
@@ -12453,9 +12493,9 @@
    "name": "Кобзар Ігор",
    "gold": 0,
    "silver": 2,
-   "bronze": 2,
+   "bronze": 3,
    "champUA": 0,
-   "total": 4,
+   "total": 5,
    "rank": 38
   },
   {
@@ -12639,7 +12679,7 @@
    "rank": 58
   },
   {
-   "name": "Стецишин Віталій",
+   "name": "Плясуля Станіслав",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -12648,7 +12688,7 @@
    "rank": 59
   },
   {
-   "name": "Субаши Алпер",
+   "name": "Стецишин Віталій",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -12657,13 +12697,22 @@
    "rank": 60
   },
   {
+   "name": "Субаши Алпер",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 1,
+   "rank": 61
+  },
+  {
    "name": "Шинкаренко Василь",
    "gold": 0,
    "silver": 0,
    "bronze": 6,
    "champUA": 0,
    "total": 6,
-   "rank": 61
+   "rank": 62
   },
   {
    "name": "Гринів Олександр",
@@ -12672,7 +12721,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 62
+   "rank": 63
   },
   {
    "name": "Кисельов Дмитро",
@@ -12681,7 +12730,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 63
+   "rank": 64
   },
   {
    "name": "Марков Сергій",
@@ -12690,7 +12739,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 64
+   "rank": 65
   },
   {
    "name": "Пономаренко Денис",
@@ -12699,7 +12748,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 65
+   "rank": 66
   },
   {
    "name": "Солтис Андрій",
@@ -12708,7 +12757,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 66
+   "rank": 67
   },
   {
    "name": "Троценко Артем",
@@ -12717,7 +12766,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 67
+   "rank": 68
   },
   {
    "name": "Анісімов Денис",
@@ -12726,7 +12775,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 68
+   "rank": 69
   },
   {
    "name": "Бадира Олександр",
@@ -12735,7 +12784,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 69
+   "rank": 70
   },
   {
    "name": "Барсуков Віталій",
@@ -12744,7 +12793,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 70
+   "rank": 71
   },
   {
    "name": "Бородулін Дмитро",
@@ -12753,7 +12802,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 71
+   "rank": 72
   },
   {
    "name": "Верхоляк Богдан",
@@ -12762,7 +12811,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 72
+   "rank": 73
   },
   {
    "name": "Гакман Степан",
@@ -12771,7 +12820,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 73
+   "rank": 74
   },
   {
    "name": "Горняк Іштван",
@@ -12780,7 +12829,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 74
+   "rank": 75
   },
   {
    "name": "Гоян Дмитро",
@@ -12789,7 +12838,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 75
+   "rank": 76
   },
   {
    "name": "Гросов Олексій",
@@ -12798,7 +12847,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 76
+   "rank": 77
   },
   {
    "name": "Грєков Юрій",
@@ -12807,7 +12856,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 77
+   "rank": 78
   },
   {
    "name": "Дідов Василь",
@@ -12816,7 +12865,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 78
+   "rank": 79
   },
   {
    "name": "Козловський Богдан",
@@ -12825,7 +12874,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 79
+   "rank": 80
   },
   {
    "name": "Коломієць Андрій",
@@ -12834,7 +12883,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 80
+   "rank": 81
   },
   {
    "name": "Некрістов Станіслав",
@@ -12843,7 +12892,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 81
+   "rank": 82
   },
   {
    "name": "Озджан Мустафа",
@@ -12852,7 +12901,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 82
+   "rank": 83
   },
   {
    "name": "Пальонний Ігор",
@@ -12861,7 +12910,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 83
+   "rank": 84
   },
   {
    "name": "Стейер Себастьян",
@@ -12870,7 +12919,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 84
+   "rank": 85
   },
   {
    "name": "Титков Олег",
@@ -12879,7 +12928,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 85
+   "rank": 86
   },
   {
    "name": "Толкачов В'ячеслав",
@@ -12888,7 +12937,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 86
+   "rank": 87
   },
   {
    "name": "Тямолов Роман",
@@ -12897,7 +12946,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 87
+   "rank": 88
   },
   {
    "name": "Улезко Анатолій",
@@ -12906,7 +12955,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 88
+   "rank": 89
   },
   {
    "name": "Холліуелл Вейн",
@@ -12915,7 +12964,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 89
+   "rank": 90
   },
   {
    "name": "Хімчак Сергій",
@@ -12924,7 +12973,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 90
+   "rank": 91
   },
   {
    "name": "Царолунга Дмитро",
@@ -12933,7 +12982,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 1,
-   "rank": 91
+   "rank": 92
   }
  ],
  "leaderboardWomen": [
@@ -104251,6 +104300,12 @@
  },
  "youtubeVideos": [
   {
+   "id": "8am3QAdFIbk",
+   "title": "Ванда – Десинський #shorts",
+   "published": "2026-11-01",
+   "thumbnail": "https://i1.ytimg.com/vi/8am3QAdFIbk/hqdefault.jpg"
+  },
+  {
    "id": "3kWmhNyqVoY",
    "title": "Гончаренко – Лановенко: 177 + закриття на перемогу в лезі #shorts",
    "published": "2026-10-31",
@@ -104261,26 +104316,32 @@
    "title": "Могилевський – Гакман: Лег 12 дротиків #shorts",
    "published": "2026-10-30",
    "thumbnail": "https://i1.ytimg.com/vi/H6HFTUF5GgY/hqdefault.jpg"
-  },
-  {
-   "id": "nTYPWNvJGiE",
-   "title": "Гончаров – Овсієнко: Лег 12 дротиків #shorts",
-   "published": "2026-10-29",
-   "thumbnail": "https://i3.ytimg.com/vi/nTYPWNvJGiE/hqdefault.jpg"
   }
  ],
  "telegramNews": [
   {
+   "text": "Рейтинг кваліфікаційної серії DNC2026 на київський Мастерс.",
+   "date": "2026-11-01",
+   "url": "https://t.me/fullbull/12933",
+   "photo": "https://cdn4.telesco.pe/file/TsimQBTSED8-tSIlMggoD6UjnZ0vloM10Dwo3jk022jokv0PxEnggss_eEDIMMKRzFwfQ1vvu15m-uR9FvkikUfNfWSkYRmOadQaI-R6Cm1bkDYbcOPA6a2-oOMsREKl-X9hihIiOYM5xVZ-xxrx6bMrlFllFMeiQcQy8YaBnSmQx81Gc21AKbw_GAjgraWPuVL7RV3yvYU7UsXmg5uvaBLwEH0tiRB6NX11xOdo0TdCqA6cgDR7Nasy3ZeD02noPfOSBYcEMWuYfFxMoZIJDu_Q_Dx88r1PgEsh_4ts3R85Pmqa0M3bhhiY_j6vUgtzuEHR1qKR8WLMcRzQcc4iUg.jpg"
+  },
+  {
+   "text": "🏆Переможець другого турніру DartsClub Series 2026 - Овсієнко Євген.\nЗа підсумками серії лідери рейтингу отримають кваліфікаційні місця на цьогорічному київському Мастерсі. \n🥇Овсієнко Є.\n🥈Солтис М.\n🥉Аверін С.\n🥉Лагутін А.\n1️⃣8️⃣0️⃣х2️⃣ - Овсієнко Є.\n✅Чекаути 100+:\n1️⃣2️⃣0️⃣ - Овсієнко Є.\n1️⃣1️⃣6️⃣ - Аверін С.\n1️⃣1️⃣5️⃣ - Овсієнко Є.\n1️⃣0️⃣9️⃣ - Овсієнко Є.\n👀",
+   "date": "2026-11-01",
+   "url": "https://t.me/fullbull/12931",
+   "photo": "https://cdn4.telesco.pe/file/V0aHggftH7mkF84IxM5VDvAdqzXn3d3NiNYFRR7qVeH2lje9bDDgu6HxylkCX4oQsYh3Yw5oDdncTfi125kjmDHuGCb0byzz4sY60fiLu-YBV2cU7fx-gSqJHZdGeEWH-3awQyEboSBTcjEezuX9Rph3LXEQfHxcwyp9kTb7wz81cYAdI38A23gO3HJnDv91MWNQEOKmoGZ2bFQcoeJHT9HJbD70hIblN57RxQFLGXj_8LsZfSVod6ul0LaS7YXVfP2e-WBFgBXr8M09AtafT3SyLzI7ylFRrTcgTZU9iTGlscNkTI3BBT7egy_0IK86Cm8ctShvXyg_0GlGM2c8zg.jpg"
+  },
+  {
+   "text": "🏆Овсієнко Євген переміг у сьомому турнірі осіннього рейтингу дартс-клубу «Портер», який відбувся в останню суботу жовтня.\n🥇Овсієнко Є.\n🥈Дзябура В.\n🥉Аверін С.\n1️⃣8️⃣0️⃣х2️⃣ - Овсієнко Є.\n✅Чекаути 100+:\n1️⃣1️⃣9️⃣ - Гомелюк О.\n1️⃣0️⃣6️⃣ - Бабанін Д.\n👀 \n📊Статистика і рейтинг ДК «Портер» сезону осінь 2026 👉",
+   "date": "2026-11-01",
+   "url": "https://t.me/fullbull/12930",
+   "photo": "https://cdn4.telesco.pe/file/T7o8RxJmZvDyn4fiPGrUeBGIHEr4t4EdW5bQo-PvsuNyiC2hlxhxbtufA_GYM6pV2AzKBkZ01EF0DzB1WxyfnAvCm70gv9JKkCkdH9pWHXn6qfOvONCk1NGzYtnNvM3d3tTjJeyCVJLQoYwbWmWBL9028GgboSHHe-H_y9gmW4rzo5gTa4CsjTnSIzz8Ylea_xOr4wvZIvexO8IPFyYBlRQAi_jNi51PU0BE7wqN555Y09aHZXylt16ijghzx7fW_NDFrzESHVArqhL7wuUJrH5o-Mk8dy76_H5ZXWBVe78bmruHGNwpkA1QnqLv_SQlKsUAdvVtqGCn3gm5_h79_w.jpg"
+  },
+  {
    "text": "30 жовтня, відбудеться прем’єра незвичайного дартсового шоу, головною зіркою якого стане чинний чемпіон світу Люк Літтлер.\n📍 Місце: Manchester Central, Манчестер\n🕘 Початок: 21:00 за київським часом (19:00 за британським)\n📺 Трансляція: Netflix\n💰 Головний приз: £501 000\nКожен з 24 відібраних претендентів зіграє один лег 501. Завдання — перемогти Літтлера хоча б в одному легу. Якщо комусь це вдасться, він забере головний приз — £501 000.\nСеред відібраних — відомі представники дартсу:\n• Fallon Sherr",
    "date": "2026-10-30",
    "url": "https://t.me/fullbull/12922",
-   "photo": "https://cdn4.telesco.pe/file/bhHYrHbdeMDPO-DDWnZ5FMYyFCEhipoX8AaA2NfAIBcFnUTzncGX1Oe8_KSCmxll2DsSFZeTvTQhwoaOwaFJHu9RWE0at3rbinYbc_1-cfM3ocv-GlLL1nOVtDmDCy1AvaebwKmDgooA3OlclQGdL8zkF0qlQCit_VPWcVXCoIxrdvUJXGNZhYJbTPGakvnvA50Jxsv1L4tcHV6YyPPSr49TsB6tlSiAoQEXSEYk4Og4KjWVt6VAhtgTQs8f-xuUX4soo0UG6ttgR8a3RwSA_T5SLIo3y_o-4jiVXC43y3Fx3_wOYp9y0E_XUDsBdwvIsSfLXnN-1XF5E6pho6rQVA.jpg"
-  },
-  {
-   "text": "🏆Овсієнко Євген переможець першого турніру кваліфікаційної серії DartsNews Club 2026. За підсумками серії, лідери рейтингу отримають кваліфікації на Kyiv FullBull Masters 2026.\n🥇Овсієнко Є.\n🥈Солтис М.\n🥉Григоренко В.\n🥉Аверін С. \n1️⃣8️⃣0️⃣x6️⃣ - Овсієнко Є.\n☑️Чекаути 100+:\n1️⃣1️⃣2️⃣ - Аверін С.\n1️⃣1️⃣0️⃣ - Бабанін Д.\nУ фіналі турніру Євген зіграв із середнім 95.43 і показав найкращий лег у 12 дротиків❗️\n👀",
-   "date": "2026-10-25",
-   "url": "https://t.me/fullbull/12902",
-   "photo": "https://cdn4.telesco.pe/file/NVMjfz8tBkLANIpOWocp68mNt2q7Z7kzoKc2g2PkByw1nmu_5bew5drWiOL8d7UrBF7zAuoPWW4KoJab6CWfzfF2gzl0xYUYiTS3CGG4-K-Fjfpj_G7-FCIZ-A9iBggs4KJix9Gq5yMB_1HR6kPiiA2f-MVAG9BhIMHPn9S8XpgtrFjEqHEnGm4lUJMlEUsNGUxNXyr2KRpBfEYes9lwe_eNF4XEEsi4xQrAaVkFgYg39q9yqj5_bumDahxrLE4RlImc5IxJDHn2CKBeWvDJnuavAGInQi5MoBVNDETFguOjZwKa6gct5hkmDefTXC6ffMiRfNq6cRUI3QoLpb-dHw.jpg"
+   "photo": "https://cdn4.telesco.pe/file/BocHtOlNRtpyXJ6Wpd5A4aOhmZeRF54sv-omL8_tBE1asnRcxsC7gw9bF6cHnlryd-l_nNExOAFY9qNDgZwAfK0XIA0npN3yXaZ7tcN6qHR6OR5kI0lJTo8snTC3K3PmRkp1BbtG31aEruszvAjjBBiPDktun_NDXQsDDrsJ1ySKiY_KZ3Y_mB5MUnBH10bpTTbflrwWf8_-cC77ZtiLreN-kDM7RGuemrZQMyVu2tEFdTg3nEoAZzm802MQ31ZJcPjCLH7VSOAPfKlCjsgr8UZ0u5T_GeAI8OibaFBoyWTdQn4ohoRj49BjcQVnqtvUEWgY-5bwN4Al3BPZxPdo5A.jpg"
   }
  ],
  "championsRecords": [
@@ -108152,6 +108213,24 @@
    "place": 1,
    "names": [
     "Ледєньов Вадим"
+   ]
+  },
+  {
+   "year": 2005,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Плясуля Станіслав"
+   ]
+  },
+  {
+   "year": 2005,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Кобзар Ігор"
    ]
   },
   {
