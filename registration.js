@@ -8,9 +8,19 @@
   // ---------------------------------------------------------------- налаштування
   var REG_API_URL = 'https://script.google.com/macros/s/AKfycbxdYScExVIag7w8ZSHCRh-0oPpMXaUOBkHKDxPUDblcQO7UQPEFmbBIMDcK0EbiOfmQxA/exec';          // <-- сюди вставте адресу веб-застосунку Apps Script (закінчується на /exec)
   var REG_PUBLIC = false;        // true - секція видима всім; false - лише після таємного входу
+  // Подія: 12-13 грудня 2026, Вижниця. Посилання на документи вставте пізніше ('' = "незабаром")
+  var REG_EVENT = {
+    place: 'Вижниця', region: 'Чернівецька область', dates: '12–13 грудня 2026',
+    docs: { regulations: '', judges: '' }
+  };
   var REG_TOURNAMENTS = [
-    { id: 'chu501m', title: 'ЧУ 501 Чоловіки', date: '', place: '', gender: 'men', open: true }
+    { id: 'chu501m', short: 'ЧУ · чоловіки', title: 'Чемпіонат України серед чоловіків', day: '12 грудня 2026', gender: 'men', open: true },
+    { id: 'chu501w', short: 'ЧУ · жінки', title: 'Чемпіонат України серед жінок', day: '12 грудня 2026', gender: 'women', open: true },
+    { id: 'chu501j', short: 'ЧУ · юнаки', title: 'Чемпіонат України серед юнаків', day: '13 грудня 2026', gender: 'all', open: true },
+    { id: 'kufm', short: 'Фінал КУ · чоловіки', title: 'Фінал Кубку України серед чоловіків', day: '13 грудня 2026', gender: 'men', open: true },
+    { id: 'kufw', short: 'Фінал КУ · жінки', title: 'Фінал Кубку України серед жінок', day: '13 грудня 2026', gender: 'women', open: true }
   ];
+  var DISCIPLINE = 'особистий розряд, 501 DO';
 
   var REGIONS = ['Вінницька', 'Волинська', 'Дніпропетровська', 'Донецька', 'Житомирська', 'Закарпатська', 'Запорізька',
     'Івано-Франківська', 'Київська', 'Кіровоградська', 'Луганська', 'Львівська', 'Миколаївська', 'Одеська', 'Полтавська',
@@ -156,42 +166,121 @@
     '.reg-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}' +
     '.reg-status{margin-top:14px;font-size:14px}.reg-status.err{color:#ff8c8c}.reg-status.ok{color:#7be0ae}' +
     '.reg-chosen{display:inline-flex;gap:8px;align-items:center;margin-top:6px;font-size:13px;color:var(--gold)}.reg-link{background:none;border:0;color:var(--gold);cursor:pointer;padding:0;font:13px Inter,sans-serif;text-decoration:underline}' +
+    '.reg-banner{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:18px;margin-bottom:22px;background:#0b1236}' +
+    '.reg-banner svg.bg{position:absolute;inset:0;width:100%;height:100%}' +
+    '.reg-banner .in{position:relative;padding:34px 30px 150px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px 34px}' +
+    '.reg-banner h3{margin:0 0 6px;font-size:clamp(22px,3.4vw,32px);line-height:1.15}.reg-banner .kick{color:var(--gold);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px}' +
+    '.reg-banner .where{display:flex;flex-wrap:wrap;gap:8px 18px;margin:12px 0 16px;font-size:15px}.reg-banner .where b{color:var(--gold)}' +
+    '.reg-day{background:rgba(10,15,42,.72);backdrop-filter:blur(3px);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px}' +
+    '.reg-day .d{color:var(--gold);font-weight:600;font-size:13px;margin-bottom:6px}' +
+    '.reg-day button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--cream);font:14.5px Inter,sans-serif;padding:6px 2px;cursor:pointer;border-radius:6px}' +
+    '.reg-day button:hover{background:rgba(255,255,255,.06)}.reg-day button small{color:var(--muted);margin-left:6px}' +
+    '.reg-docs{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}' +
+    '.reg-doc{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--gold);color:var(--gold);border-radius:10px;padding:10px 16px;font:600 14px Inter,sans-serif;text-decoration:none;background:rgba(10,15,42,.6)}' +
+    '.reg-doc.soon{border-style:dashed;color:var(--muted);border-color:var(--line);cursor:default}' +
+    '@media(max-width:760px){.reg-banner .in{grid-template-columns:1fr;padding:24px 18px 130px}}' +
+    '.reg-tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px}' +
+    '.reg-tab{text-align:left;background:var(--royal-dark);border:1px solid var(--line);color:var(--cream);border-radius:12px;padding:11px 13px;cursor:pointer;font:14px Inter,sans-serif}' +
+    '.reg-tab .t{font-weight:600}.reg-tab .m{color:var(--muted);font-size:12px;margin-top:3px}.reg-tab.on{border-color:var(--gold);background:rgba(252,194,2,.1)}' +
     '.reg-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--royal);border:1px solid var(--gold);color:var(--cream);padding:11px 18px;border-radius:10px;z-index:1100;font-size:14px}';
 
   // ---------------------------------------------------------------- секція
   var cur = REG_TOURNAMENTS[0];
-  var state = { rows: [], loaded: false, timer: null };
+  var state = { timer: null };
+  var data = {};
+  REG_TOURNAMENTS.forEach(function (t) { data[t.id] = { rows: [], loaded: false }; });
+  function S() { return data[cur.id]; }
+
+  function bannerSvg() {
+    return '<svg class="bg" viewBox="0 0 900 360" preserveAspectRatio="xMidYMax slice" aria-hidden="true">' +
+      '<defs><linearGradient id="rg-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1236"/><stop offset=".55" stop-color="#23357f"/><stop offset="1" stop-color="#f08a3c"/></linearGradient>' +
+      '<linearGradient id="rg-riv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2a5fb4"/><stop offset="1" stop-color="#6fb1e8"/></linearGradient></defs>' +
+      '<rect width="900" height="360" fill="url(#rg-sky)"/>' +
+      '<g fill="#fff" opacity=".7"><circle cx="90" cy="40" r="1.6"/><circle cx="210" cy="70" r="1.2"/><circle cx="340" cy="30" r="1.6"/><circle cx="470" cy="60" r="1.2"/><circle cx="560" cy="25" r="1.5"/><circle cx="690" cy="55" r="1.2"/><circle cx="820" cy="35" r="1.6"/></g>' +
+      // гори
+      '<path d="M0 250 L90 170 L150 215 L250 120 L340 210 L420 150 L520 235 L600 180 L700 240 L800 175 L900 230 L900 360 L0 360Z" fill="#2c3f8f" opacity=".75"/>' +
+      '<path d="M0 285 L70 225 L140 262 L240 190 L330 255 L430 205 L530 268 L640 215 L740 270 L830 225 L900 262 L900 360 L0 360Z" fill="#1b2a6e"/>' +
+      // мішень-сонце
+      '<g transform="translate(300 222) scale(.62)"><circle r="78" fill="#fcc202" opacity=".18"/><circle r="62" fill="#141c56" stroke="#fcc202" stroke-width="3"/><circle r="48" fill="#fff" opacity=".92"/><circle r="38" fill="#c8102e"/><circle r="26" fill="#fff" opacity=".92"/><circle r="17" fill="#1a8f4a"/><circle r="7" fill="#c8102e"/></g>' +
+      '<path d="M0 318 L110 270 L210 305 L330 255 L450 308 L580 262 L700 310 L820 272 L900 300 L900 360 L0 360Z" fill="#0f1a4d"/>' +
+      // сосни
+      '<g fill="#0a1238"><path d="M40 330 l14 -46 l14 46z M62 330 l12 -38 l12 38z M110 335 l12 -40 l12 40z M770 335 l14 -46 l14 46z M800 335 l12 -38 l12 38z M840 332 l14 -42 l14 42z"/></g>' +
+      // Черемош
+      '<path d="M-10 345 C150 318 260 352 420 332 S700 318 910 342 L910 365 L-10 365Z" fill="url(#rg-riv)" opacity=".9"/>' +
+      '<path d="M40 350 C180 336 260 356 400 344 M470 340 C600 328 700 346 860 338" stroke="#fff" stroke-opacity=".45" fill="none" stroke-width="1.5"/>' +
+      '</svg>';
+  }
+
+  function buildBanner() {
+    var days = {};
+    REG_TOURNAMENTS.forEach(function (t) { (days[t.day] = days[t.day] || []).push(t); });
+    var daysHtml = Object.keys(days).map(function (d) {
+      return '<div class="reg-day"><div class="d">📅 ' + esc(d) + '</div>' + days[d].map(function (t) {
+        return '<button type="button" data-go="' + esc(t.id) + '">🎯 ' + esc(t.title) + '<small>' + esc(DISCIPLINE) + '</small></button>';
+      }).join('') + '</div>';
+    }).join('');
+    function doc(label, url) {
+      return url ? '<a class="reg-doc" target="_blank" rel="noopener" href="' + esc(url) + '">📄 ' + label + '</a>'
+                 : '<span class="reg-doc soon" title="Документ буде опубліковано пізніше">📄 ' + label + ' <small>(незабаром)</small></span>';
+    }
+    return '<div class="reg-banner">' + bannerSvg() + '<div class="in"><div>' +
+      '<div class="kick">Українська федерація дартсу</div>' +
+      '<h3>Запрошуємо взяти участь у змаганнях!</h3>' +
+      '<div class="where"><span>📅 <b>' + esc(REG_EVENT.dates) + '</b></span><span>📍 <b>' + esc(REG_EVENT.place) + '</b>, ' + esc(REG_EVENT.region) + '</span></div>' +
+      '<div class="reg-note" style="margin:0 0 12px;color:var(--cream)">Чемпіонат України та фінал Кубку України — в карпатській Вижниці, на березі Черемошу.</div>' +
+      '<div class="reg-docs">' + doc('Регламент', REG_EVENT.docs.regulations) + doc('Список суддів', REG_EVENT.docs.judges) + '</div>' +
+      '</div><div>' + daysHtml + '</div></div></div>';
+  }
 
   function buildSection() {
     if ($('#registration')) return;
     var st = el('style'); st.textContent = CSS; document.head.appendChild(st);
     var sec = el('section', { id: 'registration', 'data-i18n-skip': '' });
     sec.innerHTML =
-      '<h2><span class="idx">★</span> Реєстрація на турнір <span class="reg-badge" id="reg-badge">тест</span></h2>' +
-      '<p class="section-sub">Оберіть себе зі списку, вкажіть регіон, населений пункт і телефон. Список упорядковано за поточним рейтингом. Телефон бачить лише організатор.</p>' +
+      '<h2><span class="idx">★</span> Реєстрація на турніри <span class="reg-badge" id="reg-badge">тест</span></h2>' +
+      buildBanner() +
+      '<p class="section-sub">Оберіть турнір, потім себе зі списку, вкажіть регіон, населений пункт і телефон. Список упорядковано за поточним рейтингом. Телефон бачить лише організатор.</p>' +
+      '<div class="reg-tabs" id="reg-tabs"></div>' +
       '<div class="reg-card"><div><h3 id="reg-title"></h3><div class="reg-meta" id="reg-meta"></div></div>' +
       '<button type="button" class="reg-btn" id="reg-open">Зареєструватись</button></div>' +
       '<div class="reg-table-wrap"><table class="reg-table"><thead><tr><th>№</th><th>Гравець</th><th>Рейтинг</th><th>Регіон</th><th>Населений пункт</th><th>Тур-карта</th></tr></thead><tbody id="reg-body"></tbody></table></div>' +
       '<div class="reg-note" id="reg-note"></div>';
     var anchor = $('#history');
     if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(sec, anchor); else document.body.appendChild(sec);
-    $('#reg-title').textContent = cur.title;
-    $('#reg-meta').textContent = [cur.date ? '📅 ' + cur.date : '📅 Дата уточнюється', cur.place ? '📍 ' + cur.place : '📍 Місце уточнюється'].join('   ·   ');
     $('#reg-open').addEventListener('click', openForm);
     $('#reg-badge').style.display = REG_PUBLIC ? 'none' : '';
-    // посилання в меню
+    sec.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-go],[data-tab]'); if (!b) return;
+      var id = b.getAttribute('data-go') || b.getAttribute('data-tab');
+      select(id);
+      if (b.getAttribute('data-go')) $('#reg-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    select(cur.id);
     var nav = $('nav');
     if (nav && !$('#reg-nav')) { var a = el('a', { href: '#registration', id: 'reg-nav', 'data-i18n-skip': '' }, 'Реєстрація'); nav.insertBefore(a, nav.firstChild); }
+  }
+
+  function select(id) {
+    var t = REG_TOURNAMENTS.filter(function (x) { return x.id === id; })[0]; if (!t) return;
+    cur = t;
+    $('#reg-tabs').innerHTML = REG_TOURNAMENTS.map(function (x) {
+      var n = data[x.id].loaded ? data[x.id].rows.length + ' зареєстр.' : x.day.replace(' 2026', '');
+      return '<button type="button" class="reg-tab' + (x.id === cur.id ? ' on' : '') + '" data-tab="' + esc(x.id) + '"><div class="t">' + esc(x.short) + '</div><div class="m">' + esc(n) + '</div></button>';
+    }).join('');
+    $('#reg-title').textContent = cur.title;
+    $('#reg-meta').textContent = '📅 ' + cur.day + '   ·   📍 ' + REG_EVENT.place + ', ' + REG_EVENT.region + '   ·   🎯 ' + DISCIPLINE;
+    $('#reg-open').disabled = !cur.open;
+    renderTable(); loadTable();
   }
 
   function renderTable() {
     var body = $('#reg-body'); if (!body) return;
     var note = $('#reg-note');
     if (!REG_API_URL) { body.innerHTML = '<tr><td colspan="6" class="reg-empty">Реєстрацію ще не підключено (немає адреси Apps Script).</td></tr>'; note.textContent = ''; return; }
-    if (!state.loaded) { body.innerHTML = '<tr><td colspan="6" class="reg-empty">Завантаження…</td></tr>'; return; }
-    if (!state.rows.length) { body.innerHTML = '<tr><td colspan="6" class="reg-empty">Поки ніхто не зареєструвався.</td></tr>'; note.textContent = ''; return; }
+    if (!S().loaded) { body.innerHTML = '<tr><td colspan="6" class="reg-empty">Завантаження…</td></tr>'; return; }
+    if (!S().rows.length) { body.innerHTML = '<tr><td colspan="6" class="reg-empty">Поки ніхто не зареєструвався.</td></tr>'; note.textContent = ''; return; }
     var rm = ratingMap(cur.gender);
-    var rows = state.rows.map(function (r, i) {
+    var rows = S().rows.map(function (r, i) {
       var live = rm[r.name];
       return { r: r, i: i, rt: (typeof live === 'number') ? live : (typeof r.rating === 'number' ? r.rating : null) };
     }).sort(function (a, b) {
@@ -206,15 +295,21 @@
       return '<tr class="' + (r.marked ? 'reg-marked' : '') + '"><td class="n">' + (k + 1) + '</td><td class="nm">' + (r.marked ? '★ ' : '') + esc(r.name) +
         '</td><td class="rt">' + fmtRating(o.rt) + '</td><td>' + esc(r.region) + '</td><td>' + esc(r.city) + '</td><td><span class="reg-pill ' + cls + '">' + txt + '</span></td></tr>';
     }).join('');
-    var marked = state.rows.filter(function (r) { return r.marked; }).length;
-    note.textContent = 'Зареєстровано: ' + state.rows.length + (marked ? ' · виділені жовтим — відмічені організатором: ' + marked : '');
+    var marked = S().rows.filter(function (r) { return r.marked; }).length;
+    note.textContent = 'Зареєстровано: ' + S().rows.length + (marked ? ' · виділені жовтим — відмічені організатором: ' + marked : '');
   }
 
   function loadTable() {
     if (!REG_API_URL) { renderTable(); return; }
-    apiGet(cur.id).then(function (d) {
-      if (d && d.ok) { state.rows = d.rows || []; state.loaded = true; renderTable(); }
-    }).catch(function () { if (!state.loaded) { $('#reg-body').innerHTML = '<tr><td colspan="6" class="reg-empty">Не вдалося завантажити список. Спробуйте пізніше.</td></tr>'; } });
+    var id = cur.id;
+    apiGet(id).then(function (d) {
+      if (d && d.ok) { data[id].rows = d.rows || []; data[id].loaded = true; if (cur.id === id) renderTable(); updateTabs(); }
+    }).catch(function () { if (cur.id === id && !data[id].loaded) { $('#reg-body').innerHTML = '<tr><td colspan="6" class="reg-empty">Не вдалося завантажити список. Спробуйте пізніше.</td></tr>'; } });
+  }
+  function updateTabs() {
+    document.querySelectorAll('#reg-tabs .reg-tab').forEach(function (b) {
+      var id = b.getAttribute('data-tab'); if (data[id] && data[id].loaded) b.querySelector('.m').textContent = data[id].rows.length + ' зареєстр.';
+    });
   }
 
   function toast(msg) {
@@ -227,6 +322,7 @@
   function openForm() {
     if (!overlay) buildForm();
     resetForm();
+    $('#form-title', overlay).textContent = 'Реєстрація: ' + cur.title;
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
     openedAt = Date.now();
@@ -238,7 +334,7 @@
     overlay = el('div', { class: 'reg-overlay', role: 'dialog', 'aria-modal': 'true', 'data-i18n-skip': '' });
     overlay.innerHTML =
       '<div class="reg-modal"><button type="button" class="reg-x" aria-label="Закрити">×</button>' +
-      '<h3>Реєстрація: ' + esc(cur.title) + '</h3><div class="reg-meta">Усі поля обов\'язкові</div>' +
+      '<h3 id="form-title"></h3><div class="reg-meta">Усі поля обов\'язкові</div>' +
       '<form id="reg-form" novalidate autocomplete="off">' +
       // гравець
       '<div class="reg-f" id="f-name"><label>Гравець</label>' +
@@ -383,7 +479,7 @@
     var cardEl = overlay.querySelector('input[name=card]:checked'); if (!cardEl) { bad('f-card'); ok = false; }
     if (!$('#consent', overlay).checked) { bad('f-consent'); ok = false; }
     if (!ok) { status.className = 'reg-status err'; status.textContent = 'Заповніть усі поля, позначені червоним.'; var b = overlay.querySelector('.reg-f.bad'); if (b) b.scrollIntoView({ block: 'center', behavior: 'smooth' }); return; }
-    var dup = state.rows.some(function (r) { return norm(r.name) === norm(name); });
+    var dup = S().rows.some(function (r) { return norm(r.name) === norm(name); });
     if (dup) { status.className = 'reg-status err'; status.textContent = 'Цей гравець уже є у списку реєстрації.'; return; }
     if (!REG_API_URL) { status.className = 'reg-status err'; status.textContent = 'Реєстрацію ще не підключено: не вказано адресу Apps Script.'; return; }
     var btn = $('#reg-submit', overlay); btn.disabled = true; status.className = 'reg-status'; status.textContent = 'Надсилаю…';
