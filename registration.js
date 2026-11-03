@@ -6,7 +6,7 @@
   'use strict';
 
   // ---------------------------------------------------------------- налаштування
-  var REG_API_URL = 'https://script.google.com/macros/s/AKfycbxdYScExVIag7w8ZSHCRh-0oPpMXaUOBkHKDxPUDblcQO7UQPEFmbBIMDcK0EbiOfmQxA/exec';          // <-- сюди вставте адресу веб-застосунку Apps Script (закінчується на /exec)
+  var REG_API_URL = 'https://script.google.com/macros/s/AKfycbyAn1ESRAZPRSmJJ74JdyW4awfczqGs5yR_yhC475MWhOWeh24t6JYp1qxSkdqKJnpkAg/exec';          // <-- сюди вставте адресу веб-застосунку Apps Script (закінчується на /exec)
   var REG_PUBLIC = false;        // true - секція видима всім; false - лише після таємного входу
   // Подія: 12-13 грудня 2026, Вижниця. Посилання на документи вставте пізніше ('' = "незабаром")
   var REG_EVENT = {
