@@ -168,6 +168,8 @@
     '.reg-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}' +
     '.reg-status{margin-top:14px;font-size:14px}.reg-status.err{color:#ff8c8c}.reg-status.ok{color:#7be0ae}' +
     '.reg-chosen{display:inline-flex;gap:8px;align-items:center;margin-top:6px;font-size:13px;color:var(--gold)}.reg-link{background:none;border:0;color:var(--gold);cursor:pointer;padding:0;font:13px Inter,sans-serif;text-decoration:underline}' +
+    '.reg-org{display:flex;align-items:center;gap:14px;margin-bottom:14px}.reg-org .kick{margin:0;font-size:13px}' +
+    '.reg-logo{height:92px;width:auto;background:#fff;border-radius:14px;padding:8px 10px;box-shadow:0 6px 20px rgba(0,0,0,.4)}' +
     '.reg-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:14px}' +
     '.reg-live{display:inline-flex;align-items:center;gap:7px;background:#e5173f;color:#fff;border-radius:999px;padding:5px 13px;font:700 12px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase}' +
     '.reg-live i{width:8px;height:8px;border-radius:50%;background:#fff;animation:regpulse 1.4s infinite}' +
@@ -267,7 +269,7 @@
     }
     var bg = REG_EVENT.bg ? '<div class="photo" style="background-image:url(\'' + esc(REG_EVENT.bg) + '\')"></div><div class="shade"></div>' : bannerSvg();
     return '<div class="reg-banner">' + bg + '<div class="in"><div>' +
-      '<div class="kick">Українська федерація дартсу</div>' +
+      '<div class="reg-org"><img class="reg-logo" src="vfd-logo.svg" alt="ВФД"><div class="kick">Всеукраїнська Федерація Дартсу</div></div>' +
       '<h3>Запрошуємо взяти участь у змаганнях!</h3>' +
       '<div class="where"><span class="reg-chip">📅 <b>' + esc(REG_EVENT.dates) + '</b></span>' +
       '<a class="reg-chip" target="_blank" rel="noopener" href="' + esc(REG_EVENT.mapUrl) + '" title="Відкрити на Google Maps">📍 <b>' + esc(REG_EVENT.place) + '</b>, ' + esc(REG_EVENT.region) + ' <span>↗</span></a></div>' +
