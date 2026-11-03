@@ -8,9 +8,11 @@
   // ---------------------------------------------------------------- налаштування
   var REG_API_URL = 'https://script.google.com/macros/s/AKfycbyAn1ESRAZPRSmJJ74JdyW4awfczqGs5yR_yhC475MWhOWeh24t6JYp1qxSkdqKJnpkAg/exec';          // <-- сюди вставте адресу веб-застосунку Apps Script (закінчується на /exec)
   var REG_PUBLIC = false;        // true - секція видима всім; false - лише після таємного входу
-  // Подія: 12-13 грудня 2026, Вижниця. Посилання на документи вставте пізніше ('' = "незабаром")
+  // Подія: 11-13 грудня 2026, Вижниця. Посилання на документи вставте пізніше ('' = "незабаром")
   var REG_EVENT = {
-    place: 'Вижниця', region: 'Чернівецька область', dates: '12–13 грудня 2026',
+    place: 'Вижниця', region: 'Чернівецька область', dates: '11–13 грудня 2026',
+    mapUrl: 'https://maps.google.com/?cid=4936380032326911263&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF',
+    bg: '',            // шлях до фото (напр. 'vyzhnytsia.jpg'); порожньо = намальована панорама Карпат
     docs: { regulations: '', judges: '' }
   };
   var REG_TOURNAMENTS = [
@@ -166,19 +168,34 @@
     '.reg-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}' +
     '.reg-status{margin-top:14px;font-size:14px}.reg-status.err{color:#ff8c8c}.reg-status.ok{color:#7be0ae}' +
     '.reg-chosen{display:inline-flex;gap:8px;align-items:center;margin-top:6px;font-size:13px;color:var(--gold)}.reg-link{background:none;border:0;color:var(--gold);cursor:pointer;padding:0;font:13px Inter,sans-serif;text-decoration:underline}' +
-    '.reg-banner{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:18px;margin-bottom:22px;background:#0b1236}' +
-    '.reg-banner svg.bg{position:absolute;inset:0;width:100%;height:100%}' +
-    '.reg-banner .in{position:relative;padding:34px 30px 150px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px 34px}' +
-    '.reg-banner h3{margin:0 0 6px;font-size:clamp(22px,3.4vw,32px);line-height:1.15}.reg-banner .kick{color:var(--gold);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px}' +
-    '.reg-banner .where{display:flex;flex-wrap:wrap;gap:8px 18px;margin:12px 0 16px;font-size:15px}.reg-banner .where b{color:var(--gold)}' +
-    '.reg-day{background:rgba(10,15,42,.72);backdrop-filter:blur(3px);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px}' +
-    '.reg-day .d{color:var(--gold);font-weight:600;font-size:13px;margin-bottom:6px}' +
-    '.reg-day button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--cream);font:14.5px Inter,sans-serif;padding:6px 2px;cursor:pointer;border-radius:6px}' +
-    '.reg-day button:hover{background:rgba(255,255,255,.06)}.reg-day button small{color:var(--muted);margin-left:6px}' +
+    '.reg-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:14px}' +
+    '.reg-live{display:inline-flex;align-items:center;gap:7px;background:#e5173f;color:#fff;border-radius:999px;padding:5px 13px;font:700 12px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase}' +
+    '.reg-live i{width:8px;height:8px;border-radius:50%;background:#fff;animation:regpulse 1.4s infinite}' +
+    '@keyframes regpulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.8)}100%{box-shadow:0 0 0 9px rgba(255,255,255,0)}}' +
+    '.reg-banner{position:relative;overflow:hidden;border:2px solid var(--gold);border-radius:20px;margin-bottom:24px;background:#0b1236;box-shadow:0 0 0 4px rgba(252,194,2,.14),0 18px 50px rgba(252,194,2,.16),0 10px 40px rgba(0,0,0,.45)}' +
+    '.reg-banner svg.bg,.reg-banner .photo{position:absolute;inset:0;width:100%;height:100%}.reg-banner .photo{background-size:cover;background-position:center}' +
+    '.reg-banner .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,12,38,.88) 0%,rgba(8,12,38,.55) 55%,rgba(8,12,38,.25) 100%)}' +
+    '.reg-banner .in{position:relative;padding:34px 30px 230px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px 34px}' +
+    '.reg-banner h3{margin:0 0 8px;font-size:clamp(26px,4vw,40px);line-height:1.1;text-shadow:0 2px 14px rgba(0,0,0,.5)}.reg-banner .kick{color:var(--gold);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px;font-weight:600}' +
+    '.reg-banner .where{display:flex;flex-wrap:wrap;gap:8px 12px;margin:14px 0 14px;font-size:16px}' +
+    '.reg-chip{display:inline-flex;align-items:center;gap:6px;background:rgba(10,15,42,.7);border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--cream);text-decoration:none}.reg-chip b{color:var(--gold)}' +
+    'a.reg-chip{border-color:var(--gold);transition:.15s}a.reg-chip:hover{background:var(--gold);color:#141c56}a.reg-chip:hover b{color:#141c56}' +
+    '.reg-banner .lead{margin:0 0 14px;color:var(--cream);font-size:15.5px;text-shadow:0 1px 8px rgba(0,0,0,.6)}' +
+    '.reg-day{background:rgba(10,15,42,.8);backdrop-filter:blur(3px);border:1px solid var(--line);border-radius:14px;padding:12px 12px 8px;margin-bottom:12px}' +
+    '.reg-day .d{color:var(--gold);font-weight:700;font-size:13px;margin-bottom:8px;letter-spacing:.04em}' +
+    '.reg-day button{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--cream);font:600 14.5px Inter,sans-serif;padding:10px 12px;margin-bottom:6px;cursor:pointer;border-radius:10px;transition:.15s}' +
+    '.reg-day button:hover{background:rgba(252,194,2,.16);border-color:var(--gold);transform:translateX(3px)}' +
+    '.reg-day button small{display:block;color:var(--muted);font-weight:400;font-size:12px;margin-top:2px}' +
+    '.reg-day button .go{flex:none;background:linear-gradient(90deg,var(--gold-2),var(--gold));color:#141c56;border-radius:8px;padding:6px 11px;font:700 12px Inter,sans-serif;white-space:nowrap}' +
     '.reg-docs{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}' +
-    '.reg-doc{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--gold);color:var(--gold);border-radius:10px;padding:10px 16px;font:600 14px Inter,sans-serif;text-decoration:none;background:rgba(10,15,42,.6)}' +
-    '.reg-doc.soon{border-style:dashed;color:var(--muted);border-color:var(--line);cursor:default}' +
-    '@media(max-width:760px){.reg-banner .in{grid-template-columns:1fr;padding:24px 18px 130px}}' +
+    '.reg-doc{display:inline-flex;gap:8px;align-items:center;background:linear-gradient(90deg,var(--gold-2),var(--gold));color:#141c56;border-radius:10px;padding:11px 18px;font:700 14px Inter,sans-serif;text-decoration:none;box-shadow:0 4px 14px rgba(252,194,2,.3);transition:.15s}' +
+    'a.reg-doc:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(252,194,2,.45)}' +
+    '.reg-doc.soon{background:rgba(10,15,42,.7);color:var(--muted);border:1px dashed var(--muted);box-shadow:none;cursor:default}' +
+    '.reg-board{position:absolute;left:34px;bottom:26px;width:190px;height:190px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.55))}' +
+    '.reg-cta{position:absolute;left:250px;bottom:70px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}' +
+    '.reg-cta .t{font:700 20px Inter,sans-serif;text-shadow:0 2px 10px rgba(0,0,0,.7)}.reg-cta .reg-btn{font-size:16px;padding:14px 26px;box-shadow:0 6px 20px rgba(252,194,2,.4)}' +
+    '@media(max-width:760px){.reg-banner .in{grid-template-columns:1fr;padding:24px 16px 250px}.reg-board{left:50%;margin-left:-95px;bottom:84px}.reg-cta{left:16px;right:16px;bottom:20px;align-items:center;text-align:center}}' +
+    '.reg-chk{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#1a8f4a;color:#fff;font-size:14px;font-weight:700}' +
     '.reg-tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px}' +
     '.reg-tab{text-align:left;background:var(--royal-dark);border:1px solid var(--line);color:var(--cream);border-radius:12px;padding:11px 13px;cursor:pointer;font:14px Inter,sans-serif}' +
     '.reg-tab .t{font-weight:600}.reg-tab .m{color:var(--muted);font-size:12px;margin-top:3px}.reg-tab.on{border-color:var(--gold);background:rgba(252,194,2,.1)}' +
@@ -191,23 +208,48 @@
   REG_TOURNAMENTS.forEach(function (t) { data[t.id] = { rows: [], loaded: false }; });
   function S() { return data[cur.id]; }
 
+  var DART_ORDER = [20, 1, 18, 4, 13, 6, 10, 15, 2, 17, 3, 19, 7, 16, 8, 11, 14, 9, 12, 5];
+  function dartboardSvg() {
+    var R = 100, rad = Math.PI / 180;
+    function pt(r, a) { return (r * Math.sin(a * rad)).toFixed(2) + ' ' + (-r * Math.cos(a * rad)).toFixed(2); }
+    function wedge(r1, r2, a1, a2, fill) {
+      return '<path d="M' + pt(r2, a1) + ' A' + r2 + ' ' + r2 + ' 0 0 1 ' + pt(r2, a2) + ' L' + pt(r1, a2) + ' A' + r1 + ' ' + r1 + ' 0 0 0 ' + pt(r1, a1) + 'Z" fill="' + fill + '" stroke="#b9bec9" stroke-width=".35"/>';
+    }
+    var o = '<svg class="reg-board" viewBox="-118 -118 236 236" aria-hidden="true"><circle r="116" fill="#16181d"/><circle r="113" fill="#0d0e12" stroke="#2b2e37" stroke-width="1.5"/>';
+    for (var i = 0; i < 20; i++) {
+      var a1 = i * 18 - 9, a2 = i * 18 + 9, dark = i % 2 === 0;
+      var single = dark ? '#15171c' : '#efe3c2', ring = dark ? '#d3213b' : '#1f9d57';
+      o += wedge(R * .094, R * .582, a1, a2, single) + wedge(R * .582, R * .629, a1, a2, ring) + wedge(R * .629, R * .953, a1, a2, single) + wedge(R * .953, R, a1, a2, ring);
+      var am = i * 18, tx = (108 * Math.sin(am * rad)).toFixed(1), ty = (-108 * Math.cos(am * rad) + 3.6).toFixed(1);
+      o += '<text x="' + tx + '" y="' + ty + '" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="700" font-size="9.5" fill="#f4f4f4">' + DART_ORDER[i] + '</text>';
+    }
+    o += '<circle r="' + (R * .094) + '" fill="#1f9d57" stroke="#b9bec9" stroke-width=".35"/><circle r="' + (R * .037) + '" fill="#d3213b" stroke="#b9bec9" stroke-width=".35"/>';
+    o += '<g transform="translate(34 -52) rotate(28)"><path d="M0 0 L-1.5 -20 L1.5 -20Z" fill="#c9ccd4"/><rect x="-2.2" y="-46" width="4.4" height="26" rx="2" fill="#fcc202"/><path d="M-2.2 -46 L-9 -62 L-2 -55Z M2.2 -46 L9 -62 L2 -55Z" fill="#e5173f"/></g>';
+    return o + '</svg>';
+  }
+
   function bannerSvg() {
-    return '<svg class="bg" viewBox="0 0 900 360" preserveAspectRatio="xMidYMax slice" aria-hidden="true">' +
-      '<defs><linearGradient id="rg-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1236"/><stop offset=".55" stop-color="#23357f"/><stop offset="1" stop-color="#f08a3c"/></linearGradient>' +
-      '<linearGradient id="rg-riv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2a5fb4"/><stop offset="1" stop-color="#6fb1e8"/></linearGradient></defs>' +
-      '<rect width="900" height="360" fill="url(#rg-sky)"/>' +
-      '<g fill="#fff" opacity=".7"><circle cx="90" cy="40" r="1.6"/><circle cx="210" cy="70" r="1.2"/><circle cx="340" cy="30" r="1.6"/><circle cx="470" cy="60" r="1.2"/><circle cx="560" cy="25" r="1.5"/><circle cx="690" cy="55" r="1.2"/><circle cx="820" cy="35" r="1.6"/></g>' +
-      // гори
-      '<path d="M0 250 L90 170 L150 215 L250 120 L340 210 L420 150 L520 235 L600 180 L700 240 L800 175 L900 230 L900 360 L0 360Z" fill="#2c3f8f" opacity=".75"/>' +
-      '<path d="M0 285 L70 225 L140 262 L240 190 L330 255 L430 205 L530 268 L640 215 L740 270 L830 225 L900 262 L900 360 L0 360Z" fill="#1b2a6e"/>' +
-      // мішень-сонце
-      '<g transform="translate(300 222) scale(.62)"><circle r="78" fill="#fcc202" opacity=".18"/><circle r="62" fill="#141c56" stroke="#fcc202" stroke-width="3"/><circle r="48" fill="#fff" opacity=".92"/><circle r="38" fill="#c8102e"/><circle r="26" fill="#fff" opacity=".92"/><circle r="17" fill="#1a8f4a"/><circle r="7" fill="#c8102e"/></g>' +
-      '<path d="M0 318 L110 270 L210 305 L330 255 L450 308 L580 262 L700 310 L820 272 L900 300 L900 360 L0 360Z" fill="#0f1a4d"/>' +
-      // сосни
-      '<g fill="#0a1238"><path d="M40 330 l14 -46 l14 46z M62 330 l12 -38 l12 38z M110 335 l12 -40 l12 40z M770 335 l14 -46 l14 46z M800 335 l12 -38 l12 38z M840 332 l14 -42 l14 42z"/></g>' +
-      // Черемош
-      '<path d="M-10 345 C150 318 260 352 420 332 S700 318 910 342 L910 365 L-10 365Z" fill="url(#rg-riv)" opacity=".9"/>' +
-      '<path d="M40 350 C180 336 260 356 400 344 M470 340 C600 328 700 346 860 338" stroke="#fff" stroke-opacity=".45" fill="none" stroke-width="1.5"/>' +
+    function pines(x, y, k) {
+      var o = '';
+      for (var i = 0; i < k; i++) { var px = x + i * 17, h = 38 + ((i * 7) % 4) * 8; o += '<path d="M' + px + ' ' + y + ' l9 -' + h + ' l9 ' + h + 'z M' + (px + 2) + ' ' + (y - 14) + ' l7 -' + (h - 6) + ' l7 ' + (h - 6) + 'z"/>'; }
+      return o;
+    }
+    return '<svg class="bg" viewBox="0 0 900 380" preserveAspectRatio="xMidYMax slice" aria-hidden="true">' +
+      '<defs><linearGradient id="rg-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#101a52"/><stop offset=".45" stop-color="#3a3f99"/><stop offset=".75" stop-color="#e0749a"/><stop offset="1" stop-color="#ffb347"/></linearGradient>' +
+      '<radialGradient id="rg-sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3b0" stop-opacity=".95"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>' +
+      '<linearGradient id="rg-riv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1f5fae"/><stop offset=".5" stop-color="#58a6e6"/><stop offset="1" stop-color="#2a6fbf"/></linearGradient></defs>' +
+      '<rect width="900" height="380" fill="url(#rg-sky)"/>' +
+      '<circle cx="640" cy="235" r="150" fill="url(#rg-sun)"/><circle cx="640" cy="240" r="34" fill="#fff0a8"/>' +
+      '<g fill="#fff" opacity=".8"><circle cx="90" cy="40" r="1.6"/><circle cx="210" cy="70" r="1.2"/><circle cx="340" cy="30" r="1.6"/><circle cx="470" cy="62" r="1.2"/><circle cx="560" cy="25" r="1.5"/><circle cx="690" cy="50" r="1.2"/><circle cx="820" cy="35" r="1.6"/></g>' +
+      '<path d="M0 262 L80 190 L140 232 L250 130 L345 222 L430 160 L520 240 L610 195 L700 248 L790 185 L900 238 L900 380 L0 380Z" fill="#6a5fb0" opacity=".85"/>' +
+      '<path d="M250 130 L225 152 L243 148 L252 160 L262 148 L278 154Z M430 160 L411 178 L426 175 L433 184 L442 174 L456 180Z M790 185 L772 202 L786 199 L793 208 L802 198 L815 203Z" fill="#fff" opacity=".9"/>' +
+      '<path d="M0 300 L70 238 L150 282 L250 205 L340 275 L440 222 L540 285 L650 232 L750 288 L840 240 L900 272 L900 380 L0 380Z" fill="#3b3f8f"/>' +
+      '<path d="M0 335 C120 285 230 300 330 318 S560 292 700 312 S850 296 900 305 L900 380 L0 380Z" fill="#1f6b4a"/>' +
+      '<path d="M0 352 C150 322 270 346 420 330 S700 318 900 340 L900 380 L0 380Z" fill="#17553a"/>' +
+      '<g fill="#0c2a22">' + pines(18, 350, 4) + pines(760, 352, 5) + pines(430, 342, 3) + '</g>' +
+      '<g transform="translate(560 318)"><path d="M0 0 h30 v-16 l-15 -12 l-15 12z" fill="#7a4a2a"/><rect x="10" y="-12" width="9" height="12" fill="#ffd36b"/></g>' +
+      '<path d="M-10 362 C140 342 250 368 410 352 S690 340 910 360 L910 385 L-10 385Z" fill="url(#rg-riv)"/>' +
+      '<path d="M40 368 C180 355 260 372 400 362 M470 358 C600 346 700 364 860 356" stroke="#fff" stroke-opacity=".5" fill="none" stroke-width="1.5"/>' +
       '</svg>';
   }
 
@@ -216,20 +258,23 @@
     REG_TOURNAMENTS.forEach(function (t) { (days[t.day] = days[t.day] || []).push(t); });
     var daysHtml = Object.keys(days).map(function (d) {
       return '<div class="reg-day"><div class="d">📅 ' + esc(d) + '</div>' + days[d].map(function (t) {
-        return '<button type="button" data-go="' + esc(t.id) + '">🎯 ' + esc(t.title) + '<small>' + esc(DISCIPLINE) + '</small></button>';
+        return '<button type="button" data-go="' + esc(t.id) + '"><span>🎯 ' + esc(t.title) + '<small>' + esc(DISCIPLINE) + '</small></span><span class="go">Реєстрація →</span></button>';
       }).join('') + '</div>';
     }).join('');
     function doc(label, url) {
-      return url ? '<a class="reg-doc" target="_blank" rel="noopener" href="' + esc(url) + '">📄 ' + label + '</a>'
+      return url ? '<a class="reg-doc" target="_blank" rel="noopener" href="' + esc(url) + '">📄 ' + label + ' <span>↗</span></a>'
                  : '<span class="reg-doc soon" title="Документ буде опубліковано пізніше">📄 ' + label + ' <small>(незабаром)</small></span>';
     }
-    return '<div class="reg-banner">' + bannerSvg() + '<div class="in"><div>' +
+    var bg = REG_EVENT.bg ? '<div class="photo" style="background-image:url(\'' + esc(REG_EVENT.bg) + '\')"></div><div class="shade"></div>' : bannerSvg();
+    return '<div class="reg-banner">' + bg + '<div class="in"><div>' +
       '<div class="kick">Українська федерація дартсу</div>' +
       '<h3>Запрошуємо взяти участь у змаганнях!</h3>' +
-      '<div class="where"><span>📅 <b>' + esc(REG_EVENT.dates) + '</b></span><span>📍 <b>' + esc(REG_EVENT.place) + '</b>, ' + esc(REG_EVENT.region) + '</span></div>' +
-      '<div class="reg-note" style="margin:0 0 12px;color:var(--cream)">Чемпіонат України та фінал Кубку України — в карпатській Вижниці, на березі Черемошу.</div>' +
+      '<div class="where"><span class="reg-chip">📅 <b>' + esc(REG_EVENT.dates) + '</b></span>' +
+      '<a class="reg-chip" target="_blank" rel="noopener" href="' + esc(REG_EVENT.mapUrl) + '" title="Відкрити на Google Maps">📍 <b>' + esc(REG_EVENT.place) + '</b>, ' + esc(REG_EVENT.region) + ' <span>↗</span></a></div>' +
+      '<p class="lead">В Вижниці, в серці Карпат на березі Черемошу</p>' +
       '<div class="reg-docs">' + doc('Регламент', REG_EVENT.docs.regulations) + doc('Список суддів', REG_EVENT.docs.judges) + '</div>' +
-      '</div><div>' + daysHtml + '</div></div></div>';
+      '</div><div>' + daysHtml + '</div></div>' + dartboardSvg() +
+      '<div class="reg-cta"><div class="t">Реєстрація відкрита!</div><button type="button" class="reg-btn" data-go="' + esc(REG_TOURNAMENTS[0].id) + '">Зареєструватись ↓</button></div></div>';
   }
 
   function buildSection() {
@@ -238,6 +283,7 @@
     var sec = el('section', { id: 'registration', 'data-i18n-skip': '' });
     sec.innerHTML =
       '<h2><span class="idx">★</span> Реєстрація на турніри <span class="reg-badge" id="reg-badge">тест</span></h2>' +
+      '<div class="reg-head"><span class="reg-live"><i></i>Реєстрація відкрита</span><span class="reg-meta">Чемпіонат України і фінал Кубку України · 11–13 грудня 2026</span></div>' +
       buildBanner() +
       '<p class="section-sub">Оберіть турнір, потім себе зі списку, вкажіть регіон, населений пункт і телефон. Список упорядковано за поточним рейтингом. Телефон бачить лише організатор.</p>' +
       '<div class="reg-tabs" id="reg-tabs"></div>' +
@@ -291,9 +337,9 @@
     body.innerHTML = rows.map(function (o, k) {
       var r = o.r;
       var cls = r.card === 'Маю' ? 'y' : (r.card === 'Не маю' ? 'n' : 'w');
-      var txt = r.card === 'Маю' ? 'Є' : (r.card === 'Не маю' ? 'Немає' : 'Оформлює');
+      var txt = r.card === 'Маю' ? '' : (r.card === 'Не маю' ? 'Немає' : 'Оформлює');
       return '<tr class="' + (r.marked ? 'reg-marked' : '') + '"><td class="n">' + (k + 1) + '</td><td class="nm">' + (r.marked ? '★ ' : '') + esc(r.name) +
-        '</td><td class="rt">' + fmtRating(o.rt) + '</td><td>' + esc(r.region) + '</td><td>' + esc(r.city) + '</td><td><span class="reg-pill ' + cls + '">' + txt + '</span></td></tr>';
+        '</td><td class="rt">' + fmtRating(o.rt) + '</td><td>' + esc(r.region) + '</td><td>' + esc(r.city) + '</td><td>' + (r.card === 'Маю' ? '<span class="reg-chk" title="Є тур-карта">✔</span>' : '<span class="reg-pill ' + cls + '">' + txt + '</span>') + '</td></tr>';
     }).join('');
     var marked = S().rows.filter(function (r) { return r.marked; }).length;
     note.textContent = 'Зареєстровано: ' + S().rows.length + (marked ? ' · виділені жовтим — відмічені організатором: ' + marked : '');
