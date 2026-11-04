@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-03T12:45:11.778596+00:00",
+  "lastUpdated": "2026-11-04T12:55:19.543335+00:00",
   "tournamentsCount": 255,
   "parts": {
    "nakkaMatchStats": {
@@ -104300,6 +104300,12 @@
  },
  "youtubeVideos": [
   {
+   "id": "hdBGbpdm2Bk",
+   "title": "Ванда – Десинський #shorts",
+   "published": "2026-11-03",
+   "thumbnail": "https://i1.ytimg.com/vi/hdBGbpdm2Bk/hqdefault.jpg"
+  },
+  {
    "id": "mGHTQk8bu4U",
    "title": "Ванда – Десинський #shorts",
    "published": "2026-11-02",
@@ -104310,12 +104316,6 @@
    "title": "Ванда – Десинський #shorts",
    "published": "2026-11-01",
    "thumbnail": "https://i1.ytimg.com/vi/8am3QAdFIbk/hqdefault.jpg"
-  },
-  {
-   "id": "3kWmhNyqVoY",
-   "title": "Гончаренко – Лановенко: 177 + закриття на перемогу в лезі #shorts",
-   "published": "2026-10-31",
-   "thumbnail": "https://i4.ytimg.com/vi/3kWmhNyqVoY/hqdefault.jpg"
   }
  ],
  "telegramNews": [
@@ -104323,25 +104323,25 @@
    "text": "Рейтинг кваліфікаційної серії DNC2026 на київський Мастерс.",
    "date": "2026-11-01",
    "url": "https://t.me/fullbull/12933",
-   "photo": "https://cdn4.telesco.pe/file/dbpYron6L-6DvV16DxcBPBfF3PWTlTyRq9iXLbx1Av03SaiYWxIMA9a79JnmXxi6zdWapmGgIoj6BC1fYDas_llo_3wQjRwcFvww7Vej5LD0qndOpMnzrzW-xuHRnvEGxXWH_3GErtVdgKooW2Fs5g7B6arOo2u_i9qLfbNisb3iqW_8sqZajGmlaNAOnfgn4qFCc7eFT7MUkNtw8ODDuCLlwgTlZ5wATNJSvAMK8Y4_8SWzJGbd29NRH1328pUcUtdXk7u9f2XLMiBSzIGxEsrrL8hAT8iLCHwKQL7cW2kksZGXYICriyDO0FLZQUF0EOu6kvsos3OyRSYI_A9eng.jpg"
+   "photo": "https://cdn4.telesco.pe/file/bSFq637yJThuz8cK3BGiZwwFt-QIaZuolm7ijcgTHcvciEpDRbrmMExm9ZanlsSe_ZNbhE3VLuDWpniN2bCXrf9ofHahndGyTI7Op9_ImqGInMtrW6wSfGye3mpLpT52huI6lKrwfN8o7ioqodl22utHlKh85NxaSUMQBaKSrmgKSFvr0s3fCEGyT8WTA6eE7A5Vb2YXFZIdpWQSAzohusY4Pz1dsFr-OwjTlf1q0b5EoZbhoYe1XdV1qUAttiuMaTmPmPAjsZxsVx2XpV6Usm0bc0eCVFaN_eaYzaLDja2xOeolYzgHG1ZvCJvv22LUgIMf5MU5IAteHlSvLKNqOw.jpg"
   },
   {
    "text": "🏆Переможець другого турніру DartsClub Series 2026 - Овсієнко Євген.\nЗа підсумками серії лідери рейтингу отримають кваліфікаційні місця на цьогорічному київському Мастерсі. \n🥇Овсієнко Є.\n🥈Солтис М.\n🥉Аверін С.\n🥉Лагутін А.\n1️⃣8️⃣0️⃣х2️⃣ - Овсієнко Є.\n✅Чекаути 100+:\n1️⃣2️⃣0️⃣ - Овсієнко Є.\n1️⃣1️⃣6️⃣ - Аверін С.\n1️⃣1️⃣5️⃣ - Овсієнко Є.\n1️⃣0️⃣9️⃣ - Овсієнко Є.\n👀",
    "date": "2026-11-01",
    "url": "https://t.me/fullbull/12931",
-   "photo": "https://cdn4.telesco.pe/file/auV90C9YiftS62CmqXneFIua4C_XwtWcmeEHYYpSEjawH6rWeM-15DCxSuY_RGv4C-U9wci0T4-N54CPbRN6713z0Wty9yBIZn4E4UhKQPmymj9fjWQFDmeGhVi6KwWhAi8KsRbBCq38jLlpnvQ7TtkuwE2qWHD6tAVuNqMZcRZn-ar4L8LAfQBcA6gTw2zh4Kh89OJFlaqECA1T3jeb5z-c9wqhRYKzZcX7gO7b4WMWuLj9U307a0noSzt9hv_bDhjhttUFdviluO6PDkRHYtLr_z0P3hTHRQU3vsNE04RDwK0l1jk3K8omoCREvnh7Oczxg5CPDRNo6diOuVrYTQ.jpg"
+   "photo": "https://cdn4.telesco.pe/file/eWUn8NS6INlIUfUqsM1g74NU5EJ6P5D6-71MdPS60VdyaCiuzvFdmadRUUx0pcWv7FRjEAoMWn08KHTEmZ-jhyVfjvoDEiz6od8PmKBe564dPpUFCUwisY6blhi-qbQkiL2UGE2xBBVHUQXQDPGb3WhQHt030Z4n9d4BUwa10CXrMJpng3MQBVqT6H-ijsqQ4Vl7mUATq1KwCkxta_Ov4YHL5dhPwl2rTxqvbGGTFDFwpQOKQ7tAqAqSW-j2CTalabgZmTzEmE8a62p63R6HGcCGtGWKS8mXQIRDOGcMrVu7p_k7ZkmK6Nxh4Mn9EHSCTOQNvYomb2BfRcKSuZt-aw.jpg"
   },
   {
    "text": "🏆Овсієнко Євген переміг у сьомому турнірі осіннього рейтингу дартс-клубу «Портер», який відбувся в останню суботу жовтня.\n🥇Овсієнко Є.\n🥈Дзябура В.\n🥉Аверін С.\n1️⃣8️⃣0️⃣х2️⃣ - Овсієнко Є.\n✅Чекаути 100+:\n1️⃣1️⃣9️⃣ - Гомелюк О.\n1️⃣0️⃣6️⃣ - Бабанін Д.\n👀 \n📊Статистика і рейтинг ДК «Портер» сезону осінь 2026 👉",
    "date": "2026-11-01",
    "url": "https://t.me/fullbull/12930",
-   "photo": "https://cdn4.telesco.pe/file/kuEPSues1qfWBcmohQNSqKaajSFmv-s5bAzA-twRB1HLsVnvEokHLr68BPpgw4_T_-u0h17Bx3zj-5ChfRG2Eci9gVh_Cv-8sBs9z10OjcdRQPrTaTBhNGGRwqh-38RJwDe_RK65D4puZYkYAUvKIbmGGs4uO1hkbymThY7-cHnN-y3UvPIetjPc771b7ngM8mU9AiOsEi51nnsbNNYhMgARmh1iDdm3--uBAW5h_Lz6uu07_wg2i_Y1VVbDrer1KeZ8-mooNH9giMtE4KaODBOfRpdDHMY-efAP669iQmLDAn3CrYQq8e9J17u_qdD6LSeaf9-E3lwWo-tJguTUXg.jpg"
+   "photo": "https://cdn4.telesco.pe/file/Bx_lCFhcuub_avtonuUdrEk67qy2gFwh8NEkdbzpM3gRhCg2nBdX8Nqd5FIL6afuDJOsKlgCsIZAsZP4oPy7Ypn2ighpUZfdgOspa7kp8MiudveyRkkGnpP9Gw_sejh39XZkmmKfbMD_AZHRe-mAWzEOGEkYsBKa527T3ikVFSc17vO9r4bOxeDxNTt8NEkyfv7A5w1d1gi_MFYDHzDfOxsJemf7a-v3M66Z0VNmbIWX0th-8bpg4HC2qFCctLzeawcTV7y6BO8STf0A5jzCEwfUhrvxwym_cfNc_dHFKh4_fwpF_BekYv_uZOvv1p8w0fCaVpFdFNrfS9vTTp9-UQ.jpg"
   },
   {
    "text": "30 жовтня, відбудеться прем’єра незвичайного дартсового шоу, головною зіркою якого стане чинний чемпіон світу Люк Літтлер.\n📍 Місце: Manchester Central, Манчестер\n🕘 Початок: 21:00 за київським часом (19:00 за британським)\n📺 Трансляція: Netflix\n💰 Головний приз: £501 000\nКожен з 24 відібраних претендентів зіграє один лег 501. Завдання — перемогти Літтлера хоча б в одному легу. Якщо комусь це вдасться, він забере головний приз — £501 000.\nСеред відібраних — відомі представники дартсу:\n• Fallon Sherr",
    "date": "2026-10-30",
    "url": "https://t.me/fullbull/12922",
-   "photo": "https://cdn4.telesco.pe/file/uev72hi1BaDbeJna97mJcI6ZbypbxsH31CPIot_KQ9CPmYg8qLBnYon6p2IopCLicLym36QAIc8O6KYBjgBcQvrjixMYZc_74_rj-isXEzv2W8O2J5H-ishzGslsoPKYvDja0XqrnYhqn4pvIGy--_14YGKmL4AlUjopqloLc0wdez2UZayQ2clwCDGpQygAg5UHcpN_v_lPvd7H9RsWzTEcnsrySkCny-_mMv3wcFz8QBy4pSoGj2T8IGucJ2EPoBSaFxlIEZsyxNV8FedJYxlceseq7Zec26BBe_TvzzFRzl-opzfnNBY2DLYrHhfDt1UFvAUtsa1mEhtIp-GsFQ.jpg"
+   "photo": "https://cdn4.telesco.pe/file/XEi5Si8UFGm5DjP646CJtvY_Xl0SlSvGuqveigLRgCn2Quln1tiqxhTzDQ25vVIaSgD8HAMl0Ih2Z_4Bo5KqnBRskMIclZFPoqaIpS3sQVfPSB5nIB1OZpyQbNDkeCKmLkYUv1ovMZ2J2XrdtSVUVQ7wMHn9sDRQfhHKRaphbMd0bA8eKWw_xfTAyfkzIpYWhCJkeuTP5exbKok3YOsGGu7YvIDxCTkOeIo-PzwUl9HMbijsyDxBi1FTHYVM9ZJotR18eVAGVH8olwIRd8jhUVGKfb-dXDmBpY34OjmXcVQCCXOhCGvVwC3lunHgcWgnN1xDTqmjjPRS5qEv3G0QHQ.jpg"
   }
  ],
  "championsRecords": [
