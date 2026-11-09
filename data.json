@@ -1,7 +1,7 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-08T11:52:19.030423+00:00",
-  "tournamentsCount": 259,
+  "lastUpdated": "2026-11-09T13:47:24.473333+00:00",
+  "tournamentsCount": 260,
   "parts": {
    "nakkaMatchStats": {
     "file": "data/nakka_matches.json",
@@ -12120,6 +12120,40 @@
    "menAvg": null,
    "women": null,
    "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 1 етап",
+   "date": "30.03.2007",
+   "city": "Мукачево",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1m8FZXw5Ly58ZPrDz9CLjOqQlukmn7KcMaXaxH2ol__A/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Соколов Роман",
+    "bronze": [
+     "Мелашенко Владислав"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": null,
+   "men": null,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
    "name": "ЧУ 2005",
    "org": "ВФД",
    "format": "501DO",
@@ -12308,11 +12342,11 @@
   },
   {
    "name": "Ледєньов Вадим",
-   "gold": 12,
+   "gold": 13,
    "silver": 3,
    "bronze": 2,
    "champUA": 5,
-   "total": 17,
+   "total": 18,
    "rank": 3
   },
   {
@@ -12409,9 +12443,9 @@
    "name": "Мелашенко Владислав",
    "gold": 2,
    "silver": 1,
-   "bronze": 6,
+   "bronze": 7,
    "champUA": 1,
-   "total": 9,
+   "total": 10,
    "rank": 14
   },
   {
@@ -12487,25 +12521,25 @@
    "rank": 22
   },
   {
+   "name": "Соколов Роман",
+   "gold": 1,
+   "silver": 2,
+   "bronze": 0,
+   "champUA": 0,
+   "total": 3,
+   "rank": 23
+  },
+  {
    "name": "Ємельянов Олександр",
    "gold": 1,
    "silver": 1,
    "bronze": 1,
    "champUA": 0,
    "total": 3,
-   "rank": 23
-  },
-  {
-   "name": "Лагутін Андрій",
-   "gold": 1,
-   "silver": 1,
-   "bronze": 0,
-   "champUA": 0,
-   "total": 2,
    "rank": 24
   },
   {
-   "name": "Соколов Роман",
+   "name": "Лагутін Андрій",
    "gold": 1,
    "silver": 1,
    "bronze": 0,
@@ -104450,6 +104484,12 @@
  },
  "youtubeVideos": [
   {
+   "id": "D47WMQfYbzE",
+   "title": "Гончаров – Овсієнко #shorts",
+   "published": "2026-11-08",
+   "thumbnail": "https://i1.ytimg.com/vi/D47WMQfYbzE/hqdefault.jpg"
+  },
+  {
    "id": "bK6hKXt-rMk",
    "title": "Гончаров – Овсієнко #shorts",
    "published": "2026-11-07",
@@ -104460,32 +104500,32 @@
    "title": "Гончаров – Коломієць #shorts",
    "published": "2026-11-06",
    "thumbnail": "https://i3.ytimg.com/vi/FeVbjxpIfSo/hqdefault.jpg"
-  },
-  {
-   "id": "nY1OX20vBUQ",
-   "title": "Гончаров – Коломієць #shorts",
-   "published": "2026-11-05",
-   "thumbnail": "https://i3.ytimg.com/vi/nY1OX20vBUQ/hqdefault.jpg"
   }
  ],
  "telegramNews": [
   {
+   "text": "🏆Переможець третього турніру кваліфікаційної серії київського Мастерсу - DartsNews Club Series 2026/3 - Овсієнко Євген.\n❗️Середній за турнір переможця - 73.99, найкращий середній на матч - 89.26, 8 максимумів!\n🥇Овсієнко Є.\n🥈Аверін С.\n🥉 Бабанін Д.\n🥉Солтис М.\n1️⃣8️⃣0️⃣х8️⃣ - Овсієнко Є. \n1️⃣8️⃣0️⃣ - Аверін С.\n✅Чекаути 100+:\n1️⃣4️⃣7️⃣ - Логоша Є.\n1️⃣2️⃣6️⃣ - Бабанін Д.\n1️⃣2️⃣0️⃣ - Солтис М.\n1️⃣0️⃣3️⃣ - Овсієнко Є.\n👀",
+   "date": "2026-11-08",
+   "url": "https://t.me/fullbull/12954",
+   "photo": "https://cdn4.telesco.pe/file/e3Bk_ZLFbyold3ZRVGwvISiULi7Tmd2ylzLsip6yq2EBTtnMnJZZuEDO7IdYCsMZkGpJf8amAOGuhPd5U9ONdiKdBzIM0B-AFEecrX9Zff4QAgYyHOaRWXcJLjn4HW7rOOGaWavejwqwgoMHai2W1EhjOhBN43s2vN1dFlSv3JlqesTbBOOxPxsmI_o_36yDMkD-R6jLnnzllMGJxO2HnDcuC_cromfDbsbjngCN2A4kv0epdfMQ8yb7MuSxQQpBXL1eNWcBhpq08vXI-pzKYhOU1PbEwV0tLlp7s9zIcDP4REOw2PQ_ty6rArEobaT9PvRLFcZdS-tlx_hxvq9uww.jpg"
+  },
+  {
    "text": "Рейтинг кваліфікаційної серії DNC2026 на київський Мастерс.",
    "date": "2026-11-01",
    "url": "https://t.me/fullbull/12933",
-   "photo": "https://cdn4.telesco.pe/file/W74q7l4o2WV8NlV064FRVsIJGXh01v-xP227ErNIitWlEbrlHNnnqJmYvkxHYxCJfU5cHTFNaAUejo8tb28Vdqvd-HudAA9b0zh83-Hsib6CUoujtNlWeNLbLGkTwZvHFfifWWIU7b9iYsl30-7GHMl7y5RczJ4DlREEaTR8Pmp5JFRAwAatnChZjVhO_8ppzsMmFKt0HMlfoZ82vTZc7gXFR8smnPnCTiKVEHiXEYtq9JxwkIYRfGj4GyFE-2YHPF-7JC4P7t3VFzBsN4G3gQaN5Ll6FLWb0iZkdzxAv5AJ1ZT9AEAy2ySModoZpY8yl0ClykHQCvlGdZKdwFpRcQ.jpg"
+   "photo": "https://cdn4.telesco.pe/file/F9oDe46z_OPRD66Vnv-9nkjHy8_SQu3SnRyxyaA2sCtTcmHadRDBaWzlVDbsuKYMS3bskJZgkMxZx65XkF7u4reZ9_FAPNKTkB1y2AbdmP7hU7rEkPlAP-Z4tk0cOkWBC8-2-iUliQ4CHbbIxQfmeok8HBvYYDkrU9H3qfuqF0DPemA9iVYo5820-D37syZBBpRSZar03b_dK8lqUyLmaMFuETaZyc1zjWDwGBt04Oo-bJPJMpuyg4l-Epk0tq2Vq8EHHcGoKE6vVUDeEO-Znl6UaRBYjHVxHseZV_jOkWhzP0rgQLlbggn0tOmXOHxJTAQO-_cA4D30PHyUboCwXg.jpg"
   },
   {
    "text": "🏆Переможець другого турніру DartsClub Series 2026 - Овсієнко Євген.\nЗа підсумками серії лідери рейтингу отримають кваліфікаційні місця на цьогорічному київському Мастерсі. \n🥇Овсієнко Є.\n🥈Солтис М.\n🥉Аверін С.\n🥉Лагутін А.\n1️⃣8️⃣0️⃣х2️⃣ - Овсієнко Є.\n✅Чекаути 100+:\n1️⃣2️⃣0️⃣ - Овсієнко Є.\n1️⃣1️⃣6️⃣ - Аверін С.\n1️⃣1️⃣5️⃣ - Овсієнко Є.\n1️⃣0️⃣9️⃣ - Овсієнко Є.\n👀",
    "date": "2026-11-01",
    "url": "https://t.me/fullbull/12931",
-   "photo": "https://cdn4.telesco.pe/file/uZkrTNWOVQmGaIcWIb3iJ79T49mFFxP-2CKVoPp6mVhJBAExyvMy3WRoWESA8l7z6m4G_8PRaLAc1j7nW11sGGMYxY1bTt36CfKEY9wW4hmPMoo5aVwuIIFMp2kNrvd2s0qnYv0dGMTdv12o7q1BHhTXyAvGu5eh-Xcru9KsUV0aqRhpMLwnjRkA1JeiuBy9AwxctELKBuFpUP8n0Y-Mz-sXHns3vvm2BjO1mR42wevgHyNLLzEdyuCeQUEGtB4m0w_ysHbq80xt2sCEhJqEQiRgbkuFWiQejJstmzT3vpyl-41G1evEavOe0hO_x8vzrwsecjKYTiBiTlrwXBAC-A.jpg"
+   "photo": "https://cdn4.telesco.pe/file/uLwFBhnwy9wW8UNM2pZGofDddcXDm1ktybvm6ER3MQETX6h1gM-zWIaYG-2tKHqDbmalnVwquVegqLCD19oSF0R6O_FcCYmPa5k-U_4TcfnYb6PxZ3LpsJTuBUJ26LtSKgBxcsXj4YAZW5DOxBkacjVTmaWcRGWgwxR7aRdTj-E2ZGq73rdG3rM3Ul9m02BjOghPbEAL4oyAaPL1YCG1nX-R8Y3o4HKf-jyLt_8bFymm94DfaWvZ_dCdSKiLs8_9-KgHmoWC5uJ76CSIvZqnW9HAQdWGQowto0M87n0Qjmh1co-u9gLiy9ynLCSjUCBaBL8KyuclE6g_M9KdULyk5Q.jpg"
   },
   {
    "text": "🏆Овсієнко Євген переміг у сьомому турнірі осіннього рейтингу дартс-клубу «Портер», який відбувся в останню суботу жовтня.\n🥇Овсієнко Є.\n🥈Дзябура В.\n🥉Аверін С.\n1️⃣8️⃣0️⃣х2️⃣ - Овсієнко Є.\n✅Чекаути 100+:\n1️⃣1️⃣9️⃣ - Гомелюк О.\n1️⃣0️⃣6️⃣ - Бабанін Д.\n👀 \n📊Статистика і рейтинг ДК «Портер» сезону осінь 2026 👉",
    "date": "2026-11-01",
    "url": "https://t.me/fullbull/12930",
-   "photo": "https://cdn4.telesco.pe/file/G7PIaS6X2QJgFWslFMef_hW1uE24rcoatdFOtl-fQdcxzPmlddmpgi3C7Od7BjXrHd2B2JqP2euyga9N2j-KKARuAPmddu0SJSN7fuGMMal4Ypnc_7CzZ4yL0ulvE95_eVTA0C3xSQ1NY3Vuq_Wnq5zEdsMVwozCjzcb0jUyxxhAfkJ8Tg9-0EMwkTrzQSYEy5BnHWuJsNt9xi_svd6m-MYP6I8fVwtxmzR43g8HNkUbiI4B8PQ75nFwOkZ1H3ydJWchb28PvX_HvrgWGgdWOxfuGMEv_GHExKqHdqCQTm2O7l9SYu942_4kDlwS_OZjxnkGxbN9yhNpGwQntIwsBQ.jpg"
+   "photo": "https://cdn4.telesco.pe/file/NS9UGKQ9jDyDU_9GYffboAYQhKI1FXbL4DO3sppqgGOyeAdk_msn92x3Hi9UqyYIXNaVHB7V_zwT45ftWJVCJh5gL0zu-xBxlTJSqCFGu1n_vA0pMbxI9X9itvCKKInxfUkvQWabsSxcZGQeTi-FDxG3l6UR3LdKPlEJreA_jONZ2WC4_PowceWpBtK4WGKY5jeX159KQaJM_5M72Mwo0Gd9sc9HAAuhCjIotXUO1hr7yoLz6KOF7Yx8gF6Lw38Bi5t2f_m3-maCc6mfHhIOSuI_ZNLxUSiPe4Goe3iLys665VUEVuijIwZBnltM43nj_OyJ6D5ijmUnmEfaJb5_IA.jpg"
   }
  ],
  "championsRecords": [
@@ -109118,6 +109158,9 @@
    "dartsManufacturer": "Designa, Mission",
    "dartsModel": "Elite, RYAN JOYCE",
    "dartsWeight": "24, 23"
+  },
+  "Ванда Євген": {
+   "nickname": "STRONG"
   },
   "Залевський Володимир": {
    "profession": "Підприємець",
