@@ -1,7 +1,7 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-09T13:47:24.473333+00:00",
-  "tournamentsCount": 260,
+  "lastUpdated": "2026-11-10T11:44:34.055454+00:00",
+  "tournamentsCount": 261,
   "parts": {
    "nakkaMatchStats": {
     "file": "data/nakka_matches.json",
@@ -9714,21 +9714,33 @@
     "tournament": null
    },
    "medals": {
-    "gold": "Омельченко Владислав",
-    "silver": "Ємельянов Олександр",
+    "gold": "Оплот (Мамика Олександр, Невінчаний Едуард, Луков Олександр, Омельченко Владислав)",
+    "silver": "Олень.Ко (Хімчак Сергій, Коваль Олександр, Кулаков Володимир, Антіпов Денис)",
     "bronze": [
-     "Невінчаний Едуард"
+     "Гребля (Соколов Володимир, Пальонний Ігор, Бутов Олександр, Почапський Василь)"
     ]
    },
    "medalsWomen": {
-    "gold": "Квиклене Рената",
-    "silver": "Моісеєнко Віталіна",
+    "gold": "Блек (Моісеєнко Віталіна, Федотова Ірина)",
+    "silver": "Дефченки (Чорноброва Олександра, Ледєньова Наталія)",
     "bronze": [
-     "Редзюк Тетяна"
+     "Растишишка (Харченко Тетяна, Соколова Вікторія)"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Оплот (Мамика Олександр, Невінчаний Едуард, Луков Олександр, Омельченко Владислав)",
+    "silver": "Олень.Ко (Хімчак Сергій, Коваль Олександр, Кулаков Володимир, Антіпов Денис)",
+    "bronze": [
+     "Гребля (Соколов Володимир, Пальонний Ігор, Бутов Олександр, Почапський Василь)"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Блек (Моісеєнко Віталіна, Федотова Ірина)",
+    "silver": "Дефченки (Чорноброва Олександра, Ледєньова Наталія)",
+    "bronze": [
+     "Растишишка (Харченко Тетяна, Соколова Вікторія)"
+    ]
+   }
   },
   {
    "total": 30,
@@ -11343,8 +11355,20 @@
      "Сидельникова Ганна"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Пирсіков Олександр",
+    "silver": "Усик Артем",
+    "bronze": [
+     "Новак Едуард"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Білодід Христина",
+    "silver": "Журавель Алла",
+    "bronze": [
+     "Сидельникова Ганна"
+    ]
+   }
   },
   {
    "total": null,
@@ -11519,7 +11543,13 @@
     ]
    },
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Омельченко Владислав",
+    "silver": "Пирсіков Олександр",
+    "bronze": [
+     "Скарлат Дмитро"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -11546,10 +11576,10 @@
     }
    },
    "medals": {
-    "gold": "Мелашенко Владислав",
-    "silver": "Мамика Олександр",
+    "gold": "Мамика Олександр",
+    "silver": "Омельченко Владислав",
     "bronze": [
-     "Десинський Максим"
+     "Скарлат Дмитро"
     ]
    },
    "medalsWomen": {
@@ -11559,7 +11589,13 @@
      "Моісеєнко Віталіна"
     ]
    },
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Мамика Олександр",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Скарлат Дмитро"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -11599,8 +11635,20 @@
      "Богданова Діна"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Лец Дмитро",
+    "silver": "Омельченко Владислав",
+    "bronze": [
+     "Мамика Олександр"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Калаур Інна",
+    "bronze": [
+     "Богданова Діна"
+    ]
+   }
   },
   {
    "total": null,
@@ -11626,21 +11674,33 @@
     }
    },
    "medals": {
-    "gold": "Мелашенко Владислав",
-    "silver": "Мамика Олександр",
+    "gold": "Мамика Олександр/Дідов Василь",
+    "silver": "Узелко Анатолій/Єрєменко Василій",
     "bronze": [
-     "Десинський Максим"
+     "Невінчаний Едуард/Омельченко Владислав"
     ]
    },
    "medalsWomen": {
-    "gold": "Білодід Христина",
+    "gold": "Моісеєнко Віталіна/Устименко Вікторія",
     "silver": "Калаур Інна",
     "bronze": [
-     "Моісеєнко Віталіна"
+     "Білодід Христина/Перетятько Тетяна"
     ]
    },
-   "nakkaMedals": null,
-   "nakkaMedalsWomen": null
+   "nakkaMedals": {
+    "gold": "Мамика Олександр/Дідов Василь",
+    "silver": "Узелко Анатолій/Єрєменко Василій",
+    "bronze": [
+     "Невінчаний Едуард/Омельченко Владислав"
+    ]
+   },
+   "nakkaMedalsWomen": {
+    "gold": "Моісеєнко Віталіна/Устименко Вікторія",
+    "silver": "Калаур Інна",
+    "bronze": [
+     "Білодід Христина/Перетятько Тетяна"
+    ]
+   }
   },
   {
    "total": 53,
@@ -12145,7 +12205,13 @@
     ]
    },
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Соколов Роман",
+    "bronze": [
+     "Мелашенко Владислав"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -12219,7 +12285,13 @@
     ]
    },
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Кобзар Ігор",
+    "bronze": [
+     "Берцик Артур"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -12253,7 +12325,13 @@
     ]
    },
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Кобзар Ігор",
+    "bronze": [
+     "Квасков Павло"
+    ]
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -12285,7 +12363,11 @@
     "bronze": []
    },
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Ледєньов Вадим",
+    "silver": null,
+    "bronze": []
+   },
    "nakkaMedalsWomen": null
   },
   {
@@ -12317,7 +12399,51 @@
     "bronze": []
    },
    "medalsWomen": null,
-   "nakkaMedals": null,
+   "nakkaMedals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Кобзар Ігор",
+    "bronze": []
+   },
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": null,
+   "men": null,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "ЧУ 2004",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "15.01.2005",
+   "city": "Черкаси",
+   "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1bMiInUxY8ygqCPPz3wdir23aiPFRWWKGzGLz3tUKFZw/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Кобзар Ігор",
+    "bronze": [
+     "Заволокін Дмитро"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Кобзар Ігор",
+    "bronze": [
+     "Заволокін Дмитро"
+    ]
+   },
    "nakkaMedalsWomen": null
   }
  ],
@@ -12640,10 +12766,10 @@
   {
    "name": "Кобзар Ігор",
    "gold": 0,
-   "silver": 5,
+   "silver": 6,
    "bronze": 3,
    "champUA": 0,
-   "total": 8,
+   "total": 9,
    "rank": 36
   },
   {
@@ -13043,7 +13169,7 @@
    "rank": 80
   },
   {
-   "name": "Квасков Павло",
+   "name": "Заволокін Дмитро",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13052,7 +13178,7 @@
    "rank": 81
   },
   {
-   "name": "Козловський Богдан",
+   "name": "Квасков Павло",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13061,7 +13187,7 @@
    "rank": 82
   },
   {
-   "name": "Коломієць Андрій",
+   "name": "Козловський Богдан",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13070,7 +13196,7 @@
    "rank": 83
   },
   {
-   "name": "Некрістов Станіслав",
+   "name": "Коломієць Андрій",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13079,7 +13205,7 @@
    "rank": 84
   },
   {
-   "name": "Озджан Мустафа",
+   "name": "Некрістов Станіслав",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13088,7 +13214,7 @@
    "rank": 85
   },
   {
-   "name": "Пальонний Ігор",
+   "name": "Озджан Мустафа",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13097,7 +13223,7 @@
    "rank": 86
   },
   {
-   "name": "Стейер Себастьян",
+   "name": "Пальонний Ігор",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13106,7 +13232,7 @@
    "rank": 87
   },
   {
-   "name": "Титков Олег",
+   "name": "Стейер Себастьян",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13115,7 +13241,7 @@
    "rank": 88
   },
   {
-   "name": "Толкачов В'ячеслав",
+   "name": "Титков Олег",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13124,7 +13250,7 @@
    "rank": 89
   },
   {
-   "name": "Тямолов Роман",
+   "name": "Толкачов В'ячеслав",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13133,7 +13259,7 @@
    "rank": 90
   },
   {
-   "name": "Улезко Анатолій",
+   "name": "Тямолов Роман",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13142,7 +13268,7 @@
    "rank": 91
   },
   {
-   "name": "Холліуелл Вейн",
+   "name": "Улезко Анатолій",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13151,7 +13277,7 @@
    "rank": 92
   },
   {
-   "name": "Хімчак Сергій",
+   "name": "Холліуелл Вейн",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13160,13 +13286,22 @@
    "rank": 93
   },
   {
-   "name": "Царолунга Дмитро",
+   "name": "Хімчак Сергій",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
    "champUA": 0,
    "total": 1,
    "rank": 94
+  },
+  {
+   "name": "Царолунга Дмитро",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 95
   }
  ],
  "leaderboardWomen": [
@@ -104484,6 +104619,12 @@
  },
  "youtubeVideos": [
   {
+   "id": "BcGcyh1FPU0",
+   "title": "Могилевський – Гакман #shorts",
+   "published": "2026-11-09",
+   "thumbnail": "https://i3.ytimg.com/vi/BcGcyh1FPU0/hqdefault.jpg"
+  },
+  {
    "id": "D47WMQfYbzE",
    "title": "Гончаров – Овсієнко #shorts",
    "published": "2026-11-08",
@@ -104494,12 +104635,6 @@
    "title": "Гончаров – Овсієнко #shorts",
    "published": "2026-11-07",
    "thumbnail": "https://i3.ytimg.com/vi/bK6hKXt-rMk/hqdefault.jpg"
-  },
-  {
-   "id": "FeVbjxpIfSo",
-   "title": "Гончаров – Коломієць #shorts",
-   "published": "2026-11-06",
-   "thumbnail": "https://i3.ytimg.com/vi/FeVbjxpIfSo/hqdefault.jpg"
   }
  ],
  "telegramNews": [
@@ -104507,25 +104642,25 @@
    "text": "🏆Переможець третього турніру кваліфікаційної серії київського Мастерсу - DartsNews Club Series 2026/3 - Овсієнко Євген.\n❗️Середній за турнір переможця - 73.99, найкращий середній на матч - 89.26, 8 максимумів!\n🥇Овсієнко Є.\n🥈Аверін С.\n🥉 Бабанін Д.\n🥉Солтис М.\n1️⃣8️⃣0️⃣х8️⃣ - Овсієнко Є. \n1️⃣8️⃣0️⃣ - Аверін С.\n✅Чекаути 100+:\n1️⃣4️⃣7️⃣ - Логоша Є.\n1️⃣2️⃣6️⃣ - Бабанін Д.\n1️⃣2️⃣0️⃣ - Солтис М.\n1️⃣0️⃣3️⃣ - Овсієнко Є.\n👀",
    "date": "2026-11-08",
    "url": "https://t.me/fullbull/12954",
-   "photo": "https://cdn4.telesco.pe/file/e3Bk_ZLFbyold3ZRVGwvISiULi7Tmd2ylzLsip6yq2EBTtnMnJZZuEDO7IdYCsMZkGpJf8amAOGuhPd5U9ONdiKdBzIM0B-AFEecrX9Zff4QAgYyHOaRWXcJLjn4HW7rOOGaWavejwqwgoMHai2W1EhjOhBN43s2vN1dFlSv3JlqesTbBOOxPxsmI_o_36yDMkD-R6jLnnzllMGJxO2HnDcuC_cromfDbsbjngCN2A4kv0epdfMQ8yb7MuSxQQpBXL1eNWcBhpq08vXI-pzKYhOU1PbEwV0tLlp7s9zIcDP4REOw2PQ_ty6rArEobaT9PvRLFcZdS-tlx_hxvq9uww.jpg"
+   "photo": "https://cdn4.telesco.pe/file/NRsCzHcnnbkIrB-DzZn_QMphKu33zOOArKR8mGUO5Zn1Ajv8tzOjHrNcoSSh9hs4fEDD6ixbAn2RCs7ooc1BwGe3nfqicNiNljAbB8z9Evea22IaGjxnoqmyelaDDtpBjjZq9UpGopeTgXtsIUcqpR-2c_JzQmhVjcwCRM-31qka4RC5waC1PoRPAx8_0psdocKfSs68nu3KP4uj_vzUnPQLYdiZhs33w5kG9LXoz1pVo9zpnLIL5AXYybCTBMur3M1oRcSVOo2ZKvugCG5wHVYZDRbNU4QfYi_VIMghRqlqUisi1Xaha-DRcicR2MAaRXAi4ybbIREQ7iTPC5sMxQ.jpg"
   },
   {
    "text": "Рейтинг кваліфікаційної серії DNC2026 на київський Мастерс.",
    "date": "2026-11-01",
    "url": "https://t.me/fullbull/12933",
-   "photo": "https://cdn4.telesco.pe/file/F9oDe46z_OPRD66Vnv-9nkjHy8_SQu3SnRyxyaA2sCtTcmHadRDBaWzlVDbsuKYMS3bskJZgkMxZx65XkF7u4reZ9_FAPNKTkB1y2AbdmP7hU7rEkPlAP-Z4tk0cOkWBC8-2-iUliQ4CHbbIxQfmeok8HBvYYDkrU9H3qfuqF0DPemA9iVYo5820-D37syZBBpRSZar03b_dK8lqUyLmaMFuETaZyc1zjWDwGBt04Oo-bJPJMpuyg4l-Epk0tq2Vq8EHHcGoKE6vVUDeEO-Znl6UaRBYjHVxHseZV_jOkWhzP0rgQLlbggn0tOmXOHxJTAQO-_cA4D30PHyUboCwXg.jpg"
+   "photo": "https://cdn4.telesco.pe/file/raFTMBa9m9A3usGVQ1VK9wqmILIAnk2XrNelZW8xxPkULWZth7wLTePPYq4lW_iMOS-qALIl_c4Yhak96GW3-Y-tLfsZsqOoGCxxRmVb5D8e20vROgaQdYpn1qtPgi7XBYV9NnXtzyKLpv4F1J96tZdWwvy5laz8zBwt0aLA9n5-EAWeOxOygso5u8eoi_M8Gbz1lmlCE0vJBxDynlJZskzF5EbB0T3q8uUxcbg8dsL0d7tDL0zSwZRA3cb44Bj3bje1ZPkg2Xd_DlY3i6TIhuk4GU6LjyxIqp_VN63VwG_7QMYVbiDx7PfP8OKo9ZzgVkOZxQeQxSNh_31adYTzAA.jpg"
   },
   {
    "text": "🏆Переможець другого турніру DartsClub Series 2026 - Овсієнко Євген.\nЗа підсумками серії лідери рейтингу отримають кваліфікаційні місця на цьогорічному київському Мастерсі. \n🥇Овсієнко Є.\n🥈Солтис М.\n🥉Аверін С.\n🥉Лагутін А.\n1️⃣8️⃣0️⃣х2️⃣ - Овсієнко Є.\n✅Чекаути 100+:\n1️⃣2️⃣0️⃣ - Овсієнко Є.\n1️⃣1️⃣6️⃣ - Аверін С.\n1️⃣1️⃣5️⃣ - Овсієнко Є.\n1️⃣0️⃣9️⃣ - Овсієнко Є.\n👀",
    "date": "2026-11-01",
    "url": "https://t.me/fullbull/12931",
-   "photo": "https://cdn4.telesco.pe/file/uLwFBhnwy9wW8UNM2pZGofDddcXDm1ktybvm6ER3MQETX6h1gM-zWIaYG-2tKHqDbmalnVwquVegqLCD19oSF0R6O_FcCYmPa5k-U_4TcfnYb6PxZ3LpsJTuBUJ26LtSKgBxcsXj4YAZW5DOxBkacjVTmaWcRGWgwxR7aRdTj-E2ZGq73rdG3rM3Ul9m02BjOghPbEAL4oyAaPL1YCG1nX-R8Y3o4HKf-jyLt_8bFymm94DfaWvZ_dCdSKiLs8_9-KgHmoWC5uJ76CSIvZqnW9HAQdWGQowto0M87n0Qjmh1co-u9gLiy9ynLCSjUCBaBL8KyuclE6g_M9KdULyk5Q.jpg"
+   "photo": "https://cdn4.telesco.pe/file/MnleQhkmcNWID41fvgElnbuUnjAIN3mGUyB1JAXMmYlZcjFldFD1YIONcSG-LyCsI_dGPLxJndNvj3Qnm-b74qZltMNQDCxDLcwSMcJVE627jiKylMo6feDUcatSWynYgIcZIJOGfMfLR7eOwxDGkHCJ-asO8d6d2yhTciFDhi1PZvAedSDbWYjx6HHcb4zQwSQZ619uuuUZzi8G9X8K-Ou2IasqDTcz1ky00O6vdz79g4CO4_Zz7TTNAsg3EI3wIVywiIe8TwVx2NfLDbc-UB0yzKk5HQXMyQdnLZdkH8QUEnMMRJfPyR7Los5tW1jXMUgjmmHrzn7F7fgipRPSzg.jpg"
   },
   {
    "text": "🏆Овсієнко Євген переміг у сьомому турнірі осіннього рейтингу дартс-клубу «Портер», який відбувся в останню суботу жовтня.\n🥇Овсієнко Є.\n🥈Дзябура В.\n🥉Аверін С.\n1️⃣8️⃣0️⃣х2️⃣ - Овсієнко Є.\n✅Чекаути 100+:\n1️⃣1️⃣9️⃣ - Гомелюк О.\n1️⃣0️⃣6️⃣ - Бабанін Д.\n👀 \n📊Статистика і рейтинг ДК «Портер» сезону осінь 2026 👉",
    "date": "2026-11-01",
    "url": "https://t.me/fullbull/12930",
-   "photo": "https://cdn4.telesco.pe/file/NS9UGKQ9jDyDU_9GYffboAYQhKI1FXbL4DO3sppqgGOyeAdk_msn92x3Hi9UqyYIXNaVHB7V_zwT45ftWJVCJh5gL0zu-xBxlTJSqCFGu1n_vA0pMbxI9X9itvCKKInxfUkvQWabsSxcZGQeTi-FDxG3l6UR3LdKPlEJreA_jONZ2WC4_PowceWpBtK4WGKY5jeX159KQaJM_5M72Mwo0Gd9sc9HAAuhCjIotXUO1hr7yoLz6KOF7Yx8gF6Lw38Bi5t2f_m3-maCc6mfHhIOSuI_ZNLxUSiPe4Goe3iLys665VUEVuijIwZBnltM43nj_OyJ6D5ijmUnmEfaJb5_IA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/SOHFcmoQGzQNS8mR5BmthPXILLPOTepjk0Shi0JFoseePE9l9uGQSKqSm3SoUkyKmp9N9RJ0NEithhE7j_Fimw3znTzxw8bwwGKJJ7SSJZSW7ca089nWCf0vnr1RFtWIEkBMKTnYDB6CGUvU8FOo1eoL_4zfO6VQs1ApwUaLNi_0A0N11hq7w3UmOXcTQzOdqc-gfASbVtE186HuCYlDdxLZ5N7FPNPGpDUbwnr1M38aUvpa6njtsN47i3tQ9X4GMgVUm5tKG8rqYf7azaRwxo9U_tq01FQozzZkAuXX2WaLYFgQ552m9kKrhACQi3XHgPZipiHhCLwklq1gSSPyCw.jpg"
   }
  ],
  "championsRecords": [
@@ -108572,7 +108707,9 @@
    "gender": "men",
    "place": 1,
    "names": [
-    "Ледєньов Вадим"
+    "Ледєньов Вадим",
+    "Кобзар Ігор",
+    "Заволокін Дмитро"
    ]
   }
  ],
@@ -109276,6 +109413,7 @@
   "Білоус Іван",
   "Бінат Ігор",
   "Валуце Олексій",
+  "Вальченко Максим",
   "Валяєв Роман",
   "Ванда Євген",
   "Варварук  Євген",
@@ -109666,6 +109804,7 @@
   "Моісюк Віталій",
   "Мустафаєв Ільмій",
   "Мутило Максим",
+  "Мєрний Євген",
   "Мігалюк Родіон",
   "Мінченок Юрій",
   "Мірошников Олександр",
@@ -109948,6 +110087,7 @@
   "Тямолов Роман",
   "Тямолов Ростислав",
   "Тіщенко Богдан",
+  "Углєв Олександр",
   "Удовиченко Едуард",
   "Узелко Анатолій",
   "Улезко Анатолій",
@@ -110084,6 +110224,7 @@
   "Шумілова Ірина",
   "Шуплецов Станіслав",
   "Шуплєцова Зоя",
+  "Шушкова Олександра",
   "Щолок Володимир",
   "Юджель Сінан",
   "Юкнаїт Альгіна",
