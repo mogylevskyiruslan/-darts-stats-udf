@@ -3272,6 +3272,9 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                     "rank": stat.get("rank", 0),
                     "match": stat.get("match", 0),
                     "winMatch": stat.get("winMatch", 0),
+                    # Відсоток закриття (оцінка, як у Nakka): виграні леги / підходи, з яких можна було закрити (<=170)
+                    "winLeg": stat.get("winLeg", 0),
+                    "coV": sum((stat.get("co") or {}).values()),
                 })
 
             # Фаза 1: середній за окремий матч (match/list вже дає statsData,
@@ -3305,6 +3308,7 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                         "name": name, "gender": gender, "avg": match_avg,
                         "winSets": side.get("winSets") or 0,
                         "winLegs": side.get("winLegs") or 0,
+                        "score": all_score, "darts": all_darts,
                     })
 
                 if len(resolved_sides) != 2:
@@ -3337,6 +3341,7 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                         "city": t["city"],
                         "opponent": opponent["name"],
                         "avg": side["avg"],
+                        "sc": side["score"], "dt": side["darts"],   # для зваженого середнього за період
                     })
 
                 # Head-to-head: один запис на матч (обидва гравці разом) —

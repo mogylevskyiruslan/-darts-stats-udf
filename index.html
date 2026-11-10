@@ -201,6 +201,8 @@
   .gender-tag.men{background:rgba(58,79,196,0.25); color:#9fb0ff; border:1px solid rgba(58,79,196,0.5);}
   .gender-tag.women{background:rgba(252,194,2,0.15); color:var(--gold); border:1px solid rgba(252,194,2,0.4);}
 
+  .stat-window{display:inline-flex; align-items:center; gap:8px; font-size:13px; color:var(--muted); background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:6px 10px;}
+  .stat-window select{background:var(--bg); color:var(--gold); border:1px solid var(--line); border-radius:4px; padding:4px 6px; font:600 13px 'Inter',sans-serif; cursor:pointer;}
   .records-tabs{display:flex; flex-wrap:wrap; gap:6px;}
   .records-tab{
     padding:9px 14px; background:var(--panel); color:var(--muted); border:1px solid var(--line);
@@ -1062,7 +1064,9 @@
   <p class="section-sub">Реальна статистика з <span id="nakka-records-count">…</span> зіграних турнірів, підтягнута напряму з Nakka. Мінімум 3 матчі в турнірі для заліку в "середній за турнір".</p>
   <div class="controls">
     <div class="records-tabs" id="records-tabs">
-      <button type="button" class="records-tab active" data-cat="avgLast50">Середній за 50 матчів</button>
+      <button type="button" class="records-tab active" data-cat="avgLast50">Середній за період</button>
+      <button type="button" class="records-tab" data-cat="checkoutPeriod">Закриття % за період</button>
+      <button type="button" class="records-tab" data-cat="checkoutTournament">Закриття % за турнір</button>
       <button type="button" class="records-tab" data-cat="avgTournament">Середній за турнір</button>
       <button type="button" class="records-tab" data-cat="avgMatch">Середній за матч</button>
       <button type="button" class="records-tab" data-cat="h2hMatch">H2H з найкращим AVG</button>
@@ -1076,6 +1080,7 @@
     </div>
   </div>
   <div class="controls">
+    <span data-window-host></span>
     <div class="gender-toggle">
       <button type="button" class="gender-btn active" id="records-gender-men" data-gender="men">Чоловіки</button>
       <button type="button" class="gender-btn" id="records-gender-women" data-gender="women">Жінки</button>
@@ -1308,7 +1313,7 @@ const I18N = (function(){
     'Учасники (ВФД)':'Participants (UDF)','УДЛ/ЗУДЛ (всього)':'UDL/WUDL (total)',
     'Продовжили грати':'Kept playing','Нові гравці':'New players','Перестали грати (від попер. року)':'Stopped playing (vs. previous year)',
     'Динаміка місця за сезонами (Кубок України)':'Rank history by season (Ukrainian Cup)','Динаміка зміни рейтингу':'Rating change over time',
-    'Серед. за 50 матчів':'Avg. over 50 matches','180-ки всього':'Total 180s','Найкраще закриття':'Best checkout','% виграних матчів':'Match win rate',
+    'Серед. за 50 матчів':'Avg. over 50 matches','Середній за період':'Average over period','Закриття % за період':'Checkout % over period','Закриття % за турнір':'Checkout % per tournament','Закриття % (оцінка)':'Checkout % (estimated)','Найкраще закриття % за турнір':'Best checkout % per tournament','Період: останні':'Period: last','матчів':'matches','180-ки всього':'Total 180s','Найкраще закриття':'Best checkout','% виграних матчів':'Match win rate',
     'Кубок України':'Ukrainian Cup','Чемпіонати України':'Ukrainian Championships','Майстер спорту України':'Master of Sport of Ukraine','Майстер спорту':'Master of Sport',
     'Відкрити повний профіль →':'Open full profile →',
     'Поточне місце в рейтингу':'Current ranking position','Турнірів (Nakka)':'Tournaments (Nakka)','Найкращий середній':'Best average',
@@ -1382,6 +1387,14 @@ const I18N = (function(){
     [/^Найкращі закриття \(топ (\d+)\)$/, 'Best checkouts (top {1})'],
     [/^(.+) — статистика ВФД$/, '{1} — UDF statistics'],
     [/^(\d+) матч(?:ів|і|)$/, '{1} matches'],
+    [/^Середній за останні (\d+) матчів$/, 'Average over last {1} matches'],
+    [/^Закриття за останні (\d+) матчів \(оцінка\)$/, 'Checkout over last {1} matches (estimated)'],
+    [/^Закриття % за останні (\d+) матчів \(оцінка\)$/, 'Checkout % over last {1} matches (estimated)'],
+    [/^Серед\. за (\d+) матчів$/, 'Avg. over {1} matches'],
+    [/^Закриття за (\d+) матчів$/, 'Checkout over {1} matches'],
+    [/^Середній \((\d+) матчів\)$/, 'Average ({1} matches)'],
+    [/^Закриття % \((\d+) матчів\)$/, 'Checkout % ({1} matches)'],
+    [/^(\d+) з (\d+) підходів · (.+)$/, '{1} of {2} attempts · {3}'],
     [/^(.+) \/ (\d+) етап$/, '{1} / stage {2}'],
     [/^(.+) — 1 турнір$/, '{1} — 1 tournament'],
     [/^(.+) — (\d+) (?:турніри|турнірів)$/, '{1} — {2} tournaments'],
@@ -1853,23 +1866,112 @@ function renderShowMore(key, wrapId, total, rerenderFn){
   });
 }
 
+// --- Період для середнього / відсотка закриття: останні N матчів (10..100), одне налаштування на весь сайт ---
+let statWindow = 20;
+try { const v = parseInt(localStorage.getItem('udfStatWindow'), 10); if(v >= 10 && v <= 100 && v % 10 === 0) statWindow = v; } catch(e) {}
+
+function statWindowSelectHtml(){
+  let o = '';
+  for(let n = 10; n <= 100; n += 10) o += `<option value="${n}"${n === statWindow ? ' selected' : ''}>${n}</option>`;
+  return `<label class="stat-window"><span>Період: останні</span><select class="stat-window-sel" onchange="setStatWindow(this.value)">${o}</select><span>матчів</span></label>`;
+}
+function mountStatWindowControls(){
+  document.querySelectorAll('[data-window-host]').forEach(h => { h.innerHTML = statWindowSelectHtml(); });
+}
+function setStatWindow(v){
+  v = parseInt(v, 10);
+  if(!(v >= 10 && v <= 100)) return;
+  statWindow = v;
+  try { localStorage.setItem('udfStatWindow', String(v)); } catch(e) {}
+  document.querySelectorAll('.stat-window-sel').forEach(sel => { sel.value = String(v); });
+  if(typeof renderNakkaRecords === 'function') renderNakkaRecords();
+  const ov = document.getElementById('player-modal-overlay');
+  if(ov && ov.classList.contains('open') && window._ppName) openPlayerProfile(window._ppName);
+  const box = document.getElementById('h2h-compare-box');
+  if(box && typeof h2hSelected !== 'undefined' && h2hSelected[1] && h2hSelected[2]) box.innerHTML = renderProfileComparison(h2hSelected[1], h2hSelected[2]);
+}
+mountStatWindowControls();
+function recentMatchesOf(matches, n){
+  return matches.slice().sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date)).slice(0, n);
+}
+// зважений середній: сума очок / сума дротиків (якщо даних sc/dt немає - проста середня)
+function weightedAvg(ms){
+  if(!ms.length) return null;
+  let sc = 0, dt = 0, ok = true;
+  ms.forEach(m => { if(m.sc > 0 && m.dt > 0){ sc += m.sc; dt += m.dt; } else ok = false; });
+  if(ok && dt > 0) return Math.round(sc / dt * 3 * 100) / 100;
+  return Math.round(ms.reduce((s,r) => s + r.avg, 0) / ms.length * 100) / 100;
+}
+// Відсоток закриття (оцінка): виграні леги / підходи, з яких можна було закрити (<=170). Лише турніри з >=3 виграними легами.
+function tournamentCheckoutPct(r){
+  return (r.winLeg >= 3 && r.coV > 0) ? r.winLeg / r.coV * 100 : null;
+}
+// За період (останні N матчів): внесок турніру пропорційний частці його матчів, що потрапили у вікно.
+function windowCheckout(recent, myMatches, rows){
+  const key = r => r.date + '|' + r.tournament;
+  const cntAll = {}, cntWin = {}, rowBy = {};
+  myMatches.forEach(m => { const k = key(m); cntAll[k] = (cntAll[k] || 0) + 1; });
+  recent.forEach(m => { const k = key(m); cntWin[k] = (cntWin[k] || 0) + 1; });
+  rows.forEach(r => { rowBy[key(r)] = r; });
+  let w = 0, a = 0;
+  Object.keys(cntWin).forEach(k => {
+    const r = rowBy[k];
+    if(!r || !(r.coV > 0) || !(r.winLeg >= 3)) return;
+    const f = Math.min(1, cntWin[k] / cntAll[k]);
+    w += r.winLeg * f; a += r.coV * f;
+  });
+  return a > 0 ? { pct: w / a * 100, w, a } : null;
+}
+function fmtPct(v){ return (v === null || v === undefined) ? '—' : v.toFixed(1) + '%'; }
+const RECORD_MIN_CO_ATTEMPTS = 30;
+
 const RECORD_MIN_MATCHES_LAST50 = 50;
 const RECORD_CATEGORIES = {
   avgLast50: {
-    title: 'Гравець', valueLabel: 'Середній (50 матчів)', source: 'match',
+    title: 'Гравець', get valueLabel(){ return 'Середній (' + statWindow + ' матчів)'; }, source: 'match',
     compute(rows){
       const by = {};
       rows.forEach(r => { (by[r.name] = by[r.name] || []).push(r); });
       return Object.entries(by)
         .map(([name, ms]) => {
-          const last = ms.slice().sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date)).slice(0, 50);
-          const avg = last.reduce((s,r) => s + r.avg, 0) / last.length;
-          return { name, n: last.length, avg, from: last[last.length-1].date, to: last[0].date };
+          const last = recentMatchesOf(ms, statWindow);
+          return { name, n: last.length, avg: weightedAvg(last), from: last[last.length-1].date, to: last[0].date };
         })
-        .filter(x => x.n >= RECORD_MIN_MATCHES_LAST50)
+        .filter(x => x.n >= statWindow)
         .sort((a,b) => b.avg - a.avg)
         .slice(0, 10)
         .map(x => ({ name: x.name, value: x.avg.toFixed(2), context: `${x.n} матчів · ${x.from} – ${x.to}` }));
+    }
+  },
+  checkoutPeriod: {
+    title: 'Гравець', get valueLabel(){ return 'Закриття % (' + statWindow + ' матчів)'; }, source: 'match',
+    compute(rows){
+      const includeUDL = document.getElementById('global-toggle-udl').checked;
+      const by = {};
+      rows.forEach(r => { (by[r.name] = by[r.name] || []).push(r); });
+      const stRows = {};
+      nakkaPlayerStats.forEach(r => { if(includeUDL || !r.isUDL) (stRows[r.name] = stRows[r.name] || []).push(r); });
+      return Object.entries(by)
+        .map(([name, ms]) => {
+          const last = recentMatchesOf(ms, statWindow);
+          const co = windowCheckout(last, ms, stRows[name] || []);
+          return { name, n: last.length, co, from: last[last.length-1].date, to: last[0].date };
+        })
+        .filter(x => x.n >= statWindow && x.co && x.co.a >= RECORD_MIN_CO_ATTEMPTS)
+        .sort((a,b) => b.co.pct - a.co.pct)
+        .slice(0, 10)
+        .map(x => ({ name: x.name, value: x.co.pct.toFixed(1) + '%', context: `${x.n} матчів · ${x.from} – ${x.to}` }));
+    }
+  },
+  checkoutTournament: {
+    title: 'Гравець', valueLabel: 'Закриття % (оцінка)',
+    compute(rows){
+      return rows
+        .map(r => ({ r, pct: tournamentCheckoutPct(r) }))
+        .filter(x => x.pct !== null)
+        .sort((a,b) => b.pct - a.pct)
+        .slice(0, 10)
+        .map(x => ({ name: x.r.name, value: x.pct.toFixed(1) + '%', context: `${x.r.winLeg} з ${x.r.coV} підходів · ${x.r.tournament} · ${x.r.date}` }));
     }
   },
   h2hMatch: {
@@ -3136,13 +3238,15 @@ function getPlayerQuickStats(name){
   // Середній за останні 50 зіграних матчів — окремих даних по легах немає,
   // тож рахуємо по найдетальнішому джерелу, що є (nakkaMatchStats, по 1
   // запису на матч), сортуючи від найновіших.
-  const recentMatches = myMatches.slice().sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date)).slice(0, 50);
-  const avgLast50 = recentMatches.length
-    ? Math.round((recentMatches.reduce((s,r)=>s+r.avg, 0) / recentMatches.length) * 100) / 100
-    : null;
+  const recentMatches = recentMatchesOf(myMatches, statWindow);
+  const avgLast50 = weightedAvg(recentMatches);
+  const coPeriod = windowCheckout(recentMatches, myMatches, rows);
+  const bestCo = rows.map(r => ({ r, pct: tournamentCheckoutPct(r) })).filter(x => x.pct !== null).sort((a,b) => b.pct - a.pct)[0] || null;
   return {
     tournaments: rows.length,
     avgLast50, avgLast50Count: recentMatches.length,
+    coPeriodPct: coPeriod ? coPeriod.pct : null,
+    bestCoPct: bestCo ? bestCo.pct : null, bestCoWhere: bestCo ? `${bestCo.r.tournament} · ${bestCo.r.date}` : '',
     mprTournament: getCricketStats(name).bestTournament, mprMatch: getCricketStats(name).bestMatch,
     bestAvg: rows.length ? Math.max(...rows.map(r=>r.avg||0)) : null,
     bestMatchAvg: myMatches.length ? Math.max(...myMatches.map(r=>r.avg)) : null,
@@ -3194,7 +3298,8 @@ function renderPlayerSideCard(name, stats){
       </div>
       ${bioLineHtml}
       <div class="pcard-stats">
-        <div class="pcard-stat"><div class="pcard-stat-num">${stats.avgLast50 !== null ? stats.avgLast50.toFixed(2) : '—'}</div><div class="pcard-stat-label">Серед. за 50 матчів</div></div>
+        <div class="pcard-stat"><div class="pcard-stat-num">${stats.avgLast50 !== null ? stats.avgLast50.toFixed(2) : '—'}</div><div class="pcard-stat-label">Серед. за ${stats.avgLast50Count || statWindow} матчів</div></div>
+        <div class="pcard-stat"><div class="pcard-stat-num">${fmtPct(stats.coPeriodPct)}</div><div class="pcard-stat-label">Закриття за ${stats.avgLast50Count || statWindow} матчів</div></div>
         <div class="pcard-stat"><div class="pcard-stat-num">${stats.total180}</div><div class="pcard-stat-label">180-ки всього</div></div>
         <div class="pcard-stat"><div class="pcard-stat-num">${stats.bestCheckout || '—'}</div><div class="pcard-stat-label">Найкраще закриття</div></div>
         <div class="pcard-stat"><div class="pcard-stat-num">${stats.winRate !== null ? stats.winRate + '%' : '—'}</div><div class="pcard-stat-label">% виграних матчів</div></div>
@@ -3214,6 +3319,7 @@ function renderProfileComparison(p1, p2){
 
   const rows = [
     { label: `Середній за останні ${Math.max(s1.avgLast50Count, s2.avgLast50Count)||50} матчів`, v1: s1.avgLast50, v2: s2.avgLast50, fmt: v => v !== null ? v.toFixed(2) : '—' },
+    { label: `Закриття % за останні ${Math.max(s1.avgLast50Count, s2.avgLast50Count)||statWindow} матчів (оцінка)`, v1: s1.coPeriodPct, v2: s2.coPeriodPct, fmt: v => fmtPct(v) },
     { label: 'Поточне місце в рейтингу', v1: s1.currentRank, v2: s2.currentRank, fmt: v => v ?? '—', lowerBetter: true },
     { label: 'Турнірів (Nakka)', v1: s1.tournaments, v2: s2.tournaments },
     { label: '% виграних матчів', v1: s1.winRate, v2: s2.winRate, fmt: v => v !== null ? v+'%' : '—' },
@@ -3249,6 +3355,7 @@ function renderProfileComparison(p1, p2){
   ` : '';
 
   return `
+    <div style="text-align:center; margin:4px 0 14px;">${statWindowSelectHtml()}</div>
     <div class="profile-compare-wrap">
       <div class="profile-compare-cards">
         ${renderPlayerSideCard(p1, s1)}
@@ -3741,6 +3848,7 @@ function togglePlayerProfileUDL(name, checked){
 }
 
 function openPlayerProfile(name){
+  window._ppName = name;
   if(!heavyLoaded && heavyPromise){
     heavyPromise.then(() => openPlayerProfile(name));
     return;
@@ -3823,11 +3931,11 @@ function openPlayerProfile(name){
     const includeUDLmatch = includeUDL;
     const myMatches = nakkaMatchStats.filter(r => r.name === name && (includeUDLmatch || !r.isUDL));
     const bestMatchAvg = myMatches.length ? Math.max(...myMatches.map(r=>r.avg)) : null;
-    const recentMatches = myMatches.slice().sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date)).slice(0, 50);
-    const avgLast50 = recentMatches.length
-      ? Math.round((recentMatches.reduce((s,r)=>s+r.avg, 0) / recentMatches.length) * 100) / 100
-      : null;
-    const avgLast50Label = 'Середній за останні ' + (recentMatches.length || 50) + ' матчів';
+    const recentMatches = recentMatchesOf(myMatches, statWindow);
+    const avgLast50 = weightedAvg(recentMatches);
+    const avgLast50Label = 'Середній за останні ' + (recentMatches.length || statWindow) + ' матчів';
+    const coPeriod = windowCheckout(recentMatches, myMatches, rows);
+    const bestCoRow = rows.map(r => ({ r, pct: tournamentCheckoutPct(r) })).filter(x => x.pct !== null).sort((a,b) => b.pct - a.pct)[0] || null;
 
     const avgChartPoints = rows.map(r => ({ x: r.date.slice(3), y: r.avg }));
     const avgChartSvg = svgLineChart(avgChartPoints, {});
@@ -3845,12 +3953,15 @@ function openPlayerProfile(name){
           <h2>${name}${isMasterOfSport(name) ? '<span class="master-badge">🎖️ Майстер спорту</span>' : ''}</h2>
           ${shareButtonHtml(name)}
           ${udlToggleHtml}
+          <div style="margin:6px 0;">${statWindowSelectHtml()}</div>
           <div class="pp-sub">${gender} · дані Nakka з ${totalTournaments} турнір(ів), ${rows[0].date}–${rows[rows.length-1].date}</div>
         </div>
       </div>
 
       <div class="pp-stat-row">
         <div class="pp-stat-cell"><div class="num">${avgLast50 !== null ? avgLast50.toFixed(2) : '—'}</div><div class="label">${avgLast50Label}</div></div>
+        <div class="pp-stat-cell"><div class="num">${coPeriod ? fmtPct(coPeriod.pct) : '—'}</div><div class="label">Закриття за останні ${recentMatches.length || statWindow} матчів (оцінка)</div></div>
+        <div class="pp-stat-cell"><div class="num" title="${bestCoRow ? (bestCoRow.r.tournament + ' · ' + bestCoRow.r.date).replace(/"/g,'') : ''}">${bestCoRow ? fmtPct(bestCoRow.pct) : '—'}</div><div class="label">Найкраще закриття % за турнір</div></div>
         <div class="pp-stat-cell"><div class="num">${bestAvg.toFixed(2)}</div><div class="label">Найкращий середній</div></div>
         <div class="pp-stat-cell"><div class="num">${bestMatchAvg !== null ? bestMatchAvg.toFixed(2) : '—'}</div><div class="label">Найкращий середній матчу</div></div>
         <div class="pp-stat-cell"><div class="num">${total180}</div><div class="label">180-ки всього</div></div>
