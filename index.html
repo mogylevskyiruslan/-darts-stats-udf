@@ -1904,7 +1904,8 @@ function weightedAvg(ms){
 }
 // Відсоток закриття (оцінка): виграні леги / підходи, з яких можна було закрити (<=170). Лише турніри з >=3 виграними легами.
 function tournamentCheckoutPct(r){
-  return (r.winLeg >= 3 && r.coV > 0) ? r.winLeg / r.coV * 100 : null;
+  // coW - успішні підходи, coV - усі підходи (з одного джерела => <=100%); coV>coW - у даних є і невдалі підходи
+  return (r.coW >= 3 && r.coV > r.coW) ? r.coW / r.coV * 100 : null;
 }
 // За період (останні N матчів): внесок турніру пропорційний частці його матчів, що потрапили у вікно.
 function windowCheckout(recent, myMatches, rows){
@@ -1916,9 +1917,9 @@ function windowCheckout(recent, myMatches, rows){
   let w = 0, a = 0;
   Object.keys(cntWin).forEach(k => {
     const r = rowBy[k];
-    if(!r || !(r.coV > 0) || !(r.winLeg >= 3)) return;
+    if(!r || tournamentCheckoutPct(r) === null) return;
     const f = Math.min(1, cntWin[k] / cntAll[k]);
-    w += r.winLeg * f; a += r.coV * f;
+    w += r.coW * f; a += r.coV * f;
   });
   return a > 0 ? { pct: w / a * 100, w, a } : null;
 }
@@ -1971,7 +1972,7 @@ const RECORD_CATEGORIES = {
         .filter(x => x.pct !== null)
         .sort((a,b) => b.pct - a.pct)
         .slice(0, 10)
-        .map(x => ({ name: x.r.name, value: x.pct.toFixed(1) + '%', context: `${x.r.winLeg} з ${x.r.coV} підходів · ${x.r.tournament} · ${x.r.date}` }));
+        .map(x => ({ name: x.r.name, value: x.pct.toFixed(1) + '%', context: `${x.r.coW} з ${x.r.coV} підходів · ${x.r.tournament} · ${x.r.date}` }));
     }
   },
   h2hMatch: {

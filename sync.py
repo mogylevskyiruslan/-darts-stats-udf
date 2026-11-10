@@ -610,6 +610,23 @@ def fetch_json(url):
         return json.loads(resp.read().decode("utf-8"))
 
 
+def co_summary(stat):
+    """Підходи на закриття з Nakka ('co': 'залишок,після,дротиків' -> кількість).
+    coV - усі підходи, coW - з них успішні (залишок після = 0). Обидва з одного джерела,
+    тому відсоток закриття ніколи не перевищить 100%."""
+    v = w = 0
+    for key, cnt in (stat.get("co") or {}).items():
+        try:
+            after = int(str(key).split(",")[1])
+            c = int(cnt)
+        except Exception:
+            continue
+        v += c
+        if after == 0:
+            w += c
+    return {"coV": v, "coW": w}
+
+
 def player_avg(stat):
     darts = stat.get("darts") or 0
     score = stat.get("score") or 0
@@ -3274,7 +3291,7 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                     "winMatch": stat.get("winMatch", 0),
                     # Відсоток закриття (оцінка, як у Nakka): виграні леги / підходи, з яких можна було закрити (<=170)
                     "winLeg": stat.get("winLeg", 0),
-                    "coV": sum((stat.get("co") or {}).values()),
+                    **co_summary(stat),
                 })
 
             # Фаза 1: середній за окремий матч (match/list вже дає statsData,
