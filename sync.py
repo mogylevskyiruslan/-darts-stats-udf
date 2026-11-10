@@ -1512,7 +1512,7 @@ CURATED_PLAYER_NAMES = [
 
 # Правки 26.10.2026: додаємо гравців, які мають командні медалі ЧУ, але не мали власного рядка
 CURATED_PLAYER_NAMES += ["Узелко Анатолій", "Углєв Олександр", "Вальченко Максим", "Шушкова Олександра", "Берцик Артур", "Мєрний Євген", "Плясуля Станіслав", "Молнар Неллі", "Пугіна Єлизавета"]
-CURATED_PLAYER_NAMES += ["Шинкаренко Микола", "Чеголь Сергій", "Шнір Ганнес", "Шауер Жасмін", "Габєліч Ясміна", "Марабуоглу Мурат"]
+CURATED_PLAYER_NAMES += ["Шинкаренко Микола", "Чеголя Сергій", "Шнір Ганнес", "Шауер Жасмін", "Габєліч Ясміна", "Марабуоглу Мурат"]
 _old_names = {"Черноброва Олександра", "Медведев Олександр", "Агневщіков Анатолій", "Вильданов Игор", "Висковатова Ганна",
               "Ігор Мороз", "Андрій Попович", "Антон Подольчук", "Мєльтєва"}
 CURATED_PLAYER_NAMES = list(dict.fromkeys(n for n in CURATED_PLAYER_NAMES if n not in _old_names))
@@ -2065,6 +2065,7 @@ MANUAL_NAME_ALIASES = {
 
 # --- Правки від 26.10.2026: уніфікація написання (перший варіант - правильний) ---
 MANUAL_NAME_ALIASES.update({
+    "Чеголь Сергій": "Чеголя Сергій",
     "Черноброва Олександра": "Чорноброва Олександра",
     "Черноброва Александра": "Чорноброва Олександра",
     "Медведев Олександр": "Медведєв Олександр",
@@ -2834,6 +2835,20 @@ def manual_override_for(t):
     merged = dict(by_date or {})
     merged.update(exact or {})
     return {k: normalize_medal(v) if v else v for k, v in merged.items()}
+
+
+def clear_women_medals(tournaments):
+    """Правка 10.11.2026: на цих двох турнірах жінок не було - прибираємо жіночих призерів."""
+    dates = {"27.01.2008", "16.10.2010"}   # ЧУ 2007; ЧУ 2010 Cricket
+    out = []
+    for t in tournaments:
+        if t["date"] not in dates:
+            continue
+        for k in ("medalsWomen", "nakkaMedalsWomen"):
+            if t.get(k):
+                t[k] = None
+                out.append(f"{t['date']} {t['name']}")
+    return sorted(set(out))
 
 
 def apply_manual_medal_overrides_final(tournaments):
@@ -3892,7 +3907,7 @@ MANUAL_MEDAL_OVERRIDES.update({
         "medalsWomen": None,
     },
     ("22.05.2009", "ЧУ 2009 Команди"): {
-        "medals": _m("Київ (Ледєньов Вадим, Скарлат Дмитро, Квасков Павло, Чеголь Сергій)",
+        "medals": _m("Київ (Ледєньов Вадим, Скарлат Дмитро, Квасков Павло, Чеголя Сергій)",
                      "Кривий Ріг (Воронін Олександр, Омельченко Владислав, Невінчаний Едуард, Крестніков Юрій)"),
         "medalsWomen": None,
     },
@@ -5047,6 +5062,9 @@ def main():
         tournaments, men_year_data, women_year_data, name_index, canonical_names)
     print(f"  Таблиця призерів скоригувала {len(sheet_changes)} медальних заліків")
     apply_manual_medal_overrides_final(tournaments)
+    _cleared = clear_women_medals(tournaments)
+    if _cleared:
+        print(f"  Прибрано жіночих призерів (ручна правка) у турнірах: {_cleared}")
     _have_dates = {t["date"] for t in tournaments}
     _miss = [d for d in _BY_DATE_10_11 if d not in _have_dates]
     if _miss:
