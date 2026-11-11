@@ -610,21 +610,232 @@ def fetch_json(url):
         return json.loads(resp.read().decode("utf-8"))
 
 
-def co_summary(stat):
-    """Підходи на закриття з Nakka ('co': 'залишок,після,дротиків' -> кількість).
-    coV - усі підходи, coW - з них успішні (залишок після = 0). Обидва з одного джерела,
-    тому відсоток закриття ніколи не перевищить 100%."""
-    v = w = 0
-    for key, cnt in (stat.get("co") or {}).items():
-        try:
-            after = int(str(key).split(",")[1])
-            c = int(cnt)
-        except Exception:
+# ---- Checkout % (estimated): порт n01_checkout_est.js (Ohno Tomoaki) ----
+_CE_BOARD = [20, 1, 18, 4, 13, 6, 10, 15, 2, 17, 3, 19, 7, 16, 8, 11, 14, 9, 12, 5]
+_CE_BOGEY = {159, 162, 163, 165, 166, 168, 169}
+_CE_LEAVE_RANK = {32: 0, 40: 1, 16: 2, 24: 3, 36: 4, 20: 5, 8: 6, 12: 7, 4: 8, 18: 9, 28: 10, 38: 11, 2: 12, 10: 13, 6: 14, 14: 15, 22: 16, 26: 17, 30: 18, 34: 19, 50: 20}
+_CE_SPECIAL = {99: 19, 101: 17, 104: 18, 107: 19, 110: 20}
+_CE_NEIGH = {_CE_BOARD[i]: (_CE_BOARD[i - 1], _CE_BOARD[(i + 1) % 20]) for i in range(20)}
+
+
+def _ce_is_double(r):
+    return r == 50 or (2 <= r <= 40 and r % 2 == 0)
+
+
+def _ce_setup_single(r):
+    for lv in (32, 16, 8, 4, 2):
+        if lv < r:
+            return ("S", r - lv)
+    return ("S", 1)
+
+
+def _ce_setup_treble(r):
+    best, best_cost = None, 0
+    for x in range(20, 0, -1):
+        leave = r - 3 * x
+        if not _ce_is_double(leave):
             continue
-        v += c
-        if after == 0:
-            w += c
-    return {"coV": v, "coW": w}
+        cost = _CE_LEAVE_RANK[leave]
+        if x < 15:
+            cost += 10
+        if x < 10:
+            cost += 10
+        if best is None or cost < best_cost:
+            best, best_cost = ("T", x), cost
+    return best
+
+
+_CE_TARGETS = {}
+
+
+def _ce_target(r):
+    t = _CE_TARGETS.get(r)
+    if t is not None:
+        return t
+    if r <= 1 or r > 170 or r in _CE_BOGEY:
+        t = ("T", 20)
+    elif r == 50:
+        t = ("B", 25)
+    elif r <= 40 and r % 2 == 0:
+        t = ("D", r // 2)
+    elif r < 40:
+        t = _ce_setup_single(r)
+    elif r <= 52:
+        t = ("S", r - 32)
+    elif r <= 60:
+        t = ("S", r - 40)
+    elif r <= 98:
+        t = _ce_setup_treble(r) or ("T", 20)
+    elif r in _CE_SPECIAL:
+        t = ("T", _CE_SPECIAL[r])
+    else:
+        t = ("T", 20)
+    _CE_TARGETS[r] = t
+    return t
+
+
+def _ce_clamp(v, lo, hi):
+    return lo if v < lo else (hi if v > hi else v)
+
+
+def _ce_params(avg3):
+    a = avg3 if avg3 > 0 else 50
+    pd = _ce_clamp(0.004 * a + 0.01, 0.08, 0.5)
+    return {"pt": _ce_clamp(0.0055 * a - 0.14, 0.03, 0.6),
+            "ps": _ce_clamp(0.5 + 0.0035 * a, 0.5, 0.9),
+            "pd": pd, "pb": _ce_clamp(pd * 0.7, 0.05, 0.4)}
+
+
+def _ce_outcomes(target, p):
+    k, n = target
+    nb = _CE_NEIGH.get(n, (1, 5))
+    if k == "T":
+        m = 1 - p["pt"]
+        return [(3 * n, p["pt"], 0), (n, m * .55, 0), (nb[0], m * .15, 0), (nb[1], m * .15, 0),
+                (3 * nb[0], m * .04, 0), (3 * nb[1], m * .04, 0), (0, m * .07, 0)]
+    if k == "S":
+        m = 1 - p["ps"]
+        return [(n, p["ps"], 0), (nb[0], m * .35, 0), (nb[1], m * .35, 0), (3 * n, m * .15, 0), (0, m * .15, 0)]
+    if k == "D":
+        m = 1 - p["pd"]
+        return [(2 * n, p["pd"], 1), (n, m * .5, 0), (0, m * .5, 0)]
+    m = 1 - p["pb"]
+    lst = [(50, p["pb"], 1), (25, m * .55, 0)]
+    lst += [(i, m * .45 / 20, 0) for i in range(1, 21)]
+    return lst
+
+
+def _ce_aggregate(s, p):
+    w = [0.0] * 175
+    wa = [0.0] * 175
+    level = [(s, 0, 1.0)]
+    for dart in (1, 2, 3):
+        nxt = {}
+        order = []
+        for r, att, pr in level:
+            target = _ce_target(r)
+            a = att + (1 if (target[0] in ("D", "B") and _ce_is_double(r)) else 0)
+            for dec, pp, fin in _ce_outcomes(target, p):
+                prob = pr * pp
+                if prob <= 0:
+                    continue
+                left = r - dec
+                o = -1
+                if left < 0 or left == 1 or (left == 0 and fin != 1):
+                    o = 0
+                elif left == 0:
+                    o = dart
+                elif dart >= 3:
+                    o = 4 + left
+                if o >= 0:
+                    w[o] += prob
+                    wa[o] += prob * a
+                else:
+                    key = (left, a)
+                    if key not in nxt:
+                        nxt[key] = [left, a, 0.0]
+                        order.append(key)
+                    nxt[key][2] += prob
+        level = [tuple(nxt[k]) for k in order]
+    return w, wa
+
+
+def _ce_heuristic(left, old, finish):
+    def setup_ok(o):
+        return o < 99 or o in (100, 101, 104, 107, 110)
+    if left == 0:
+        if old > 50:
+            if setup_ok(old):
+                return 1 if finish == 1 else finish - 1
+            return 1
+        if old == 50 or (old <= 40 and old % 2 == 0):
+            return finish
+        return 1 if finish == 1 else finish - 1
+    if left == old or left < 50:
+        if old > 50:
+            if setup_ok(old):
+                return 2 if (left == old or left <= 40) else 1
+            if old <= 158 or old in (160, 161, 164, 167, 170):
+                return 1
+            return 0
+        if old == 50 or (old <= 40 and old % 2 == 0):
+            return 3 if (left == old or left <= 40) else 1
+        return 2 if (left == old or left <= 40) else 0
+    return 0
+
+
+def _ce_expect(s, e, n, p):
+    if s > 170 or s < 2 or s in _CE_BOGEY:
+        return 0
+    key = (s, e, n)
+    memo = p["_memo"]
+    if key in memo:
+        return memo[key]
+    obs = p["_obs"].get(s)
+    if obs is None:
+        obs = p["_obs"][s] = _ce_aggregate(s, p)
+    idx = [n] if e == 0 else ([0, 4 + s] if e == s else [4 + e])
+    wsum = sum(obs[0][i] for i in idx)
+    asum = sum(obs[1][i] for i in idx)
+    res = asum / wsum if wsum > 0 else _ce_heuristic(e, s, n if e == 0 else 0)
+    memo[key] = res
+    return res
+
+
+def _ce_calc_avg3(stat):
+    darts = stat.get("darts") or 0
+    a = stat.get("a") or 0
+    if darts > 0:
+        v = (stat.get("score") or 0) / darts * 3
+        if a > 0:
+            v = (v + a) / ((stat.get("acnt") or 0) + 1)
+        return v
+    if a > 0:
+        return a / (stat.get("acnt") or 1)
+    return None
+
+
+def nakka_checkout_est(stat):
+    """Повертає (finishes, attempts) як Checkout % (estimated) на Nakka, або None."""
+    co = stat.get("co")
+    if not co:
+        return None
+    counts = {}
+    finishes = 0
+    for key, c in co.items():
+        try:
+            s, e, n = (int(x) for x in key.split(","))
+        except ValueError:
+            continue
+        if s > 170 or s < 2 or s in _CE_BOGEY:
+            continue
+        counts[(s, e, n)] = counts.get((s, e, n), 0) + c
+        if e == 0:
+            finishes += c
+    a3 = _ce_calc_avg3(stat)
+    base = _ce_params(a3 if a3 is not None else 0)
+    pd = base["pd"]
+    attempts = 0.0
+    for _ in range(20):
+        p = {"pt": base["pt"], "ps": base["ps"], "pd": pd,
+             "pb": max(0.05, min(0.4, pd * 0.7)), "_memo": {}, "_obs": {}}
+        attempts = sum(c * _ce_expect(s, e, n, p) for (s, e, n), c in counts.items())
+        if attempts <= 0 or finishes == 0:
+            break
+        nxt = _ce_clamp(finishes / attempts, 0.03, 0.7)
+        if abs(nxt - pd) < 0.0005:
+            pd = nxt
+            break
+        pd = nxt
+    return (finishes, attempts) if attempts > 0 else None
+
+
+def nakka_checkout_pct(stat):
+    """Checkout % (estimated), точно як на сторінці турніру Nakka (0–100, 2 знаки)."""
+    r = nakka_checkout_est(stat)
+    if not r:
+        return None
+    return round(r[0] / r[1] * 100, 2)
 
 
 def player_avg(stat):
@@ -3291,7 +3502,7 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                     "winMatch": stat.get("winMatch", 0),
                     # Відсоток закриття (оцінка, як у Nakka): виграні леги / підходи, з яких можна було закрити (<=170)
                     "winLeg": stat.get("winLeg", 0),
-                    **co_summary(stat),
+                    "coPct": nakka_checkout_pct(stat),
                 })
 
             # Фаза 1: середній за окремий матч (match/list вже дає statsData,
