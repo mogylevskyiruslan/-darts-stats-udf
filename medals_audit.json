@@ -37,6 +37,24 @@
    }
   },
   {
+   "date": "29.05.2005",
+   "tournament": "Кубок України",
+   "format": "501DO / 2 етап",
+   "gender": "men",
+   "before": {
+    "gold": "Ледєньов Вадим",
+    "silver": null,
+    "bronze": []
+   },
+   "after": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Углєв Олександр",
+    "bronze": [
+     "Скарлат Дмитро"
+    ]
+   }
+  },
+  {
    "date": "27.01.2008",
    "tournament": "ЧУ 2007",
    "format": "501DO",

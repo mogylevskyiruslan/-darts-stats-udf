@@ -1,7 +1,7 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-11T12:36:44.921479+00:00",
-  "tournamentsCount": 261,
+  "lastUpdated": "2026-11-12T13:41:52.636541+00:00",
+  "tournamentsCount": 263,
   "parts": {
    "nakkaMatchStats": {
     "file": "data/nakka_matches.json",
@@ -12203,6 +12203,74 @@
    "nakkaMedalsWomen": null
   },
   {
+   "total": 50,
+   "men": 46,
+   "menAvg": null,
+   "women": 4,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 2 етап",
+   "date": "28.05.2006",
+   "city": "Черкаси",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1LbwZCXRJM_scG_TCNrVJrGDzTc1bh3pENuaMet1mEvQ/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Ємельянов Олександр",
+    "bronze": [
+     "Кобзар Ігор"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": null,
+   "men": null,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 1 етап",
+   "date": "15.04.2006",
+   "city": "Ужгород",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1SxWz_qiYOfNLvXWcfBrqacfSj9Ym8xk-WPgucWwSB98/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Мелашенко Владислав",
+    "bronze": [
+     "Марабуоглу Мурат"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
    "total": null,
    "men": null,
    "menAvg": null,
@@ -12244,9 +12312,9 @@
   },
   {
    "total": 60,
-   "men": null,
+   "men": 54,
    "menAvg": null,
-   "women": null,
+   "women": 6,
    "womenAvg": null,
    "name": "Кубок України",
    "org": "ВФД",
@@ -12283,10 +12351,10 @@
    "nakkaMedalsWomen": null
   },
   {
-   "total": null,
-   "men": null,
+   "total": 35,
+   "men": 33,
    "menAvg": null,
-   "women": null,
+   "women": 2,
    "womenAvg": null,
    "name": "Кубок України",
    "org": "ВФД",
@@ -12323,10 +12391,10 @@
    "nakkaMedalsWomen": null
   },
   {
-   "total": 50,
-   "men": null,
+   "total": 42,
+   "men": 40,
    "menAvg": null,
-   "women": null,
+   "women": 2,
    "womenAvg": null,
    "name": "Кубок України",
    "org": "ВФД",
@@ -12456,11 +12524,11 @@
   },
   {
    "name": "Ледєньов Вадим",
-   "gold": 13,
+   "gold": 15,
    "silver": 3,
    "bronze": 2,
    "champUA": 5,
-   "total": 18,
+   "total": 20,
    "rank": 3
   },
   {
@@ -12527,13 +12595,22 @@
    "rank": 10
   },
   {
+   "name": "Мелашенко Владислав",
+   "gold": 2,
+   "silver": 2,
+   "bronze": 7,
+   "champUA": 1,
+   "total": 11,
+   "rank": 11
+  },
+  {
    "name": "Васюра Андрій",
    "gold": 2,
    "silver": 2,
    "bronze": 4,
    "champUA": 0,
    "total": 8,
-   "rank": 11
+   "rank": 12
   },
   {
    "name": "Григоренко Денис",
@@ -12542,7 +12619,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 5,
-   "rank": 12
+   "rank": 13
   },
   {
    "name": "Ковальов Дмитро",
@@ -12551,15 +12628,6 @@
    "bronze": 0,
    "champUA": 0,
    "total": 4,
-   "rank": 13
-  },
-  {
-   "name": "Мелашенко Владислав",
-   "gold": 2,
-   "silver": 1,
-   "bronze": 7,
-   "champUA": 1,
-   "total": 10,
    "rank": 14
   },
   {
@@ -12608,7 +12676,7 @@
    "rank": 19
   },
   {
-   "name": "Новак Едуард",
+   "name": "Ємельянов Олександр",
    "gold": 1,
    "silver": 2,
    "bronze": 1,
@@ -12617,16 +12685,16 @@
    "rank": 20
   },
   {
-   "name": "Пирсіков Олександр",
+   "name": "Новак Едуард",
    "gold": 1,
    "silver": 2,
-   "bronze": 0,
+   "bronze": 1,
    "champUA": 0,
-   "total": 3,
+   "total": 4,
    "rank": 21
   },
   {
-   "name": "Понтус Андрій",
+   "name": "Пирсіков Олександр",
    "gold": 1,
    "silver": 2,
    "bronze": 0,
@@ -12635,7 +12703,7 @@
    "rank": 22
   },
   {
-   "name": "Соколов Роман",
+   "name": "Понтус Андрій",
    "gold": 1,
    "silver": 2,
    "bronze": 0,
@@ -12644,10 +12712,10 @@
    "rank": 23
   },
   {
-   "name": "Ємельянов Олександр",
+   "name": "Соколов Роман",
    "gold": 1,
-   "silver": 1,
-   "bronze": 1,
+   "silver": 2,
+   "bronze": 0,
    "champUA": 0,
    "total": 3,
    "rank": 24
@@ -12755,9 +12823,9 @@
    "name": "Кобзар Ігор",
    "gold": 0,
    "silver": 6,
-   "bronze": 3,
+   "bronze": 4,
    "champUA": 0,
-   "total": 9,
+   "total": 10,
    "rank": 36
   },
   {
@@ -12860,7 +12928,7 @@
    "rank": 47
   },
   {
-   "name": "Скарлат Дмитро",
+   "name": "Марабуоглу Мурат",
    "gold": 0,
    "silver": 1,
    "bronze": 1,
@@ -12869,16 +12937,16 @@
    "rank": 48
   },
   {
-   "name": "Євмєнєнков Максим",
+   "name": "Скарлат Дмитро",
    "gold": 0,
    "silver": 1,
-   "bronze": 0,
+   "bronze": 1,
    "champUA": 0,
-   "total": 1,
+   "total": 2,
    "rank": 49
   },
   {
-   "name": "Бендрик Олег",
+   "name": "Євмєнєнков Максим",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -12887,7 +12955,7 @@
    "rank": 50
   },
   {
-   "name": "Бургелов Олег",
+   "name": "Бендрик Олег",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -12896,7 +12964,7 @@
    "rank": 51
   },
   {
-   "name": "Деркач Дмитро",
+   "name": "Бургелов Олег",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -12905,7 +12973,7 @@
    "rank": 52
   },
   {
-   "name": "Зольдін Фелікс",
+   "name": "Деркач Дмитро",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -12914,7 +12982,7 @@
    "rank": 53
   },
   {
-   "name": "Каменицки Тибор",
+   "name": "Зольдін Фелікс",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -12923,7 +12991,7 @@
    "rank": 54
   },
   {
-   "name": "Марабуоглу Мурат",
+   "name": "Каменицки Тибор",
    "gold": 0,
    "silver": 1,
    "bronze": 0,
@@ -110938,25 +111006,13 @@
    "text": "🏆Крикет тур львівського дартс-клубу Lemberg, який відбувся 7 листопада виграв Кіфор Ярослав.\n🥇Кіфор Я.\n🥈Зубаль В.\n🥉Гринів О.\n👀",
    "date": "2026-11-10",
    "url": "https://t.me/fullbull/12962",
-   "photo": "https://cdn4.telesco.pe/file/WjRA2q0f6YHfNWDCg1e7XGCYorXnJ6Gd3_FP7ms6NmJ_PSJbIW4swlnvdSH8eckwgVCS6QViky0oppmDxCwHiZ792Md_V0nQxBxMzxCDhkwL62UaraWilhC1NcqQCxb77Al9IQs-egnMdXT6Pjp-yEHOF8oJ2uSEBAbMU1AS3faQ6BJHgqDZ6pngkufUwsKxwoy_9hqvJm25SkC5QcMSeYGmkcAcJfeSZGfMZPHSdJqffUHgsZnuNnwk7Tmjt_PKx0gkBLVtPcSU6iUuKvepDKJYv1za49xxD9fxnmQk2CUl05kr_NBfN_27JAJhuP793uhmoI_frfKr1HKe4NuIZA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/W1TnsJYLFYISva9oc8ykv9jjwdrIxcBtTZQ3uiOGbSnCbtNzQ9_OBWx0zAZ7rAEYezK7WHl7UMRJ6mhPtkx_c0QorczGus83VEsgGEF9h8GgYRlQQU2tL5xGYpoWqC3ztkCWJqqO-7nZh2dj8i1blrhAyVQp00Im-UK1C4O7AIvGbnxo0sLS5lPPm0SSTTu6TkO8XFyP0-r7KJWzhrASrNDsJ-AaUk-on8jLvw-dkDzRSq8COs7olag_efqkRFaUzF1dmfQg3AXT5W_DR23NlUvhJ4fitv-7EKUlO4VLsAm_cN5wUMY25FGIdSmj7FEl8sXoF2vOZal57zAjVcHpPw.jpg"
   },
   {
    "text": "🏆Переможець третього турніру кваліфікаційної серії київського Мастерсу - DartsNews Club Series 2026/3 - Овсієнко Євген.\n❗️Середній за турнір переможця - 73.99, найкращий середній на матч - 89.26, 8 максимумів!\n🥇Овсієнко Є.\n🥈Аверін С.\n🥉 Бабанін Д.\n🥉Солтис М.\n1️⃣8️⃣0️⃣х8️⃣ - Овсієнко Є. \n1️⃣8️⃣0️⃣ - Аверін С.\n✅Чекаути 100+:\n1️⃣4️⃣7️⃣ - Логоша Є.\n1️⃣2️⃣6️⃣ - Бабанін Д.\n1️⃣2️⃣0️⃣ - Солтис М.\n1️⃣0️⃣3️⃣ - Овсієнко Є.\n👀",
    "date": "2026-11-08",
    "url": "https://t.me/fullbull/12954",
-   "photo": "https://cdn4.telesco.pe/file/YSHBsJGoKd1Mji_pqOHOYhTAAjwaDfqhUQ9ojp1Uo_DAT4fDwO_hBaNQhpr8ZZxWM5zhC6Rr8i8Y6MYr-xj8y-qJVxVQATxeodDvjagXiK21Iyj-j-WT1ZCMKvDRcMKKg5H8u4bDcrvZf69Gi5m3ftwyo8uuhYE1fE9PmbFKonaETNM_zzbV3F2_aQBpLDYHDmTmrJmYYLYb8sidixDYniSkHSDXW3UvfuwK5_pa78FbFRCWhzPFRm36DZ5OOZieDgfl7w9vYqiUDAhrXUPBbAo1sBoz9pBW4lOGi7big3Viz2gIrBOBqnnAxbXYdxfJo8RnsNOTkbaX_DwN1jwaIA.jpg"
-  },
-  {
-   "text": "Рейтинг кваліфікаційної серії DNC2026 на київський Мастерс.",
-   "date": "2026-11-01",
-   "url": "https://t.me/fullbull/12933",
-   "photo": "https://cdn4.telesco.pe/file/pbhOTOi6UFKBRkesThnI3WPtVV3cXXtJM05qnHIl8UpkvRZh4HeYb34f5E0ZG1Gr-B_InDSytJ2BxGZRLeSJfV4Xf6XbvAu7wPmigwhXGr3cMvGQMjZ5LQ8anjrmWmh0AGutYm04H2FITd9VXLeJx0cwYjLyYLUVzvnelTz8DVd6RqZcx_mtIpqoczlnJyg8jBGEM3Ss4j-4npi_w_ii1PNtDjXw6nDpYQH_bPtIOH5R415wf_6shOBXtPyDPeenmadlXPY7n16Pa19unOzfE2EdHqXq_qaQESHB3wPm2u5CUMRU-c0L1_pkX1jtDjanDjx5uY4Wdm6hPwJAys1ebA.jpg"
-  },
-  {
-   "text": "🏆Переможець другого турніру DartsClub Series 2026 - Овсієнко Євген.\nЗа підсумками серії лідери рейтингу отримають кваліфікаційні місця на цьогорічному київському Мастерсі. \n🥇Овсієнко Є.\n🥈Солтис М.\n🥉Аверін С.\n🥉Лагутін А.\n1️⃣8️⃣0️⃣х2️⃣ - Овсієнко Є.\n✅Чекаути 100+:\n1️⃣2️⃣0️⃣ - Овсієнко Є.\n1️⃣1️⃣6️⃣ - Аверін С.\n1️⃣1️⃣5️⃣ - Овсієнко Є.\n1️⃣0️⃣9️⃣ - Овсієнко Є.\n👀",
-   "date": "2026-11-01",
-   "url": "https://t.me/fullbull/12931",
-   "photo": "https://cdn4.telesco.pe/file/NOH2IZqDuPoNorEVNsG_7-YzZMTzS8TOpKn3oUIV1eLYhovy8xxrWFq080z6Fw8xovN4hZo3VjYwTsc2lMHV_IfDUBnnShAVSHv1lIRZUTeios15SMa6beUWmVmhpR7F3H716_v-fwDFsPwJ-g6Vk6IQLH4_tRFTxWlb9a-CDP0jiRpwV3QVeO-bAj1avAFwRW02MrHDp4J_hxY4B_CPAh7Kl7NrkNWCfnFYF_gGBIaW1NbNqhl4C9BbXFimy931hDkzU4hyrVNXwRa0L4ZFc0PKDQK3FpMarp4kVajd9LrUZjCCvZ6y3w97zQwezJ1zO9tVs8AI_YcD8Sz7cTFYfA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/BD7i3QVt8irOlyeBIz0v2MKG_gbgO98I27HZECk69yL1LIxB6sZiuefMJwmuqTS9etcNaTdtyn69CAmvXQj28-4y66ehqmXIJQFW4BgjYVjcVA-MSRkDoAB9qZwcETlDn8iSgTcEAETko_-PcEuk2Dh01erNh7wdSSYTW2jBbOwo31CZ0U260VVPkI25nn8t84d99L-Ml0hEHDJZBKKDv3lxLYyLtvYiIv4uMosNP1J4umZKHe_7hIC1A1-iPk1DO7gCz2OSf-jJpJq8SFBRequsvQ5r83qpn3CogQIRDEZvPR5l7n8ebs72JLIrsbZi6g-1qFWc15jtfjbkLDUmIA.jpg"
   }
  ],
  "championsRecords": [
