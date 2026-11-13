@@ -1,7 +1,7 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-12T13:41:52.636541+00:00",
-  "tournamentsCount": 263,
+  "lastUpdated": "2026-11-13T12:59:20.841443+00:00",
+  "tournamentsCount": 269,
   "parts": {
    "nakkaMatchStats": {
     "file": "data/nakka_matches.json",
@@ -12163,6 +12163,40 @@
    "nakkaMedalsWomen": null
   },
   {
+   "total": null,
+   "men": 65,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 2 етап",
+   "date": "26.05.2007",
+   "city": "Черкаси",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1EjvRavNhYTFSiPJ3-PGXcMk0ODq9laMz_-v0CtvAA4Y/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Мелашенко Владислав",
+    "bronze": [
+     "Барсуков Віталій"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
    "total": 45,
    "men": 42,
    "menAvg": null,
@@ -12200,6 +12234,172 @@
      "Мелашенко Владислав"
     ]
    },
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": null,
+   "men": null,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "ЧУ 2006",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "10.12.2006",
+   "city": "Київ",
+   "isUDL": false,
+   "chuCategory": "ЧУ 501DO",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1yi-gNa-RJIsuGqJOyhdgICyxD-R0jhMK8jT2irm9Yaw/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": null,
+    "bronze": []
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": null,
+   "men": null,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "ЧУ 2010 Пари",
+   "org": "ВФД",
+   "format": "501DO",
+   "date": "09.12.2006",
+   "city": "Київ",
+   "isUDL": false,
+   "chuCategory": "ЧУ Пари",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1iirzBSIskqUOZkw0z7akZWqbA0bB7Bg9EoDmvXghmdE/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": null,
+    "bronze": []
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 39,
+   "men": null,
+   "menAvg": null,
+   "women": null,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 4 етап",
+   "date": "04.11.2006",
+   "city": "Кривий Ріг",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1uW6nb-oRpYJJR7_zHbZeEShBvSyQBLUMIIN-jHR41OY/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Кобзар Ігор",
+    "bronze": [
+     "Ємельянов Олександр"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 32,
+   "men": 28,
+   "menAvg": null,
+   "women": 4,
+   "womenAvg": null,
+   "name": "Кубок України Пари",
+   "org": "ВФД",
+   "format": "501DO / 1 етап",
+   "date": "27.08.2006",
+   "city": "Мелекіне",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1vPA9ArPkzXFLsvmJVtfyDJJJx4wzb6vfYna69cuKkNM/edit?tab=t.0#heading=h.i49clzlug79p",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Мелашенко Владислав",
+    "bronze": [
+     "Марабуоглу Мурат"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 32,
+   "men": 28,
+   "menAvg": null,
+   "women": 4,
+   "womenAvg": null,
+   "name": "Кубок України",
+   "org": "ВФД",
+   "format": "501DO / 3 етап",
+   "date": "25.08.2006",
+   "city": "Мелекіне",
+   "isUDL": false,
+   "chuCategory": "",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1qCw2upSHEZM_73AliEijrzdLlnwizyrL6eIEdOLL8L8/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Кобзар Ігор",
+    "silver": "Мелашенко Владислав",
+    "bronze": [
+     "Ромашко Віталій"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
   {
@@ -12524,11 +12724,11 @@
   },
   {
    "name": "Ледєньов Вадим",
-   "gold": 15,
+   "gold": 17,
    "silver": 3,
    "bronze": 2,
    "champUA": 5,
-   "total": 20,
+   "total": 22,
    "rank": 3
   },
   {
@@ -12586,21 +12786,21 @@
    "rank": 9
   },
   {
+   "name": "Мелашенко Владислав",
+   "gold": 2,
+   "silver": 4,
+   "bronze": 7,
+   "champUA": 1,
+   "total": 13,
+   "rank": 10
+  },
+  {
    "name": "Могилевський Руслан",
    "gold": 2,
    "silver": 3,
    "bronze": 4,
    "champUA": 1,
    "total": 9,
-   "rank": 10
-  },
-  {
-   "name": "Мелашенко Владислав",
-   "gold": 2,
-   "silver": 2,
-   "bronze": 7,
-   "champUA": 1,
-   "total": 11,
    "rank": 11
   },
   {
@@ -12667,22 +12867,31 @@
    "rank": 18
   },
   {
+   "name": "Кобзар Ігор",
+   "gold": 1,
+   "silver": 7,
+   "bronze": 4,
+   "champUA": 0,
+   "total": 12,
+   "rank": 19
+  },
+  {
    "name": "Невінчаний Едуард",
    "gold": 1,
    "silver": 2,
    "bronze": 3,
    "champUA": 0,
    "total": 6,
-   "rank": 19
+   "rank": 20
   },
   {
    "name": "Ємельянов Олександр",
    "gold": 1,
    "silver": 2,
-   "bronze": 1,
+   "bronze": 2,
    "champUA": 0,
-   "total": 4,
-   "rank": 20
+   "total": 5,
+   "rank": 21
   },
   {
    "name": "Новак Едуард",
@@ -12691,7 +12900,7 @@
    "bronze": 1,
    "champUA": 0,
    "total": 4,
-   "rank": 21
+   "rank": 22
   },
   {
    "name": "Пирсіков Олександр",
@@ -12700,7 +12909,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 3,
-   "rank": 22
+   "rank": 23
   },
   {
    "name": "Понтус Андрій",
@@ -12709,7 +12918,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 3,
-   "rank": 23
+   "rank": 24
   },
   {
    "name": "Соколов Роман",
@@ -12718,7 +12927,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 3,
-   "rank": 24
+   "rank": 25
   },
   {
    "name": "Лагутін Андрій",
@@ -12727,7 +12936,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 2,
-   "rank": 25
+   "rank": 26
   },
   {
    "name": "Рогов Віталій",
@@ -12736,7 +12945,7 @@
    "bronze": 3,
    "champUA": 0,
    "total": 4,
-   "rank": 26
+   "rank": 27
   },
   {
    "name": "Гончаров Едуард",
@@ -12745,7 +12954,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 3,
-   "rank": 27
+   "rank": 28
   },
   {
    "name": "Воронін Олександр",
@@ -12754,7 +12963,7 @@
    "bronze": 1,
    "champUA": 1,
    "total": 2,
-   "rank": 28
+   "rank": 29
   },
   {
    "name": "Єрашов Віталій",
@@ -12763,7 +12972,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 29
+   "rank": 30
   },
   {
    "name": "Григоренко Віктор",
@@ -12772,7 +12981,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 30
+   "rank": 31
   },
   {
    "name": "Клочков Володимир",
@@ -12781,7 +12990,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 31
+   "rank": 32
   },
   {
    "name": "Медведєв Олександр",
@@ -12790,7 +12999,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 32
+   "rank": 33
   },
   {
    "name": "Паскару Габріель",
@@ -12799,7 +13008,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 33
+   "rank": 34
   },
   {
    "name": "Пасічніченко Артем",
@@ -12808,7 +13017,7 @@
    "bronze": 0,
    "champUA": 1,
    "total": 1,
-   "rank": 34
+   "rank": 35
   },
   {
    "name": "Шнір Ганнес",
@@ -12817,15 +13026,6 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 35
-  },
-  {
-   "name": "Кобзар Ігор",
-   "gold": 0,
-   "silver": 6,
-   "bronze": 4,
-   "champUA": 0,
-   "total": 10,
    "rank": 36
   },
   {
@@ -13063,7 +13263,7 @@
    "rank": 62
   },
   {
-   "name": "Гринів Олександр",
+   "name": "Барсуков Віталій",
    "gold": 0,
    "silver": 0,
    "bronze": 2,
@@ -13072,7 +13272,7 @@
    "rank": 63
   },
   {
-   "name": "Кисельов Дмитро",
+   "name": "Гринів Олександр",
    "gold": 0,
    "silver": 0,
    "bronze": 2,
@@ -13081,7 +13281,7 @@
    "rank": 64
   },
   {
-   "name": "Марков Сергій",
+   "name": "Кисельов Дмитро",
    "gold": 0,
    "silver": 0,
    "bronze": 2,
@@ -13090,7 +13290,7 @@
    "rank": 65
   },
   {
-   "name": "Пономаренко Денис",
+   "name": "Марков Сергій",
    "gold": 0,
    "silver": 0,
    "bronze": 2,
@@ -13099,7 +13299,7 @@
    "rank": 66
   },
   {
-   "name": "Солтис Андрій",
+   "name": "Пономаренко Денис",
    "gold": 0,
    "silver": 0,
    "bronze": 2,
@@ -13108,7 +13308,7 @@
    "rank": 67
   },
   {
-   "name": "Троценко Артем",
+   "name": "Солтис Андрій",
    "gold": 0,
    "silver": 0,
    "bronze": 2,
@@ -13117,16 +13317,16 @@
    "rank": 68
   },
   {
-   "name": "Анісімов Денис",
+   "name": "Троценко Артем",
    "gold": 0,
    "silver": 0,
-   "bronze": 1,
+   "bronze": 2,
    "champUA": 0,
-   "total": 1,
+   "total": 2,
    "rank": 69
   },
   {
-   "name": "Бадира Олександр",
+   "name": "Анісімов Денис",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13135,7 +13335,7 @@
    "rank": 70
   },
   {
-   "name": "Барсуков Віталій",
+   "name": "Бадира Олександр",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13288,7 +13488,7 @@
    "rank": 87
   },
   {
-   "name": "Стейер Себастьян",
+   "name": "Ромашко Віталій",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13297,7 +13497,7 @@
    "rank": 88
   },
   {
-   "name": "Титков Олег",
+   "name": "Стейер Себастьян",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13306,7 +13506,7 @@
    "rank": 89
   },
   {
-   "name": "Толкачов В'ячеслав",
+   "name": "Титков Олег",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13315,7 +13515,7 @@
    "rank": 90
   },
   {
-   "name": "Тямолов Роман",
+   "name": "Толкачов В'ячеслав",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13324,7 +13524,7 @@
    "rank": 91
   },
   {
-   "name": "Улезко Анатолій",
+   "name": "Тямолов Роман",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13333,7 +13533,7 @@
    "rank": 92
   },
   {
-   "name": "Холліуелл Вейн",
+   "name": "Улезко Анатолій",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13342,7 +13542,7 @@
    "rank": 93
   },
   {
-   "name": "Хімчак Сергій",
+   "name": "Холліуелл Вейн",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
@@ -13351,13 +13551,22 @@
    "rank": 94
   },
   {
-   "name": "Царолунга Дмитро",
+   "name": "Хімчак Сергій",
    "gold": 0,
    "silver": 0,
    "bronze": 1,
    "champUA": 0,
    "total": 1,
    "rank": 95
+  },
+  {
+   "name": "Царолунга Дмитро",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "champUA": 0,
+   "total": 1,
+   "rank": 96
   }
  ],
  "leaderboardWomen": [
@@ -110983,6 +111192,12 @@
  },
  "youtubeVideos": [
   {
+   "id": "w8WmMCGRbx8",
+   "title": "Могилевський – Гакман #shorts",
+   "published": "2026-11-12",
+   "thumbnail": "https://i4.ytimg.com/vi/w8WmMCGRbx8/hqdefault.jpg"
+  },
+  {
    "id": "OR5EnPUZreI",
    "title": "Могилевський – Гакман #shorts",
    "published": "2026-11-10",
@@ -110993,12 +111208,6 @@
    "title": "Могилевський – Гакман #shorts",
    "published": "2026-11-09",
    "thumbnail": "https://i3.ytimg.com/vi/BcGcyh1FPU0/hqdefault.jpg"
-  },
-  {
-   "id": "D47WMQfYbzE",
-   "title": "Гончаров – Овсієнко #shorts",
-   "published": "2026-11-08",
-   "thumbnail": "https://i1.ytimg.com/vi/D47WMQfYbzE/hqdefault.jpg"
   }
  ],
  "telegramNews": [
@@ -111006,13 +111215,13 @@
    "text": "🏆Крикет тур львівського дартс-клубу Lemberg, який відбувся 7 листопада виграв Кіфор Ярослав.\n🥇Кіфор Я.\n🥈Зубаль В.\n🥉Гринів О.\n👀",
    "date": "2026-11-10",
    "url": "https://t.me/fullbull/12962",
-   "photo": "https://cdn4.telesco.pe/file/W1TnsJYLFYISva9oc8ykv9jjwdrIxcBtTZQ3uiOGbSnCbtNzQ9_OBWx0zAZ7rAEYezK7WHl7UMRJ6mhPtkx_c0QorczGus83VEsgGEF9h8GgYRlQQU2tL5xGYpoWqC3ztkCWJqqO-7nZh2dj8i1blrhAyVQp00Im-UK1C4O7AIvGbnxo0sLS5lPPm0SSTTu6TkO8XFyP0-r7KJWzhrASrNDsJ-AaUk-on8jLvw-dkDzRSq8COs7olag_efqkRFaUzF1dmfQg3AXT5W_DR23NlUvhJ4fitv-7EKUlO4VLsAm_cN5wUMY25FGIdSmj7FEl8sXoF2vOZal57zAjVcHpPw.jpg"
+   "photo": "https://cdn4.telesco.pe/file/PvLUrvZaq2BP6A1FO6TKd6T9m_a4y5oZa4tBHDp-U4X33TGPVlA7HpEyd32fcciCuL-uV0CpJauAExBkgv16L44OgR-AruVhp4CxUpyoCoWWar6u7g_VDRHCkxqIATciJ4BaRFojfzl9qIGV1SKZfPh-f-aMubrXg0uATw_3m26aREY39_dXmgY2DNNYw8aElu7mlj-W3yqEOB8dtfaR83ltKzJgX0lZBpmkCf9NtSiUF5WtXdXP30NxNgb8ifQctZZ63iD4v6ldLEpP19ZzqzSlp_vfonuPJWESsdW_eijyqY89NoLU4VKo0GZhNnKKEhbIv1e8Z9veUrTnmXnMUQ.jpg"
   },
   {
    "text": "🏆Переможець третього турніру кваліфікаційної серії київського Мастерсу - DartsNews Club Series 2026/3 - Овсієнко Євген.\n❗️Середній за турнір переможця - 73.99, найкращий середній на матч - 89.26, 8 максимумів!\n🥇Овсієнко Є.\n🥈Аверін С.\n🥉 Бабанін Д.\n🥉Солтис М.\n1️⃣8️⃣0️⃣х8️⃣ - Овсієнко Є. \n1️⃣8️⃣0️⃣ - Аверін С.\n✅Чекаути 100+:\n1️⃣4️⃣7️⃣ - Логоша Є.\n1️⃣2️⃣6️⃣ - Бабанін Д.\n1️⃣2️⃣0️⃣ - Солтис М.\n1️⃣0️⃣3️⃣ - Овсієнко Є.\n👀",
    "date": "2026-11-08",
    "url": "https://t.me/fullbull/12954",
-   "photo": "https://cdn4.telesco.pe/file/BD7i3QVt8irOlyeBIz0v2MKG_gbgO98I27HZECk69yL1LIxB6sZiuefMJwmuqTS9etcNaTdtyn69CAmvXQj28-4y66ehqmXIJQFW4BgjYVjcVA-MSRkDoAB9qZwcETlDn8iSgTcEAETko_-PcEuk2Dh01erNh7wdSSYTW2jBbOwo31CZ0U260VVPkI25nn8t84d99L-Ml0hEHDJZBKKDv3lxLYyLtvYiIv4uMosNP1J4umZKHe_7hIC1A1-iPk1DO7gCz2OSf-jJpJq8SFBRequsvQ5r83qpn3CogQIRDEZvPR5l7n8ebs72JLIrsbZi6g-1qFWc15jtfjbkLDUmIA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/Htf1M56sZx3iyrqh7TvkoQTaxuWzagtBy3KqP8o8204VeXOo1FZGT-geQPUwQcFhYQGB88tG-E3qBn95lyIF--x_YWbNK6-m9AS20kra4rGG92jKxnRoAOza3v48GC0i5RwPmPSeqVMNlrao2jajbPyh7cIFtaeuJDB053Sj_Tt3lbMxVp_jUj88nllfYmZml6Rt6oX4B1EdWsWtpyg7UFC7rlzBNFlrJItS6-Zqa9h789KbfYdpmPFjPceTL1idGcBaE1grwWtdraPgBUtUAN2CS9wqWFz0b-fTHX4z4X19JurESiBmC00ScoLbOWxuNBL6lC4PkU7F0ekt-gQYiA.jpg"
   }
  ],
  "championsRecords": [
@@ -114931,7 +115140,8 @@
    "place": 3,
    "names": [
     "ЧУ 501DО Чоловіки",
-    "Ледєньов Вадим"
+    "Ледєньов Вадим",
+    "Ромашко Віталій"
    ]
   },
   {
@@ -114945,11 +115155,24 @@
   },
   {
    "year": 2006,
+   "category": "пари",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Кобзар Ігор",
+    "Єрашов Дмитро",
+    "Ледєньов Вадим",
+    "Ромашко Віталій"
+   ]
+  },
+  {
+   "year": 2006,
    "category": "501do",
    "gender": "men",
    "place": 1,
    "names": [
-    "Ледєньов Вадим"
+    "Ледєньов Вадим",
+    "Кобзар Ігор"
    ]
   },
   {
@@ -115039,6 +115262,7 @@
    "gender": "men",
    "place": 2,
    "names": [
+    "Толкачов В'ячеслав",
     "ЧУ 501DО Чоловіки",
     "Ледєньов Вадим"
    ]
