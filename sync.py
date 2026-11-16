@@ -277,50 +277,94 @@ def parse_champion_category_header(text):
 
 
 def parse_champions_sheet(rows, name_index, canonical_names):
-    """Парсить таблицю 'Чемпіони України та призери' (окрема вкладка).
-    Формат: рядок-заголовок року (колонка A = рік, B.. = назви категорій),
-    далі 12 рядків — по 4 рядки на кожне з 3 місць (місце вказане в колонці A
-    лише на першому з 4 рядків; команди/пари використовують кілька рядків
-    для імен партнерів/гравців команди, одиночні категорії — лише перший).
-    Повертає плаский список записів для незалежного відображення на сайті —
-    НЕ змішується і не підсумовується з жодною іншою статистикою турнірів."""
+    """Парсить таблицю 'Чемпіони України та призери'.
+    Формат: рядок-заголовок року (колонка A = рік, B.. = назви категорій), далі
+    рядки призерів: у колонці A стоїть місце (1/2/3) на першому рядку місця,
+    наступні рядки з порожньою колонкою A належать тому ж місцю (партнери
+    пари / склад команди). Блок року триває до наступного заголовка року.
+    Розбір НЕ залежить від фіксованої кількості рядків (у старих роках їх
+    менше, ніж 12) і ніколи не читає назви категорій ('ЧУ 501DO Чоловіки') як
+    імена гравців. Повертає плаский список записів."""
     records = []
-    i = 0
     n = len(rows)
+
+    def cell(row, idx):
+        return row[idx].strip() if idx < len(row) and row[idx] is not None else ""
+
+    def is_year(row):
+        # заголовок блоку: у колонці A рік (допускаємо '2012', '2012.0', '2012 р.') і
+        # щось у B, АБО (рік без позначки) >=2 клітинки з назвами категорій 'ЧУ ...'
+        a = cell(row, 0)
+        if re.match(r"^\d{4}(?:\.0)?\s*(?:р\.?|рік)?$", a, re.IGNORECASE) and cell(row, 1):
+            return True
+        labels = sum(1 for c in range(1, len(row)) if re.match(r"^чу\s", cell(row, c).lower()))
+        return labels >= 2 and place_of(a) is None
+
+    def place_of(text):
+        m = re.match(r"^\s*([123])(?:[.,]0+)?\s*(?:м|місце|місц|place|st|nd|rd)?\.?\s*$", text, re.IGNORECASE)
+        return int(m.group(1)) if m else None
+
+    def looks_like_label(text):
+        low = text.lower()
+        return bool(re.match(r"^чу(\s|$)", low)) or bool(re.match(r"^\d{4}(?:\.0)?$", low))
+
+    i = 0
+    last_year = None
     while i < n:
-        row = rows[i]
-        col_a = row[0].strip() if len(row) > 0 else ""
-        col_b = row[1].strip() if len(row) > 1 else ""
-
-        if re.match(r"^\d{4}$", col_a) and col_b:
-            year = int(col_a)
-            categories = {}  # col_idx -> (category_key, gender)
-            for col_idx in range(1, len(row)):
-                label = row[col_idx].strip() if col_idx < len(row) else ""
-                if label:
-                    categories[col_idx] = parse_champion_category_header(label)
-
-            # 12 рядків даних: по 4 на кожне з місць 1, 2, 3
-            block_start = i + 1
-            for place_offset in range(3):
-                place = place_offset + 1
-                group_start = block_start + place_offset * 4
-                group_rows = rows[group_start:group_start + 4]
-                for col_idx, (cat_key, gender) in categories.items():
-                    names = []
-                    for grow in group_rows:
-                        val = grow[col_idx].strip() if col_idx < len(grow) else ""
-                        if val:
-                            names.append(resolve_name(val, name_index, canonical_names))
-                    if names:
-                        records.append({
-                            "year": year, "category": cat_key, "gender": gender,
-                            "place": place, "names": names,
-                        })
-            i = block_start + 12
+        if not is_year(rows[i]):
+            i += 1
             continue
-        i += 1
+        header = rows[i]
+        _ym = re.match(r"^(\d{4})", cell(header, 0))
+        year = int(_ym.group(1)) if _ym else (last_year if last_year else 0)
+        last_year = year
+        categories = {}
+        for col_idx in range(1, len(header)):
+            label = cell(header, col_idx)
+            if label:
+                categories[col_idx] = parse_champion_category_header(label)
+        end = i + 1
+        while end < n and not is_year(rows[end]):
+            end += 1
+        # (place, col) -> імена
+        acc = {}
+        order = []
+        place = None
+        for r in rows[i + 1:end]:
+            p = place_of(cell(r, 0))
+            if p is not None:
+                place = p
+            if place is None:
+                continue
+            for col_idx in categories:
+                val = cell(r, col_idx)
+                if not val or looks_like_label(val):
+                    continue
+                key = (place, col_idx)
+                if key not in acc:
+                    acc[key] = []
+                    order.append(key)
+                nm = resolve_name(val, name_index, canonical_names)
+                if nm not in acc[key]:
+                    acc[key].append(nm)
+        for key in sorted(order, key=lambda k: (k[0], k[1])):
+            cat_key, gender = categories[key[1]]
+            records.append({"year": year, "category": cat_key, "gender": gender,
+                            "place": key[0], "names": acc[key]})
+        i = end
 
+    # Стать для категорій без неї (мікст): беремо з цієї ж таблиці - хто з'являється
+    # в категоріях "... Чоловіки" / "... Жінки". Так новий призер не пропадає з фільтра.
+    seen = {}
+    for r in records:
+        if r["gender"]:
+            for nm in r["names"]:
+                seen.setdefault(nm, set()).add(r["gender"])
+    for r in records:
+        if not r["gender"]:
+            gm = {nm: next(iter(seen[nm])) for nm in r["names"] if nm in seen and len(seen[nm]) == 1}
+            if gm:
+                r["genders"] = gm
     return records
 
 
@@ -5384,6 +5428,13 @@ def main():
         champions_rows = fetch_csv(CHAMPIONS_CSV_URL)
         champions_records = parse_champions_sheet(champions_rows, name_index, canonical_names)
         print(f"  Parsed {len(champions_records)} champions records")
+        _bad_ch = [r for r in champions_records if any(re.match(r"^чу\s", x.lower()) for x in r["names"])]
+        if _bad_ch:
+            print(f"  УВАГА: у таблиці чемпіонів назви категорій схожі на імена: {_bad_ch[:3]}")
+        _cnt = {}
+        for r in champions_records:
+            _cnt[r["year"]] = _cnt.get(r["year"], 0) + 1
+        print(f"  Записів призерів ЧУ за роками: {dict(sorted(_cnt.items()))}")
     except Exception as e:
         print(f"  WARNING: champions sheet fetch failed ({e}), skipping")
         champions_records = []

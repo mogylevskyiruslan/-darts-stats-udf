@@ -2884,7 +2884,7 @@ function computeChampionsRaceTimeline(genderFilter){
   years.forEach(year => {
     byYear[year].forEach(r => {
       r.names.forEach(name => {
-        const g = r.gender || nameGenderMap[name] || null;
+        const g = r.gender || (r.genders && r.genders[name]) || nameGenderMap[name] || null;
         if(genderFilter && g !== genderFilter) return;
         if(!cumulative[name]) cumulative[name] = { gold: 0, silver: 0, bronze: 0 };
         if(r.place === 1) cumulative[name].gold++;
@@ -3592,7 +3592,7 @@ function aggregateChampions(genderFilter, categoryFilter){
   (championsRecords || []).forEach(r => {
     if(categoryFilter && r.category !== categoryFilter) return;
     r.names.forEach(name => {
-      const g = r.gender || nameGenderMap[name] || null;
+      const g = r.gender || (r.genders && r.genders[name]) || nameGenderMap[name] || null;
       if(genderFilter && g !== genderFilter) return;
       if(!byPlayer[name]) byPlayer[name] = { gold: 0, silver: 0, bronze: 0 };
       if(r.place === 1) byPlayer[name].gold++;
