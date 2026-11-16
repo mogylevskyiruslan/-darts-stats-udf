@@ -1,13 +1,12 @@
-/* Реєстрація на турніри (тестова, прихована).
+/* Реєстрація на турніри (відкрита для всіх).
  * Дані зберігає Google Apps Script (див. registration_apps_script.gs). Телефон на сайт НЕ повертається.
- * Увімкнути для себе: 5 швидких тапів по логотипу у шапці або посилання з #reg-test. Вимкнути: #reg-off.
- * Для всіх одразу: REG_PUBLIC = true. */
+ * REG_PUBLIC = true - секція видима всім. Щоб знову сховати: REG_PUBLIC = false (тоді вхід - 5 тапів по логотипу або #reg-test, вимкнути - #reg-off). */
 (function () {
   'use strict';
 
   // ---------------------------------------------------------------- налаштування
   var REG_API_URL = 'https://script.google.com/macros/s/AKfycbyAn1ESRAZPRSmJJ74JdyW4awfczqGs5yR_yhC475MWhOWeh24t6JYp1qxSkdqKJnpkAg/exec';          // <-- сюди вставте адресу веб-застосунку Apps Script (закінчується на /exec)
-  var REG_PUBLIC = false;        // true - секція видима всім; false - лише після таємного входу
+  var REG_PUBLIC = true;         // true - секція видима всім; false - лише після таємного входу
   // Подія: 11-13 грудня 2026, Вижниця. Посилання на документи вставте пізніше ('' = "незабаром")
   var REG_EVENT = {
     place: 'Вижниця', region: 'Чернівецька область', dates: '11–13 грудня 2026',
@@ -171,6 +170,7 @@
     '.reg-org{display:flex;align-items:center;gap:14px;margin-bottom:14px}.reg-org .kick{margin:0;font-size:13px}' +
     '.reg-logo{height:92px;width:auto;background:#fff;border-radius:14px;padding:8px 10px;box-shadow:0 6px 20px rgba(0,0,0,.4)}' +
     '.reg-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:14px}' +
+    '.reg-guide{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);color:var(--gold);border-radius:999px;padding:8px 16px;font:600 14px Inter,sans-serif;text-decoration:none;transition:.15s}.reg-guide:hover{background:var(--gold);color:#141c56}' +
     '.reg-live{display:inline-flex;align-items:center;gap:7px;background:#e5173f;color:#fff;border-radius:999px;padding:5px 13px;font:700 12px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase}' +
     '.reg-live i{width:8px;height:8px;border-radius:50%;background:#fff;animation:regpulse 1.4s infinite}' +
     '@keyframes regpulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.8)}100%{box-shadow:0 0 0 9px rgba(255,255,255,0)}}' +
@@ -284,8 +284,8 @@
     var st = el('style'); st.textContent = CSS; document.head.appendChild(st);
     var sec = el('section', { id: 'registration', 'data-i18n-skip': '' });
     sec.innerHTML =
-      '<h2><span class="idx">★</span> Реєстрація на турніри <span class="reg-badge" id="reg-badge">тест</span></h2>' +
-      '<div class="reg-head"><span class="reg-live"><i></i>Реєстрація відкрита</span><span class="reg-meta">Чемпіонат України і фінал Кубку України · 11–13 грудня 2026</span></div>' +
+      '<h2><span class="idx">★</span> Реєстрація на турніри </h2>' +
+      '<div class="reg-head"><span class="reg-live"><i></i>Реєстрація відкрита</span><span class="reg-meta">Чемпіонат України і фінал Кубку України · 11–13 грудня 2026</span><a class="reg-guide" href="registration-guide.html" target="_blank" rel="noopener">📘 Як зареєструватись</a></div>' +
       buildBanner() +
       '<p class="section-sub">Оберіть турнір, потім себе зі списку, вкажіть регіон, населений пункт і телефон. Список упорядковано за поточним рейтингом. Телефон бачить лише організатор.</p>' +
       '<div class="reg-tabs" id="reg-tabs"></div>' +
@@ -296,7 +296,6 @@
     var anchor = $('#history');
     if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(sec, anchor); else document.body.appendChild(sec);
     $('#reg-open').addEventListener('click', openForm);
-    $('#reg-badge').style.display = REG_PUBLIC ? 'none' : '';
     sec.addEventListener('click', function (e) {
       var b = e.target.closest('[data-go],[data-tab]'); if (!b) return;
       var id = b.getAttribute('data-go') || b.getAttribute('data-tab');
@@ -560,7 +559,7 @@
     if (unlocked()) show(true);
     // 5 тапів по логотипу за 4 секунди
     var logo = document.querySelector('.hero-logo'), taps = [];
-    if (logo) logo.addEventListener('click', function () {
+    if (logo && !REG_PUBLIC) logo.addEventListener('click', function () {
       var now = Date.now(); taps = taps.filter(function (t) { return now - t < 4000; }); taps.push(now);
       if (taps.length >= 5) {
         taps = [];
