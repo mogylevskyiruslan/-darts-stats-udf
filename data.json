@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-16T08:00:36.358458+00:00",
+  "lastUpdated": "2026-11-16T09:54:36.373674+00:00",
   "tournamentsCount": 271,
   "parts": {
    "nakkaMatchStats": {
@@ -122111,8 +122111,7 @@
    "gender": "men",
    "place": 1,
    "names": [
-    "Воронін Олександр",
-    "Чік Едуард"
+    "Воронін Олександр"
    ]
   },
   {
@@ -122121,8 +122120,7 @@
    "gender": "women",
    "place": 1,
    "names": [
-    "Моісеєнко Віталіна",
-    "Павлюченко Марина"
+    "Моісеєнко Віталіна"
    ]
   },
   {
@@ -122130,6 +122128,24 @@
    "category": "501do",
    "gender": "men",
    "place": 2,
+   "names": [
+    "Чік Едуард"
+   ]
+  },
+  {
+   "year": 2008,
+   "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Павлюченко Марина"
+   ]
+  },
+  {
+   "year": 2008,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
    "names": [
     "Кобзар Ігор"
    ]
@@ -122138,110 +122154,36 @@
    "year": 2008,
    "category": "501do",
    "gender": "women",
-   "place": 2,
+   "place": 3,
    "names": [
     "Федоришина Алла"
    ]
   },
   {
-   "year": 2008,
-   "category": "мікст",
-   "gender": null,
-   "place": 3,
-   "names": [
-    "ЧУ мікст"
-   ]
-  },
-  {
-   "year": 2008,
-   "category": "команди",
-   "gender": "men",
-   "place": 3,
-   "names": [
-    "ЧУ Команди Чоловіки"
-   ]
-  },
-  {
-   "year": 2008,
-   "category": "команди",
-   "gender": "women",
-   "place": 3,
-   "names": [
-    "ЧУ Команди Жінки"
-   ]
-  },
-  {
-   "year": 2008,
-   "category": "пари",
-   "gender": "men",
-   "place": 3,
-   "names": [
-    "ЧУ Пари Чоловіки"
-   ]
-  },
-  {
-   "year": 2008,
-   "category": "пари",
-   "gender": "women",
-   "place": 3,
-   "names": [
-    "ЧУ Пари Жінки"
-   ]
-  },
-  {
-   "year": 2008,
-   "category": "dido",
-   "gender": "men",
-   "place": 3,
-   "names": [
-    "ЧУ DІDО Чоловіки"
-   ]
-  },
-  {
-   "year": 2008,
-   "category": "dido",
-   "gender": "women",
-   "place": 3,
-   "names": [
-    "ЧУ DІDО Жінки"
-   ]
-  },
-  {
-   "year": 2008,
-   "category": "cricket",
-   "gender": "men",
-   "place": 3,
-   "names": [
-    "ЧУ Сrісkеt Чоловіки"
-   ]
-  },
-  {
-   "year": 2008,
-   "category": "cricket",
-   "gender": "women",
-   "place": 3,
-   "names": [
-    "ЧУ Сrісkеt Жінки"
-   ]
-  },
-  {
-   "year": 2008,
+   "year": 2007,
    "category": "501do",
    "gender": "men",
-   "place": 3,
+   "place": 1,
    "names": [
-    "ЧУ 501DО Чоловіки",
-    "Ледєньов Вадим",
+    "Ледєньов Вадим"
+   ]
+  },
+  {
+   "year": 2007,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
     "Ромашко Віталій"
    ]
   },
   {
-   "year": 2008,
+   "year": 2007,
    "category": "501do",
-   "gender": "women",
+   "gender": "men",
    "place": 3,
    "names": [
-    "ЧУ 501DО Жінки"
+    "Соколов Роман"
    ]
   },
   {
@@ -122251,9 +122193,7 @@
    "place": 1,
    "names": [
     "Кобзар Ігор",
-    "Єрашов Дмитро",
-    "Ледєньов Вадим",
-    "Ромашко Віталій"
+    "Єрашов Дмитро"
    ]
   },
   {
@@ -122262,109 +122202,26 @@
    "gender": "men",
    "place": 1,
    "names": [
-    "Ледєньов Вадим",
-    "Кобзар Ігор"
-   ]
-  },
-  {
-   "year": 2006,
-   "category": "мікст",
-   "gender": null,
-   "place": 2,
-   "names": [
-    "ЧУ мікст"
-   ]
-  },
-  {
-   "year": 2006,
-   "category": "команди",
-   "gender": "men",
-   "place": 2,
-   "names": [
-    "ЧУ Команди Чоловіки"
-   ]
-  },
-  {
-   "year": 2006,
-   "category": "команди",
-   "gender": "women",
-   "place": 2,
-   "names": [
-    "ЧУ Команди Жінки"
-   ]
-  },
-  {
-   "year": 2006,
-   "category": "пари",
-   "gender": "men",
-   "place": 2,
-   "names": [
-    "ЧУ Пари Чоловіки"
-   ]
-  },
-  {
-   "year": 2006,
-   "category": "пари",
-   "gender": "women",
-   "place": 2,
-   "names": [
-    "ЧУ Пари Жінки"
-   ]
-  },
-  {
-   "year": 2006,
-   "category": "dido",
-   "gender": "men",
-   "place": 2,
-   "names": [
-    "ЧУ DІDО Чоловіки"
-   ]
-  },
-  {
-   "year": 2006,
-   "category": "dido",
-   "gender": "women",
-   "place": 2,
-   "names": [
-    "ЧУ DІDО Жінки"
-   ]
-  },
-  {
-   "year": 2006,
-   "category": "cricket",
-   "gender": "men",
-   "place": 2,
-   "names": [
-    "ЧУ Сrісkеt Чоловіки"
-   ]
-  },
-  {
-   "year": 2006,
-   "category": "cricket",
-   "gender": "women",
-   "place": 2,
-   "names": [
-    "ЧУ Сrісkеt Жінки"
-   ]
-  },
-  {
-   "year": 2006,
-   "category": "501do",
-   "gender": "men",
-   "place": 2,
-   "names": [
-    "Толкачов В'ячеслав",
-    "ЧУ 501DО Чоловіки",
     "Ледєньов Вадим"
    ]
   },
   {
    "year": 2006,
-   "category": "501do",
-   "gender": "women",
+   "category": "пари",
+   "gender": "men",
    "place": 2,
    "names": [
-    "ЧУ 501DО Жінки"
+    "Ледєньов Вадим",
+    "Ромашко Віталій"
+   ]
+  },
+  {
+   "year": 2006,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Кобзар Ігор"
    ]
   },
   {
@@ -122373,7 +122230,33 @@
    "gender": "men",
    "place": 3,
    "names": [
-    "Плясуля Станіслав",
+    "Толкачов В'ячеслав"
+   ]
+  },
+  {
+   "year": 2005,
+   "category": "501do",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Ледєньов Вадим"
+   ]
+  },
+  {
+   "year": 2005,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Плясуля Станіслав"
+   ]
+  },
+  {
+   "year": 2005,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
     "Кобзар Ігор"
    ]
   },
@@ -122383,8 +122266,24 @@
    "gender": "men",
    "place": 1,
    "names": [
-    "Ледєньов Вадим",
-    "Кобзар Ігор",
+    "Ледєньов Вадим"
+   ]
+  },
+  {
+   "year": 2004,
+   "category": "501do",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Кобзар Ігор"
+   ]
+  },
+  {
+   "year": 2004,
+   "category": "501do",
+   "gender": "men",
+   "place": 3,
+   "names": [
     "Заволокін Дмитро"
    ]
   }
@@ -123896,17 +123795,6 @@
   "Чорнобров Андрій",
   "Чорноброва Олександра",
   "Чорняк Михай",
-  "ЧУ 501DО Жінки",
-  "ЧУ 501DО Чоловіки",
-  "ЧУ DІDО Жінки",
-  "ЧУ DІDО Чоловіки",
-  "ЧУ Команди Жінки",
-  "ЧУ Команди Чоловіки",
-  "ЧУ мікст",
-  "ЧУ Пари Жінки",
-  "ЧУ Пари Чоловіки",
-  "ЧУ Сrісkеt Жінки",
-  "ЧУ Сrісkеt Чоловіки",
   "Чубат Андрій",
   "Чумак Ганна",
   "Чумак Дмитро",
