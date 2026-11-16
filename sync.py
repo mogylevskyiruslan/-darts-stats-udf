@@ -2949,6 +2949,26 @@ def extract_podium_tpids(stats):
     return {i + 1: tpid for i, (tpid, _) in enumerate(ranked[:3])}
 
 
+def udl_bronze_from_stats(nakka_data, name_index, canonical_names):
+    """УДЛ: матчу за 3 місце немає, бронзу отримують ОБИДВА півфіналісти.
+    Резервний шлях, коли сітка матчів не розпізнана: беремо зі статистики Nakka
+    всіх з rank==3 та всіх, хто вибув у півфіналі (rnd==-2) і не 1-2 місце.
+    Повертає список із рівно двох імен або [] (якщо однозначно не вийшло)."""
+    if not nakka_data:
+        return []
+    entries, stats = nakka_data["entries"], nakka_data["stats"]
+    picked = []
+    for tpid, st in stats.items():
+        rank, rnd = st.get("rank"), st.get("rnd")
+        if rank in (1, 2):
+            continue
+        if rank == 3 or rnd == -2:
+            nm = resolve_name(entries.get(tpid, tpid), name_index, canonical_names)
+            if nm and nm not in picked:
+                picked.append(nm)
+    return picked if len(picked) == 2 else []
+
+
 def split_medals_by_gender(nakka_data, name_index, canonical_names, known_women, known_men, default_gender):
     """Визначає стать КОЖНОГО призера окремо за відомим списком імен, а не
     за тим, з якої колонки (Men/Women) прийшло посилання. Це критично для
@@ -2980,7 +3000,7 @@ def split_medals_by_gender(nakka_data, name_index, canonical_names, known_women,
 
 
 _RE_THIRD = re.compile(r"3rd\s*place|3\s*-?\s*(?:тє|те|е|й|rd)?\s*місц|за\s*3|третє|third|bronze", re.I)
-_RE_SEMI = re.compile(r"semi|півфінал", re.I)
+_RE_SEMI = re.compile(r"semi|півфінал|1\s*/\s*2|\bsf\b", re.I)
 _RE_FINAL = re.compile(r"(?:^|[\s.\-])(?:final|фінал)\s*$", re.I)
 
 
@@ -3521,6 +3541,12 @@ def enrich_with_nakka(tournaments, name_index, canonical_names=None, known_women
                         medals_women = None
                     elif default_gender == "women":
                         medals_men = None
+            if t.get("isUDL") and tdid not in EXCLUDED_STATS_TDIDS:
+                _tgt = medals_women if default_gender == "women" else medals_men
+                if _tgt and len(_tgt.get("bronze") or []) < 2:
+                    _br = udl_bronze_from_stats(data, name_index, canonical_names)
+                    if _br and not (set(_br) & {_tgt.get("gold"), _tgt.get("silver")}):
+                        _tgt["bronze"] = _br
             if medals_men and not t["nakkaMedals"]:
                 t["nakkaMedals"] = medals_men
             if medals_women and not t["nakkaMedalsWomen"]:
@@ -5380,6 +5406,12 @@ def main():
     known_men = {p["name"] for p in men_aggregate}
     nakka_player_records, nakka_match_records, nakka_h2h_records = enrich_with_nakka(tournaments, name_index, canonical_names, known_women, known_men)
     print(f"  УДЛ: призери лише з Nakka ({apply_udl_medals_from_nakka(tournaments)} турнірів)")
+    for _t in tournaments:
+        if _t.get("isUDL"):
+            for _k, _lab in (("medals", "чол."), ("medalsWomen", "жін.")):
+                _m = _t.get(_k)
+                if _m and len(_m.get("bronze") or []) != 2:
+                    print(f"  УВАГА УДЛ: {_t['date']} {_t['name']} ({_lab}): бронзових призерів {len(_m.get('bronze') or [])}, а має бути 2")
     sheet_changes, sheet_unknown = apply_sheet_corrections(
         tournaments, men_year_data, women_year_data, name_index, canonical_names)
     print(f"  Таблиця призерів скоригувала {len(sheet_changes)} медальних заліків")
