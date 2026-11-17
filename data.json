@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-16T13:31:36.088854+00:00",
+  "lastUpdated": "2026-11-17T14:17:07.149935+00:00",
   "tournamentsCount": 271,
   "parts": {
    "nakkaMatchStats": {
@@ -118259,6 +118259,12 @@
  },
  "youtubeVideos": [
   {
+   "id": "iYxinazu65I",
+   "title": "Могилевський – Овсієнко #shorts",
+   "published": "2026-11-16",
+   "thumbnail": "https://i2.ytimg.com/vi/iYxinazu65I/hqdefault.jpg"
+  },
+  {
    "id": "MXklgwS-rB4",
    "title": "Могилевський – Овсієнко #shorts",
    "published": "2026-11-15",
@@ -118269,12 +118275,6 @@
    "title": "Могилевський – Овсієнко #shorts",
    "published": "2026-11-14",
    "thumbnail": "https://i2.ytimg.com/vi/yzTkJ3973mI/hqdefault.jpg"
-  },
-  {
-   "id": "ojwMc79quUo",
-   "title": "Могилевський – Овсієнко #shorts",
-   "published": "2026-11-13",
-   "thumbnail": "https://i4.ytimg.com/vi/ojwMc79quUo/hqdefault.jpg"
   }
  ],
  "telegramNews": [
@@ -118282,31 +118282,19 @@
    "text": "🏆Переможець Кубку Української дартс ліги Е.Чіка (Крікет) серед чоловіків - Омельченко Владислав. У завзятому фіналі він перемог Овсієнко Євгена 5-4!\n🥇Омельченко В.\n🥈Овсієнко Є.\n🥉Гончаров Е.\n🥉Могилевський Р.\n👀",
    "date": "2026-11-15",
    "url": "https://t.me/fullbull/12994",
-   "photo": "https://cdn4.telesco.pe/file/Ypp3b7QnzoMEoZiLnIhauYMNTPmcrUtMUygL6bsYRih5GQ5IbrPT8Auxhqc7ofdXd1_Ff78aSe_Txom4mHefDTzhbvYEswyXKxKwViebJkPkWCMmOYTyLxkVIPvmvngAR9X6oht_qHaUJ18uk9hzl0nX3wc6l_OIad6cBerqG0uug_j4uVzcg4wrSHxnLvtxLyikWD8hD01wNors064l000L6fAzLJLAbjZwT3-u0Z_k_-OWl_CKFfFLp7Iwd5F9JUpkU4rrI0s_YMBa6lTNCBI1Qw61vj8dOs4rKPHblioTwpmEbjFGX9TOGHKKnZy3qcG0WysBKhGK-FLkcxQv-A.jpg"
+   "photo": "https://cdn4.telesco.pe/file/R_jSsV1MzrQLSF4lyjiXGgfuFZfkYFRt1x9YxMX5eW0RanrwiL6crv8r4vutqqsSTnUqF-0Al8xN8zOSBbNsZh6pTu1M-Nf3V5VPPJEaxAZX69BoZI58guzuBUI6Xh7gOgjuQGEUgZkOEhDxWVHEX_SzloRgwioWhFHnA3vWPeb7j-sYZ0yvN2ODFGPzbcG0x7YaiUDNP6wwqF9Old50ALoqXfbQKQwYQxOvvfEcRXvxNcaEfeZ_ZMx314ZA6qwOMRekOYI3YgqSD5d3Dmr3TjwSkiMQdkQ0HaTQSCc4FCCaNmwC34oqcMUe7AJNVLb9dWZGMwdTkX2hxasynZEzzA.jpg"
   },
   {
    "text": "🏆Кубок УДЛ Е.Чіка (Крікет), який відбувся у неділю, 15 листопада у м.Мукачево у жінок виграла Гончаренко Інна.\n🥇Гончаренко І.\n🥈Харченко Т.\n🥉Ільясова А.\n🥉Молдован В.\n👀",
    "date": "2026-11-15",
    "url": "https://t.me/fullbull/12993",
-   "photo": "https://cdn4.telesco.pe/file/r-Av4ewSeDJFLcEsaylCgm2evfbVpoTTf3qvNeHgo7g2VDGj4vrn0ks67BY5QzGbgyVndF9n4mVc29xuND-51RMzjz_-64aK37KgsC8bkb9FuW2MJVcqXxBXuaR8TpDflRkkfb35bL2208pihfc-TEeIwEjQTFPfdlI7QBK_BQtgv-4Gj-_PX8NeyvQqpXyn5LLehnuNWN_05ou5xZseZVfckFe-1g0fbLZ8cV8CmkU3tgbU5xJYkmXvwysjgmPzzewzc06Bd8VHkmaIKjMxwJhm_z1bPqzFvyE5yPAz69Nq_b_X1T6mhWnUh6KDqCH7OA7VIZx-V6OTG0EYgTt6sw.jpg"
+   "photo": "https://cdn4.telesco.pe/file/XJYtnvMDexu1UA_65wxWn42yetb2q6Q0868eqKiTKzgmXtS1lFPMR17ESxGhvpvsZqqqgrRSpurin5qzVJC8Jws8g2UwaN-lyY4La-Lq8xRYvtlaJapOWkWjyQqoueLAnIM-C1q79YKRKpsVyumYlEtoj4HW0eA55IhLtoNpvUvy3k_tjpT9dtXffT5zHTmXXCC_OwmfH-zadp5_UIsQ0kfXvaRjDLRcmlQii9ZzzBmrHfZA6Qew7Ju0QMh5-ydnfU97dZbMZaai6p_q3NxaqgYm47ZrQyvtRZ5mjBRTy07_D-c1wtWpm4EUY4bnrFd95e7szq-W-uxREXpEO3MtrA.jpg"
   },
   {
    "text": "🏆Переможець четвертого кваліфікаційного турніру київського мастерсу DartsNews Club 2026/4 - Солтис Микита. \n🥇Солтис М.\n🥈Аверін С.\n🥉Ковальов А.\n👀",
    "date": "2026-11-15",
    "url": "https://t.me/fullbull/12990",
-   "photo": "https://cdn4.telesco.pe/file/TK8AEbbVrN7lTl-sQ5RgjMMhUwcOvdCAeixoumgkn4iAE9U8LvEZKS51l74bNg-2LXvkxsSkN5XWO6DsaBEj3jEy3-KgUfKzQWCU0jE4WCG7Ga6l_SCTrvmBAbMq1Xvv7yCPb6qTyehEqvFzhIAewbh8LpunJfxANUuRLJl9ZFFpjY2YY_mL1JeKHdfix-cFGTl6SfjBjtCVmW_FCvb7SvJ1wSzJKSWfaGPzn30AYWAmkILCUG_1DJhdy_IR6W1RsNxjlYeuFb7Z5fb-uZT5USDPv_BtNQ3JkGEqqh69-v3plwZ8AGETki5McffTdnbzuHEK5NKRSfKKItLtudYjSA.jpg"
-  },
-  {
-   "text": "Неділя 15 листопада - другий день змагань УДЛ: Кубок Е.Чіка.\n🙋‍♂️Чоловіки 👉 \n🙋‍♀️Жінки 👉",
-   "date": "2026-11-15",
-   "url": "https://t.me/fullbull/12987",
-   "photo": "https://cdn4.telesco.pe/file/KGKAookomIsnl5bFBv88du1WQJpO0tON5CiN7xEgivVvufMcORw5GimB0oLOhPxAcl9iT7qG4MesgIPgJet85TN_qAHUAUJjvX30YwZBppAXeqQG211eY1LyCzJA6q_NrozXzVSbojKlhKTum_GxenvnYNaSItTvlStMAvbcDVIvJDNA-vFFtvFgJW2ObJNjIyrZfIqpzdcOg21Agn8mmzUY3pB17wKYRfpXDZhwlOYYvuI_7-YyKcfc0G9gNSI1EWSaYZdm4eaLvmn9ijx-DbX_hWUAp4yVqpTDXM2U9IR-s2T6So3jHTT_F3VtPo21uv8-r0i92XzvW1-RHrRaBw.jpg"
-  },
-  {
-   "text": "🏆Переможець VI-го етапу УДЛ, який відбувся у м.Мукачево у суботу 14 листопада - Омельченко Владислав. \n🥇Омельченко В.\n🥈Мелашенко В.\n🥉Овсієнко Є.\n🥉Гринів О\n1️⃣8️⃣0️⃣x3️⃣ - Гончаров Е., Овсієнко Є., \n1️⃣8️⃣0️⃣x2️⃣ - Омельченко В., Абчугський О., Мелашенко В., Могилевський Р.\n1️⃣8️⃣0️⃣ - Гринів О., Воронюк М., Зубаль В., Іванов С. \n☑️Чекаути 100+:\n1️⃣5️⃣4️⃣ - Гринів О.\n1️⃣2️⃣2️⃣ - Бабанін Д.\n1️⃣2️⃣0️⃣ - Мелашенко В.\n1️⃣1️⃣9️⃣ - Абчугський О.\n1️⃣1️⃣6️⃣ - В.Мелашенко, Омельченко В.\n1️⃣1️⃣5️⃣ - Гакман",
-   "date": "2026-11-14",
-   "url": "https://t.me/fullbull/12983",
-   "photo": "https://cdn4.telesco.pe/file/O2yP_XLbOKlRXdn5JCd9wtfey8boMoN6j7JQufNtz0D3ZIHlaVQA4V0rmZTrG-mBdrHyHRFB26jUyf-As_iDCO2qNh-DAX45QNyfYJGwWnHGTqsAQctZOjFT4DBDsnNIGrms3lxp-Bjq1Ivd5wxjkpQGjtacaPdzU6wGyd8tn2WYH-PbabCpJLmE5rgKs2M2yVy2AERtlBqx8Eoj2cBiTMAHg7khdd0-kOuJcM7G1ZPKkY7PM2z3aaE9_a5Z2MOexewPpO81ziTPhyrpNdMUJTZQQr7sfJNfyN3kclYDAWna49-rX0lMD_94qATIqX3peilk7IJD_MSO8VZm90GE4g.jpg"
+   "photo": "https://cdn4.telesco.pe/file/vhx-zIx8AsY2lf2SK8Cp4xJLm2tKCeMt2JnWLYLAII-qlCgDy_pQUxxZOWmnONlF8mf8WQelJ-Xfl9IwnP1zN1nPyeEqMmwWLP3UKIX7wDzvN2oO1m3Vg7JF58hdfIKYOWUQM3G03gkwy56Cmzx7dR4WCvhnGGW_1DUC-HD-ajUZoStIMqvfUhtFNbYP9KQsU7opw4G1h85dGexp6s9B96t4Kvt1Ll8e4a9Y3KH1weYwl-2se0I-I1_NSBgzQ-Y0udDBhlqDls1eZrr6VxpcOtDaBHju_vlGuPuqmecVQWFDE696dG-PGMooEHCTids4BwB7Y5KT4iEpRZhlqJ7yoA.jpg"
   }
  ],
  "championsRecords": [
