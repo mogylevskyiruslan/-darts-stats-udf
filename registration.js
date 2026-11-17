@@ -17,7 +17,7 @@
   var REG_TOURNAMENTS = [
     { id: 'chu501m', short: 'ЧУ · чоловіки', title: 'Чемпіонат України серед чоловіків', day: '12 грудня 2026', gender: 'men', open: true },
     { id: 'chu501w', short: 'ЧУ · жінки', title: 'Чемпіонат України серед жінок', day: '12 грудня 2026', gender: 'women', open: true },
-    { id: 'chu501j', short: 'ЧУ · юнаки', title: 'Чемпіонат України серед юнаків', day: '13 грудня 2026', gender: 'all', open: true },
+    { id: 'chu501j', short: 'ЧУ · юнаки й юначки', title: 'Чемпіонат України серед юнаків та юначок', day: '13 грудня 2026', gender: 'all', open: true },
     { id: 'kufm', short: 'Фінал КУ · чоловіки', title: 'Фінал Кубку України серед чоловіків', day: '13 грудня 2026', gender: 'men', open: true },
     { id: 'kufw', short: 'Фінал КУ · жінки', title: 'Фінал Кубку України серед жінок', day: '13 грудня 2026', gender: 'women', open: true }
   ];
