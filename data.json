@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-18T13:39:21.364670+00:00",
+  "lastUpdated": "2026-11-18T13:47:33.374519+00:00",
   "tournamentsCount": 271,
   "parts": {
    "nakkaMatchStats": {
@@ -122981,6 +122981,11 @@
   },
   "Коломієць Олена": {
    "dartsWeight": "24"
+  },
+  "Кулік Віталій": {
+   "nickname": "Vinni",
+   "profession": "Залізничник",
+   "birthDate": "20.07.1986"
   }
  },
  "curatedPlayerNames": [
