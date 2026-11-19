@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-19T14:17:44.003084+00:00",
+  "lastUpdated": "2026-11-19T15:38:06.558543+00:00",
   "tournamentsCount": 271,
   "parts": {
    "nakkaMatchStats": {
@@ -118259,6 +118259,12 @@
  },
  "youtubeVideos": [
   {
+   "id": "pL3tjjQ_jhY",
+   "title": "Полтава-1 – Харків #shorts",
+   "published": "2026-11-19",
+   "thumbnail": "https://i1.ytimg.com/vi/pL3tjjQ_jhY/hqdefault.jpg"
+  },
+  {
    "id": "wEuOThXWTlQ",
    "title": "Могилевський – Овсієнко #shorts",
    "published": "2026-11-17",
@@ -118269,12 +118275,6 @@
    "title": "Могилевський – Овсієнко #shorts",
    "published": "2026-11-16",
    "thumbnail": "https://i2.ytimg.com/vi/iYxinazu65I/hqdefault.jpg"
-  },
-  {
-   "id": "MXklgwS-rB4",
-   "title": "Могилевський – Овсієнко #shorts",
-   "published": "2026-11-15",
-   "thumbnail": "https://i2.ytimg.com/vi/MXklgwS-rB4/hqdefault.jpg"
   }
  ],
  "telegramNews": [],
