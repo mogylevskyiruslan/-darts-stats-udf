@@ -55,6 +55,24 @@
    }
   },
   {
+   "date": "27.01.2008",
+   "tournament": "ЧУ 2007",
+   "format": "501DO",
+   "gender": "women",
+   "before": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": "Павлюченко Марина",
+    "bronze": [
+     "Федоришина Алла"
+    ]
+   },
+   "after": {
+    "gold": "Моісеєнко Віталіна",
+    "silver": null,
+    "bronze": []
+   }
+  },
+  {
    "date": "31.01.2010",
    "tournament": "ЧУ 2009",
    "format": "501DO",

@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-18T13:47:33.374519+00:00",
+  "lastUpdated": "2026-11-19T14:17:44.003084+00:00",
   "tournamentsCount": 271,
   "parts": {
    "nakkaMatchStats": {
@@ -13763,11 +13763,11 @@
  "leaderboardWomen": [
   {
    "name": "Моісеєнко Віталіна",
-   "gold": 30,
+   "gold": 31,
    "silver": 12,
    "bronze": 8,
-   "champUA": 6,
-   "total": 50,
+   "champUA": 7,
+   "total": 51,
    "rank": 1
   },
   {
@@ -118277,20 +118277,7 @@
    "thumbnail": "https://i2.ytimg.com/vi/MXklgwS-rB4/hqdefault.jpg"
   }
  ],
- "telegramNews": [
-  {
-   "text": "🏆Переможець Кубку Української дартс ліги Е.Чіка (Крікет) серед чоловіків - Омельченко Владислав. У завзятому фіналі він перемог Овсієнко Євгена 5-4!\n🥇Омельченко В.\n🥈Овсієнко Є.\n🥉Гончаров Е.\n🥉Могилевський Р.\n👀",
-   "date": "2026-11-15",
-   "url": "https://t.me/fullbull/12994",
-   "photo": "https://cdn4.telesco.pe/file/UWZd7UFqH0f0dnCuNRcIOvcDToIcjnubY5H_d-uwWECrkabfbNHryWSEYNhGyNhPG57R9tAVDjMRKg17l4HcaC2rJPqaJ7wm9CE6WfMacvgRxP53gmoHYt5O2kbfcX5RTsCJkICfgBd5nTWRZ8RB6m1u0enXx7PXZ5H9gK3WJQArLQIfduig1nLcsklg2wsRjtWQzjIX_g_iB9IWrTAfZWftLrtRukDFtS6VcpH-CZ7uqLvkha8gN1Cr5SfNXl0rdu8CPIMp0LtpOthOtDVpaiaXgt0lhS__frUXwbON-zsxmbGhjW-UpdqrHXB_KJmwv8BxmsRIwQ53XmZ-jiplLA.jpg"
-  },
-  {
-   "text": "🏆Кубок УДЛ Е.Чіка (Крікет), який відбувся у неділю, 15 листопада у м.Мукачево у жінок виграла Гончаренко Інна.\n🥇Гончаренко І.\n🥈Харченко Т.\n🥉Ільясова А.\n🥉Молдован В.\n👀",
-   "date": "2026-11-15",
-   "url": "https://t.me/fullbull/12993",
-   "photo": "https://cdn4.telesco.pe/file/b0M_nw55yJTyBEpipAN7eGsa-2bwmmIYbeTl8ehzxGvc40hBmEoJyWMRnGv-VfCmHjLk9u1ADNDZ5wRu7_e2Mfgr9PhimEa1_I-ZZ9ac9pktgqK4uHJIQHytEM2crO5i6u0kjBKpxBjuieAhX2WpbSs7OQlWUVz-QXE2z8YAtkg2PhWetlaPlr1kYqfxw1O4ZbEQ9pdBBfezwP8y83yMbFD8nV9uZm0xm09Wja7oW0krjZ5N_zjwZFZ8dxTgZFfGJ63m3QsHr8P0uYdc2Aq1Tn4wJ92ImAln85P4gSrRC0XwjoQe-Stjnlamjhk7a2xzSqS7eiARJn0z2rFhRBJkYg.jpg"
-  }
- ],
+ "telegramNews": [],
  "championsRecords": [
   {
    "year": 2026,
@@ -122261,6 +122248,15 @@
   {
    "year": 2007,
    "category": "501do",
+   "gender": "women",
+   "place": 1,
+   "names": [
+    "Моісеєнко Віталіна"
+   ]
+  },
+  {
+   "year": 2007,
+   "category": "501do",
    "gender": "men",
    "place": 2,
    "names": [
@@ -122985,7 +122981,12 @@
   "Кулік Віталій": {
    "nickname": "Vinni",
    "profession": "Залізничник",
-   "birthDate": "20.07.1986"
+   "birthDate": "20.07.1986",
+   "region": "Дніпропетровська /Кривий Ріг",
+   "startYear": "2019",
+   "dartsManufacturer": "Unicorn",
+   "dartsModel": "Gary Anderson",
+   "dartsWeight": "22"
   }
  },
  "curatedPlayerNames": [
