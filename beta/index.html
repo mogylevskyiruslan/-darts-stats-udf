@@ -4078,15 +4078,19 @@ loadData();
 (function(){
   'use strict';
   // група -> [назва, id секції]
+  // група -> [назва, ключ сторінки, [id секцій на цій сторінці]]
   var GROUPS = [
-    {id:'tour', e:'📅', t:'Турніри', items:[['Календар 2026','calendar-2026'],['Усі турніри','tournaments'],['Географія','geography'],['Реєстрація','registration']]},
-    {id:'rate', e:'🏆', t:'Рейтинги', items:[['Поточний рейтинг','current-rating'],['Рейтинги сезонів','ratings']]},
-    {id:'med',  e:'🥇', t:'Медалі',  items:[['Чемпіони ЧУ','champions'],['Призери КУ','leaderboard'],['Гонка лідерів ЧУ','champions-race'],['Майстри спорту','masters']]},
-    {id:'stat', e:'📊', t:'Статистика', items:[['Рекорди','records'],['Рекорди Nakka','nakka-records'],['Протистояння','h2h-lookup'],['Динаміка участі','growth'],['Учасники по турнірах','participants-chart'],['ТОП-10 турнірів','top10-race']]},
-    {id:'more', e:'☰', t:'Ще', items:[['Трансляції','youtube'],['Новини','news'],['Історія','history']]}
+    {id:'tour', e:'📅', t:'Турніри', items:[['Календар 2026','calendar-2026',['calendar-2026']],['Усі турніри','tournaments',['tournaments','geography']],['Реєстрація','registration',['registration']]]},
+    {id:'rate', e:'🏆', t:'Рейтинги', items:[['Поточний рейтинг','current-rating',['current-rating']],['Рейтинги сезонів','ratings',['ratings']]]},
+    {id:'med',  e:'🥇', t:'Медалі',  items:[['Чемпіони ЧУ','champions',['champions']],['Призери КУ','leaderboard',['leaderboard']],['Гонка лідерів ЧУ','champions-race',['champions-race']],['Майстри спорту','masters',['masters']]]},
+    {id:'stat', e:'📊', t:'Статистика', items:[['Рекорди','records',['records','nakka-records']],['Динаміка участі','growth',['growth']],['Учасники та ТОП-10','participants-chart',['participants-chart','top10-race']]]},
+    {id:'more', e:'☰', t:'Ще', items:[['Медіа','youtube',['youtube','news']],['Історія','history',['history']]]}
   ];
+  var HOME_IDS = ['player-search','h2h-lookup'];
   var BAR = [['home','🏠','Головна'],['tour','📅','Турніри'],['rate','🏆','Рейтинги'],['med','🥇','Медалі'],['more','☰','Ще']];
-  var ALL = {}; GROUPS.forEach(function(g){ g.items.forEach(function(it){ ALL[it[1]] = g; }); });
+  var ALL = {}, PAGE_IDS = {}, ID2PAGE = {};
+  GROUPS.forEach(function(g){ g.items.forEach(function(it){ ALL[it[1]] = g; PAGE_IDS[it[1]] = it[2]; it[2].forEach(function(x){ ID2PAGE[x] = it[1]; }); }); });
+  HOME_IDS.forEach(function(x){ ID2PAGE[x] = 'home'; });
   var cur = 'home';
   function $(s){ return document.querySelector(s); }
   function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
@@ -4139,7 +4143,7 @@ loadData();
     var seen = {};
     sections().forEach(function(s){
       if(seen[s.id]) return; seen[s.id] = 1;
-      var show = home ? (s.id === 'player-search') : (s.id === cur);
+      var show = home ? (HOME_IDS.indexOf(s.id) >= 0) : (PAGE_IDS[cur] || []).indexOf(s.id) >= 0;
       s.classList.toggle('beta-hide', !show);
     });
     // чипи
@@ -4157,8 +4161,7 @@ loadData();
     Array.prototype.forEach.call(document.querySelectorAll('#beta-dnav a'), function(a){ a.classList.toggle('on', a.getAttribute('data-go') === cur); });
   }
   function show(id, noScroll){
-    if(id !== 'home' && !ALL[id] && id !== 'player-search'){ id = 'home'; }
-    if(id === 'player-search') id = 'home';
+    id = ID2PAGE[id] || 'home';
     cur = id; apply(); sheet(false);
     try{ history.replaceState(null, '', id === 'home' ? location.pathname + location.search : '#' + id); }catch(e){}
     if(!noScroll) window.scrollTo(0, 0);
@@ -4177,7 +4180,7 @@ loadData();
       var a = e.target.closest('a[href^="#"]');
       if(a && a.getAttribute('href').length > 1){
         var id = a.getAttribute('href').slice(1);
-        if(ALL[id]){ e.preventDefault(); show(id); }
+        if(ID2PAGE[id]){ e.preventDefault(); show(id); }
       }
       return;
     }
@@ -4203,7 +4206,7 @@ loadData();
   new MutationObserver(function(){ apply(); }).observe(document.body, {childList:true});
 
   var h0 = location.hash.slice(1);
-  cur = (h0 && ALL[h0]) ? h0 : 'home';
+  cur = (h0 && ID2PAGE[h0]) ? ID2PAGE[h0] : 'home';
   apply();
 })();
 </script>
