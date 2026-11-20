@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-19T15:38:06.558543+00:00",
+  "lastUpdated": "2026-11-20T14:00:36.205268+00:00",
   "tournamentsCount": 271,
   "parts": {
    "nakkaMatchStats": {
@@ -118277,7 +118277,20 @@
    "thumbnail": "https://i2.ytimg.com/vi/iYxinazu65I/hqdefault.jpg"
   }
  ],
- "telegramNews": [],
+ "telegramNews": [
+  {
+   "text": "Українська дартс ліга (УДЛ) визначила сітку Плей-офф на Гранд-фінал «ЗОЛОТИЙ ДРОТИК 2026», проведення якого заплановано на 10 грудня.\nПризовий фонд GRAND FINAL цього року — 50 000 грн.",
+   "date": "2026-11-19",
+   "url": "https://t.me/fullbull/13029",
+   "photo": "https://cdn4.telesco.pe/file/bbFK8y_--pVo3JHN0-7QnOCKS4pQDPfYJVuYPZqVr0M48uL-r7Dicbg9aZ1wN_ytBfpM1C_XRoMUONG3J9rrmKN-TsQYnKEghTN4USpLaHBk3CWLhEG41dB3uFcM1y_tc5kGi4dkzs4LeGJrSDfqZGf-iGxpEs3VuUztr5tp5FieCaNNjqgUv9EUlZtZmT3EBXBLiORsgeZHdhuQy1AMsSaY1Mt8FU3RgBapv8H-yDSv4l-KpSZxa6W_4rZMLbt19QvNI6dnPrqWxMwFjK81P9PcmhL7aIfcCbKOmZdWpnEflONSAMfV45w0DBj0CufGjKA-ImDEVEI2dq9RAd3n4Q.jpg"
+  },
+  {
+   "text": "З 21.00 за київським часом, почалась трансляція що того дня змагань на PDC Grand Slam of Darts 2026.",
+   "date": "2026-11-19",
+   "url": "https://t.me/fullbull/13027",
+   "photo": "https://cdn4.telesco.pe/file/lf-gnj0M62SZIcvoVYcXn2_0AN94tupzXEHh9kux7KmmeUSL1gtgX60BEMZb052XwP7JyFIfF_YPNahQnMhYi9c8QlLNAIEOz462lsW6K5cXi_yPYcHNNYFv0VqaBo5N4lseU9MnEVW_wkZCI946fkDjAMnT9LaQ0nCexqwxcEwU1SqGIYBscxFC5kU_27S1hISKCkj0esp4KMtBKbctY1aJZWpg8aA99vsTIyjHvQoF1yim6sGWONRZBEScVQNIIcrCwu4AmYgvejTKV3baX5WwXwjW0oXh5YkBbpZqvi9HY5h9ciUsOEixIwybwIjeO-DYJIgVYSJhMRgIRzQAfQ.jpg"
+  }
+ ],
  "championsRecords": [
   {
    "year": 2026,
