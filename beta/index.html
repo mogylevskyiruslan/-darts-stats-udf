@@ -4084,10 +4084,10 @@ loadData();
     {id:'rate', e:'🏆', t:'Рейтинги', items:[['Поточний рейтинг','current-rating',['current-rating']],['Рейтинги сезонів','ratings',['ratings']]]},
     {id:'med',  e:'🥇', t:'Медалі',  items:[['Чемпіони ЧУ','champions',['champions']],['Призери КУ','leaderboard',['leaderboard']],['Гонка лідерів ЧУ','champions-race',['champions-race']],['Майстри спорту','masters',['masters']]]},
     {id:'stat', e:'📊', t:'Статистика', items:[['Рекорди','records',['records','nakka-records']],['Динаміка участі','growth',['growth']],['Учасники та ТОП-10','participants-chart',['participants-chart','top10-race']]]},
-    {id:'more', e:'☰', t:'Ще', items:[['Медіа','youtube',['youtube','news']],['Історія','history',['history']]]}
+    {id:'more', e:'ℹ️', t:'Про проєкт', items:[['Історія','history',['history']]]}
   ];
-  var HOME_IDS = ['player-search','h2h-lookup'];
-  var BAR = [['home','🏠','Головна'],['tour','📅','Турніри'],['rate','🏆','Рейтинги'],['med','🥇','Медалі'],['more','☰','Ще']];
+  var HOME_IDS = ['player-search','h2h-lookup','youtube','news'];
+  var BAR = [['home','🏠','Головна'],['tour','📅','Турніри'],['rate','🏆','Рейтинги'],['med','🥇','Медалі'],['stat','📊','Статистика'],['more','☰','Ще']];
   var ALL = {}, PAGE_IDS = {}, ID2PAGE = {};
   GROUPS.forEach(function(g){ g.items.forEach(function(it){ ALL[it[1]] = g; PAGE_IDS[it[1]] = it[2]; it[2].forEach(function(x){ ID2PAGE[x] = it[1]; }); }); });
   HOME_IDS.forEach(function(x){ ID2PAGE[x] = 'home'; });
@@ -4155,7 +4155,7 @@ loadData();
     }
     // нижня панель і меню
     var gid = home ? 'home' : (g ? g.id : '');
-    var barId = (gid === 'stat') ? 'more' : gid;
+    var barId = gid;
     Array.prototype.forEach.call(document.querySelectorAll('#beta-bar button'), function(b){ b.classList.toggle('on', b.getAttribute('data-bar') === barId); });
     Array.prototype.forEach.call(document.querySelectorAll('#beta-dnav button'), function(b){ b.classList.toggle('on', b.getAttribute('data-g') === gid); });
     Array.prototype.forEach.call(document.querySelectorAll('#beta-dnav a'), function(a){ a.classList.toggle('on', a.getAttribute('data-go') === cur); });
