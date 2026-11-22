@@ -37,6 +37,7 @@
     '.tr-kp .ok{background:var(--gold);color:#101535;border-color:var(--gold)}',
     '.tr-d{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.tr-d button{height:70px;font:800 28px Inter,sans-serif;background:var(--panel);border:1px solid var(--gold);color:var(--gold);border-radius:14px;cursor:pointer}',
     '.tr-bars{display:flex;align-items:flex-end;gap:5px;height:110px;margin-top:8px}.tr-bars div{flex:1;text-align:center;font-size:10px;color:var(--muted)}.tr-bars i{display:block;background:var(--royal-light);border-radius:4px 4px 0 0;min-height:2px;margin-bottom:3px}.tr-bars b{display:block;font-size:11px;color:var(--cream)}',
+    '.kbhint{display:none}@media(hover:hover) and (pointer:fine){.kbhint{display:block}}',
     '.tr-leg{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding:9px 0;font-size:13px}.tr-leg:first-child{border-top:0}'
   ].join('\n');
   document.head.appendChild(css);
@@ -223,7 +224,7 @@
         '<div class="tr-q">' + QUICK.map(function (q) { return '<button type="button" data-tr="q" data-n="' + q + '">' + q + '</button>'; }).join('') + '</div>' +
         '<div class="tr-kp">' + [1, 2, 3, 4, 5, 6, 7, 8, 9].map(function (d) { return '<button type="button" data-tr="k" data-n="' + d + '">' + d + '</button>'; }).join('') +
         '<button type="button" data-tr="bs">⌫</button><button type="button" data-tr="k" data-n="0">0</button><button type="button" class="ok" data-tr="ok">OK</button></div>' +
-        '<p style="text-align:center;margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-tr="undo"' + (n ? '' : ' disabled') + '>↶ Скасувати візит</button></p>';
+        '<p style="text-align:center;margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-tr="undo"' + (n ? '' : ' disabled') + '>↶ Скасувати візит</button></p><p class="sub kbhint" style="text-align:center;margin:8px 0 0">З клавіатури: цифри · Enter — ввести · Backspace — стерти · Delete — скасувати візит</p>';
     }
     return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="quit">✕ Вийти</button><span>' + (live.ghost ? 'З тінню' : 'Соло') + ' · візит ' + (n + 1) + '</span><span>сер. ' + (n ? f2(avg) : '—') + '</span></div>' +
       '<div class="tr-rem">' + r + '<small>залишилось</small></div>' + gh +
@@ -249,6 +250,21 @@
     else if (a === 'done') quit(true);
     else if (a === 'again') { var m = live.mode; live = null; start(m === 'ghost' && T.legs.length >= 10 ? 'ghost' : 'solo'); }
     else if (a === 'del') { var id = Number(b.getAttribute('data-id')); if (confirm('Видалити лег зі статистики?')) MS().sb().from('legs').delete().eq('id', id).then(function (r) { if (r.error) return MS().fail(r.error); T.legs = T.legs.filter(function (l) { return l.id !== id; }); MS().render(); }); }
+  });
+  // клавіатура на комп'ютері: цифри, Backspace, Enter, Ctrl+Z / Delete — скасувати візит
+  document.addEventListener('keydown', function (e) {
+    if (!live || e.ctrlKey && e.key.toLowerCase() !== 'z' || e.metaKey || e.altKey) return;
+    var t = e.target && e.target.tagName; if (t === 'INPUT' || t === 'SELECT' || t === 'TEXTAREA') return;
+    if (live.done) { if (e.key === 'Enter') { e.preventDefault(); var m = live.mode; live = null; start(m === 'ghost' && T.legs.length >= 10 ? 'ghost' : 'solo'); } return; }
+    if (live.pending != null) {
+      if (e.key === '1' || e.key === '2' || e.key === '3') { e.preventDefault(); chooseDarts(Number(e.key)); }
+      else if (e.key === 'Escape' || e.key === 'Backspace') { e.preventDefault(); undo(); }
+      return;
+    }
+    if (/^[0-9]$/.test(e.key)) { e.preventDefault(); if (live.entry.length < 3) { live.entry += e.key; if (live.entry === '00') live.entry = '0'; } MS().render(); }
+    else if (e.key === 'Backspace') { e.preventDefault(); if (live.entry) { live.entry = live.entry.slice(0, -1); MS().render(); } else undo(); }
+    else if (e.key === 'Enter') { e.preventDefault(); if (live.entry !== '') submit(Number(live.entry)); }
+    else if (e.key === 'Delete' || (e.ctrlKey && e.key.toLowerCase() === 'z')) { e.preventDefault(); undo(); }
   });
   document.addEventListener('change', function (e) { if (e.target.hasAttribute && e.target.hasAttribute('data-trp') && e.target.closest('#my-space')) { T.period = e.target.value; MS().render(); } });
 
