@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex,nofollow">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https://zlqggxwjqqiyhqfujaza.supabase.co https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>БЕТА · ВФД Статистика</title>
@@ -4059,6 +4059,7 @@ loadData();
   <div class="dnav" id="beta-dnav" data-i18n-skip></div>
   <div class="sp"></div>
   <button class="cta" id="beta-reg" data-i18n-skip>Реєстрація</button>
+  <div class="ic" id="beta-me" title="Мій простір" role="button" aria-label="Мій простір">👤</div>
   <div class="ic" id="beta-search" title="Пошук гравця" role="button" aria-label="Пошук гравця">🔍</div>
   <div class="ic" id="beta-gear" title="Меню та налаштування" role="button" aria-label="Меню">☰</div>
 </header>
@@ -4084,6 +4085,7 @@ loadData();
     {id:'rate', e:'🏆', t:'Рейтинги', items:[['Поточний рейтинг','current-rating',['current-rating']],['Рейтинги сезонів','ratings',['ratings']]]},
     {id:'med',  e:'🥇', t:'Медалі',  items:[['Чемпіони ЧУ','champions',['champions']],['Призери КУ','leaderboard',['leaderboard']],['Гонка лідерів ЧУ','champions-race',['champions-race']],['Майстри спорту','masters',['masters']]]},
     {id:'stat', e:'📊', t:'Статистика', items:[['Рекорди','records',['records','nakka-records']],['Динаміка участі','growth',['growth']],['Учасники та ТОП-10','participants-chart',['participants-chart','top10-race']]]},
+    {id:'me', e:'👤', t:'Мій простір', items:[['Мій простір','my-space',['my-space']]]},
     {id:'more', e:'ℹ️', t:'Про проєкт', items:[['Історія','history',['history']]]}
   ];
   var HOME_IDS = ['player-search','h2h-lookup','youtube','news'];
@@ -4166,6 +4168,7 @@ loadData();
     try{ history.replaceState(null, '', id === 'home' ? location.pathname + location.search : '#' + id); }catch(e){}
     if(!noScroll) window.scrollTo(0, 0);
   }
+  window.__betaShow = show;
   function focusSearch(){
     show('home');
     var i = document.getElementById('global-player-search');
@@ -4174,7 +4177,7 @@ loadData();
 
   // ---- події
   document.addEventListener('click', function(e){
-    var t = e.target.closest('[data-go],[data-bar],[data-search],#beta-home,#beta-reg,#beta-search,#beta-gear,#beta-sheet');
+    var t = e.target.closest('[data-go],[data-bar],[data-search],#beta-home,#beta-reg,#beta-search,#beta-gear,#beta-me,#beta-sheet');
     if(!t) {
       // будь-які внутрішні посилання #id, які вже є на сторінці
       var a = e.target.closest('a[href^="#"]');
@@ -4188,6 +4191,7 @@ loadData();
     if(t.id === 'beta-home'){ e.preventDefault(); show('home'); return; }
     if(t.id === 'beta-reg'){ show('registration'); return; }
     if(t.id === 'beta-search'){ focusSearch(); return; }
+    if(t.id === 'beta-me'){ show('my-space'); return; }
     if(t.id === 'beta-gear'){ sheet(true); return; }
     if(t.hasAttribute('data-search')){ focusSearch(); return; }
     if(t.hasAttribute('data-bar')){
@@ -4211,5 +4215,7 @@ loadData();
 })();
 </script>
 
+<script src="supabase.js"></script>
+<script src="myspace.js"></script>
 </body>
 </html>
