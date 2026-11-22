@@ -79,7 +79,7 @@
       var had = !!session; session = s || null;
       document.getElementById('beta-me') && document.getElementById('beta-me').classList.toggle('in', !!session);
       if (ev === 'SIGNED_IN' && !had) { setTimeout(afterLogin, 0); }
-      if (ev === 'SIGNED_OUT') { member = null; D = { checkouts: [], events: [], skills: [] }; render(); }
+      if (ev === 'SIGNED_OUT') { member = null; D = { checkouts: [], events: [], skills: [] }; window.__ms.reset(); render(); }
     });
     sb.auth.getSession().then(function (r) {
       session = r.data && r.data.session; 
@@ -119,7 +119,7 @@
     ]).then(function (a) {
       a.forEach(function (x) { if (x.error) throw x.error; });
       D.checkouts = a[0].data || []; D.events = a[1].data || []; D.skills = a[2].data || [];
-    });
+    }).then(function () { return Promise.all(EXT.filter(function (x) { return x.load; }).map(function (x) { return x.load(); })); });
   }
 
   // ---------- рендер ----------
@@ -128,11 +128,13 @@
     if (!session) return renderLogin();
     if (needConsent) return renderConsent();
     if (!member) return renderNoMember();
+    for (var oi = 0; oi < EXT.length; oi++) { if (EXT[oi].override) { var ov = EXT[oi].override(); if (ov) { sec.innerHTML = ov; if (EXT[oi].after) EXT[oi].after(); return; } } }
     var head = '<h2>Мій простір</h2><p class="sub">' + esc(member.player_name) + ' · ' + esc(session.user.email) + '</p>';
     if (!canWrite()) head += '<div class="ms-warn">Тур-карти на ' + new Date().getFullYear() + ' рік не знайдено. Ваші дані доступні для перегляду; додавати нові записи можна після отримання тур-карти.</div>';
-    var tabs = [['overview', '📊 Огляд'], ['checkouts', '🎯 Закриття'], ['events', '🏆 Ігри'], ['skills', '📓 Щоденник']];
+    var tabs = [['overview', '📊 Огляд']].concat(EXT.filter(function (x) { return x.id; }).map(function (x) { return [x.id, x.label]; })).concat([['checkouts', '🎯 Закриття'], ['events', '🏆 Ігри'], ['skills', '📓 Щоденник']]);
     head += '<div class="ms-tabs">' + tabs.map(function (t) { return '<button type="button" data-t="' + t[0] + '" class="' + (t[0] === tab ? 'on' : '') + '">' + t[1] + '</button>'; }).join('') + '</div>';
-    var body = tab === 'checkouts' ? viewCheckouts() : tab === 'events' ? viewEvents() : tab === 'skills' ? viewSkills() : viewOverview();
+    var ext = EXT.filter(function (x) { return x.id === tab; })[0];
+    var body = ext ? ext.view() : tab === 'checkouts' ? viewCheckouts() : tab === 'events' ? viewEvents() : tab === 'skills' ? viewSkills() : viewOverview();
     var foot = '<div class="ms-row" style="margin-top:18px"><button type="button" class="ms-btn sec sm" data-a="export">⬇ Експорт даних</button><button type="button" class="ms-btn sec sm" data-a="logout">Вийти</button><button type="button" class="ms-btn sec sm" data-a="wipe">🗑 Видалити мої дані</button></div>';
     sec.innerHTML = head + body + foot;
   }
@@ -308,7 +310,7 @@
   }
   function wipe() {
     if (!confirm('Видалити ВСІ ваші дані з «Мого простору» (закриття, ігри, щоденник, згоду)? Це незворотно.')) return;
-    sb.rpc('delete_my_data').then(function (r) { if (r.error) return fail(r.error); D = { checkouts: [], events: [], skills: [] }; needConsent = true; render(); toast('Дані видалено'); });
+    sb.rpc('delete_my_data').then(function (r) { if (r.error) return fail(r.error); D = { checkouts: [], events: [], skills: [] }; window.__ms.reset(); needConsent = true; render(); toast('Дані видалено'); });
   }
 
   sec.addEventListener('click', function (e) {
@@ -330,5 +332,11 @@
     if (e.target.id === 'ms-skf') { var f = e.target.elements; var title = f.title.value.trim(); if (!title) return; sb.from('skills').insert({ title: title, note: f.note.value.trim() || null }).select('*').single().then(function (r) { if (r.error) throw r.error; D.skills.unshift(r.data); render(); }).catch(fail); }
   });
 
+  var EXT = window.__msExt || [];
+  window.__ms = {
+    sb: function () { return sb; }, canWrite: canWrite, render: render, esc: esc, toast: toast, fail: fail, el: sec,
+    member: function () { return member; }, year: function () { return year; }, reset: function () { EXT.forEach(function (x) { x.reset && x.reset(); }); },
+    setTab: function (t) { tab = t; render(); }
+  };
   init();
 })();
