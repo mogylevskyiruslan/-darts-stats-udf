@@ -1,0 +1,24 @@
+name: Sync tour-card members
+
+on:
+  schedule:
+    - cron: '23 4 * * *'   # щодня; це також не дає безкоштовній базі Supabase «заснути»
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  members:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Sync members to Supabase
+        env:
+          MEMBERS_CSV_URL: ${{ secrets.MEMBERS_CSV_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python3 sync_members.py
