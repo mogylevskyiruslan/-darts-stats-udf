@@ -171,13 +171,25 @@
   }
   function startP171(V) {
     var st = p171State(V);
-    setLive({ id: uuid(), kind: 'p171', start: st.target, maxV: V, scores: [], entry: '', ghost: null, finished: false, lastDarts: 3, pending: null, startedAt: new Date().toISOString() });
+    setLive({ id: uuid(), kind: 'p171', start: st.target, maxV: V, sess: [], scores: [], entry: '', ghost: null, finished: false, lastDarts: 3, pending: null, startedAt: new Date().toISOString() });
   }
   function endP171(ok) {
-    live.finished = ok; live.failed = !ok; live.done = true; live.pending = null;
-    var row = { client_id: live.id, played_at: new Date().toISOString(), game: 'p171', param: live.maxV, target: live.start, success: ok,
-      darts: nDarts(live.scores, ok, live.lastDarts), scores: live.scores.slice(), detail: { left: live.start - sum(live.scores) } };
-    saveDrill(row); lset('ms_live', null); wakeOff(); MS().render();
+    var dd = nDarts(live.scores, ok, live.lastDarts);
+    saveDrill({ client_id: live.id, played_at: new Date().toISOString(), game: 'p171', param: live.maxV, target: live.start, success: ok,
+      darts: dd, scores: live.scores.slice(), detail: { left: live.start - sum(live.scores) } });
+    live.sess = live.sess || [];
+    live.sess.push({ target: live.start, ok: ok, darts: dd, scores: live.scores.slice() });
+    live.pending = null;
+    if (ok && live.start >= 180) { live.done = true; live.completed = true; lset('ms_live', null); wakeOff(); return MS().render(); }
+    var next = ok ? live.start + 1 : live.start;
+    MS().toast(ok ? 'Закрито ' + live.start + '! Далі ' + next : 'Не закрито. Ще раз ' + next);
+    live.start = next; live.scores = []; live.entry = ''; live.finished = false; live.failed = false; live.lastDarts = 3; live.id = uuid();
+    persist(); MS().render();
+  }
+  function endP171Session() {
+    if (!live.sess || !live.sess.length) return quit(true);
+    if (live.scores.length && !confirm('Поточна спроба не буде врахована. Завершити тренування?')) return;
+    live.done = true; live.completed = false; lset('ms_live', null); wakeOff(); MS().render();
   }
   function again() {
     var k = live.kind, m = live.mode, V = live.maxV; live = null;
@@ -193,20 +205,21 @@
   function viewP171() {
     var V = live.maxV, n = live.scores.length;
     if (live.done) {
-      var ok = live.finished, nt = live.start + 1;
-      return '<div class="tr-live"><h2>' + (ok ? 'Закрито ' + live.start + ' 🎯' : 'Не вдалося закрити ' + live.start) + '</h2>' +
-        '<p class="sub">' + (ok ? (live.start >= 180 ? 'Цикл 170–180 пройдено! Наступна спроба знову зі 170.' : 'Наступна ціль: ' + nt) : 'Залишилось ' + (live.start - sum(live.scores)) + '. Наступна спроба — та сама ціль ' + live.start + '.') + '</p>' +
-        '<div class="tr-last">' + live.scores.map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div>' +
-        '<div class="ms-row" style="margin-top:12px"><button type="button" class="ms-btn" data-tr="again">Ще спроба</button><button type="button" class="ms-btn sec" data-tr="done">Готово</button></div></div>';
+      var ss = live.sess || [], okc = 0, best = 0, dts = 0, c100 = 0, s100 = 0;
+      ss.forEach(function (x) { dts += x.darts; if (x.ok) { okc++; if (x.target > best) best = x.target; if (x.scores[x.scores.length - 1] >= 100) c100++; } x.scores.forEach(function (v) { if (v >= 100) s100++; }); });
+      var nxt = p171State(V).target;
+      return '<div class="tr-live"><h2>' + (live.completed ? 'Цикл 170–180 пройдено 🏆' : 'Тренування завершено') + '</h2>' +
+        '<div class="ms-stats" style="margin:10px 0">' + stt(ss.length, 'спроб') + stt(okc, 'закрито') + stt(best || '—', 'найвища закрита ціль') + stt(dts, 'витрачено дротиків') + stt(c100, 'закриттів 100+') + stt(s100, 'підходів 100+') + '</div>' +
+        '<div class="ms-row" style="margin-top:12px"><button type="button" class="ms-btn" data-tr="again">Продовжити · ціль ' + nxt + '</button><button type="button" class="ms-btn sec" data-tr="done">Готово</button></div></div>';
     }
     var r = rem(), body;
     if (live.pending != null) body = '<p class="sub" style="text-align:center;margin:12px 0 0">Закриття ' + r + '. Яким дротиком закрили?</p><div class="tr-d"><button type="button" data-tr="d" data-d="1">1</button><button type="button" data-tr="d" data-d="2">2</button><button type="button" data-tr="d" data-d="3">3</button></div><p style="text-align:center"><button type="button" class="ms-btn sec sm" data-tr="undo">↶ Скасувати введення</button></p>';
     else body = padHtml(n);
-    return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="quit">✕ Вийти</button><span>170+1 · ціль ' + live.start + '</span><span>підхід ' + (n + 1) + '/' + V + '</span></div>' +
+    return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="p-end">⏹ Завершити</button><span>170+1 · ціль ' + live.start + (live.sess && live.sess.length ? ' · закрито ' + live.sess.filter(function (x) { return x.ok; }).length : '') + '</span><span>підхід ' + (n + 1) + '/' + V + '</span></div>' +
       '<div class="tr-rem">' + r + '<small>залишилось · підходів лишилось ' + (V - n) + '</small></div><div class="tr-last">' + live.scores.map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div>' + body + '</div>';
   }
   function viewP171Home() {
-    var w = MS().canWrite(), h = '<div class="ms-card"><b>170+1</b><p class="sub" style="margin:4px 0 10px">Почніть із закриття 170, далі 171, 172… до 180: цілі понад 170 закриваються за кілька підходів. Кількість підходів обмежена. Не закрили: наступна спроба з тієї самої цілі. Оберіть, скільки підходів даєте собі:</p><div class="ms-row">';
+    var w = MS().canWrite(), h = '<div class="ms-card"><b>170+1</b><p class="sub" style="margin:4px 0 10px">Почніть із закриття 170, далі 171, 172… до 180: цілі понад 170 закриваються за кілька підходів. Обираєте кількість підходів на ціль. Закрили: одразу наступна ціль із тією ж кількістю підходів. Не закрили: та сама ціль ще раз. Тренування триває, поки не закриєте 180 або не натиснете «Завершити». Прогрес зберігається.</p><div class="ms-row">';
     [2, 3, 4, 5].forEach(function (V) { var st = p171State(V); h += '<button type="button" class="ms-btn sec" data-tr="p-start" data-vv="' + V + '" ' + (w ? '' : 'disabled') + '>' + V + ' підходи · ціль ' + st.target + '</button>'; });
     h += '</div></div>';
     var all = T.drills.filter(function (r) { return r.game === 'p171'; });
@@ -449,6 +462,7 @@
     else if (a === 'undo') undo();
     else if (a === 'quit') quit();
     else if (a === 'done') quit(true);
+    else if (a === 'p-end') endP171Session();
     else if (a === 'again') again();
     else if (a === 'del') { var id = Number(b.getAttribute('data-id')); if (confirm('Видалити лег зі статистики?')) MS().sb().from('legs').delete().eq('id', id).then(function (r) { if (r.error) return MS().fail(r.error); T.legs = T.legs.filter(function (l) { return l.id !== id; }); MS().render(); }); }
   });

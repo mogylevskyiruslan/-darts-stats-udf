@@ -713,6 +713,13 @@
     .pp-stat-row{grid-template-columns:1fr 1fr;}
   }
 </style>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="theme-color" content="#0c1230">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ВФД">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <style id="beta-menu-css">
 /* ===== БЕТА: нове меню ===== */
@@ -4218,5 +4225,6 @@ loadData();
 <script src="supabase.js"></script>
 <script src="training.js"></script>
 <script src="myspace.js"></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})})}</script>
 </body>
 </html>

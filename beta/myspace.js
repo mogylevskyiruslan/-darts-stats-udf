@@ -56,6 +56,19 @@
   sec.className = 'beta-hide';
   var ft = document.querySelector('footer'); if (ft && ft.parentNode) ft.parentNode.insertBefore(sec, ft); else document.body.appendChild(sec);
 
+  var deferredInstall = null;
+  window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); deferredInstall = e; });
+  function isStandalone() { return (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || window.navigator.standalone === true; }
+  function installHelp() {
+    var ios = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    var m = document.createElement('div'); m.className = 'ms-modal'; m.setAttribute('data-i18n-skip', '');
+    m.innerHTML = '<div><b style="font-size:18px">Додати на головний екран</b><p class="sub" style="margin:8px 0">' + (ios ?
+      'У Safari натисніть кнопку «Поділитися» (квадрат зі стрілкою) → «На екран “Додому”» → «Додати».' :
+      'У Chrome натисніть ⋮ (меню) → «Додати на головний екран» або «Встановити застосунок».') +
+      '</p><p class="sub" style="margin:0 0 12px">Після цього іконка ВФД відкриватиме Мій простір одним дотиком.</p><button type="button" class="ms-btn sec sm" data-close="1">Закрити</button></div>';
+    m.addEventListener('click', function (e) { if (e.target === m || e.target.getAttribute('data-close')) m.remove(); });
+    document.body.appendChild(m);
+  }
   var sb = null, session = null, member = null, tab = 'overview', year = new Date().getFullYear();
   var D = { checkouts: [], events: [], skills: [] };
   var checkMode = 'add';
@@ -135,7 +148,7 @@
     head += '<div class="ms-tabs">' + tabs.map(function (t) { return '<button type="button" data-t="' + t[0] + '" class="' + (t[0] === tab ? 'on' : '') + '">' + t[1] + '</button>'; }).join('') + '</div>';
     var ext = EXT.filter(function (x) { return x.id === tab; })[0];
     var body = ext ? ext.view() : tab === 'checkouts' ? viewCheckouts() : tab === 'events' ? viewEvents() : tab === 'skills' ? viewSkills() : viewOverview();
-    var foot = '<div class="ms-row" style="margin-top:18px"><button type="button" class="ms-btn sec sm" data-a="export">⬇ Експорт даних</button><button type="button" class="ms-btn sec sm" data-a="logout">Вийти</button><button type="button" class="ms-btn sec sm" data-a="wipe">🗑 Видалити мої дані</button></div>';
+    var foot = '<div class="ms-row" style="margin-top:18px">' + (isStandalone() ? '' : '<button type="button" class="ms-btn sec sm" data-a="install">📲 На головний екран</button>') + '<button type="button" class="ms-btn sec sm" data-a="export">⬇ Експорт даних</button><button type="button" class="ms-btn sec sm" data-a="logout">Вийти</button><button type="button" class="ms-btn sec sm" data-a="wipe">🗑 Видалити мої дані</button></div>';
     sec.innerHTML = head + body + foot;
   }
 
@@ -323,7 +336,7 @@
     else if (b.hasAttribute('data-skdone')) doneModal(Number(b.getAttribute('data-skdone')));
     else if (b.hasAttribute('data-skopen')) skillUpdate(Number(b.getAttribute('data-skopen')), { status: 'open', done_at: null, result: null });
     else if (b.hasAttribute('data-skdel')) { if (confirm('Видалити?')) { var sid = Number(b.getAttribute('data-skdel')); sb.from('skills').delete().eq('id', sid).then(function (r) { if (r.error) return fail(r.error); D.skills = D.skills.filter(function (x) { return x.id !== sid; }); render(); }); } }
-    else { var a = b.getAttribute('data-a'); if (a === 'logout') sb.auth.signOut(); else if (a === 'export') exportData(); else if (a === 'wipe') wipe(); }
+    else { var a = b.getAttribute('data-a'); if (a === 'install') { if (deferredInstall) { deferredInstall.prompt(); deferredInstall = null; } else installHelp(); } else if (a === 'logout') sb.auth.signOut(); else if (a === 'export') exportData(); else if (a === 'wipe') wipe(); }
   });
   sec.addEventListener('change', function (e) { if (e.target.id === 'ms-year') { year = Number(e.target.value); render(); } });
   sec.addEventListener('submit', function (e) {
