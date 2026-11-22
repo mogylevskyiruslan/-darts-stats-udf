@@ -148,7 +148,7 @@
     head += '<div class="ms-tabs">' + tabs.map(function (t) { return '<button type="button" data-t="' + t[0] + '" class="' + (t[0] === tab ? 'on' : '') + '">' + t[1] + '</button>'; }).join('') + '</div>';
     var ext = EXT.filter(function (x) { return x.id === tab; })[0];
     var body = ext ? ext.view() : tab === 'checkouts' ? viewCheckouts() : tab === 'events' ? viewEvents() : tab === 'skills' ? viewSkills() : viewOverview();
-    var foot = '<div class="ms-row" style="margin-top:18px">' + (isStandalone() ? '' : '<button type="button" class="ms-btn sec sm" data-a="install">📲 На головний екран</button>') + '<button type="button" class="ms-btn sec sm" data-a="export">⬇ Експорт даних</button><button type="button" class="ms-btn sec sm" data-a="logout">Вийти</button><button type="button" class="ms-btn sec sm" data-a="wipe">🗑 Видалити мої дані</button></div>';
+    var foot = '<div class="ms-row" style="margin-top:18px">' + (isStandalone() ? '' : '<button type="button" class="ms-btn sec sm" data-a="install">📲 На головний екран</button>') + '<button type="button" class="ms-btn sec sm" data-a="export">⬇ Експорт даних</button><button type="button" class="ms-btn sec sm" data-a="logout">Вийти</button><button type="button" class="ms-btn sec sm" data-a="wipe">🗑 Видалити мої дані</button><a class="ms-btn sec sm" href="instruction.html" target="_blank" rel="noopener" style="text-decoration:none">ℹ️ Інструкція</a></div>';
     sec.innerHTML = head + body + foot;
   }
 
@@ -156,7 +156,7 @@
     var consent = '<label style="display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.5;margin:12px 0"><input type="checkbox" id="ms-consent" style="margin-top:3px"><span>Погоджуюсь на обробку моїх особистих даних (email та записи тренувань і досягнень) для роботи сервісу. Дані бачу лише я. <a href="../privacy.html" target="_blank" rel="noopener" style="color:var(--gold)">Політика конфіденційності</a></span></label>';
     sec.innerHTML = '<h2>Мій простір</h2><p class="sub">Особистий кабінет власників тур-карти ВФД: таблиця закриттів, журнал ігор, щоденник саморозвитку.</p>' +
       '<div class="ms-card">' + consent + '<button type="button" class="ms-btn" id="ms-login" disabled>Увійти через Google</button>' +
-      '<p class="sub" style="margin:10px 0 0">Використовуйте email, який вказано в списку власників тур-карти.</p></div>';
+      '<p class="sub" style="margin:10px 0 0">Використовуйте email, який вказано в списку власників тур-карти.</p></div><p class="sub"><a href="instruction.html" target="_blank" rel="noopener" style="color:var(--gold)">ℹ️ Інструкція для тестувальників</a></p>';
     var cb = sec.querySelector('#ms-consent'), bt = sec.querySelector('#ms-login');
     cb.onchange = function () { bt.disabled = !cb.checked; };
     bt.onclick = function () {
