@@ -583,6 +583,22 @@
   window.__msExt = window.__msExt || [];
   window.__msExt.push({
     id: 'train', label: '🎯 Тренування', view: viewTrain, load: load,
+    overview: function (year) {
+      function iy(x) { return year === 'all' || new Date(x).getFullYear() === year; }
+      var legs = T.legs.filter(function (l) { return l.finished !== false && iy(l.played_at); }), dr = T.drills.filter(function (r) { return iy(r.played_at); });
+      var h = '', c = [];
+      if (legs.length) {
+        var a = agg(legs), ms = matches().filter(function (m) { return m.over && iy(m.date); });
+        c.push(stt(legs.length, 'легів 501DO'), stt(f2(a.avg), 'середній за 3 дротики'), stt(f2(a.f9), 'середній за перші 9'), stt(Math.round(a.chk) + '%', 'закриття'), stt(a.best + ' дрот.', 'найкращий лег'));
+        if (ms.length) c.push(stt(ms.filter(function (m) { return m.won; }).length + ' / ' + ms.length, 'матчів з тінню виграно'));
+      }
+      var p = dr.filter(function (r) { return r.game === 'p171'; }), m = dr.filter(function (r) { return r.game === 'm60'; }), sc = dr.filter(function (r) { return r.game === 'sector'; });
+      if (p.length) c.push(stt(Math.max.apply(null, p.filter(function (r) { return r.success; }).map(function (r) { return r.target; }).concat([0])) || '—', '170+1: найвища закрита ціль'));
+      if (m.length) c.push(stt(Math.max.apply(null, m.map(function (r) { return r.target || 0; })) || '—', '60+10−1: найвища ціль'));
+      if (sc.length) c.push(stt(sc.length, 'тренувань «Сектор»'));
+      if (!c.length) return '';
+      return '<div class="ms-stats">' + c.join('') + '</div><p style="margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-t="train">До тренувань ›</button></p>';
+    },
     override: function () { return viewLive() || viewM60() || viewSector(); },
     exportSheets: function () {
       function d(x) { var t = new Date(x); return ('0' + t.getDate()).slice(-2) + '.' + ('0' + (t.getMonth() + 1)).slice(-2) + '.' + t.getFullYear(); }

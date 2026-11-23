@@ -32,6 +32,9 @@
     '.ms-in{background:var(--bg);border:1px solid var(--line);color:var(--cream);border-radius:9px;padding:9px 10px;font:16px Inter,sans-serif;width:100%;min-width:0;max-width:100%;box-sizing:border-box}',
     'input[type=date].ms-in{-webkit-appearance:none;appearance:none;min-height:44px;display:block;text-align:left}',
     '.ms-btn.ok{background:#2e8b57;color:#fff}',
+    '.ms-src{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--c);border-radius:14px;padding:14px;margin-bottom:14px}.ms-src.site{--c:#4a64e8}.ms-src.local{--c:#fcc202}.ms-src.train{--c:#2ecc71}',
+    '.ms-srch{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}.ms-srch b{font-size:16px}',
+    '.ms-badge{font:700 10px Inter,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#101535;background:var(--c);border-radius:999px;padding:4px 9px}',
     '.ms-f{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}.ms-f label{min-width:0;display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted)}.ms-f .w{grid-column:1/-1}',
     '.ms-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}',
     '.ms-stat{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px}.ms-stat b{display:block;font:800 22px Montserrat,Inter,sans-serif;color:var(--gold)}.ms-stat span{font-size:11px;color:var(--muted)}',
@@ -146,7 +149,7 @@
     for (var oi = 0; oi < EXT.length; oi++) { if (EXT[oi].override) { var ov = EXT[oi].override(); if (ov) { sec.innerHTML = ov; if (EXT[oi].after) EXT[oi].after(); return; } } }
     var head = '<h2>Мій простір</h2><p class="sub">' + esc(member.player_name) + ' · ' + esc(session.user.email) + '</p>';
     if (!canWrite()) head += '<div class="ms-warn">Тур-карти на ' + new Date().getFullYear() + ' рік не знайдено. Ваші дані доступні для перегляду; додавати нові записи можна після отримання тур-карти.</div>';
-    var tabs = [['overview', '📊 Огляд']].concat(EXT.filter(function (x) { return x.id; }).map(function (x) { return [x.id, x.label]; })).concat([['checkouts', '🎯 Закриття'], ['events', '🏆 Ігри'], ['skills', '📓 Щоденник']]);
+    var tabs = [['overview', '📊 Статистика']].concat(EXT.filter(function (x) { return x.id; }).map(function (x) { return [x.id, x.label]; })).concat([['checkouts', '🎯 Закриття'], ['events', '🏆 Ігри'], ['skills', '📓 Щоденник']]);
     head += '<div class="ms-tabs">' + tabs.map(function (t) { return '<button type="button" data-t="' + t[0] + '" class="' + (t[0] === tab ? 'on' : '') + '">' + t[1] + '</button>'; }).join('') + '</div>';
     var ext = EXT.filter(function (x) { return x.id === tab; })[0];
     var body = ext ? ext.view() : tab === 'checkouts' ? viewCheckouts() : tab === 'events' ? viewEvents() : tab === 'skills' ? viewSkills() : viewOverview();
@@ -186,6 +189,52 @@
     D.skills.forEach(function (k) { s[yearOf(k.done_at || k.created_at)] = 1; });
     return Object.keys(s).map(Number).sort(function (a, b) { return b - a; });
   }
+  var siteRetry = 0;
+  function yearUa(d) { return Number(String(d || '').slice(-4)); }
+  function siteBlock() {
+    var name = member && member.player_name, ready = typeof nakkaPlayerStats !== 'undefined' && nakkaPlayerStats && nakkaPlayerStats.length;
+    var head = '<div class="ms-src site"><div class="ms-srch"><b>🏛 Всеукраїнські турніри</b><span class="ms-badge">авто · основний сайт</span></div>' +
+      '<p class="sub" style="margin:2px 0 10px">Створюється автоматично з протоколів ВФД та Nakka: Чемпіонати й Кубки України. Ви цю статистику не редагуєте.</p>';
+    if (!ready) {
+      if (siteRetry++ < 12) setTimeout(function () { if (tab === 'overview' && session && member) render(); }, 1000);
+      return head + '<p class="sub">Завантажуємо дані сайту…</p></div>';
+    }
+    var rows = nakkaPlayerStats.filter(function (r) { return r.name === name && !r.isUDL && (year === 'all' || yearUa(r.date) === year); });
+    var inLists = (typeof leaderboard !== 'undefined' && (leaderboard.some(function (p) { return p.name === name; }) || (typeof leaderboardWomen !== 'undefined' && leaderboardWomen.some(function (p) { return p.name === name; }))));
+    var rating = null;
+    [typeof currentRatingMen !== 'undefined' ? currentRatingMen : null, typeof currentRatingWomen !== 'undefined' ? currentRatingWomen : null].forEach(function (cr) {
+      if (cr && cr.rows) cr.rows.forEach(function (r) { if (r.name === name) rating = r; });
+    });
+    var profBtn = '<p style="margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-prof="1">Повний профіль на сайті ›</button></p>';
+    if (!rows.length && !rating && !inLists) {
+      return head + '<p class="sub">Профіль «' + esc(name) + '» на основному сайті поки не знайдено. Дані з\'являться після участі у всеукраїнських турнірах ВФД.</p></div>';
+    }
+    var sum = function (f) { return rows.reduce(function (a, r) { return a + (r[f] || 0); }, 0); };
+    var cells = [];
+    if (rating) cells.push(st(rating.rank + ' місце', 'у поточному рейтингу'), st(rating.total, 'балів рейтингу'));
+    if (rows.length) {
+      var avgs = rows.map(function (r) { return r.avg || 0; });
+      var legsB = rows.filter(function (r) { return r.bestLeg > 8; }).map(function (r) { return r.bestLeg; });
+      var mt = sum('match'), mw = sum('winMatch');
+      cells.push(st(rows.length, 'турнірів із даними Nakka'), st((avgs.reduce(function (a, b) { return a + b; }, 0) / rows.length).toFixed(2), 'середній по турнірах'), st(Math.max.apply(null, avgs).toFixed(2), 'найкращий середній'),
+        st(mt ? mw + ' / ' + mt : '—', 'матчів виграно / зіграно'), st(sum('ton80'), '180'), st(sum('highOutCount'), 'закриттів 100+'),
+        st(Math.max.apply(null, rows.map(function (r) { return r.highOut || 0; })) || '—', 'найкраще закриття'), st(legsB.length ? Math.min.apply(null, legsB) + ' дрот.' : '—', 'найкращий лег'));
+    }
+    // місця на етапах Кубку України
+    var g = 0, sl = 0, br = 0;
+    if (year === 'all' && typeof leaderboard !== 'undefined') {
+      var e = leaderboard.filter(function (p) { return p.name === name; })[0] || (typeof leaderboardWomen !== 'undefined' ? leaderboardWomen.filter(function (p) { return p.name === name; })[0] : null);
+      if (e) { g = e.gold || 0; sl = e.silver || 0; br = e.bronze || 0; }
+    } else if (typeof tournaments !== 'undefined') {
+      tournaments.forEach(function (t) {
+        if (t.isUDL || t.name !== 'Кубок України' || yearUa(t.date) !== year) return;
+        [t.nakkaMedals || t.medals, t.nakkaMedalsWomen || t.medalsWomen].forEach(function (m) { if (!m) return; if (m.gold === name) g++; if (m.silver === name) sl++; if ((m.bronze || []).indexOf(name) >= 0) br++; });
+      });
+    }
+    var medals = (g + sl + br) ? '<div class="ms-stat" style="grid-column:1/-1"><b>🥇 ' + g + ' · 🥈 ' + sl + ' · 🥉 ' + br + '</b><span>місця на етапах Кубку України</span></div>' : '';
+    if (!cells.length && !medals) return head + '<p class="sub">За цей період немає даних про участь у всеукраїнських турнірах.</p>' + profBtn + '</div>';
+    return head + '<div class="ms-stats">' + cells.join('') + medals + '</div>' + profBtn + '</div>';
+  }
   function viewOverview() {
     var ys = yearsAvail();
     function inY(d) { return year === 'all' || yearOf(d) === year; }
@@ -199,12 +248,19 @@
     ev.forEach(function (e) { lp += e.legs_played || 0; lw += e.legs_won || 0; c180 += e.c180; c140 += e.c140; c100 += e.c100; (e.best_legs || []).forEach(function (b) { if (best == null || b < best) best = b; }); (e.checkouts100 || []).forEach(function (b) { if (b > hi) hi = b; }); });
     ck.forEach(function (c) { if (c.value > hi) hi = c.value; });
     var sel = '<select class="ms-in" id="ms-year" style="width:auto"><option value="all"' + (year === 'all' ? ' selected' : '') + '>За весь період</option>' + ys.map(function (y) { return '<option' + (y === year ? ' selected' : '') + '>' + y + '</option>'; }).join('') + '</select>';
-    return '<div class="ms-card"><div class="ms-row" style="justify-content:space-between"><b>' + (year === 'all' ? 'Мій прогрес' : 'Мій рік') + '</b>' + sel + '</div><div class="ms-stats" style="margin-top:10px">' +
-      st(Object.keys(uniq).length + ' / ' + VALUES.length, 'різних закриттів у таблиці') + st(ck.length, 'всіх закриттів (натискань)') +
-      st(ev.length, 'ігор / турнірів у журналі') + st(avg, 'середній за гру') +
-      st(lw + ' / ' + lp, 'леги виграно / зіграно') + st(c180 + ' · ' + c140 + ' · ' + c100, '180 · 140+ · 100+') +
-      st(hi || '—', 'найвище закриття') + st(best != null ? best + ' дротиків' : '—', 'найкращий лег') +
-      st(done.length, 'опанованих навичок') + '</div></div>';
+    var h = '<div class="ms-row" style="justify-content:space-between;margin-bottom:6px"><b style="font-size:17px">' + (year === 'all' ? 'Моя статистика · весь період' : 'Моя статистика · ' + year) + '</b>' + sel + '</div>' +
+      '<p class="sub" style="margin:0 0 12px">У вас три окремі статистики. Вони не змішуються: різні джерела даних.</p>';
+    h += siteBlock();
+    h += '<div class="ms-src local"><div class="ms-srch"><b>🏆 Локальні турніри та зустрічі</b><span class="ms-badge">вручну · ваші записи</span></div>' +
+      '<p class="sub" style="margin:2px 0 10px">Те, що ви вносите самі: журнал ігор, таблиця закриттів, щоденник саморозвитку.</p><div class="ms-stats">' +
+      st(ev.length, 'ігор / турнірів у журналі') + st(avg, 'середній за гру') + st(lw + ' / ' + lp, 'леги виграно / зіграно') + st(c180 + ' · ' + c140 + ' · ' + c100, '180 · 140+ · 100+') +
+      st(Object.keys(uniq).length + ' / ' + VALUES.length, 'різних закриттів у таблиці') + st(ck.length, 'усіх закриттів') + st(hi || '—', 'найвище закриття') + st(best != null ? best + ' дрот.' : '—', 'найкращий лег') +
+      st(done.length, 'опанованих навичок') + '</div>' +
+      '<p class="ms-row" style="margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-t="events">Журнал ігор ›</button><button type="button" class="ms-btn sec sm" data-t="checkouts">Таблиця закриттів ›</button><button type="button" class="ms-btn sec sm" data-t="skills">Щоденник ›</button></p></div>';
+    var tr = EXT.filter(function (x) { return x.overview; }).map(function (x) { return x.overview(year); }).join('');
+    h += '<div class="ms-src train"><div class="ms-srch"><b>🎯 Тренування</b><span class="ms-badge">із тренувань у кабінеті</span></div>' +
+      '<p class="sub" style="margin:2px 0 10px">Рахується з ваших тренувальних легів і вправ: 501DO, з тінню, 170+1, 60+10−1, сектор.</p>' + (tr || '<p class="sub">Ще немає тренувань за цей період.</p>') + '</div>';
+    return h;
   }
   function st(v, l) { return '<div class="ms-stat"><b>' + esc(v) + '</b><span>' + esc(l) + '</span></div>'; }
 
@@ -398,8 +454,9 @@
 
   sec.addEventListener('click', function (e) {
     var t = e.target;
-    var b = t.closest('[data-t],[data-a],[data-v],[data-cm],[data-delev],[data-skdone],[data-skopen],[data-skdel]'); if (!b) return;
-    if (b.hasAttribute('data-t')) { tab = b.getAttribute('data-t'); render(); }
+    var b = t.closest('[data-prof],[data-t],[data-a],[data-v],[data-cm],[data-delev],[data-skdone],[data-skopen],[data-skdel]'); if (!b) return;
+    if (b.hasAttribute('data-prof')) { if (typeof openPlayerProfile === 'function') openPlayerProfile(member.player_name); }
+    else if (b.hasAttribute('data-t')) { tab = b.getAttribute('data-t'); window.scrollTo(0, 0); render(); }
     else if (b.hasAttribute('data-cm')) { checkMode = b.getAttribute('data-cm'); render(); }
     else if (b.hasAttribute('data-v')) { var v = Number(b.getAttribute('data-v')); if (checkMode === 'hist' || !canWrite()) histModal(v); else addCheckout(v); }
     else if (b.hasAttribute('data-delev')) { if (confirm('Видалити запис?')) { var id = Number(b.getAttribute('data-delev')); sb.from('local_events').delete().eq('id', id).then(function (r) { if (r.error) return fail(r.error); D.events = D.events.filter(function (x) { return x.id !== id; }); render(); }); } }
