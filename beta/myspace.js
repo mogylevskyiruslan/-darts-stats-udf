@@ -29,8 +29,10 @@
     '.ms-tabs button{flex:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:9px 14px;border-radius:999px;font:600 13px Inter,sans-serif;cursor:pointer}',
     '.ms-tabs button.on{background:var(--royal);border-color:var(--royal-light);color:#fff}',
     '.ms-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}',
-    '.ms-in{background:var(--bg);border:1px solid var(--line);color:var(--cream);border-radius:9px;padding:9px 10px;font:14px Inter,sans-serif;width:100%;box-sizing:border-box}',
-    '.ms-f{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ms-f label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted)}.ms-f .w{grid-column:1/-1}',
+    '.ms-in{background:var(--bg);border:1px solid var(--line);color:var(--cream);border-radius:9px;padding:9px 10px;font:16px Inter,sans-serif;width:100%;min-width:0;max-width:100%;box-sizing:border-box}',
+    'input[type=date].ms-in{-webkit-appearance:none;appearance:none;min-height:44px;display:block;text-align:left}',
+    '.ms-btn.ok{background:#2e8b57;color:#fff}',
+    '.ms-f{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}.ms-f label{min-width:0;display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted)}.ms-f .w{grid-column:1/-1}',
     '.ms-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}',
     '.ms-stat{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px}.ms-stat b{display:block;font:800 22px Montserrat,Inter,sans-serif;color:var(--gold)}.ms-stat span{font-size:11px;color:var(--muted)}',
     '.ms-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}',
@@ -71,7 +73,7 @@
   }
   var sb = null, session = null, member = null, tab = 'overview', year = new Date().getFullYear();
   var D = { checkouts: [], events: [], skills: [] };
-  var checkMode = 'add';
+  var checkMode = 'add', checkDate = today();
   var toastT = null;
 
   function toast(msg, undo) {
@@ -148,7 +150,7 @@
     head += '<div class="ms-tabs">' + tabs.map(function (t) { return '<button type="button" data-t="' + t[0] + '" class="' + (t[0] === tab ? 'on' : '') + '">' + t[1] + '</button>'; }).join('') + '</div>';
     var ext = EXT.filter(function (x) { return x.id === tab; })[0];
     var body = ext ? ext.view() : tab === 'checkouts' ? viewCheckouts() : tab === 'events' ? viewEvents() : tab === 'skills' ? viewSkills() : viewOverview();
-    var foot = '<div class="ms-row" style="margin-top:18px">' + (isStandalone() ? '' : '<button type="button" class="ms-btn sec sm" data-a="install">📲 На головний екран</button>') + '<button type="button" class="ms-btn sec sm" data-a="export">⬇ Експорт даних</button><button type="button" class="ms-btn sec sm" data-a="logout">Вийти</button><button type="button" class="ms-btn sec sm" data-a="wipe">🗑 Видалити мої дані</button><a class="ms-btn sec sm" href="instruction.html" target="_blank" rel="noopener" style="text-decoration:none">ℹ️ Інструкція</a></div>';
+    var foot = '<div class="ms-row" style="margin-top:18px">' + (isStandalone() ? '' : '<button type="button" class="ms-btn sec sm" data-a="install">📲 На головний екран</button>') + '<button type="button" class="ms-btn sec sm" data-a="export">⬇ Експорт в Excel</button><button type="button" class="ms-btn sec sm" data-a="logout">Вийти</button><button type="button" class="ms-btn sec sm" data-a="wipe">🗑 Видалити мої дані</button><a class="ms-btn sec sm" href="instruction.html" target="_blank" rel="noopener" style="text-decoration:none">ℹ️ Інструкція</a></div>';
     sec.innerHTML = head + body + foot;
   }
 
@@ -186,17 +188,18 @@
   }
   function viewOverview() {
     var ys = yearsAvail();
-    var ck = D.checkouts.filter(function (c) { return yearOf(c.achieved_at) === year; });
-    var ev = D.events.filter(function (e) { return yearOf(e.event_date) === year; });
-    var done = D.skills.filter(function (k) { return k.status === 'done' && k.done_at && yearOf(k.done_at) === year; });
+    function inY(d) { return year === 'all' || yearOf(d) === year; }
+    var ck = D.checkouts.filter(function (c) { return inY(c.achieved_at); });
+    var ev = D.events.filter(function (e) { return inY(e.event_date); });
+    var done = D.skills.filter(function (k) { return k.status === 'done' && k.done_at && inY(k.done_at); });
     var uniq = {}; ck.forEach(function (c) { uniq[c.value] = 1; });
     var avgs = ev.map(function (e) { return e.avg_game; }).filter(function (x) { return x != null; });
     var avg = avgs.length ? (avgs.reduce(function (a, b) { return a + Number(b); }, 0) / avgs.length).toFixed(2) : '—';
     var lp = 0, lw = 0, c180 = 0, c140 = 0, c100 = 0, best = null, hi = 0;
     ev.forEach(function (e) { lp += e.legs_played || 0; lw += e.legs_won || 0; c180 += e.c180; c140 += e.c140; c100 += e.c100; (e.best_legs || []).forEach(function (b) { if (best == null || b < best) best = b; }); (e.checkouts100 || []).forEach(function (b) { if (b > hi) hi = b; }); });
     ck.forEach(function (c) { if (c.value > hi) hi = c.value; });
-    var sel = '<select class="ms-in" id="ms-year" style="width:auto">' + ys.map(function (y) { return '<option' + (y === year ? ' selected' : '') + '>' + y + '</option>'; }).join('') + '</select>';
-    return '<div class="ms-card"><div class="ms-row" style="justify-content:space-between"><b>Мій рік</b>' + sel + '</div><div class="ms-stats" style="margin-top:10px">' +
+    var sel = '<select class="ms-in" id="ms-year" style="width:auto"><option value="all"' + (year === 'all' ? ' selected' : '') + '>За весь період</option>' + ys.map(function (y) { return '<option' + (y === year ? ' selected' : '') + '>' + y + '</option>'; }).join('') + '</select>';
+    return '<div class="ms-card"><div class="ms-row" style="justify-content:space-between"><b>' + (year === 'all' ? 'Мій прогрес' : 'Мій рік') + '</b>' + sel + '</div><div class="ms-stats" style="margin-top:10px">' +
       st(Object.keys(uniq).length + ' / ' + VALUES.length, 'різних закриттів у таблиці') + st(ck.length, 'всіх закриттів (натискань)') +
       st(ev.length, 'ігор / турнірів у журналі') + st(avg, 'середній за гру') +
       st(lw + ' / ' + lp, 'леги виграно / зіграно') + st(c180 + ' · ' + c140 + ' · ' + c100, '180 · 140+ · 100+') +
@@ -212,13 +215,13 @@
     var w = canWrite();
     var h = '<div class="ms-card"><div class="ms-row" style="justify-content:space-between"><b>Таблиця закриттів</b><span class="sub" style="margin:0">' + got + ' з ' + VALUES.length + ' · ' + pct + '%</span></div><div class="ms-bar"><div style="width:' + pct + '%"></div></div>';
     h += '<div class="ms-row" style="margin-bottom:10px"><button type="button" class="ms-btn sm ' + (checkMode === 'add' ? '' : 'sec') + '" data-cm="add">+ Додати закриття</button><button type="button" class="ms-btn sm ' + (checkMode === 'hist' ? '' : 'sec') + '" data-cm="hist">🕑 Історія / правка</button>';
-    if (checkMode === 'add' && w) h += '<label class="sub" style="margin:0;display:flex;gap:6px;align-items:center">Дата: <input type="date" id="ms-cdate" class="ms-in" style="width:auto" value="' + today() + '" max="' + today() + '"></label>';
+    if (checkMode === 'add' && w) h += '<label class="sub" style="margin:0;display:flex;gap:6px;align-items:center">Дата: <input type="date" id="ms-cdate" class="ms-in" style="width:auto" value="' + checkDate + '" max="' + today() + '"></label>';
     h += '</div><div class="ms-grid">' + VALUES.map(function (v) { return '<button type="button" class="ms-c' + (cnt[v] ? ' done' : '') + '" data-v="' + v + '">' + v + (cnt[v] ? '<i>' + cnt[v] + '</i>' : '') + '</button>'; }).join('') + '</div>';
     if (!w) h += '<p class="sub">Режим перегляду: додавання недоступне без тур-карти поточного року.</p>';
     return h + '</div>';
   }
   function addCheckout(v) {
-    var di = document.getElementById('ms-cdate'), d = di && di.value ? di.value : today();
+    var d = checkDate || today(); if (d > today()) d = today();
     var at = d === today() ? new Date().toISOString() : new Date(d + 'T12:00:00').toISOString();
     sb.from('checkouts').insert({ value: v, achieved_at: at }).select('id,value,achieved_at').single().then(function (r) {
       if (r.error) throw r.error;
@@ -293,8 +296,8 @@
     var h = '';
     if (w) h += '<div class="ms-card"><b>Нова ціль / навичка</b><form id="ms-skf" style="margin-top:10px;display:grid;gap:8px"><input class="ms-in" name="title" required maxlength="140" placeholder="Що хочу опанувати? Напр. стабільний вихід на D16"><input class="ms-in" name="note" maxlength="500" placeholder="Нотатка (необов\'язково)"><div><button class="ms-btn" type="submit">Додати</button></div></form></div>';
     function it(k) {
-      return '<div class="ms-item"><div><b>' + esc(k.title) + '</b><small>' + (k.note ? esc(k.note) + '<br>' : '') + 'Додано ' + fmtDate(k.created_at) + (k.status === 'done' ? ' · опановано ' + fmtDate(k.done_at) : '') + (k.result ? '<br>Результат: ' + esc(k.result) : '') + '</small></div>' +
-        (w ? '<div class="ms-row" style="flex:none;flex-wrap:nowrap">' + (k.status === 'open' ? '<button class="ms-btn sm" type="button" data-skdone="' + k.id + '">✓</button>' : '<button class="ms-btn sec sm" type="button" data-skopen="' + k.id + '">↺</button>') + '<button class="ms-x" type="button" data-skdel="' + k.id + '">✕</button></div>' : '') + '</div>';
+      return '<div class="ms-item"><div>' + (k.status === 'done' ? '<span style="color:#2ecc71;font-weight:800">✓ </span>' : '') + '<b>' + esc(k.title) + '</b><small>' + (k.note ? esc(k.note) + '<br>' : '') + 'Додано ' + fmtDate(k.created_at) + (k.status === 'done' ? ' · опановано ' + fmtDate(k.done_at) : '') + (k.result ? '<br>Результат: ' + esc(k.result) : '') + '</small></div>' +
+        (w ? '<div class="ms-row" style="flex:none;flex-wrap:nowrap">' + (k.status === 'open' ? '<button class="ms-btn ok sm" type="button" data-skdone="' + k.id + '">✓</button>' : '<button class="ms-btn sec sm" type="button" data-skopen="' + k.id + '">↺</button>') + '<button class="ms-x" type="button" data-skdel="' + k.id + '">✕</button></div>' : '') + '</div>';
     }
     h += '<div class="ms-card"><b>В роботі (' + open.length + ')</b>' + (open.map(it).join('') || '<p class="sub">Немає активних цілей.</p>') + '</div>';
     h += '<div class="ms-card"><b>Опановано (' + done.length + ')</b>' + (done.map(it).join('') || '<p class="sub">Поки нічого.</p>') + '</div>';
@@ -317,9 +320,76 @@
   }
 
   // ---------- дії ----------
+  // ---------- експорт в Excel (.xlsx без сторонніх бібліотек) ----------
+  var XMIME = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+  function crc32(buf) {
+    var t = crc32.t; if (!t) { t = crc32.t = []; for (var n = 0; n < 256; n++) { var c0 = n; for (var k = 0; k < 8; k++) c0 = c0 & 1 ? 0xEDB88320 ^ (c0 >>> 1) : c0 >>> 1; t[n] = c0 >>> 0; } }
+    var c = 0xFFFFFFFF; for (var i = 0; i < buf.length; i++) c = t[(c ^ buf[i]) & 255] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0;
+  }
+  function zipStore(files) {
+    var enc = new TextEncoder(), parts = [], cd = [], off = 0;
+    files.forEach(function (f) {
+      var nm = enc.encode(f.name), data = enc.encode(f.text), crc = crc32(data), sz = data.length;
+      var lh = new DataView(new ArrayBuffer(30));
+      lh.setUint32(0, 0x04034b50, true); lh.setUint16(4, 20, true); lh.setUint16(6, 0x0800, true); lh.setUint16(12, 0x21, true);
+      lh.setUint32(14, crc, true); lh.setUint32(18, sz, true); lh.setUint32(22, sz, true); lh.setUint16(26, nm.length, true);
+      parts.push(new Uint8Array(lh.buffer), nm, data);
+      var ch = new DataView(new ArrayBuffer(46));
+      ch.setUint32(0, 0x02014b50, true); ch.setUint16(4, 20, true); ch.setUint16(6, 20, true); ch.setUint16(8, 0x0800, true); ch.setUint16(14, 0x21, true);
+      ch.setUint32(16, crc, true); ch.setUint32(20, sz, true); ch.setUint32(24, sz, true); ch.setUint16(28, nm.length, true); ch.setUint32(42, off, true);
+      cd.push(new Uint8Array(ch.buffer), nm); off += 30 + nm.length + sz;
+    });
+    var cdsize = 0; cd.forEach(function (x) { cdsize += x.length; });
+    var end = new DataView(new ArrayBuffer(22));
+    end.setUint32(0, 0x06054b50, true); end.setUint16(8, files.length, true); end.setUint16(10, files.length, true); end.setUint32(12, cdsize, true); end.setUint32(16, off, true);
+    return new Blob(parts.concat(cd, [new Uint8Array(end.buffer)]), { type: XMIME });
+  }
+  function xesc(v) { return String(v).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function colL(i) { var s = ''; i++; while (i > 0) { var m = (i - 1) % 26; s = String.fromCharCode(65 + m) + s; i = Math.floor((i - 1) / 26); } return s; }
+  function sheetXml(rows) {
+    var widths = []; rows.forEach(function (r) { r.forEach(function (v, i) { var l = v == null ? 0 : String(v).length; widths[i] = Math.min(60, Math.max(widths[i] || 8, l + 2)); }); });
+    var x = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews><cols>';
+    widths.forEach(function (w, i) { x += '<col min="' + (i + 1) + '" max="' + (i + 1) + '" width="' + w + '" customWidth="1"/>'; });
+    x += '</cols><sheetData>';
+    rows.forEach(function (r, ri) {
+      x += '<row r="' + (ri + 1) + '">';
+      r.forEach(function (v, ci) {
+        if (v == null || v === '') return;
+        var ref = colL(ci) + (ri + 1);
+        if (typeof v === 'number' && isFinite(v) && ri > 0) x += '<c r="' + ref + '"><v>' + v + '</v></c>';
+        else x += '<c r="' + ref + '" t="inlineStr"' + (ri === 0 ? ' s="1"' : '') + '><is><t xml:space="preserve">' + xesc(v) + '</t></is></c>';
+      });
+      x += '</row>';
+    });
+    return x + '</sheetData></worksheet>';
+  }
+  function buildXlsx(sheets) {
+    var used = {};
+    sheets.forEach(function (sh, i) { var n = String(sh.name).replace(/[\[\]:*?\/\\]/g, ' ').slice(0, 31) || ('Аркуш' + (i + 1)); while (used[n.toLowerCase()]) n = n.slice(0, 28) + '_' + i; used[n.toLowerCase()] = 1; sh._n = n; });
+    var files = [];
+    files.push({ name: '[Content_Types].xml', text: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>' + sheets.map(function (_, i) { return '<Override PartName="/xl/worksheets/sheet' + (i + 1) + '.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>'; }).join('') + '</Types>' });
+    files.push({ name: '_rels/.rels', text: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>' });
+    files.push({ name: 'xl/workbook.xml', text: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets>' + sheets.map(function (sh, i) { return '<sheet name="' + xesc(sh._n) + '" sheetId="' + (i + 1) + '" r:id="rId' + (i + 1) + '"/>'; }).join('') + '</sheets></workbook>' });
+    files.push({ name: 'xl/_rels/workbook.xml.rels', text: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' + sheets.map(function (_, i) { return '<Relationship Id="rId' + (i + 1) + '" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet' + (i + 1) + '.xml"/>'; }).join('') + '<Relationship Id="rId' + (sheets.length + 1) + '" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>' });
+    files.push({ name: 'xl/styles.xml', text: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><fonts count="2"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font></fonts><fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills><borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders><cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs count="2"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="0" fontId="1" fillId="0" borderId="0" xfId="0" applyFont="1"/></cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>' });
+    sheets.forEach(function (sh, i) { files.push({ name: 'xl/worksheets/sheet' + (i + 1) + '.xml', text: sheetXml(sh.rows) }); });
+    return zipStore(files);
+  }
+  function fd(s) { if (!s) return ''; var d = new Date(s); if (isNaN(d)) return String(s); return ('0' + d.getDate()).slice(-2) + '.' + ('0' + (d.getMonth() + 1)).slice(-2) + '.' + d.getFullYear(); }
   function exportData() {
-    var blob = new Blob([JSON.stringify({ exported: new Date().toISOString(), player: member && member.player_name, checkouts: D.checkouts, local_events: D.events, skills: D.skills }, null, 2)], { type: 'application/json' });
-    var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'vfd-my-space.json'; document.body.appendChild(a); a.click(); a.remove();
+    try {
+      var sheets = [];
+      var ck = D.checkouts.slice().sort(function (a, b) { return a.achieved_at < b.achieved_at ? 1 : -1; });
+      sheets.push({ name: 'Закриття', rows: [['Дата', 'Закриття']].concat(ck.map(function (c) { return [fd(c.achieved_at), c.value]; })) });
+      sheets.push({ name: 'Ігри', rows: [['Дата', 'Назва', 'Середній за турнір', 'Середній за гру', 'Леги зіграні', 'Леги виграні', '180', '140+', '100+', 'Закриття 100+', 'Закриття через булл', 'Найкращі леги', 'Нотатки']].concat(D.events.map(function (e) { return [fd(e.event_date), e.title, e.avg_tournament, e.avg_game, e.legs_played, e.legs_won, e.c180, e.c140, e.c100, (e.checkouts100 || []).join(', '), e.bull_checkouts, (e.best_legs || []).join(', '), e.notes]; })) });
+      sheets.push({ name: 'Щоденник', rows: [['Ціль / навичка', 'Нотатка', 'Статус', 'Додано', 'Опановано', 'Результат']].concat(D.skills.map(function (k) { return [k.title, k.note, k.status === 'done' ? 'опановано' : 'в роботі', fd(k.created_at), fd(k.done_at), k.result]; })) });
+      EXT.forEach(function (x) { if (x.exportSheets) x.exportSheets().forEach(function (sh) { sheets.push(sh); }); });
+      var blob = buildXlsx(sheets);
+      var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'vfd-moi-dani-' + today() + '.xlsx'; a.style.display = 'none';
+      document.body.appendChild(a); a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 4000);
+      toast('Файл Excel сформовано');
+    } catch (e) { fail(e); }
   }
   function wipe() {
     if (!confirm('Видалити ВСІ ваші дані з «Мого простору» (закриття, ігри, щоденник, згоду)? Це незворотно.')) return;
@@ -338,7 +408,7 @@
     else if (b.hasAttribute('data-skdel')) { if (confirm('Видалити?')) { var sid = Number(b.getAttribute('data-skdel')); sb.from('skills').delete().eq('id', sid).then(function (r) { if (r.error) return fail(r.error); D.skills = D.skills.filter(function (x) { return x.id !== sid; }); render(); }); } }
     else { var a = b.getAttribute('data-a'); if (a === 'install') { if (deferredInstall) { deferredInstall.prompt(); deferredInstall = null; } else installHelp(); } else if (a === 'logout') sb.auth.signOut(); else if (a === 'export') exportData(); else if (a === 'wipe') wipe(); }
   });
-  sec.addEventListener('change', function (e) { if (e.target.id === 'ms-year') { year = Number(e.target.value); render(); } });
+  sec.addEventListener('change', function (e) { if (e.target.id === 'ms-year') { year = e.target.value === 'all' ? 'all' : Number(e.target.value); render(); } if (e.target.id === 'ms-cdate' && e.target.value) { checkDate = e.target.value; render(); } });
   sec.addEventListener('submit', function (e) {
     e.preventDefault();
     if (e.target.id === 'ms-evf') saveEvent(e.target);

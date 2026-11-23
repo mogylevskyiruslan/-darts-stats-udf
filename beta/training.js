@@ -4,7 +4,7 @@
   var SKIP = [159, 162, 163, 165, 166, 168, 169];
   var BADSCORE = [163, 166, 169, 172, 173, 175, 176, 178, 179];
   var QUICK = [26, 41, 45, 60, 85, 100, 140, 180];
-  var T = { legs: [], drills: [], period: 'all', game: '501' };
+  var T = { legs: [], drills: [], period: 'all', game: '501', ghostPick: false, detail: null };
   var ml = null, sl = null;
   var live = null, wake = null;
 
@@ -46,11 +46,31 @@
   document.head.appendChild(css);
 
   // ---------- дані ----------
+  var LSEL_BASE = 'id,client_id,played_at,mode,scores,darts,last_darts,finished,ghost_result';
+  var LSEL_EXT = LSEL_BASE + ',match_id,best_of,ghost_scores,ghost_darts';
+  var EXTRA = ['match_id', 'best_of', 'ghost_scores', 'ghost_darts'];
+  function fetchLegs() {
+    var sb = MS().sb();
+    function q(cols) { return sb.from('legs').select(cols).eq('finished', true).order('played_at', { ascending: false }).limit(3000); }
+    return q(LSEL_EXT).then(function (r) { return r.error ? q(LSEL_BASE) : r; });
+  }
+  // мінімальна кількість дротиків для закриття залишку r
+  var SC1 = (function () { var a = [0], i; for (i = 1; i <= 20; i++) { a.push(i, i * 2, i * 3); } a.push(25, 50); return a; })();
+  var DBL = (function () { var a = [50], i; for (i = 1; i <= 20; i++) a.push(i * 2); return a; })();
+  function minDarts(r) {
+    if (DBL.indexOf(r) >= 0) return 1;
+    var i, j;
+    for (i = 0; i < SC1.length; i++) if (DBL.indexOf(r - SC1[i]) >= 0) return 2;
+    return 3;
+  }
+  function dartBtns(r) {
+    var mn = minDarts(r);
+    return '<div class="tr-d">' + [1, 2, 3].map(function (d) { return '<button type="button" data-tr="d" data-d="' + d + '"' + (d < mn ? ' disabled style="opacity:.2"' : '') + '>' + d + '</button>'; }).join('') + '</div>';
+  }
   function nDarts(scores, finished, last) { return finished ? 3 * (scores.length - 1) + last : 3 * scores.length; }
   function load() {
     var sb = MS().sb(); if (!sb) return Promise.resolve();
-    return sb.from('legs').select('id,client_id,played_at,mode,scores,darts,last_darts,finished,ghost_result').eq('finished', true).order('played_at', { ascending: false }).limit(3000)
-      .then(function (r) { if (r.error) throw r.error; T.legs = merge(r.data || []); return flush(); }).then(loadDrills);
+    return fetchLegs().then(function (r) { if (r.error) throw r.error; T.legs = merge(r.data || []); return flush(); }).then(loadDrills);
   }
   function merge(rows) {
     var have = {}; rows.forEach(function (r) { have[r.client_id] = 1; });
@@ -92,12 +112,13 @@
   function flush() {
     var sb = MS().sb(), q = queue(); if (!sb || !q.length || !MS().canWrite() || flushing) return Promise.resolve();
     flushing = true;
-    return sb.from('legs').upsert(q, { onConflict: 'user_id,client_id', ignoreDuplicates: true }).then(function (r) {
+    function up(rows) { return sb.from('legs').upsert(rows, { onConflict: 'user_id,client_id', ignoreDuplicates: true }); }
+    function strip(rows) { return rows.map(function (r) { var c = Object.assign({}, r); EXTRA.forEach(function (k) { delete c[k]; }); return c; }); }
+    return up(q).then(function (r) { return r.error && /column|schema cache/i.test(r.error.message || '') ? up(strip(q)) : r; }).then(function (r) {
       flushing = false;
       if (r.error) { console.warn('sync later', r.error.message); return; }
       lset('ms_q', queue().filter(function (x) { return !q.some(function (y) { return y.client_id === x.client_id; }); }));
-      return sb.from('legs').select('id,client_id,played_at,mode,scores,darts,last_darts,finished,ghost_result').eq('finished', true).order('played_at', { ascending: false }).limit(3000)
-        .then(function (r2) { if (!r2.error) T.legs = merge(r2.data || []); if (queue().length) return flush(); });
+      return fetchLegs().then(function (r2) { if (!r2.error) T.legs = merge(r2.data || []); if (queue().length) return flush(); });
     }, function () { flushing = false; });
   }
   window.addEventListener('online', function () { flush(); });
@@ -121,11 +142,19 @@
   function wakeOff() { try { wake && wake.release(); } catch (e) {} wake = null; }
   function setLive(l) { live = l; document.body.classList.toggle('ms-live', !!l); if (l && !l.done) wakeOn(); else wakeOff(); persist(); window.scrollTo(0, 0); MS().render(); }
 
-  function pickGhost() {
+  function pickGhost(excl) {
     var pool = T.legs.filter(function (l) { return l.finished !== false && l.scores && l.scores.length; }).slice(0, 50);
     if (!pool.length) return null;
+    var fresh = pool.filter(function (l) { return !excl || excl.indexOf(l.client_id) < 0; });
+    if (fresh.length) pool = fresh;
     var g = pool[Math.floor(Math.random() * pool.length)];
-    return { id: typeof g.id === 'number' ? g.id : null, scores: g.scores, darts: g.darts };
+    return { id: typeof g.id === 'number' ? g.id : null, key: g.client_id, scores: g.scores, darts: g.darts };
+  }
+  function startMatch(bo) { nextMatchLeg({ id: uuid(), bestOf: bo, need: (bo + 1) / 2, w: 0, l: 0, used: [] }); }
+  function nextMatchLeg(match) {
+    var g = pickGhost(match.used); if (!g) return;
+    match.used.push(g.key);
+    setLive({ id: uuid(), mode: 'ghost', match: match, scores: [], entry: '', ghost: g, finished: false, lastDarts: 3, pending: null, startedAt: new Date().toISOString() });
   }
   function start(mode) {
     var g = null;
@@ -138,7 +167,7 @@
     if (!isFinite(score) || score < 0 || score > 180 || BADSCORE.indexOf(score) >= 0) { live.entry = ''; MS().render(); return bad('Такий рахунок за три дротики неможливий'); }
     var r = rem(), nr = r - score;
     live.entry = '';
-    if (nr === 0 && r <= 170 && SKIP.indexOf(r) < 0) { live.pending = score; persist(); return MS().render(); }
+    if (nr === 0 && r <= 170 && SKIP.indexOf(r) < 0) { live.pending = score; if (minDarts(r) >= 3) return chooseDarts(3); persist(); return MS().render(); }
     if (nr <= 1) { live.scores.push(0); MS().toast('Перебір: рахунок 0'); }
     else live.scores.push(score);
     if (live.kind === 'p171' && live.scores.length >= live.maxV) return endP171(false);
@@ -149,6 +178,8 @@
     live.scores.push(live.pending); live.pending = null; live.finished = true; live.lastDarts = d;
     var row = { client_id: live.id, played_at: new Date().toISOString(), mode: live.mode, start_score: 501, scores: live.scores.slice(), darts: darts(), last_darts: d, finished: true,
       ghost_leg_id: live.ghost ? live.ghost.id : null, ghost_result: ghostStatus() };
+    if (live.ghost) { row.ghost_scores = live.ghost.scores; row.ghost_darts = live.ghost.darts; }
+    if (live.match) { row.match_id = live.match.id; row.best_of = live.match.bestOf; if (row.ghost_result === 'win') live.match.w++; else live.match.l++; }
     saveLeg(row); live.done = true; lset('ms_live', null); wakeOff(); MS().render();
   }
   function undo() {
@@ -191,9 +222,18 @@
     if (live.scores.length && !confirm('Поточна спроба не буде врахована. Завершити тренування?')) return;
     live.done = true; live.completed = false; lset('ms_live', null); wakeOff(); MS().render();
   }
+  function delMatch(id) {
+    var m = matches().filter(function (x) { return x.id === id; })[0]; if (!m || !confirm('Видалити цей матч зі статистики?')) return;
+    var ids = m.legs.filter(function (l) { return typeof l.id === 'number'; }).map(function (l) { return l.id; }), cids = m.legs.map(function (l) { return l.client_id; });
+    function done() { T.legs = T.legs.filter(function (l) { return cids.indexOf(l.client_id) < 0; }); lset('ms_q', queue().filter(function (x) { return cids.indexOf(x.client_id) < 0; })); T.detail = null; MS().render(); }
+    if (!ids.length) return done();
+    MS().sb().from('legs').delete().in('id', ids).then(function (r) { if (r.error) return MS().fail(r.error); done(); });
+  }
   function again() {
-    var k = live.kind, m = live.mode, V = live.maxV; live = null;
-    if (k === 'p171') startP171(V); else start(m === 'ghost' && T.legs.length >= 10 ? 'ghost' : 'solo');
+    var k = live.kind, V = live.maxV, mt = live.match; live = null;
+    if (k === 'p171') startP171(V);
+    else if (mt) { if (mt.w >= mt.need || mt.l >= mt.need) startMatch(mt.bestOf); else nextMatchLeg(mt); }
+    else start('solo');
   }
   function padHtml(n) {
     return '<div class="tr-ent" id="tr-ent">' + (live.entry || '<span style="color:var(--muted)">0</span>') + '</div>' +
@@ -213,7 +253,7 @@
         '<div class="ms-row" style="margin-top:12px"><button type="button" class="ms-btn" data-tr="again">Продовжити · ціль ' + nxt + '</button><button type="button" class="ms-btn sec" data-tr="done">Готово</button></div></div>';
     }
     var r = rem(), body;
-    if (live.pending != null) body = '<p class="sub" style="text-align:center;margin:12px 0 0">Закриття ' + r + '. Яким дротиком закрили?</p><div class="tr-d"><button type="button" data-tr="d" data-d="1">1</button><button type="button" data-tr="d" data-d="2">2</button><button type="button" data-tr="d" data-d="3">3</button></div><p style="text-align:center"><button type="button" class="ms-btn sec sm" data-tr="undo">↶ Скасувати введення</button></p>';
+    if (live.pending != null) body = '<p class="sub" style="text-align:center;margin:12px 0 0">Закриття ' + r + '. Яким дротиком закрили?</p>' + dartBtns(r) + '<p style="text-align:center"><button type="button" class="ms-btn sec sm" data-tr="undo">↶ Скасувати введення</button></p>';
     else body = padHtml(n);
     return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="p-end">⏹ Завершити</button><span>170+1 · ціль ' + live.start + (live.sess && live.sess.length ? ' · закрито ' + live.sess.filter(function (x) { return x.ok; }).length : '') + '</span><span>підхід ' + (n + 1) + '/' + V + '</span></div>' +
       '<div class="tr-rem">' + r + '<small>залишилось · підходів лишилось ' + (V - n) + '</small></div><div class="tr-last">' + live.scores.map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div>' + body + '</div>';
@@ -367,6 +407,38 @@
   function stt(v, l) { return '<div class="ms-stat"><b>' + esc(v) + '</b><span>' + esc(l) + '</span></div>'; }
 
   // ---------- екрани ----------
+  function matches() {
+    var map = {}, order = [];
+    T.legs.forEach(function (l) {
+      if (l.mode !== 'ghost') return;
+      var k = l.match_id || l.client_id;
+      if (!map[k]) { map[k] = { id: k, bestOf: l.best_of || 1, legs: [], date: l.played_at }; order.push(k); }
+      map[k].legs.push(l); if (l.played_at > map[k].date) map[k].date = l.played_at;
+    });
+    return order.map(function (k) {
+      var m = map[k]; m.legs.sort(function (a, b) { return a.played_at < b.played_at ? -1 : 1; });
+      m.w = m.legs.filter(function (l) { return l.ghost_result === 'win'; }).length; m.l = m.legs.length - m.w;
+      m.need = (m.bestOf + 1) / 2; m.over = m.w >= m.need || m.l >= m.need; m.won = m.w >= m.need; return m;
+    }).sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+  }
+  function viewMatch(id) {
+    var m = matches().filter(function (x) { return x.id === id; })[0];
+    if (!m) { T.detail = null; return view501(); }
+    var a = agg(m.legs), gd = 0, gn = 0; m.legs.forEach(function (l) { if (l.ghost_darts) { gd += l.ghost_darts; gn++; } });
+    var gavg = gd ? gn * 501 / gd * 3 : null, w = MS().canWrite();
+    var res = m.over ? (m.won ? '🏆 Перемога' : 'Поразка') : 'Матч перервано';
+    var h = '<p><button type="button" class="ms-btn sec sm" data-tr="mback">‹ Назад до тренувань</button></p>' +
+      '<div class="ms-card"><b>Матч із тінню · best of ' + m.bestOf + '</b><p class="sub" style="margin:2px 0 10px">' + new Date(m.date).toLocaleDateString('uk-UA') + ' · ' + res + '</p><div class="ms-stats">' +
+      stt(m.w + ':' + m.l, 'рахунок у легах') + stt(f2(a.avg), 'ваш середній') + stt(gavg ? f2(gavg) : '—', 'середній тіні') + stt(a.best + ' дрот.', 'ваш найкращий лег') + '</div></div>';
+    h += m.legs.map(function (l, i) {
+      var s = legStats(l), win = l.ghost_result === 'win', gs = l.ghost_scores;
+      return '<div class="ms-card"><div class="ms-row" style="justify-content:space-between"><b>Лег ' + (i + 1) + '</b><span style="font-weight:800;color:' + (win ? '#2ecc71' : '#ff8d8d') + '">' + (win ? '✓ перемога' : '✗ поразка') + '</span></div>' +
+        '<div style="font-size:13px;margin-top:8px"><b>Ви:</b> ' + l.darts + ' дрот. · сер. ' + f2(s.avg) + ' · перші 9: ' + f2(s.f9) + '</div><div class="tr-last" style="justify-content:flex-start">' + l.scores.map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div>' +
+        (l.ghost_darts ? '<div style="font-size:13px;margin-top:6px"><b>Тінь:</b> ' + l.ghost_darts + ' дрот. · сер. ' + f2(501 / l.ghost_darts * 3) + '</div>' + (gs ? '<div class="tr-last" style="justify-content:flex-start">' + gs.map(function (x) { return '<span style="opacity:.8">' + x + '</span>'; }).join('') + '</div>' : '') : '') + '</div>';
+    }).join('');
+    if (w) h += '<p><button type="button" class="ms-btn sec sm" data-tr="mdel" data-mid="' + esc(m.id) + '">🗑 Видалити цей матч зі статистики</button></p>';
+    return h;
+  }
   function view501() {
     var legs = legsFor(), a = agg(legs), allN = T.legs.filter(function (l) { return l.finished !== false; }).length, w = MS().canWrite();
     var pend = queue().length, h = '';
@@ -375,6 +447,17 @@
       '<button type="button" class="ms-btn" data-tr="start" ' + (w ? '' : 'disabled') + '>▶ Новий лег</button>' +
       '<button type="button" class="ms-btn sec" data-tr="ghost" ' + (w && allN >= 10 ? '' : 'disabled') + '>👻 Гра з тінню' + (allN >= 10 ? '' : ' · ' + allN + '/10') + '</button></div>' +
       (allN >= 10 ? '' : '<p class="sub" style="margin:8px 0 0">«Тінь» відкриється після 10 завершених легів: вона відтворює один із ваших останніх 50 легів.</p>') + '</div>';
+    if (T.ghostPick && allN >= 10) {
+      h += '<div class="ms-card"><b>👻 Гра з тінню</b><p class="sub" style="margin:4px 0 10px">Оберіть формат матчу. Best of N: перемагає той, хто першим виграє більшість легів. Для кожного лега тінню стає випадковий із ваших останніх 50 легів.</p><div class="tr-sg" style="grid-template-columns:repeat(3,1fr)">' +
+        [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21].map(function (n) { return '<button type="button" data-tr="gbo" data-bo="' + n + '">Best of ' + n + '</button>'; }).join('') + '</div><p style="margin:10px 0 0"><button type="button" class="ms-btn sec sm" data-tr="gcancel">Скасувати</button></p></div>';
+    }
+    var ms = matches();
+    if (ms.length) {
+      h += '<div class="ms-card"><b>Історія ігор з тінню</b><p class="sub" style="margin:4px 0 6px">Натисніть на матч, щоб побачити деталі.</p>' + ms.slice(0, 15).map(function (m) {
+        var st = m.over ? (m.won ? '<span style="color:#2ecc71;font-weight:800">перемога</span>' : '<span style="color:#ff8d8d;font-weight:800">поразка</span>') : '<span class="sub" style="margin:0">перервано</span>';
+        return '<button type="button" class="tr-leg" style="width:100%;background:none;border:0;border-top:1px solid var(--line);color:var(--cream);text-align:left;cursor:pointer;font:13px Inter,sans-serif" data-tr="mdetail" data-mid="' + esc(m.id) + '"><span>' + new Date(m.date).toLocaleDateString('uk-UA') + ' · best of ' + m.bestOf + ' · <b>' + m.w + ':' + m.l + '</b></span><span>' + st + ' ›</span></button>';
+      }).join('') + '</div>';
+    }
     var years = {}; T.legs.forEach(function (l) { years[new Date(l.played_at).getFullYear()] = 1; });
     var ysel = '<select class="ms-in" data-trp style="width:auto"><option value="all"' + (T.period === 'all' ? ' selected' : '') + '>Увесь час</option>' + Object.keys(years).sort().reverse().map(function (y) { return '<option' + (String(T.period) === y ? ' selected' : '') + '>' + y + '</option>'; }).join('') + '</select>';
     if (!a.n) return h + '<div class="ms-card"><div class="ms-row" style="justify-content:space-between"><b>Статистика</b>' + ysel + '</div><p class="sub">Зіграйте перший лег, і тут з\'явиться статистика.</p></div>';
@@ -393,6 +476,7 @@
   function viewTrain() {
     var saved = lget('ms_live'), pend = queue().length + dqueue().length, h = '';
     if (saved && saved.scores) h += '<div class="ms-warn">Є незавершена гра (' + saved.scores.length + ' візитів). <button type="button" class="ms-btn sm" data-tr="resume">Продовжити</button> <button type="button" class="ms-btn sec sm" data-tr="drop">Скасувати</button></div>';
+    if (T.detail) return viewMatch(T.detail);
     var g = T.game, games = [['501', '501DO'], ['p171', '170+1'], ['m60', '60+10−1'], ['sector', 'Сектор']];
     h += '<div class="ms-tabs">' + games.map(function (x) { return '<button type="button" data-tr="game" data-g="' + x[0] + '" class="' + (g === x[0] ? 'on' : '') + '">' + x[1] + '</button>'; }).join('') + '</div>';
     if (pend && g !== '501') h += '<div class="ms-warn">⏳ Чекають на синхронізацію: ' + pend + '. Відправиться, коли з\'явиться інтернет.</div>';
@@ -404,10 +488,13 @@
     if (live.done) {
       var s = { avg: 501 / darts() * 3, f9: sum(live.scores.slice(0, 3)) / Math.min(9, darts()) * 3 };
       var gs = ghostStatus();
-      return '<div class="tr-live"><h2>Лег закрито 🎯</h2>' + (live.ghost ? '<div class="tr-ghost ' + (gs === 'win' ? 'win' : 'lose') + '"><span>' + (gs === 'win' ? '👻 Ви обіграли свою тінь!' : '👻 Тінь виявилась швидшою') + '</span></div>' : '') +
+      var mt = live.match, over = mt && (mt.w >= mt.need || mt.l >= mt.need), mwon = mt && mt.w >= mt.need;
+      var btns = mt ? (over ? '<button type="button" class="ms-btn" data-tr="mdetail" data-mid="' + mt.id + '">Деталі матчу</button><button type="button" class="ms-btn sec" data-tr="again">Ще матч · best of ' + mt.bestOf + '</button><button type="button" class="ms-btn sec" data-tr="done">Готово</button>' : '<button type="button" class="ms-btn" data-tr="again">Наступний лег</button><button type="button" class="ms-btn sec" data-tr="done">Завершити матч</button>') : '<button type="button" class="ms-btn" data-tr="again">Ще лег</button><button type="button" class="ms-btn sec" data-tr="done">Готово</button>';
+      var mhead = mt ? '<div class="tr-ghost ' + (over ? (mwon ? 'win' : 'lose') : '') + '"><span>' + (over ? (mwon ? '🏆 Матч виграно' : 'Матч програно') : 'Рахунок матчу') + ' · best of ' + mt.bestOf + '</span><b>' + mt.w + ':' + mt.l + '</b></div>' : '';
+      return '<div class="tr-live"><h2>' + (over ? 'Матч завершено' : 'Лег закрито 🎯') + '</h2>' + mhead + (live.ghost ? '<div class="tr-ghost ' + (gs === 'win' ? 'win' : 'lose') + '"><span>' + (gs === 'win' ? '👻 Ви обіграли свою тінь!' : '👻 Тінь виявилась швидшою') + '</span></div>' : '') +
         '<div class="ms-stats" style="margin:10px 0">' + stt(darts(), 'дротиків') + stt(f2(s.avg), 'середній за лег') + stt(f2(s.f9), 'перші 9 дротиків') + stt(live.scores.length, 'візитів') + '</div>' +
         '<div class="tr-last">' + live.scores.map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div>' +
-        '<div class="ms-row" style="margin-top:12px"><button type="button" class="ms-btn" data-tr="again">Ще лег</button><button type="button" class="ms-btn sec" data-tr="done">Готово</button></div></div>';
+        '<div class="ms-row" style="margin-top:12px">' + btns + '</div></div>';
     }
     var r = rem(), gs2 = ghostStatus(), gh = '';
     if (live.ghost) {
@@ -417,7 +504,7 @@
     var n = live.scores.length, sc = sum(live.scores), avg = n ? sc / (3 * n) * 3 : 0;
     var body;
     if (live.pending != null) {
-      body = '<p class="sub" style="text-align:center;margin:12px 0 0">Закриття ' + r + '. Яким дротиком закрили?</p><div class="tr-d"><button type="button" data-tr="d" data-d="1">1</button><button type="button" data-tr="d" data-d="2">2</button><button type="button" data-tr="d" data-d="3">3</button></div><p style="text-align:center"><button type="button" class="ms-btn sec sm" data-tr="undo">↶ Скасувати введення</button></p>';
+      body = '<p class="sub" style="text-align:center;margin:12px 0 0">Закриття ' + r + '. Яким дротиком закрили?</p>' + dartBtns(r) + '<p style="text-align:center"><button type="button" class="ms-btn sec sm" data-tr="undo">↶ Скасувати введення</button></p>';
     } else {
       body = '<div class="tr-ent" id="tr-ent">' + (live.entry || '<span style="color:var(--muted)">0</span>') + '</div>' +
         '<div class="tr-q">' + QUICK.map(function (q) { return '<button type="button" data-tr="q" data-n="' + q + '">' + q + '</button>'; }).join('') + '</div>' +
@@ -425,7 +512,7 @@
         '<button type="button" data-tr="bs">⌫</button><button type="button" data-tr="k" data-n="0">0</button><button type="button" class="ok" data-tr="ok">OK</button></div>' +
         '<p style="text-align:center;margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-tr="undo"' + (n ? '' : ' disabled') + '>↶ Скасувати візит</button></p><p class="sub kbhint" style="text-align:center;margin:8px 0 0">З клавіатури: цифри · Enter — ввести · Backspace — стерти · Delete — скасувати візит</p>';
     }
-    return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="quit">✕ Вийти</button><span>' + (live.ghost ? 'З тінню' : 'Соло') + ' · візит ' + (n + 1) + '</span><span>сер. ' + (n ? f2(avg) : '—') + '</span></div>' +
+    return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="quit">✕ Вийти</button><span>' + (live.match ? 'Тінь · BO' + live.match.bestOf + ' · ' + live.match.w + ':' + live.match.l : 'Соло') + ' · візит ' + (n + 1) + '</span><span>сер. ' + (n ? f2(avg) : '—') + '</span></div>' +
       '<div class="tr-rem">' + r + '<small>залишилось</small></div>' + gh +
       '<div class="tr-last">' + live.scores.slice(-6).map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div>' + body + '</div>';
   }
@@ -436,6 +523,12 @@
     var a = b.getAttribute('data-tr');
     if (navigator.vibrate && (a === 'k' || a === 'q' || a === 'ok')) { try { navigator.vibrate(8); } catch (x) {} }
     if (a === 'game') { T.game = b.getAttribute('data-g'); MS().render(); }
+    else if (a === 'ghost') { T.ghostPick = true; MS().render(); }
+    else if (a === 'gcancel') { T.ghostPick = false; MS().render(); }
+    else if (a === 'gbo') { T.ghostPick = false; startMatch(Number(b.getAttribute('data-bo'))); }
+    else if (a === 'mdetail') { var mid = b.getAttribute('data-mid'); live = null; document.body.classList.remove('ms-live'); wakeOff(); lset('ms_live', null); T.game = '501'; T.detail = mid; window.scrollTo(0, 0); MS().render(); }
+    else if (a === 'mback') { T.detail = null; MS().render(); }
+    else if (a === 'mdel') { delMatch(b.getAttribute('data-mid')); }
     else if (a === 'p-start') startP171(Number(b.getAttribute("data-vv")));
     else if (a === 'm-start') mStart();
     else if (a === 'm-ok') mAnswer(true);
@@ -451,7 +544,6 @@
     else if (a === 's-close') { sl = null; document.body.classList.remove('ms-live'); MS().render(); }
     else if (a === 'dr-del') { var did = Number(b.getAttribute('data-id')); if (confirm('Видалити запис зі статистики?')) MS().sb().from('drills').delete().eq('id', did).then(function (r) { if (r.error) return MS().fail(r.error); T.drills = T.drills.filter(function (l) { return l.id !== did; }); MS().render(); }); }
     else if (a === 'start') start('solo');
-    else if (a === 'ghost') start('ghost');
     else if (a === 'resume') { var sv = lget('ms_live'); if (sv) setLive(sv); }
     else if (a === 'drop') { if (confirm('Скасувати незавершений лег?')) { lset('ms_live', null); MS().render(); } }
     else if (a === 'k') { if (live.entry.length < 3) { live.entry += b.getAttribute('data-n'); if (live.entry === '00') live.entry = '0'; } MS().render(); }
@@ -472,7 +564,7 @@
     var t = e.target && e.target.tagName; if (t === 'INPUT' || t === 'SELECT' || t === 'TEXTAREA') return;
     if (live.done) { if (e.key === 'Enter') { e.preventDefault(); again(); } return; }
     if (live.pending != null) {
-      if (e.key === '1' || e.key === '2' || e.key === '3') { e.preventDefault(); chooseDarts(Number(e.key)); }
+      if (e.key === '1' || e.key === '2' || e.key === '3') { e.preventDefault(); if (Number(e.key) >= minDarts(rem())) chooseDarts(Number(e.key)); }
       else if (e.key === 'Escape' || e.key === 'Backspace') { e.preventDefault(); undo(); }
       return;
     }
@@ -492,6 +584,17 @@
   window.__msExt.push({
     id: 'train', label: '🎯 Тренування', view: viewTrain, load: load,
     override: function () { return viewLive() || viewM60() || viewSector(); },
-    reset: function () { T.legs = []; T.drills = []; ml = null; sl = null; live = null; document.body.classList.remove('ms-live'); wakeOff(); }
+    exportSheets: function () {
+      function d(x) { var t = new Date(x); return ('0' + t.getDate()).slice(-2) + '.' + ('0' + (t.getMonth() + 1)).slice(-2) + '.' + t.getFullYear(); }
+      var out = [], legs = T.legs.filter(function (l) { return l.finished !== false; });
+      out.push({ name: '501DO леги', rows: [['Дата', 'Режим', 'Дротиків', 'Середній за лег', 'Перші 9', 'Підходи', 'Результат проти тіні', 'Матч (best of)']].concat(legs.map(function (l) { var s = legStats(l); return [d(l.played_at), l.mode === 'ghost' ? 'з тінню' : 'соло', l.darts, Math.round(s.avg * 100) / 100, Math.round(s.f9 * 100) / 100, l.scores.join(' '), l.mode === 'ghost' ? (l.ghost_result === 'win' ? 'перемога' : 'поразка') : '', l.best_of || '']; })) });
+      out.push({ name: 'Матчі з тінню', rows: [['Дата', 'Best of', 'Виграно легів', 'Програно легів', 'Підсумок']].concat(matches().map(function (m) { return [d(m.date), m.bestOf, m.w, m.l, m.over ? (m.won ? 'перемога' : 'поразка') : 'перервано']; })) });
+      var dr = T.drills;
+      out.push({ name: '170+1', rows: [['Дата', 'Підходів на ціль', 'Ціль', 'Закрито', 'Дротиків', 'Підходи']].concat(dr.filter(function (r) { return r.game === 'p171'; }).map(function (r) { return [d(r.played_at), r.param, r.target, r.success ? 'так' : 'ні', r.darts, r.scores.join(' ')]; })) });
+      out.push({ name: '60+10-1', rows: [['Дата', 'Підходів', 'Закрито', 'Найвище закриття', 'Цілі по порядку']].concat(dr.filter(function (r) { return r.game === 'm60'; }).map(function (r) { var o = r.detail && r.detail.oks ? r.detail.oks : []; return [d(r.played_at), r.scores.length, o.reduce(function (a, b) { return a + b; }, 0), r.target, r.scores.map(function (t, i) { return t + (o[i] ? '✓' : '✗'); }).join(' ')]; })) });
+      out.push({ name: 'Сектор', rows: [['Дата', 'Сектор', 'Очок', 'Дротики (0-3)']].concat(dr.filter(function (r) { return r.game === 'sector'; }).map(function (r) { return [d(r.played_at), r.target === 25 ? 'Bull' : r.target, r.detail && r.detail.points != null ? r.detail.points : r.scores.reduce(function (a, b) { return a + b; }, 0), r.scores.join(' ')]; })) });
+      return out;
+    },
+    reset: function () { T.legs = []; T.drills = []; T.detail = null; T.ghostPick = false; ml = null; sl = null; live = null; document.body.classList.remove('ms-live'); wakeOff(); }
   });
 })();
