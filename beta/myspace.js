@@ -167,7 +167,7 @@
     return '<div class="pf"><div class="pf-av">' + (P.photo ? '<img src="' + esc(P.photo) + '" alt="">' : siteBioPhoto() + initials()) + '</div><div class="pf-i"><h2>' + esc(member.player_name) + '</h2>' +
       (nick ? '<div class="pf-n">«' + esc(nick) + '»</div>' : '') + '<div class="pf-m">' + esc(meta.join(' · ') || session.user.email) + '</div>' +
       (P.season_goal ? '<div class="pf-m">🎯 ' + esc(P.season_goal) + '</div>' : '') + (P.bio ? '<div class="pf-b">' + esc(P.bio) + '</div>' : '') +
-      '<p style="margin:8px 0 0"><button type="button" class="ms-btn sec sm" data-pf="edit">✏️ Редагувати профіль</button></p></div></div>';
+      '<p style="margin:8px 0 0;display:flex;gap:8px;flex-wrap:wrap"><button type="button" class="ms-btn sec sm" data-pf="edit">✏️ Редагувати профіль</button><button type="button" class="theme-sw" style="padding:6px 10px;font-size:12px">' + (window.__getTheme && window.__getTheme() === 'light' ? '🌙 Темна тема' : '☀ Світла тема') + '</button></p></div></div>';
   }
   function resizePhoto(file, cb) {
     var rd = new FileReader();

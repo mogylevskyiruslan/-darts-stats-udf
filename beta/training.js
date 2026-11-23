@@ -27,6 +27,7 @@
     '.tr-ghost{background:#1d2250;border:1px solid var(--royal-light);border-radius:12px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;margin:6px 0}',
     '.tr-ghost b{font:800 22px Montserrat,Inter,sans-serif}.tr-ghost.lose{border-color:#c0392b}.tr-ghost.win{border-color:#2e8b57}',
     '.tr-prog{margin:12px 0 2px;text-align:center}.tr-prog .seg{display:flex;gap:4px;margin-bottom:6px}.tr-prog .seg i{flex:1;height:8px;border-radius:5px;background:var(--panel-2);border:1px solid var(--line)}.tr-prog .seg i.d{background:#2e8b57;border-color:#2e8b57}.tr-prog .seg i.c{background:var(--gold);border-color:var(--gold);animation:trp 1.2s infinite}.tr-prog b{font-size:14px;color:var(--cream)}.tr-prog span{font-size:12px;color:var(--muted)}@keyframes trp{50%{opacity:.45}}',
+    '@keyframes trflash{0%{box-shadow:0 0 0 0 rgba(252,194,2,.9)}100%{box-shadow:0 0 0 14px rgba(252,194,2,0)}}.flash{animation:trflash .9s ease-out 2;border-color:var(--gold)!important}',
     '.tr-last{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;min-height:26px;margin:4px 0}',
     '.tr-last span{background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:3px 9px;font:700 13px Inter,sans-serif}',
     '.tr-ent{background:var(--bg);border:1px solid var(--line);border-radius:12px;text-align:center;font:800 40px/1.4 Montserrat,Inter,sans-serif;min-height:58px;margin:6px 0}',
@@ -180,7 +181,10 @@
     var row = { client_id: live.id, played_at: new Date().toISOString(), mode: live.mode, start_score: 501, scores: live.scores.slice(), darts: darts(), last_darts: d, finished: true,
       ghost_leg_id: live.ghost ? live.ghost.id : null, ghost_result: ghostStatus() };
     if (live.ghost) { row.ghost_scores = live.ghost.scores; row.ghost_darts = live.ghost.darts; }
-    if (live.match) { row.match_id = live.match.id; row.best_of = live.match.bestOf; if (row.ghost_result === 'win') live.match.w++; else live.match.l++; }
+    if (live.match) { row.match_id = live.match.id; row.best_of = live.match.bestOf; if (row.ghost_result === 'win') live.match.w++; else live.match.l++;
+      var gk = Math.min(live.scores.length, live.ghost.scores.length), M = live.match;
+      M.sc = (M.sc || 0) + sum(row.scores); M.dt = (M.dt || 0) + row.darts;
+      M.gsc = (M.gsc || 0) + sum(live.ghost.scores.slice(0, gk)); M.gdt = (M.gdt || 0) + (gk >= live.ghost.scores.length ? live.ghost.darts : 3 * gk); }
     saveLeg(row); live.done = true; lset('ms_live', null); wakeOff(); MS().render();
   }
   function undo() {
@@ -483,6 +487,13 @@
     if (s.status === 'accepted') return '<div class="ms-card"><b style="color:#8fe3b0">✓ ' + esc(m.opp) + ' підтвердив(ла) матч</b></div>';
     return '<div class="ms-card"><b style="color:#ff9d9d">✗ ' + esc(m.opp) + ' відхилив(ла) матч</b><p style="margin:8px 0 0">' + btn + '</p></div>';
   }
+  function focusSetup() {
+    setTimeout(function () {
+      var e = document.getElementById('tr-setup'); if (!e) return;
+      try { e.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (x) { window.scrollTo(0, e.offsetTop); }
+      e.classList.remove('flash'); void e.offsetWidth; e.classList.add('flash');
+    }, 40);
+  }
   function sideStats(items) {
     var sc = 0, dt = 0, f9s = 0, f9d = 0, c180 = 0, c140 = 0, c100 = 0, hi = 0, best = null, att = 0, chk = 0;
     items.forEach(function (x) {
@@ -505,7 +516,8 @@
       rows += '<div style="display:grid;grid-template-columns:28px 1fr 1fr;gap:6px;padding:4px 0;border-top:1px solid var(--line);font-size:13px"><span style="color:var(--muted)">' + (i + 1) + '</span>' +
         '<span>' + (sa != null ? '<b>' + sa + '</b> <small style="color:var(--muted)">→ ' + ra + '</small>' : '') + '</span><span>' + (sb2 != null ? '<b>' + sb2 + '</b> <small style="color:var(--muted)">→ ' + rb + '</small>' : '') + '</span></div>';
     }
-    return '<div style="display:grid;grid-template-columns:28px 1fr 1fr;gap:6px;font-size:11px;color:var(--muted);font-weight:700;margin-top:8px"><span>№</span><span>Ви</span><span>' + esc(nameB) + '</span></div>' + rows;
+    if (nameB === null) rows = rows.replace(/grid-template-columns:28px 1fr 1fr/g, 'grid-template-columns:28px 1fr');
+    return '<div style="display:grid;grid-template-columns:28px 1fr' + (nameB === null ? '' : ' 1fr') + ';gap:6px;font-size:11px;color:var(--muted);font-weight:700;margin-top:8px"><span>№</span><span>Ви</span>' + (nameB === null ? '' : '<span>' + esc(nameB) + '</span>') + '</div>' + rows;
   }
   function viewMatch(id) {
     var m = matches().filter(function (x) { return x.id === id; })[0];
@@ -533,18 +545,20 @@
   }
   function view501() {
     var legs = legsFor(), a = agg(legs), allN = T.legs.filter(function (l) { return l.finished !== false; }).length, w = MS().canWrite();
-    var pend = queue().length, h = '';
-    if (pend) h += '<div class="ms-warn">⏳ Чекають на синхронізацію: ' + pend + '. Відправиться, коли з\'явиться інтернет.</div>';
-    h += '<div class="ms-card"><b>501DO · лічильник</b><p class="sub" style="margin:4px 0 10px">Рахуйте свої леги. Статистика накопичується автоматично.</p><div class="ms-row">' +
+    var pend = queue().length, h = '', setupMode = !!(DU.setup || (T.ghostPick && allN >= 10));
+    if (setupMode) h += '<p style="margin:0 0 10px"><button type="button" class="ms-btn sec sm" data-tr="' + (DU.setup ? 'du-cancel' : 'gcancel') + '">‹ Назад до тренувань</button></p>';
+    if (!setupMode && pend) h += '<div class="ms-warn">⏳ Чекають на синхронізацію: ' + pend + '. Відправиться, коли з\'явиться інтернет.</div>';
+    if (!setupMode) h += '<div class="ms-card"><b>501DO · лічильник</b><p class="sub" style="margin:4px 0 10px">Рахуйте свої леги. Статистика накопичується автоматично.</p><div class="ms-row">' +
       '<button type="button" class="ms-btn" data-tr="start" ' + (w ? '' : 'disabled') + '>▶ Новий лег</button>' +
       '<button type="button" class="ms-btn sec" data-tr="ghost" ' + (w && allN >= 10 ? '' : 'disabled') + '>👻 Гра з тінню' + (allN >= 10 ? '' : ' · ' + allN + '/10') + '</button><button type="button" class="ms-btn sec" data-tr="du-open" ' + (w ? '' : 'disabled') + '>🤝 Матч із людиною</button></div>' +
       (allN >= 10 ? '' : '<p class="sub" style="margin:8px 0 0">«Тінь» відкриється після 10 завершених легів: вона відтворює один із ваших останніх 50 легів.</p>') + '</div>';
-    h += inboxHtml();
+    if (!setupMode) h += inboxHtml();
     if (DU.setup) h += duSetupView();
     if (T.ghostPick && allN >= 10) {
-      h += '<div class="ms-card"><b>👻 Гра з тінню</b><p class="sub" style="margin:4px 0 10px">Оберіть формат матчу. Best of N: перемагає той, хто першим виграє більшість легів. Для кожного лега тінню стає випадковий із ваших останніх 50 легів.</p><div class="tr-sg" style="grid-template-columns:repeat(3,1fr)">' +
+      h += '<div class="ms-card" id="tr-setup" data-flash="1"><b>👻 Гра з тінню · налаштування</b><p class="sub" style="margin:4px 0 10px">Оберіть формат матчу. Best of N: перемагає той, хто першим виграє більшість легів. Для кожного лега тінню стає випадковий із ваших останніх 50 легів.</p><div class="tr-sg" style="grid-template-columns:repeat(3,1fr)">' +
         [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21].map(function (n) { return '<button type="button" data-tr="gbo" data-bo="' + n + '">Best of ' + n + '</button>'; }).join('') + '</div><p style="margin:10px 0 0"><button type="button" class="ms-btn sec sm" data-tr="gcancel">Скасувати</button></p></div>';
     }
+    if (setupMode) return h;
     var ms = matches();
     if (ms.length) {
       h += '<div class="ms-card"><b>Історія матчів</b><p class="sub" style="margin:4px 0 6px">Натисніть на матч, щоб побачити деталі.</p>' + ms.slice(0, 15).map(function (m) {
@@ -597,7 +611,9 @@
       var gr = ghostRem();
       gh = '<div class="tr-ghost ' + (gs2 === 'loss' ? 'lose' : '') + '"><span>👻 Тінь</span><b>' + (gs2 === 'loss' ? 'закрила' : gr) + '</b><span>' + (gs2 === 'loss' ? 'за ' + live.ghost.darts + ' дрот.' : 'візит ' + Math.min(live.scores.length, live.ghost.scores.length) + '/' + live.ghost.scores.length) + '</span></div>';
     }
-    var n = live.scores.length, sc = sum(live.scores), avg = n ? sc / (3 * n) * 3 : 0;
+    var n = live.scores.length, sc = sum(live.scores), avg = n ? sc / (3 * n) * 3 : 0, M0 = live.match || null;
+    var mAvg = (M0 || n) ? ((M0 ? (M0.sc || 0) : 0) + sc) / (((M0 ? (M0.dt || 0) : 0) + 3 * n) || 1) * 3 : 0, gAvg = null;
+    if (live.ghost) { var gv0 = live.ghost.scores.slice(0, n), gdt0 = n >= live.ghost.scores.length ? live.ghost.darts : 3 * n; gAvg = ((M0 ? (M0.gsc || 0) : 0) + sum(gv0)) / (((M0 ? (M0.gdt || 0) : 0) + gdt0) || 1) * 3; }
     var body;
     if (live.pending != null) {
       body = '<p class="sub" style="text-align:center;margin:12px 0 0">Закриття ' + r + '. Яким дротиком закрили?</p>' + dartBtns(r) + '<p style="text-align:center"><button type="button" class="ms-btn sec sm" data-tr="undo">↶ Скасувати введення</button></p>';
@@ -608,9 +624,10 @@
         '<button type="button" data-tr="bs">⌫</button><button type="button" data-tr="k" data-n="0">0</button><button type="button" class="ok" data-tr="ok">OK</button></div>' +
         '<p style="text-align:center;margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-tr="undo"' + (n ? '' : ' disabled') + '>↶ Скасувати візит</button></p><p class="sub kbhint" style="text-align:center;margin:8px 0 0">З клавіатури: цифри · Enter — ввести · Backspace — стерти · Delete — скасувати візит</p>';
     }
-    return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="quit">✕ Вийти</button><span>' + (live.match ? 'Тінь · BO' + live.match.bestOf + ' · ' + live.match.w + ':' + live.match.l : 'Соло') + ' · візит ' + (n + 1) + '</span><span>сер. ' + (n ? f2(avg) : '—') + '</span></div>' +
+    return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="quit">✕ Вийти</button><span>' + (live.match ? 'Тінь · BO' + live.match.bestOf + ' · ' + live.match.w + ':' + live.match.l : 'Соло') + ' · візит ' + (n + 1) + '</span><span>сер. ' + (n ? f2(live.match ? mAvg : avg) : '—') + (live.match ? ' (гра)' : '') + '</span></div>' +
       '<div class="tr-rem">' + r + '<small>залишилось</small></div>' + gh +
-      '<div class="tr-last">' + live.scores.slice(-6).map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div>' + body + '</div>';
+      (live.ghost ? '<div class="sub" style="text-align:center;margin:6px 0 0">середній' + (live.match ? ' за матч' : '') + ': ви <b>' + (n ? f2(live.match ? mAvg : avg) : '—') + '</b> · 👻 <b>' + (n ? f2(gAvg) : '—') + '</b></div>' : '') + body +
+      '<div class="ms-card" style="margin-top:14px"><b>Усі підходи' + (live.ghost ? '' : ' цього лега') + '</b>' + (n ? (live.ghost ? visitsTable(live.scores, live.ghost.scores.slice(0, n), '👻 Тінь') : visitsTable(live.scores, [], null)) : '<p class="sub" style="margin:6px 0 0">Поки немає підходів.</p>') + '</div></div>';
   }
 
   // ---------- матч із людиною (офлайн, один пристрій) ----------
@@ -621,7 +638,7 @@
   function duName(i) { return i === 0 ? 'Ви' : dl.name; }
   function duLive(on) { document.body.classList.toggle('ms-live', !!on); on ? wakeOn() : wakeOff(); }
   function duStart(name, bo, first) {
-    dl = { id: uuid(), bestOf: bo, need: (bo + 1) / 2, name: name || 'Суперник', w: [0, 0], n: 1, leg: duLeg(first), over: false, started: new Date().toISOString() };
+    dl = { id: uuid(), bestOf: bo, need: (bo + 1) / 2, name: name || 'Суперник', w: [0, 0], n: 1, tot: [{ sc: 0, dt: 0 }, { sc: 0, dt: 0 }], hist: [], leg: duLeg(first), over: false, started: new Date().toISOString() };
     DU.setup = null; duSave(); duLive(true); window.scrollTo(0, 0); MS().render();
   }
   function duSubmit(score) {
@@ -641,6 +658,9 @@
     if (!row.scores.length) { row.scores = [0]; row.darts = 3; }
     if (!row.ghost_scores.length) { row.ghost_scores = [0]; row.ghost_darts = 3; }
     saveLeg(row); dl.w[p]++;
+    dl.tot = dl.tot || [{ sc: 0, dt: 0 }, { sc: 0, dt: 0 }]; dl.hist = dl.hist || [];
+    dl.tot[0].sc += sum(L.sc[0]); dl.tot[0].dt += d0; dl.tot[1].sc += sum(L.sc[1]); dl.tot[1].dt += d1;
+    dl.hist.push({ a: L.sc[0].slice(), b: L.sc[1].slice(), win: win, first: L.starter });
     if (dl.w[p] >= dl.need) { dl.over = true; dl.winner = p; lset('ms_duel', null); duLive(false); return MS().render(); }
     MS().toast('Лег: ' + duName(p) + '. Рахунок ' + dl.w[0] + ':' + dl.w[1]);
     dl.n++; dl.leg = duLeg(1 - L.starter); duSave(); MS().render();
@@ -660,7 +680,10 @@
       '<div class="tr-kp">' + [1, 2, 3, 4, 5, 6, 7, 8, 9].map(function (d) { return '<button type="button" data-tr="du-k" data-n="' + d + '">' + d + '</button>'; }).join('') +
       '<button type="button" data-tr="du-bs">⌫</button><button type="button" data-tr="du-k" data-n="0">0</button><button type="button" class="ok" data-tr="du-ok">OK</button></div>';
   }
-  function duAvg(i) { var s = dl.leg.sc[i]; return s.length ? sum(s) / (3 * s.length) * 3 : null; }
+  function duAvg(i) {
+    var s = dl.leg.sc[i], t = (dl.tot && dl.tot[i]) || { sc: 0, dt: 0 }, dt = t.dt + 3 * s.length;
+    return dt ? (t.sc + sum(s)) / dt * 3 : null;
+  }
   function viewDuel() {
     if (!dl) return null;
     if (dl.over) {
@@ -674,14 +697,16 @@
         '<div style="font-size:12px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + (t === i ? '● ' : '') + esc(duName(i)) + (L.starter === i ? ' 🎯' : '') + '</div>' +
         '<div style="font:800 12px Inter,sans-serif;color:var(--muted)">лег ' + dl.w[i] + '</div>' +
         '<div style="font:800 44px Montserrat,Inter,sans-serif;line-height:1.1;color:' + (t === i ? 'var(--gold)' : 'var(--cream)') + '">' + duRem(i) + '</div>' +
-        '<div style="font-size:11px;color:var(--muted)">' + (last != null ? 'останній ' + last : '—') + (a ? ' · сер. ' + f2(a) : '') + '</div></div>';
+        '<div style="font-size:11px;color:var(--muted)">' + (last != null ? 'останній ' + last : '—') + (a ? ' · сер. гри ' + f2(a) : '') + '</div></div>';
     });
     var body = L.pending != null ? '<p class="sub" style="text-align:center;margin:12px 0 0">' + esc(duName(t)) + ': закриття ' + duRem(t) + '. Яким дротиком закрили?</p><div class="tr-d">' + [1, 2, 3].map(function (d) { return '<button type="button" data-tr="du-d" data-d="' + d + '"' + (d < minDarts(duRem(t)) ? ' disabled style="opacity:.2"' : '') + '>' + d + '</button>'; }).join('') + '</div>' : duPad();
     return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="du-quit">✕ Вийти</button><span>🤝 BO' + dl.bestOf + ' · лег ' + dl.n + '</span>' +
       (L.seq.length ? '<span></span>' : '<button type="button" class="ms-btn sec sm" data-tr="du-first">⇄ Хто починає</button>') + '</div>' +
       '<div style="display:flex;gap:8px;margin-top:10px">' + cols.join('') + '</div>' +
       '<p style="text-align:center;margin:10px 0 0;font-weight:700">Вносить: ' + esc(duName(t)) + '<span style="font-weight:400;color:var(--muted);font-size:12px"> · 🎯 перший кидок: ' + esc(duName(L.starter)) + '</span></p>' + body +
-      '<p style="text-align:center;margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-tr="du-undo"' + (L.seq.length || L.pending != null ? '' : ' disabled') + '>↶ Скасувати візит</button></p></div>';
+      '<p style="text-align:center;margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-tr="du-undo"' + (L.seq.length || L.pending != null ? '' : ' disabled') + '>↶ Скасувати візит</button></p>' +
+      '<div class="ms-card" style="margin-top:14px"><b>Усі підходи · лег ' + dl.n + '</b>' + (L.sc[0].length || L.sc[1].length ? visitsTable(L.sc[0], L.sc[1], dl.name) : '<p class="sub" style="margin:6px 0 0">Поки немає підходів.</p>') + '</div>' +
+      ((dl.hist && dl.hist.length) ? '<div class="ms-card"><b>Попередні леги</b>' + dl.hist.map(function (x, i) { return '<details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px">Лег ' + (i + 1) + ' · ' + (x.win ? '✓ ваш' : '✗ ' + esc(dl.name)) + '</summary>' + visitsTable(x.a, x.b, dl.name) + '</details>'; }).join('') + '</div>' : '') + '</div>';
   }
   function duSetupView() {
     var S = DU.setup, names = {};
@@ -689,7 +714,7 @@
     try { (curatedPlayerNames || []).forEach(function (n) { names[n] = 1; }); } catch (e) {}
     var me = MS().siteName(); delete names[me]; var mem = T.members.filter(function (n) { return n !== me; }); mem.forEach(function (n) { delete names[n]; });
     var nm = S.name || 'Суперник';
-    return '<div class="ms-card"><b>🤝 Матч із людиною</b><p class="sub" style="margin:4px 0 10px">Грайте з другом на одному пристрої: 501, закриття через дабл. Ваша статистика запишеться в тренування.</p>' +
+    return '<div class="ms-card" id="tr-setup" data-flash="1"><b>🤝 Матч із людиною · налаштування</b><p class="sub" style="margin:4px 0 10px">Грайте з другом на одному пристрої: 501, закриття через дабл. Ваша статистика запишеться в тренування.</p>' +
       '<label class="sub" style="display:block;margin:6px 0 4px">Ім\'я суперника (можна вибрати гравця з сайту або ввести своє)</label><input class="ms-in" id="du-name" list="du-names" maxlength="60" value="' + esc(S.name || '') + '" placeholder="Суперник"><datalist id="du-names">' + mem.concat(Object.keys(names).sort()).map(function (n) { return '<option value="' + esc(n) + '">'; }).join('') + '</datalist>' +
       '<p class="sub" id="du-hint" style="margin:6px 0 0">' + duHint(S.name) + '</p>' +
       '<label class="sub" style="display:block;margin:12px 0 4px">Формат: best of</label><div class="tr-sg" style="grid-template-columns:repeat(4,1fr)">' + [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21].map(function (n) { return '<button type="button" data-tr="du-bo" data-bo="' + n + '"' + (S.bo === n ? ' style="background:var(--royal);color:#fff;border-color:var(--royal-light)"' : '') + '>' + n + '</button>'; }).join('') + '</div>' +
@@ -702,7 +727,7 @@
   document.addEventListener('click', function (e) {
     var b = e.target.closest('[data-tr]'); if (!b || !b.closest('#my-space')) return;
     var a = b.getAttribute('data-tr'); if (a.indexOf('du-') !== 0) return;
-    if (a === 'du-open') { if (!MS().canWrite()) return; DU.setup = { name: '', bo: 3, first: 0 }; MS().render(); }
+    if (a === 'du-open') { if (!MS().canWrite()) return; DU.setup = { name: '', bo: 3, first: 0 }; MS().render(); focusSetup(); }
     else if (a === 'du-cancel') { DU.setup = null; MS().render(); }
     else if (a === 'du-bo') { DU.setup.bo = Number(b.getAttribute('data-bo')); MS().render(); }
     else if (a === 'du-fs') { DU.setup.first = Number(b.getAttribute('data-f')); MS().render(); }
@@ -741,7 +766,7 @@
     var a = b.getAttribute('data-tr');
     if (navigator.vibrate && (a === 'k' || a === 'q' || a === 'ok')) { try { navigator.vibrate(8); } catch (x) {} }
     if (a === 'game') { T.game = b.getAttribute('data-g'); MS().render(); }
-    else if (a === 'ghost') { T.ghostPick = true; MS().render(); }
+    else if (a === 'ghost') { T.ghostPick = true; MS().render(); focusSetup(); }
     else if (a === 'gcancel') { T.ghostPick = false; MS().render(); }
     else if (a === 'gbo') { T.ghostPick = false; startMatch(Number(b.getAttribute('data-bo'))); }
     else if (a === 'mdetail') { var mid = b.getAttribute('data-mid'); live = null; document.body.classList.remove('ms-live'); wakeOff(); lset('ms_live', null); T.game = '501'; T.detail = mid; window.scrollTo(0, 0); MS().render(); }
@@ -812,7 +837,7 @@
         if (ms.length) c.push(stt(ms.filter(function (m) { return m.won; }).length + ' / ' + ms.length, 'матчів з тінню виграно'));
       }
       var p = dr.filter(function (r) { return r.game === 'p171'; }), m = dr.filter(function (r) { return r.game === 'm60'; }), sc = dr.filter(function (r) { return r.game === 'sector'; });
-      if (p.length) c.push(stt(Math.max.apply(null, p.filter(function (r) { return r.success; }).map(function (r) { return r.target; }).concat([0])) || '—', '170+1: найвища закрита ціль'));
+      if (p.length) c.push(stt(p.length, '170+1: спроб'), stt(sum(p.map(function (r) { return r.darts || 0; })), '170+1: дротиків'));
       if (m.length) c.push(stt(Math.max.apply(null, m.map(function (r) { return r.target || 0; })) || '—', '60+10−1: найвища ціль'));
       if (sc.length) c.push(stt(sc.length, 'тренувань «Сектор»'));
       if (!c.length) return '';

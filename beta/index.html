@@ -772,7 +772,37 @@ body{padding-bottom:78px}
   .bsheet .bpanel{left:50%;right:auto;bottom:auto;top:12%;transform:translateX(-50%);width:460px;border-radius:18px;border:1px solid var(--line)}
 }
 </style>
-</head>
+<style id="beta-theme-css">
+html[data-theme=light]{--bg:#f2f4fb;--panel:#ffffff;--panel-2:#eaeefa;--line:#d3d9ee;--royal-dark:#dfe5ff;--royal:#2b3cae;--royal-light:#4a64e8;--gold:#c48a00;--gold-2:#d97706;--cream:#161c46;--muted:#5a6390;color-scheme:light}
+html[data-theme=light] body{background:var(--bg);color:var(--cream)}
+html[data-theme=light] .hero{background:linear-gradient(135deg,#e6ebff,#f6f8ff)!important;color:var(--cream)}
+html[data-theme=light] .bt{background:rgba(255,255,255,.92)}
+html[data-theme=light] .ms-btn{color:#161c46}
+html[data-theme=light] #beta-quick .q.reg b{color:#fff}
+html[data-theme=light] #beta-quick .q.reg small{color:#dbe3ff}
+html[data-theme=light] .bbar{background:rgba(255,255,255,.97);border-top:1px solid var(--line)}
+html[data-theme=light] .ms-btn.sec{color:var(--cream)}
+html[data-theme=light] .tr-kp button.ok,html[data-theme=light] .ms-btn.ok{color:#fff}
+html[data-theme=light] .ms-badge{color:#fff}
+html[data-theme=light] .bsheet{background:rgba(20,28,70,.35)}
+html[data-theme=light] ::-webkit-scrollbar-thumb{background:#c2c9e4}
+.theme-sw{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--panel);color:var(--cream);border-radius:10px;padding:9px 14px;font:600 13px Inter,sans-serif;cursor:pointer}
+</style><script id="beta-theme-js">
+(function(){
+  function get(){ try{ return localStorage.getItem('vfd_theme') || 'dark'; }catch(e){ return 'dark'; } }
+  function apply(t){
+    document.documentElement.setAttribute('data-theme', t);
+    var m = document.querySelector('meta[name=theme-color]'); if(m) m.setAttribute('content', t === 'light' ? '#f2f4fb' : '#0c1230');
+    Array.prototype.forEach.call(document.querySelectorAll('.theme-sw'), function(b){ b.textContent = t === 'light' ? '🌙 Темна тема' : '☀ Світла тема'; });
+  }
+  window.__getTheme = get;
+  window.__setTheme = function(t){ try{ localStorage.setItem('vfd_theme', t); }catch(e){} apply(t); };
+  window.__toggleTheme = function(){ window.__setTheme(get() === 'light' ? 'dark' : 'light'); };
+  apply(get());
+  document.addEventListener('DOMContentLoaded', function(){ apply(get()); });
+  document.addEventListener('click', function(e){ var b = e.target.closest && e.target.closest('.theme-sw'); if(b){ e.preventDefault(); window.__toggleTheme(); } });
+})();
+</script></head>
 <body>
 
 <div class="hero">
@@ -4137,6 +4167,7 @@ loadData();
     }).join('') + '<div class="grp"><h3>⚙ Налаштування</h3><div class="set" id="beta-set"></div></div>';
     var set = $('#beta-set');
     var lang = document.getElementById('lang-toggle'), udl = document.querySelector('.global-udl-toggle');
+    var tb = document.createElement('button'); tb.type = 'button'; tb.className = 'theme-sw'; tb.textContent = (window.__getTheme && window.__getTheme() === 'light') ? '🌙 Темна тема' : '☀ Світла тема'; set.appendChild(tb);
     if(lang) set.appendChild(lang);
     if(udl) set.appendChild(udl);
   }

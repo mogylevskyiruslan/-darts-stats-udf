@@ -86,7 +86,7 @@
     X.summary = null;
     if (kind === 'dbl') X.s = { id: uuid(), kind: kind, t: t, v: [], N: 5 };
     else if (kind === 'trp') X.s = { id: uuid(), kind: kind, t: t, v: [], N: 10 };
-    else X.s = { id: uuid(), kind: 'score', v: [], N: 10 };
+    else X.s = { id: uuid(), kind: 'score', v: [], N: 10, entry: '' };
     live(true); MS().render();
   }
   function finishS() {
@@ -112,12 +112,16 @@
     if (s.kind === 'dbl') { title = 'Дабл ' + dn(s.t) + ' · підхід ' + (vis + 1) + '/' + s.N; body = '<p class="sub" style="text-align:center;margin:14px 0 0">Скільки з 3 дротиків влучили в ' + dn(s.t) + '?</p><div class="tr-sec four" style="grid-template-columns:1fr 1fr">' + [0, 1, 2, 3].map(function (n) { return '<button type="button" class="' + (n === 0 ? 'no' : n === 3 ? 'yes' : '') + '" data-dx="v" data-n="' + n + '">' + n + '</button>'; }).join('') + '</div>'; }
     else if (s.kind === 'trp') { title = 'Тріпл ' + s.t + ' · підхід ' + (vis + 1) + '/' + s.N; body = '<p class="sub" style="text-align:center;margin:14px 0 0">Скільки з 3 дротиків влучили в тріпл ' + s.t + '?</p><div class="tr-sec four" style="grid-template-columns:1fr 1fr">' + [0, 1, 2, 3].map(function (n) { return '<button type="button" class="' + (n === 0 ? 'no' : n === 3 ? 'yes' : '') + '" data-dx="v" data-n="' + n + '">' + n + '</button>'; }).join('') + '</div>'; }
     else if (s.kind === 'score') {
+      var avgS = vis ? pts / vis : 0;
       title = 'Скоринг · підхід ' + (vis + 1) + '/' + s.N;
-      body = '<p class="sub" style="text-align:center;margin:14px 0 6px">Введіть суму за 3 дротики (у 20-ку чи по мішені, як вирішите).</p><form id="dx-sf" class="ms-row" style="justify-content:center"><input class="ms-in" id="dx-sin" type="number" inputmode="numeric" min="0" max="180" style="width:120px;font-size:22px;text-align:center" autofocus><button class="ms-btn" type="submit">OK</button></form>' +
-        '<div class="tr-sg" style="grid-template-columns:repeat(4,1fr);margin-top:12px">' + [0, 26, 41, 45, 60, 85, 100, 140, 180].map(function (n) { return '<button type="button" data-dx="v" data-n="' + n + '">' + n + '</button>'; }).join('') + '</div>';
+      body = '<div style="display:flex;gap:8px;margin-top:12px"><div class="ms-stat" style="flex:1;text-align:center"><b style="font-size:34px">' + pts + '</b><span>набрано всього</span></div><div class="ms-stat" style="flex:1;text-align:center"><b style="font-size:34px;color:var(--gold)">' + (vis ? f2(avgS) : '—') + '</b><span>середній за підхід</span></div></div>' +
+        '<div class="tr-ent" id="tr-ent">' + (s.entry || '<span style="color:var(--muted)">0</span>') + '</div>' +
+        '<div class="tr-q">' + [26, 41, 45, 60, 85, 100, 140, 180].map(function (q) { return '<button type="button" data-dx="v" data-n="' + q + '">' + q + '</button>'; }).join('') + '</div>' +
+        '<div class="tr-kp">' + [1, 2, 3, 4, 5, 6, 7, 8, 9].map(function (n) { return '<button type="button" data-dx="dk" data-n="' + n + '">' + n + '</button>'; }).join('') + '<button type="button" data-dx="dbs">⌫</button><button type="button" data-dx="dk" data-n="0">0</button><button type="button" class="ok" data-dx="dok">OK</button></div>' +
+        (vis ? '<div class="ms-card" style="margin-top:14px"><b>Усі підходи</b><div style="display:grid;grid-template-columns:28px 1fr 1fr 1fr;gap:6px;font-size:11px;color:var(--muted);font-weight:700;margin-top:8px"><span>№</span><span>Набір</span><span>Всього</span><span>Сер.</span></div>' + (function () { var run = 0; return s.v.map(function (x, i) { run += x; return '<div style="display:grid;grid-template-columns:28px 1fr 1fr 1fr;gap:6px;padding:4px 0;border-top:1px solid var(--line);font-size:13px"><span style="color:var(--muted)">' + (i + 1) + '</span><b>' + x + '</b><span>' + run + '</span><span>' + f2(run / (i + 1)) + '</span></div>'; }).join(''); })() + '</div>' : '');
     }
     return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-dx="quit">✕ Вийти</button><span>' + title + '</span><span>' + (s.kind === 'score' ? 'Σ ' + pts : pts + ' влуч.') + '</span></div>' + (window.__trProg ? window.__trProg(vis, s.N, 'Підхід') : '') + body +
-      '<div class="tr-last">' + s.v.slice(-8).map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div>' +
+      (s.kind === 'score' ? '' : '<div class="tr-last">' + s.v.slice(-8).map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div>') +
       '<p style="text-align:center;margin:14px 0 0"><button type="button" class="ms-btn sec sm" data-dx="undo"' + (vis ? '' : ' disabled') + '>↶ Скасувати</button> ' + (s.kind === 'score' ? '<button type="button" class="ms-btn sec sm" data-dx="end"' + (vis ? '' : ' disabled') + '>Завершити</button>' : '') + '</p></div>';
   }
   function summary() {
@@ -173,18 +177,28 @@
       if (!MS().canWrite()) return;
       X.game = k; startS(k, n);
     }
-    else if (a === 'v') { if (X.s) addV(Number(b.getAttribute('data-n'))); }
+    else if (a === 'v') { if (X.s) { var nv = Number(b.getAttribute('data-n')); if (X.s.kind === 'score' && IMPOSSIBLE.indexOf(nv) >= 0) return MS().toast('Такий набір неможливий'); X.s.entry = ''; addV(nv); } }
+    else if (a === 'dk') { if (X.s && X.s.kind === 'score' && X.s.entry.length < 3) { X.s.entry += b.getAttribute('data-n'); if (X.s.entry === '00') X.s.entry = '0'; MS().render(); } }
+    else if (a === 'dbs') { if (X.s) { X.s.entry = (X.s.entry || '').slice(0, -1); MS().render(); } }
+    else if (a === 'dok') scoreOk();
     else if (a === 'undo') { if (X.s && X.s.v.length) { X.s.v.pop(); MS().render(); } }
     else if (a === 'end') finishS();
     else if (a === 'quit') { if (!X.s.v.length || confirm('Вийти без збереження?')) { X.s = null; live(false); MS().render(); } }
     else if (a === 'close') { X.summary = null; MS().render(); }
     else if (a === 'del') { var id = Number(b.getAttribute('data-id')); if (confirm('Видалити запис?')) MS().sb().from('drills').delete().eq('id', id).then(function (r) { if (r.error) return MS().fail(r.error); X.rows = X.rows.filter(function (x) { return x.id !== id; }); MS().render(); }); }
   });
-  document.addEventListener('submit', function (e) {
-    if (e.target.id !== 'dx-sf') return; e.preventDefault();
-    var v = parseInt(document.getElementById('dx-sin').value, 10);
-    if (!isFinite(v) || v < 0 || v > 180 || IMPOSSIBLE.indexOf(v) >= 0) return MS().toast('Такий набір неможливий (0–180)');
-    if (X.s) addV(v);
+  function scoreOk() {
+    var s = X.s; if (!s || s.kind !== 'score' || s.entry === '') return;
+    var v = parseInt(s.entry, 10); s.entry = '';
+    if (!isFinite(v) || v < 0 || v > 180 || IMPOSSIBLE.indexOf(v) >= 0) { MS().toast('Такий набір неможливий (0–180)'); return MS().render(); }
+    addV(v);
+  }
+  document.addEventListener('keydown', function (e) {
+    var s = X.s; if (!s || s.kind !== 'score' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var t = e.target && e.target.tagName; if (t === 'INPUT' || t === 'SELECT' || t === 'TEXTAREA') return;
+    if (/^[0-9]$/.test(e.key)) { e.preventDefault(); if (s.entry.length < 3) { s.entry += e.key; if (s.entry === '00') s.entry = '0'; } MS().render(); }
+    else if (e.key === 'Backspace') { e.preventDefault(); if (s.entry) { s.entry = s.entry.slice(0, -1); MS().render(); } else if (s.v.length) { s.v.pop(); MS().render(); } }
+    else if (e.key === 'Enter') { e.preventDefault(); scoreOk(); }
   });
 
   var css = document.createElement('style');
