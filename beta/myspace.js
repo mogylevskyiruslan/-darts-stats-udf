@@ -191,8 +191,23 @@
   }
   var siteRetry = 0;
   function yearUa(d) { return Number(String(d || '').slice(-4)); }
+  function nkey(n) {
+    return String(n || '').toLowerCase().replace(/[ʼ'’`]/g, '').replace(/ё/g, 'е').replace(/[єе]/g, 'е').replace(/[иіїы]/g, 'и').replace(/[^a-zа-я ]/g, '').split(/\s+/).filter(Boolean).sort().join(' ');
+  }
+  function siteName(raw) {
+    var al = window.__nameAliases || {}, n = String(raw || '').trim().replace(/\s+/g, ' ');
+    if (al[n]) n = al[n];
+    var pool = [];
+    try { pool = (nakkaPlayerStats || []).map(function (r) { return r.name; }); } catch (e) {}
+    if (pool.indexOf(n) >= 0) return n;
+    var k = nkey(n), hit = null;
+    // порівняння без урахування регістру, є/е, і/и, порядку слів
+    pool.concat((typeof leaderboard !== 'undefined' ? leaderboard : []).map(function (p) { return p.name; })).forEach(function (x) { if (!hit && nkey(x) === k) hit = x; });
+    if (!hit && al) Object.keys(al).forEach(function (a) { if (!hit && nkey(a) === k) hit = al[a]; });
+    return hit || n;
+  }
   function siteBlock() {
-    var name = member && member.player_name, ready = typeof nakkaPlayerStats !== 'undefined' && nakkaPlayerStats && nakkaPlayerStats.length;
+    var name = siteName(member && member.player_name), ready = typeof nakkaPlayerStats !== 'undefined' && nakkaPlayerStats && nakkaPlayerStats.length;
     var head = '<div class="ms-src site"><div class="ms-srch"><b>🏛 Всеукраїнські турніри</b><span class="ms-badge">авто · основний сайт</span></div>' +
       '<p class="sub" style="margin:2px 0 10px">Створюється автоматично з протоколів ВФД та Nakka: Чемпіонати й Кубки України. Ви цю статистику не редагуєте.</p>';
     if (!ready) {
@@ -455,7 +470,7 @@
   sec.addEventListener('click', function (e) {
     var t = e.target;
     var b = t.closest('[data-prof],[data-t],[data-a],[data-v],[data-cm],[data-delev],[data-skdone],[data-skopen],[data-skdel]'); if (!b) return;
-    if (b.hasAttribute('data-prof')) { if (typeof openPlayerProfile === 'function') openPlayerProfile(member.player_name); }
+    if (b.hasAttribute('data-prof')) { if (typeof openPlayerProfile === 'function') openPlayerProfile(siteName(member.player_name)); }
     else if (b.hasAttribute('data-t')) { tab = b.getAttribute('data-t'); window.scrollTo(0, 0); render(); }
     else if (b.hasAttribute('data-cm')) { checkMode = b.getAttribute('data-cm'); render(); }
     else if (b.hasAttribute('data-v')) { var v = Number(b.getAttribute('data-v')); if (checkMode === 'hist' || !canWrite()) histModal(v); else addCheckout(v); }
