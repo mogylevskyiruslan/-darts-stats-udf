@@ -257,10 +257,35 @@
     sec.innerHTML = '<h2>Мій простір</h2><div class="ms-warn">Email <b>' + esc(session.user.email) + '</b> не знайдено у списку власників тур-карти. Напишіть організаторам ВФД, щоб додали вашу пошту, або увійдіть з іншою адресою.</div><button type="button" class="ms-btn sec" data-a="logout">Вийти</button>';
   }
 
+
+  // ---------- закриття: ручні + автоматичні (журнал ігор, основний сайт) ----------
+  function hideKey() { return 'ms_cohide_' + (session ? session.user.id : ''); }
+  function hidden() { try { return JSON.parse(localStorage.getItem(hideKey()) || '[]'); } catch (e) { return []; } }
+  function setHidden(a) { try { localStorage.setItem(hideKey(), JSON.stringify(a)); } catch (e) {} }
+  function autoAll() {
+    var out = [];
+    D.events.forEach(function (e) {
+      var seen = {};
+      (e.checkouts100 || []).forEach(function (v) { v = Number(v); if (VALUES.indexOf(v) < 0) return; seen[v] = (seen[v] || 0) + 1; out.push({ id: 'ev:' + e.id + ':' + v + ':' + seen[v], value: v, achieved_at: new Date(String(e.event_date).slice(0, 10) + 'T12:00:00').toISOString(), auto: 'game', label: e.title }); });
+    });
+    try {
+      var name = siteName(member && member.player_name);
+      (nakkaPlayerStats || []).forEach(function (r) {
+        if (r.name !== name || r.isUDL || !r.highOut || VALUES.indexOf(r.highOut) < 0) return;
+        var m = String(r.date || '').match(/(\d\d)\.(\d\d)\.(\d{4})/); if (!m) return;
+        out.push({ id: 'st:' + r.date + ':' + (r.tournament || '') + ':' + r.highOut, value: r.highOut, achieved_at: new Date(m[3] + '-' + m[2] + '-' + m[1] + 'T12:00:00').toISOString(), auto: 'site', label: r.tournament || 'турнір' });
+      });
+    } catch (e) {}
+    return out;
+  }
+  function autoVisible() { var h = hidden(); return autoAll().filter(function (c) { return h.indexOf(c.id) < 0; }); }
+  function COS() { return D.checkouts.concat(autoVisible()); }
+  function hideAuto(id) { var h = hidden(); if (h.indexOf(id) < 0) h.push(id); setHidden(h); render(); toast('Сховано. Повернути можна кнопкою «Показати сховані»', function () { setHidden(hidden().filter(function (x) { return x !== id; })); render(); }); }
+
   // ---------- Огляд ----------
   function yearsAvail() {
     var s = {}; s[new Date().getFullYear()] = 1;
-    D.checkouts.forEach(function (c) { s[yearOf(c.achieved_at)] = 1; });
+    COS().forEach(function (c) { s[yearOf(c.achieved_at)] = 1; });
     D.events.forEach(function (e) { s[yearOf(e.event_date)] = 1; });
     D.skills.forEach(function (k) { s[yearOf(k.done_at || k.created_at)] = 1; });
     return Object.keys(s).map(Number).sort(function (a, b) { return b - a; });
@@ -332,7 +357,7 @@
   function viewOverview() {
     var ys = yearsAvail();
     function inY(d) { return year === 'all' || yearOf(d) === year; }
-    var ck = D.checkouts.filter(function (c) { return inY(c.achieved_at); });
+    var ck = COS().filter(function (c) { return inY(c.achieved_at); });
     var ev = D.events.filter(function (e) { return inY(e.event_date); });
     var done = D.skills.filter(function (k) { return k.status === 'done' && k.done_at && inY(k.done_at); });
     var uniq = {}; ck.forEach(function (c) { uniq[c.value] = 1; });
@@ -360,11 +385,15 @@
 
   // ---------- Закриття ----------
   function viewCheckouts() {
-    var cnt = {}; D.checkouts.forEach(function (c) { cnt[c.value] = (cnt[c.value] || 0) + 1; });
-    var got = Object.keys(cnt).length, pct = Math.round(got / VALUES.length * 100);
+    var cnt = {}, ys = yearsAvail(); function inY(d) { return year === 'all' || yearOf(d) === year; }
+    var list = COS().filter(function (c) { return inY(c.achieved_at); }); list.forEach(function (c) { cnt[c.value] = (cnt[c.value] || 0) + 1; });
+    var got = Object.keys(cnt).length, pct = Math.round(got / VALUES.length * 100), nAuto = list.filter(function (c) { return c.auto; }).length, nHid = hidden().length;
     var w = canWrite();
-    var h = '<div class="ms-card"><div class="ms-row" style="justify-content:space-between"><b>Таблиця закриттів</b><span class="sub" style="margin:0">' + got + ' з ' + VALUES.length + ' · ' + pct + '%</span></div><div class="ms-bar"><div style="width:' + pct + '%"></div></div>';
+    var sel = '<select class="ms-in" id="ms-year" style="width:auto"><option value="all"' + (year === 'all' ? ' selected' : '') + '>Весь період</option>' + ys.map(function (y) { return '<option' + (y === year ? ' selected' : '') + '>' + y + '</option>'; }).join('') + '</select>';
+    var h = '<div class="ms-card"><div class="ms-row" style="justify-content:space-between"><b>Таблиця закриттів · ' + (year === 'all' ? 'весь період' : year) + '</b>' + sel + '</div><p class="sub" style="margin:6px 0 4px">' + got + ' з ' + VALUES.length + ' · ' + pct + '%</p><div class="ms-bar"><div style="width:' + pct + '%"></div></div>';
+    h += '<p class="sub" style="margin:8px 0">Крім ваших записів, сюди автоматично потрапляють закриття 100+ з «Ігор» та найкращі закриття з турнірів основного сайту' + (nAuto ? ' (зараз автоматичних: ' + nAuto + ')' : '') + '. Натисніть на число, щоб побачити записи, автоматичні можна сховати.</p>';
     h += '<div class="ms-row" style="margin-bottom:10px"><button type="button" class="ms-btn sm ' + (checkMode === 'add' ? '' : 'sec') + '" data-cm="add">+ Додати закриття</button><button type="button" class="ms-btn sm ' + (checkMode === 'hist' ? '' : 'sec') + '" data-cm="hist">🕑 Історія / правка</button>';
+    if (nHid) h += '<button type="button" class="ms-btn sec sm" data-cm="unhide">Показати сховані (' + nHid + ')</button>';
     if (checkMode === 'add' && w) h += '<label class="sub" style="margin:0;display:flex;gap:6px;align-items:center">Дата: <input type="date" id="ms-cdate" class="ms-in" style="width:auto" value="' + checkDate + '" max="' + today() + '"></label>';
     h += '</div><div class="ms-grid">' + VALUES.map(function (v) { return '<button type="button" class="ms-c' + (cnt[v] ? ' done' : '') + '" data-v="' + v + '">' + v + (cnt[v] ? '<i>' + cnt[v] + '</i>' : '') + '</button>'; }).join('') + '</div>';
     if (!w) h += '<p class="sub">Режим перегляду: додавання недоступне без тур-карти поточного року.</p>';
@@ -387,14 +416,15 @@
     });
   }
   function histModal(v) {
-    var list = D.checkouts.filter(function (c) { return c.value === v; });
+    var list = COS().filter(function (c) { return c.value === v && (year === 'all' || yearOf(c.achieved_at) === year); }).sort(function (a, b) { return a.achieved_at < b.achieved_at ? 1 : -1; });
     var m = document.createElement('div'); m.className = 'ms-modal'; m.setAttribute('data-i18n-skip', '');
     m.innerHTML = '<div><b style="font-size:18px">Закриття ' + v + '</b><p class="sub">' + (list.length ? 'Записів: ' + list.length : 'Ще не було') + '</p>' +
-      list.map(function (c) { return '<div class="ms-item"><span>' + fmtDate(c.achieved_at) + '</span>' + (canWrite() ? '<button class="ms-x" data-del="' + c.id + '" type="button" title="Видалити це закриття">🗑</button>' : '') + '</div>'; }).join('') +
+      list.map(function (c) { return '<div class="ms-item"><span>' + fmtDate(c.achieved_at) + (c.auto ? ' <small style="color:var(--muted)">· ' + (c.auto === 'site' ? '🏛 сайт: ' : '🏆 ігри: ') + esc(c.label) + '</small>' : '') + '</span>' + (c.auto ? '<button class="ms-x" data-hide="' + esc(c.id) + '" type="button" title="Сховати автоматичний запис">🙈</button>' : (canWrite() ? '<button class="ms-x" data-del="' + c.id + '" type="button" title="Видалити це закриття">🗑</button>' : '')) + '</div>'; }).join('') +
       '<p><button type="button" class="ms-btn sec sm" data-close="1">Закрити</button></p></div>';
     m.addEventListener('click', function (e) {
       if (e.target === m || e.target.getAttribute('data-close')) m.remove();
       var d = e.target.getAttribute('data-del'); if (d) { m.remove(); delCheckout(Number(d)); }
+      var hd = e.target.getAttribute('data-hide'); if (hd) { m.remove(); hideAuto(hd); }
     });
     document.body.appendChild(m);
   }
@@ -529,8 +559,8 @@
   function exportData() {
     try {
       var sheets = [];
-      var ck = D.checkouts.slice().sort(function (a, b) { return a.achieved_at < b.achieved_at ? 1 : -1; });
-      sheets.push({ name: 'Закриття', rows: [['Дата', 'Закриття']].concat(ck.map(function (c) { return [fd(c.achieved_at), c.value]; })) });
+      var ck = COS().sort(function (a, b) { return a.achieved_at < b.achieved_at ? 1 : -1; });
+      sheets.push({ name: 'Закриття', rows: [['Дата', 'Закриття', 'Джерело']].concat(ck.map(function (c) { return [fd(c.achieved_at), c.value, c.auto === 'site' ? 'сайт: ' + c.label : c.auto === 'game' ? 'ігри: ' + c.label : 'вручну']; })) });
       sheets.push({ name: 'Ігри', rows: [['Дата', 'Назва', 'Середній за турнір', 'Середній за гру', 'Леги зіграні', 'Леги виграні', '180', '140+', '100+', 'Закриття 100+', 'Закриття через булл', 'Найкращі леги', 'Нотатки']].concat(D.events.map(function (e) { return [fd(e.event_date), e.title, e.avg_tournament, e.avg_game, e.legs_played, e.legs_won, e.c180, e.c140, e.c100, (e.checkouts100 || []).join(', '), e.bull_checkouts, (e.best_legs || []).join(', '), e.notes]; })) });
       sheets.push({ name: 'Щоденник', rows: [['Ціль / навичка', 'Нотатка', 'Статус', 'Додано', 'Опановано', 'Результат']].concat(D.skills.map(function (k) { return [k.title, k.note, k.status === 'done' ? 'опановано' : 'в роботі', fd(k.created_at), fd(k.done_at), k.result]; })) });
       EXT.forEach(function (x) { if (x.exportSheets) x.exportSheets().forEach(function (sh) { sheets.push(sh); }); });
@@ -551,7 +581,7 @@
     var b = t.closest('[data-prof],[data-t],[data-a],[data-v],[data-cm],[data-delev],[data-skdone],[data-skopen],[data-skdel]'); if (!b) return;
     if (b.hasAttribute('data-prof')) { if (typeof openPlayerProfile === 'function') openPlayerProfile(siteName(member.player_name)); }
     else if (b.hasAttribute('data-t')) { tab = b.getAttribute('data-t'); window.scrollTo(0, 0); render(); }
-    else if (b.hasAttribute('data-cm')) { checkMode = b.getAttribute('data-cm'); render(); }
+    else if (b.hasAttribute('data-cm')) { var cmv = b.getAttribute('data-cm'); if (cmv === 'unhide') { setHidden([]); render(); } else { checkMode = cmv; render(); } }
     else if (b.hasAttribute('data-v')) { var v = Number(b.getAttribute('data-v')); if (checkMode === 'hist' || !canWrite()) histModal(v); else addCheckout(v); }
     else if (b.hasAttribute('data-delev')) { if (confirm('Видалити запис?')) { var id = Number(b.getAttribute('data-delev')); sb.from('local_events').delete().eq('id', id).then(function (r) { if (r.error) return fail(r.error); D.events = D.events.filter(function (x) { return x.id !== id; }); render(); }); } }
     else if (b.hasAttribute('data-skdone')) doneModal(Number(b.getAttribute('data-skdone')));
