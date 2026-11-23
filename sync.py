@@ -5594,6 +5594,7 @@ def main():
         "playerBios": player_bios,
         "curatedPlayerNames": final_player_names,
         "nameEn": NAME_EN_OVERRIDES,
+        "nameAliases": dict(MANUAL_NAME_ALIASES),
     }
 
     data = sanitize_deep(data)
