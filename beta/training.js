@@ -580,6 +580,7 @@
   });
   document.addEventListener('change', function (e) { if (e.target.hasAttribute && e.target.hasAttribute('data-trp') && e.target.closest('#my-space')) { T.period = e.target.value; MS().render(); } });
 
+  window.__trainData = function () { return { legs: T.legs, drills: T.drills }; };
   window.__msExt = window.__msExt || [];
   window.__msExt.push({
     id: 'train', label: '🎯 Тренування', view: viewTrain, load: load,

@@ -47,6 +47,10 @@
     '.ms-item{border-top:1px solid var(--line);padding:10px 0;display:flex;gap:10px;justify-content:space-between;align-items:flex-start}.ms-item:first-child{border-top:0}',
     '.ms-item small{color:var(--muted);display:block;margin-top:2px;line-height:1.5}',
     '.ms-x{background:none;border:0;color:var(--muted);font-size:18px;cursor:pointer;padding:0 4px}',
+    '.pf{display:flex;gap:14px;align-items:center;background:linear-gradient(135deg,var(--panel),var(--panel-2));border:1px solid var(--line);border-radius:18px;padding:14px;margin-bottom:14px}',
+    '.pf-av{flex:none;width:76px;height:76px;border-radius:50%;background:var(--royal);border:3px solid var(--gold);overflow:hidden;display:flex;align-items:center;justify-content:center;font:800 26px Montserrat,Inter,sans-serif;color:#fff}.pf-av img{width:100%;height:100%;object-fit:cover}',
+    '.pf-i{min-width:0;flex:1}.pf-i h2{margin:0}.pf-n{color:var(--gold);font-weight:700;font-size:13px}.pf-m{color:var(--muted);font-size:12px;margin-top:3px;line-height:1.4}.pf-b{font-size:13px;margin-top:6px;line-height:1.45}',
+    '.pf-f label{display:block;font-size:12px;color:var(--muted);margin:10px 0 4px}',
     '.ms-warn{background:#3a2a10;border:1px solid #8a6a20;color:#ffd98a;border-radius:12px;padding:11px 13px;font-size:13px;margin-bottom:12px}',
     '.ms-toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);background:#0c1230;border:1px solid var(--gold);color:var(--cream);padding:10px 14px;border-radius:12px;z-index:200;font-size:13px;display:flex;gap:12px;align-items:center}',
     '.ms-toast button{background:none;border:0;color:var(--gold);font:700 13px Inter,sans-serif;cursor:pointer}',
@@ -125,9 +129,81 @@
       var c = localStorage.getItem('ms_consent');
       if (!c) return; // згоду покаже render()
       return sb.from('profiles').insert({ user_id: session.user.id, email: session.user.email, consent_at: c }).then(function (x) { if (x.error) throw x.error; localStorage.removeItem('ms_consent'); });
-    }).then(function () { return sb.from('profiles').select('user_id').maybeSingle(); }).then(function (r) { needConsent = !(r && r.data); });
+    }).then(function () { return sb.from('profiles').select('user_id').maybeSingle(); }).then(function (r) { needConsent = !(r && r.data); return needConsent ? null : loadProfile(); });
   }
-  var needConsent = false;
+  var needConsent = false, PROF = null, editProf = false, PFIELDS = ['nickname', 'region', 'club', 'hand', 'darts_info', 'fav_format', 'season_goal', 'bio', 'photo', 'is_public'];
+  function loadProfile() {
+    return sb.from('profiles').select('user_id,' + PFIELDS.join(',')).maybeSingle().then(function (r) {
+      if (r.error) { PROF = { _old: true }; return; } // схему 5 ще не запущено
+      PROF = r.data || {};
+    });
+  }
+  function siteBio() { try { return (playerBios && playerBios[siteName(member.player_name)]) || {}; } catch (e) { return {}; } }
+  function siteBioPhoto(img) {
+    var n = encodeURIComponent(siteName(member.player_name));
+    return '<img src="../player_photos/' + n + '.jpg" alt="" onerror="this.onerror=function(){this.onerror=function(){this.remove()};this.src=\'../player_photos/' + n + '.png\'};this.src=\'../player_photos/' + n + '.jpeg\'">';
+  }
+  function initials() { return String(member.player_name || '?').split(/\s+/).slice(0, 2).map(function (x) { return x.charAt(0); }).join('').toUpperCase(); }
+  function viewProfile() {
+    var P = PROF || {}, B = siteBio();
+    if (editProf) {
+      function v(k, f) { return esc(P[k] != null && P[k] !== '' ? P[k] : (f || '')); }
+      return '<form id="ms-pff" class="ms-card pf-f"><b>Мій профіль</b><p class="sub" style="margin:4px 0 0">Видно лише вам. Порожні поля підтягуються з основного сайту, де є дані.</p>' +
+        '<div class="ms-row" style="margin-top:12px;align-items:center"><div class="pf-av" id="pf-prev">' + (P.photo ? '<img src="' + esc(P.photo) + '">' : siteBioPhoto() + initials()) + '</div><div><button type="button" class="ms-btn sec sm" data-pf="photo">📷 Обрати фото</button> ' + (P.photo ? '<button type="button" class="ms-btn sec sm" data-pf="nophoto">Прибрати</button>' : '') + '<input type="file" id="pf-file" accept="image/*" style="display:none"></div></div>' +
+        '<label>Псевдонім / бій-ім\'я</label><input class="ms-in" name="nickname" maxlength="40" value="' + v('nickname', B.nickname !== 'Інший' ? B.nickname : '') + '">' +
+        '<label>Регіон / місто</label><input class="ms-in" name="region" maxlength="60" value="' + v('region', B.region) + '">' +
+        '<label>Клуб</label><input class="ms-in" name="club" maxlength="60" value="' + v('club') + '">' +
+        '<label>Ігрова рука</label><select class="ms-in" name="hand"><option value="">—</option><option' + (P.hand === 'права' ? ' selected' : '') + '>права</option><option' + (P.hand === 'ліва' ? ' selected' : '') + '>ліва</option></select>' +
+        '<label>Дартс (виробник, модель, вага)</label><input class="ms-in" name="darts_info" maxlength="80" value="' + v('darts_info', [B.dartsManufacturer, B.dartsModel, B.dartsWeight ? B.dartsWeight + ' г' : ''].filter(Boolean).join(' ')) + '">' +
+        '<label>Улюблений формат</label><input class="ms-in" name="fav_format" maxlength="40" value="' + v('fav_format') + '" placeholder="501DO, Cricket…">' +
+        '<label>Ціль на сезон</label><input class="ms-in" name="season_goal" maxlength="120" value="' + v('season_goal') + '" placeholder="наприклад: середній 60+">' +
+        '<label>Про мене (до 600 символів)</label><textarea class="ms-in" name="bio" rows="4" maxlength="600">' + v('bio') + '</textarea>' +
+        '<label style="display:flex;gap:8px;align-items:flex-start;margin-top:12px"><input type="checkbox" name="is_public"' + (P.is_public ? ' checked' : '') + ' style="margin-top:2px"><span>Дозволити показ мого профілю на сайті (зараз нікуди не публікується, це лише ваша згода на майбутнє)</span></label>' +
+        '<div class="ms-row" style="margin-top:14px"><button class="ms-btn" type="submit">Зберегти</button><button type="button" class="ms-btn sec" data-pf="cancel">Скасувати</button></div></form>';
+    }
+    var nick = P.nickname || (B.nickname && B.nickname !== 'Інший' ? B.nickname : ''), region = P.region || B.region || '';
+    var darts = P.darts_info || [B.dartsManufacturer, B.dartsModel, B.dartsWeight ? B.dartsWeight + ' г' : ''].filter(Boolean).join(' ');
+    var meta = [region, P.club, P.hand ? P.hand + ' рука' : '', darts, P.fav_format ? 'формат: ' + P.fav_format : '', B.startYear ? 'грає з ' + String(B.startYear).replace(' рік', '') : ''].filter(Boolean);
+    return '<div class="pf"><div class="pf-av">' + (P.photo ? '<img src="' + esc(P.photo) + '" alt="">' : siteBioPhoto() + initials()) + '</div><div class="pf-i"><h2>' + esc(member.player_name) + '</h2>' +
+      (nick ? '<div class="pf-n">«' + esc(nick) + '»</div>' : '') + '<div class="pf-m">' + esc(meta.join(' · ') || session.user.email) + '</div>' +
+      (P.season_goal ? '<div class="pf-m">🎯 ' + esc(P.season_goal) + '</div>' : '') + (P.bio ? '<div class="pf-b">' + esc(P.bio) + '</div>' : '') +
+      '<p style="margin:8px 0 0"><button type="button" class="ms-btn sec sm" data-pf="edit">✏️ Редагувати профіль</button></p></div></div>';
+  }
+  function resizePhoto(file, cb) {
+    var rd = new FileReader();
+    rd.onload = function () {
+      var im = new Image();
+      im.onload = function () {
+        var S = 360, w = im.width, h = im.height, k = Math.min(1, S / Math.min(w, h)), c = document.createElement('canvas'), side = Math.min(w, h);
+        c.width = c.height = Math.round(side * k);
+        c.getContext('2d').drawImage(im, (w - side) / 2, (h - side) / 2, side, side, 0, 0, c.width, c.height);
+        cb(c.toDataURL('image/jpeg', 0.82));
+      };
+      im.onerror = function () { toast('Не вдалося прочитати зображення'); };
+      im.src = rd.result;
+    };
+    rd.readAsDataURL(file);
+  }
+  function saveProfile(form) {
+    var f = form.elements, row = {};
+    ['nickname', 'region', 'club', 'hand', 'darts_info', 'fav_format', 'season_goal', 'bio'].forEach(function (k) { row[k] = (f[k].value || '').trim() || null; });
+    row.is_public = !!f.is_public.checked; row.photo = PROF.photo || null;
+    sb.from('profiles').update(row).eq('user_id', session.user.id).select().then(function (r) {
+      if (r.error) return fail(r.error);
+      PROF = Object.assign({}, PROF, row); editProf = false; render(); toast('Профіль збережено');
+    });
+  }
+  sec.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-pf]'); if (!b) return; var a = b.getAttribute('data-pf');
+    if (a === 'edit') { if (PROF && PROF._old) return toast('Спершу запустіть schema5.sql у Supabase'); editProf = true; render(); }
+    else if (a === 'cancel') { editProf = false; render(); }
+    else if (a === 'photo') { var fi = document.getElementById('pf-file'); if (fi) fi.click(); }
+    else if (a === 'nophoto') { PROF.photo = null; var pv = document.getElementById('pf-prev'); if (pv) pv.innerHTML = siteBioPhoto() + initials(); b.remove(); }
+  });
+  sec.addEventListener('change', function (e) {
+    if (e.target.id !== 'pf-file' || !e.target.files[0]) return;
+    resizePhoto(e.target.files[0], function (d) { PROF.photo = d; var pv = document.getElementById('pf-prev'); if (pv) pv.innerHTML = '<img src="' + d + '">'; });
+  });
 
   function loadAll() {
     return Promise.all([
@@ -147,7 +223,7 @@
     if (needConsent) return renderConsent();
     if (!member) return renderNoMember();
     for (var oi = 0; oi < EXT.length; oi++) { if (EXT[oi].override) { var ov = EXT[oi].override(); if (ov) { sec.innerHTML = ov; if (EXT[oi].after) EXT[oi].after(); return; } } }
-    var head = '<h2>Мій простір</h2><p class="sub">' + esc(member.player_name) + ' · ' + esc(session.user.email) + '</p>';
+    var head = viewProfile();
     if (!canWrite()) head += '<div class="ms-warn">Тур-карти на ' + new Date().getFullYear() + ' рік не знайдено. Ваші дані доступні для перегляду; додавати нові записи можна після отримання тур-карти.</div>';
     var tabs = [['overview', '📊 Статистика']].concat(EXT.filter(function (x) { return x.id; }).map(function (x) { return [x.id, x.label]; })).concat([['checkouts', '🎯 Закриття'], ['events', '🏆 Ігри'], ['skills', '📓 Щоденник']]);
     head += '<div class="ms-tabs">' + tabs.map(function (t) { return '<button type="button" data-t="' + t[0] + '" class="' + (t[0] === tab ? 'on' : '') + '">' + t[1] + '</button>'; }).join('') + '</div>';
@@ -464,7 +540,7 @@
   }
   function wipe() {
     if (!confirm('Видалити ВСІ ваші дані з «Мого простору» (закриття, ігри, щоденник, згоду)? Це незворотно.')) return;
-    sb.rpc('delete_my_data').then(function (r) { if (r.error) return fail(r.error); D = { checkouts: [], events: [], skills: [] }; window.__ms.reset(); needConsent = true; render(); toast('Дані видалено'); });
+    sb.rpc('delete_my_data').then(function (r) { if (r.error) return fail(r.error); D = { checkouts: [], events: [], skills: [] }; PROF = null; window.__ms.reset(); needConsent = true; render(); toast('Дані видалено'); });
   }
 
   sec.addEventListener('click', function (e) {
@@ -483,6 +559,7 @@
   sec.addEventListener('change', function (e) { if (e.target.id === 'ms-year') { year = e.target.value === 'all' ? 'all' : Number(e.target.value); render(); } if (e.target.id === 'ms-cdate' && e.target.value) { checkDate = e.target.value; render(); } });
   sec.addEventListener('submit', function (e) {
     e.preventDefault();
+    if (e.target.id === 'ms-pff') return saveProfile(e.target);
     if (e.target.id === 'ms-evf') saveEvent(e.target);
     if (e.target.id === 'ms-skf') { var f = e.target.elements; var title = f.title.value.trim(); if (!title) return; sb.from('skills').insert({ title: title, note: f.note.value.trim() || null }).select('*').single().then(function (r) { if (r.error) throw r.error; D.skills.unshift(r.data); render(); }).catch(fail); }
   });
@@ -490,6 +567,7 @@
   var EXT = window.__msExt || [];
   window.__ms = {
     sb: function () { return sb; }, canWrite: canWrite, render: render, esc: esc, toast: toast, fail: fail, el: sec,
+    data: function () { return D; }, profile: function () { return PROF || {}; }, siteName: function () { return siteName(member && member.player_name); }, uid: function () { return session && session.user.id; },
     member: function () { return member; }, year: function () { return year; }, reset: function () { EXT.forEach(function (x) { x.reset && x.reset(); }); },
     setTab: function (t) { tab = t; render(); }
   };
