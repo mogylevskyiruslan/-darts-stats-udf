@@ -271,6 +271,7 @@
       var st = p171State(V); if (!st.tries) return '';
       return '<div style="margin-top:10px;font-size:13px">' + V + ' підходи · ціль <b>' + st.target + '</b> · успішно ' + st.ok + '/' + st.tries + (st.comp ? ' · циклів 🏅' + st.comp : '') + '<div class="ms-bar"><div style="width:' + ((st.target - 170) * 10) + '%"></div></div></div>';
     }).join('') + '</div>';
+    h += '<div class="ms-card"><b>Останні спроби</b><p class="sub" style="margin:2px 0 4px">🗑 видаляє лише цей запис.</p>' + all.slice(0, 10).map(function (r) { return '<div class="tr-leg"><div>' + new Date(r.played_at).toLocaleDateString('uk-UA') + ' · ціль ' + r.target + ' · ' + r.param + ' підх. · ' + (r.success ? '<b style="color:#8fe3b0">закрито</b>' : '<b style="color:#ff9d9d">не закрито</b>') + '</div>' + (typeof r.id === 'number' && MS().canWrite() ? '<button class="ms-x" type="button" data-tr="dr-del" data-id="' + r.id + '" title="Видалити цей запис">🗑</button>' : '') + '</div>'; }).join('') + '</div>';
     return h;
   }
 
@@ -308,7 +309,7 @@
     if (!rows.length) return h;
     var att = 0, hits = 0, best = 0; rows.forEach(function (r) { att += r.scores.length; hits += (r.detail && r.detail.oks ? r.detail.oks.reduce(function (a, b) { return a + b; }, 0) : 0); if (r.target > best) best = r.target; });
     h += '<div class="ms-card"><b>Статистика · ' + rows.length + ' тренувань</b><div class="ms-stats" style="margin-top:10px">' + stt(best || '—', 'найвище закриття') + stt(Math.round(hits / att * 100) + '%', 'влучність') + stt(att, 'усього підходів') + stt(Math.round(att / rows.length), 'підходів за тренування') + '</div></div>';
-    h += '<div class="ms-card"><b>Останні тренування</b>' + rows.slice(0, 8).map(function (r) { var o = r.detail && r.detail.oks ? r.detail.oks.reduce(function (a, b) { return a + b; }, 0) : 0; return '<div class="tr-leg"><div>' + new Date(r.played_at).toLocaleDateString('uk-UA') + ' · ' + r.scores.length + ' підх. · закрито ' + o + ' · макс. ' + (r.target || '—') + '</div>' + (typeof r.id === 'number' && w ? '<button class="ms-x" type="button" data-tr="dr-del" data-id="' + r.id + '">✕</button>' : '') + '</div>'; }).join('') + '</div>';
+    h += '<div class="ms-card"><b>Останні тренування</b><p class="sub" style="margin:2px 0 4px">🗑 видаляє лише це тренування.</p>' + rows.slice(0, 8).map(function (r) { var o = r.detail && r.detail.oks ? r.detail.oks.reduce(function (a, b) { return a + b; }, 0) : 0; return '<div class="tr-leg"><div>' + new Date(r.played_at).toLocaleDateString('uk-UA') + ' · ' + r.scores.length + ' підх. · закрито ' + o + ' · макс. ' + (r.target || '—') + '</div>' + (typeof r.id === 'number' && w ? '<button class="ms-x" type="button" data-tr="dr-del" data-id="' + r.id + '" title="Видалити цей запис">🗑</button>' : '') + '</div>'; }).join('') + '</div>';
     return h;
   }
 
@@ -351,7 +352,7 @@
     h += '<div class="ms-card"><b>Статистика · ' + rows.length + ' тренувань</b><div class="ms-stats" style="margin-top:10px">' + stt(f2(sum(pts) / rows.length), 'середнє очок за тренування') + stt(Math.max.apply(null, pts), 'найкращий результат') + stt(Math.round(hit / tot * 100) + '%', 'влучань у сектор') + stt(tr + ' / ' + db, 'тріплів / дáблів') + '</div></div>';
     var ks = Object.keys(bySec).map(Number).sort(function (a, b) { return a - b; });
     h += '<div class="ms-card"><b>Середнє по секторах</b>' + ks.map(function (k) { var a = sum(bySec[k]) / bySec[k].length; return '<div style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:13px"><span style="width:40px;text-align:right;font-weight:700">' + secName(k) + '</span><div class="ms-bar" style="flex:1;margin:0"><div style="width:' + Math.round(a / (k === 25 ? 60 : 90) * 100) + '%"></div></div><span style="width:70px">' + f2(a) + ' (' + bySec[k].length + ')</span></div>'; }).join('') + '</div>';
-    h += '<div class="ms-card"><b>Останні тренування</b>' + rows.slice(0, 8).map(function (r, i) { return '<div class="tr-leg"><div>' + new Date(r.played_at).toLocaleDateString('uk-UA') + ' · ' + (r.target === 25 ? 'Bull' : 'сектор ' + r.target) + ' · <b>' + pts[i] + '</b> очок</div>' + (typeof r.id === 'number' && w ? '<button class="ms-x" type="button" data-tr="dr-del" data-id="' + r.id + '">✕</button>' : '') + '</div>'; }).join('') + '</div>';
+    h += '<div class="ms-card"><b>Останні тренування</b><p class="sub" style="margin:2px 0 4px">🗑 видаляє лише це тренування.</p>' + rows.slice(0, 8).map(function (r, i) { return '<div class="tr-leg"><div>' + new Date(r.played_at).toLocaleDateString('uk-UA') + ' · ' + (r.target === 25 ? 'Bull' : 'сектор ' + r.target) + ' · <b>' + pts[i] + '</b> очок</div>' + (typeof r.id === 'number' && w ? '<button class="ms-x" type="button" data-tr="dr-del" data-id="' + r.id + '" title="Видалити цей запис">🗑</button>' : '') + '</div>'; }).join('') + '</div>';
     return h;
   }
 
@@ -466,9 +467,9 @@
     h += '<div class="ms-card"><b>Усі підходи за величиною</b><div style="margin-top:10px">' + donut(a.cat) + '</div></div>';
     h += '<div class="ms-card"><b>Закриття легів по дротиках</b>' + bars(a.buckets) + '</div>';
     h += '<div class="ms-card"><b>Середній по місяцях</b><div style="margin-top:6px">' + line(a.months) + '</div></div>';
-    h += '<div class="ms-card"><b>Останні леги</b>' + legs.slice(0, 10).map(function (l) {
+    h += '<div class="ms-card"><b>Останні леги</b><p class="sub" style="margin:2px 0 4px">🗑 видаляє лише цей лег.</p>' + legs.slice(0, 10).map(function (l) {
       var s = legStats(l);
-      return '<div class="tr-leg"><div>' + new Date(l.played_at).toLocaleDateString('uk-UA') + ' · ' + l.darts + ' дрот. · сер. ' + f2(s.avg) + (l.mode === 'ghost' ? ' · 👻 ' + (l.ghost_result === 'win' ? 'перемога' : 'поразка') : '') + '</div>' + (typeof l.id === 'number' && w ? '<button class="ms-x" type="button" data-tr="del" data-id="' + l.id + '">✕</button>' : '') + '</div>';
+      return '<div class="tr-leg"><div>' + new Date(l.played_at).toLocaleDateString('uk-UA') + ' · ' + l.darts + ' дрот. · сер. ' + f2(s.avg) + (l.mode === 'ghost' ? ' · 👻 ' + (l.ghost_result === 'win' ? 'перемога' : 'поразка') : '') + '</div>' + (typeof l.id === 'number' && w ? '<button class="ms-x" type="button" data-tr="del" data-id="' + l.id + '" title="Видалити цей лег">🗑</button>' : '') + '</div>';
     }).join('') + '</div>';
     return h;
   }

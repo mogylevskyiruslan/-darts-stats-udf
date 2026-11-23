@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var G = { sub: 'goals', goal: null, plan: null, refl: [], old: false, mood: 0 };
-  var EXERCISES = ['Лічильник 501DO', 'Гра з тінню', 'Дабли', 'Тріпли', 'Скоринг', 'Cricket', '170+1', '60+10−1', 'Сектор', 'Закриття (таблиця)', 'Матч / турнір', 'Відпочинок'];
+  var EXERCISES = ['Лічильник 501DO', 'Гра з тінню', 'Дабли', 'Тріпли', 'Скоринг', '170+1', '60+10−1', 'Сектор', 'Закриття (таблиця)', 'Матч / турнір', 'Відпочинок'];
   var DAYS = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'нд'];
   function MS() { return window.__ms; }
   function esc(s) { return MS().esc(s); }
@@ -64,34 +64,40 @@
     });
   }
 
-  // ---------- бейджі ----------
+  // ---------- бейджі (багаторазові: лічильник ×N) ----------
+  function weeksGoalMet() {
+    var td = trainDays(), goal = (G.goal && G.goal.weekly) || 3, w = {};
+    Object.keys(td).forEach(function (k) { var m = iso(mondayOf(new Date(k + 'T12:00:00'))); w[m] = (w[m] || 0) + 1; });
+    return Object.keys(w).filter(function (k) { return w[k] >= goal; }).length;
+  }
+  function weekStreaks() {
+    var s = activeDays(), keys = Object.keys(s).sort(), run = 0, prev = null, total = 0;
+    keys.forEach(function (k) { var d = new Date(k + 'T12:00:00'); if (prev && Math.round((d - prev) / 864e5) === 1) run++; else { total += Math.floor(run / 7); run = 1; } prev = d; });
+    return total + Math.floor(run / 7);
+  }
   function badges() {
-    var L = legs(), Dr = drills(), D = MS().data(), P = MS().profile(), st = streaks(), out = [];
-    function b(icon, name, desc, ok) { out.push({ i: icon, n: name, d: desc, ok: !!ok }); }
+    var L = legs(), Dr = drills(), D = MS().data(), P = MS().profile(), out = [];
+    // step: скільки потрібно для одного отримання (лічильник росте безкінечно); step=0: разова подія
+    function b(icon, name, desc, cur, step) { var cnt = step ? Math.floor(cur / step) : (cur ? 1 : 0); out.push({ i: icon, n: name, d: desc, cnt: cnt, step: step, prog: step ? cur % step : 0 }); }
     function cnt(g) { return Dr.filter(function (r) { return r.game === g; }).length; }
-    var cv = {}; D.checkouts.forEach(function (c) { cv[c.value] = 1; });
-    var ghostWin = L.some(function (l) { return l.mode === 'ghost' && l.ghost_result === 'win'; });
-    var dblBest = false, ds = {};
+    var ghostWins = L.filter(function (l) { return l.mode === 'ghost' && l.ghost_result === 'win'; }).length;
+    var ds = {}, dblMasters = 0;
     Dr.filter(function (r) { return r.game === 'dbl'; }).forEach(function (r) { var o = ds[r.target] = ds[r.target] || { d: 0, h: 0 }; o.d += r.scores.length * 3; o.h += sum(r.scores); });
-    Object.keys(ds).forEach(function (k) { if (ds[k].d >= 30 && ds[k].h / ds[k].d >= 0.4) dblBest = true; });
-    b('🎯', 'Перший лег', 'завершіть 1 лег у лічильнику', L.length >= 1);
-    b('🔟', '10 легів', 'завершіть 10 легів', L.length >= 10);
-    b('💯', '50 легів', 'завершіть 50 легів', L.length >= 50);
-    b('🏅', '100 легів', 'завершіть 100 легів', L.length >= 100);
-    b('👻', 'Переміг тінь', 'виграйте лег проти тіні', ghostWin);
-    b('🔥', '3 дні поспіль', 'активність 3 дні підряд', st.best >= 3);
-    b('⚡', '7 днів поспіль', 'активність 7 днів підряд', st.best >= 7);
-    b('🌟', '30 днів поспіль', 'активність 30 днів підряд', st.best >= 30);
-    b('💥', 'Закриття 100+', 'додайте закриття 100 і більше', Object.keys(cv).some(function (k) { return Number(k) >= 100; }));
-    b('👑', 'Закриття 170', 'додайте закриття 170', !!cv[170]);
-    b('🎪', 'Дабл-майстер', '40% влучань у дабл (мінімум 30 дротиків)', dblBest);
-    b('🔺', 'Тріпл-практик', '10 вправ на тріпли', cnt('trp') >= 10);
-    b('♟', 'Cricket закрито', 'закрийте 20–15 і Bull', Dr.some(function (r) { return r.game === 'cricket' && r.success; }));
-    b('📈', '170+1: 10 тренувань', '10 завершених 170+1', cnt('p171') >= 10);
-    b('📓', 'Опанована навичка', 'закрийте навичку в щоденнику', D.skills.some(function (k) { return k.status === 'done'; }));
-    b('📝', 'Перша рефлексія', 'запишіть думки після гри', G.refl.length >= 1);
-    b('🗓', 'План тижня', 'складіть тижневий план', !!(G.plan && G.plan.days && Object.keys(G.plan.days).length));
-    b('🪪', 'Профіль заповнено', 'фото та «про мене»', !!(P.photo && P.bio));
+    Object.keys(ds).forEach(function (k) { if (ds[k].d >= 30 && ds[k].h / ds[k].d >= 0.4) dblMasters++; });
+    b('🎯', 'Леги', 'кожні 10 завершених легів', L.length, 10);
+    b('👻', 'Перемоги над тінню', 'кожен лег, виграний у тіні', ghostWins, 1);
+    b('⚡', 'Тиждень поспіль', 'кожні 7 днів активності підряд', weekStreaks(), 1);
+    b('📅', 'Тижні з виконаною ціллю', 'кожен тиждень, коли виконано ціль тренувальних днів', weeksGoalMet(), 1);
+    b('💥', 'Закриття 100+', 'кожне додане закриття від 100', D.checkouts.filter(function (c) { return c.value >= 100; }).length, 1);
+    b('👑', 'Закриття 170', 'кожне додане закриття 170', D.checkouts.filter(function (c) { return c.value === 170; }).length, 1);
+    b('🎪', 'Дабл-майстер', 'кожен дабл із 40%+ влучань (від 30 дротиків)', dblMasters, 1);
+    b('🔺', 'Тріпл-практика', 'кожні 10 вправ на тріпли', cnt('trp'), 10);
+    b('🎲', 'Скоринг-раунди', 'кожні 5 раундів скорингу', cnt('score'), 5);
+    b('📈', '170+1', 'кожні 10 тренувань 170+1', cnt('p171'), 10);
+    b('🎯', 'Сектор', 'кожні 5 тренувань сектора', cnt('sector'), 5);
+    b('📓', 'Опановані навички', 'кожна закрита ціль у щоденнику', D.skills.filter(function (k) { return k.status === 'done'; }).length, 1);
+    b('📝', 'Рефлексії', 'кожні 3 записи «після гри»', G.refl.length, 3);
+    b('🪪', 'Профіль заповнено', 'фото та «про мене» (одноразово)', (P.photo && P.bio) ? 1 : 0, 0);
     return out;
   }
 
@@ -130,9 +136,13 @@
     return h;
   }
   function viewBadges() {
-    var bs = badges(), got = bs.filter(function (b) { return b.ok; }).length;
-    return '<div class="ms-card"><b>Бейджі · ' + got + ' з ' + bs.length + '</b><p class="sub" style="margin:4px 0 10px">Це лише ваш прогрес, без порівняння з іншими.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">' + bs.map(function (b) {
-      return '<div style="border:1px solid ' + (b.ok ? 'var(--gold)' : 'var(--line)') + ';border-radius:12px;padding:10px;opacity:' + (b.ok ? 1 : 0.5) + ';background:var(--bg)"><div style="font-size:26px;filter:' + (b.ok ? 'none' : 'grayscale(1)') + '">' + b.i + '</div><b style="font-size:13px">' + esc(b.n) + '</b><div class="sub" style="margin:2px 0 0;font-size:11px">' + esc(b.d) + '</div></div>';
+    var bs = badges(), total = bs.reduce(function (a, b) { return a + b.cnt; }, 0), types = bs.filter(function (b) { return b.cnt > 0; }).length;
+    return '<div class="ms-card"><b>Бейджі · ' + types + ' з ' + bs.length + ' · всього ×' + total + '</b><p class="sub" style="margin:4px 0 10px">Бейджі багаторазові: лічильник ×N росте безкінечно. Це лише ваш прогрес, без порівняння з іншими.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">' + bs.map(function (b) {
+      var ok = b.cnt > 0;
+      return '<div style="border:1px solid ' + (ok ? 'var(--gold)' : 'var(--line)') + ';border-radius:12px;padding:10px;background:var(--bg);position:relative"><div style="font-size:26px;filter:' + (ok ? 'none' : 'grayscale(1)') + ';opacity:' + (ok ? 1 : 0.5) + '">' + b.i + '</div>' +
+        (ok && b.step !== 0 ? '<span style="position:absolute;top:8px;right:10px;background:var(--gold);color:#101535;font:800 13px Inter,sans-serif;border-radius:999px;padding:2px 9px">×' + b.cnt + '</span>' : ok ? '<span style="position:absolute;top:8px;right:10px;color:#8fe3b0;font-weight:800">✓</span>' : '') +
+        '<b style="font-size:13px">' + esc(b.n) + '</b><div class="sub" style="margin:2px 0 0;font-size:11px">' + esc(b.d) + '</div>' +
+        (b.step > 1 ? '<div class="ms-bar" style="margin:8px 0 2px"><div style="width:' + Math.round(b.prog / b.step * 100) + '%"></div></div><div class="sub" style="margin:0;font-size:10px">до наступного: ' + (b.step - b.prog) + '</div>' : '') + '</div>';
     }).join('') + '</div></div>';
   }
   function viewPlan() {
@@ -144,7 +154,7 @@
         '<select class="ms-in" data-gx="pday" data-i="' + i + '" style="flex:1"' + (w ? '' : ' disabled') + '><option value="">—</option>' + EXERCISES.map(function (x) { return '<option' + (x === ex ? ' selected' : '') + '>' + x + '</option>'; }).join('') + '</select>' +
         '<button type="button" class="ms-btn sm ' + (dn || auto ? 'ok' : 'sec') + '" data-gx="pdone" data-k="' + k + '"' + (ex && ex !== 'Відпочинок' && w ? '' : ' disabled') + '>' + (dn || auto ? '✓' : '○') + '</button></div>';
     }
-    return h + '<p class="sub" style="margin:8px 0 0">✓ ставиться й автоматично, якщо в цей день є тренування в кабінеті.</p></div>';
+    return h + '<p class="sub" style="margin:8px 0 0">✓ ставиться автоматично, якщо цього дня є тренування в кабінеті. Також можна відмітити вручну.</p></div>';
   }
   function viewRefl() {
     var w = MS().canWrite(), moods = ['😞', '😕', '😐', '🙂', '😄'], h = '';
@@ -161,7 +171,7 @@
     if (hi.length && lo.length) h += '<div class="ms-card"><b>Настрій і результат</b><div class="ms-stats" style="margin-top:10px">' + stt(f2(sum(hi) / hi.length), 'сер. за гру при настрої 4–5 (' + hi.length + ')') + stt(f2(sum(lo) / lo.length), 'сер. за гру при настрої 1–3 (' + lo.length + ')') + '</div></div>';
     else if (G.refl.length) h += '<p class="sub">Щоб побачити зв\'язок настрою з результатом, додайте рефлексії на дати ігор із середнім у журналі.</p>';
     if (G.refl.length) h += '<div class="ms-card"><b>Записи</b>' + G.refl.slice(0, 15).map(function (r) {
-      return '<div style="border-top:1px solid var(--line);padding:10px 0;font-size:13px"><div class="ms-row" style="justify-content:space-between"><b>' + fmt(r.date) + ' ' + (moods[(r.mood || 3) - 1] || '') + '</b>' + (w ? '<button class="ms-x" type="button" data-gx="rdel" data-id="' + r.id + '">✕</button>' : '') + '</div>' +
+      return '<div style="border-top:1px solid var(--line);padding:10px 0;font-size:13px"><div class="ms-row" style="justify-content:space-between"><b>' + fmt(r.date) + ' ' + (moods[(r.mood || 3) - 1] || '') + '</b>' + (w ? '<button class="ms-x" type="button" data-gx="rdel" data-id="' + r.id + '" title="Видалити цей запис">🗑</button>' : '') + '</div>' +
         (r.good ? '<div>👍 ' + esc(r.good) + '</div>' : '') + (r.bad ? '<div>👎 ' + esc(r.bad) + '</div>' : '') + (r.next ? '<div>➡ ' + esc(r.next) + '</div>' : '') + '</div>';
     }).join('') + '</div>';
     return h;
@@ -243,7 +253,7 @@
     overview: function () {
       var st = streaks(), g = G.goal || { weekly: 3 }, td = trainDays(), mon = mondayOf(new Date()), n = 0;
       for (var i = 0; i < 7; i++) { var d = new Date(mon); d.setDate(mon.getDate() + i); if (td[iso(d)]) n++; }
-      return '<div class="ms-stats" style="margin-top:10px">' + stt('🔥 ' + st.cur, 'днів поспіль') + stt(n + ' / ' + (g.weekly || 3), 'тренувальних днів цього тижня') + stt(badges().filter(function (b) { return b.ok; }).length, 'бейджів отримано') + '</div><p style="margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-t="growth">До розвитку ›</button></p>';
+      return '<div class="ms-stats" style="margin-top:10px">' + stt('🔥 ' + st.cur, 'днів поспіль') + stt(n + ' / ' + (g.weekly || 3), 'тренувальних днів цього тижня') + stt('×' + badges().reduce(function (a, b) { return a + b.cnt; }, 0), 'отримано бейджів') + '</div><p style="margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-t="growth">До розвитку ›</button></p>';
     },
     exportSheets: function () {
       return [{ name: 'Рефлексії', rows: [['Дата', 'Настрій (1-5)', 'Добре', 'Не вийшло', 'Далі']].concat(G.refl.map(function (r) { return [fmt(r.date), r.mood, r.good, r.bad, r.next]; })) }];

@@ -150,7 +150,7 @@
       function v(k, f) { return esc(P[k] != null && P[k] !== '' ? P[k] : (f || '')); }
       return '<form id="ms-pff" class="ms-card pf-f"><b>Мій профіль</b><p class="sub" style="margin:4px 0 0">Видно лише вам. Порожні поля підтягуються з основного сайту, де є дані.</p>' +
         '<div class="ms-row" style="margin-top:12px;align-items:center"><div class="pf-av" id="pf-prev">' + (P.photo ? '<img src="' + esc(P.photo) + '">' : siteBioPhoto() + initials()) + '</div><div><button type="button" class="ms-btn sec sm" data-pf="photo">📷 Обрати фото</button> ' + (P.photo ? '<button type="button" class="ms-btn sec sm" data-pf="nophoto">Прибрати</button>' : '') + '<input type="file" id="pf-file" accept="image/*" style="display:none"></div></div>' +
-        '<label>Псевдонім / бій-ім\'я</label><input class="ms-in" name="nickname" maxlength="40" value="' + v('nickname', B.nickname !== 'Інший' ? B.nickname : '') + '">' +
+        '<label>Псевдонім / Nickname</label><input class="ms-in" name="nickname" maxlength="40" value="' + v('nickname', B.nickname !== 'Інший' ? B.nickname : '') + '">' +
         '<label>Регіон / місто</label><input class="ms-in" name="region" maxlength="60" value="' + v('region', B.region) + '">' +
         '<label>Клуб</label><input class="ms-in" name="club" maxlength="60" value="' + v('club') + '">' +
         '<label>Ігрова рука</label><select class="ms-in" name="hand"><option value="">—</option><option' + (P.hand === 'права' ? ' selected' : '') + '>права</option><option' + (P.hand === 'ліва' ? ' selected' : '') + '>ліва</option></select>' +
@@ -229,7 +229,7 @@
     head += '<div class="ms-tabs">' + tabs.map(function (t) { return '<button type="button" data-t="' + t[0] + '" class="' + (t[0] === tab ? 'on' : '') + '">' + t[1] + '</button>'; }).join('') + '</div>';
     var ext = EXT.filter(function (x) { return x.id === tab; })[0];
     var body = ext ? ext.view() : tab === 'checkouts' ? viewCheckouts() : tab === 'events' ? viewEvents() : tab === 'skills' ? viewSkills() : viewOverview();
-    var foot = '<div class="ms-row" style="margin-top:18px">' + (isStandalone() ? '' : '<button type="button" class="ms-btn sec sm" data-a="install">📲 На головний екран</button>') + '<button type="button" class="ms-btn sec sm" data-a="export">⬇ Експорт в Excel</button><button type="button" class="ms-btn sec sm" data-a="logout">Вийти</button><button type="button" class="ms-btn sec sm" data-a="wipe">🗑 Видалити мої дані</button><a class="ms-btn sec sm" href="instruction.html" target="_blank" rel="noopener" style="text-decoration:none">ℹ️ Інструкція</a></div>';
+    var foot = '<div class="ms-row" style="margin-top:18px">' + (isStandalone() ? '' : '<button type="button" class="ms-btn sec sm" data-a="install">📲 На головний екран</button>') + '<button type="button" class="ms-btn sec sm" data-a="export">⬇ Експорт в Excel</button><button type="button" class="ms-btn sec sm" data-a="logout">Вийти</button><button type="button" class="ms-btn sec sm" data-a="wipe">🗑 Видалити ВСІ мої дані</button><a class="ms-btn sec sm" href="instruction.html" target="_blank" rel="noopener" style="text-decoration:none">ℹ️ Інструкція</a></div>';
     sec.innerHTML = head + body + foot;
   }
 
@@ -387,7 +387,7 @@
     var list = D.checkouts.filter(function (c) { return c.value === v; });
     var m = document.createElement('div'); m.className = 'ms-modal'; m.setAttribute('data-i18n-skip', '');
     m.innerHTML = '<div><b style="font-size:18px">Закриття ' + v + '</b><p class="sub">' + (list.length ? 'Записів: ' + list.length : 'Ще не було') + '</p>' +
-      list.map(function (c) { return '<div class="ms-item"><span>' + fmtDate(c.achieved_at) + '</span>' + (canWrite() ? '<button class="ms-x" data-del="' + c.id + '" type="button">✕</button>' : '') + '</div>'; }).join('') +
+      list.map(function (c) { return '<div class="ms-item"><span>' + fmtDate(c.achieved_at) + '</span>' + (canWrite() ? '<button class="ms-x" data-del="' + c.id + '" type="button" title="Видалити це закриття">🗑</button>' : '') + '</div>'; }).join('') +
       '<p><button type="button" class="ms-btn sec sm" data-close="1">Закрити</button></p></div>';
     m.addEventListener('click', function (e) {
       if (e.target === m || e.target.getAttribute('data-close')) m.remove();
@@ -420,7 +420,7 @@
       return '<div class="ms-item"><div><b>' + esc(e.title) + '</b> · ' + fmtDate(e.event_date) + '<small>' +
         [e.avg_game != null ? 'сер. гра ' + e.avg_game : '', e.avg_tournament != null ? 'сер. турнір ' + e.avg_tournament : '', e.legs_played != null ? 'леги ' + (e.legs_won || 0) + '/' + e.legs_played : '',
         '180: ' + e.c180 + ' · 140+: ' + e.c140 + ' · 100+: ' + e.c100, (e.checkouts100 || []).length ? 'закриття 100+: ' + e.checkouts100.join(', ') : '', e.bull_checkouts ? 'булл: ' + e.bull_checkouts : '', (e.best_legs || []).length ? 'найкращі леги: ' + e.best_legs.join(', ') : '', e.notes || ''].filter(Boolean).map(esc).join(' · ') + '</small></div>' +
-        (w ? '<button class="ms-x" data-delev="' + e.id + '" type="button">✕</button>' : '') + '</div>';
+        (w ? '<button class="ms-x" data-delev="' + e.id + '" type="button" title="Видалити цей запис">🗑</button>' : '') + '</div>';
     }).join('') : '<p class="sub">Поки порожньо.</p>') + '</div>';
     return h;
   }
@@ -441,7 +441,7 @@
   function viewSkills() {
     var w = canWrite(), open = D.skills.filter(function (k) { return k.status === 'open'; }), done = D.skills.filter(function (k) { return k.status === 'done'; });
     var h = '';
-    if (w) h += '<div class="ms-card"><b>Нова ціль / навичка</b><form id="ms-skf" style="margin-top:10px;display:grid;gap:8px"><input class="ms-in" name="title" required maxlength="140" placeholder="Що хочу опанувати? Напр. стабільний вихід на D16"><input class="ms-in" name="note" maxlength="500" placeholder="Нотатка (необов\'язково)"><div><button class="ms-btn" type="submit">Додати</button></div></form></div>';
+    if (w) h += '<div class="ms-card"><b>Нова ціль / навичка / виправлення техніки</b><form id="ms-skf" style="margin-top:10px;display:grid;gap:8px"><input class="ms-in" name="title" required maxlength="140" placeholder="Що хочу опанувати? Напр. стабільний вихід на D16"><input class="ms-in" name="note" maxlength="500" placeholder="Нотатка (необов\'язково)"><div><button class="ms-btn" type="submit">Додати</button></div></form></div>';
     function it(k) {
       return '<div class="ms-item"><div>' + (k.status === 'done' ? '<span style="color:#2ecc71;font-weight:800">✓ </span>' : '') + '<b>' + esc(k.title) + '</b><small>' + (k.note ? esc(k.note) + '<br>' : '') + 'Додано ' + fmtDate(k.created_at) + (k.status === 'done' ? ' · опановано ' + fmtDate(k.done_at) : '') + (k.result ? '<br>Результат: ' + esc(k.result) : '') + '</small></div>' +
         (w ? '<div class="ms-row" style="flex:none;flex-wrap:nowrap">' + (k.status === 'open' ? '<button class="ms-btn ok sm" type="button" data-skdone="' + k.id + '">✓</button>' : '<button class="ms-btn sec sm" type="button" data-skopen="' + k.id + '">↺</button>') + '<button class="ms-x" type="button" data-skdel="' + k.id + '">✕</button></div>' : '') + '</div>';

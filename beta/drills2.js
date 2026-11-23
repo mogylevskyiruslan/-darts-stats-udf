@@ -1,7 +1,7 @@
-/* ВФД · «Мій простір» · БЕТА · вправи: дабли, тріпли, скоринг, cricket + рекомендації */
+/* ВФД · «Мій простір» · БЕТА · вправи: дабли, тріпли, скоринг + рекомендації */
 (function () {
   'use strict';
-  var GAMES = ['dbl', 'trp', 'score', 'cricket'];
+  var GAMES = ['dbl', 'trp', 'score'];
   var X = { rows: [], s: null, game: 'dbl', summary: null };
   var SEL = 'id,client_id,played_at,game,param,target,success,darts,scores,detail';
   var IMPOSSIBLE = [163, 166, 169, 172, 173, 175, 176, 178, 179];
@@ -78,8 +78,6 @@
     [20, 19, 18].forEach(function (t) { if (ts[t] && ts[t].darts >= 30) { var p = ts[t].hits / ts[t].darts; if (!worst || p < worst.p) worst = { t: t, p: p }; } });
     if (worst) out.push({ k: 'trp', t: worst.t, text: 'Найменше тріплів у ' + worst.t + ' (' + Math.round(worst.p * 100) + '% дротиків).' });
     else if (!by('trp').length) out.push({ k: 'trp', t: 20, text: 'Спробуйте тренування тріплів: почніть з 20.' });
-    var last = by('cricket')[0];
-    if (!last || (Date.now() - new Date(last.played_at)) > 14 * 864e5) out.push({ k: 'cricket', t: 0, text: 'Давно не було Cricket-вправи. Закрийте 20–15 і Bull.' });
     return out;
   }
 
@@ -88,8 +86,7 @@
     X.summary = null;
     if (kind === 'dbl') X.s = { id: uuid(), kind: kind, t: t, v: [], N: 5 };
     else if (kind === 'trp') X.s = { id: uuid(), kind: kind, t: t, v: [], N: 10 };
-    else if (kind === 'score') X.s = { id: uuid(), kind: kind, v: [], N: 10 };
-    else X.s = { id: uuid(), kind: 'cricket', v: [], N: 20 };
+    else X.s = { id: uuid(), kind: 'score', v: [], N: 10 };
     live(true); MS().render();
   }
   function finishS() {
@@ -98,14 +95,13 @@
     var now = new Date().toISOString();
     if (s.kind === 'dbl' || s.kind === 'trp') row = { client_id: s.id, played_at: now, game: s.kind, param: null, target: s.t, success: true, darts: s.v.length * 3, scores: s.v.slice(), detail: { hits: sum(s.v) } };
     else if (s.kind === 'score') row = { client_id: s.id, played_at: now, game: 'score', param: null, target: null, success: true, darts: s.v.length * 3, scores: s.v.slice(), detail: { avg: sum(s.v) / s.v.length } };
-    else { var m = sum(s.v); row = { client_id: s.id, played_at: now, game: 'cricket', param: null, target: null, success: m >= 21, darts: s.v.length * 3, scores: s.v.slice(), detail: { marks: m } }; }
     save(row);
     X.summary = { kind: s.kind, t: s.t, v: s.v.slice(), ok: row.success };
     X.s = null; live(false); MS().render();
   }
   function addV(n) {
     var s = X.s; s.v.push(n);
-    var done = s.kind === 'cricket' ? (sum(s.v) >= 21 || s.v.length >= s.N) : s.v.length >= s.N;
+    var done = s.v.length >= s.N;
     if (done) finishS(); else MS().render();
   }
 
@@ -119,18 +115,15 @@
       title = 'Скоринг · підхід ' + (vis + 1) + '/' + s.N;
       body = '<p class="sub" style="text-align:center;margin:14px 0 6px">Введіть суму за 3 дротики (у 20-ку чи по мішені, як вирішите).</p><form id="dx-sf" class="ms-row" style="justify-content:center"><input class="ms-in" id="dx-sin" type="number" inputmode="numeric" min="0" max="180" style="width:120px;font-size:22px;text-align:center" autofocus><button class="ms-btn" type="submit">OK</button></form>' +
         '<div class="tr-sg" style="grid-template-columns:repeat(4,1fr);margin-top:12px">' + [0, 26, 41, 45, 60, 85, 100, 140, 180].map(function (n) { return '<button type="button" data-dx="v" data-n="' + n + '">' + n + '</button>'; }).join('') + '</div>';
-    } else {
-      title = 'Cricket · підхід ' + (vis + 1); body = '<div class="tr-rem">' + pts + '<small>з 21 марки (20, 19, 18, 17, 16, 15 і Bull по 3)</small></div><p class="sub" style="text-align:center;margin:6px 0 0">Скільки марок за підхід? Тріпл = 3, дабл = 2, сінгл = 1.</p><div class="tr-sg" style="grid-template-columns:repeat(5,1fr);margin-top:10px">' + [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(function (n) { return '<button type="button" data-dx="v" data-n="' + n + '">' + n + '</button>'; }).join('') + '</div>';
     }
-    return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-dx="quit">✕ Вийти</button><span>' + title + '</span><span>' + (s.kind === 'score' ? 'Σ ' + pts : s.kind === 'cricket' ? '' : pts + ' влуч.') + '</span></div>' + body +
+    return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-dx="quit">✕ Вийти</button><span>' + title + '</span><span>' + (s.kind === 'score' ? 'Σ ' + pts : pts + ' влуч.') + '</span></div>' + body +
       '<div class="tr-last">' + s.v.slice(-8).map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div>' +
-      '<p style="text-align:center;margin:14px 0 0"><button type="button" class="ms-btn sec sm" data-dx="undo"' + (vis ? '' : ' disabled') + '>↶ Скасувати</button> ' + (s.kind === 'cricket' || s.kind === 'score' ? '<button type="button" class="ms-btn sec sm" data-dx="end"' + (vis ? '' : ' disabled') + '>Завершити</button>' : '') + '</p></div>';
+      '<p style="text-align:center;margin:14px 0 0"><button type="button" class="ms-btn sec sm" data-dx="undo"' + (vis ? '' : ' disabled') + '>↶ Скасувати</button> ' + (s.kind === 'score' ? '<button type="button" class="ms-btn sec sm" data-dx="end"' + (vis ? '' : ' disabled') + '>Завершити</button>' : '') + '</p></div>';
   }
   function summary() {
     var m = X.summary, v = m.v, h, again = m.kind === 'dbl' || m.kind === 'trp' ? '<button type="button" class="ms-btn" data-dx="start" data-k="' + m.kind + '" data-tt="' + m.t + '">Ще раз</button>' : '<button type="button" class="ms-btn" data-dx="start" data-k="' + m.kind + '">Ще раз</button>';
     if (m.kind === 'dbl' || m.kind === 'trp') { var hits = sum(v); h = '<h2>' + (m.kind === 'dbl' ? dn(m.t) : 'Тріпл ' + m.t) + ': ' + hits + ' з ' + v.length * 3 + '</h2><div class="ms-stats" style="margin:10px 0">' + stt(Math.round(hits / (v.length * 3) * 100) + '%', 'влучань') + stt(Math.max.apply(null, v), 'найкращий підхід') + '</div>'; }
     else if (m.kind === 'score') h = '<h2>Скоринг завершено</h2><div class="ms-stats" style="margin:10px 0">' + stt(f2(sum(v) / v.length), 'середній за підхід') + stt(f2(sum(v) / v.length), '3-дротиковий середній') + stt(v.filter(function (x) { return x >= 100; }).length, 'підходів 100+') + stt(Math.max.apply(null, v), 'найкращий підхід') + '</div>';
-    else h = '<h2>' + (m.ok ? 'Усе закрито 🎯' : 'Cricket завершено') + '</h2><div class="ms-stats" style="margin:10px 0">' + stt(v.length, 'підходів') + stt(f2(sum(v) / v.length), 'марок за підхід') + stt(sum(v), 'усього марок') + '</div>';
     return '<div class="tr-live">' + h + '<div class="tr-last">' + v.map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div><div class="ms-row" style="margin-top:12px">' + again + '<button type="button" class="ms-btn sec" data-dx="close">Готово</button></div></div>';
   }
   function heat(st, ts, name) {
@@ -144,7 +137,7 @@
     if (X.summary) return summary();
     var rec = recommend();
     if (rec.length && w) h += '<div class="ms-card" style="border-left:5px solid #2ecc71"><b>💡 Рекомендація на сьогодні</b>' + rec.map(function (r) { return '<div class="ms-row" style="justify-content:space-between;margin-top:8px;font-size:13px"><span style="flex:1">' + esc(r.text) + '</span><button type="button" class="ms-btn sm" data-dx="start" data-k="' + r.k + '" data-tt="' + r.t + '">Почати</button></div>'; }).join('') + '</div>';
-    var games = [['dbl', 'Дабли'], ['trp', 'Тріпли'], ['score', 'Скоринг'], ['cricket', 'Cricket']];
+    var games = [['dbl', 'Дабли'], ['trp', 'Тріпли'], ['score', 'Скоринг']];
     h += '<div class="ms-tabs">' + games.map(function (x) { return '<button type="button" data-dx="game" data-g="' + x[0] + '" class="' + (g === x[0] ? 'on' : '') + '">' + x[1] + '</button>'; }).join('') + '</div>';
     var rows = by(g);
     if (g === 'dbl') {
@@ -160,13 +153,10 @@
     } else if (g === 'score') {
       h += '<div class="ms-card"><b>Скоринг-раунди</b><p class="sub" style="margin:4px 0 10px">10 підходів по 3 дротики. Вносьте суму за кожен підхід. Це тренування стабільності набору.</p><button type="button" class="ms-btn" data-dx="start" data-k="score"' + (w ? '' : ' disabled') + '>▶ Почати раунд</button></div>';
       if (rows.length) { var all = []; rows.forEach(function (r) { all = all.concat(r.scores); }); h += '<div class="ms-card"><b>Статистика · ' + rows.length + ' раундів</b><div class="ms-stats" style="margin-top:10px">' + stt(f2(sum(all) / all.length), 'середній за підхід') + stt(Math.max.apply(null, rows.map(function (r) { return sum(r.scores) / r.scores.length; })).toFixed(2), 'найкращий раунд (сер.)') + stt(all.filter(function (x) { return x >= 100; }).length, 'підходів 100+') + stt(all.filter(function (x) { return x === 180; }).length, '180') + '</div></div>'; }
-    } else {
-      h += '<div class="ms-card"><b>Cricket · закрити все</b><p class="sub" style="margin:4px 0 10px">Потрібно закрити 20, 19, 18, 17, 16, 15 і Bull, тобто 21 марку. Рахуйте марки за підхід. Чим менше підходів, тим краще.</p><button type="button" class="ms-btn" data-dx="start" data-k="cricket"' + (w ? '' : ' disabled') + '>▶ Почати</button></div>';
-      if (rows.length) { var okr = rows.filter(function (r) { return r.success; }), mpr = sum(rows.map(function (r) { return r.detail && r.detail.marks || sum(r.scores); })) / sum(rows.map(function (r) { return r.scores.length; })); h += '<div class="ms-card"><b>Статистика · ' + rows.length + ' спроб</b><div class="ms-stats" style="margin-top:10px">' + stt(okr.length, 'закрито повністю') + stt(okr.length ? Math.min.apply(null, okr.map(function (r) { return r.scores.length; })) + ' підх.' : '—', 'найшвидше закриття') + stt(f2(mpr), 'марок за підхід (MPR)') + '</div></div>'; }
     }
     if (rows.length) h += '<div class="ms-card"><b>Останні</b>' + rows.slice(0, 8).map(function (r) {
-      var lab = r.game === 'dbl' ? dn(r.target) + ': ' + sum(r.scores) + '/' + r.scores.length * 3 : r.game === 'trp' ? 'тріпл ' + r.target + ': ' + sum(r.scores) + '/' + r.scores.length * 3 : r.game === 'score' ? 'сер. ' + f2(sum(r.scores) / r.scores.length) : (r.success ? 'закрито за ' + r.scores.length : 'не закрито') + ' · ' + sum(r.scores) + ' марок';
-      return '<div class="tr-leg"><div>' + new Date(r.played_at).toLocaleDateString('uk-UA') + ' · <b>' + lab + '</b></div>' + (typeof r.id === 'number' && w ? '<button class="ms-x" type="button" data-dx="del" data-id="' + r.id + '">✕</button>' : '') + '</div>';
+      var lab = r.game === 'dbl' ? dn(r.target) + ': ' + sum(r.scores) + '/' + r.scores.length * 3 : r.game === 'trp' ? 'тріпл ' + r.target + ': ' + sum(r.scores) + '/' + r.scores.length * 3 : r.game === 'score' ? 'сер. ' + f2(sum(r.scores) / r.scores.length) : '';
+      return '<div class="tr-leg"><div>' + new Date(r.played_at).toLocaleDateString('uk-UA') + ' · <b>' + lab + '</b></div>' + (typeof r.id === 'number' && w ? '<button class="ms-x" type="button" data-dx="del" data-id="' + r.id + '" title="Видалити цей запис">🗑</button>' : '') + '</div>';
     }).join('') + '</div>';
     return h;
   }
@@ -214,12 +204,11 @@
     overview: function (year) {
       function iy(x) { return year === 'all' || new Date(x).getFullYear() === year; }
       var r = X.rows.filter(function (x) { return iy(x.played_at); }); if (!r.length) return '';
-      var d = r.filter(function (x) { return x.game === 'dbl'; }), t = r.filter(function (x) { return x.game === 'trp'; }), s = r.filter(function (x) { return x.game === 'score'; }), c = r.filter(function (x) { return x.game === 'cricket'; });
+      var d = r.filter(function (x) { return x.game === 'dbl'; }), t = r.filter(function (x) { return x.game === 'trp'; }), s = r.filter(function (x) { return x.game === 'score'; });
       var cells = [];
       if (d.length) cells.push(stt(Math.round(sum(d.map(function (x) { return sum(x.scores); })) / sum(d.map(function (x) { return x.scores.length * 3; })) * 100) + '%', 'влучань у дабли'));
       if (t.length) cells.push(stt(Math.round(sum(t.map(function (x) { return sum(x.scores); })) / sum(t.map(function (x) { return x.scores.length * 3; })) * 100) + '%', 'дротиків у тріпл'));
       if (s.length) { var all = []; s.forEach(function (x) { all = all.concat(x.scores); }); cells.push(stt(f2(sum(all) / all.length), 'скоринг: середній за підхід')); }
-      if (c.length) cells.push(stt(c.filter(function (x) { return x.success; }).length + ' / ' + c.length, 'Cricket: закрито'));
       return '<div class="ms-stats" style="margin-top:8px">' + cells.join('') + '</div><p style="margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-t="drills2">До вправ ›</button></p>';
     },
     exportSheets: function () {
@@ -227,8 +216,7 @@
       return [
         { name: 'Дабли', rows: [['Дата', 'Дабл', 'Влучань', 'Дротиків', 'Підходи (влучань)']].concat(by('dbl').map(function (r) { return [d(r.played_at), dn(r.target), sum(r.scores), r.scores.length * 3, r.scores.join(' ')]; })) },
         { name: 'Тріпли', rows: [['Дата', 'Сектор', 'Влучань', 'Дротиків', 'Підходи (влучань)']].concat(by('trp').map(function (r) { return [d(r.played_at), r.target, sum(r.scores), r.scores.length * 3, r.scores.join(' ')]; })) },
-        { name: 'Скоринг', rows: [['Дата', 'Середній за підхід', 'Підходи']].concat(by('score').map(function (r) { return [d(r.played_at), Math.round(sum(r.scores) / r.scores.length * 100) / 100, r.scores.join(' ')]; })) },
-        { name: 'Cricket', rows: [['Дата', 'Закрито', 'Підходів', 'Марок', 'Марки по підходах']].concat(by('cricket').map(function (r) { return [d(r.played_at), r.success ? 'так' : 'ні', r.scores.length, sum(r.scores), r.scores.join(' ')]; })) }
+        { name: 'Скоринг', rows: [['Дата', 'Середній за підхід', 'Підходи']].concat(by('score').map(function (r) { return [d(r.played_at), Math.round(sum(r.scores) / r.scores.length * 100) / 100, r.scores.join(' ')]; })) }
       ];
     },
     reset: function () { X.rows = []; X.s = null; X.summary = null; live(false); }
