@@ -297,8 +297,11 @@
       if (cr && cr.rows) cr.rows.forEach(function (r) { if (r.name === name) rating = r; });
     });
     var profBtn = '<p style="margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-prof="1">Повний профіль на сайті ›</button></p>';
+    var hasProfile = inLists || !!rating || nakkaPlayerStats.some(function (r) { return r.name === name; }) ||
+      (typeof playerBios !== 'undefined' && playerBios && !!playerBios[name]) || (typeof curatedPlayerNames !== 'undefined' && curatedPlayerNames && curatedPlayerNames.indexOf(name) >= 0);
     if (!rows.length && !rating && !inLists) {
-      return head + '<p class="sub">Профіль «' + esc(name) + '» на основному сайті поки не знайдено. Дані з\'являться після участі у всеукраїнських турнірах ВФД.</p></div>';
+      if (hasProfile) return head + '<p class="sub">Ваш профіль на сайті існує, але даних про Чемпіонати й Кубки України поки немає. Вони з\'являться тут автоматично після участі у всеукраїнських турнірах ВФД. Решту історії дивіться в повному профілі.</p>' + profBtn + '</div>';
+      return head + '<p class="sub">Профіль «' + esc(name) + '» на основному сайті поки не знайдено. Він з\'явиться після участі в турнірах ВФД, або перевірте, що ім\'я в списку власників тур-карти збігається з іменем на сайті.</p></div>';
     }
     var sum = function (f) { return rows.reduce(function (a, r) { return a + (r[f] || 0); }, 0); };
     var cells = [];
