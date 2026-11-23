@@ -42,7 +42,7 @@
     while (s[iso(d)]) { cur++; d.setDate(d.getDate() - 1); }
     return { cur: cur, best: best };
   }
-  function legAvg(l) { return 501 / l.darts * 3; }
+  function legAvg(l) { return sum(l.scores || [501]) / l.darts * 3; }
   function legF9(l) { var sc = (l.scores || []).slice(0, 3); return sum(sc) / Math.min(9, l.darts) * 3; }
 
   // ---------- збереження ----------
