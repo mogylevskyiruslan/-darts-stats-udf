@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-22T13:14:39.598411+00:00",
+  "lastUpdated": "2026-11-23T13:20:26.750872+00:00",
   "tournamentsCount": 271,
   "parts": {
    "nakkaMatchStats": {
@@ -14041,13 +14041,22 @@
    "rank": 31
   },
   {
+   "name": "Спекторенко Катерина",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 2,
+   "champUA": 0,
+   "total": 3,
+   "rank": 32
+  },
+  {
    "name": "Зайцева Інна",
    "gold": 0,
    "silver": 1,
    "bronze": 1,
    "champUA": 0,
    "total": 2,
-   "rank": 32
+   "rank": 33
   },
   {
    "name": "Габєліч Ясміна",
@@ -14056,7 +14065,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 33
+   "rank": 34
   },
   {
    "name": "Дзюбій Юлія",
@@ -14065,7 +14074,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 34
+   "rank": 35
   },
   {
    "name": "Леонова Єлізавета",
@@ -14074,7 +14083,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 35
+   "rank": 36
   },
   {
    "name": "Молнар Неллі",
@@ -14083,7 +14092,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 36
+   "rank": 37
   },
   {
    "name": "Пугіна Єлизавета",
@@ -14092,7 +14101,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 37
+   "rank": 38
   },
   {
    "name": "Устименко Вікторія",
@@ -14101,7 +14110,7 @@
    "bronze": 0,
    "champUA": 0,
    "total": 1,
-   "rank": 38
+   "rank": 39
   },
   {
    "name": "Соловьова Юлія",
@@ -14110,7 +14119,7 @@
    "bronze": 3,
    "champUA": 0,
    "total": 3,
-   "rank": 39
+   "rank": 40
   },
   {
    "name": "Борисова Марина",
@@ -14119,7 +14128,7 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 40
+   "rank": 41
   },
   {
    "name": "Гордієнко Христина",
@@ -14128,19 +14137,10 @@
    "bronze": 2,
    "champUA": 0,
    "total": 2,
-   "rank": 41
-  },
-  {
-   "name": "Солтис Ганна",
-   "gold": 0,
-   "silver": 0,
-   "bronze": 2,
-   "champUA": 0,
-   "total": 2,
    "rank": 42
   },
   {
-   "name": "Спекторенко Катерина",
+   "name": "Солтис Ганна",
    "gold": 0,
    "silver": 0,
    "bronze": 2,
@@ -118259,6 +118259,12 @@
  },
  "youtubeVideos": [
   {
+   "id": "uDAlp5NnbfM",
+   "title": "Полтава-2 – Kyiv Bulls #shorts",
+   "published": "2026-11-22",
+   "thumbnail": "https://i2.ytimg.com/vi/uDAlp5NnbfM/hqdefault.jpg"
+  },
+  {
    "id": "d_BmvUSaAQY",
    "title": "Полтава-2 – Kyiv Bulls #shorts",
    "published": "2026-11-21",
@@ -118269,12 +118275,6 @@
    "title": "Полтава-1 – Харків #shorts",
    "published": "2026-11-20",
    "thumbnail": "https://i2.ytimg.com/vi/aI8xFt0WB_k/hqdefault.jpg"
-  },
-  {
-   "id": "pL3tjjQ_jhY",
-   "title": "Полтава-1 – Харків #shorts",
-   "published": "2026-11-19",
-   "thumbnail": "https://i1.ytimg.com/vi/pL3tjjQ_jhY/hqdefault.jpg"
   }
  ],
  "telegramNews": [
@@ -118282,13 +118282,13 @@
    "text": "З 15.00 за київським часом стартує трансляція денної сесії девʼятого дня Grand Slam of Darts",
    "date": "2026-11-22",
    "url": "https://t.me/fullbull/13054",
-   "photo": "https://cdn4.telesco.pe/file/nCTrSQCnFZm5u5-hBLm3X8tbqFFb711PUi5SooSJHHK6EY9peB6EkT_nI-SCcBt-u6tI-85UIzB_1hn0LCvlw52JNpNpnZ4k7TFadZR5JUzTF8THbz0jlVBz7UfAv2vQDdtJlDq9aTqaqk90yRgA0JRHvvvILQSlPk_klQZ6RamMgJVxpkLUGPFAFOcH21GOrh8YZ_ND4CCKXH3eE-BUztpTgWeJMWhMEjpRteX5HoL_-00hzAli4z4jnsZleQsGRRGi4XmzeWV1Zte0bSj2lDAtVAUKgVFRUrkHFw_RPu_ELx53bvNrRdA3vy7OkDQXNap-6jiPrV7dot6vUviSfA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/XEWFxbdNFuE8oLVAZuEYebxYATg0zMoJCVb-1mn9m9S64IrSF314KAyyx9PMwL22BOG5TSQp2xfhrXfHbWRQNCCBDJL1dG_TCS9SPG9ppGxylP-qT-ryC9eBdsmApBKUr0PYEZab_1xgPRATL1BkVXDPK23NxS428QPY8s_rBcybvCnhcjbvMIyIGh6v1GhhtZvi9CQdaXzaV2cLRomM-dLUMaLU_b94ODYEyS0rZtfTGpnHCorPhicTqBsN_cTE1gzBUGtJixssvvknLrFQeCkWxigHGpm8RB3MdfCr3GwJswOZ_GrAUgvGSUJ_cIV2XKb7SZs8fk6yaAKICI1o5Q.jpg"
   },
   {
    "text": "Вже майже визначено всіх учасників київського підсумкового турніру року - Мастерс 2026.\nСтаном на 22 листопада, з кількох ігрових турнірних схем в Києві на турнір потрапляють 11 гравців. Ще одне місце зарезервоване під проведення кваліфікаційного аукціону, який відбудеться після останнього осіннього вікенду. \nFullBull Kyiv Masters 2026 заплановано орієнтовно на 6-грудня.",
    "date": "2026-11-22",
    "url": "https://t.me/fullbull/13053",
-   "photo": "https://cdn4.telesco.pe/file/OzgpM9RFco8CJlTY5qTmUl9lw2kvukXN7BQGLfa1fcb1t1NvgB8m1knHw_nLi2My7vZ0RDDr60cPfZrONSUYcuK1o7ygGfRu_tLbL7ED4WTTj3ToCgO_laDupYiE2JFRLlxS_S5SeZ3_vYxELChunHQfyHU-g2MZuTdn4Wa7lhvd1z7TON3chLe4-mHBqjW7G_vadDtlcwUOVTKrxkL546W2u-9RIwzLos554QqtHrLsHSl1FQW1FPILSY0Hku-XNbWF6XZ9jCxjusYOOOY8CVuN4ypjTqcfhmWkXKmP3xFrdnbJ69FJPeiDxhDWtnSnhVPH-2LayaAJLfTdLD20OA.jpg"
+   "photo": "https://cdn4.telesco.pe/file/b8KWgvZNV2Z6l9fk0u3kHhvcMC0Y11XnRd9veN9HimSJIlNI_z-m38Y1eJemtgEJO7KJfd_VXTFmTm4j6mF_gNQn0GZkZDc-yn6B7BWy1MEgb-hyICDv36HHnwv7csk5JEEUHOFb_2AvLM-4zd8oBZ3Q1YIeo0OJ3fz36vuZno1DAwgHb6gjsTNXSWx0Vh9L0iQRHN4JFkq28mCh4OBH1eumqpwmgkFpZQVWh6I_cMwi86MpjHLuHZH8uEl3zopNEH8qOsccWqCyKFVl33st0bEhxmbKH9uuX7qmgtXI0KhdVpWY3hTq0I8QeYltt3qmvNs1oeBuwBliOdb6IVDY_A.jpg"
   },
   {
    "text": "22 листопада - турнір осіннього сезону в дартс клубі «Портер» (м.Київ)",
@@ -118300,19 +118300,13 @@
    "text": "Рейтингова таблиця гравців DartsNews Club Series 2026 після пʼяти етапів. \nОскільки Овсєнко Є., Бабанін Д. вже отримали кваліфікації на FullBull Kyiv Masters 2026 через інші турніри, станом на зараз ще чотирі кваліфікаційних місця на київський підсумковий турнір року мають гравці виділені світлим синім кольором.",
    "date": "2026-11-22",
    "url": "https://t.me/fullbull/13051",
-   "photo": "https://cdn4.telesco.pe/file/XWZhLgMDKQHP83RnSucggXzPypQQTEyVXpbD_EnOjarFyjIumYTRBPxJPD78EwBsNc-76ekHwHqzTmIfgK0SoN5QTDBNUoTfae7ELwQ0iABEMigBKC3JfzK_fI_VpxN4nFT9DNGo9acfRQ4qoSVuWOvo3eOZWHs_KEG0md--7stqO1gQHzl0ancwOBfK4stPZu7OOPce2yq1050-QhwNxa9d3sS-zrlxNTy51aVIy9xOTHwzwY9CkNODpNJSS7OF3j4UCs6zTvrUPyrEPdkP4UcpwitLoNDCDVOuKHxyrUmhu7lRDZcXcxpGy3OHpN4C_O9pCllLPHNL04deIQPWrg.jpg"
+   "photo": "https://cdn4.telesco.pe/file/JGWAh5GhrbZQgfhPup_SQThHehWIPMNibOGsuu3QfjqbGc8PXlkxTi1CGrL6qkokVZbpSEFY8ziX0rQxsdvwBZtuQyYjENqpsDpQHKNkX10Zxp5YoKu_moZWcjGOuc41V8srwPEhPgOwIAfrYhsQDa5IoNnRMreIaTPU1t6kFC468jwzao-rK4Pp6A3_PG1z7g4XFSMM_fUoeHoHjE8E0lKdF-bm3qCB6pl_HqoANW38mzauby_uUaB1oe6wsy9StsKHelIqnGwyQq6qYf2Uer0aVjmz7xnllaCrxxYqm9uKIp8L_liQCNqFnP715PyyOWB4tcewAmz2tmQca7StTQ.jpg"
   },
   {
    "text": "🏆Овсієнко Євген переміг у передостанньому турі DartsNews Club Series 2026, який відбувся у Києві у суботу, 21 листопада. 6 ігор, 21 лег з загальним середнім за турнір 74.79.\n🥇Овсієнко Є.\n🥈Аверін С.\n🥉Бабанін Д.\n🥉Логоша Є.\n1️⃣8️⃣0️⃣х5️⃣ - Овсієнко Є.\n☑️Чекаути 100+:\n1️⃣2️⃣6️⃣ - Овсієнко Є.\n👀",
    "date": "2026-11-22",
    "url": "https://t.me/fullbull/13049",
-   "photo": "https://cdn4.telesco.pe/file/KEvNSR8qf_lWdKw9yNnpElc-YynsX29YV3z4OAloJoXXIvQMBJv5YCzAh5bF8SZiS-xMaYw_5gvjCj7Rej90usr7ZwUzoU-0CQecsp9yISx5fwKKcKW33Qwzu38ohqpJ0Bi5LHiSBhAMkXHBr0NyOE4llSg5A7XsvZNsm3CTNocGB5xxMHQHLpkVp26zK9cXwh_rA-4uEtzNcHivm_tL6zbceOjLrBTg3jE_fxlW4qI8NyExp5XPsQKZpq_mPm4lAlZ-If4d_k1spNUNvayYmM4xHboaah6bQHCEPot1jeHlTJJ9mOf5CEyVJcGXAVpdYTYQ9d8GOLCpeheHkU8lGQ.jpg"
-  },
-  {
-   "text": "Українська дартс ліга (УДЛ) визначила сітку Плей-офф на Гранд-фінал «ЗОЛОТИЙ ДРОТИК 2026», проведення якого заплановано на 10 грудня.\nПризовий фонд GRAND FINAL цього року — 50 000 грн.",
-   "date": "2026-11-19",
-   "url": "https://t.me/fullbull/13029",
-   "photo": "https://cdn4.telesco.pe/file/gdJFy03jokJuXBS3E8u2EgItXpWEQKF22BNfbxcvUzKgi2PS1XEm26-LTLdqSjg8aMZCCCAiq2PX7DxnAt23mZ8E1GQYWCZ1x2tPKhzw76Cd_Nx2w3C-Bov7c0a_kkSFz785QJmFS-ZEqWpmCqgv6rAcMwNGwhvDUx7ReZcfo3ohdeOwkF5mCc1trD1kCs6W23hu23dH4fNVSpwROK1BLpT7rZKtA828wcfPALdVPgbkbdIuOQaxm3yzWr6jsjV5e_SWvLz_aWkWLIY6l6VBdA_T-fxH5DgxJjmxN4paY_4LtiEqdxNA7iMgnnoR9BQOMrDe0DZkVAKCBOKasRcoEQ.jpg"
+   "photo": "https://cdn4.telesco.pe/file/VddkfAzWYlCPKMizbBDzZ3T8AWSMVMZRQ61PO4YB-F7aPyXe7uINl8eKLcNTdEzsnIn4E3oOMNnH-b1jwjU8nqxjq8UfhwVx9LGTFnDLR7GmxvLN7wHEdLOtYi0b5de0zErrHIz6qwXAV0szX6Q4-d86hco5w8zRk5l6PgMwMyhrFXlvNGqNptRYxfU_4WZw5yQLeMOgyg-OAjZ1WO9S4F79mHX7Utz-Qb93WNF0a_-fOd6sEFrLnRj_OwERCsrkT4ecpUk0DKm2YAGF1S34yCdKmkFejgb7YPpMK6aaV0x53nZDkesQ7ENutb_XtD77udyVWTkoNx3OKLnw3nlSrw.jpg"
   }
  ],
  "championsRecords": [
@@ -122303,6 +122297,15 @@
   {
    "year": 2007,
    "category": "501do",
+   "gender": "women",
+   "place": 2,
+   "names": [
+    "Спекторенко Катерина"
+   ]
+  },
+  {
+   "year": 2007,
+   "category": "501do",
    "gender": "men",
    "place": 3,
    "names": [
@@ -123130,7 +123133,6 @@
   "Бушуй Олексій",
   "Бушуй Сергій",
   "Бєлов Артем",
-  "Бєліков",
   "Бєліков Володимир",
   "Білаш Вікторія",
   "Білевич Олександр",
