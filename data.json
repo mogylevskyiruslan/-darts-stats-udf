@@ -1,6 +1,6 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-23T13:56:22.062843+00:00",
+  "lastUpdated": "2026-11-23T15:50:41.906264+00:00",
   "tournamentsCount": 271,
   "parts": {
    "nakkaMatchStats": {
@@ -118265,6 +118265,12 @@
  },
  "youtubeVideos": [
   {
+   "id": "vu4iHdKaR-M",
+   "title": "Kyiv Bulls – Кривий Ріг-1 #shorts",
+   "published": "2026-11-23",
+   "thumbnail": "https://i3.ytimg.com/vi/vu4iHdKaR-M/hqdefault.jpg"
+  },
+  {
    "id": "uDAlp5NnbfM",
    "title": "Полтава-2 – Kyiv Bulls #shorts",
    "published": "2026-11-22",
@@ -118275,12 +118281,6 @@
    "title": "Полтава-2 – Kyiv Bulls #shorts",
    "published": "2026-11-21",
    "thumbnail": "https://i1.ytimg.com/vi/d_BmvUSaAQY/hqdefault.jpg"
-  },
-  {
-   "id": "aI8xFt0WB_k",
-   "title": "Полтава-1 – Харків #shorts",
-   "published": "2026-11-20",
-   "thumbnail": "https://i2.ytimg.com/vi/aI8xFt0WB_k/hqdefault.jpg"
   }
  ],
  "telegramNews": [
@@ -123031,6 +123031,7 @@
    "dartsWeight": "25"
   },
   "Могилевський Руслан": {
+   "nickname": "Grave",
    "profession": "Project Manager",
    "birthDate": "31.05.1990",
    "region": "Харків",
