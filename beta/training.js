@@ -26,6 +26,7 @@
     '.tr-rem small{display:block;font:600 12px Inter,sans-serif;color:var(--muted);margin-top:4px}',
     '.tr-ghost{background:#1d2250;border:1px solid var(--royal-light);border-radius:12px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;margin:6px 0}',
     '.tr-ghost b{font:800 22px Montserrat,Inter,sans-serif}.tr-ghost.lose{border-color:#c0392b}.tr-ghost.win{border-color:#2e8b57}',
+    '.tr-prog{margin:12px 0 2px;text-align:center}.tr-prog .seg{display:flex;gap:4px;margin-bottom:6px}.tr-prog .seg i{flex:1;height:8px;border-radius:5px;background:var(--panel-2);border:1px solid var(--line)}.tr-prog .seg i.d{background:#2e8b57;border-color:#2e8b57}.tr-prog .seg i.c{background:var(--gold);border-color:var(--gold);animation:trp 1.2s infinite}.tr-prog b{font-size:14px;color:var(--cream)}.tr-prog span{font-size:12px;color:var(--muted)}@keyframes trp{50%{opacity:.45}}',
     '.tr-last{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;min-height:26px;margin:4px 0}',
     '.tr-last span{background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:3px 9px;font:700 13px Inter,sans-serif}',
     '.tr-ent{background:var(--bg);border:1px solid var(--line);border-radius:12px;text-align:center;font:800 40px/1.4 Montserrat,Inter,sans-serif;min-height:58px;margin:6px 0}',
@@ -256,7 +257,7 @@
     if (live.pending != null) body = '<p class="sub" style="text-align:center;margin:12px 0 0">Закриття ' + r + '. Яким дротиком закрили?</p>' + dartBtns(r) + '<p style="text-align:center"><button type="button" class="ms-btn sec sm" data-tr="undo">↶ Скасувати введення</button></p>';
     else body = padHtml(n);
     return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="p-end">⏹ Завершити</button><span>170+1 · ціль ' + live.start + (live.sess && live.sess.length ? ' · закрито ' + live.sess.filter(function (x) { return x.ok; }).length : '') + '</span><span>підхід ' + (n + 1) + '/' + V + '</span></div>' +
-      '<div class="tr-rem">' + r + '<small>залишилось · підходів лишилось ' + (V - n) + '</small></div><div class="tr-last">' + live.scores.map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div>' + body + '</div>';
+      prog(n, V, 'Підхід') + '<div class="tr-rem">' + r + '<small>залишилось · підходів лишилось ' + (V - n) + '</small></div><div class="tr-last">' + live.scores.map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div>' + body + '</div>';
   }
   function viewP171Home() {
     var w = MS().canWrite(), h = '<div class="ms-card"><b>170+1</b><p class="sub" style="margin:4px 0 10px">Почніть із закриття 170, далі 171, 172… до 180: цілі понад 170 закриваються за кілька підходів. Обираєте кількість підходів на ціль. Закрили: одразу наступна ціль із тією ж кількістю підходів. Не закрили: та сама ціль ще раз. Тренування триває, поки не закриєте 180 або не натиснете «Завершити». Прогрес зберігається.</p><div class="ms-row">';
@@ -334,7 +335,7 @@
     var lastV = []; for (var i = 0; i + 2 < n + 1 && i < n; i += 3) lastV.push(sl.darts.slice(i, i + 3));
     var nm = sl.sector === 25 ? ['мимо', '25', '50'] : ['мимо', '1', '2', '3'];
     return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="s-quit">✕ Вийти</button><span>' + (sl.sector === 25 ? 'Bull' : 'Сектор ' + sl.sector) + ' · підхід ' + visit + '/10</span><span>очок ' + pts + '</span></div>' +
-      '<div class="tr-rem">' + secName(sl.sector) + '<small>дротик ' + dn + ' з 3 · підхід ' + visit + ' з 10</small></div>' +
+      prog(visit - 1, 10, 'Підхід') + '<div class="tr-rem">' + secName(sl.sector) + '<small>дротик ' + dn + ' з 3 · підхід ' + visit + ' з 10</small></div>' +
       '<div class="tr-last">' + lastV.slice(-5).map(function (v) { return '<span>' + v.map(function (x) { return nm[x]; }).join(' · ') + ' = ' + sum(v) + '</span>'; }).join('') + '</div>' +
       (sl.sector === 25
         ? '<div class="tr-sec three"><button type="button" class="no" data-tr="s-d" data-n="0">Мимо<br><small>0</small></button><button type="button" data-tr="s-d" data-n="1">Зовнішнє<br><small>25 · +1</small></button><button type="button" class="yes" data-tr="s-d" data-n="2">Bull<br><small>50 · +2</small></button></div>'
@@ -405,6 +406,12 @@
     ks.forEach(function (k, i) { var show = ks.length <= 6 || i % step === 0 || i === ks.length - 1; if (show) lab += '<text x="' + x(i) + '" y="' + (y(vals[i]) - 8) + '" text-anchor="middle" fill="#eef1fb" font-size="11" font-weight="700">' + vals[i].toFixed(1) + '</text><text x="' + x(i) + '" y="' + (H - 8) + '" text-anchor="middle" fill="#8d96c4" font-size="10">' + k.slice(5) + '.' + k.slice(2, 4) + '</text>'; });
     return '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%"><polyline fill="none" stroke="#fcc202" stroke-width="2.5" points="' + pts + '"/>' + vals.map(function (v, i) { return '<circle cx="' + x(i) + '" cy="' + y(v) + '" r="3.5" fill="#fcc202"/>'; }).join('') + lab + '</svg>';
   }
+  function prog(done, total, unit) {
+    var seg = ''; for (var i = 0; i < total; i++) seg += '<i class="' + (i < done ? 'd' : i === done ? 'c' : '') + '"></i>';
+    var left = Math.max(0, total - done - 1);
+    return '<div class="tr-prog"><div class="seg">' + seg + '</div><b>' + unit + ' ' + Math.min(done + 1, total) + ' з ' + total + '</b> <span>· ' + (left ? 'після цього ще ' + left : 'останній') + '</span></div>';
+  }
+  window.__trProg = prog;
   function stt(v, l) { return '<div class="ms-stat"><b>' + esc(v) + '</b><span>' + esc(l) + '</span></div>'; }
 
   // ---------- екрани ----------

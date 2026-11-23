@@ -116,7 +116,7 @@
       body = '<p class="sub" style="text-align:center;margin:14px 0 6px">Введіть суму за 3 дротики (у 20-ку чи по мішені, як вирішите).</p><form id="dx-sf" class="ms-row" style="justify-content:center"><input class="ms-in" id="dx-sin" type="number" inputmode="numeric" min="0" max="180" style="width:120px;font-size:22px;text-align:center" autofocus><button class="ms-btn" type="submit">OK</button></form>' +
         '<div class="tr-sg" style="grid-template-columns:repeat(4,1fr);margin-top:12px">' + [0, 26, 41, 45, 60, 85, 100, 140, 180].map(function (n) { return '<button type="button" data-dx="v" data-n="' + n + '">' + n + '</button>'; }).join('') + '</div>';
     }
-    return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-dx="quit">✕ Вийти</button><span>' + title + '</span><span>' + (s.kind === 'score' ? 'Σ ' + pts : pts + ' влуч.') + '</span></div>' + body +
+    return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-dx="quit">✕ Вийти</button><span>' + title + '</span><span>' + (s.kind === 'score' ? 'Σ ' + pts : pts + ' влуч.') + '</span></div>' + (window.__trProg ? window.__trProg(vis, s.N, 'Підхід') : '') + body +
       '<div class="tr-last">' + s.v.slice(-8).map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div>' +
       '<p style="text-align:center;margin:14px 0 0"><button type="button" class="ms-btn sec sm" data-dx="undo"' + (vis ? '' : ' disabled') + '>↶ Скасувати</button> ' + (s.kind === 'score' ? '<button type="button" class="ms-btn sec sm" data-dx="end"' + (vis ? '' : ' disabled') + '>Завершити</button>' : '') + '</p></div>';
   }
