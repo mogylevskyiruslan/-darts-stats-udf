@@ -764,7 +764,7 @@
     saveLeg(row); dl.w[p]++;
     dl.tot = dl.tot || [{ sc: 0, dt: 0 }, { sc: 0, dt: 0 }]; dl.hist = dl.hist || [];
     dl.tot[0].sc += sum(L.sc[0]); dl.tot[0].dt += d0; dl.tot[1].sc += sum(L.sc[1]); dl.tot[1].dt += d1;
-    dl.hist.push({ a: L.sc[0].slice(), b: L.sc[1].slice(), win: win, first: L.starter });
+    dl.hist.push({ a: L.sc[0].slice(), b: L.sc[1].slice(), win: win, first: L.starter, cid: row.client_id, d0: d0, d1: d1 });
     if (dl.w[p] >= dl.need) { dl.over = true; dl.winner = p; lset('ms_duel', null); duLive(false); return MS().render(); }
     MS().toast('Лег: ' + duName(p) + '. Рахунок ' + dl.w[0] + ':' + dl.w[1]);
     dl.n++; dl.leg = duLeg(1 - L.starter); duSave(); MS().render();
@@ -772,6 +772,21 @@
   function duUndo() {
     var L = dl.leg; if (L.pending != null) { L.pending = null; } else if (L.seq.length) { var p = L.seq.pop(); L.sc[p].pop(); L.turn = p; }
     L.entry = ''; duSave(); MS().render();
+  }
+  function duBack() {
+    var h = dl && dl.hist && dl.hist[dl.hist.length - 1]; if (!h) return;
+    if (!confirm('Повернутись до попереднього лега? Поточний лег буде скинуто, а збережений лег повернеться в гру.')) return;
+    dl.hist.pop(); var p = h.win ? 0 : 1;
+    dl.w[p]--; dl.n--; dl.over = false; delete dl.winner;
+    dl.tot[0].sc -= sum(h.a); dl.tot[0].dt -= h.d0; dl.tot[1].sc -= sum(h.b); dl.tot[1].dt -= h.d1;
+    var sc = [h.a.slice(), h.b.slice()]; sc[p].pop();
+    var seq = [], i0 = 0, i1 = 0, t = h.first;
+    for (var k = 0; k < 400; k++) { if (t === 0 && i0 < sc[0].length) { seq.push(0); i0++; } else if (t === 1 && i1 < sc[1].length) { seq.push(1); i1++; } else break; t = 1 - t; }
+    dl.leg = { sc: sc, seq: seq, turn: p, starter: h.first, entry: '', pending: null };
+    statsOpen = false;
+    var cid = h.cid; lset('ms_q', queue().filter(function (x) { return x.client_id !== cid; })); T.legs = T.legs.filter(function (l) { return l.client_id !== cid; });
+    try { MS().sb().from('legs').delete().eq('client_id', cid).then(function () {}, function () {}); } catch (e) {}
+    duLive(true); duSave(); MS().render();
   }
   function duQuit() {
     if (dl && !dl.over && !confirm('Вийти з матчу? Завершені леги залишаться в статистиці, поточний лег буде втрачено.')) return;
@@ -792,13 +807,13 @@
     if (dl.over) {
       var mm = matches().filter(function (m) { return m.id === dl.id; })[0], won = dl.winner === 0;
       return '<div class="tr-live"><h2>' + (won ? '🏆 Матч виграно' : 'Матч програно') + '</h2><div class="tr-ghost ' + (won ? 'win' : 'lose') + '"><span>' + esc(dl.name) + ' · best of ' + dl.bestOf + '</span><b>' + dl.w[0] + ':' + dl.w[1] + '</b></div>' +
-        (isMember(dl.name) && MS().canWrite() ? '<p class="sub" style="margin:12px 0 0">У ' + esc(dl.name) + ' є кабінет. Надішліть матч на підтвердження, і він потрапить у його статистику.</p><p style="margin:8px 0 0"><button type="button" class="ms-btn" data-tr="du-send" data-mid="' + dl.id + '">📨 Надіслати суперникові</button></p>' : '') + '<div class="ms-row" style="margin-top:14px"><button type="button" class="ms-btn" data-tr="du-detail">Деталі матчу</button><button type="button" class="ms-btn sec" data-tr="du-again">Реванш</button><button type="button" class="ms-btn sec" data-tr="du-close">Готово</button></div></div>';
+        (isMember(dl.name) && MS().canWrite() ? '<p class="sub" style="margin:12px 0 0">У ' + esc(dl.name) + ' є кабінет. Надішліть матч на підтвердження, і він потрапить у його статистику.</p><p style="margin:8px 0 0"><button type="button" class="ms-btn" data-tr="du-send" data-mid="' + dl.id + '">📨 Надіслати суперникові</button></p>' : '') + '<div class="ms-row" style="margin-top:14px"><button type="button" class="ms-btn" data-tr="du-detail">Деталі матчу</button><button type="button" class="ms-btn sec" data-tr="du-again">Реванш</button><button type="button" class="ms-btn sec" data-tr="du-back">↩ Назад до останнього лега</button><button type="button" class="ms-btn sec" data-tr="du-close">Готово</button></div></div>';
     }
     var L = dl.leg, t = L.turn;
     function st(i) { var a = duAvg(i), last = L.sc[i].length ? L.sc[i][L.sc[i].length - 1] : null; return 'сер. гри ' + (a ? f2(a) : '—') + (last != null ? ' · ост. ' + last : ''); }
     var body = L.pending != null ? '<p class="sub" style="text-align:center;margin:12px 0 0">' + esc(duName(t)) + ': закриття ' + duRem(t) + '. Яким дротиком закрили?</p><div class="tr-d">' + [1, 2, 3].map(function (d) { return '<button type="button" data-tr="du-d" data-d="' + d + '"' + (d < minDarts(duRem(t)) ? ' disabled style="opacity:.2"' : '') + '>' + d + '</button>'; }).join('') + '</div>' : duPad();
     return '<div class="tr-live tr-fs"><div class="tr-top"><span>🤝 BO' + dl.bestOf + ' · лег ' + dl.n + '</span>' +
-      (L.seq.length ? '<span></span>' : '<button type="button" class="ms-btn sec sm" data-tr="du-first">⇄ Хто починає</button>') + '</div>' +
+      '<span style="display:flex;gap:6px">' + (dl.hist && dl.hist.length ? '<button type="button" class="ms-btn sec sm" data-tr="du-back">↩ Попередній лег</button>' : '') + (L.seq.length ? '' : '<button type="button" class="ms-btn sec sm" data-tr="du-first">⇄ Хто починає</button>') + '</span>' + '</div>' +
       board({ rm: L.rm, rmAct: 'du-rm', pending: L.pending, nameA: 'Ви', nameB: dl.name, a: L.sc[0], b: L.sc[1], active: t, starter: L.starter, wA: dl.w[0], wB: dl.w[1], entry: L.pending != null ? L.pending : L.entry, remA: duRem(0), remB: duRem(1), statA: st(0), statB: st(1) }) + body +
       '<p style="text-align:center;margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-tr="du-undo"' + (L.seq.length || L.pending != null ? '' : ' disabled') + '>↶ Скасувати візит</button></p>' +
       statsModalHtml() + '</div>';
@@ -857,6 +872,7 @@
     else if (a === 'du-fin') { dl.leg.rm = false; dl.leg.entry = ''; duSubmit(duRem(dl.leg.turn)); }
     else if (a === 'du-d') duFinish(Number(b.getAttribute('data-d')));
     else if (a === 'du-undo') duUndo();
+    else if (a === 'du-back') duBack();
     else if (a === 'du-quit') duQuit();
     else if (a === 'du-first') { if (!dl.leg.seq.length) { dl.leg.starter = 1 - dl.leg.starter; dl.leg.turn = dl.leg.starter; duSave(); MS().render(); } }
     else if (a === 'du-again') { var nm = dl.name, f = dl.winner === 0 ? 1 : 0; duStart(nm, dl.bestOf, f); }
