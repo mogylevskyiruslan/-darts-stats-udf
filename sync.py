@@ -4295,13 +4295,13 @@ MANUAL_MEDAL_OVERRIDES.update({
 MANUAL_EXTRA_TOURNAMENTS = [
     {"date": "22.05.2011", "name": "ЧУ 2011 Команди", "city": "Черкаси"},
     {"date": "22.05.2009", "name": "ЧУ 2009 Команди", "city": "Черкаси"},
-    # --- Правки від 24.11.2026: історичні турніри 2006-2007 (міста невідомі) ---
-    {"date": "22.12.2007", "name": "Кубок України", "city": None, "format": "501DO / 5 етап", "chuCategory": ""},
-    {"date": "11.11.2007", "name": "Кубок України", "city": None, "format": "501DO / 4 етап", "chuCategory": ""},
-    {"date": "08.08.2007", "name": "Кубок України", "city": None, "format": "501DO / 3 етап", "chuCategory": ""},
-    {"date": "07.08.2007", "name": "ЧУ 2007 Cricket", "city": None, "format": "Cricket", "chuCategory": "ЧУ Cricket"},
-    {"date": "06.08.2007", "name": "ЧУ 2007 Пари", "city": None, "format": "501DO", "chuCategory": "ЧУ Пари"},
-    {"date": "26.08.2006", "name": "ЧУ 2006 Cricket", "city": None, "format": "Cricket", "chuCategory": "ЧУ Cricket"},
+    # --- Правки від 24.11.2026: історичні турніри 2006-2007 (міста вказано за даними ВФД) ---
+    {"date": "22.12.2007", "name": "Кубок України", "city": "Луцьк", "format": "501DO / 5 етап", "chuCategory": ""},
+    {"date": "11.11.2007", "name": "Кубок України", "city": "Кривий Ріг", "format": "501DO / 4 етап", "chuCategory": ""},
+    {"date": "08.08.2007", "name": "Кубок України", "city": "Мелекіне", "format": "501DO / 3 етап", "chuCategory": ""},
+    {"date": "07.08.2007", "name": "ЧУ 2007 Cricket", "city": "Мелекіне", "format": "Cricket", "chuCategory": "ЧУ Cricket"},
+    {"date": "06.08.2007", "name": "ЧУ 2007 Пари", "city": "Мелекіне", "format": "501DO", "chuCategory": "ЧУ Пари"},
+    {"date": "26.08.2006", "name": "ЧУ 2006 Cricket", "city": "Мелекіне", "format": "Cricket", "chuCategory": "ЧУ Cricket"},
 ]
 
 
