@@ -1,26 +1,6 @@
 {
  "sheetCorrections": [
   {
-   "date": "10.12.2006",
-   "tournament": "ЧУ 2006",
-   "format": "501DO",
-   "gender": "men",
-   "before": {
-    "gold": "Ледєньов Вадим",
-    "silver": "Кобзар Ігор",
-    "bronze": [
-     "Толкачов В'ячеслав"
-    ]
-   },
-   "after": {
-    "gold": "Ледєньов Вадим",
-    "silver": "Толкачов В'ячеслав",
-    "bronze": [
-     "Кобзар Ігор"
-    ]
-   }
-  },
-  {
    "date": "31.01.2010",
    "tournament": "ЧУ 2009",
    "format": "501DO",
