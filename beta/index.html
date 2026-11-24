@@ -430,6 +430,7 @@
   .growth-legend span{display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--muted);}
   .growth-legend i{width:12px; height:12px; border-radius:3px; display:inline-block;}
 
+  .pp-mob{display:none;}
   .pp-history-table{width:100%; border-collapse:collapse; font-size:13px;}
   .pp-history-table th{
     text-align:left; padding:8px 10px; color:var(--muted); font-family:'JetBrains Mono',monospace;
@@ -438,7 +439,7 @@
   .pp-history-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
   .pp-history-table tr:last-child td{border-bottom:none;}
   .pp-rank-badge{font-family:'JetBrains Mono',monospace; font-size:12px;}
-  .pp-rank-badge.medal{color:var(--gold); font-weight:700;}
+  .pp-rank-badge.pp-top3{color:var(--gold); font-weight:700;}
 
   /* MAP */
   .map-wrap{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:16px; max-width:640px; margin:0 auto;}
@@ -643,7 +644,53 @@
     .hero{padding:32px 16px 28px;}
     section{padding:32px 16px;}
     .table-wrap{overflow-x:auto; -webkit-overflow-scrolling:touch;}
-    .table-wrap table{min-width:640px;}
+    .table-wrap table{min-width:0; width:100%; font-size:12px;}
+    .table-wrap th, .table-wrap td{padding:8px 6px; word-break:normal; overflow-wrap:break-word;}
+    .table-wrap td.num, .table-wrap td.rank-cell{white-space:nowrap;}
+    .table-wrap td.mono:not(.num){word-break:break-word; line-height:1.35;}
+    .table-wrap th{font-size:10px; letter-spacing:.04em;}
+    .mob-only{display:block;} .pp-mob{display:block; color:var(--muted); font-size:11px; margin-top:2px;}
+    /* рейтинги: на телефоні лише місце, гравець і рейтинг */
+    #current-rating .table-wrap th:nth-child(n+3):nth-child(-n+9), #current-rating .table-wrap td:nth-child(n+3):nth-child(-n+9),
+    #ratings .table-wrap th:nth-child(n+3):nth-child(-n+9), #ratings .table-wrap td:nth-child(n+3):nth-child(-n+9){display:none;}
+    /* реєстрація: без населеного пункту */
+    .reg-table-wrap table{min-width:0 !important; width:100%; font-size:12px;}
+    .reg-table-wrap th:nth-child(5), .reg-table-wrap td:nth-child(5){display:none;}
+    .reg-table-wrap th, .reg-table-wrap td{padding:8px 6px;}
+    /* таблиця турнірів: картки */
+    #tournaments .table-wrap{border:0; background:none; overflow:visible;}
+    #tournaments table, #tournaments tbody{display:block; width:100%;}
+    #tournaments thead{display:none;}
+    #tournaments tbody tr{display:grid; grid-template-columns:auto 1fr auto; grid-template-areas:"title title org" "date city total" "fmt fmt fmt" "medals medals medals" "links links links"; gap:4px 10px; padding:12px; margin-bottom:10px; border:1px solid var(--line); border-radius:10px; background:var(--panel);}
+    #tournaments tbody td{display:block; padding:0; border:0; font-size:12px;}
+    #tournaments td:nth-child(1){grid-area:date; color:var(--muted);}
+    #tournaments td:nth-child(2){grid-area:title; font-weight:700; font-size:14px;}
+    #tournaments td:nth-child(3){grid-area:org; text-align:right;}
+    #tournaments td:nth-child(4){grid-area:fmt; font-size:11px;}
+    #tournaments td:nth-child(5){grid-area:city;}
+    #tournaments td:nth-child(6){grid-area:total; text-align:right;}
+    #tournaments td:nth-child(6)::before{content:'👥 ';}
+    #tournaments td:nth-child(n+7):nth-child(-n+10){display:none;}
+    #tournaments td:nth-child(11){grid-area:medals; margin-top:4px;}
+    #tournaments td:nth-child(12){grid-area:links;}
+    #tournaments td:nth-child(11) summary{white-space:normal;}
+    /* майстри спорту: картки */
+    #masters .table-wrap{border:0; background:none; overflow:visible;}
+    #masters table, #masters tbody{display:block; width:100%;}
+    #masters thead{display:none;}
+    #masters tbody tr{display:grid; grid-template-columns:1fr auto; gap:3px 10px; padding:12px; margin-bottom:10px; border:1px solid var(--line); border-radius:10px; background:var(--panel);}
+    #masters tbody td{display:block; padding:0; border:0; font-size:12px; color:var(--muted);}
+    #masters td:nth-child(2){grid-column:1; grid-row:1; color:var(--cream,#fff); font-weight:700; font-size:14px;}
+    #masters td:nth-child(1){grid-column:2; grid-row:1; text-align:right;}
+    #masters td:nth-child(3){grid-column:1/-1;}
+    #masters td:nth-child(4){grid-column:1/-1;}
+    #masters td:nth-child(4)::before{content:'Тренер: ';}
+    #masters td:nth-child(5){grid-column:1/-1; color:var(--gold);}
+    /* профіль: історія виступів без окремих колонок дати й міста */
+    .pp-history-table th:nth-child(1), .pp-history-table td:nth-child(1), .pp-history-table th:nth-child(3), .pp-history-table td:nth-child(3){display:none;}
+    .pp-history-table{table-layout:auto;}
+    .pp-history-table th, .pp-history-table td{padding:8px 5px; font-size:12px;}
+    .player-modal{overflow-x:hidden;}
     nav{
       flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch;
       padding:0 12px; scrollbar-width:thin;
@@ -1185,6 +1232,7 @@ html[data-theme=light] ::-webkit-scrollbar-thumb{background:#c2c9e4}
       <tbody id="records-body"></tbody>
     </table>
   </div>
+  <p class="section-sub" id="records-note" style="margin-top:10px"></p>
 </section>
 <section id="h2h-lookup" class="h2h-highlight-section">
   <h2><span class="idx">04.2</span> ⚔️ Протистояння гравців</h2>
@@ -1404,7 +1452,7 @@ const I18N = (function(){
     'Учасники (ВФД)':'Participants (UDF)','УДЛ/ЗУДЛ (всього)':'UDL/WUDL (total)',
     'Продовжили грати':'Kept playing','Нові гравці':'New players','Перестали грати (від попер. року)':'Stopped playing (vs. previous year)',
     'Динаміка місця за сезонами (Кубок України)':'Rank history by season (Ukrainian Cup)','Динаміка зміни рейтингу':'Rating change over time',
-    'Серед. за 50 матчів':'Avg. over 50 matches','Середній за період':'Average over period','Закриття % за період':'Checkout % over period','Закриття % за турнір':'Checkout % per tournament','Закриття % (оцінка)':'Checkout % (estimated)','Найкраще закриття % за турнір':'Best checkout % per tournament','Період: останні':'Period: last','матчів':'matches','180-ки всього':'Total 180s','Найкраще закриття':'Best checkout','% виграних матчів':'Match win rate',
+    'Серед. за 50 матчів':'Avg. over 50 matches','Середній за період':'Average over period','Закриття % за період':'Checkout % over period','Закриття % за турнір':'Checkout % per tournament','Закриття % (оцінка)':'Checkout % (estimated)','Найкраще закриття % за турнір':'Best checkout % per tournament','Період: останні':'Period: last','Період:':'Period:','весь період':'all time','матчів':'matches','180-ки всього':'Total 180s','Найкраще закриття':'Best checkout','% виграних матчів':'Match win rate',
     'Кубок України':'Ukrainian Cup','Чемпіонати України':'Ukrainian Championships','Майстер спорту України':'Master of Sport of Ukraine','Майстер спорту':'Master of Sport',
     'Відкрити повний профіль →':'Open full profile →',
     'Поточне місце в рейтингу':'Current ranking position','Турнірів (Nakka)':'Tournaments (Nakka)','Найкращий середній':'Best average',
@@ -1857,7 +1905,7 @@ function renderTournaments(){
       <td>${t.name}${chuCat ? `<span class="chu-badge ${is501DO ? 'chu-badge-main' : ''}" title="Чемпіонат України · ${chuCat}">ЧУ</span>` : ''}</td>
       <td>${orgTag(t.org)}</td>
       <td class="mono" style="color:var(--muted)">${t.format}</td>
-      <td>${t.city}</td>
+      <td>${t.city || '—'}</td>
       <td class="num mono">${fmtNum(t.total)}</td>
       <td class="num mono">${fmtNum(t.men)}</td>
       <td class="num mono">${fmtNum(t.women)}</td>
@@ -1959,22 +2007,27 @@ function renderShowMore(key, wrapId, total, rerenderFn){
 
 // --- Період для середнього / відсотка закриття: останні N матчів (10..100), одне налаштування на весь сайт ---
 let statWindow = 20;
-try { const v = parseInt(localStorage.getItem('udfStatWindow'), 10); if(v >= 10 && v <= 100 && v % 10 === 0) statWindow = v; } catch(e) {}
+try { const v = parseInt(localStorage.getItem('udfStatWindow'), 10); if((v >= 10 && v <= 100 && v % 10 === 0) || v === 0) statWindow = v; } catch(e) {}
 
 function statWindowSelectHtml(){
   let o = '';
   for(let n = 10; n <= 100; n += 10) o += `<option value="${n}"${n === statWindow ? ' selected' : ''}>${n}</option>`;
-  return `<label class="stat-window"><span>Період: останні</span><select class="stat-window-sel" onchange="setStatWindow(this.value)">${o}</select><span>матчів</span></label>`;
+  o += `<option value="0"${statWindow === 0 ? ' selected' : ''}>весь період</option>`;
+  const sel = `<select class="stat-window-sel" onchange="setStatWindow(this.value)">${o}</select>`;
+  return statWindow === 0
+    ? `<label class="stat-window"><span>Період:</span>${sel}</label>`
+    : `<label class="stat-window"><span>Період: останні</span>${sel}<span>матчів</span></label>`;
 }
+function statWindowLabel(n){ return n === 0 ? 'весь період' : n + ' матчів'; }
 function mountStatWindowControls(){
   document.querySelectorAll('[data-window-host]').forEach(h => { h.innerHTML = statWindowSelectHtml(); });
 }
 function setStatWindow(v){
   v = parseInt(v, 10);
-  if(!(v >= 10 && v <= 100)) return;
+  if(!((v >= 10 && v <= 100) || v === 0)) return;
   statWindow = v;
   try { localStorage.setItem('udfStatWindow', String(v)); } catch(e) {}
-  document.querySelectorAll('.stat-window-sel').forEach(sel => { sel.value = String(v); });
+  mountStatWindowControls();
   if(typeof renderNakkaRecords === 'function') renderNakkaRecords();
   const ov = document.getElementById('player-modal-overlay');
   if(ov && ov.classList.contains('open') && window._ppName) openPlayerProfile(window._ppName);
@@ -1983,7 +2036,8 @@ function setStatWindow(v){
 }
 mountStatWindowControls();
 function recentMatchesOf(matches, n){
-  return matches.slice().sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date)).slice(0, n);
+  const sorted = matches.slice().sort((a,b) => parseUaDate(b.date) - parseUaDate(a.date));
+  return n === 0 ? sorted : sorted.slice(0, n);
 }
 // зважений середній: сума очок / сума дротиків (якщо даних sc/dt немає - проста середня)
 function weightedAvg(ms){
@@ -2002,7 +2056,7 @@ function fmtPct(v){ return (v === null || v === undefined) ? '—' : v.toFixed(1
 const RECORD_MIN_MATCHES_LAST50 = 50;
 const RECORD_CATEGORIES = {
   avgLast50: {
-    title: 'Гравець', get valueLabel(){ return 'Середній (' + statWindow + ' матчів)'; }, source: 'match',
+    title: 'Гравець', get valueLabel(){ return 'Середній (' + statWindowLabel(statWindow) + ')'; }, source: 'match',
     compute(rows){
       const by = {};
       rows.forEach(r => { (by[r.name] = by[r.name] || []).push(r); });
@@ -2011,7 +2065,7 @@ const RECORD_CATEGORIES = {
           const last = recentMatchesOf(ms, statWindow);
           return { name, n: last.length, avg: weightedAvg(last), from: last[last.length-1].date, to: last[0].date };
         })
-        .filter(x => x.n >= statWindow)
+        .filter(x => x.n >= (statWindow || RECORD_MIN_MATCHES_LAST50))
         .sort((a,b) => b.avg - a.avg)
         .slice(0, 10)
         .map(x => ({ name: x.name, value: x.avg.toFixed(2), context: `${x.n} матчів · ${x.from} – ${x.to}` }));
@@ -2148,6 +2202,12 @@ function renderNakkaRecords(){
   if(countEl) countEl.textContent = new Set(nakkaPlayerStats.filter(r => includeUDL || !r.isUDL).map(r => r.tournament + r.date)).size;
 
   const results = cat.compute(rows);
+  const noteEl = document.getElementById('records-note');
+  if(noteEl){
+    noteEl.textContent = recordsCategory === 'avgLast50'
+      ? 'У списку лише гравці, які зіграли щонайменше ' + (statWindow || RECORD_MIN_MATCHES_LAST50) + ' матчів' + (includeUDL ? ' (з урахуванням УДЛ/ЗУДЛ)' : ' (без УДЛ/ЗУДЛ; їх можна додати перемикачем угорі)') + '. Тому з більшим періодом гравців може бути менше за 10.'
+      : '';
+  }
   const needHeavy = cat.source === 'match' || cat.source === 'h2h';
 
   document.getElementById('records-head-row').innerHTML = `
@@ -2417,6 +2477,10 @@ async function loadData(){
     if(!res.ok) throw new Error('HTTP ' + res.status);
     const data = sanitizeDeep(await res.json());
     tournaments = data.tournaments || [];
+    // нормалізація: bronze завжди масив (у таблиці призерів це рядок)
+    tournaments.forEach(t => ['medals','nakkaMedals','medalsWomen','nakkaMedalsWomen'].forEach(k => {
+      const m = t[k]; if(m && m.bronze !== undefined && !Array.isArray(m.bronze)) m.bronze = m.bronze ? [m.bronze] : [];
+    }));
     leaderboard = data.leaderboard || [];
     leaderboardWomen = data.leaderboardWomen || [];
     ratingsData = data.ratings || {};
@@ -2943,7 +3007,7 @@ function renderRaceFrame(idx){
     requestAnimationFrame(() => { row.style.top = (rank * rowHeight) + 'px'; });
     row.querySelector('.race-bar-rank').textContent = (rank + 1) + '.';
     row.querySelector('.race-bar-fill').style.width = (item.total / maxVal * 100) + '%';
-    row.querySelector('.race-bar-label').textContent = `${item.name} · ${item.city} · ${item.date}`;
+    row.querySelector('.race-bar-label').textContent = `${item.name} · ${item.city || '—'} · ${item.date}`;
     row.querySelector('.race-bar-value').textContent = item.total;
   });
 
@@ -3284,12 +3348,12 @@ function playerHistoryTableHtml(name, rows){
         <tbody>${all.map(r => `
           <tr>
             <td class="mono">${r.date}</td>
-            <td>${r.tournament}</td>
+            <td>${r.tournament}<span class="pp-mob">${r.date}${r.city ? ' · ' + r.city : ''}</span></td>
             <td>${r.city || '—'}</td>
             <td class="num mono">${r.avg}</td>
             <td class="num mono">${r.ton80 || '—'}</td>
             <td class="num mono">${r.hi || '—'}</td>
-            <td class="num pp-rank-badge ${r.rank>=1 && r.rank<=3 ? 'medal' : ''}">${r.rank > 0 ? r.rank : '—'}</td>
+            <td class="num pp-rank-badge ${r.rank>=1 && r.rank<=3 ? 'pp-top3' : ''}">${r.rank > 0 ? r.rank : '—'}</td>
           </tr>
         `).join('')}</tbody>
       </table>
@@ -3379,7 +3443,7 @@ function renderPlayerSideCard(name, stats){
       </div>
       ${bioLineHtml}
       <div class="pcard-stats">
-        <div class="pcard-stat"><div class="pcard-stat-num">${stats.avgLast50 !== null ? stats.avgLast50.toFixed(2) : '—'}</div><div class="pcard-stat-label">Серед. за ${stats.avgLast50Count || statWindow} матчів</div></div>
+        <div class="pcard-stat"><div class="pcard-stat-num">${stats.avgLast50 !== null ? stats.avgLast50.toFixed(2) : '—'}</div><div class="pcard-stat-label">Серед. за ${stats.avgLast50Count || statWindow || 'весь період'} матчів</div></div>
         <div class="pcard-stat"><div class="pcard-stat-num">${stats.total180}</div><div class="pcard-stat-label">180-ки всього</div></div>
         <div class="pcard-stat"><div class="pcard-stat-num">${stats.bestCheckout || '—'}</div><div class="pcard-stat-label">Найкраще закриття</div></div>
         <div class="pcard-stat"><div class="pcard-stat-num">${stats.winRate !== null ? stats.winRate + '%' : '—'}</div><div class="pcard-stat-label">% виграних матчів</div></div>
@@ -4013,7 +4077,7 @@ function openPlayerProfile(name){
     const bestMatchAvg = myMatches.length ? Math.max(...myMatches.map(r=>r.avg)) : null;
     const recentMatches = recentMatchesOf(myMatches, statWindow);
     const avgLast50 = weightedAvg(recentMatches);
-    const avgLast50Label = 'Середній за останні ' + (recentMatches.length || statWindow) + ' матчів';
+    const avgLast50Label = statWindow === 0 ? 'Середній за весь період (' + recentMatches.length + ' матчів)' : 'Середній за останні ' + (recentMatches.length || statWindow) + ' матчів';
     const bestCoRow = rows.map(r => ({ r, pct: tournamentCheckoutPct(r) })).filter(x => x.pct !== null).sort((a,b) => b.pct - a.pct)[0] || null;
 
     const avgChartPoints = rows.map(r => ({ x: r.date.slice(3), y: r.avg }));

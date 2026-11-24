@@ -432,30 +432,33 @@
   }
 
   // ---------- Ігри ----------
+  var evEdit = null;
   function viewEvents() {
     var w = canWrite(), h = '';
     if (w) {
-      h += '<div class="ms-card"><b>Додати гру / турнір</b><form id="ms-evf" class="ms-f" style="margin-top:10px">' +
-        '<label>Дата<input class="ms-in" type="date" name="event_date" required value="' + today() + '"></label>' +
-        '<label>Назва<input class="ms-in" name="title" required maxlength="120" placeholder="Напр. Локальний турнір"></label>' +
-        '<label>Середній за турнір<input class="ms-in" name="avg_tournament" inputmode="decimal"></label>' +
-        '<label>Середній за гру<input class="ms-in" name="avg_game" inputmode="decimal"></label>' +
-        '<label>Леги зіграні<input class="ms-in" name="legs_played" inputmode="numeric"></label>' +
-        '<label>Леги виграні<input class="ms-in" name="legs_won" inputmode="numeric"></label>' +
-        '<label>180<input class="ms-in" name="c180" inputmode="numeric" value="0"></label>' +
-        '<label>140+<input class="ms-in" name="c140" inputmode="numeric" value="0"></label>' +
-        '<label>100+<input class="ms-in" name="c100" inputmode="numeric" value="0"></label>' +
-        '<label>Закриття через булл (к-сть)<input class="ms-in" name="bull_checkouts" inputmode="numeric" value="0"></label>' +
-        '<label class="w">Закриття 100+ (значення через кому)<input class="ms-in" name="checkouts100" placeholder="напр. 120, 107"></label>' +
-        '<label class="w">Найкращі леги (дротиків, через кому)<input class="ms-in" name="best_legs" placeholder="напр. 15, 18"></label>' +
-        '<label class="w">Нотатки<input class="ms-in" name="notes" maxlength="500"></label>' +
-        '<div class="w"><button class="ms-btn" type="submit">Зберегти</button></div></form></div>';
+      var E = evEdit ? D.events.filter(function (x) { return x.id === evEdit; })[0] : null;
+      function ev(k, d) { return E && E[k] != null ? esc(String(E[k])) : (d === undefined ? '' : d); }
+      h += '<div class="ms-card"' + (E ? ' id="ms-evedit" style="border-color:var(--gold)"' : '') + '><b>' + (E ? '✏️ Редагувати запис' : 'Додати гру / турнір') + '</b><form id="ms-evf" class="ms-f" style="margin-top:10px">' +
+        '<label>Дата<input class="ms-in" type="date" name="event_date" required value="' + (E ? String(E.event_date).slice(0, 10) : today()) + '"></label>' +
+        '<label>Назва<input class="ms-in" name="title" required maxlength="120" placeholder="Напр. Локальний турнір" value="' + ev('title') + '"></label>' +
+        '<label>Середній за турнір<input class="ms-in" name="avg_tournament" inputmode="decimal" value="' + ev('avg_tournament') + '"></label>' +
+        '<label>Середній за гру<input class="ms-in" name="avg_game" inputmode="decimal" value="' + ev('avg_game') + '"></label>' +
+        '<label>Леги зіграні<input class="ms-in" name="legs_played" inputmode="numeric" value="' + ev('legs_played') + '"></label>' +
+        '<label>Леги виграні<input class="ms-in" name="legs_won" inputmode="numeric" value="' + ev('legs_won') + '"></label>' +
+        '<label>180<input class="ms-in" name="c180" inputmode="numeric" value="' + ev('c180', '0') + '"></label>' +
+        '<label>140+<input class="ms-in" name="c140" inputmode="numeric" value="' + ev('c140', '0') + '"></label>' +
+        '<label>100+<input class="ms-in" name="c100" inputmode="numeric" value="' + ev('c100', '0') + '"></label>' +
+        '<label>Закриття через булл (к-сть)<input class="ms-in" name="bull_checkouts" inputmode="numeric" value="' + ev('bull_checkouts', '0') + '"></label>' +
+        '<label class="w">Закриття 100+ (значення через кому)<input class="ms-in" name="checkouts100" placeholder="напр. 120, 107" value="' + (E ? esc((E.checkouts100 || []).join(', ')) : '') + '"></label>' +
+        '<label class="w">Найкращі леги (дротиків, через кому)<input class="ms-in" name="best_legs" placeholder="напр. 15, 18" value="' + (E ? esc((E.best_legs || []).join(', ')) : '') + '"></label>' +
+        '<label class="w">Нотатки<input class="ms-in" name="notes" maxlength="500" value="' + ev('notes') + '"></label>' +
+        '<div class="w ms-row"><button class="ms-btn" type="submit">' + (E ? 'Зберегти зміни' : 'Зберегти') + '</button>' + (E ? '<button class="ms-btn sec" type="button" data-evcancel="1">Скасувати</button>' : '') + '</div></form></div>';
     }
     h += '<div class="ms-card"><b>Журнал</b>' + (D.events.length ? D.events.map(function (e) {
       return '<div class="ms-item"><div><b>' + esc(e.title) + '</b> · ' + fmtDate(e.event_date) + '<small>' +
         [e.avg_game != null ? 'сер. гра ' + e.avg_game : '', e.avg_tournament != null ? 'сер. турнір ' + e.avg_tournament : '', e.legs_played != null ? 'леги ' + (e.legs_won || 0) + '/' + e.legs_played : '',
         '180: ' + e.c180 + ' · 140+: ' + e.c140 + ' · 100+: ' + e.c100, (e.checkouts100 || []).length ? 'закриття 100+: ' + e.checkouts100.join(', ') : '', e.bull_checkouts ? 'булл: ' + e.bull_checkouts : '', (e.best_legs || []).length ? 'найкращі леги: ' + e.best_legs.join(', ') : '', e.notes || ''].filter(Boolean).map(esc).join(' · ') + '</small></div>' +
-        (w ? '<button class="ms-x" data-delev="' + e.id + '" type="button" title="Видалити цей запис">🗑</button>' : '') + '</div>';
+        (w ? '<button class="ms-x" data-evedit="' + e.id + '" type="button" title="Редагувати цей запис">✏️</button><button class="ms-x" data-delev="' + e.id + '" type="button" title="Видалити цей запис">🗑</button>' : '') + '</div>';
     }).join('') : '<p class="sub">Поки порожньо.</p>') + '</div>';
     return h;
   }
@@ -466,6 +469,13 @@
       c180: int0(f.c180.value), c140: int0(f.c140.value), c100: int0(f.c100.value), bull_checkouts: int0(f.bull_checkouts.value),
       checkouts100: nums(f.checkouts100.value), best_legs: nums(f.best_legs.value), notes: f.notes.value.trim() || null };
     if (!row.title) return;
+    if (evEdit) {
+      var eid = evEdit;
+      return sb.from('local_events').update(row).eq('id', eid).select('*').single().then(function (r) {
+        if (r.error) throw r.error;
+        D.events = D.events.map(function (x) { return x.id === eid ? r.data : x; }); D.events.sort(function (a, b) { return a.event_date < b.event_date ? 1 : -1; }); evEdit = null; render(); toast('Зміни збережено');
+      }).catch(fail);
+    }
     sb.from('local_events').insert(row).select('*').single().then(function (r) {
       if (r.error) throw r.error;
       D.events.unshift(r.data); D.events.sort(function (a, b) { return a.event_date < b.event_date ? 1 : -1; }); render(); toast('Збережено');
@@ -476,7 +486,7 @@
   function viewSkills() {
     var w = canWrite(), open = D.skills.filter(function (k) { return k.status === 'open'; }), done = D.skills.filter(function (k) { return k.status === 'done'; });
     var h = '';
-    if (w) h += '<div class="ms-card"><b>Нова ціль / навичка / виправлення техніки</b><form id="ms-skf" style="margin-top:10px;display:grid;gap:8px"><input class="ms-in" name="title" required maxlength="140" placeholder="Що хочу опанувати? Напр. стабільний вихід на D16"><input class="ms-in" name="note" maxlength="500" placeholder="Нотатка (необов\'язково)"><div><button class="ms-btn" type="submit">Додати</button></div></form></div>';
+    if (w) h += '<div class="ms-card"><b>Нова ціль / навичка / виправлення техніки</b><form id="ms-skf" style="margin-top:10px;display:grid;gap:8px"><input class="ms-in" name="title" required maxlength="140" placeholder="Що хочу опанувати?"><span class="sub" style="margin:-2px 0 0">Наприклад: стабільний вихід на D16</span><input class="ms-in" name="note" maxlength="500" placeholder="Нотатка (необов\'язково)"><div><button class="ms-btn" type="submit">Додати</button></div></form></div>';
     function it(k) {
       return '<div class="ms-item"><div>' + (k.status === 'done' ? '<span style="color:#2ecc71;font-weight:800">✓ </span>' : '') + '<b>' + esc(k.title) + '</b><small>' + (k.note ? esc(k.note) + '<br>' : '') + 'Додано ' + fmtDate(k.created_at) + (k.status === 'done' ? ' · опановано ' + fmtDate(k.done_at) : '') + (k.result ? '<br>Результат: ' + esc(k.result) : '') + '</small></div>' +
         (w ? '<div class="ms-row" style="flex:none;flex-wrap:nowrap">' + (k.status === 'open' ? '<button class="ms-btn ok sm" type="button" data-skdone="' + k.id + '">✓</button>' : '<button class="ms-btn sec sm" type="button" data-skopen="' + k.id + '">↺</button>') + '<button class="ms-x" type="button" data-skdel="' + k.id + '">✕</button></div>' : '') + '</div>';
@@ -580,9 +590,11 @@
 
   sec.addEventListener('click', function (e) {
     var t = e.target;
-    var b = t.closest('[data-prof],[data-t],[data-a],[data-v],[data-cm],[data-delev-co],[data-delev],[data-skdone],[data-skopen],[data-skdel]'); if (!b) return;
+    var b = t.closest('[data-prof],[data-t],[data-a],[data-v],[data-cm],[data-delev-co],[data-evedit],[data-evcancel],[data-delev],[data-skdone],[data-skopen],[data-skdel]'); if (!b) return;
     if (b.hasAttribute('data-prof')) { if (typeof openPlayerProfile === 'function') openPlayerProfile(siteName(member.player_name)); }
-    else if (b.hasAttribute('data-t')) { tab = b.getAttribute('data-t'); window.scrollTo(0, 0); render(); }
+    else if (b.hasAttribute('data-t')) { tab = b.getAttribute('data-t'); evEdit = null; window.scrollTo(0, 0); render(); }
+    else if (b.hasAttribute('data-evedit')) { evEdit = Number(b.getAttribute('data-evedit')); render(); window.scrollTo(0, 0); var ee = document.getElementById('ms-evedit'); if (ee && ee.scrollIntoView) ee.scrollIntoView({ block: 'start' }); }
+    else if (b.hasAttribute('data-evcancel')) { evEdit = null; render(); }
     else if (b.hasAttribute('data-delev-co')) delCheckout(Number(b.getAttribute('data-delev-co')))
     else if (b.hasAttribute('data-cm')) { var cmv = b.getAttribute('data-cm'); if (cmv === 'unhide') { setHidden([]); render(); } else { checkMode = cmv; render(); } }
     else if (b.hasAttribute('data-v')) { var v = Number(b.getAttribute('data-v')); if (checkMode === 'hist' || !canWrite()) histModal(v); else addCheckout(v); }

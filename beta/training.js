@@ -28,6 +28,12 @@
     '.tr-ghost b{font:800 22px Montserrat,Inter,sans-serif}.tr-ghost.lose{border-color:#c0392b}.tr-ghost.win{border-color:#2e8b57}',
     '.tr-prog{margin:12px 0 2px;text-align:center}.tr-prog .seg{display:flex;gap:4px;margin-bottom:6px}.tr-prog .seg i{flex:1;height:8px;border-radius:5px;background:var(--panel-2);border:1px solid var(--line)}.tr-prog .seg i.d{background:#2e8b57;border-color:#2e8b57}.tr-prog .seg i.c{background:var(--gold);border-color:var(--gold);animation:trp 1.2s infinite}.tr-prog b{font-size:14px;color:var(--cream)}.tr-prog span{font-size:12px;color:var(--muted)}@keyframes trp{50%{opacity:.45}}',
     '@keyframes trflash{0%{box-shadow:0 0 0 0 rgba(252,194,2,.9)}100%{box-shadow:0 0 0 14px rgba(252,194,2,0)}}.flash{animation:trflash .9s ease-out 2;border-color:var(--gold)!important}',
+    '.tr-live.tr-fs{position:fixed;inset:0;z-index:9990;background:var(--bg);display:flex;flex-direction:column;padding:calc(8px + env(safe-area-inset-top)) 10px calc(8px + env(safe-area-inset-bottom));height:100vh;height:100dvh;max-width:560px;margin:0 auto;overflow:hidden;box-sizing:border-box}',
+    '.tr-fs>*{flex:none}.tr-fs .tr-top{margin:0 0 6px}.tr-fs .bd-t{flex:1 1 0;min-height:44px;max-height:none}.tr-fs .tr-mode{margin:6px 0 0}.tr-fs .tr-mode button{padding:0;height:clamp(34px,5dvh,44px)}',
+    '.tr-fs .tr-q{margin:6px 0 0;gap:5px}.tr-fs .tr-q button{height:clamp(30px,4.6dvh,40px);padding:0}.tr-fs .tr-kp{margin-top:6px;gap:6px}.tr-fs .tr-kp button{height:clamp(38px,6.4dvh,60px);font-size:clamp(20px,3.4dvh,26px)}',
+    '.tr-fs .bd-p{padding:4px 4px 3px}.tr-fs .bd-p .v{font-size:clamp(34px,7.4dvh,54px)}.tr-fs .bd-h{padding:clamp(6px,1.2dvh,10px) 12px}.tr-fs .tr-d{margin-top:8px}.tr-fs .tr-d button{height:clamp(56px,10dvh,80px)}',
+    '.tr-fs .kbhint{display:none !important}',
+    '.tr-fs>p{margin:6px 0 0 !important}.ms-toast{z-index:10000 !important}',
     '.tr-mode{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:6px;margin:10px 0 0}.tr-mode button{padding:10px 4px;border-radius:10px;border:1px solid var(--line);background:var(--panel-2);color:var(--cream);font:700 14px Inter,sans-serif;cursor:pointer}',
     '.tr-mode button.on{background:var(--royal);color:#fff;border-color:var(--royal-light)}.tr-mode button.fin{border-color:var(--gold);color:var(--gold)}.tr-mode button:disabled{opacity:.3;cursor:default}',
     '.bd-r>span.tap{cursor:pointer;box-shadow:inset 0 -2px 0 var(--gold)}.bd-r>span.pv{color:var(--muted);font-style:italic}.bd-p.tap{cursor:pointer}.bd-p .t b{color:inherit;text-decoration:underline dotted}',
@@ -637,8 +643,7 @@
     return h;
   }
   function modeBar(pre, rm, closable) {
-    return '<div class="tr-mode" style="grid-template-columns:1fr"><button type="button" class="fin" data-tr="' + pre + 'fin"' + (closable ? '' : ' disabled') + '>🏁 Фініш</button></div>' +
-      '<p class="sub" style="text-align:center;margin:6px 0 0">' + (rm ? 'Вводите <b>залишок</b> після підходу, набір порахується сам. Тапніть по залишку ще раз, щоб повернутись до набору.' : 'Щоб ввести залишок замість набору, тапніть по залишку.') + '</p>';
+    return '<div class="tr-mode" style="grid-template-columns:1fr"><button type="button" class="fin" data-tr="' + pre + 'fin"' + (closable ? '' : ' disabled') + '>🏁 Фініш</button></div>';
   }
   function canFin(r) { return r <= 170 && SKIP.indexOf(r) < 0; }
   function entrySubmit() {
@@ -686,7 +691,7 @@
     var bd = board({ rm: live.rm, rmAct: 'rm', pending: live.pending, nameA: 'Ви', nameB: '👻 Тінь', title: 'Соло · 501', a: live.scores, b: live.ghost ? live.ghost.scores.slice(0, n) : null, active: 0, entry: live.pending != null ? live.pending : live.entry,
       wA: live.match ? live.match.w : null, wB: live.match ? live.match.l : null, remA: r, remB: gClosed ? '✓' : (live.ghost ? ghostRem() : ''),
       statA: 'сер. ' + (n ? f2(live.match ? mAvg : avg) : '—') + (live.match ? ' (гра)' : '') + (n ? ' · ост. ' + live.scores[n - 1] : ''), statB: gst });
-    return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="quit">✕ Вийти</button><span>' + (live.match ? 'Тінь · BO' + live.match.bestOf : live.ghost ? 'Гра з тінню' : 'Соло') + '</span><span>візит ' + (n + 1) + '</span></div>' + bd + body + '</div>';
+    return '<div class="tr-live tr-fs"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="quit">✕ Вийти</button><span>' + (live.match ? 'Тінь · BO' + live.match.bestOf : live.ghost ? 'Гра з тінню' : 'Соло') + '</span><span>візит ' + (n + 1) + '</span></div>' + bd + body + '</div>';
   }
 
   // ---------- матч із людиною (офлайн, один пристрій) ----------
@@ -752,11 +757,11 @@
     var L = dl.leg, t = L.turn;
     function st(i) { var a = duAvg(i), last = L.sc[i].length ? L.sc[i][L.sc[i].length - 1] : null; return 'сер. гри ' + (a ? f2(a) : '—') + (last != null ? ' · ост. ' + last : ''); }
     var body = L.pending != null ? '<p class="sub" style="text-align:center;margin:12px 0 0">' + esc(duName(t)) + ': закриття ' + duRem(t) + '. Яким дротиком закрили?</p><div class="tr-d">' + [1, 2, 3].map(function (d) { return '<button type="button" data-tr="du-d" data-d="' + d + '"' + (d < minDarts(duRem(t)) ? ' disabled style="opacity:.2"' : '') + '>' + d + '</button>'; }).join('') + '</div>' : duPad();
-    return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="du-quit">✕ Вийти</button><span>🤝 BO' + dl.bestOf + ' · лег ' + dl.n + '</span>' +
+    return '<div class="tr-live tr-fs"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="du-quit">✕ Вийти</button><span>🤝 BO' + dl.bestOf + ' · лег ' + dl.n + '</span>' +
       (L.seq.length ? '<span></span>' : '<button type="button" class="ms-btn sec sm" data-tr="du-first">⇄ Хто починає</button>') + '</div>' +
       board({ rm: L.rm, rmAct: 'du-rm', pending: L.pending, nameA: 'Ви', nameB: dl.name, a: L.sc[0], b: L.sc[1], active: t, starter: L.starter, wA: dl.w[0], wB: dl.w[1], entry: L.pending != null ? L.pending : L.entry, remA: duRem(0), remB: duRem(1), statA: st(0), statB: st(1) }) + body +
       '<p style="text-align:center;margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-tr="du-undo"' + (L.seq.length || L.pending != null ? '' : ' disabled') + '>↶ Скасувати візит</button></p>' +
-      ((dl.hist && dl.hist.length) ? '<div class="ms-card"><b>Попередні леги</b>' + dl.hist.map(function (x, i) { return '<details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px">Лег ' + (i + 1) + ' · ' + (x.win ? '✓ ваш' : '✗ ' + esc(dl.name)) + '</summary>' + visitsTable(x.a, x.b, dl.name) + '</details>'; }).join('') + '</div>' : '') + '</div>';
+      '</div>';
   }
   function duSetupView() {
     var S = DU.setup, names = {};
