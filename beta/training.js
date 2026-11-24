@@ -637,8 +637,8 @@
     return h;
   }
   function modeBar(pre, rm, closable) {
-    return '<div class="tr-mode"><button type="button" data-tr="' + pre + 'mode" data-m="s" class="' + (rm ? '' : 'on') + '">Набір</button><button type="button" data-tr="' + pre + 'mode" data-m="r" class="' + (rm ? 'on' : '') + '">Залишок</button><button type="button" class="fin" data-tr="' + pre + 'fin"' + (closable ? '' : ' disabled') + '>🏁 Фініш</button></div>' +
-      (rm ? '<p class="sub" style="text-align:center;margin:6px 0 0">Введіть залишок після підходу, набір порахується сам</p>' : '');
+    return '<div class="tr-mode" style="grid-template-columns:1fr"><button type="button" class="fin" data-tr="' + pre + 'fin"' + (closable ? '' : ' disabled') + '>🏁 Фініш</button></div>' +
+      '<p class="sub" style="text-align:center;margin:6px 0 0">' + (rm ? 'Вводите <b>залишок</b> після підходу, набір порахується сам. Тапніть по залишку ще раз, щоб повернутись до набору.' : 'Щоб ввести залишок замість набору, тапніть по залишку.') + '</p>';
   }
   function canFin(r) { return r <= 170 && SKIP.indexOf(r) < 0; }
   function entrySubmit() {
