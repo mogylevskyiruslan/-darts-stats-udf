@@ -28,15 +28,21 @@
     '.tr-ghost b{font:800 22px Montserrat,Inter,sans-serif}.tr-ghost.lose{border-color:#c0392b}.tr-ghost.win{border-color:#2e8b57}',
     '.tr-prog{margin:12px 0 2px;text-align:center}.tr-prog .seg{display:flex;gap:4px;margin-bottom:6px}.tr-prog .seg i{flex:1;height:8px;border-radius:5px;background:var(--panel-2);border:1px solid var(--line)}.tr-prog .seg i.d{background:#2e8b57;border-color:#2e8b57}.tr-prog .seg i.c{background:var(--gold);border-color:var(--gold);animation:trp 1.2s infinite}.tr-prog b{font-size:14px;color:var(--cream)}.tr-prog span{font-size:12px;color:var(--muted)}@keyframes trp{50%{opacity:.45}}',
     '@keyframes trflash{0%{box-shadow:0 0 0 0 rgba(252,194,2,.9)}100%{box-shadow:0 0 0 14px rgba(252,194,2,0)}}.flash{animation:trflash .9s ease-out 2;border-color:var(--gold)!important}',
+    '.tr-mode{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:6px;margin:10px 0 0}.tr-mode button{padding:10px 4px;border-radius:10px;border:1px solid var(--line);background:var(--panel-2);color:var(--cream);font:700 14px Inter,sans-serif;cursor:pointer}',
+    '.tr-mode button.on{background:var(--royal);color:#fff;border-color:var(--royal-light)}.tr-mode button.fin{border-color:var(--gold);color:var(--gold)}.tr-mode button:disabled{opacity:.3;cursor:default}',
+    '.bd-r>span.tap{cursor:pointer;box-shadow:inset 0 -2px 0 var(--gold)}.bd-r>span.pv{color:var(--muted);font-style:italic}.bd-p.tap{cursor:pointer}.bd-p .t b{color:inherit;text-decoration:underline dotted}',
+    '.du-sg{border:1px solid var(--line);border-radius:12px;background:var(--panel);margin-top:6px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.25)}.du-sg:empty{display:none}',
+    '.du-sg button{display:flex;width:100%;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;background:none;border:0;border-bottom:1px solid var(--line);color:var(--cream);font:600 15px Inter,sans-serif;text-align:left;cursor:pointer}.du-sg button:last-child{border-bottom:0}.du-sg button:active{background:var(--panel-2)}',
+    '.du-sg i{font:700 10px Inter,sans-serif;font-style:normal;background:var(--gold);color:#161c46;border-radius:999px;padding:3px 8px;letter-spacing:.04em;text-transform:uppercase;flex:none}',
     '.bd-h{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;background:var(--royal);color:#fff;border-radius:12px 12px 0 0;padding:10px 12px;font-weight:700;font-size:14px}',
     '.bd-h .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.8}.bd-h .n.on{opacity:1;color:var(--gold)}.bd-h .n:last-child{text-align:right}.bd-h b{font:800 24px Montserrat,Inter,sans-serif;text-align:center}',
-    '.bd-t{max-height:210px;overflow-y:auto;border:1px solid var(--line);border-top:0;background:var(--panel)}',
+    '.bd-t{max-height:210px;overflow-y:auto;border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;background:var(--panel)}',
     '.bd-r{display:grid;align-items:stretch;text-align:center}.bd-r.two{grid-template-columns:1fr 1fr 40px 1fr 1fr}.bd-r.one{grid-template-columns:1fr 1fr 40px}',
     '.bd-r>span{padding:8px 2px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font:600 20px/1.2 Inter,sans-serif;min-height:38px;color:var(--cream)}',
     '.bd-r>span.s{background:var(--panel-2)}.bd-r>span.m{background:var(--panel-2);color:var(--muted);font-size:14px;line-height:2}.bd-r>span.y{background:#fff56e;color:#161c46;font-weight:800}',
     '.bd-r>span.g{font-weight:800}.bd-r.hd{position:sticky;top:0;z-index:1}.bd-r.hd>span{font:700 11px/1.6 Inter,sans-serif;color:var(--muted);background:var(--panel-2);min-height:0;padding:5px 2px}',
     '.bd-r.st>span.g{font-size:26px;font-weight:800}',
-    '.bd-big{display:flex;gap:0;border-radius:0 0 12px 12px;overflow:hidden;border:1px solid var(--line);border-top:0}',
+    '.bd-big{display:flex;gap:0;overflow:hidden;border:1px solid var(--line);border-top:0}',
     '.bd-p{flex:1;min-width:0;text-align:center;padding:8px 4px 6px;background:var(--panel);color:var(--cream)}.bd-p.on{background:var(--gold);color:#161c46}',
     '.bd-p .v{font:800 52px/1.05 Montserrat,Inter,sans-serif}.bd-p .t{font-size:11px;opacity:.8;font-weight:600}',
     '.tr-last{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;min-height:26px;margin:4px 0}',
@@ -604,20 +610,46 @@
     return h + (g === 'p171' ? viewP171Home() : g === 'm60' ? viewM60Home() : g === 'sector' ? viewSectorHome() : view501());
   }
   function board(o) {
-    var two = !!o.b, act = o.active, n = Math.max(o.a.length, two ? o.b.length : 0);
+    var two = !!o.b, act = o.active, n = Math.max(o.a.length, two ? o.b.length : 0), rm = !!o.rm && o.pending == null, ent = o.entry === undefined || o.entry === null ? '' : String(o.entry);
     var cur = act === 0 ? o.a.length : act === 1 ? o.b.length : -1, rows = Math.max(n, cur + 1), ra = 501, rb = 501, cls = 'bd-r ' + (two ? 'two' : 'one');
+    var ta = o.rmAct ? ' data-tr="' + o.rmAct + '"' : '';
     var h = '<div class="bd-h">' + (two ? '<span class="n' + (act === 0 ? ' on' : '') + '">' + (act === 0 ? '● ' : '') + esc(o.nameA) + (o.starter === 0 ? ' 🎯' : '') + '</span><b>' + (o.wA == null ? 'VS' : o.wA + ' – ' + o.wB) + '</b><span class="n' + (act === 1 ? ' on' : '') + '">' + (act === 1 ? '● ' : '') + esc(o.nameB) + (o.starter === 1 ? ' 🎯' : '') + '</span>' : '<span class="n on" style="grid-column:1/-1;text-align:center">' + esc(o.title || 'Соло · 501') + '</span>') + '</div>';
+    h += '<div class="bd-big"><div class="bd-p' + (act === 0 || !two ? ' on tap' : '') + '"' + (act === 0 || !two ? ta : '') + '><div class="v">' + o.remA + '</div><div class="t">' + o.statA + '</div></div>' + (two ? '<div class="bd-p' + (act === 1 ? ' on tap' : '') + '"' + (act === 1 ? ta : '') + '><div class="v">' + o.remB + '</div><div class="t">' + o.statB + '</div></div>' : '') + '</div>';
     h += '<div class="bd-t" id="bd-t"><div class="' + cls + ' hd"><span>Набрано</span><span>Залишок</span><span>🎯</span>' + (two ? '<span>Набрано</span><span>Залишок</span>' : '') + '</div>';
     h += '<div class="' + cls + ' st"><span class="s"></span><span class="g">501</span><span class="m"></span>' + (two ? '<span class="s"></span><span class="g">501</span>' : '') + '</div>';
-    for (var i = 0; i < rows; i++) {
-      var sa = o.a[i], sb = two ? o.b[i] : null, ya = i === cur && act === 0, yb = i === cur && act === 1;
-      if (sa != null) ra -= sa; if (sb != null) rb -= sb;
-      h += '<div class="' + cls + '"><span class="s' + (ya ? ' y' : '') + '">' + (sa != null ? sa : ya ? (o.entry || '') : '') + '</span><span class="g">' + (sa != null ? ra : '') + '</span><span class="m">' + (3 * (i + 1)) + '</span>' +
-        (two ? '<span class="s' + (yb ? ' y' : '') + '">' + (sb != null ? sb : yb ? (o.entry || '') : '') + '</span><span class="g">' + (sb != null ? rb : '') + '</span>' : '') + '</div>';
+    function pair(i, sc, pre, post, isCur) {
+      var sCls = 's', sTxt = '', gCls = 'g', gTxt = '', gAttr = '';
+      if (sc != null) { sTxt = sc; gTxt = post; }
+      else if (isCur) {
+        gAttr = ta; gCls = 'g tap';
+        if (rm) { gCls = 'g y tap'; gTxt = ent; var v = ent === '' ? null : pre - Number(ent); if (v != null && v >= 0 && v <= 180) { sCls = 's pv'; sTxt = v; } }
+        else { sCls = 's y'; sTxt = ent; if (!ent) gTxt = ''; }
+      }
+      return '<span class="' + sCls + '">' + sTxt + '</span><span class="' + gCls + '"' + gAttr + '>' + gTxt + '</span>';
     }
-    h += '</div><div class="bd-big"><div class="bd-p' + (act === 0 || !two ? ' on' : '') + '"><div class="v">' + o.remA + '</div><div class="t">' + o.statA + '</div></div>' + (two ? '<div class="bd-p' + (act === 1 ? ' on' : '') + '"><div class="v">' + o.remB + '</div><div class="t">' + o.statB + '</div></div>' : '') + '</div>';
+    for (var i = 0; i < rows; i++) {
+      var sa = o.a[i], sb = two ? o.b[i] : null, pa = ra, pb = rb;
+      if (sa != null) ra -= sa; if (sb != null) rb -= sb;
+      h += '<div class="' + cls + '">' + pair(i, sa, pa, ra, i === cur && act === 0) + '<span class="m">' + (3 * (i + 1)) + '</span>' + (two ? pair(i, sb, pb, rb, i === cur && act === 1) : '') + '</div>';
+    }
+    h += '</div>';
     setTimeout(function () { var t = document.getElementById('bd-t'); if (t) t.scrollTop = t.scrollHeight; }, 0);
     return h;
+  }
+  function modeBar(pre, rm, closable) {
+    return '<div class="tr-mode"><button type="button" data-tr="' + pre + 'mode" data-m="s" class="' + (rm ? '' : 'on') + '">Набір</button><button type="button" data-tr="' + pre + 'mode" data-m="r" class="' + (rm ? 'on' : '') + '">Залишок</button><button type="button" class="fin" data-tr="' + pre + 'fin"' + (closable ? '' : ' disabled') + '>🏁 Фініш</button></div>' +
+      (rm ? '<p class="sub" style="text-align:center;margin:6px 0 0">Введіть залишок після підходу, набір порахується сам</p>' : '');
+  }
+  function canFin(r) { return r <= 170 && SKIP.indexOf(r) < 0; }
+  function entrySubmit() {
+    if (!live || live.entry === '') return; var v = Number(live.entry);
+    if (live.rm) { var r = rem(); live.rm = false; if (v > r) { live.entry = ''; MS().render(); return bad('Залишок не може бути більшим за ' + r); } v = r - v; }
+    submit(v);
+  }
+  function duEntrySubmit() {
+    var L = dl.leg; if (L.entry === '') return; var v = Number(L.entry);
+    if (L.rm) { var r = duRem(L.turn); L.rm = false; if (v > r) { L.entry = ''; MS().render(); return bad('Залишок не може бути більшим за ' + r); } v = r - v; }
+    duSubmit(v);
   }
   function viewLive() {
     if (!live) return null;
@@ -645,13 +677,13 @@
     if (live.pending != null) {
       body = '<p class="sub" style="text-align:center;margin:12px 0 0">Закриття ' + r + '. Яким дротиком закрили?</p>' + dartBtns(r) + '<p style="text-align:center"><button type="button" class="ms-btn sec sm" data-tr="undo">↶ Скасувати введення</button></p>';
     } else {
-      body = '<div class="tr-q" style="margin-top:10px">' + QUICK.map(function (q) { return '<button type="button" data-tr="q" data-n="' + q + '">' + q + '</button>'; }).join('') + '</div>' +
+      body = modeBar('', live.rm, canFin(r)) + '<div class="tr-q" style="margin-top:10px">' + QUICK.map(function (q) { return '<button type="button" data-tr="q" data-n="' + q + '">' + q + '</button>'; }).join('') + '</div>' +
         '<div class="tr-kp">' + [1, 2, 3, 4, 5, 6, 7, 8, 9].map(function (d) { return '<button type="button" data-tr="k" data-n="' + d + '">' + d + '</button>'; }).join('') +
         '<button type="button" data-tr="bs">⌫</button><button type="button" data-tr="k" data-n="0">0</button><button type="button" class="ok" data-tr="ok">OK</button></div>' +
         '<p style="text-align:center;margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-tr="undo"' + (n ? '' : ' disabled') + '>↶ Скасувати візит</button></p><p class="sub kbhint" style="text-align:center;margin:8px 0 0">З клавіатури: цифри · Enter — ввести · Backspace — стерти · Delete — скасувати візит</p>';
     }
     var gClosed = live.ghost && gs2 === 'loss', gst = !live.ghost ? '' : gClosed ? 'закрила за ' + live.ghost.darts + ' дрот.' : 'сер. ' + (n ? f2(gAvg) : '—');
-    var bd = board({ nameA: 'Ви', nameB: '👻 Тінь', title: 'Соло · 501', a: live.scores, b: live.ghost ? live.ghost.scores.slice(0, n) : null, active: 0, entry: live.pending != null ? live.pending : live.entry,
+    var bd = board({ rm: live.rm, rmAct: 'rm', pending: live.pending, nameA: 'Ви', nameB: '👻 Тінь', title: 'Соло · 501', a: live.scores, b: live.ghost ? live.ghost.scores.slice(0, n) : null, active: 0, entry: live.pending != null ? live.pending : live.entry,
       wA: live.match ? live.match.w : null, wB: live.match ? live.match.l : null, remA: r, remB: gClosed ? '✓' : (live.ghost ? ghostRem() : ''),
       statA: 'сер. ' + (n ? f2(live.match ? mAvg : avg) : '—') + (live.match ? ' (гра)' : '') + (n ? ' · ост. ' + live.scores[n - 1] : ''), statB: gst });
     return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="quit">✕ Вийти</button><span>' + (live.match ? 'Тінь · BO' + live.match.bestOf : live.ghost ? 'Гра з тінню' : 'Соло') + '</span><span>візит ' + (n + 1) + '</span></div>' + bd + body + '</div>';
@@ -702,7 +734,7 @@
   }
   function duPad() {
     var L = dl.leg;
-    return '<div class="tr-q" style="margin-top:10px">' + QUICK.map(function (q) { return '<button type="button" data-tr="du-q" data-n="' + q + '">' + q + '</button>'; }).join('') + '</div>' +
+    return modeBar('du-', L.rm, canFin(duRem(L.turn))) + '<div class="tr-q" style="margin-top:10px">' + QUICK.map(function (q) { return '<button type="button" data-tr="du-q" data-n="' + q + '">' + q + '</button>'; }).join('') + '</div>' +
       '<div class="tr-kp">' + [1, 2, 3, 4, 5, 6, 7, 8, 9].map(function (d) { return '<button type="button" data-tr="du-k" data-n="' + d + '">' + d + '</button>'; }).join('') +
       '<button type="button" data-tr="du-bs">⌫</button><button type="button" data-tr="du-k" data-n="0">0</button><button type="button" class="ok" data-tr="du-ok">OK</button></div>';
   }
@@ -722,7 +754,7 @@
     var body = L.pending != null ? '<p class="sub" style="text-align:center;margin:12px 0 0">' + esc(duName(t)) + ': закриття ' + duRem(t) + '. Яким дротиком закрили?</p><div class="tr-d">' + [1, 2, 3].map(function (d) { return '<button type="button" data-tr="du-d" data-d="' + d + '"' + (d < minDarts(duRem(t)) ? ' disabled style="opacity:.2"' : '') + '>' + d + '</button>'; }).join('') + '</div>' : duPad();
     return '<div class="tr-live"><div class="tr-top"><button type="button" class="ms-btn sec sm" data-tr="du-quit">✕ Вийти</button><span>🤝 BO' + dl.bestOf + ' · лег ' + dl.n + '</span>' +
       (L.seq.length ? '<span></span>' : '<button type="button" class="ms-btn sec sm" data-tr="du-first">⇄ Хто починає</button>') + '</div>' +
-      board({ nameA: 'Ви', nameB: dl.name, a: L.sc[0], b: L.sc[1], active: t, starter: L.starter, wA: dl.w[0], wB: dl.w[1], entry: L.pending != null ? L.pending : L.entry, remA: duRem(0), remB: duRem(1), statA: st(0), statB: st(1) }) + body +
+      board({ rm: L.rm, rmAct: 'du-rm', pending: L.pending, nameA: 'Ви', nameB: dl.name, a: L.sc[0], b: L.sc[1], active: t, starter: L.starter, wA: dl.w[0], wB: dl.w[1], entry: L.pending != null ? L.pending : L.entry, remA: duRem(0), remB: duRem(1), statA: st(0), statB: st(1) }) + body +
       '<p style="text-align:center;margin:12px 0 0"><button type="button" class="ms-btn sec sm" data-tr="du-undo"' + (L.seq.length || L.pending != null ? '' : ' disabled') + '>↶ Скасувати візит</button></p>' +
       ((dl.hist && dl.hist.length) ? '<div class="ms-card"><b>Попередні леги</b>' + dl.hist.map(function (x, i) { return '<details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px">Лег ' + (i + 1) + ' · ' + (x.win ? '✓ ваш' : '✗ ' + esc(dl.name)) + '</summary>' + visitsTable(x.a, x.b, dl.name) + '</details>'; }).join('') + '</div>' : '') + '</div>';
   }
@@ -732,21 +764,36 @@
     try { (curatedPlayerNames || []).forEach(function (n) { names[n] = 1; }); } catch (e) {}
     var me = MS().siteName(); delete names[me]; var mem = T.members.filter(function (n) { return n !== me; }); mem.forEach(function (n) { delete names[n]; });
     var nm = S.name || 'Суперник';
+    DU.pool = mem.map(function (n) { return { n: n, c: 1 }; }).concat(Object.keys(names).sort().map(function (n) { return { n: n, c: 0 }; }));
     return '<div class="ms-card" id="tr-setup" data-flash="1"><b>🤝 Матч із людиною · налаштування</b><p class="sub" style="margin:4px 0 10px">Грайте з другом на одному пристрої: 501, закриття через дабл. Ваша статистика запишеться в тренування.</p>' +
-      '<label class="sub" style="display:block;margin:6px 0 4px">Ім\'я суперника (можна вибрати гравця з сайту або ввести своє)</label><input class="ms-in" id="du-name" list="du-names" maxlength="60" value="' + esc(S.name || '') + '" placeholder="Суперник"><datalist id="du-names">' + mem.concat(Object.keys(names).sort()).map(function (n) { return '<option value="' + esc(n) + '">'; }).join('') + '</datalist>' +
+      '<label class="sub" style="display:block;margin:6px 0 4px">Ім\'я суперника (можна вибрати гравця з сайту або ввести своє)</label><input class="ms-in" id="du-name" maxlength="60" autocomplete="off" value="' + esc(S.name || '') + '" placeholder="Почніть вводити прізвище"><div class="du-sg" id="du-sg"></div>' +
       '<p class="sub" id="du-hint" style="margin:6px 0 0">' + duHint(S.name) + '</p>' +
       '<label class="sub" style="display:block;margin:12px 0 4px">Формат: best of</label><div class="tr-sg" style="grid-template-columns:repeat(4,1fr)">' + [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21].map(function (n) { return '<button type="button" data-tr="du-bo" data-bo="' + n + '"' + (S.bo === n ? ' style="background:var(--royal);color:#fff;border-color:var(--royal-light)"' : '') + '>' + n + '</button>'; }).join('') + '</div>' +
       '<label class="sub" style="display:block;margin:12px 0 4px">Хто починає перший лег</label><div class="ms-row"><button type="button" class="ms-btn ' + (S.first === 0 ? '' : 'sec') + '" data-tr="du-fs" data-f="0">Ви</button><button type="button" class="ms-btn ' + (S.first === 1 ? '' : 'sec') + '" data-tr="du-fs" data-f="1" id="du-f1">' + esc(nm) + '</button></div>' +
       '<p class="sub" style="margin:8px 0 0">Далі право першого кидка чергується між легами. Перемкнути можна на початку кожного лега.</p>' +
       '<div class="ms-row" style="margin-top:14px"><button type="button" class="ms-btn" data-tr="du-go">▶ Почати матч</button><button type="button" class="ms-btn sec" data-tr="du-cancel">Скасувати</button></div></div>';
   }
+  function duSuggest() {
+    var el = document.getElementById('du-sg'), inp = document.getElementById('du-name'); if (!el || !inp || !DU.pool) return;
+    var q = inp.value.trim().toLowerCase(), res;
+    if (!q) res = DU.pool.filter(function (x) { return x.c; }).slice(0, 6);
+    else {
+      var st = [], inn = [];
+      DU.pool.forEach(function (x) { var l = x.n.toLowerCase(); if (l === q) return; if (l.indexOf(q) === 0) st.push(x); else if (l.indexOf(q) > 0 || l.split(' ').some(function (w) { return w.indexOf(q) === 0; })) inn.push(x); });
+      res = st.concat(inn).sort(function (a, b) { return b.c - a.c; }).slice(0, 7);
+    }
+    el.innerHTML = res.map(function (x) { return '<button type="button" data-tr="du-pick" data-n="' + esc(x.n) + '"><span>' + esc(x.n) + '</span>' + (x.c ? '<i>кабінет</i>' : '') + '</button>'; }).join('');
+  }
   function duHint(n) { n = (n || '').trim(); if (!n) return 'Підказка: гравці з позначкою «кабінет» отримають матч на підтвердження.'; return isMember(n) ? '✓ У цього гравця є кабінет: після матчу його можна буде надіслати на підтвердження.' : 'Суперник без кабінету: матч збережеться лише у вас.'; }
-  document.addEventListener('input', function (e) { if (e.target.id === 'du-name' && DU.setup) { DU.setup.name = e.target.value; var b = document.getElementById('du-f1'); if (b) b.textContent = e.target.value.trim() || 'Суперник'; var hh = document.getElementById('du-hint'); if (hh) hh.textContent = duHint(e.target.value); } });
+  document.addEventListener('focusin', function (e) { if (e.target.id === 'du-name' && DU.setup) duSuggest(); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('#du-sg') && e.target.id !== 'du-name') { var sg = document.getElementById('du-sg'); if (sg) sg.innerHTML = ''; } });
+  document.addEventListener('input', function (e) { if (e.target.id === 'du-name' && DU.setup) { duSuggest(); DU.setup.name = e.target.value; var b = document.getElementById('du-f1'); if (b) b.textContent = e.target.value.trim() || 'Суперник'; var hh = document.getElementById('du-hint'); if (hh) hh.textContent = duHint(e.target.value); } });
   document.addEventListener('click', function (e) {
     var b = e.target.closest('[data-tr]'); if (!b || !b.closest('#my-space')) return;
     var a = b.getAttribute('data-tr'); if (a.indexOf('du-') !== 0) return;
     if (a === 'du-open') { if (!MS().canWrite()) return; DU.setup = { name: '', bo: 3, first: 0 }; MS().render(); focusSetup(); }
     else if (a === 'du-cancel') { DU.setup = null; MS().render(); }
+    else if (a === 'du-pick') { var pn = b.getAttribute('data-n'), ie = document.getElementById('du-name'); if (ie) ie.value = pn; DU.setup.name = pn; var f1 = document.getElementById('du-f1'); if (f1) f1.textContent = pn; var hh2 = document.getElementById('du-hint'); if (hh2) hh2.textContent = duHint(pn); var sg2 = document.getElementById('du-sg'); if (sg2) sg2.innerHTML = ''; }
     else if (a === 'du-bo') { DU.setup.bo = Number(b.getAttribute('data-bo')); MS().render(); }
     else if (a === 'du-fs') { DU.setup.first = Number(b.getAttribute('data-f')); MS().render(); }
     else if (a === 'du-go') { var nmE = document.getElementById('du-name'); duStart(((nmE && nmE.value) || DU.setup.name || '').trim(), DU.setup.bo, DU.setup.first); }
@@ -758,8 +805,11 @@
     else if (!dl) return;
     else if (a === 'du-k') { if (dl.leg.entry.length < 3) { dl.leg.entry += b.getAttribute('data-n'); if (dl.leg.entry === '00') dl.leg.entry = '0'; } MS().render(); }
     else if (a === 'du-bs') { dl.leg.entry = dl.leg.entry.slice(0, -1); MS().render(); }
-    else if (a === 'du-ok') { if (dl.leg.entry !== '') duSubmit(Number(dl.leg.entry)); }
-    else if (a === 'du-q') duSubmit(Number(b.getAttribute('data-n')));
+    else if (a === 'du-ok') duEntrySubmit();
+    else if (a === 'du-q') { dl.leg.rm = false; duSubmit(Number(b.getAttribute('data-n'))); }
+    else if (a === 'du-mode') { dl.leg.rm = b.getAttribute('data-m') === 'r'; dl.leg.entry = ''; duSave(); MS().render(); }
+    else if (a === 'du-rm') { dl.leg.rm = !dl.leg.rm; dl.leg.entry = ''; duSave(); MS().render(); }
+    else if (a === 'du-fin') { dl.leg.rm = false; dl.leg.entry = ''; duSubmit(duRem(dl.leg.turn)); }
     else if (a === 'du-d') duFinish(Number(b.getAttribute('data-d')));
     else if (a === 'du-undo') duUndo();
     else if (a === 'du-quit') duQuit();
@@ -775,7 +825,7 @@
     if (L.pending != null) { if (/^[123]$/.test(e.key)) { e.preventDefault(); if (Number(e.key) >= minDarts(duRem(L.turn))) duFinish(Number(e.key)); } else if (e.key === 'Backspace' || e.key === 'Escape') { e.preventDefault(); duUndo(); } return; }
     if (/^[0-9]$/.test(e.key)) { e.preventDefault(); if (L.entry.length < 3) { L.entry += e.key; if (L.entry === '00') L.entry = '0'; } MS().render(); }
     else if (e.key === 'Backspace') { e.preventDefault(); if (L.entry) { L.entry = L.entry.slice(0, -1); MS().render(); } else duUndo(); }
-    else if (e.key === 'Enter') { e.preventDefault(); if (L.entry !== '') duSubmit(Number(L.entry)); }
+    else if (e.key === 'Enter') { e.preventDefault(); duEntrySubmit(); }
   });
 
   // ---------- події ----------
@@ -809,8 +859,11 @@
     else if (a === 'drop') { if (confirm('Скасувати незавершений лег?')) { lset('ms_live', null); MS().render(); } }
     else if (a === 'k') { if (live.entry.length < 3) { live.entry += b.getAttribute('data-n'); if (live.entry === '00') live.entry = '0'; } MS().render(); }
     else if (a === 'bs') { live.entry = live.entry.slice(0, -1); MS().render(); }
-    else if (a === 'ok') { if (live.entry !== '') submit(Number(live.entry)); }
-    else if (a === 'q') submit(Number(b.getAttribute('data-n')));
+    else if (a === 'ok') entrySubmit();
+    else if (a === 'q') { live.rm = false; submit(Number(b.getAttribute('data-n'))); }
+    else if (a === 'mode') { live.rm = b.getAttribute('data-m') === 'r'; live.entry = ''; persist(); MS().render(); }
+    else if (a === 'rm') { live.rm = !live.rm; live.entry = ''; persist(); MS().render(); }
+    else if (a === 'fin') { live.rm = false; live.entry = ''; submit(rem()); }
     else if (a === 'd') chooseDarts(Number(b.getAttribute('data-d')));
     else if (a === 'undo') undo();
     else if (a === 'quit') quit();
@@ -831,7 +884,7 @@
     }
     if (/^[0-9]$/.test(e.key)) { e.preventDefault(); if (live.entry.length < 3) { live.entry += e.key; if (live.entry === '00') live.entry = '0'; } MS().render(); }
     else if (e.key === 'Backspace') { e.preventDefault(); if (live.entry) { live.entry = live.entry.slice(0, -1); MS().render(); } else undo(); }
-    else if (e.key === 'Enter') { e.preventDefault(); if (live.entry !== '') submit(Number(live.entry)); }
+    else if (e.key === 'Enter') { e.preventDefault(); entrySubmit(); }
     else if (e.key === 'Delete' || (e.ctrlKey && e.key.toLowerCase() === 'z')) { e.preventDefault(); undo(); }
   });
   document.addEventListener('keydown', function (e) {

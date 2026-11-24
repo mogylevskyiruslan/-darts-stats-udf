@@ -391,11 +391,13 @@
     var w = canWrite();
     var sel = '<select class="ms-in" id="ms-year" style="width:auto"><option value="all"' + (year === 'all' ? ' selected' : '') + '>Весь період</option>' + ys.map(function (y) { return '<option' + (y === year ? ' selected' : '') + '>' + y + '</option>'; }).join('') + '</select>';
     var h = '<div class="ms-card"><div class="ms-row" style="justify-content:space-between"><b>Таблиця закриттів · ' + (year === 'all' ? 'весь період' : year) + '</b>' + sel + '</div><p class="sub" style="margin:6px 0 4px">' + got + ' з ' + VALUES.length + ' · ' + pct + '%</p><div class="ms-bar"><div style="width:' + pct + '%"></div></div>';
-    h += '<p class="sub" style="margin:8px 0">Крім ваших записів, сюди автоматично потрапляють закриття 100+ з «Ігор» та найкращі закриття з турнірів основного сайту' + (nAuto ? ' (зараз автоматичних: ' + nAuto + ')' : '') + '. Натисніть на число, щоб побачити записи, автоматичні можна сховати.</p>';
-    h += '<div class="ms-row" style="margin-bottom:10px"><button type="button" class="ms-btn sm ' + (checkMode === 'add' ? '' : 'sec') + '" data-cm="add">+ Додати закриття</button><button type="button" class="ms-btn sm ' + (checkMode === 'hist' ? '' : 'sec') + '" data-cm="hist">🕑 Історія / правка</button>';
-    if (nHid) h += '<button type="button" class="ms-btn sec sm" data-cm="unhide">Показати сховані (' + nHid + ')</button>';
-    if (checkMode === 'add' && w) h += '<label class="sub" style="margin:0;display:flex;gap:6px;align-items:center">Дата: <input type="date" id="ms-cdate" class="ms-in" style="width:auto" value="' + checkDate + '" max="' + today() + '"></label>';
-    h += '</div><div class="ms-grid">' + VALUES.map(function (v) { return '<button type="button" class="ms-c' + (cnt[v] ? ' done' : '') + '" data-v="' + v + '">' + v + (cnt[v] ? '<i>' + cnt[v] + '</i>' : '') + '</button>'; }).join('') + '</div>';
+    h += '<p class="sub" style="margin:8px 0">Крім ваших записів, сюди автоматично потрапляють закриття 100+ з «Ігор» та найкращі закриття з турнірів основного сайту' + (nAuto ? ' (зараз автоматичних: ' + nAuto + ')' : '') + '. Автоматичні записи можна сховати в режимі «Показує записи».</p>';
+    h += '<p class="sub" style="margin:0 0 6px">Що робить натискання на число:</p><div class="tr-mode" style="grid-template-columns:1fr 1fr;margin:0 0 10px"><button type="button" data-cm="add" class="' + (checkMode === 'add' ? 'on' : '') + '">➕ Додає закриття</button><button type="button" data-cm="hist" class="' + (checkMode === 'hist' ? 'on' : '') + '">🕑 Показує записи</button></div>';
+    if (checkMode === 'add' && w) h += '<label class="sub" style="margin:0 0 10px;display:flex;gap:6px;align-items:center">Дата закриття: <input type="date" id="ms-cdate" class="ms-in" style="width:auto" value="' + checkDate + '" max="' + today() + '"></label>';
+    h += '<div class="ms-grid">' + VALUES.map(function (v) { return '<button type="button" class="ms-c' + (cnt[v] ? ' done' : '') + '" data-v="' + v + '">' + v + (cnt[v] ? '<i>' + cnt[v] + '</i>' : '') + '</button>'; }).join('') + '</div>';
+    if (nHid) h += '<p style="margin:10px 0 0"><button type="button" class="ms-btn sec sm" data-cm="unhide">Показати сховані автоматичні (' + nHid + ')</button></p>';
+    var rec = D.checkouts.slice().sort(function (x, y) { return x.achieved_at < y.achieved_at ? 1 : x.achieved_at > y.achieved_at ? -1 : (y.id - x.id); }).slice(0, 5);
+    if (rec.length && w) h += '<div style="margin-top:14px"><b style="font-size:14px">Останні додані вручну</b>' + rec.map(function (c, i) { return '<div class="ms-item"><span><b>' + c.value + '</b> · ' + fmtDate(c.achieved_at) + '</span><button type="button" class="ms-btn sec sm" data-delev-co="' + c.id + '">↶ Скасувати</button></div>'; }).join('') + '</div>';
     if (!w) h += '<p class="sub">Режим перегляду: додавання недоступне без тур-карти поточного року.</p>';
     return h + '</div>';
   }
@@ -578,9 +580,10 @@
 
   sec.addEventListener('click', function (e) {
     var t = e.target;
-    var b = t.closest('[data-prof],[data-t],[data-a],[data-v],[data-cm],[data-delev],[data-skdone],[data-skopen],[data-skdel]'); if (!b) return;
+    var b = t.closest('[data-prof],[data-t],[data-a],[data-v],[data-cm],[data-delev-co],[data-delev],[data-skdone],[data-skopen],[data-skdel]'); if (!b) return;
     if (b.hasAttribute('data-prof')) { if (typeof openPlayerProfile === 'function') openPlayerProfile(siteName(member.player_name)); }
     else if (b.hasAttribute('data-t')) { tab = b.getAttribute('data-t'); window.scrollTo(0, 0); render(); }
+    else if (b.hasAttribute('data-delev-co')) delCheckout(Number(b.getAttribute('data-delev-co')))
     else if (b.hasAttribute('data-cm')) { var cmv = b.getAttribute('data-cm'); if (cmv === 'unhide') { setHidden([]); render(); } else { checkMode = cmv; render(); } }
     else if (b.hasAttribute('data-v')) { var v = Number(b.getAttribute('data-v')); if (checkMode === 'hist' || !canWrite()) histModal(v); else addCheckout(v); }
     else if (b.hasAttribute('data-delev')) { if (confirm('Видалити запис?')) { var id = Number(b.getAttribute('data-delev')); sb.from('local_events').delete().eq('id', id).then(function (r) { if (r.error) return fail(r.error); D.events = D.events.filter(function (x) { return x.id !== id; }); render(); }); } }
