@@ -1,7 +1,7 @@
 {
  "meta": {
-  "lastUpdated": "2026-11-24T15:42:46.766449+00:00",
-  "tournamentsCount": 276,
+  "lastUpdated": "2026-11-24T19:45:23.713118+00:00",
+  "tournamentsCount": 277,
   "parts": {
    "nakkaMatchStats": {
     "file": "data/nakka_matches.json",
@@ -12609,7 +12609,7 @@
    "menAvg": null,
    "women": null,
    "womenAvg": null,
-   "name": "ЧУ 2010 Пари",
+   "name": "ЧУ 2006 Пари",
    "org": "ВФД",
    "format": "501DO",
    "date": "09.12.2006",
@@ -12717,6 +12717,40 @@
      "Барсуков Віталій/Головатенко Олександр"
     ]
    },
+   "nakkaMedalsWomen": null
+  },
+  {
+   "total": 32,
+   "men": 28,
+   "menAvg": null,
+   "women": 4,
+   "womenAvg": null,
+   "name": "ЧУ 2006 Cricket",
+   "org": "ВФД",
+   "format": "Cricket",
+   "date": "26.08.2006",
+   "city": "Мелекіне",
+   "isUDL": false,
+   "chuCategory": "ЧУ Criket",
+   "links": {
+    "men": null,
+    "menAvg": null,
+    "women": null,
+    "womenAvg": null,
+    "tournament": {
+     "url": "https://docs.google.com/document/d/1pA7xSIVLG_f9sdcm6kcJzTwJVe0bv-bX2uUGpg0G_jM/edit?tab=t.0",
+     "type": "protocol_doc"
+    }
+   },
+   "medals": {
+    "gold": "Ледєньов Вадим",
+    "silver": "Толкачов В'ячеслав",
+    "bronze": [
+     "Кобзар Ігор"
+    ]
+   },
+   "medalsWomen": null,
+   "nakkaMedals": null,
    "nakkaMedalsWomen": null
   },
   {
@@ -122642,6 +122676,15 @@
   },
   {
    "year": 2006,
+   "category": "cricket",
+   "gender": "men",
+   "place": 1,
+   "names": [
+    "Барсуков Віталій"
+   ]
+  },
+  {
+   "year": 2006,
    "category": "501do",
    "gender": "men",
    "place": 1,
@@ -122661,11 +122704,29 @@
   },
   {
    "year": 2006,
+   "category": "cricket",
+   "gender": "men",
+   "place": 2,
+   "names": [
+    "Рошко Дмитро"
+   ]
+  },
+  {
+   "year": 2006,
    "category": "501do",
    "gender": "men",
    "place": 2,
    "names": [
     "Толкачов В'ячеслав"
+   ]
+  },
+  {
+   "year": 2006,
+   "category": "cricket",
+   "gender": "men",
+   "place": 3,
+   "names": [
+    "Кобзар Ігор"
    ]
   },
   {
