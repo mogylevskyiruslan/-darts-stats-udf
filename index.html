@@ -417,6 +417,7 @@
   .champ-cat-table td, .champ-cat-table th{padding:8px 12px;}
   table thead th[data-key]{cursor:pointer; user-select:none;}
   table thead th[data-key]:hover{color:var(--gold);}
+  table thead th.sorted::after{content:' ' attr(data-dir); font-size:10px; color:var(--gold);}
 
   .pp-section-title{
     font-family:'Montserrat',sans-serif; font-weight:700; text-transform:uppercase;
@@ -932,7 +933,7 @@
     <div class="cal-card"><div class="cal-month">Вересень</div><span class="tag vfd">ВФД</span><div class="cal-dates">04–06</div><div class="cal-city">Одеса</div></div>
     <div class="cal-card"><div class="cal-month">Жовтень</div><span class="tag vfd">ВФД</span><div class="cal-dates">16–18</div><div class="cal-city">Черкаси</div></div>
     <div class="cal-card"><div class="cal-month">Листопад</div><span class="tag udl">UDL</span><div class="cal-dates">14–15</div><div class="cal-city">Львів</div></div>
-    <div class="cal-card cal-final"><div class="cal-month">Грудень</div><span class="tag final">ФІНАЛ</span><div class="cal-dates">11–13</div><div class="cal-city">Київ</div></div>
+    <div class="cal-card cal-final"><div class="cal-month">Грудень</div><span class="tag final">ФІНАЛ</span><div class="cal-dates">11–13</div><div class="cal-city">Вижниця</div></div>
   </div>
 </section>
 <section id="geography">
@@ -1028,16 +1029,16 @@
     </select>
   </div>
   <div class="table-wrap">
-    <table>
+    <table id="leaderboard-table">
       <thead>
         <tr>
-          <th class="num">#</th>
-          <th>Гравець</th>
-          <th class="num">🥇</th>
-          <th class="num">🥈</th>
-          <th class="num">🥉</th>
-          <th class="num">Титули ЧУ</th>
-          <th class="num">Всього медалей</th>
+          <th class="num" data-key="rank">#</th>
+          <th data-key="name">Гравець</th>
+          <th class="num" data-key="gold">🥇</th>
+          <th class="num" data-key="silver">🥈</th>
+          <th class="num" data-key="bronze">🥉</th>
+          <th class="num" data-key="champUA">Титули ЧУ</th>
+          <th class="num" data-key="total">Всього медалей</th>
         </tr>
       </thead>
       <tbody id="leaderboard-body"></tbody>
@@ -1843,6 +1844,7 @@ function renderTournaments(){
 
 let leaderboardGender = 'men';
 
+let lbSortKey = 'rank', lbSortDir = 1;
 function renderLeaderboard(){
   const q = (document.getElementById('search-leaderboard').value || '').toLowerCase();
   const medalFilter = document.getElementById('filter-leaderboard-medal').value;
@@ -1854,6 +1856,18 @@ function renderLeaderboard(){
   else if(medalFilter === 'chu') rows = rows.filter(p => p.champUA > 0);
   else if(medalFilter === '5' || medalFilter === '10') rows = rows.filter(p => p.total >= parseInt(medalFilter));
 
+  if(lbSortKey !== 'rank' || lbSortDir !== 1){
+    rows = rows.slice().sort((a,b)=>{
+      let av = a[lbSortKey], bv = b[lbSortKey];
+      if(typeof av === 'string') return av.localeCompare(bv, 'uk') * lbSortDir;
+      if(av === bv) return (b.gold - a.gold) || (b.silver - a.silver) || (a.rank - b.rank);
+      return (av - bv) * lbSortDir;
+    });
+  }
+  document.querySelectorAll('#leaderboard-table thead th[data-key]').forEach(th=>{
+    th.classList.toggle('sorted', th.dataset.key === lbSortKey);
+    th.dataset.dir = th.dataset.key === lbSortKey ? (lbSortDir > 0 ? '▲' : '▼') : '';
+  });
   const body = document.getElementById('leaderboard-body');
   if(rows.length === 0){
     body.innerHTML = `<tr class="empty-row"><td colspan="7">Нічого не знайдено.</td></tr>`;
@@ -2308,6 +2322,15 @@ document.querySelectorAll('#current-rating .gender-btn').forEach(btn=>{
 });
 document.getElementById('search-leaderboard').addEventListener('input', ()=>{ resetPagination('leaderboard'); renderLeaderboard(); });
 document.getElementById('filter-leaderboard-medal').addEventListener('change', ()=>{ resetPagination('leaderboard'); renderLeaderboard(); });
+document.querySelectorAll('#leaderboard-table thead th').forEach(th=>{
+  th.addEventListener('click', ()=>{
+    const key = th.dataset.key;
+    if(!key) return;
+    if(lbSortKey === key){ lbSortDir *= -1; } else { lbSortKey = key; lbSortDir = (key === 'name' || key === 'rank') ? 1 : -1; }
+    resetPagination('leaderboard');
+    renderLeaderboard();
+  });
+});
 document.getElementById('search-champions').addEventListener('input', ()=>{ resetPagination('champions'); renderChampions(); });
 document.querySelectorAll('#champions-table thead th').forEach(th=>{
   th.addEventListener('click', ()=>{
