@@ -1717,7 +1717,21 @@ function renderHeroStats(){
   // Повний список унікальних гравців з УСІХ джерел бази (Nakka, Призери
   // Кубка, Чемпіони ЧУ, архів рейтингів за сезонами) — той самий список,
   // що використовує глобальний пошук гравця.
-  const uniquePlayersCount = (allPlayerNames || []).length;
+  let uniquePlayersCount = (allPlayerNames || []).length;
+  if(!includeUDL){
+    // без УДЛ: виключаємо гравців, що зустрічаються ЛИШЕ в УДЛ/ЗУДЛ
+    try{
+      const nonU = new Set(), udlN = new Set();
+      (nakkaPlayerStats||[]).forEach(r=>{ (r.isUDL?udlN:nonU).add(r.name); });
+      const addM = m => { if(!m) return; [m.gold,m.gold2,m.silver].concat(Array.isArray(m.bronze)?m.bronze:[m.bronze]).forEach(n=>{ if(n) String(n).split(/[\/(),]/).forEach(x=>nonU.add(x.trim())); }); };
+      tournaments.forEach(t=>{ if(!t.isUDL){ addM(t.medals); addM(t.medalsWomen); addM(t.nakkaMedals); addM(t.nakkaMedalsWomen); } });
+      [].concat(leaderboard||[], leaderboardWomen||[]).forEach(r=>nonU.add(r.name));
+      const scan = o => { if(typeof o==='string') nonU.add(o); else if(Array.isArray(o)) o.forEach(scan); else if(o&&typeof o==='object') Object.values(o).forEach(scan); };
+      scan(ratingsData||null); scan(currentRatingMen||null); scan(currentRatingWomen||null);
+      const only = new Set([...udlN].filter(n=>!nonU.has(n)));
+      uniquePlayersCount = (allPlayerNames||[]).filter(n=>!only.has(n)).length;
+    }catch(e){}
+  }
   const cities = new Set(visible.map(t=>t.city).filter(Boolean));
   const years = new Set(visible.map(t=>t.date.split('.').pop()).filter(Boolean));
   const stats = [
