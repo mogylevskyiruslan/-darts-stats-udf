@@ -651,8 +651,8 @@
     .table-wrap th{font-size:10px; letter-spacing:.04em;}
     .mob-only{display:block;} .pp-mob{display:block; color:var(--muted); font-size:11px; margin-top:2px;}
     /* рейтинги: на телефоні лише місце, гравець і рейтинг */
-    #current-rating .table-wrap th:nth-child(n+3):nth-child(-n+9), #current-rating .table-wrap td:nth-child(n+3):nth-child(-n+9),
-    #ratings .table-wrap th:nth-child(n+3):nth-child(-n+9), #ratings .table-wrap td:nth-child(n+3):nth-child(-n+9){display:none;}
+    #current-rating .table-wrap th:nth-child(n+3):not(:last-child), #current-rating .table-wrap td:nth-child(n+3):not(:last-child),
+    #ratings .table-wrap th:nth-child(n+3):not(:last-child), #ratings .table-wrap td:nth-child(n+3):not(:last-child){display:none;}
     /* реєстрація: без населеного пункту */
     .reg-table-wrap table{min-width:0 !important; width:100%; font-size:12px;}
     .reg-table-wrap th:nth-child(5), .reg-table-wrap td:nth-child(5){display:none;}
@@ -2321,7 +2321,7 @@ document.querySelectorAll('#current-rating .gender-btn').forEach(btn=>{
   });
 });
 document.getElementById('search-leaderboard').addEventListener('input', ()=>{ resetPagination('leaderboard'); renderLeaderboard(); });
-document.getElementById('filter-leaderboard-medal').addEventListener('change', ()=>{ resetPagination('leaderboard'); renderLeaderboard(); });
+['change','input'].forEach(ev=>document.getElementById('filter-leaderboard-medal').addEventListener(ev, ()=>{ resetPagination('leaderboard'); renderLeaderboard(); }));
 document.querySelectorAll('#leaderboard-table thead th').forEach(th=>{
   th.addEventListener('click', ()=>{
     const key = th.dataset.key;

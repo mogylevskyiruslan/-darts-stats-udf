@@ -12,7 +12,7 @@
     place: 'Вижниця', region: 'Чернівецька область', dates: '11–13 грудня 2026',
     mapUrl: 'https://maps.google.com/?cid=4936380032326911263&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF',
     bg: '',            // шлях до фото (напр. 'vyzhnytsia.jpg'); порожньо = намальована панорама Карпат
-    docs: { regulations: '', judges: '' }
+    docs: { regulations: 'reglament-2026-12.pdf', judges: 'sudi-2026-12.pdf' }
   };
   var REG_TOURNAMENTS = [
     { id: 'chu501m', short: 'ЧУ · чоловіки', title: 'Чемпіонат України серед чоловіків', day: '12 грудня 2026', gender: 'men', open: true },
