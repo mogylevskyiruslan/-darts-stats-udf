@@ -37,7 +37,7 @@
     '.ms-badge{font:700 10px Inter,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#101535;background:var(--c);border-radius:999px;padding:4px 9px}',
     '.ms-f{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}.ms-f label{min-width:0;display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted)}.ms-f .w{grid-column:1/-1}',
     '.ms-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}',
-    '.ms-stat{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px}.ms-stat b{display:block;font:800 22px Montserrat,Inter,sans-serif;color:var(--gold)}.ms-stat span{font-size:11px;color:var(--muted)}',
+    '.ms-stat{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px 14px}.ms-stat b{display:block;font:800 30px/1.1 Montserrat,Inter,sans-serif;color:var(--gold);margin-bottom:4px}.ms-stat span{font-size:12.5px;line-height:1.3;color:var(--muted)}.ms-stats.hero .ms-stat:first-child{grid-column:1/-1;padding:20px 16px;background:linear-gradient(135deg,rgba(252,194,2,.14),transparent)}.ms-stats.hero .ms-stat:first-child b{font-size:46px}.ms-stats.hero .ms-stat:first-child span{font-size:13.5px}@media(min-width:640px){.ms-stats{grid-template-columns:repeat(4,1fr)}.ms-stats.hero .ms-stat:first-child{grid-column:span 2}}',
     '.ms-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}',
     '@media(min-width:560px){.ms-grid{grid-template-columns:repeat(8,1fr)}}',
     '.ms-c{position:relative;background:var(--bg);border:1px solid var(--line);color:var(--cream);border-radius:10px;padding:11px 0;font:700 15px Inter,sans-serif;cursor:pointer;text-align:center;user-select:none}',
@@ -310,12 +310,13 @@
   function siteBlock() {
     var name = siteName(member && member.player_name), ready = typeof nakkaPlayerStats !== 'undefined' && nakkaPlayerStats && nakkaPlayerStats.length;
     var head = '<div class="ms-src site"><div class="ms-srch"><b>🏛 Всеукраїнські турніри</b><span class="ms-badge">авто · основний сайт</span></div>' +
-      '<p class="sub" style="margin:2px 0 10px">Створюється автоматично з протоколів ВФД та Nakka: Чемпіонати й Кубки України. Ви цю статистику не редагуєте.</p>';
+      '<p class="sub" style="margin:2px 0 10px">Створюється автоматично з протоколів ВФД та Nakka: Чемпіонати й Кубки України' + ((document.getElementById('global-toggle-udl') || {}).checked ? ' та УДЛ/ЗУДЛ (перемикач УДЛ увімкнено)' : '') + '. Ви цю статистику не редагуєте.</p>';
     if (!ready) {
       if (siteRetry++ < 12) setTimeout(function () { if (tab === 'overview' && session && member) render(); }, 1000);
       return head + '<p class="sub">Завантажуємо дані сайту…</p></div>';
     }
-    var rows = nakkaPlayerStats.filter(function (r) { return r.name === name && !r.isUDL && (year === 'all' || yearUa(r.date) === year); });
+    var gt = document.getElementById('global-toggle-udl'), withUdl = !!(gt && gt.checked);
+    var rows = nakkaPlayerStats.filter(function (r) { return r.name === name && (withUdl || !r.isUDL) && (year === 'all' || yearUa(r.date) === year); });
     var inLists = (typeof leaderboard !== 'undefined' && (leaderboard.some(function (p) { return p.name === name; }) || (typeof leaderboardWomen !== 'undefined' && leaderboardWomen.some(function (p) { return p.name === name; }))));
     var rating = null;
     [typeof currentRatingMen !== 'undefined' ? currentRatingMen : null, typeof currentRatingWomen !== 'undefined' ? currentRatingWomen : null].forEach(function (cr) {
@@ -335,7 +336,7 @@
       var avgs = rows.map(function (r) { return r.avg || 0; });
       var legsB = rows.filter(function (r) { return r.bestLeg > 8; }).map(function (r) { return r.bestLeg; });
       var mt = sum('match'), mw = sum('winMatch');
-      cells.push(st(rows.length, 'турнірів із даними Nakka'), st((avgs.reduce(function (a, b) { return a + b; }, 0) / rows.length).toFixed(2), 'середній по турнірах'), st(Math.max.apply(null, avgs).toFixed(2), 'найкращий середній'),
+      cells.push(st(rows.length, withUdl ? 'турнірів (з УДЛ) із даними Nakka' : 'турнірів із даними Nakka'), st((avgs.reduce(function (a, b) { return a + b; }, 0) / rows.length).toFixed(2), 'середній по турнірах'), st(Math.max.apply(null, avgs).toFixed(2), 'найкращий середній'),
         st(mt ? mw + ' / ' + mt : '—', 'матчів виграно / зіграно'), st(sum('ton80'), '180'), st(sum('highOutCount'), 'закриттів 100+'),
         st(Math.max.apply(null, rows.map(function (r) { return r.highOut || 0; })) || '—', 'найкраще закриття'), st(legsB.length ? Math.min.apply(null, legsB) + ' дрот.' : '—', 'найкращий лег'));
     }
@@ -619,5 +620,6 @@
     member: function () { return member; }, year: function () { return year; }, reset: function () { EXT.forEach(function (x) { x.reset && x.reset(); }); },
     setTab: function (t) { tab = t; render(); }
   };
+  document.addEventListener('change', function (e) { if (e.target && e.target.id === 'global-toggle-udl' && session && member) { try { render(); } catch (x) {} } });
   init();
 })();

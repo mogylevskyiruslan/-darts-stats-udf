@@ -43,6 +43,9 @@
     return { cur: cur, best: best };
   }
   function legAvg(l) { return sum(l.scores || [501]) / l.darts * 3; }
+  // зважені середні (сума очок / сума дротиків), так само як у статистиці тренувань 501DO
+  function wAvg(a) { var sc = 0, dt = 0; a.forEach(function (l) { sc += sum(l.scores || [501]); dt += l.darts; }); return dt ? sc / dt * 3 : null; }
+  function wF9(a) { var sc = 0, dt = 0; a.forEach(function (l) { sc += sum((l.scores || []).slice(0, 3)); dt += Math.min(9, l.darts); }); return dt ? sc / dt * 3 : null; }
   function legF9(l) { var sc = (l.scores || []).slice(0, 3); return sum(sc) / Math.min(9, l.darts) * 3; }
 
   // ---------- збереження ----------
@@ -80,20 +83,32 @@
     // step: скільки потрібно для одного отримання (лічильник росте безкінечно); step=0: разова подія
     function b(icon, name, desc, cur, step) { var cnt = step ? Math.floor(cur / step) : (cur ? 1 : 0); out.push({ i: icon, n: name, d: desc, cnt: cnt, step: step, prog: step ? cur % step : 0 }); }
     function cnt(g) { return Dr.filter(function (r) { return r.game === g; }).length; }
-    var ghostWins = L.filter(function (l) { return l.mode === 'ghost' && l.ghost_result === 'win'; }).length;
+    // перемоги над тінню: рахуємо ІГРИ (матчі), а не леги; одиночний лег із тінню (без матчу) - це теж гра
+    var gm = {};
+    L.forEach(function (l) { if (l.mode !== 'ghost') return; var k = l.match_id || l.client_id; (gm[k] = gm[k] || { bo: l.best_of || 1, w: 0, n: 0 }); gm[k].n++; if (l.ghost_result === 'win') gm[k].w++; });
+    var ghostWins = Object.keys(gm).filter(function (k) { return gm[k].w >= (gm[k].bo + 1) / 2; }).length;
+    // закриття 100+ у тренувальних іграх 501DO: останній візит завершеного лега, який закрив саме гравець
+    var co100 = 0, co170 = 0;
+    L.forEach(function (l) {
+      if (!l.scores || !l.scores.length || sum(l.scores) !== 501) return;
+      if ((l.mode === 'ghost' || l.mode === 'duel') && l.ghost_result !== 'win') return;
+      var last = l.scores[l.scores.length - 1]; if (last >= 100) co100++; if (last === 170) co170++;
+    });
+    // 170+1: один результат = повний прохід 170 → 180
+    var passes = Dr.filter(function (r) { return r.game === 'p171' && r.success && r.target >= 180; }).length;
     var ds = {}, dblMasters = 0;
     Dr.filter(function (r) { return r.game === 'dbl'; }).forEach(function (r) { var o = ds[r.target] = ds[r.target] || { d: 0, h: 0 }; o.d += r.scores.length * 3; o.h += sum(r.scores); });
     Object.keys(ds).forEach(function (k) { if (ds[k].d >= 30 && ds[k].h / ds[k].d >= 0.4) dblMasters++; });
     b('🎯', 'Леги', 'кожні 10 завершених легів', L.length, 10);
-    b('👻', 'Перемоги над тінню', 'кожен лег, виграний у тіні', ghostWins, 1);
+    b('👻', 'Перемоги над тінню', 'кожна виграна гра (матч) із тінню', ghostWins, 1);
     b('⚡', 'Тиждень поспіль', 'кожні 7 днів активності підряд', weekStreaks(), 1);
     b('📅', 'Тижні з виконаною ціллю', 'кожен тиждень, коли виконано ціль тренувальних днів', weeksGoalMet(), 1);
-    b('💥', 'Закриття 100+', 'кожне додане закриття від 100', D.checkouts.filter(function (c) { return c.value >= 100; }).length, 1);
-    b('👑', 'Закриття 170', 'кожне додане закриття 170', D.checkouts.filter(function (c) { return c.value === 170; }).length, 1);
+    b('💥', 'Закриття 100+', 'кожне закриття від 100 у іграх 501DO в тренуваннях', co100, 1);
+    b('👑', 'Закриття 170', 'кожне закриття 170 у іграх 501DO в тренуваннях', co170, 1);
     b('🎪', 'Дабл-майстер', 'кожен дабл із 40%+ влучань (від 30 дротиків)', dblMasters, 1);
     b('🔺', 'Тріпл-практика', 'кожні 10 вправ на тріпли', cnt('trp'), 10);
     b('🎲', 'Скоринг-раунди', 'кожні 5 раундів скорингу', cnt('score'), 5);
-    b('📈', '170+1', 'кожні 10 тренувань 170+1', cnt('p171'), 10);
+    b('📈', '170+1', 'кожен повний прохід від 170 до 180', passes, 1);
     b('🎯', 'Сектор', 'кожні 5 тренувань сектора', cnt('sector'), 5);
     b('📓', 'Опановані навички', 'кожна закрита ціль у щоденнику', D.skills.filter(function (k) { return k.status === 'done'; }).length, 1);
     b('📝', 'Рефлексії', 'кожні 3 записи «після гри»', G.refl.length, 3);
@@ -123,7 +138,7 @@
     var st = streaks(), g = G.goal || { weekly: 3, avg: null }, td = trainDays(), mon = mondayOf(new Date()), n = 0, dots = '';
     for (var i = 0; i < 7; i++) { var d = new Date(mon); d.setDate(mon.getDate() + i); var k = iso(d), on = !!td[k], isT = k === today(); if (on) n++; dots += '<div style="flex:1;text-align:center;font-size:11px;color:var(--muted)"><div style="height:30px;border-radius:9px;margin-bottom:4px;display:flex;align-items:center;justify-content:center;background:' + (on ? '#1c3b2a' : 'var(--bg)') + ';border:1px solid ' + (isT ? 'var(--gold)' : 'var(--line)') + '">' + (on ? '✓' : '') + '</div>' + DAYS[i] + '</div>'; }
     var pct = Math.min(100, Math.round(n / (g.weekly || 3) * 100));
-    var L = legs().filter(function (l) { return Date.now() - new Date(l.played_at) < 30 * 864e5; }), cur = L.length ? sum(L.map(legAvg)) / L.length : null;
+    var L = legs().filter(function (l) { return Date.now() - new Date(l.played_at) < 30 * 864e5; }), cur = L.length ? wAvg(L) : null;
     var h = '<div class="ms-card"><div class="ms-stats">' + stt('🔥 ' + st.cur, 'днів активності поспіль') + stt(st.best, 'найкраща серія') + '</div></div>';
     h += '<div class="ms-card"><b>Тиждень: ' + n + ' з ' + (g.weekly || 3) + ' тренувальних днів</b><div class="ms-bar" style="margin:10px 0"><div style="width:' + pct + '%"></div></div><div style="display:flex;gap:5px">' + dots + '</div>' +
       (n >= (g.weekly || 3) ? '<p class="sub" style="margin:10px 0 0;color:#8fe3b0">Ціль тижня виконано. Відмінна робота!</p>' : '<p class="sub" style="margin:10px 0 0">Лишилось ' + ((g.weekly || 3) - n) + '. Без поспіху: регулярність важливіша за обсяг.</p>') + '</div>';
@@ -179,8 +194,8 @@
   function viewCmp() {
     var ms = months(6), L = legs(), D = MS().data(), td = trainDays(), h = '';
     function m(l) { return dayOf(l.played_at).slice(0, 7); }
-    var av = ms.map(function (x) { var a = L.filter(function (l) { return m(l) === x.key; }); return a.length ? sum(a.map(legAvg)) / a.length : null; });
-    var f9 = ms.map(function (x) { var a = L.filter(function (l) { return m(l) === x.key; }); return a.length ? sum(a.map(legF9)) / a.length : null; });
+    var av = ms.map(function (x) { var a = L.filter(function (l) { return m(l) === x.key; }); return wAvg(a); });
+    var f9 = ms.map(function (x) { var a = L.filter(function (l) { return m(l) === x.key; }); return wF9(a); });
     var gm = ms.map(function (x) { var a = D.events.filter(function (e) { return String(e.event_date).slice(0, 7) === x.key && e.avg_game != null; }); return a.length ? sum(a.map(function (e) { return Number(e.avg_game); })) / a.length : null; });
     var vol = ms.map(function (x) { return Object.keys(td).filter(function (k) { return k.slice(0, 7) === x.key; }).length; });
     var lab = ms.map(function (x) { return x.lab; });
