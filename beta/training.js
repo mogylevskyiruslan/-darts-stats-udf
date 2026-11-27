@@ -52,6 +52,9 @@
     '.bd-big{display:flex;gap:0;overflow:hidden;border:1px solid var(--line);border-top:0}',
     '.bd-p{flex:1;min-width:0;text-align:center;padding:8px 4px 6px;background:var(--panel);color:var(--cream)}.bd-p.on{background:var(--gold);color:#161c46}',
     '.bd-p .v{font:800 52px/1.05 Montserrat,Inter,sans-serif}.bd-p .t{font-size:11px;opacity:.8;font-weight:600}',
+    '.tr-live:not(.tr-fs) .tr-top{font-size:17px;font-weight:800;color:var(--text);margin-bottom:10px}.tr-live:not(.tr-fs) .tr-top>span:last-child{font:800 20px Montserrat,Inter,sans-serif;color:var(--gold);white-space:nowrap}',
+    '.tr-live:not(.tr-fs) .tr-prog{margin:14px 0 6px}.tr-live:not(.tr-fs) .tr-prog .seg{gap:5px;margin-bottom:10px}.tr-live:not(.tr-fs) .tr-prog .seg i{height:16px;border-radius:8px}.tr-live:not(.tr-fs) .tr-prog b{font:800 24px Montserrat,Inter,sans-serif}.tr-live:not(.tr-fs) .tr-prog span{font-size:15px}',
+    '.tr-live:not(.tr-fs) .tr-last{gap:8px;min-height:40px;margin:10px 0}.tr-live:not(.tr-fs) .tr-last span{font:800 20px Inter,sans-serif;padding:7px 15px;border-radius:12px}',
     '.tr-last{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;min-height:26px;margin:4px 0}',
     '.tr-last span{background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:3px 9px;font:700 13px Inter,sans-serif}',
     '.tr-ent{background:var(--bg);border:1px solid var(--line);border-radius:12px;text-align:center;font:800 40px/1.4 Montserrat,Inter,sans-serif;min-height:46px;margin:8px 0 6px;font-size:30px}',
@@ -326,7 +329,7 @@
     var c100 = 0, s100 = 0, pp = p171Passes(all);
     all.forEach(function (r) { if (r.success) { var last = r.scores[r.scores.length - 1]; if (last >= 100) c100++; } r.scores.forEach(function (x) { if (x >= 100) s100++; }); });
     h += '<div class="ms-card"><b>🏅 Найкращий результат</b><p class="sub" style="margin:2px 0 8px">Повний прохід 170 → 180: скільки спроб і дротиків знадобилось.</p>' +
-      (pp.count ? '<div class="ms-stats hero">' + stt(pp.bestAtt, 'найменше спроб') + stt(pp.bestDarts, 'найменше дротиків') + stt(pp.count, 'повних проходів') + stt(c100, 'закриттів 100+') + '</div>' +
+      (pp.count ? '<div class="ms-stats">' + stt(pp.bestAtt, 'найменше спроб') + stt(pp.bestDarts, 'найменше дротиків') + stt(pp.count, 'повних проходів') + stt(c100, 'закриттів 100+') + '</div>' +
         [2, 3, 4, 5].map(function (V) { var o = pp.by[V]; if (!o || !o.passes.length) return ''; var ba = Math.min.apply(null, o.passes.map(function (p) { return p.att; })), bd = Math.min.apply(null, o.passes.map(function (p) { return p.darts; })); return '<div class="sub" style="margin:8px 0 0">' + V + ' підходи: найкраще <b>' + ba + '</b> спроб · <b>' + bd + '</b> дротиків · проходів ' + o.passes.length + '</div>'; }).join('')
       : '<p class="sub" style="margin:0">Повного проходу ще немає. Найдалі: ціль <b>' + Math.max.apply(null, [170].concat(Object.keys(pp.by).map(function (k) { return pp.by[k].far; }))) + '</b>.</p>') + '</div>';
     h += '<div class="ms-card"><b>Прогрес за режимами</b>' + [2, 3, 4, 5].map(function (V) {
@@ -680,7 +683,7 @@
     }
     var ysel = periodSelect();
     if (!a.n) return h + '<div class="ms-card"><div class="ms-row" style="justify-content:space-between"><b>Статистика</b>' + ysel + '</div><p class="sub">Зіграйте перший лег, і тут з\'явиться статистика.</p></div>';
-    h += '<div class="ms-card"><div class="ms-row" style="justify-content:space-between"><b>Статистика · ' + a.n + ' легів</b>' + ysel + '</div><div class="ms-stats hero" style="margin-top:10px">' +
+    h += '<div class="ms-card"><div class="ms-row" style="justify-content:space-between"><b>Статистика · ' + a.n + ' легів</b>' + ysel + '</div><div class="ms-stats" style="margin-top:10px">' +
       stt(f2(a.avg), 'середній за 3 дротики') + stt(f2(a.f9), 'середній за перші 9') + stt(Math.round(a.chk) + '%', 'закриття (' + a.att + ' підходів)') + stt((a.best != null ? a.best + ' дрот.' : '—'), 'найкращий лег') + '</div></div>';
     h += '<div class="ms-card"><b>Усі підходи за величиною</b><div style="margin-top:10px">' + donut(a.cat) + '</div></div>';
     h += '<div class="ms-card"><b>Закриття легів по дротиках</b>' + bars(a.buckets) + '</div>';
